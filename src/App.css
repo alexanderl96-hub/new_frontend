@@ -1,0 +1,20 @@
+.App{
+  background: url('/src/image/MLB-vector-logos.jpeg');
+  background-size: contain;
+  height: 700px;
+}
+.app{
+  font: bolder 150px "Alfa Slab One";
+  text-align: center;
+  padding-top: 25%;
+} 
+ .Title{
+  color: white;
+  mix-blend-mode: multiply;
+  background-color:#733033;
+  height: 374.5px;
+}
+.Team:hover{
+ color: #52FF52;
+ cursor: pointer;
+}
