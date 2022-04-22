@@ -1,10 +1,14 @@
+import React from 'react';
 import './App.css';
+
+import HomeBase from './Components/teamsInfo/Teams'
+
 
 function App() {
   
   return (
     <div className="App">
-      <div className="app Title" ><div className='Team'>Baseball Teams</div> </div>
+       <HomeBase /> 
     </div>
   );
 }
