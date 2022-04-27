@@ -1,0 +1,26 @@
+.img{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+  }
+  
+  .teamContainer {
+    background-color: rgb(241, 237, 237);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 4px;
+    width: 190px;
+    height: 125px;
+    cursor: pointer;
+    margin: 7px;
+  }
+  .teamContainer:hover {
+    box-shadow: 5px 3px 3px;
+  }
+  a{
+    text-decoration: none;
+    color: #333
+  }
