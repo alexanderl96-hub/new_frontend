@@ -1,7 +1,7 @@
 .App{
   background: url('/src/image/MLB-vector-logos.jpeg');
   background-size: contain;
-  height: 700px;
+  height: 100%;
 }
 .app{
   font: bolder 150px "Alfa Slab One";

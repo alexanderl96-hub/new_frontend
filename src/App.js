@@ -8,7 +8,7 @@ import './App.css';
 
 import FrontPage from './Pages/FrontPage'
 import Teams from '../src/Components/teamsInfo/Teams'
- import TeamsPlayers from './Components/teamsPlayers/TemasPlayers'
+import TeamsPlayers from './Components/teamsPlayers/TemasPlayers'
 
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<FrontPage/>}/>
           <Route exact path="/homeBase" element={<Teams/>}/>
-          <Route exact path="/homebase/:id" element={<TeamsPlayers/>}/>
+          <Route exact path="/homeBase/groups" element={<TeamsPlayers/>}/>
         </Routes>
       </Router>
        
