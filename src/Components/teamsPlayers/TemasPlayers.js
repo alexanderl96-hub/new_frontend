@@ -55,15 +55,15 @@ console.log(group , 'group members')
 
 
   return (
-    <div style={{ paddingBottom: '10px'}}>
+    <div style={{ paddingBottom: '15px', paddingTop: '10px'}} >
       <h3>TemasPlayers</h3>
       <Link to="/homebase" className='teamLink'>⬅</Link>
-      <div>
+      <div >
        {gruopPlayers.map((player, index) =>{
          return(
-          <div>
+          <div className="teamPlayer_Container">
            <div className="teamsPlayers" value={on}  onClick={ handleSub}  >
-             <div>
+             <div >
                 <img src={player?.imag} alt={player?.id} className="players_Img"/> 
                 <div key={index} className="players_Name">{player?.name}</div>
                 <div className="players_Info">
@@ -113,8 +113,6 @@ console.log(group , 'group members')
            }) }
            </div>
            </div>
-
-           
          )
        })}
       </div>

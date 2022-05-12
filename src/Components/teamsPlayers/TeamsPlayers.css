@@ -5,12 +5,19 @@ span{
     font-weight: 600;
     color:rgb(39, 38, 38);
 }
+.teamPlayer_Container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 5px;
+}
 .teamLink{
     margin-bottom: 35px;
     text-decoration: none; 
     margin-left: 30px;
      border-radius: 50px;
-     background-color: rgb(151, 149, 149);
+     background-color: rgb(134, 131, 131);
      padding: 5px;
 }
 .teamsPlayers{
@@ -26,16 +33,16 @@ span{
     background-color: rgba(186, 183, 183, 0.876);
     border-radius: 10px;
     padding: 10px;
-    width: 25%;
+    width: 300px;
     cursor: pointer;
-    box-shadow: 5px 3px 3px;
+    /* box-shadow: 5px 3px 3px; */
    
 }
 .players_Img{
     height: 75px;
-    width: 55px;
-    border: 5px solid rgb(169, 169, 169);
-    border-radius: 50px;
+    width: 70px;
+    border: 5px solid rgb(89, 88, 88);
+    border-radius: 40px;
 }
 .players_Name{
     font-weight: bold;
@@ -65,4 +72,7 @@ span{
     margin: 15px;
     background-color: rgba(186, 183, 183, 0.876);
     color: rgba(60, 57, 57, 0.941);
+}
+.teamsPlayers:hover{
+    box-shadow: 5px 3px 3px;
 }
