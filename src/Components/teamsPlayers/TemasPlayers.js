@@ -1,43 +1,35 @@
 import React,  { useState, useEffect} from 'react'
-import { Link} from 'react-router-dom'
+import { useParams, Link} from 'react-router-dom'
 import './TeamsPlayers.css'
 
-const TemasPlayers = () => {
+const TemasPlayers = ({value}) => {
   const [gruopPlayers, setGruopPlayers] = useState([]);
   const [group, setGroup] = useState([]);
+  const [prueba, setPrueba] = useState([]);
   const [on , setON] = useState([true]);
-  const [on1 , setON1] = useState([true]);
-  const [more , setMore] = useState([]);
-
-  // let  params = useParams();
-  // let teamId = params.id
-
-  // useEffect(()=>{
-  //   fetch(`http://localhost:9000/teams/${teamId}`)
-  //   .then(res => res.json())
-  //   .then(data =>{
-  //     console.log(data.individual.group , 'temasPlayers');
-  //     setGruopPlayers(data.individual.group)
-  //   })
-  // },[teamId])
-  // useEffect(()=>{
-  //   fetch(`http://localhost:9000/groups`)
-  //   .then(res => res.json())
-  //   .then(data =>{
-  //     console.log(data, 'temasPlayers');
-  //     setGruopPlayers(data)
-  //   })
-  // },[])
+  const [more , setMore] = useState(['more...']);
+ let params = useParams()
+ let groupID = params.id
+ //console.log(value, 'tppppp')
  
+
   useEffect(()=>{
     fetch(`http://localhost:9000/groups`)
     .then(res => res.json())
     .then(data =>{
-      console.log(data, 'temasPlayers');
       setGruopPlayers(data)
     })
   },[])
-console.log(group , 'group members')
+  useEffect(()=>{
+    fetch(`http://localhost:9000/groups/${groupID}`)
+    .then(res => res.json())
+    .then(data =>{
+      //console.log(data.team_id, 'data')
+      setPrueba(data.team.team_id)
+    })
+  },[groupID])
+ 
+
 
   const handleSub = (e) => {
     e.preventDefault();
@@ -47,7 +39,7 @@ console.log(group , 'group members')
       setON(false)
     }else{
       setGroup('')
-      setMore("more...")
+      setMore('more...')
       setON(true)
     }
   };
@@ -61,6 +53,7 @@ console.log(group , 'group members')
       <div >
        {gruopPlayers.map((player, index) =>{
          return(
+           <Link to={`/groups/${groupID}`}>
           <div className="teamPlayer_Container">
            <div className="teamsPlayers" value={on}  onClick={ handleSub}  >
              <div >
@@ -77,6 +70,7 @@ console.log(group , 'group members')
              </div>
            </div>
            <div>
+           
            {group === '' ? null : group.map((player)=>{
              return (
                <div className="teamPlayer_Group">
@@ -105,14 +99,15 @@ console.log(group , 'group members')
                     <div> <span>Height:</span> {player.height}</div>
                     <div> <span>Weight: </span>{player.weight}</div>
                   </div>
-                  <div className="teamPlayer_About">
+                  {/* <div className="teamPlayer_About">
                     <div> <span>Stats: </span>{player.stats}</div>
-                  </div>
+                  </div> */}
                </div>
              )
            }) }
            </div>
            </div>
+           </Link>
          )
        })}
       </div>

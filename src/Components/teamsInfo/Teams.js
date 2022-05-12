@@ -10,17 +10,17 @@ const Teams = () => {
         fetch("http://localhost:9000/teams")
         .then(res => res.json())
         .then(data =>{
-            console.log(data, 'teams')
             setTeams(data)
         })
     },[])
+  
   return (
     <div>
          <h1 >Showing Team</h1>
          <div className='Container'>
          {teams.map((team, index)=>{
              return (
-                <IndividualTeam team={team} key={index}/> 
+                <IndividualTeam team={team} key={index} id={team.id} /> 
              )
          })}
          </div>

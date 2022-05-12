@@ -8,7 +8,9 @@ import './App.css';
 
 import FrontPage from './Pages/FrontPage'
 import Teams from '../src/Components/teamsInfo/Teams'
+import IndividualTeam from '../src/Components/individualTeam/IndividualTeam'
 import TeamsPlayers from './Components/teamsPlayers/TemasPlayers'
+ import TeamUpDate from './Components/teamUpDate/TeamUpDate'
 
 
 function App() {
@@ -20,7 +22,11 @@ function App() {
         <Routes>
           <Route exact path="/" element={<FrontPage/>}/>
           <Route exact path="/homeBase" element={<Teams/>}/>
+          <Route exact path="/homeBase/:id" element={<IndividualTeam/>}/>
           <Route exact path="/homeBase/groups" element={<TeamsPlayers/>}/>
+          <Route exact path="/homeBase/groups/:id" element={<TeamsPlayers/>}/>
+          <Route exact path="/homeBase/groups/team/:team_id" element={<TeamsPlayers/>}/>
+          <Route exact path="/homeBase/team" element={<TeamUpDate/>}/>
         </Routes>
       </Router>
        

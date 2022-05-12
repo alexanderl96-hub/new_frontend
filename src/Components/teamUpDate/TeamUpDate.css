@@ -1,0 +1,33 @@
+.TeamUpDate_Container{
+    text-align: center;
+    padding-bottom: 10px;
+}
+.TeamUpDate_Wrap{
+    background-color: rgba(148, 145, 145, 0.645);
+    width: 30%;
+    border-radius: 3px;
+    
+}
+.TeamUpDate_Form{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+label{
+
+}
+input{
+    width: 80%;
+}
+bottom{
+    margin-top: 4px;
+}
+bottom:hover{
+    background-color: rgb(72, 193, 72);
+    border: 1px;
+    border-radius: 9px;
+    padding:3px;
+    transition: all 1.5s;
+    width: 80px;
+    margin-top: 4px;
+}
