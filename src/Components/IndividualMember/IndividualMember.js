@@ -33,19 +33,16 @@ const IndividualMember = () => {
                     })}
               </div>
               <div> 
-                <Link to={`/homeBase/team`} className='memberLink'>Update Member
+                <Link to={`/homeBase/updateMember/${memberId}`} className='memberLink'>Update Member
                 </Link>
               </div>
-          </div>
-           
+          </div>     
           {member.map((player, index) =>{
               return (
                    <div className="IndividualContainer">
                        {Number(memberId) === player.id ? 
                        <div >
-                           
-                            <div className='Wrapper'>
-                                
+                            <div className='Wrapper'>    
                                <div>
                                     <img src={player?.imag} alt={player?.id} className="member_Img"/> 
                                     <div key={index} className="member_Name">{player?.name}</div>

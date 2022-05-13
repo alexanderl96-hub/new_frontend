@@ -6,6 +6,7 @@ const IndividualTeam = ({team}) => {
   
   return (
     <div>
+       
       <Link to={`/homeBase/${team.id}`}  >
         <div className="teamContainer"  > 
              <img src={team.imag} alt={team.id} className="img"/> 

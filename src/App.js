@@ -8,11 +8,10 @@ import './App.css';
 
 import FrontPage from './Pages/FrontPage'
 import Teams from '../src/Components/teamsInfo/Teams'
-import Testing from '../src/Components/textFolder/TextFolder'
-import IndividualTeam from '../src/Components/individualTeam/IndividualTeam'
-import TeamsPlayers from './Components/teamsPlayers/TemasPlayers'
- import TeamUpDate from './Components/teamUpDate/TeamUpDate'
- import IndividualMember from './Components/IndividualMember/IndividualMember'
+import IndividualTeam from '../src/Components/textFolder/TextFolder'
+import TeamUpDate from './Components/teamUpDate/TeamUpDate'
+import IndividualMember from './Components/IndividualMember/IndividualMember'
+import UpDateMember from '../src/Components/memberUpDate/MemberUpDate'
 
 
 function App() {
@@ -20,15 +19,13 @@ function App() {
   return (
     <div className="App">
       <Router>
-        {/* <NavBar /> */}
         <Routes>
           <Route exact path="/" element={<FrontPage/>}/>
           <Route exact path="/homeBase" element={<Teams/>}/>
-          <Route exact path="/homeBase/:id" element={<Testing/>}/>
-          <Route exact path="/homeBase/groups" element={<TeamsPlayers/>}/>
+          <Route exact path="/homeBase/:id" element={<IndividualTeam/>}/>
           <Route exact path="/homeBase/groups/:id" element={<IndividualMember/>}/>
-          <Route exact path="/homeBase/groups/team/:team_id" element={<TeamsPlayers/>}/>
-          <Route exact path="/homeBase/team" element={<TeamUpDate/>}/>
+          <Route exact path="/homeBase/updateteam/:id" element={<TeamUpDate/>}/>
+          <Route exact path="/homeBase/updateMember/:id" element={<UpDateMember/>}/>
         </Routes>
       </Router>
        

@@ -1,5 +1,17 @@
-.IndividualContainer{
+h3{
     text-align: center;
+}
+span{
+    font-weight: 600;
+    color:rgb(39, 38, 38);
+}
+.IndividualContainer{
+    /* text-align: center; */
+     /* display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 5px; */
 }
 .memberLink{
     background-color: gray;
@@ -20,6 +32,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    text-align: center;
     padding-top: 15px;
     padding-bottom: 15px;
 }

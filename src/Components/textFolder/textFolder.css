@@ -21,21 +21,15 @@ span{
 }
 .teamPlayer_Container{
     display:flex;
-    /* flex-direction: row; */
     justify-content: center;
-     /* align-items: center; */
     text-align: center;
-    /* border-style: outset;
-    cursor: pointer;
-    /* text-decoration: none; */
     margin: 10px; 
     background-color: rgba(186, 183, 183, 0.912);
     border-radius: 10px;
-    padding: 15px;
+    padding: 12px;
     width: 300px;
     height: 250px;
     cursor: pointer;
-    /* box-shadow: 5px 3px 3px; */
 }
 .teamPlayer_Container:hover{
     box-shadow: 5px 3px 3px;
@@ -45,8 +39,7 @@ span{
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 5px;
-    /* margin: 10px; */
+    padding: 2px;
 }
 .players_Img{
     height: 75px;

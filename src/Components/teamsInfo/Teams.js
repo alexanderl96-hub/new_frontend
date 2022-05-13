@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import IndividualTeam from '../individualTeam/IndividualTeam'
+import Navbar from '../navBar/Navbar'
 import './Teams.css'
 
 
@@ -16,7 +17,7 @@ const Teams = () => {
   
   return (
     <div>
-         <h1 >Showing Team</h1>
+        <Navbar />
          <div className='Container'>
          {teams.map((team, index)=>{
              return (

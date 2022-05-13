@@ -29,9 +29,10 @@ const TeamUpDate = () => {
 
   return (
       <div className='TeamUpDate_Container'>
-         <div>TeamUpDate</div>
-         <div className='TeamUpDate_Wrap'>
-             <form className='TeamUpDate_Form'>
+         <div >TeamUpDate</div>
+         <div style={{paddingBottom: '15px'}} > <Link to={`/homeBase`} className='memberLink1' >Back</Link> </div>
+         <div className='TeamUpDate_Wrap' >
+             <form className='TeamUpDate_Form' >
                  <label htmlFor="">Name:</label>
                  <input id='' type="text" value='' placeholder="" className='' ></input>
                  <label htmlFor="">Image URL:</label> 
