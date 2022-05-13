@@ -10,7 +10,7 @@ const TemasPlayers = ({value}) => {
   const [more , setMore] = useState(['more...']);
  let params = useParams()
  let groupID = params.id
- //console.log(value, 'tppppp')
+ console.log(value, 'tppppp')
  
 
   useEffect(()=>{
@@ -53,7 +53,7 @@ const TemasPlayers = ({value}) => {
       <div >
        {gruopPlayers.map((player, index) =>{
          return(
-           <Link to={`/groups/${groupID}`}>
+           <Link to={`/groups/${groupID}`} >
           <div className="teamPlayer_Container">
            <div className="teamsPlayers" value={on}  onClick={ handleSub}  >
              <div >
