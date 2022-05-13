@@ -12,6 +12,7 @@ import Testing from '../src/Components/textFolder/TextFolder'
 import IndividualTeam from '../src/Components/individualTeam/IndividualTeam'
 import TeamsPlayers from './Components/teamsPlayers/TemasPlayers'
  import TeamUpDate from './Components/teamUpDate/TeamUpDate'
+ import IndividualMember from './Components/IndividualMember/IndividualMember'
 
 
 function App() {
@@ -25,7 +26,7 @@ function App() {
           <Route exact path="/homeBase" element={<Teams/>}/>
           <Route exact path="/homeBase/:id" element={<Testing/>}/>
           <Route exact path="/homeBase/groups" element={<TeamsPlayers/>}/>
-          <Route exact path="/homeBase/groups/:id" element={<TeamsPlayers/>}/>
+          <Route exact path="/homeBase/groups/:id" element={<IndividualMember/>}/>
           <Route exact path="/homeBase/groups/team/:team_id" element={<TeamsPlayers/>}/>
           <Route exact path="/homeBase/team" element={<TeamUpDate/>}/>
         </Routes>

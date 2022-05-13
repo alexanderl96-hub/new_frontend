@@ -1,0 +1,102 @@
+.IndividualContainer{
+    text-align: center;
+}
+.memberLink{
+    background-color: gray;
+    padding: 10px;
+    background-color: green;
+    border-radius: 10px;
+    margin-right: -10px;
+}
+.memberLink1{
+    background-color: gray;
+     width: 10%; 
+     border-radius: 10px;
+     padding: 10px;
+     margin-left: -250px;
+    text-align: left;
+}
+.Wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.member_Img{
+    height: 175px;
+    width: 150px;
+    border: 5px solid rgb(89, 88, 88);
+    border-radius: 40px;
+}
+.member_Name{
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    background-color: white;
+    border-radius: 50px;
+    padding: 10px;
+    width: 250px;
+}
+.member_Info{
+    text-align: left;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    width: 300px;
+}
+.teamPlayer_AboutGrid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+.teamPlayer_About1{
+    padding: 10px;
+    width: 70%;
+    text-align: justify;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-left: 10%;
+    background-color: rgba(186, 183, 183, 0.876);
+    color: rgba(60, 57, 57, 0.941);
+    grid-column: 1 / 2;
+    grid-row: 1;
+}
+
+.teamPlayer_About2{
+    padding: 10px;
+    width: 70%;
+    text-align: justify;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-left: 10%;
+    background-color: rgba(186, 183, 183, 0.876);
+    color: rgba(60, 57, 57, 0.941);
+    grid-column: 1 / 2;
+    grid-row: 2;
+}
+.teamPlayer_About3{
+    padding: 10px;
+    width: 70%;
+    text-align: justify;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-left: 10%;
+    background-color: rgba(186, 183, 183, 0.876);
+    color: rgba(60, 57, 57, 0.941);
+    grid-column: 1 / 2;
+    grid-row: 3;
+}
+.teamPlayer_About4{
+    padding: 10px;
+    width: 70%;
+    text-align: justify;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-left: 10%;
+    background-color: rgba(186, 183, 183, 0.876);
+    color: rgba(60, 57, 57, 0.941);
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+}
