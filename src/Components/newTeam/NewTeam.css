@@ -1,0 +1,20 @@
+.TeamUpDate_Wrap{
+    background-color: rgba(148, 145, 145, 0.645);
+    width: 90%;
+    border-radius: 3px;
+    display: flex;
+    padding: 45px;
+    margin: auto;
+}
+.newTeam_photo{
+    width: 350px;
+    height: 270px;
+    border: 2px solid rgb(108, 70, 70);
+    border-radius: 5px;
+}
+
+.newInputteam{
+    width: 300px;
+    text-align: center;
+    font-size: 15px;
+}
