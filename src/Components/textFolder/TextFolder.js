@@ -1,7 +1,9 @@
 import React,  { useState, useEffect }from 'react'
-import { useParams, Link} from 'react-router-dom'
-
+import { useParams, Link, useNavigate} from 'react-router-dom'
+import { apiURL } from '../back-end/Back-End'
+import axios from 'axios'
 import './textFolder.css'
+const API_DTBASE = apiURL();
 
 const TextFolder = () => {
     const [on , setON] = useState([true]);
@@ -9,6 +11,8 @@ const TextFolder = () => {
     const [players, setPlayers] = useState([]);
     let params = useParams()
     let teamId = params.id
+
+    const navigate = useNavigate();
     
     useEffect(() => {
         fetch(`http://localhost:9000/groups`)
@@ -17,6 +21,11 @@ const TextFolder = () => {
             setPlayers(data)
         })
   },[])
+  const handleDelete = () => {
+    axios.delete(`${API_DTBASE}/teams/${teamId}`).then(() =>{
+        navigate(`/homebase`)
+    }, (error) => console.log(error))
+};
 
   const handleSub = (e) => {
     e.preventDefault();
@@ -30,14 +39,14 @@ const TextFolder = () => {
   };
   return (
     <div style={{ paddingTop: '15px'}} >
-            <h1 className="nav" style={{backgroundColor: 'gray', padding: '10px', width: '20%', borderRadius: '20px', color: '#e20909'}}>Teams Players</h1>
-        <div >
+            <h1 className="nav-TeamPlayers">Teams Players</h1>
+        <div style={{paddingBottom: '10px'}}>
           <div> <Link to="/homebase" className='teamLink'>⬅</Link></div>      
-           <Link to={`/homeBase/updateteam/${teamId}`} className='memberLink' style={{marginLeft: '80%'}}>Update Team
-                </Link>
+           <Link to={`/homeBase/updateteam/${teamId}`} className='teamLinkDelete' style={{marginLeft: '80%'}}>Update Team</Link>
+           <Link to={`/homebase`} onClick={handleDelete} className="teamLinkDelete" >Delete</Link>
         </div>
      
-        <div className="Container">
+        <div className="teamPlayersContainer">
         {players.map((member, index)=>{
             return (
                  <div >

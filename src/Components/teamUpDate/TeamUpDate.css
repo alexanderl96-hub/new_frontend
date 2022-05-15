@@ -1,18 +1,41 @@
 .TeamUpDate_Container{
     text-align: center;
-    padding-bottom: 10px;
+    padding-bottom: 10px; 
+    background-color: rgba(148, 145, 145, 0.645);
+    height: 701px;
+}
+.newLinkBack{
+    margin-bottom: 35px;
+    text-decoration: none; 
+    margin-left: 30px;
+    border-radius: 5px;
+    background-color: rgb(134, 131, 131);
+    padding: 5px;
+    font-size: 17px;
+    cursor: pointer;
 }
 .TeamUpDate_Wrap{
-    background-color: rgba(148, 145, 145, 0.645);
     width: 30%;
     border-radius: 3px;
-    
 }
 .TeamUpDate_Form{
     display: flex;
     flex-direction: column;
-    padding: 5px;
-   
+    padding: 5px;  
+}
+.upDateTeam{
+    width: 350px;
+    text-align: center;
+    font-size: 15px;
+}
+.Url_photo{
+    width: 420px;
+    height: 270px;
+    border: 2px solid rgb(108, 70, 70);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.657);
+    margin-top: 35px;
+    margin-left: -20px;
 }
 label{
       padding: 10px;
@@ -20,15 +43,24 @@ label{
 input{
     width: 80%;
 }
-bottom{
-    margin-top: 25px;
+.updateButtom{
+    margin-top: 25px; 
+    cursor: pointer;
+    font-size: 18px;
+    background-color: white;
+    border: 1px;
+    padding:3px;
+    width: 60px;
+    border-radius: 9px;
+    transition: all 1s;
 }
-bottom:hover{
+.updateButtom:hover{
     background-color: rgb(72, 193, 72);
     border: 1px;
     border-radius: 9px;
     padding:3px;
-    transition: all 1.5s;
+    transition: all 1s;
     width: 80px;
     margin-top: 4px;
+    margin-top: 25px; 
 }

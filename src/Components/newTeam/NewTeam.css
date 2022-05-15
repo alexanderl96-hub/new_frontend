@@ -1,20 +1,73 @@
-.TeamUpDate_Wrap{
+.newTeam_Container{
+    text-align: center;
+    padding-bottom: 10px; 
     background-color: rgba(148, 145, 145, 0.645);
+    height: 701px;
+}
+.newTitle{
+    background-color: rgb(134, 131, 131);
+    color: white;
+    font-family: cursive;
+    box-shadow: 0 4px 2px -2px rgb(49, 49, 49);
+    margin-bottom: 7px;
+}
+.newLinkBack{
+    margin-bottom: 35px;
+    text-decoration: none; 
+    margin-left: 30px;
+    border-radius: 5px;
+    background-color: rgb(134, 131, 131);
+    padding: 5px;
+    font-size: 17px;
+    cursor: pointer;
+}
+.newTeam_Wrap{
     width: 90%;
     border-radius: 3px;
     display: flex;
-    padding: 45px;
-    margin: auto;
+    box-sizing: border-box;
+    margin-top: 10%;
+}
+.newTeam_Form{
+    display: flex;
+    flex-direction: column;
+    padding: 5px; 
 }
 .newTeam_photo{
-    width: 350px;
+    width: 420px;
     height: 270px;
     border: 2px solid rgb(108, 70, 70);
     border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.657);
+}
+.photo{
+    width: 420px;
+    height: 270px; 
 }
 
 .newInputteam{
-    width: 300px;
+    width: 350px;
     text-align: center;
     font-size: 15px;
+}
+.newTeamButton{
+    margin-top: 25px; 
+    cursor: pointer;
+}
+.newTeamButton:hover{
+    background-color: rgb(72, 193, 72);
+    border: 1px;
+    border-radius: 9px;
+    padding:3px;
+    transition: all 1s;
+    width: 70px;
+    margin-top: 25px; 
+    /* cursor: pointer; */
+}
+.newTeam_Name{
+    margin-top: 40px;
+    margin-left: 41%;
+}
+label{
+    font-size: 18px;
 }

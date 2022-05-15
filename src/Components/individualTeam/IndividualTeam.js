@@ -11,6 +11,7 @@ const IndividualTeam = ({team}) => {
         <div className="teamContainer"  > 
              <img src={team.imag} alt={team.id} className="img"/> 
              <div>{team.name}</div> 
+             {team.id}
         </div>
         </Link>
     </div>

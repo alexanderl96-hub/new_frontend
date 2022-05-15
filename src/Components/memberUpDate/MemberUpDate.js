@@ -14,7 +14,7 @@ const MemberUpDate = () => {
                  <label htmlFor="">Image URL:</label> 
                  <input id='' type="text" value='' placeholder="" className='' ></input>
                  <hr/>
-                 <bottom type='submit' className='' >Submit</bottom>
+                 <buttom type='submit' className='' >Submit</buttom>
              </form>
              <div className="songs_photo">
             <img

@@ -19,7 +19,7 @@ const IndividualMember = () => {
   },[])
 
   return (
-      <div style={{backgroundColor: '#0000ff6d', padding: '10px'}}>
+      <div style={{backgroundColor: '#0000ff6d', padding: '15px', height: '701px'}}>
           <div style={{ display: 'flex', padding: '10px' }}>
               <div>
                     {teamId.map((teams, index) =>{
