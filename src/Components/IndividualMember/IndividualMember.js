@@ -65,7 +65,7 @@ const IndividualMember = () => {
                                     <div> <span>Education:</span> {player.education}</div>
                                 </div>
                                 <div className="teamPlayer_About2">
-                                    <div> <span>Parents:</span> {player.parents}</div> 
+                                    <div style={{paddingTop: '3%'}}> <span>Parents:</span> {player.parents}</div> 
                                     <div> <span>Spouse: </span>{player.spouse}</div> 
                                     <div> <span>Children:</span> {player.children}</div>
                                     <div> <span>Siblings:</span> {player.siblings}</div>
@@ -78,7 +78,38 @@ const IndividualMember = () => {
                                     <div> <span>Weight: </span>{player.weight}</div>
                                 </div>
                                   <div className="teamPlayer_About4">
-                                        <div> <span>Stats: </span>{player.stats}</div>
+                                        <div> <span>Stats: </span>{player.stats}
+
+                                           <div style={{marginBottom: '5%', marginTop:'3%'}}> Game Stats:
+                                               <div style={{display: 'flex'}}>
+                                                    <div style={{width: '130px'}}> Game</div>
+                                                    <div> IP</div>
+                                                    <div> H</div>
+                                                    <div> ER</div>
+                                                    <div> HR</div>
+                                                    <div> BB</div>
+                                                    <div> SO</div>
+                                                    <div> Sv</div>
+                                                    <div> ERA</div>
+                                               </div>
+                                           </div>
+                                           <div> Career Stats:
+                                               <div style={{display: 'flex'}}>
+                                                    <div>Year</div>
+                                                    <div style={{marginRight: '80px', marginLeft: '-5px'}}>Team</div>
+                                                    <div> GP</div>
+                                                    <div> CG</div>
+                                                    <div> ER</div>
+                                                    <div> SO</div>
+                                                    <div> W</div>
+                                                    <div> L</div>
+                                                    <div> Sv</div>
+                                                    <div> WHIP</div>
+                                                    <div> ERA</div>
+                                               </div>
+                                           </div>
+
+                                        </div>
                                     </div>
 
                             </div>
