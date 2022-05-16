@@ -31,7 +31,7 @@ const NewTeam = () => {
   }
   const addTeam = (newTeam) => {
     axios.post(`${API_DTBASE}/teams`, newTeam).then((res)=>{
-      navigate('/homebase');
+      navigate('/homeBase');
       })
   }
 
@@ -55,7 +55,7 @@ const NewTeam = () => {
                 <img
                 src={newTeam.imag ? newTeam.imag : null}
                 alt='NewImage'
-                className="photo"
+                className="newphoto"
                 />
                 
            </div>  

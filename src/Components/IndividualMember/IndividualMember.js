@@ -5,9 +5,10 @@ import './IndividualMember.css'
 const IndividualMember = () => {
    const [member, setMember] = useState([])
    const [teamId, setTeamID] = useState([])
+   const [group, setGroup] =useState([])
   let params = useParams()
   let memberId = params.id
-  console.log(memberId, 'memberId')
+//   console.log(memberId, 'memberId')
 
     useEffect(() => {
         fetch(`http://localhost:9000/groups`)
@@ -17,8 +18,16 @@ const IndividualMember = () => {
             setTeamID(data)
         })
   },[])
+  useEffect(() => {
+    fetch(`http://localhost:9000/teams/`)
+    .then(res => res.json())
+    .then(data =>{
+        setGroup(data)
+    })
+},[])
 
-//   console.log(member)
+  console.log(group, 'group-ookingid')
+
 
   return (
       <div style={{backgroundColor: '#0000ff6d', padding: '15px', height: '701px'}}>
@@ -28,7 +37,7 @@ const IndividualMember = () => {
                         return (
                             <div style={{paddingTop: ''}}>
                                 {teams.team_id === teams.id ? 
-                                <Link to={`/homeBase/${teams.id}`} className='memberLink1'>Back</Link> 
+                                 <Link to={`/homeBase/${teams.team_id}`} className='memberLink1'>Back</Link> 
                                 : null}
                             </div>  
                         )

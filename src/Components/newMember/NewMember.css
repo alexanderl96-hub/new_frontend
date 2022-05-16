@@ -2,7 +2,15 @@
     text-align: center;
     padding-bottom: 10px; 
     background-color: rgba(148, 145, 145, 0.645);
-    height: 701px;
+    height: 770px;
+}
+.newMemberButton{
+    margin-top: 30px;
+    width: 30%;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: white;
 }
 .newMemberButton:hover{
    background-color: aqua;
@@ -11,4 +19,27 @@
     height: 240px;
     width: 200px;
     border-radius: 40px;
+
+}
+
+ .newMember_AboutGrid{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 10px;
+    gap: 15px;
+   
+   
+}
+input{
+    width: 20%;
+    margin: 0 auto;
+    font-size: 17px;
+    border-radius: 7px;
+}
+.div{
+    height: 240px;
+    width: 200px;
+    border-radius: 40px;
+    border: 5px solid gray;
 }

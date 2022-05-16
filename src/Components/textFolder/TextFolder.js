@@ -41,10 +41,10 @@ const TextFolder = () => {
     <div style={{ paddingTop: '15px'}} >
             <h1 className="nav-TeamPlayers">Teams Players</h1>
         <div style={{paddingBottom: '10px'}}>
-          <div> <Link to="/homebase" className='teamLink'>⬅</Link></div>      
+          <div> <Link to="/homeBase" className='teamLink'>⬅</Link></div>      
            <Link to={`/homeBase/updateteam/${teamId}`} className='teamLinkDelete' style={{marginLeft: '75%'}}>Update Team</Link>
-           <Link to={`/homebase`} onClick={handleDelete} className="teamLinkDelete" >Delete</Link>
-           <Link to={`/homebase/newMember/${teamId}`} id={teamId} className="teamLinkDelete" >Add Member</Link>
+           <Link to={`/homeBase`} onClick={handleDelete} className="teamLinkDelete" >Delete</Link>
+           <Link to={`/homeBase/newMember/${teamId}`} id={teamId} className="teamLinkDelete" >Add Member</Link>
         </div>
      
         <div className="teamPlayersContainer">
@@ -63,7 +63,7 @@ const TextFolder = () => {
                                         <div className= 'playerDataInfo'><span>Number:</span> {member?.number}</div>
                                         <div className= 'playerDataInfo'><span>Position:</span> {member?.position}</div>
                                         <div className= 'playerDataInfo'><span>Salary: </span> {member?.salary}</div>
-                                        <Link to={`/homebase/groups/${member.id}` } >
+                                        <Link to={`/homeBase/groups/${member.id}` } >
                                               <p   className= ' More' >{more}</p>
                                         </Link>
                                    </div>

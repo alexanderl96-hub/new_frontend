@@ -78,7 +78,7 @@ const TeamUpDate = () => {
                         <img
                           src={group.imag ? group.imag : null}
                           alt='NewImage'
-                          className="photo"
+                          className="newphoto"
                           />
                       </div>
                       <buttom type='submit' className='updateButtom' onClick={handleSubmit}  >Submit</buttom>
