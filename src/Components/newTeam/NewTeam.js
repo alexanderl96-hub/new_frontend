@@ -1,6 +1,6 @@
 import React, { useState  } from 'react'
 import { apiURL } from '../back-end/Back-End'
-import { Link , useNavigate, useParams} from 'react-router-dom'
+import { Link , useNavigate } from 'react-router-dom'
 // import { useNavigate } from 'react-router-dom';
 import axios from "axios";
 import '../teamUpDate/TeamUpDate.css'
@@ -24,7 +24,6 @@ const NewTeam = () => {
         setNewTeam({ [e.target.value] : '' })
     }
   }
-console.log(newTeam, 'val')
 
   const handleSubmit = (e) =>{
     e.preventDefault()
@@ -44,7 +43,7 @@ console.log(newTeam, 'val')
              <div>
                 <form className='newTeam_Form' onSubmit={handleSubmit} >
                     <label htmlFor="">Name:</label>
-                    <input id='name' type="text" onChange={handleInput}  placeholder="Name..." className='newInputteam' ></input>
+                    <input id='name' type="text" onChange={handleInput}  placeholder="Name and lastname..." className='newInputteam' ></input>
                     <label htmlFor="">Image URL:</label> 
                     <input id='imag' type="text" onChange={handleInput} value='' placeholder="Image URL..." className='newInputteam' ></input>
                     <hr/>

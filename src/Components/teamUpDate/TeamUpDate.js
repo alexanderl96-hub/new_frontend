@@ -7,7 +7,7 @@ const API_DTBASE = apiURL();
 
 const TeamUpDate = () => {
   const [name, setName] = useState([])
-  const [newgroup, setNewGroup] = useState([])
+  //const [newgroup, setNewGroup] = useState([])
     let { id } = useParams();
     const navigate = useNavigate();
 
@@ -26,7 +26,6 @@ const TeamUpDate = () => {
     e.preventDefault();
     updatedTeam(group, id)
     navigate(`/homebase`)
-    console.log('submit')
     
   };
    
@@ -62,7 +61,7 @@ const TeamUpDate = () => {
       })
 },[id])
 
-console.log(group, 'dtbase')
+
 
   return (
       <div className='TeamUpDate_Container'>

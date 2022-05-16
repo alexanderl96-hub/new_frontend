@@ -42,8 +42,9 @@ const TextFolder = () => {
             <h1 className="nav-TeamPlayers">Teams Players</h1>
         <div style={{paddingBottom: '10px'}}>
           <div> <Link to="/homebase" className='teamLink'>⬅</Link></div>      
-           <Link to={`/homeBase/updateteam/${teamId}`} className='teamLinkDelete' style={{marginLeft: '80%'}}>Update Team</Link>
+           <Link to={`/homeBase/updateteam/${teamId}`} className='teamLinkDelete' style={{marginLeft: '75%'}}>Update Team</Link>
            <Link to={`/homebase`} onClick={handleDelete} className="teamLinkDelete" >Delete</Link>
+           <Link to={`/homebase/newMember/${teamId}`} id={teamId} className="teamLinkDelete" >Add Member</Link>
         </div>
      
         <div className="teamPlayersContainer">

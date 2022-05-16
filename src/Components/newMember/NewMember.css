@@ -1,0 +1,14 @@
+.newMember_Container{
+    text-align: center;
+    padding-bottom: 10px; 
+    background-color: rgba(148, 145, 145, 0.645);
+    height: 701px;
+}
+.newMemberButton:hover{
+   background-color: aqua;
+}
+.photo{
+    height: 240px;
+    width: 200px;
+    border-radius: 40px;
+}

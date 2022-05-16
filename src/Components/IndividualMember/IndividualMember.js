@@ -7,7 +7,7 @@ const IndividualMember = () => {
    const [teamId, setTeamID] = useState([])
   let params = useParams()
   let memberId = params.id
-  console.log(memberId)
+  console.log(memberId, 'memberId')
 
     useEffect(() => {
         fetch(`http://localhost:9000/groups`)
@@ -17,6 +17,8 @@ const IndividualMember = () => {
             setTeamID(data)
         })
   },[])
+
+//   console.log(member)
 
   return (
       <div style={{backgroundColor: '#0000ff6d', padding: '15px', height: '701px'}}>
@@ -57,7 +59,7 @@ const IndividualMember = () => {
                             </div>
                             <div className ="teamPlayer_AboutGrid">
                                 <div className="teamPlayer_About1">
-                                    <div> <span>Age:</span> {player.age}</div> 
+                                    <div> <span>Age:</span> {player.age} years</div> 
                                     <div> <span>Born:</span> {player.born}</div> 
                                     <div> <span>City: </span>{player.city}</div> 
                                     <div> <span>State:</span> {player.state}</div>
@@ -77,98 +79,101 @@ const IndividualMember = () => {
                                     <div> <span>Height:</span> {player.height}</div>
                                     <div> <span>Weight: </span>{player.weight}</div>
                                 </div>
+                                <div className="teamPlayer_About5">
+                                    <div> <span>About: </span>{player.about}</div> 
+                                </div>
                                   <div className="teamPlayer_About4">
-                                        <div style={{  overflowY: 'scroll', width: '100%', height: '375px', padding:'2px', marginTop:'-5px'}} className="teamStats"> <span>Stats: </span>{player.stats}
-
-                                           <div style={{marginBottom: '5%', marginTop:'3%'}}> Game Stats:
-                                               <div style={{display: 'flex'}}>
-                                                    <div style={{width: '130px'}}> Game</div>
-                                                    <div> IP</div>
-                                                    <div> H</div>
-                                                    <div> ER</div>
-                                                    <div> HR</div>
-                                                    <div> BB</div>
-                                                    <div> SO</div>
-                                                    <div> Sv</div>
-                                                    <div> ERA</div>
-                                               </div>
-                                           </div>
-                                           <div style={{marginBottom: '5%', marginTop:'3%'}}> Career Stats:
-                                               <div style={{display: 'flex'}}>
-                                                    <div>Year</div>
-                                                    <div style={{marginRight: '80px', marginLeft: '-5px'}}>Team</div>
-                                                    <div> GP</div>
-                                                    <div> CG</div>
-                                                    <div> ER</div>
-                                                    <div> SO</div>
-                                                    <div> W</div>
-                                                    <div> L</div>
-                                                    <div> Sv</div>
-                                                    <div> WHIP</div>
-                                                    <div> ERA</div>
-                                               </div>
-                                           </div>
-                                           <div style={{marginBottom: '5%', marginTop:'3%'}}> Career Stats:
-                                               <div style={{display: 'flex'}}>
-                                                    <div>Year</div>
-                                                    <div style={{marginRight: '80px', marginLeft: '-5px'}}>Team</div>
-                                                    <div> GP</div>
-                                                    <div> CG</div>
-                                                    <div> ER</div>
-                                                    <div> SO</div>
-                                                    <div> W</div>
-                                                    <div> L</div>
-                                                    <div> Sv</div>
-                                                    <div> WHIP</div>
-                                                    <div> ERA</div>
-                                               </div>
-                                           </div>
-                                           <div style={{marginBottom: '5%', marginTop:'3%'}}> Career Stats:
-                                               <div style={{display: 'flex'}}>
-                                                    <div>Year</div>
-                                                    <div style={{marginRight: '80px', marginLeft: '-5px'}}>Team</div>
-                                                    <div> GP</div>
-                                                    <div> CG</div>
-                                                    <div> ER</div>
-                                                    <div> SO</div>
-                                                    <div> W</div>
-                                                    <div> L</div>
-                                                    <div> Sv</div>
-                                                    <div> WHIP</div>
-                                                    <div> ERA</div>
-                                               </div>
-                                           </div>
-                                           <div style={{marginBottom: '5%', marginTop:'3%'}}> Career Stats:
-                                               <div style={{display: 'flex'}}>
-                                                    <div>Year</div>
-                                                    <div style={{marginRight: '80px', marginLeft: '-5px'}}>Team</div>
-                                                    <div> GP</div>
-                                                    <div> CG</div>
-                                                    <div> ER</div>
-                                                    <div> SO</div>
-                                                    <div> W</div>
-                                                    <div> L</div>
-                                                    <div> Sv</div>
-                                                    <div> WHIP</div>
-                                                    <div> ERA</div>
-                                               </div>
-                                           </div>
-                                           <div style={{marginBottom: '5%', marginTop:'3%'}}> Career Stats:
-                                               <div style={{display: 'flex'}}>
-                                                    <div>Year</div>
-                                                    <div style={{marginRight: '80px', marginLeft: '-5px'}}>Team</div>
-                                                    <div> GP</div>
-                                                    <div> CG</div>
-                                                    <div> ER</div>
-                                                    <div> SO</div>
-                                                    <div> W</div>
-                                                    <div> L</div>
-                                                    <div> Sv</div>
-                                                    <div> WHIP</div>
-                                                    <div> ERA</div>
-                                               </div>
-                                           </div>
-
+                                        <div style={{padding:'3px'}}> <span>Stats: </span>{player.stats}
+                                             <div style={{ overflowY: 'scroll', width: '100%', height: '255px', padding:'2px', marginTop:'-5px', cursor: 'pointer' }}>   
+                                                    <div style={{marginBottom: '5%', marginTop:'3%'}}> Game Stats:
+                                                        <div style={{display: 'flex'}}>
+                                                                <div style={{width: '130px'}}> Game</div>
+                                                                <div> IP</div>
+                                                                <div> H</div>
+                                                                <div> ER</div>
+                                                                <div> HR</div>
+                                                                <div> BB</div>
+                                                                <div> SO</div>
+                                                                <div> Sv</div>
+                                                                <div> ERA</div>
+                                                        </div>
+                                                    </div>
+                                                    <div style={{marginBottom: '5%', marginTop:'3%'}}> Career Stats:
+                                                        <div style={{display: 'flex'}}>
+                                                                <div>Year</div>
+                                                                <div style={{marginRight: '80px', marginLeft: '-5px'}}>Team</div>
+                                                                <div> GP</div>
+                                                                <div> CG</div>
+                                                                <div> ER</div>
+                                                                <div> SO</div>
+                                                                <div> W</div>
+                                                                <div> L</div>
+                                                                <div> Sv</div>
+                                                                <div> WHIP</div>
+                                                                <div> ERA</div>
+                                                        </div>
+                                                    </div>
+                                                    <div style={{marginBottom: '5%', marginTop:'3%'}}> Career Stats:
+                                                        <div style={{display: 'flex'}}>
+                                                                <div>Year</div>
+                                                                <div style={{marginRight: '80px', marginLeft: '-5px'}}>Team</div>
+                                                                <div> GP</div>
+                                                                <div> CG</div>
+                                                                <div> ER</div>
+                                                                <div> SO</div>
+                                                                <div> W</div>
+                                                                <div> L</div>
+                                                                <div> Sv</div>
+                                                                <div> WHIP</div>
+                                                                <div> ERA</div>
+                                                        </div>
+                                                    </div>
+                                                    <div style={{marginBottom: '5%', marginTop:'3%'}}> Career Stats:
+                                                        <div style={{display: 'flex'}}>
+                                                                <div>Year</div>
+                                                                <div style={{marginRight: '80px', marginLeft: '-5px'}}>Team</div>
+                                                                <div> GP</div>
+                                                                <div> CG</div>
+                                                                <div> ER</div>
+                                                                <div> SO</div>
+                                                                <div> W</div>
+                                                                <div> L</div>
+                                                                <div> Sv</div>
+                                                                <div> WHIP</div>
+                                                                <div> ERA</div>
+                                                        </div>
+                                                    </div>
+                                                    <div style={{marginBottom: '5%', marginTop:'3%'}}> Career Stats:
+                                                        <div style={{display: 'flex'}}>
+                                                                <div>Year</div>
+                                                                <div style={{marginRight: '80px', marginLeft: '-5px'}}>Team</div>
+                                                                <div> GP</div>
+                                                                <div> CG</div>
+                                                                <div> ER</div>
+                                                                <div> SO</div>
+                                                                <div> W</div>
+                                                                <div> L</div>
+                                                                <div> Sv</div>
+                                                                <div> WHIP</div>
+                                                                <div> ERA</div>
+                                                        </div>
+                                                    </div>
+                                                    <div style={{marginBottom: '5%', marginTop:'3%'}}> Career Stats:
+                                                        <div style={{display: 'flex'}}>
+                                                                <div>Year</div>
+                                                                <div style={{marginRight: '80px', marginLeft: '-5px'}}>Team</div>
+                                                                <div> GP</div>
+                                                                <div> CG</div>
+                                                                <div> ER</div>
+                                                                <div> SO</div>
+                                                                <div> W</div>
+                                                                <div> L</div>
+                                                                <div> Sv</div>
+                                                                <div> WHIP</div>
+                                                                <div> ERA</div>
+                                                        </div>
+                                                    </div>
+                                             </div> 
                                         </div>
                                     </div>
 
