@@ -67,7 +67,8 @@ const TeamUpDate = () => {
       <div className='TeamUpDate_Container'>
          <h1 className='newTitle'>Team Up Date</h1>
          <div style={{paddingTop: '10px', textAlign: 'start', marginLeft: '20px'}} > <Link to={`/homeBase/${id}`} className='newLinkBack'>Back</Link> </div>
-         <Link to={`/homebase`}><h3>HomeBase</h3></Link>
+         {/* <Link to={`/homebase`}><h3>HomeBase</h3></Link> */}
+         <Link to={`/homeBase/newMember/${id}`} id={id} className="teamLinkDelete" >Add Member</Link>
          <div className='TeamUpDate_Wrap' >
               <div><h1>Team: {name}</h1></div>
                   <form className='TeamUpDate_Form' onSubmit={handleSubmit}>
@@ -85,6 +86,12 @@ const TeamUpDate = () => {
                   </form>
                     
          </div>
+         <div>
+           <span>Members todays</span>
+           <div>
+             <h2>Members display aqui</h2>
+           </div>
+        </div>
       </div>
     
   )

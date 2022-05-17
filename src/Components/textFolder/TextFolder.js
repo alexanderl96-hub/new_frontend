@@ -44,7 +44,7 @@ const TextFolder = () => {
           <div> <Link to="/homeBase" className='teamLink'>⬅</Link></div>      
            <Link to={`/homeBase/updateteam/${teamId}`} className='teamLinkDelete' style={{marginLeft: '75%'}}>Update Team</Link>
            <Link to={`/homeBase`} onClick={handleDelete} className="teamLinkDelete" >Delete</Link>
-           <Link to={`/homeBase/newMember/${teamId}`} id={teamId} className="teamLinkDelete" >Add Member</Link>
+           {/* <Link to={`/homeBase/newMember/${teamId}`} id={teamId} className="teamLinkDelete" >Add Member</Link> */}
         </div>
      
         <div className="teamPlayersContainer">
