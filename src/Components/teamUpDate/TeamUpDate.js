@@ -7,7 +7,7 @@ const API_DTBASE = apiURL();
 
 const TeamUpDate = () => {
   const [name, setName] = useState([])
-  //const [newgroup, setNewGroup] = useState([])
+  const [newgroup, setNewGroup] = useState([])
     let { id } = useParams();
     const navigate = useNavigate();
 
@@ -58,9 +58,18 @@ const TeamUpDate = () => {
       .then(res => res.json())
       .then(data =>{
           setName(data.team.name)
+         
       })
 },[id])
+useEffect(() => {
+  fetch(`http://localhost:9000/groups`)
+  .then(res => res.json())
+  .then(data =>{
+    setNewGroup(data)
+  })
+},[])
 
+console.log(newgroup)
 
 
   return (
@@ -70,7 +79,7 @@ const TeamUpDate = () => {
          {/* <Link to={`/homebase`}><h3>HomeBase</h3></Link> */}
          <Link to={`/homeBase/newMember/${id}`} id={id} className="teamLinkDelete" >Add Member</Link>
          <div className='TeamUpDate_Wrap' >
-              <div><h1>Team: {name}</h1></div>
+              <div style={{ margin: '5px', color:'red'}}><h2>Team: {name}</h2></div>
                   <form className='TeamUpDate_Form' onSubmit={handleSubmit}>
                       <label htmlFor="">Image URL:</label> 
                       <input id='imag' type="text" value=''  onChange={handleInput} placeholder="Url..." className='upDateTeam' ></input>
@@ -83,14 +92,22 @@ const TeamUpDate = () => {
                           />
                       </div>
                       <buttom type='submit' className='updateButtom' onClick={handleSubmit}  >Submit</buttom>
-                  </form>
-                    
+                  </form>         
          </div>
-         <div>
-           <span>Members todays</span>
-           <div>
-             <h2>Members display aqui</h2>
-           </div>
+         <div style={{border: '2px solid', height: '175px', margin: '5px', borderRadius: '5px', display: 'flex', }}>
+           {newgroup.map((players, index)=>{
+             return(
+               <div>
+                { Number(id) === players.team_id ? 
+                   <div style={{ border: '3px solid gray', borderRadius: '5px', color: 'white', width: '170px'}}>
+                      <img src={players.imag} alt='' style={{height: '140px', width: '170px',borderRadius: '5px'}} /> 
+                      <div style={{backgroundColor: 'gray', }}>{players.name}</div>
+                  </div>
+                  : null }
+                 
+                 </div>
+             )  
+           } )}
         </div>
       </div>
     

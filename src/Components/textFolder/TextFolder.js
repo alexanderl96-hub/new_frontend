@@ -63,8 +63,8 @@ const TextFolder = () => {
                                         <div className= 'playerDataInfo'><span>Number:</span> {member?.number}</div>
                                         <div className= 'playerDataInfo'><span>Position:</span> {member?.position}</div>
                                         <div className= 'playerDataInfo'><span>Salary: </span> {member?.salary}</div>
-                                        <Link to={`/homeBase/groups/${member.id}` } >
-                                              <p   className= ' More' >{more}</p>
+                                        <Link to={`/homeBase/groups/${member.id}` } teamID={teamId}>
+                                              <p   className= ' More' teamID={teamId} >{more}</p>
                                         </Link>
                                    </div>
                                 </div>

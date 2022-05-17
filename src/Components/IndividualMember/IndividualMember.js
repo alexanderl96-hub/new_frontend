@@ -1,14 +1,24 @@
 import React,  { useState, useEffect }from 'react'
-import { useParams, Link} from 'react-router-dom'
+import { useParams, Link, useNavigate} from 'react-router-dom'
+import { apiURL } from '../back-end/Back-End'
 import './IndividualMember.css'
+import axios from 'axios'
+const API_DTBASE = apiURL();
 
-const IndividualMember = () => {
+const IndividualMember = ({ teamID }) => {
    const [member, setMember] = useState([])
    const [teamId, setTeamID] = useState([])
    const [group, setGroup] =useState([])
   let params = useParams()
   let memberId = params.id
-//   console.log(memberId, 'memberId')
+   console.log(teamID, 'teamID')
+   console.log(memberId, 'memberId')
+// const navigate = useNavigate();   
+const handleDelete = () => {
+    axios.delete(`${API_DTBASE}/groups/${memberId}`).then(() =>{
+        //  navigate(`/homebase`)
+    }, (error) => console.log(error))
+};
 
     useEffect(() => {
         fetch(`http://localhost:9000/groups`)
@@ -19,12 +29,12 @@ const IndividualMember = () => {
         })
   },[])
   useEffect(() => {
-    fetch(`http://localhost:9000/teams/`)
+    fetch(`http://localhost:9000/groups/${memberId}`)
     .then(res => res.json())
     .then(data =>{
-        setGroup(data)
+        setGroup(data.team.team_id )
     })
-},[])
+},[memberId])
 
   console.log(group, 'group-ookingid')
 
@@ -32,20 +42,13 @@ const IndividualMember = () => {
   return (
       <div style={{backgroundColor: '#0000ff6d', padding: '15px', height: '701px'}}>
           <div style={{ display: 'flex', padding: '10px' }}>
-              <div>
-                    {teamId.map((teams, index) =>{
-                        return (
-                            <div style={{paddingTop: ''}}>
-                                {teams.team_id === teams.id ? 
-                                 <Link to={`/homeBase/${teams.team_id}`} className='memberLink1'>Back</Link> 
-                                : null}
-                            </div>  
-                        )
-                    })}
-              </div>
+              <div> <Link to={`/homeBase/${group}`} className='memberLink1'>Back</Link> </div>
               <div> 
                 <Link to={`/homeBase/updateMember/${memberId}`} className='memberLink'>Update Member
                 </Link>
+                <div style={{marginTop: '-19px', marginLeft: '-90px'}}> 
+                    <Link to={`/homeBase/${group}`} onClick={handleDelete} className="teamLinkDelete" >Delete</Link>
+                </div>
               </div>
           </div>     
           {member.map((player, index) =>{

@@ -56,10 +56,9 @@ const NewMember = () => {
         fetch(`http://localhost:9000/teams/${id}`)
         .then(res => res.json())
         .then(data =>{
-            setGroup(data.team.id)
+            setGroup(data.team)
         })
   },[id])
-  // console.log(group, 'id found')
 
   return (
     <div className='newMember_Container'>
@@ -72,7 +71,7 @@ const NewMember = () => {
                             {/* <label className='label-1' >Name: </label> */}
                             <input id='name' type="text" onChange={handleInput} placeholder="Name ..." className='input-1' ></input>
                             {/* <label className='label-2' >Team_Id: </label> */}
-                            <input id='team_id' type="text" onChange={handleInput}  placeholder="Team_Id ..." className='input-2' ></input>
+                            <input id='team_id' type="text" onChange={handleInput} placeholder="Team_Id ..." className='input-2' ></input>
                             {/* <label className='label-3' >Nickname: </label> */}
                             <input id='nickname'type="text" onChange={handleInput}  placeholder="Nickname..." className='input-3' ></input>
                             {/* <label className='label-4' >Image URL: </label> */}
@@ -92,9 +91,9 @@ const NewMember = () => {
                             {/* <label>Weight: </label> */}
                             <input id='weight' type="text" onChange={handleInput}  placeholder="Weight..." className='input-11' ></input>
                             {/* <label>Current Team: </label> */}
-                            <input id='currentTeam' type="text" onChange={handleInput}  placeholder="Current Team..." className='input-12' ></input>
+                            <input id='currentTeam' type="text" onChange={handleInput} placeholder="Current Team..." className='input-12' ></input>
                             {/* <label>Salary: </label> */}
-                            <input id='salary' type="text" onChange={handleInput}   placeholder="Salary..." className='input-13' ></input>
+                            <input id='salary' type="text" onChange={handleInput}  placeholder="Salary..." className='input-13' ></input>
                             {/* <label>Number: </label> */}
                             <input id='number' type="number" onChange={handleInput} placeholder="Number..." className='input-14' ></input>
                             {/* <label>Education: </label> */}

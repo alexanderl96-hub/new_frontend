@@ -21,7 +21,7 @@
 .TeamUpDate_Form{
     display: flex;
     flex-direction: column;
-    padding: 5px;  
+    margin-top: -15px;
 }
 .upDateTeam{
     width: 350px;
@@ -34,7 +34,7 @@
     border: 2px solid rgb(108, 70, 70);
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.657);
-    margin-top: 35px;
+    margin-top: 15px;
     margin-left: -20px;
 }
 .newphoto{
@@ -49,7 +49,7 @@ input{
     width: 80%;
 }
 .updateButtom{
-    margin-top: 25px; 
+    margin-top: 15px; 
     cursor: pointer;
     font-size: 18px;
     background-color: white;
@@ -67,5 +67,5 @@ input{
     transition: all 1s;
     width: 80px;
     margin-top: 4px;
-    margin-top: 25px; 
+    margin-top: 15px; 
 }
