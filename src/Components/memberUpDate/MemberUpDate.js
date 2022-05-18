@@ -1,30 +1,71 @@
-import React,  { useState, useEffect }from 'react'
+import React,  { useState }from 'react'
 import { useParams, Link, useNavigate} from 'react-router-dom'
+import { apiURL } from '../back-end/Back-End'
+import axios from "axios";
+const API_DTBASE = apiURL();
 
 const MemberUpDate = () => {
-  const navigate = useNavigate();
+  const navigate = useNavigate(); 
+  let { id } = useParams();
+  const [newMember,setMember] = useState({
+    name: '',
+    team_id: '',
+    nickname: '',
+    imag: '',
+    born: '',
+    city: '',
+    state: '',
+    country: '',
+    age: '',
+    height: '',
+    weight: '',
+    currentTeam: '',
+    salary: '',
+    number: '',
+    education: '',
+    spouse: '',
+    parents: '',
+    children: '',
+    siblings: '',
+    position: '',
+    bats: '',
+    throws: '',
+    stats: '',
+    about: '',
+ })
 
 
 
   const handleInput =(e)=>{
     const {value} = e.target;
-    // setGroup({...group, [e.target.id]: value })
+     setMember({...newMember, [e.target.id]: value })
 }
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // updatedTeam(group, id)
-    navigate(`/homebase`)
+     updatedTeam(newMember, id)
+    navigate(`/homebase/groups/${id}`)
     
   };
+  const updatedTeam = (update, id) => {
+    axios.put(`${API_DTBASE}/groups/${id}`, update).then(
+      (res) => {
+        const newTeam = [...newMember];
+        newTeam[id] = update;
+        setMember(newTeam);
+      },
+      (error) => console.log(error)
+    );
+  };
+
   return (
          <div className='TeamUpDate_Container'>
            <h1 className='newTitle'>UpDate Member</h1>
-         <div style={{paddingTop: '10px', textAlign: 'start', marginLeft: '20%', marginBottom: '20px'}}> <Link to={`/homeBase`} className='memberLink1' >Back</Link> </div>
+         <div style={{paddingTop: '10px', textAlign: 'start', marginLeft: '20%', marginBottom: '20px'}}> <Link to={`/homeBase/groups/${id}`} className='memberLink1' >Back</Link> </div>
          <div >
          <form onSubmit={handleSubmit} className='newMember_AboutGrid'>
                             {/* <label className='label-1' >Name: </label> */}
-                            <input id='name' type="text" onChange={handleInput} placeholder="Name ..." className='input-1' ></input>
+                            <input id='name' type="text" onChange={handleInput} placeholder='Name...' className='input-1' ></input>
                             {/* <label className='label-2' >Team_Id: </label> */}
                             <input id='team_id' type="text" onChange={handleInput} placeholder="Team_Id ..." className='input-2' ></input>
                             {/* <label className='label-3' >Nickname: </label> */}
@@ -71,19 +112,11 @@ const MemberUpDate = () => {
                             <input id='stats' type="text" onChange={handleInput}  placeholder="Stats..." className='input-23'></input>
                             <input id='about' type="text" onChange={handleInput}  placeholder="About..." className='input-24'></input>
                             <div  className='div'>
-                                <img src={null } alt='NewImage' className='photo' />
+                                <img src={newMember.imag ? newMember.imag : null } alt='NewImage' className='photo' />
                             </div>
                            
                  <buttom type='submit' className='newMemberButton' onClick={handleSubmit}  >Submit</buttom>
              </form>
-             <div className="songs_photo">
-            <img
-              src={null}
-              alt={'all'}
-              style={{ width: "350px", height: "320px" }}
-              className="photo"
-            />
-          </div>
          </div>
       </div>
   )

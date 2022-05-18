@@ -107,3 +107,6 @@ span{
   border-radius: 20px;
   color: #e20909;
 }
+@media only screen and (max-width: 768px){
+    
+}

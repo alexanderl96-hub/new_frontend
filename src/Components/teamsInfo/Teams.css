@@ -7,3 +7,14 @@
     padding: 2px;
     height: 700px;
 }
+@media only screen and (max-width: 768px){
+    .Container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 2px;
+        height: 700px;
+        width: 100%;
+    }
+}

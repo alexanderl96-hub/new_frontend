@@ -56,7 +56,7 @@ const NewMember = () => {
         fetch(`http://localhost:9000/teams/${id}`)
         .then(res => res.json())
         .then(data =>{
-            setGroup(data.team)
+            setGroup(data.team.id)
         })
   },[id])
 

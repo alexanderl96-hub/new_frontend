@@ -23,3 +23,26 @@
 .TitleLink:hover{
   color: #52FF52;
 }
+@media only screen and (max-width: 768px) {
+  body {
+    background-color: rgb(27, 172, 220);
+  }
+  .App{
+    height:100%;
+    width: 100%;
+    background-size: contain;
+    
+  }
+  .app{
+    font: bolder 80px "Alfa Slab One";
+    padding-top: 80%;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+  .Title{
+    mix-blend-mode: multiply;
+    background-color:#733033;
+    height: 570px;
+  }
+ 
+}
