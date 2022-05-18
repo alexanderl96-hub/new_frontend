@@ -38,12 +38,12 @@ const TextFolder = () => {
     }
   };
   return (
-    <div style={{ paddingTop: '15px', height: '100%', marginBottom: '7px' }}> 
+    <div style={{}}  className="nav-TeamHead"> 
             <h1 className="nav-TeamPlayers">Teams Players</h1>
-        <div style={{paddingBottom: '10px'}}>
+        <div style={{}} className="nav-TeamPlayers2">
           <div> <Link to="/homeBase" className='teamLink'>⬅</Link></div>      
-           <Link to={`/homeBase/updateteam/${teamId}`} className='teamLinkDelete' style={{marginLeft: '75%'}}>Update Team</Link>
-           <Link to={`/homeBase`} onClick={handleDelete} className="teamLinkDelete" >Delete</Link>
+           <Link to={`/homeBase/updateteam/${teamId}`} className='teamLinkDelete' style={{}}>Update Team</Link>
+           <Link to={`/homeBase`} onClick={handleDelete} className="teamLinkDelete-1" >Delete</Link>
            {/* <Link to={`/homeBase/newMember/${teamId}`} id={teamId} className="teamLinkDelete" >Add Member</Link> */}
         </div>
      
