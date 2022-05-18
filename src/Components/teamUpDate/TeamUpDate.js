@@ -70,6 +70,16 @@ useEffect(() => {
 },[])
 
 console.log(newgroup)
+const articule = (artist) => {
+  let pro = "";
+  let allt = artist.split(" ");
+  if(allt.length > 3){
+    pro = allt[0] +' '+ allt[1] +' '+ allt[2]
+  }else{
+    pro = allt.join(' ')
+  }
+  return pro
+};
 
 
   return (
@@ -94,17 +104,18 @@ console.log(newgroup)
                       <buttom type='submit' className='updateButtom' onClick={handleSubmit}  >Submit</buttom>
                   </form>         
          </div>
-         <div style={{border: '2px solid', height: '175px', margin: '5px', borderRadius: '5px', display: 'flex', }}>
+         <div style={{border: '2px solid', height: '183px', margin: '5px', borderRadius: '5px', display: 'flex', flexDirection: 'row',  alignItems: 'space-around',backgroundColor: '#0000ff6d'}} className='last'> 
            {newgroup.map((players, index)=>{
              return(
-               <div>
+               <div style={{marginLeft:'12px'}}>
+                 
                 { Number(id) === players.team_id ? 
-                   <div style={{ border: '3px solid gray', borderRadius: '5px', color: 'white', width: '170px'}}>
-                      <img src={players.imag} alt='' style={{height: '140px', width: '170px',borderRadius: '5px'}} /> 
-                      <div style={{backgroundColor: 'gray', }}>{players.name}</div>
+                   <div style={{ border: '3px solid gray', borderRadius: '5px', color: 'white'}} >
+                      <img src={players.imag} alt='' style={{height: '140px', width: '175px',borderRadius: '5px'}} /> 
+                      <div style={{backgroundColor: 'gray', }}>{articule(players.name)}</div>
                   </div>
                   : null }
-                 
+                  
                  </div>
              )  
            } )}

@@ -38,7 +38,7 @@ const TextFolder = () => {
     }
   };
   return (
-    <div style={{ paddingTop: '15px'}} >
+    <div style={{ paddingTop: '15px', height: '100%', marginBottom: '7px' }}> 
             <h1 className="nav-TeamPlayers">Teams Players</h1>
         <div style={{paddingBottom: '10px'}}>
           <div> <Link to="/homeBase" className='teamLink'>⬅</Link></div>      
@@ -52,7 +52,7 @@ const TextFolder = () => {
             return (
                  <div >
                     {Number(teamId) === member.team_id ? 
-                        <div className="teamPlayer_Container">
+                        <div className="teamPlayer_Container" >
                             <div className="teamPlayer_Wrapper" value={on}  onClick={ handleSub} >
                                 <div>
                                       <img src={member?.imag} alt={member?.id} className="players_Img"/> 
