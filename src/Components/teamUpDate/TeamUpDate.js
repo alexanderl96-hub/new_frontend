@@ -85,7 +85,7 @@ const articule = (artist) => {
   return (
       <div className='TeamUpDate_Container'>
          <h1 className='newTitle'>Team Up Date</h1>
-         <div style={{paddingTop: '10px', textAlign: 'start', marginLeft: '20px'}} > <Link to={`/homeBase/${id}`} className='newLinkBack'>Back</Link> </div>
+         <div style={{}} className='secondNewTitle'> <Link to={`/homeBase/${id}`} className='newLinkBack'>Back</Link> </div>
          {/* <Link to={`/homebase`}><h3>HomeBase</h3></Link> */}
          <Link to={`/homeBase/newMember/${id}`} id={id} className="teamLinkDelete" >Add Member</Link>
          <div className='TeamUpDate_Wrap' >
@@ -98,21 +98,21 @@ const articule = (artist) => {
                         <img
                           src={group.imag ? group.imag : null}
                           alt='NewImage'
-                          className="newphoto"
+                          className="newphoto1"
                           />
                       </div>
                       <buttom type='submit' className='updateButtom' onClick={handleSubmit}  >Submit</buttom>
                   </form>         
          </div>
-         <div style={{border: '2px solid', height: '183px', margin: '5px', borderRadius: '5px', display: 'flex', flexDirection: 'row',  alignItems: 'space-around',backgroundColor: '#0000ff6d'}} className='last'> 
+         <div style={{}} className='last'> 
            {newgroup.map((players, index)=>{
              return(
-               <div style={{marginLeft:'12px'}}>
+               <div style={{}} className='last-inner'>
                  
                 { Number(id) === players.team_id ? 
-                   <div style={{ border: '3px solid gray', borderRadius: '5px', color: 'white'}} >
-                      <img src={players.imag} alt='' style={{height: '140px', width: '175px',borderRadius: '5px'}} /> 
-                      <div style={{backgroundColor: 'gray', }}>{articule(players.name)}</div>
+                   <div style={{ }} className='last-inner2'>
+                      <img src={players.imag} alt='' style={{}} className='last-inner3'/> 
+                      <div style={{}} className='last-inner4'>{articule(players.name)}</div>
                   </div>
                   : null }
                   

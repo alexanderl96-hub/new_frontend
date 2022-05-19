@@ -38,27 +38,26 @@ const NewTeam = () => {
   return (
     <div className='newTeam_Container'>
          <h1 className='newTitle'>New Team</h1>
-         <div style={{paddingTop: '10px', textAlign: 'start', marginLeft: '20px'}} > <Link to={`/homeBase`} className='newLinkBack'>Back</Link> </div>
+         <div style={{}} className='divLink'> <Link to={`/homeBase`} className='newLinkBack'>Back</Link> </div>
          <div className='newTeam_Wrap' >
-             <div>
                 <form className='newTeam_Form' onSubmit={handleSubmit} >
                     <label htmlFor="">Name:</label>
                     <input id='name' type="text" onChange={handleInput}  placeholder="Name and lastname..." className='newInputteam' ></input>
                     <label htmlFor="">Image URL:</label> 
                     <input id='imag' type="text" onChange={handleInput} value='' placeholder="Image URL..." className='newInputteam' ></input>
                     <hr/>
+                    <div className="newTeam_photo">
+                            <img
+                            src={newTeam.imag ? newTeam.imag : null}
+                            alt='NewImage'
+                            className="newphoto"
+                            />
+                            
+                      </div>  
                     <buttom type='submit' className='newTeamButton' onClick={handleDelete} >Reset</buttom>
                     <buttom type='submit' className='newTeamButton' onClick={handleSubmit} >Add New</buttom>
                 </form>
-             </div>
-           <div className="newTeam_photo">
-                <img
-                src={newTeam.imag ? newTeam.imag : null}
-                alt='NewImage'
-                className="newphoto"
-                />
-                
-           </div>  
+           
          </div>
          <div className='newTeam_Name'><h3>{newTeam.name}</h3></div>
       </div>
