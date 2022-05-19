@@ -63,7 +63,7 @@ const handleDelete = () => {
                                 </div>
                                 <div className="member_Info">
                                     <hr/>
-                                    <div className= 'playerDataInfo'><span>Team: </span> {player?.currentteam}</div>
+                                    <div className= 'playerDataInfo'><span>Team: </span> {player?.current_team}</div>
                                     <div className= 'playerDataInfo'><span>Number:</span> {player?.number}</div>
                                     <div className= 'playerDataInfo'><span>Position:</span> {player?.position}</div>
                                     <div className= 'playerDataInfo'><span>Salary: </span> {player?.salary}</div> 

@@ -22,7 +22,7 @@ const NewMember = () => {
        age: '',
        height: '',
        weight: '',
-       currentTeam: '',
+       current_team: '',
        salary: '',
        number: '',
        education: '',
@@ -91,7 +91,7 @@ const NewMember = () => {
                             {/* <label>Weight: </label> */}
                             <input id='weight' type="text" onChange={handleInput}  placeholder="Weight..." className='input-11' ></input>
                             {/* <label>Current Team: </label> */}
-                            <input id='currentTeam' type="text" onChange={handleInput} placeholder="Current Team..." className='input-12' ></input>
+                            <input id='current_team' type="text" onChange={handleInput} placeholder="Current Team..." className='input-12' ></input>
                             {/* <label>Salary: </label> */}
                             <input id='salary' type="text" onChange={handleInput}  placeholder="Salary..." className='input-13' ></input>
                             {/* <label>Number: </label> */}

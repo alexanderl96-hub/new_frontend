@@ -37,6 +37,7 @@ const TextFolder = () => {
       setON(true)
     }
   };
+  console.log(players)
   return (
     <div style={{}}  className="nav-TeamHead"> 
             <h1 className="nav-TeamPlayers">Teams Players</h1>
@@ -59,7 +60,7 @@ const TextFolder = () => {
                                       <div key={index} className="players_Name">{member?.name}</div>
                                    <div className="players_Info">
                                         <hr/>
-                                        <div className= 'playerDataInfo'><span>Team: </span> {member?.currentteam}</div>
+                                        <div className= 'playerDataInfo'><span>Team: </span> {member?.current_team}</div>
                                         <div className= 'playerDataInfo'><span>Number:</span> {member?.number}</div>
                                         <div className= 'playerDataInfo'><span>Position:</span> {member?.position}</div>
                                         <div className= 'playerDataInfo'><span>Salary: </span> {member?.salary}</div>
