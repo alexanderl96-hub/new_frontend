@@ -35,10 +35,9 @@
 .newTeam_Form{
     display: flex;
     flex-direction: row;
-    /* padding: 5px;  */
     flex-wrap: wrap;
 }
-.newTeam_photo{
+.newTeam_photo1{
     width: 420px;
     height: 260px;
     border: 3px solid rgb(108, 70, 70);
@@ -47,11 +46,9 @@
     margin-left: 34%;
     margin-top: 18px;
 }
-.photo{
+.newphoto1{
     width: 420px;
-    height: 225px; 
-    margin-left: 34%;
-    margin-top: 30px;
+    height: 260px; 
     border-radius: 5px;
 }
 
@@ -150,7 +147,7 @@ label{
         margin-right: 33%;
         
     }
-    .newTeam_photo{
+    .newTeam_photo1{
         width: 350px;
         height: 210px;
         border: 2px solid rgb(108, 70, 70);
@@ -159,7 +156,7 @@ label{
         margin-left: 10px;
         margin-top: 35%
     }
-    .newphoto{
+    .newphoto1{
         width: 100%;
         height: 210px;
 

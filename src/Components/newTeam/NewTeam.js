@@ -46,11 +46,11 @@ const NewTeam = () => {
                     <label htmlFor="">Image URL:</label> 
                     <input id='imag' type="text" onChange={handleInput} value='' placeholder="Image URL..." className='newInputteam' ></input>
                     <hr/>
-                    <div className="newTeam_photo">
+                    <div className="newTeam_photo1">
                             <img
                             src={newTeam.imag ? newTeam.imag : null}
                             alt='NewImage'
-                            className="newphoto"
+                            className="newphoto1"
                             />
                             
                       </div>  

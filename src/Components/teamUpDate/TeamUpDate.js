@@ -87,9 +87,9 @@ const articule = (artist) => {
          <h1 className='newTitle'>Team Up Date</h1>
          <div style={{}} className='secondNewTitle'> <Link to={`/homeBase/${id}`} className='newLinkBack'>Back</Link> </div>
          {/* <Link to={`/homebase`}><h3>HomeBase</h3></Link> */}
-         <Link to={`/homeBase/newMember/${id}`} id={id} className="teamLinkDelete" >Add Member</Link>
+         <Link to={`/homeBase/newMember/${id}`} id={id} className="teamLinAddMember" >Add Member</Link>
          <div className='TeamUpDate_Wrap' >
-              <div style={{ margin: '5px', color:'red'}}><h2>Team: {name}</h2></div>
+              <div style={{ }} className="teamUpdateName"><h2>Team: {name}</h2></div>
                   <form className='TeamUpDate_Form' onSubmit={handleSubmit}>
                       <label htmlFor="">Image URL:</label> 
                       <input id='imag' type="text" value=''  onChange={handleInput} placeholder="Url..." className='upDateTeam' ></input>
