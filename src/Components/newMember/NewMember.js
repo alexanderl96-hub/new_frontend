@@ -63,10 +63,9 @@ const NewMember = () => {
   return (
     <div className='newMember_Container'>
          <h1 className='newTitle'>New Member</h1>
-         <div style={{paddingTop: '10px', textAlign: 'start', marginLeft: '20px'}} > <Link to={`/homeBase/updateteam/${group}`} className='newLinkBack'>Back</Link> </div>
+         <div style={{}} className='wrapLink'> <Link to={`/homeBase/updateteam/${group}`} className='newLinkBackNew'>Back</Link> </div>
          <div>
-              <h5>New Member</h5>
-             <div  >
+             <div >
              <form onSubmit={handleSubmit} className='newMember_AboutGrid'>
                             {/* <label className='label-1' >Name: </label> */}
                             <input id='name' type="text" onChange={handleInput} placeholder="Name ..." className='input-1' ></input>

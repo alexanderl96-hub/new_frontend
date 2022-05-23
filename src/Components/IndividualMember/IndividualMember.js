@@ -7,7 +7,7 @@ const API_DTBASE = apiURL();
 
 const IndividualMember = ({ teamID }) => {
    const [member, setMember] = useState([])
-   const [teamId, setTeamID] = useState([])
+//    const [teamId, setTeamID] = useState([])
    const [group, setGroup] =useState([])
   let params = useParams()
   let memberId = params.id
@@ -25,7 +25,7 @@ const handleDelete = () => {
         .then(res => res.json())
         .then(data =>{
             setMember(data)
-            setTeamID(data)
+            // setTeamID(data)
         })
   },[])
   useEffect(() => {
@@ -40,13 +40,13 @@ const handleDelete = () => {
 
 
   return (
-      <div style={{backgroundColor: '#0000ff6d', padding: '15px', height: '701px'}}>
-          <div style={{ display: 'flex', padding: '10px' }}>
-              <div> <Link to={`/homeBase/${group}`} className='memberLink1'>Back</Link> </div>
+      <div style={{}} className='Main'>
+          <div style={{ }}  className='Main2'>
+              <div > <Link to={`/homeBase/${group}`} className='memberLink1'>Back</Link> </div>
               <div> 
                 <Link to={`/homeBase/updateMember/${memberId}`} className='memberLink'>Update Member
                 </Link>
-                <div style={{marginTop: '-19px', marginLeft: '-90px'}}> 
+                <div style={{}} className='delBTn'> 
                     <Link to={`/homeBase/${group}`} onClick={handleDelete} className="teamLinkDelete" >Delete</Link>
                 </div>
               </div>
@@ -95,11 +95,11 @@ const handleDelete = () => {
                                     <div> <span>About: </span>{player.about}</div> 
                                 </div>
                                   <div className="teamPlayer_About4">
-                                        <div style={{padding:'3px'}}> <span>Stats: </span>{player.stats}
-                                             <div style={{ overflowY: 'scroll', width: '100%', height: '255px', padding:'2px', marginTop:'-5px', cursor: 'pointer' }}>   
-                                                    <div style={{marginBottom: '5%', marginTop:'3%'}}> Game Stats:
-                                                        <div style={{display: 'flex'}}>
-                                                                <div style={{width: '130px'}}> Game</div>
+                                        <div style={{}} className="about4-1"> <span>Stats: </span>{player.stats}
+                                             <div style={{}} className="about4-2">   
+                                                    <div style={{}} className='about-inner'> Game Stats:
+                                                        <div style={{}} className='about-inner1'>
+                                                                <div style={{}} className='about-inner2'> Game</div>
                                                                 <div> IP</div>
                                                                 <div> H</div>
                                                                 <div> ER</div>
@@ -110,10 +110,10 @@ const handleDelete = () => {
                                                                 <div> ERA</div>
                                                         </div>
                                                     </div>
-                                                    <div style={{marginBottom: '5%', marginTop:'3%'}}> Career Stats:
-                                                        <div style={{display: 'flex'}}>
+                                                    <div style={{}} className='about-inner'> Career Stats:
+                                                        <div style={{}} className='about-inner1'>
                                                                 <div>Year</div>
-                                                                <div style={{marginRight: '80px', marginLeft: '-5px'}}>Team</div>
+                                                                <div style={{}} className='about-innerTeam'>Team</div>
                                                                 <div> GP</div>
                                                                 <div> CG</div>
                                                                 <div> ER</div>
@@ -125,10 +125,10 @@ const handleDelete = () => {
                                                                 <div> ERA</div>
                                                         </div>
                                                     </div>
-                                                    <div style={{marginBottom: '5%', marginTop:'3%'}}> Career Stats:
-                                                        <div style={{display: 'flex'}}>
+                                                    <div style={{}} className='about-inner'> Career Stats:
+                                                        <div style={{}} className='about-inner1'>
                                                                 <div>Year</div>
-                                                                <div style={{marginRight: '80px', marginLeft: '-5px'}}>Team</div>
+                                                                <div style={{}} className='about-innerTeam'>Team</div>
                                                                 <div> GP</div>
                                                                 <div> CG</div>
                                                                 <div> ER</div>
@@ -140,10 +140,10 @@ const handleDelete = () => {
                                                                 <div> ERA</div>
                                                         </div>
                                                     </div>
-                                                    <div style={{marginBottom: '5%', marginTop:'3%'}}> Career Stats:
-                                                        <div style={{display: 'flex'}}>
+                                                    <div style={{}} className='about-inner'> Career Stats:
+                                                        <div style={{}} className='about-inner1'>
                                                                 <div>Year</div>
-                                                                <div style={{marginRight: '80px', marginLeft: '-5px'}}>Team</div>
+                                                                <div style={{}} className='about-innerTeam'>Team</div>
                                                                 <div> GP</div>
                                                                 <div> CG</div>
                                                                 <div> ER</div>
@@ -155,10 +155,10 @@ const handleDelete = () => {
                                                                 <div> ERA</div>
                                                         </div>
                                                     </div>
-                                                    <div style={{marginBottom: '5%', marginTop:'3%'}}> Career Stats:
-                                                        <div style={{display: 'flex'}}>
+                                                    <div style={{}} className='about-inner'> Career Stats:
+                                                        <div style={{}} className='about-inner1'>
                                                                 <div>Year</div>
-                                                                <div style={{marginRight: '80px', marginLeft: '-5px'}}>Team</div>
+                                                                <div style={{}} className='about-innerTeam'>Team</div>
                                                                 <div> GP</div>
                                                                 <div> CG</div>
                                                                 <div> ER</div>
@@ -170,10 +170,25 @@ const handleDelete = () => {
                                                                 <div> ERA</div>
                                                         </div>
                                                     </div>
-                                                    <div style={{marginBottom: '5%', marginTop:'3%'}}> Career Stats:
-                                                        <div style={{display: 'flex'}}>
+                                                    <div style={{}} className='about-inner'> Career Stats:
+                                                        <div style={{}} className='about-inner1'>
                                                                 <div>Year</div>
-                                                                <div style={{marginRight: '80px', marginLeft: '-5px'}}>Team</div>
+                                                                <div style={{}} className='about-innerTeam'>Team</div>
+                                                                <div> GP</div>
+                                                                <div> CG</div>
+                                                                <div> ER</div>
+                                                                <div> SO</div>
+                                                                <div> W</div>
+                                                                <div> L</div>
+                                                                <div> Sv</div>
+                                                                <div> WHIP</div>
+                                                                <div> ERA</div>
+                                                        </div>
+                                                    </div>
+                                                    <div style={{}} className='about-inner'> Career Stats:
+                                                        <div style={{}} className='about-inner1'>
+                                                                <div>Year</div>
+                                                                <div style={{}} className='about-innerTeam'>Team</div>
                                                                 <div> GP</div>
                                                                 <div> CG</div>
                                                                 <div> ER</div>

@@ -2,6 +2,7 @@ import React,  { useState }from 'react'
 import { useParams, Link, useNavigate} from 'react-router-dom'
 import { apiURL } from '../back-end/Back-End'
 import axios from "axios";
+import '../newMember/NewMember.css'
 const API_DTBASE = apiURL();
 
 const MemberUpDate = () => {
@@ -59,9 +60,9 @@ const MemberUpDate = () => {
   };
 
   return (
-         <div className='TeamUpDate_Container'>
+         <div className='newMember_Container'>
            <h1 className='newTitle'>UpDate Member</h1>
-         <div style={{paddingTop: '10px', textAlign: 'start', marginLeft: '20%', marginBottom: '20px'}}> <Link to={`/homeBase/groups/${id}`} className='memberLink1' >Back</Link> </div>
+         <div style={{}} className='wrapLink'> <Link to={`/homeBase/groups/${id}`} className='newLinkBackNew' >Back</Link> </div>
          <div >
          <form onSubmit={handleSubmit} className='newMember_AboutGrid'>
                             {/* <label className='label-1' >Name: </label> */}
