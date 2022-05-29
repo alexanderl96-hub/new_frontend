@@ -8,13 +8,15 @@ const API_DTBASE = apiURL();
 const IndividualMember = ({ teamID }) => {
    const [member, setMember] = useState([])
    const [teamId, setTeamID] = useState([])
+   const [teamCareerId, setTeamCareerID] = useState([])
    const [pitcherId, setPitcherID] = useState([])
+   const [pitcherCareerId, setPitcherCareerID] = useState([])
    const [coachId, setCoachID] = useState([])
    const [group, setGroup] =useState([])
+
   let params = useParams()
   let memberId = params.id
-   console.log(teamId, 'teamID')
-   console.log(memberId, 'memberId')
+
 // const navigate = useNavigate();   
 const handleDelete = () => {
     axios.delete(`${API_DTBASE}/groups/${memberId}`).then(() =>{
@@ -38,12 +40,28 @@ const handleDelete = () => {
     })
 },[])
 useEffect(() => {
+    fetch(`http://localhost:9000/playersCareer`)
+    .then(res => res.json())
+    .then(data =>{
+        setTeamCareerID(data)
+    })
+},[])
+
+useEffect(() => {
     fetch(`http://localhost:9000/pitchersStats`)
     .then(res => res.json())
     .then(data =>{
         setPitcherID(data)
     })
 },[])
+useEffect(() => {
+    fetch(`http://localhost:9000/pitchersCarrer`)
+    .then(res => res.json())
+    .then(data =>{
+        setPitcherCareerID(data)
+    })
+},[])
+
   useEffect(() => {
     fetch(`http://localhost:9000/groups/${memberId}`)
     .then(res => res.json())
@@ -52,7 +70,7 @@ useEffect(() => {
     })
 },[memberId])
 
-  console.log(pitcherId.length, 'group-ookingid')
+  console.log(pitcherCareerId, 'group-ookingid')
 //  
 
   return (
@@ -114,12 +132,12 @@ useEffect(() => {
                                         <div style={{}} className="about4-1"> <span>Stats: </span>{player.stats}
                                              <div style={{}} className="about4-2">  
                                              { teamId ? 
-                                                    <div style={{}} className='about-inner'> Game Stats:
+                                                    <div style={{backgroundColor: 'white', borderRadius: '5px'}} className='about-inner'> Game Stats:
                                                     {teamId.map((stat, index)=>{
                                                         return(
                                                             <div>
                                                                 {Number(memberId) === stat.players_id ?  
-                                                                    <div style={{}} className='about-inner1'>
+                                                                    <div style={{backgroundColor: 'white', borderRadius: '5px'}} className='about-inner1'>
                                                                         <div style={{marginBottom: '5px'}} className='about-inner2'> GAME
                                                                         <div style={{marginTop: '5px'}}>{stat.game_date} {stat.game}</div>
                                                                         </div>
@@ -156,24 +174,54 @@ useEffect(() => {
                                                         )
                                                     })}  
                                                     </div> : null }
-                                                    { teamId ? 
-                                                    <div style={{}} className='about-inner'> Career Stats:
-                                                        <div style={{}} className='about-inner1'>
-                                                                <div>Year</div>
-                                                                <div style={{}} className='about-innerTeam'>Team</div>
-                                                                <div> GP</div>
-                                                                <div> AB</div>
-                                                                <div> R</div>
-                                                                <div> H</div>
-                                                                <div> RBI</div>
-                                                                <div> BB</div>
-                                                                <div> SO</div>
-                                                                <div> HR</div>
-                                                                <div> AVG</div>
-                                                        </div>
+                                                    { teamCareerId ? 
+                                                    <div style={{backgroundColor: 'white', borderRadius: '5px'}} className='about-inner'> Career Stats:
+                                                     {teamCareerId.map((career, index)=>{
+                                                         return(
+                                                             <div>
+                                                                 {Number(memberId) === career.players_id ? 
+                                                                  <div style={{}} className='about-inner1'>
+                                                                  <div style={{marginTop: '5px'}}>Year
+                                                                     <div>{career.game_year}</div> 
+                                                                  </div>
+                                                                  <div style={{marginTop: '5px'}} className='about-innerTeam'>Team
+                                                                     <div>{career.team}</div> 
+                                                                  </div>
+                                                                  <div> GP
+                                                                     <div>{career.career_gp}</div> 
+                                                                  </div>
+                                                                  <div> AB
+                                                                     <div>{career.career_ab}</div> 
+                                                                  </div>
+                                                                  <div> R
+                                                                     <div>{career.career_r}</div> 
+                                                                  </div>
+                                                                  <div> H
+                                                                     <div>{career.career_h}</div> 
+                                                                  </div>
+                                                                  <div> RBI
+                                                                     <div>{career.career_rbi}</div> 
+                                                                  </div>
+                                                                  <div> BB
+                                                                     <div>{career.career_bb}</div> 
+                                                                  </div>
+                                                                  <div> SO
+                                                                     <div>{career.career_so}</div> 
+                                                                  </div>
+                                                                  <div> HR
+                                                                     <div>{career.career_hr}</div> 
+                                                                  </div>
+                                                                  <div> AVG
+                                                                     <div>{career.career_average}</div> 
+                                                                  </div>
+                                                          </div> : null}
+                                                             </div>
+                                                         )
+                                                     })}
+                                                       
                                                     </div> : null  }
                                                     {pitcherId ?
-                                                    <div style={{}} className='about-inner'> Pitcher Stats:
+                                                    <div style={{backgroundColor: 'white', borderRadius: '5px'}} className='about-inner'> Pitcher Stats:
                                                     {pitcherId.map((pitcher, index)=>{
                                                         return(
                                                             <div>
@@ -217,21 +265,53 @@ useEffect(() => {
                                                     })}
                                                         
                                                     </div> : null}
-                                                    <div style={{}} className='about-inner'> Career Pitcher Stats:
-                                                        <div style={{}} className='about-inner1'>
-                                                                <div>Year</div>
-                                                                <div style={{}} className='about-innerTeam'>Team</div>
-                                                                <div> GP</div>
-                                                                <div> CG</div>
-                                                                <div> ER</div>
-                                                                <div> SO</div>
-                                                                <div> W</div>
-                                                                <div> L</div>
-                                                                <div> Sv</div>
-                                                                <div> WHIP</div>
-                                                                <div> ERA</div>
-                                                        </div>
+                                                    {pitcherCareerId ? 
+                                                    <div style={{backgroundColor: 'white', borderRadius: '5px'}} className='about-inner'> Career Pitcher Stats:
+                                                    {pitcherCareerId.map((careerP, index)=>{
+                                                        return(
+                                                            <div>
+                                                                {Number(memberId) === careerP.pitcher_id ? 
+                                                                 <div style={{}} className='about-inner1'>
+                                                                 <div style={{marginTop: '7px'}}>Year
+                                                                      <div>{careerP.game_year}</div>
+                                                                 </div>
+                                                                 <div style={{marginTop: '7px'}} className='about-innerTeam'>Team
+                                                                      <div>{careerP.team}</div>
+                                                                 </div>
+                                                                 <div> GP
+                                                                      <div>{careerP.career_gp}</div>
+                                                                 </div>
+                                                                 <div> CG
+                                                                      <div>{careerP.career_cg}</div>
+                                                                 </div>
+                                                                 <div> ER
+                                                                      <div>{careerP.career_er}</div>
+                                                                 </div>
+                                                                 <div> SO
+                                                                      <div>{careerP.career_so}</div>
+                                                                 </div>
+                                                                 <div> W
+                                                                      <div>{careerP.career_w}</div>
+                                                                 </div>
+                                                                 <div> L
+                                                                      <div>{careerP.career_l}</div>
+                                                                 </div>
+                                                                 <div> Sv
+                                                                      <div>{careerP.career_sv}</div>
+                                                                 </div>
+                                                                 <div> WHIP
+                                                                      <div>{careerP.career_whip}</div>
+                                                                 </div>
+                                                                 <div> ERA
+                                                                      <div>{careerP.career_era}</div>
+                                                                 </div>
+                                                         </div>: null}
+                                                            </div>
+                                                        )
+                                                    }) }
+                                                       
                                                     </div>
+                                                    : null}
                                                     {coachId ? <div>{
                                                         coachId.map((coach, index)=>{
                                                             return(
