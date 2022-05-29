@@ -13,8 +13,12 @@ function Navbar() {
             </Link>
          </div>
          <div className="nav">
-           <div className='nav-inner'>Team</div>
-           <div className='nav-inner'>Players</div>
+            <Link to={'/homebase'} className='nav-inner'>
+               <div >Team</div>
+            </Link>
+            <Link to={'/homebase/allplayers'} className='nav-inner'>
+               <div >Players</div>
+            </Link>
            <div className='nav-inner'>Coaches</div>
            <div className='nav-inner'>Season</div>
            <div className='nav-inner'>Favorites</div>

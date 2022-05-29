@@ -14,6 +14,7 @@ import IndividualMember from './Components/IndividualMember/IndividualMember'
 import UpDateMember from '../src/Components/memberUpDate/MemberUpDate'
 import NewTeam from '../src/Components/newTeam/NewTeam'
 import NewMember from '../src/Components/newMember/NewMember'
+import Allplayers from '../src/ComponentsPlayers/Players/Players'
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
           <Route exact path="/homeBase/updateMember/:id" element={<UpDateMember/>}/>
           <Route exact path="/homeBase/new" element={<NewTeam/>}/>
           <Route exact path="/homeBase/newMember/:id" element={<NewMember/>}/>
+          <Route exact path="/homeBase/allplayers" element={<Allplayers/>}/>
         </Routes>
       </Router>
        
