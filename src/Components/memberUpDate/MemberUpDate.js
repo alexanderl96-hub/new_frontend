@@ -1,4 +1,4 @@
-import React,  { useState }from 'react'
+import React,  { useState, useEffect}from 'react'
 import { useParams, Link, useNavigate} from 'react-router-dom'
 import { apiURL } from '../back-end/Back-End'
 import axios from "axios";
@@ -6,6 +6,7 @@ import '../newMember/NewMember.css'
 const API_DTBASE = apiURL();
 
 const MemberUpDate = () => {
+  const [member, setMemberid] = useState([])
   const navigate = useNavigate(); 
   let { id } = useParams();
   const [newMember,setMember] = useState({
@@ -58,7 +59,16 @@ const MemberUpDate = () => {
       (error) => console.log(error)
     );
   };
+ 
+  useEffect(() => {
+    fetch(`http://localhost:9000/groups/${id}`)
+        .then(res => res.json())
+        .then(data =>{
+            setMemberid(data.team.team_id)
+        })
+  },[id])
 
+  console.log(member)
   return (
          <div className='newMember_Container'>
            <h1 className='newTitle'>UpDate Member</h1>
@@ -68,7 +78,7 @@ const MemberUpDate = () => {
                             {/* <label className='label-1' >Name: </label> */}
                             <input id='name' type="text" onChange={handleInput} placeholder='Name...' className='input-1' ></input>
                             {/* <label className='label-2' >Team_Id: </label> */}
-                            <input id='team_id' type="text" onChange={handleInput} placeholder="Team_Id ..." className='input-2' ></input>
+                            <input id='team_id' type="text" onChange={handleInput} placeholder={'team_id = ' +member} className='input-2' ></input>
                             {/* <label className='label-3' >Nickname: </label> */}
                             <input id='nickname'type="text" onChange={handleInput}  placeholder="Nickname..." className='input-3' ></input>
                             {/* <label className='label-4' >Image URL: </label> */}
@@ -110,7 +120,7 @@ const MemberUpDate = () => {
                             {/* <label>Throws: </label> */}
                             <input id='throws' type="text" onChange={handleInput}  placeholder="Throws..." className='input-22'></input>
                             {/* <label>Stats: </label> */}
-                            <input id='stats' type="text" onChange={handleInput}  placeholder="Stats..." className='input-23'></input>
+                            <input id='stats' type="text" onChange={handleInput}  placeholder={'Stats id = ' + id} className='input-23'></input>
                             <input id='about' type="text" onChange={handleInput}  placeholder="About..." className='input-24'></input>
                             <div  className='div'>
                                 <img src={newMember.imag ? newMember.imag : null } alt='NewImage' className='photo' />

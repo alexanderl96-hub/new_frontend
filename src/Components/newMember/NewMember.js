@@ -56,23 +56,24 @@ const NewMember = () => {
         fetch(`http://localhost:9000/teams/${id}`)
         .then(res => res.json())
         .then(data =>{
-            setGroup(data.team.id)
+            setGroup(data.team)
         })
   },[id])
-
+console.log(group, 'name')
+console.log(newMember, 'name')
   return (
     <div className='newMember_Container'>
          <h1 className='newTitle'>New Member</h1>
-         <div style={{}} className='wrapLink'> <Link to={`/homeBase/updateteam/${group}`} className='newLinkBackNew'>Back</Link> </div>
+         <div style={{}} className='wrapLink'> <Link to={`/homeBase/updateteam/${group.id}`} className='newLinkBackNew'>Back</Link> </div>
          <div>
              <div >
              <form onSubmit={handleSubmit} className='newMember_AboutGrid'>
                             {/* <label className='label-1' >Name: </label> */}
                             <input id='name' type="text" onChange={handleInput} placeholder="Name ..." className='input-1' ></input>
                             {/* <label className='label-2' >Team_Id: </label> */}
-                            <input id='team_id' type="text" onChange={handleInput} placeholder="Team_Id ..." className='input-2' ></input>
+                            <input id='team_id' type="text" onChange={handleInput} placeholder={"Team_Id .." + id}className='input-2' ></input>
                             {/* <label className='label-3' >Nickname: </label> */}
-                            <input id='nickname'type="text" onChange={handleInput}  placeholder="Nickname..." className='input-3' ></input>
+                            <input id='nickname' type="text" onChange={handleInput} placeholder="Nickname..." className='input-3' ></input>
                             {/* <label className='label-4' >Image URL: </label> */}
                             <input id='imag' type="text" onChange={handleInput}  placeholder="Url..." className='input-4' ></input>
                             {/* <label className='label-5' >Born: </label> */}
@@ -90,7 +91,7 @@ const NewMember = () => {
                             {/* <label>Weight: </label> */}
                             <input id='weight' type="text" onChange={handleInput}  placeholder="Weight..." className='input-11' ></input>
                             {/* <label>Current Team: </label> */}
-                            <input id='current_team' type="text" onChange={handleInput} placeholder="Current Team..." className='input-12' ></input>
+                            <input id='current_team' type="text" onChange={handleInput} placeholder={group.name} className='input-12' ></input>
                             {/* <label>Salary: </label> */}
                             <input id='salary' type="text" onChange={handleInput}  placeholder="Salary..." className='input-13' ></input>
                             {/* <label>Number: </label> */}

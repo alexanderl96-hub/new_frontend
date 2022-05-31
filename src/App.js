@@ -15,6 +15,9 @@ import UpDateMember from '../src/Components/memberUpDate/MemberUpDate'
 import NewTeam from '../src/Components/newTeam/NewTeam'
 import NewMember from '../src/Components/newMember/NewMember'
 import Allplayers from '../src/ComponentsPlayers/Players/Players'
+import Coaches from '../src/ComponentsPlayers/Coaches/Coaches'
+import Season from '../src/ComponentsPlayers/Season/Season'
+import AllFavorites from '../src/ComponentsPlayers/Favorites/Favorites'
 
 
 function App() {
@@ -32,6 +35,9 @@ function App() {
           <Route exact path="/homeBase/new" element={<NewTeam/>}/>
           <Route exact path="/homeBase/newMember/:id" element={<NewMember/>}/>
           <Route exact path="/homeBase/allplayers" element={<Allplayers/>}/>
+          <Route exact path="/homeBase/allCoaches" element={<Coaches/>}/>
+          <Route exact path="/homeBase/Season" element={<Season/>}/>
+          <Route exact path="/homeBase/allFavorites" element={<AllFavorites/>}/>
         </Routes>
       </Router>
        

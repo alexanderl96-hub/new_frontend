@@ -37,7 +37,7 @@ const TextFolder = () => {
       setON(true)
     }
   };
-  console.log(players)
+  console.log(teamId)
   return (
     <div style={{}}  className="nav-TeamHead"> 
             <h1 className="nav-TeamPlayers">Teams Players</h1>

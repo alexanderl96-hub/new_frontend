@@ -14,14 +14,20 @@ function Navbar() {
          </div>
          <div className="nav">
             <Link to={'/homebase'} className='nav-inner'>
-               <div >Team</div>
+               <div className='nav-inner-inner'>Team</div>
             </Link>
             <Link to={'/homebase/allplayers'} className='nav-inner'>
-               <div >Players</div>
+               <div className='nav-inner-inner' >Players</div>
             </Link>
-           <div className='nav-inner'>Coaches</div>
-           <div className='nav-inner'>Season</div>
-           <div className='nav-inner'>Favorites</div>
+            <Link to={'/homebase/allCoaches'} className='nav-inner'>
+               <div className='nav-inner-inner'>Coaches</div>
+            </Link>
+           <Link to={'/homebase/Season'} className='nav-inner'>
+               <div className='nav-inner-inner'>Season</div>
+           </Link>
+           <Link to={'/homebase/allFavorites'} className='nav-inner'>
+               <div className='nav-inner-inner'>Favorites</div>
+           </Link>
          </div>
          </div>
     </div>

@@ -1,21 +1,23 @@
 import React,  { useState, useEffect }from 'react'
-import { useParams, Link, useNavigate} from 'react-router-dom'
+import { useParams, Link} from 'react-router-dom'
 import { apiURL } from '../back-end/Back-End'
 import './IndividualMember.css'
 import axios from 'axios'
 const API_DTBASE = apiURL();
 
-const IndividualMember = ({ teamID }) => {
+const IndividualMember = () => {
    const [member, setMember] = useState([])
    const [teamId, setTeamID] = useState([])
    const [teamCareerId, setTeamCareerID] = useState([])
    const [pitcherId, setPitcherID] = useState([])
    const [pitcherCareerId, setPitcherCareerID] = useState([])
-   const [coachId, setCoachID] = useState([])
+//    const [coachId, setCoachID] = useState([])
    const [group, setGroup] =useState([])
+  
 
   let params = useParams()
   let memberId = params.id
+  
 
 // const navigate = useNavigate();   
 const handleDelete = () => {
@@ -70,8 +72,6 @@ useEffect(() => {
     })
 },[memberId])
 
-  console.log(pitcherCareerId, 'group-ookingid')
-//  
 
   return (
       <div style={{}} className='Main'>
@@ -312,7 +312,7 @@ useEffect(() => {
                                                        
                                                     </div>
                                                     : null}
-                                                    {coachId ? <div>{
+                                                    {/* {coachId ? <div>{
                                                         coachId.map((coach, index)=>{
                                                             return(
                                                                 <div style={{}} className='about-inner'> Coach Career Stats:
@@ -333,7 +333,7 @@ useEffect(() => {
 
                                                             )
                                                         })
-                                                    }</div> : null}
+                                                    }</div> : null} */}
                                                    
                                                    
                                              </div> 
