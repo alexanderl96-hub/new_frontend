@@ -1,7 +1,7 @@
 .Main{
     background-color: #0000ff6d; 
     padding: 15px; 
-    height: 701px;  
+    margin:0;
 }
 .Main2{
     display: flex; 

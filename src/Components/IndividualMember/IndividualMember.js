@@ -83,6 +83,9 @@ useEffect(() => {
                 <div style={{}} className='delBTn'> 
                     <Link to={`/homeBase/${group}`} onClick={handleDelete} className="teamLinkDelete" >Delete</Link>
                 </div>
+                {/* give the css to add Stats buttonLink */}
+                <Link to={`/homeBase/groups/${memberId}/addStats`} style={{marginLeft: '-100px'}}>Add Stats
+                </Link>
               </div>
           </div>     
           {member.map((player, index) =>{
@@ -93,43 +96,43 @@ useEffect(() => {
                             <div className='Wrapper'>    
                                <div>
                                     <img src={player?.imag} alt={player?.id} className="member_Img"/> 
-                                    <div key={index} className="member_Name">{player?.name}</div>
+                                    <div key={index} className="member_Name">{player?.name ? player.name : '-'}</div>
                                 </div>
                                 <div className="member_Info">
                                     <hr/>
-                                    <div className= 'playerDataInfo'><span>Team: </span> {player?.current_team}</div>
-                                    <div className= 'playerDataInfo'><span>Number:</span> {player?.number}</div>
-                                    <div className= 'playerDataInfo'><span>Position:</span> {player?.position}</div>
-                                    <div className= 'playerDataInfo'><span>Salary: </span> {player?.salary}</div> 
+                                    <div className= 'playerDataInfo'><span>Team: </span> {player?.current_team ? player.current_team : '-'}</div>
+                                    <div className= 'playerDataInfo'><span>Number:</span> {player?.number ? player.number : '-' }</div>
+                                    <div className= 'playerDataInfo'><span>Position:</span> {player?.position ? player.position : '-'}</div>
+                                    <div className= 'playerDataInfo'><span>Salary: </span> {player?.salary ? player.salary : '-'}</div> 
                                 </div>
                             </div>
                             <div className ="teamPlayer_AboutGrid">
                                 <div className="teamPlayer_About1">
-                                    <div> <span>Age:</span> {player.age} years</div> 
-                                    <div> <span>Born:</span> {player.born}</div> 
-                                    <div> <span>City: </span>{player.city}</div> 
-                                    <div> <span>State:</span> {player.state}</div>
-                                    <div> <span>Country:</span> {player.country}</div> 
-                                    <div> <span>Education:</span> {player.education}</div>
+                                    <div> <span>Age:</span> {player.age ? player.age : '-'} years</div> 
+                                    <div> <span>Born:</span> {player.born ? player.born : '-'}</div> 
+                                    <div> <span>City: </span>{player.city ? player.city : '-'}</div> 
+                                    <div> <span>State:</span> {player.state ? player.state : '-'}</div>
+                                    <div> <span>Country:</span> {player.country ? player.country : '-'}</div> 
+                                    <div> <span>Education:</span> {player.education ? player.education : '-'}</div>
                                 </div>
                                 <div className="teamPlayer_About2">
-                                    <div style={{paddingTop: '3%'}}> <span>Parents:</span> {player.parents}</div> 
-                                    <div> <span>Spouse: </span>{player.spouse}</div> 
-                                    <div> <span>Children:</span> {player.children}</div>
-                                    <div> <span>Siblings:</span> {player.siblings}</div>
+                                    <div style={{paddingTop: '3%'}}> <span>Parents:</span> {player.parents ? player.parents : '-'}</div> 
+                                    <div> <span>Spouse: </span>{player.spouse ? player.spouse : '-'}</div> 
+                                    <div> <span>Children:</span> {player.children ? player.children : '-'}</div>
+                                    <div> <span>Siblings:</span> {player.siblings ? player.siblings : '-'}</div>
                                 </div>
                                 <div className="teamPlayer_About3">
-                                    <div> <span>Nickname:</span> {player.nickname}</div>
-                                    <div> <span>Bats:</span> {player.bats}</div>
-                                    <div> <span>Throws:</span> {player.throws}</div>
-                                    <div> <span>Height:</span> {player.height}</div>
-                                    <div> <span>Weight: </span>{player.weight}</div>
+                                    <div> <span>Nickname:</span> {player.nickname ? player.nickname : '-'}</div>
+                                    <div> <span>Bats:</span> {player.bats ? player.bats : '-'}</div>
+                                    <div> <span>Throws:</span> {player.throws ? player.throws : '-'}</div>
+                                    <div> <span>Height:</span> {player.height ? player.height : '-'}</div>
+                                    <div> <span>Weight: </span>{player.weight ? player.weight : '-'}</div>
                                 </div>
                                 <div className="teamPlayer_About5">
-                                    <div> <span>About: </span>{player.about}</div> 
+                                    <div> <span>About: </span>{player.about ? player.about : '-'}</div> 
                                 </div>
                                   <div className="teamPlayer_About4">
-                                        <div style={{}} className="about4-1"> <span>Stats: </span>{player.stats}
+                                        <div style={{}} className="about4-1"> <span>Stats: </span>{player.stats ? player.stats : '-'}
                                              <div style={{}} className="about4-2">  
                                              { teamId ? 
                                                     <div style={{backgroundColor: 'white', borderRadius: '5px'}} className='about-inner'> Game Stats:
@@ -142,31 +145,31 @@ useEffect(() => {
                                                                         <div style={{marginTop: '5px'}}>{stat.game_date} {stat.game}</div>
                                                                         </div>
                                                                         <div > AB
-                                                                            <div>{stat.ab >= 0 ? stat.ab : '-'}</div>
+                                                                            <div style={{textAlign: 'center'}}>{stat.ab >= 0 ? stat.ab : '-'}</div>
                                                                         </div>
                                                                         <div> R
-                                                                            <div>{stat.r >= 0 ? stat.r : '-'}</div>
+                                                                            <div style={{textAlign: 'center'}}>{stat.r >= 0 ? stat.r : '-'}</div>
                                                                         </div>
                                                                         <div> H
-                                                                            <div>{stat.h >= 0 ? stat.h : '-'}</div>
+                                                                            <div style={{textAlign: 'center'}}>{stat.h >= 0 ? stat.h : '-'}</div>
                                                                         </div>
                                                                         <div> RBI
-                                                                            <div>{stat.rb >= 0 ? stat.rb : '-'}</div>
+                                                                            <div style={{textAlign: 'center'}}>{stat.rb >= 0 ? stat.rb : '-'}</div>
                                                                         </div>
                                                                         <div> BB
-                                                                             <div>{stat.bb >= 0 ? stat.bb : '-'}</div>
+                                                                             <div style={{textAlign: 'center'}}>{stat.bb >= 0 ? stat.bb : '-'}</div>
                                                                         </div>
                                                                         <div> SO
-                                                                             <div>{stat.so  >= 0 ? stat.so : '-'}</div>
+                                                                             <div style={{textAlign: 'center'}}>{stat.so  >= 0 ? stat.so : '-'}</div>
                                                                         </div>
                                                                         <div> HR
-                                                                             <div>{stat.hr >= 0 ? stat.hr : '-'}</div>
+                                                                             <div style={{textAlign: 'center'}}>{stat.hr >= 0 ? stat.hr : '-'}</div>
                                                                         </div>
                                                                         <div> SB
-                                                                             <div>{stat.sb  >= 0 ? stat.sb : '-'}</div>
+                                                                             <div style={{textAlign: 'center'}}>{stat.sb  >= 0 ? stat.sb : '-'}</div>
                                                                         </div>
                                                                         <div> AVG
-                                                                             <div>{stat.average  >= 0 ? stat.average : '-'}</div>
+                                                                             <div style={{textAlign: 'center'}}>{stat.average  >= 0 ? stat.average : '-'}</div>
                                                                         </div>
                                                                     </div>
                                                             : null}
@@ -232,31 +235,31 @@ useEffect(() => {
                                                                   <div style={{marginTop: '10px'}}>  {pitcher.game_date} {pitcher.game}</div>
                                                                 </div>
                                                                 <div> IP
-                                                                    <div>{pitcher.ip >= 0 ? pitcher.ip : '-'}</div>
+                                                                    <div style={{textAlign: 'center'}}>{pitcher.ip >= 0 ? pitcher.ip : '-'}</div>
                                                                 </div>
                                                                 <div> H
-                                                                    <div>{pitcher.h >= 0 ? pitcher.h : '-'}</div>
+                                                                    <div style={{textAlign: 'center'}}>{pitcher.h >= 0 ? pitcher.h : '-'}</div>
                                                                 </div>
                                                                 <div> R
-                                                                    <div>{pitcher.r >= 0 ? pitcher.r : '-'}</div>
+                                                                    <div style={{textAlign: 'center'}}>{pitcher.r >= 0 ? pitcher.r : '-'}</div>
                                                                 </div>
                                                                 <div> ER
-                                                                    <div>{pitcher.er >= 0 ? pitcher.er : '-'}</div>
+                                                                    <div style={{textAlign: 'center'}}>{pitcher.er >= 0 ? pitcher.er : '-'}</div>
                                                                 </div>
                                                                 <div> HR
-                                                                    <div>{pitcher.hr >= 0 ? pitcher.hr : '-'}</div>
+                                                                    <div style={{textAlign: 'center'}}>{pitcher.hr >= 0 ? pitcher.hr : '-'}</div>
                                                                 </div>
                                                                 <div> BB
-                                                                    <div>{pitcher.bb >= 0 ? pitcher.bb : '-'}</div>
+                                                                    <div style={{textAlign: 'center'}}>{pitcher.bb >= 0 ? pitcher.bb : '-'}</div>
                                                                 </div>
                                                                 <div> SO
-                                                                    <div>{pitcher.so >= 0 ? pitcher.so : '-'}</div>
+                                                                    <div style={{textAlign: 'center'}}>{pitcher.so >= 0 ? pitcher.so : '-'}</div>
                                                                 </div>
                                                                 <div> SV
-                                                                    <div>{pitcher.sv >= 0 ? pitcher.sv : '-'}</div>
+                                                                    <div style={{textAlign: 'center'}}>{pitcher.sv >= 0 ? pitcher.sv : '-'}</div>
                                                                 </div>
                                                                 <div> ERA
-                                                                    <div>{pitcher.era >= 0 ? pitcher.era : '-'}</div>
+                                                                    <div style={{textAlign: 'center'}}>{pitcher.era >= 0 ? pitcher.era : '-'}</div>
                                                                 </div>
                                                         </div>
                                                         : null}
@@ -279,31 +282,31 @@ useEffect(() => {
                                                                       <div>{careerP.team}</div>
                                                                  </div>
                                                                  <div> GP
-                                                                      <div>{careerP.career_gp}</div>
+                                                                      <div style={{textAlign: 'center'}}>{careerP.career_gp >= 0 ? careerP.career_gp : '-'}</div>
                                                                  </div>
                                                                  <div> CG
-                                                                      <div>{careerP.career_cg}</div>
+                                                                      <div style={{textAlign: 'center'}}>{careerP.career_cg >= 0 ? careerP.career_cg : '-'}</div>
                                                                  </div>
                                                                  <div> ER
-                                                                      <div>{careerP.career_er}</div>
+                                                                      <div style={{textAlign: 'center'}}>{careerP.career_er >= 0 ? careerP.career_er : '-'}</div>
                                                                  </div>
                                                                  <div> SO
-                                                                      <div>{careerP.career_so}</div>
+                                                                      <div style={{textAlign: 'center'}}>{careerP.career_so >= 0 ? careerP.career_so : '-'}</div>
                                                                  </div>
                                                                  <div> W
-                                                                      <div>{careerP.career_w}</div>
+                                                                      <div style={{textAlign: 'center'}}>{careerP.career_w >= 0 ? careerP.career_w : '-'}</div>
                                                                  </div>
                                                                  <div> L
-                                                                      <div>{careerP.career_l}</div>
+                                                                      <div style={{textAlign: 'center'}}>{careerP.career_l >= 0 ? careerP.career_l : '-'}</div>
                                                                  </div>
                                                                  <div> Sv
-                                                                      <div>{careerP.career_sv}</div>
+                                                                      <div style={{textAlign: 'center'}}>{careerP.career_sv >= 0 ? careerP.career_sv : '-'}</div>
                                                                  </div>
                                                                  <div> WHIP
-                                                                      <div>{careerP.career_whip}</div>
+                                                                      <div style={{textAlign: 'center'}}>{careerP.career_whip >= 0 ? careerP.career_whip : '-'}</div>
                                                                  </div>
                                                                  <div> ERA
-                                                                      <div>{careerP.career_era}</div>
+                                                                      <div style={{textAlign: 'center'}}>{careerP.career_era >= 0 ? careerP.career_era : '-'}</div>
                                                                  </div>
                                                          </div>: null}
                                                             </div>

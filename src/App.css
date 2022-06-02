@@ -1,12 +1,18 @@
-.App{
+body{
+  margin: 0;
   background: url('/src/image/MLB-vector-logos.jpeg');
+}
+.App{
+  /* background: url('/src/image/MLB-vector-logos.jpeg'); */
   background-size: contain;
-  height: 100%;
+  height: 100%; 
+  
 }
 .app{
   font: bolder 150px "Alfa Slab One";
   text-align: center;
-  padding-top: 25%;
+  padding-top: 18%;
+  padding-bottom: 7.86%;
 } 
  .Title{
   mix-blend-mode: multiply;
@@ -25,7 +31,8 @@
 }
 @media only screen and (max-width: 768px) {
   body {
-    background-color: rgb(27, 172, 220);
+    margin: 0;
+    background: url('/src/image/MLB-vector-logos.jpeg');
   }
   .App{
     height:100%;
@@ -42,7 +49,7 @@
   .Title{
     mix-blend-mode: multiply;
     background-color:#733033;
-    height: 570px;
+    height: 535px;
   }
  
 }

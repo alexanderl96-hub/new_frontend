@@ -18,6 +18,7 @@ import Allplayers from '../src/ComponentsPlayers/Players/Players'
 import Coaches from '../src/ComponentsPlayers/Coaches/Coaches'
 import Season from '../src/ComponentsPlayers/Season/Season'
 import AllFavorites from '../src/ComponentsPlayers/Favorites/Favorites'
+import AddStats from '../src/Components/statsPlayers/addStatsPlayers'
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
           <Route exact path="/homeBase/allCoaches" element={<Coaches/>}/>
           <Route exact path="/homeBase/Season" element={<Season/>}/>
           <Route exact path="/homeBase/allFavorites" element={<AllFavorites/>}/>
+          <Route exact path="/homeBase/groups/:id/addStats" element={<AddStats/>}/>
         </Routes>
       </Router>
        

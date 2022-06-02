@@ -1,11 +1,8 @@
 import React,  { useState, useEffect }from 'react'
 import Navbar from '../../Components/navBar/Navbar'
-// import { useParams} from 'react-router-dom'
 
-const Players = () => {
-    // let params = useParams()
-    // let memberId = params.id
 
+const Players = () => {    
     const [allplayers, setAllPlayers] = useState([])
     const [more, setMore] = useState(['⌄'])
     const [val, setVal] = useState([])
@@ -27,7 +24,7 @@ const Players = () => {
     const {value} = e.target
     setSearch({[e.target.id]: value})
   }
-
+ 
   const handleSubmit = (e) =>{
      e.preventDefault()
     setVal(val)
@@ -39,13 +36,14 @@ const Players = () => {
  const open = (e) =>{
     if(more === '⌄'){
         setMore('⌃')
+        
     }else{
         setMore('⌄')
     }
  }
- console.log(more, 'check open')
+
   return (
-    <div style={{ marginBottom: '17px'}} >
+    <div style={{}} >
         <Navbar/>
         <h1>Players</h1>
         <div style={{marginRight: '-600px', width: '1400px'}}>
@@ -53,12 +51,14 @@ const Players = () => {
                <input id='name' type='text' onChange={handleInput} placeholder="..." style={{padding: '2px'}} ></input>
                <button type='submit' onClick={handleReset} style={{padding: '2px', fontSize: '15px', marginLeft: '-49px'}} >Reset</button>
             </fom>
-            <div>{val.length === 0 ? 
-            <div><h3 style={{backgroundColor: 'red', color: 'white', width: '9%', borderRadius: '10px'}}>Not matchers</h3></div> : 
-            <div><h3 style={{backgroundColor: 'red', color: 'white', width: '9%', borderRadius: '10px'}}>Match: {val.length}</h3></div>  }</div>
+            <div>{val.length === allplayers.length ? 
+                 <div style={{backgroundColor: 'red', color: 'white', width: '6%', borderRadius: '10px', padding:'1px', textAlign: 'center'}}>Players: {allplayers.length}</div> : 
+                  <div>{val.length > 0 ? 
+                    <div style={{backgroundColor: 'red', color: 'white', width: '6%', borderRadius: '10px',padding:'1px', textAlign: 'center'}}>Match: {val.length}</div> : 
+                       <div style={{backgroundColor: 'red', color: 'white', width: '7%', borderRadius: '10px',padding:'1px', textAlign: 'center'}}>Not matchers</div>}</div>}</div>
         </div>
         { val.length  ? 
-             <div style={{}}>
+             <div style={{ paddingBottom: '10px', height: '100%'}}>
                   {val.map((player, index)=>{
                       return(
                         <div style={{justifyItems: 'center'}} key={index} >
@@ -72,7 +72,8 @@ const Players = () => {
                                 <hr/>
                                 <h4>{player.position}</h4>
                             </div>
-                            <p style={{width:'1px', cursor: 'pointer'}} onClick={open}>{more}</p>
+                                         <p style={{width:'1px', cursor: 'pointer'}} onClick={open}>{more}</p> 
+                         
                         </div>
                     </div>
                       )
@@ -92,7 +93,9 @@ const Players = () => {
                                         <hr/>
                                         <h4>{player.position}</h4>
                                     </div>
-                                    <p style={{width:'1px', cursor: 'pointer'}} onClick={open}>{more}</p>
+                                         <p style={{width:'1px', cursor: 'pointer'}} onClick={open}>{more} {player.name}</p> 
+                                      
+                                 
                                 </div>
                             </div>
                         )
