@@ -38,6 +38,7 @@ const Coaches = () => {
     <div>
         <Navbar/>
         <h1>Coaches</h1>
+        {/* add input tag to search for an specific coach */}
         <div>
             {coach.map((coach, index) =>{
                 return(
