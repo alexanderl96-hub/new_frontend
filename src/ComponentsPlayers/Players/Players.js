@@ -29,9 +29,9 @@ const Players = () => {
      e.preventDefault()
     setVal(val)
   }
-  const handleReset = (e) =>{
-        setSearch({ [e.target.value] : "" })
-  }
+//   const handleReset = (e) =>{
+//         setSearch({ [e.target.value] : "" })
+//   }
 
  const open = (e) =>{
     if(more === '⌄'){
@@ -43,26 +43,29 @@ const Players = () => {
  }
 
   return (
-    <div style={{}} >
+    <div style={{width:'100%'}} >
         <Navbar/>
         <h1>Players</h1>
-        <div style={{marginRight: '-600px', width: '1400px'}}>
-            <fom onChange={handleSubmit}>
-               <input id='name' type='text' onChange={handleInput} placeholder="..." style={{padding: '2px'}} ></input>
-               <button type='submit' onClick={handleReset} style={{padding: '2px', fontSize: '15px', marginLeft: '-49px'}} >Reset</button>
-            </fom>
+        <div style={{display:'flex'}}>
+            <div >
+                <fom onChange={handleSubmit} >
+                <input id='name' type='text' onChange={handleInput} placeholder="🔍" style={{padding: '2px',  marginLeft: '400px',width: '300px'}} ></input>
+                {/* <button type='submit' onClick={handleReset} style={{padding: '2px', fontSize: '15px', marginLeft: '-49px'}} >Reset</button> */}
+                </fom>
+            </div>
             <div>{val.length === allplayers.length ? 
-                 <div style={{backgroundColor: 'red', color: 'white', width: '6%', borderRadius: '10px', padding:'1px', textAlign: 'center'}}>Players: {allplayers.length}</div> : 
+                 <div style={{backgroundColor: 'red', color: 'white', width: '80px', borderRadius: '10px', padding:'1px', textAlign: 'center'}}>Players: {allplayers.length}</div> : 
                   <div>{val.length > 0 ? 
-                    <div style={{backgroundColor: 'red', color: 'white', width: '6%', borderRadius: '10px',padding:'1px', textAlign: 'center'}}>Match: {val.length}</div> : 
-                       <div style={{backgroundColor: 'red', color: 'white', width: '7%', borderRadius: '10px',padding:'1px', textAlign: 'center'}}>Not matchers</div>}</div>}</div>
+                    <div style={{backgroundColor: 'red', color: 'white', width: '80px', borderRadius: '10px',padding:'1px', textAlign: 'center'}}>Match: {val.length}</div> : 
+                       <div style={{backgroundColor: 'red', color: 'white', width: '95px', borderRadius: '10px',padding:'1px', textAlign: 'center'}}>Not matchers</div>}</div>}</div>
         </div>
+        <div style={{}}>
         { val.length  ? 
              <div style={{ paddingBottom: '10px', height: '100%'}}>
                   {val.map((player, index)=>{
                       return(
-                        <div style={{justifyItems: 'center'}} key={index} >
-                        <div style={{width: '97%', backgroundColor: 'red', color: 'white', margin: '10px', display: 'flex',
+                        <div style={{}} key={index} >
+                        <div style={{ backgroundColor: 'red', color: 'white', margin: '10px', display: 'flex',
                         padding: '10px', borderRadius: '10px', boxShadow: '3px 4px 2px black'}}>
                             <img src={player.imag} alt={player.id} 
                             style={{height: '110px', width: '140px', border: '1px solid', borderRadius: '10px'}} />
@@ -80,10 +83,10 @@ const Players = () => {
                    })}
              </div> : 
               <div >
-                    {allplayers.map((player, index) =>{
+                    {/* {allplayers.map((player, index) =>{
                         return (
                             <div style={{justifyItems: 'center'}} key={index}>
-                                <div style={{width: '97%', backgroundColor: 'red', margin: '10px', display: 'flex',
+                                <div style={{ backgroundColor: 'red', margin: '10px', display: 'flex',
                                 padding: '10px', borderRadius: '10px'}}>
                                     <img src={player.imag} alt={player.id} 
                                     style={{height: '110px', width: '140px', border: '1px solid', borderRadius: '10px'}} />
@@ -93,14 +96,15 @@ const Players = () => {
                                         <hr/>
                                         <h4>{player.position}</h4>
                                     </div>
-                                         <p style={{width:'1px', cursor: 'pointer'}} onClick={open}>{more} {player.name}</p> 
+                                         <p style={{width:'1px', cursor: 'pointer'}} onClick={open}>{more}</p> 
                                       
                                  
                                 </div>
                             </div>
                         )
-                    })}
+                    })} */}
           </div>}
+          </div>
     </div>
   )
 }
