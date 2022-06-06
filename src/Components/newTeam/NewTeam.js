@@ -1,12 +1,9 @@
 import React, { useState  } from 'react'
-import { apiURL } from '../back-end/Back-End'
 import { Link , useNavigate } from 'react-router-dom'
-// import { useNavigate } from 'react-router-dom';
 import axios from "axios";
 import '../teamUpDate/TeamUpDate.css'
 import './NewTeam.css'
 
-const API_DTBASE = apiURL();
 
 const NewTeam = () => {
   const navigate = useNavigate();
@@ -30,15 +27,15 @@ const NewTeam = () => {
     addTeam(newTeam)
   }
   const addTeam = (newTeam) => {
-    axios.post(`${API_DTBASE}/teams`, newTeam).then((res)=>{
-      navigate('/homeBase');
+    axios.post(`https://my-baseball-teams.herokuapp.com/teams`, newTeam).then((res)=>{
+      navigate('/teams');
       })
   }
 
   return (
     <div className='newTeam_Container'>
          <h1 className='newTitle'>New Team</h1>
-         <div style={{}} className='divLink'> <Link to={`/homeBase`} className='newLinkBack'>Back</Link> </div>
+         <div className='divLink'> <Link to={`/teams`} className='newLinkBack'>Back</Link> </div>
          <div className='newTeam_Wrap' >
                 <form className='newTeam_Form' onSubmit={handleSubmit} >
                     <label htmlFor="">Name:</label>

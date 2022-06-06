@@ -1,9 +1,7 @@
 import React,  { useState, useEffect}from 'react'
 import { useParams, Link, useNavigate} from 'react-router-dom'
-import { apiURL } from '../back-end/Back-End'
 import axios from "axios";
 import '../newMember/NewMember.css'
-const API_DTBASE = apiURL();
 
 const MemberUpDate = () => {
   const [member, setMemberid] = useState([])
@@ -46,11 +44,11 @@ const MemberUpDate = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
      updatedTeam(newMember, id)
-    navigate(`/homebase/groups/${id}`)
+    navigate(`/teams/groups/${id}`)
     
   };
   const updatedTeam = (update, id) => {
-    axios.put(`${API_DTBASE}/groups/${id}`, update).then(
+    axios.put(`https://my-baseball-teams.herokuapp.com/groups/${id}`, update).then(
       (res) => {
         const newTeam = [...newMember];
         newTeam[id] = update;
@@ -61,7 +59,7 @@ const MemberUpDate = () => {
   };
  
   useEffect(() => {
-    fetch(`http://localhost:9000/groups/${id}`)
+    fetch(`https://my-baseball-teams.herokuapp.com/groups/${id}`)
         .then(res => res.json())
         .then(data =>{
             setMemberid(data.team.team_id)
@@ -72,7 +70,7 @@ const MemberUpDate = () => {
   return (
          <div className='newMember_Container'>
            <h1 className='newTitle'>UpDate Member</h1>
-         <div style={{}} className='wrapLink'> <Link to={`/homeBase/groups/${id}`} className='newLinkBackNew' >Back</Link> </div>
+         <div style={{}} className='wrapLink'> <Link to={`/teams/groups/${id}`} className='newLinkBackNew' >Back</Link> </div>
          <div >
          <form onSubmit={handleSubmit} className='newMember_AboutGrid'>
                             {/* <label className='label-1' >Name: </label> */}

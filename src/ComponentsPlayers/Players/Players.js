@@ -12,7 +12,7 @@ const Players = () => {
 
     useEffect(() => {
         let name = search.name
-        fetch(`http://localhost:9000/groups`)
+        fetch(`https://my-baseball-teams.herokuapp.com/groups`)
         .then(res => res.json())
         .then(data =>{
             setAllPlayers(data)

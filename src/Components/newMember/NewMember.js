@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import { apiURL } from '../back-end/Back-End'
 import { Link , useNavigate, useParams } from 'react-router-dom'
 import './NewMember.css'
 import axios from 'axios'
 
-const API_DTBASE = apiURL();
 
 const NewMember = () => {
     const navigate = useNavigate();
@@ -47,24 +45,23 @@ const NewMember = () => {
         addMember(newMember)
       }
       const addMember = (newMember) => {
-        axios.post(`${API_DTBASE}/groups`, newMember).then((res)=>{
-          navigate(`/homeBase/updateteam/${id}`);
+        axios.post(`https://my-baseball-teams.herokuapp.com/groups`, newMember).then((res)=>{
+          navigate(`/teams/updateteam/${id}`);
           })
       }
     
     useEffect(() => {
-        fetch(`http://localhost:9000/teams/${id}`)
+        fetch(`https://my-baseball-teams.herokuapp.com/teams/${id}`)
         .then(res => res.json())
         .then(data =>{
             setGroup(data.team)
         })
   },[id])
-console.log(group, 'name')
-console.log(newMember, 'name')
+
   return (
     <div className='newMember_Container'>
          <h1 className='newTitle'>New Member</h1>
-         <div style={{}} className='wrapLink'> <Link to={`/homeBase/updateteam/${group.id}`} className='newLinkBackNew'>Back</Link> </div>
+         <div className='wrapLink'> <Link to={`/teams/updateteam/${group.id}`} className='newLinkBackNew'>Back</Link> </div>
          <div>
              <div >
              <form onSubmit={handleSubmit} className='newMember_AboutGrid'>

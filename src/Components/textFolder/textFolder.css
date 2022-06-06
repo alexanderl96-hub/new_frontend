@@ -8,6 +8,10 @@ span{
 .nav-TeamHead{
     padding-top: 15px; 
     margin-bottom: -7px; 
+    animation: fadein 0.5s;
+  -moz-animation: fadein 0.5s; /* Firefox */
+  -webkit-animation: fadein 0.5s; /* Safari and Chrome */
+  -o-animation: fadein 0.5s;
 }
 .teamLink{
     margin-bottom: 35px;
@@ -130,6 +134,10 @@ span{
         height: 100%;
         width: 100%;
         margin-bottom: -5px;
+        animation: fadein 0.5s;
+  -moz-animation: fadein 0.5s; /* Firefox */
+  -webkit-animation: fadein 0.5s; /* Safari and Chrome */
+  -o-animation: fadein 0.5s;
     }
     .nav-TeamPlayers{
         background-color:gray;

@@ -2,6 +2,10 @@
     background-color: #0000ff6d; 
     padding: 15px; 
     margin:0;
+    animation: fadein 1s;
+    -moz-animation: fadein 1s; /* Firefox */
+    -webkit-animation: fadein 1s; /* Safari and Chrome */
+    -o-animation: fadein 1s;
 }
 .Main2{
     display: flex; 
@@ -180,6 +184,10 @@ span{
         padding: 15px; 
         height: 100%;  
         width: 100%;
+        animation: fadein 1s;
+        -moz-animation: fadein 1s; /* Firefox */
+        -webkit-animation: fadein 1s; /* Safari and Chrome */
+        -o-animation: fadein 1s;
     }
     .Main2{
         display: flex; 

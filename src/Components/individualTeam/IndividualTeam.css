@@ -1,3 +1,9 @@
+.Individual{
+  animation: fadein 0.5s;
+  -moz-animation: fadein 0.5s; /* Firefox */
+  -webkit-animation: fadein 0.5s; /* Safari and Chrome */
+  -o-animation: fadein 0.5s;
+}
 .img{
     height: 80px;
     width: 80px;
@@ -25,6 +31,12 @@
     color: #333
   }
   @media only screen and (max-width: 768px){
+    .Individual{
+      animation: fadein 0.5s;
+      -moz-animation: fadein 0.5s; /* Firefox */
+      -webkit-animation: fadein 0.5s; /* Safari and Chrome */
+      -o-animation: fadein 0.5s;
+    }
     .teamContainer {
       background-color: rgb(241, 237, 237);
       padding: 7px;

@@ -1,9 +1,8 @@
 import React,  { useState, useEffect }from 'react'
 import { useParams, Link} from 'react-router-dom'
-import { apiURL } from '../back-end/Back-End'
 import './IndividualMember.css'
 import axios from 'axios'
-const API_DTBASE = apiURL();
+
 
 const IndividualMember = () => {
    const [member, setMember] = useState([])
@@ -21,13 +20,13 @@ const IndividualMember = () => {
 
 // const navigate = useNavigate();   
 const handleDelete = () => {
-    axios.delete(`${API_DTBASE}/groups/${memberId}`).then(() =>{
+    axios.delete(`https://my-baseball-teams.herokuapp.com/groups/${memberId}`).then(() =>{
         //  navigate(`/homebase`)
     }, (error) => console.log(error))
 };
 
     useEffect(() => {
-        fetch(`http://localhost:9000/groups`)
+        fetch(`https://my-baseball-teams.herokuapp.com/groups`)
         .then(res => res.json())
         .then(data =>{
             setMember(data)
@@ -35,14 +34,14 @@ const handleDelete = () => {
   },[])
 
   useEffect(() => {
-    fetch(`http://localhost:9000/playersStats`)
+    fetch(`https://my-baseball-teams.herokuapp.com/playersStats`)
     .then(res => res.json())
     .then(data =>{
         setTeamID(data)
     })
 },[])
 useEffect(() => {
-    fetch(`http://localhost:9000/playersCareer`)
+    fetch(`https://my-baseball-teams.herokuapp.com/playersCareer`)
     .then(res => res.json())
     .then(data =>{
         setTeamCareerID(data)
@@ -50,14 +49,14 @@ useEffect(() => {
 },[])
 
 useEffect(() => {
-    fetch(`http://localhost:9000/pitchersStats`)
+    fetch(`https://my-baseball-teams.herokuapp.com/pitchersStats`)
     .then(res => res.json())
     .then(data =>{
         setPitcherID(data)
     })
 },[])
 useEffect(() => {
-    fetch(`http://localhost:9000/pitchersCarrer`)
+    fetch(`https://my-baseball-teams.herokuapp.com/pitchersCarrer`)
     .then(res => res.json())
     .then(data =>{
         setPitcherCareerID(data)
@@ -65,7 +64,7 @@ useEffect(() => {
 },[])
 
   useEffect(() => {
-    fetch(`http://localhost:9000/groups/${memberId}`)
+    fetch(`https://my-baseball-teams.herokuapp.com/groups/${memberId}`)
     .then(res => res.json())
     .then(data =>{
         setGroup(data.team.team_id )
@@ -74,17 +73,17 @@ useEffect(() => {
 
 
   return (
-      <div style={{}} className='Main'>
-          <div style={{ }}  className='Main2'>
-              <div > <Link to={`/homeBase/${group}`} className='memberLink1'>Back</Link> </div>
+      <div  className='Main'>
+          <div  className='Main2'>
+              <div > <Link to={`/teams/${group}`} className='memberLink1'>Back</Link> </div>
               <div> 
-                <Link to={`/homeBase/updateMember/${memberId}`} className='memberLink'>Update Member
+                <Link to={`/teams/updateMember/${memberId}`} className='memberLink'>Update Member
                 </Link>
-                <div style={{}} className='delBTn'> 
-                    <Link to={`/homeBase/${group}`} onClick={handleDelete} className="teamLinkDelete" >Delete</Link>
+                <div className='delBTn'> 
+                    <Link to={`/teams/${group}`} onClick={handleDelete} className="teamLinkDelete" >Delete</Link>
                 </div>
                 {/* give the css to add Stats buttonLink */}
-                <Link to={`/homeBase/groups/${memberId}/addStats`} style={{marginLeft: '-100px'}}>Add Stats
+                <Link to={`/teams/groups/${memberId}/addStats`} style={{marginLeft: '-100px'}}>Add Stats
                 </Link>
               </div>
           </div>     

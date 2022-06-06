@@ -16,8 +16,7 @@ const Coaches = () => {
    
     useEffect(() =>{
         let namecoach = search.name
-        console.log(namecoach, 'nnnnnnnnnn')
-        fetch(`http://localhost:9000/groups`)
+        fetch(`https://my-baseball-teams.herokuapp.com/groups`)
         .then(res => res.json())
         .then(data => {
             setCoach(data = data.filter(element => element.position.includes('Team')));

@@ -6,7 +6,7 @@ const FrontPage = () => {
     <div>
         <div className="app Title">
             <div className='Team'>
-              <Link to='/homeBase' className="TitleLink" >Baseball Teams </Link>
+              <Link to='/teams' className="TitleLink" >Baseball Teams </Link>
             </div>
         </div>
     </div>

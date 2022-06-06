@@ -28,18 +28,18 @@ function App() {
       <Router >
         <Routes>
           <Route exact path="/" element={<FrontPage/>}/>
-          <Route exact path="/homeBase" element={<Teams/>}/>
-          <Route exact path="/homeBase/:id" element={<IndividualTeam/>}/>
-          <Route exact path="/homeBase/groups/:id" element={<IndividualMember/>}/>
-          <Route exact path="/homeBase/updateteam/:id" element={<TeamUpDate/>}/>
-          <Route exact path="/homeBase/updateMember/:id" element={<UpDateMember/>}/>
-          <Route exact path="/homeBase/new" element={<NewTeam/>}/>
-          <Route exact path="/homeBase/newMember/:id" element={<NewMember/>}/>
-          <Route exact path="/homeBase/allplayers" element={<Allplayers/>}/>
-          <Route exact path="/homeBase/allCoaches" element={<Coaches/>}/>
-          <Route exact path="/homeBase/Season" element={<Season/>}/>
-          <Route exact path="/homeBase/allFavorites" element={<AllFavorites/>}/>
-          <Route exact path="/homeBase/groups/:id/addStats" element={<AddStats/>}/>
+          <Route exact path="/teams" element={<Teams/>}/>
+          <Route exact path="/teams/:id" element={<IndividualTeam/>}/>
+          <Route exact path="/teams/groups/:id" element={<IndividualMember/>}/>
+          <Route exact path="/teams/updateteam/:id" element={<TeamUpDate/>}/>
+          <Route exact path="/teams/updateMember/:id" element={<UpDateMember/>}/>
+          <Route exact path="/teams/new" element={<NewTeam/>}/>
+          <Route exact path="/teams/newMember/:id" element={<NewMember/>}/>
+          <Route exact path="/teams/allplayers" element={<Allplayers/>}/>
+          <Route exact path="/teams/allCoaches" element={<Coaches/>}/>
+          <Route exact path="/teams/Season" element={<Season/>}/>
+          <Route exact path="/teams/allFavorites" element={<AllFavorites/>}/>
+          <Route exact path="/teams/groups/:id/addStats" element={<AddStats/>}/>
         </Routes>
       </Router>
        

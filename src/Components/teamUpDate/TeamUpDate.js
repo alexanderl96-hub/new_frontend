@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import { apiURL } from '../back-end/Back-End'
 import { Link, useParams, useNavigate} from "react-router-dom";
 import './TeamUpDate.css'
 import axios from "axios";
-const API_DTBASE = apiURL();
 
 const TeamUpDate = () => {
   const [name, setName] = useState([])
@@ -25,12 +23,12 @@ const TeamUpDate = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     updatedTeam(group, id)
-    navigate(`/homebase`)
+    navigate(`/teams`)
     
   };
    
   const updatedTeam = (updateteam, id) => {
-    axios.put(`${API_DTBASE}/teams/${id}`, updateteam).then(
+    axios.put(`https://my-baseball-teams.herokuapp.com/teams/${id}`, updateteam).then(
       (res) => {
         const newTeam = [...group];
         newTeam[id] = updateteam;
@@ -42,7 +40,7 @@ const TeamUpDate = () => {
 
      useEffect(() => {
     axios
-      .get(`${API_DTBASE}/teams/${id}`)
+      .get(`https://my-baseball-teams.herokuapp.com/teams/${id}`)
       .then((res) => {
         const { data } = res;
         setGroup(data.team);
@@ -54,7 +52,7 @@ const TeamUpDate = () => {
 
 
     useEffect(() => {
-      fetch(`http://localhost:9000/teams/${id}`)
+      fetch(`https://my-baseball-teams.herokuapp.com/teams/${id}`)
       .then(res => res.json())
       .then(data =>{
           setName(data.team.name)
@@ -62,7 +60,7 @@ const TeamUpDate = () => {
       })
 },[id])
 useEffect(() => {
-  fetch(`http://localhost:9000/groups`)
+  fetch(`https://my-baseball-teams.herokuapp.com/groups`)
   .then(res => res.json())
   .then(data =>{
     setNewGroup(data)
@@ -85,9 +83,9 @@ const articule = (artist) => {
   return (
       <div className='TeamUpDate_Container'>
          <h1 className='newTitle'>Team Up Date</h1>
-         <div style={{}} className='secondNewTitle'> <Link to={`/homeBase/${id}`} className='newLinkBack'>Back</Link> </div>
+         <div style={{}} className='secondNewTitle'> <Link to={`/teams/${id}`} className='newLinkBack'>Back</Link> </div>
          {/* <Link to={`/homebase`}><h3>HomeBase</h3></Link> */}
-         <Link to={`/homeBase/newMember/${id}`} id={id} className="teamLinAddMember" >Add Member</Link>
+         <Link to={`/teams/newMember/${id}`} id={id} className="teamLinAddMember" >Add Member</Link>
          <div className='TeamUpDate_Wrap' >
               <div style={{ }} className="teamUpdateName"><h2>Team: {name}</h2></div>
                   <form className='TeamUpDate_Form' onSubmit={handleSubmit}>
@@ -109,7 +107,7 @@ const articule = (artist) => {
              return(
                <div style={{}} className='last-inner'>
                  
-                { Number(id) === players.team_id ? 
+                {id === players.team_id ? 
                    <div style={{ }} className='last-inner2'>
                       <img src={players.imag} alt='' style={{}} className='last-inner3'/> 
                       <div style={{}} className='last-inner4'>{articule(players.name)}</div>

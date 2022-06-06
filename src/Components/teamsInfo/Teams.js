@@ -4,19 +4,22 @@ import Navbar from '../navBar/Navbar'
 import './Teams.css'
 
 
+
 const Teams = () => {
     const [teams, setTeams] = useState([])
 
+    
     useEffect(() => {
-        fetch("http://localhost:9000/teams")
+        fetch(`https://my-baseball-teams.herokuapp.com/teams`)
         .then(res => res.json())
         .then(data =>{
             setTeams(data)
         })
     },[])
   
+    
   return (
-    <div>
+    <div className='home'>
         <Navbar />
          <div className='Container'>
          {teams.map((team, index)=>{

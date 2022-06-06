@@ -1,9 +1,8 @@
 import React,  { useState, useEffect }from 'react'
 import { useParams, Link, useNavigate} from 'react-router-dom'
-import { apiURL } from '../back-end/Back-End'
 import axios from 'axios'
 import './textFolder.css'
-const API_DTBASE = apiURL();
+
 
 const TextFolder = () => {
     const [on , setON] = useState([true]);
@@ -15,15 +14,15 @@ const TextFolder = () => {
     const navigate = useNavigate();
     
     useEffect(() => {
-        fetch(`http://localhost:9000/groups`)
+        fetch(`https://my-baseball-teams.herokuapp.com/groups`)
         .then(res => res.json())
         .then(data =>{
             setPlayers(data)
         })
   },[])
   const handleDelete = () => {
-    axios.delete(`${API_DTBASE}/teams/${teamId}`).then(() =>{
-        navigate(`/homebase`)
+    axios.delete(`https://my-baseball-teams.herokuapp.com/teams/${teamId}`).then(() =>{
+        navigate(`/teams`)
     }, (error) => console.log(error))
 };
 
@@ -37,14 +36,15 @@ const TextFolder = () => {
       setON(true)
     }
   };
-  console.log(teamId)
+
+  console.log(players)
   return (
     <div style={{}}  className="nav-TeamHead"> 
             <h1 className="nav-TeamPlayers">Teams Players</h1>
         <div style={{}} className="nav-TeamPlayers2">
-          <div> <Link to="/homeBase" className='teamLink'>⬅</Link></div>      
-           <Link to={`/homeBase/updateteam/${teamId}`} className='teamLinkDelete' style={{}}>Update Team</Link>
-           <Link to={`/homeBase`} onClick={handleDelete} className="teamLinkDelete-1" >Delete</Link>
+          <div> <Link to="/teams" className='teamLink'>⬅</Link></div>      
+           <Link to={`/teams/updateteam/${teamId}`} className='teamLinkDelete' style={{}}>Update Team</Link>
+           <Link to={`/teams`} onClick={handleDelete} className="teamLinkDelete-1" >Delete</Link>
            {/* <Link to={`/homeBase/newMember/${teamId}`} id={teamId} className="teamLinkDelete" >Add Member</Link> */}
         </div>
      
@@ -52,7 +52,7 @@ const TextFolder = () => {
         {players.map((member, index)=>{
             return (
                  <div >
-                    {Number(teamId) === member.team_id ? 
+                    {teamId === member.team_id ? 
                         <div className="teamPlayer_Container" >
                             <div className="teamPlayer_Wrapper" value={on}  onClick={ handleSub} >
                                 <div>
@@ -64,7 +64,7 @@ const TextFolder = () => {
                                         <div className= 'playerDataInfo'><span>Number:</span> {member?.number}</div>
                                         <div className= 'playerDataInfo'><span>Position:</span> {member?.position}</div>
                                         <div className= 'playerDataInfo'><span>Salary: </span> {member?.salary}</div>
-                                        <Link to={`/homeBase/groups/${member.id}` } teamID={teamId}>
+                                        <Link to={`/teams/groups/${member.id}` } teamID={teamId}>
                                               <p   className= ' More' teamID={teamId} >{more}</p>
                                         </Link>
                                    </div>
