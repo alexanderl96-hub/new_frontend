@@ -24,6 +24,14 @@
     background-color: green;
     border-radius: 10px;
     margin-right: -10px;
+    color: white;
+}
+.memberLink2{
+    padding: 10px;
+    background-color: green;
+    border-radius: 10px;
+    margin-left: -210px;
+    color: white;
 }
 .delBTn{
     margin-top: -19px;

@@ -38,7 +38,14 @@ h1{
   width: 5%;
    padding: 2px;
    color: white;
+   border-radius: 10px;
+   text-align: center;
    transition: all 1s;
+}
+.nav-inner:hover{
+  background-color: white;
+  color: black;
+  transition: all 1s;
 }
 .nav-inner-inner{
    color: white;
@@ -46,17 +53,6 @@ h1{
 .nav-inner-inner:hover{
   color: black;
 }
-.nav-inner:hover{
-  background-color: white;
-  width: 5%;
-  border-radius: 10px;
-  padding: 2px;
-  text-align: center;
-  color: black;
-  transition: all 1s;
-}
-
-
 
   @media only screen and (max-width: 768px){
    

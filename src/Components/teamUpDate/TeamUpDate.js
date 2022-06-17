@@ -8,7 +8,6 @@ const TeamUpDate = () => {
   const [newgroup, setNewGroup] = useState([])
     let { id } = useParams();
     const navigate = useNavigate();
-
    
     const [group, setGroup] = useState({
         imag: '',
@@ -107,7 +106,7 @@ const articule = (artist) => {
              return(
                <div style={{}} className='last-inner'>
                  
-                {id === players.team_id ? 
+                {Number(id) === players.team_id ? 
                    <div style={{ }} className='last-inner2'>
                       <img src={players.imag} alt='' style={{}} className='last-inner3'/> 
                       <div style={{}} className='last-inner4'>{articule(players.name)}</div>

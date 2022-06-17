@@ -37,7 +37,7 @@ const TextFolder = () => {
     }
   };
 
-  console.log(players)
+  // console.log(players)
   return (
     <div style={{}}  className="nav-TeamHead"> 
             <h1 className="nav-TeamPlayers">Teams Players</h1>
@@ -52,7 +52,8 @@ const TextFolder = () => {
         {players.map((member, index)=>{
             return (
                  <div >
-                    {teamId === member.team_id ? 
+
+                    {Number(teamId) === member.team_id ? 
                         <div className="teamPlayer_Container" >
                             <div className="teamPlayer_Wrapper" value={on}  onClick={ handleSub} >
                                 <div>

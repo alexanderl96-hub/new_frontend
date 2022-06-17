@@ -79,12 +79,12 @@ useEffect(() => {
               <div> 
                 <Link to={`/teams/updateMember/${memberId}`} className='memberLink'>Update Member
                 </Link>
+                <Link to={`/teams/groups/${memberId}/addStats`} className='memberLink2'>Add Stats</Link>
                 <div className='delBTn'> 
                     <Link to={`/teams/${group}`} onClick={handleDelete} className="teamLinkDelete" >Delete</Link>
                 </div>
                 {/* give the css to add Stats buttonLink */}
-                <Link to={`/teams/groups/${memberId}/addStats`} style={{marginLeft: '-100px'}}>Add Stats
-                </Link>
+                {/* <Link to={`/teams/groups/${memberId}/addStats`} className='memberLink2'>Add Stats</Link> */}
               </div>
           </div>     
           {member.map((player, index) =>{

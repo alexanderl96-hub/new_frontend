@@ -73,7 +73,7 @@ console.log(memberId)
     <div>
         <h1>addStatsPlayers</h1>
         {/* -- check the member id and the position before display data */}
-        <div>
+        <div style={{marginLeft: 'auto'}}>
             <h3>Add Players Stats:</h3>
             <form>
                 <input type="number" placeholder={memberId}/>
