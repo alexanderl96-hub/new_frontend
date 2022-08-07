@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; 
 import {
   BrowserRouter as Router,
   Routes,
@@ -22,6 +22,7 @@ import AddStats from '../src/Components/statsPlayers/addStatsPlayers'
 
 
 function App() {
+ 
   
   return (
     <div className="App">
@@ -29,18 +30,19 @@ function App() {
         <Routes>
           <Route exact path="/" element={<FrontPage/>}/>
           <Route exact path="/teams" element={<Teams/>}/>
-          <Route exact path="/teams/:id" element={<IndividualTeam/>}/>
-          <Route exact path="/teams/groups/:id" element={<IndividualMember/>}/>
-          <Route exact path="/teams/updateteam/:id" element={<TeamUpDate/>}/>
-          <Route exact path="/teams/updateMember/:id" element={<UpDateMember/>}/>
-          <Route exact path="/teams/new" element={<NewTeam/>}/>
-          <Route exact path="/teams/newMember/:id" element={<NewMember/>}/>
-          <Route exact path="/teams/allplayers" element={<Allplayers/>}/>
-          <Route exact path="/teams/allCoaches" element={<Coaches/>}/>
-          <Route exact path="/teams/Season" element={<Season/>}/>
-          <Route exact path="/teams/allFavorites" element={<AllFavorites/>}/>
-          <Route exact path="/teams/groups/:id/addStats" element={<AddStats/>}/>
-        </Routes>
+          <Route  path="/teams/:id" element={<IndividualTeam/>}/>
+          <Route  path="/teams/groups/:id" element={<IndividualMember/>}/>
+          <Route  path="/teams/updateteam/:id" element={<TeamUpDate/>}/>
+          <Route  path="/teams/updateMember/:id" element={<UpDateMember/>}/>
+          <Route  path="/teams/new" element={<NewTeam/>}/>
+          <Route  path="/teams/newMember/:id" element={<NewMember/>}/>
+          <Route  path="/teams/allplayers" element={<Allplayers/>}/>
+          <Route  path="/teams/allCoaches" element={<Coaches/>}/>
+          <Route  path="/teams/Season" element={<Season/>}/>
+          <Route  path="/teams/allFavorites" element={<AllFavorites/>}/>
+          <Route  path="/teams/groups/:id/addStats" element={<AddStats/>}/>
+        
+         </Routes>
       </Router>
        
     </div>

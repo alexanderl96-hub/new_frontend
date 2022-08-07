@@ -35,7 +35,7 @@ h1{
   border-radius: 10px;
 }
 .nav-inner{
-  width: 5%;
+  width: 70px;
    padding: 2px;
    color: white;
    border-radius: 10px;
@@ -92,12 +92,12 @@ h1{
       margin-left: -1px;
     }
     .nav-inner{
-       padding: 2px;
+       padding: 1px;
        color: white;
     }
     .nav-inner:hover{
-      border-radius: 10px;
-      padding: 2px;
+      border-radius: 30px;
+      padding: 1px;
       text-align: center;
       color: black;
     }

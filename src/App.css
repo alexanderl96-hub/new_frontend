@@ -19,6 +19,7 @@ body{
   background-color:#733033;
   height: 374.5px;
 }
+
 .Team:hover{
  cursor: pointer;
 }
@@ -28,6 +29,13 @@ body{
 }
 .TitleLink:hover{
   color: #52FF52;
+}
+
+.Loading{
+  width: 150px;
+  height: 150px;
+  padding-top: 20px;
+  color: green;
 }
 @media only screen and (max-width: 768px) {
   body {

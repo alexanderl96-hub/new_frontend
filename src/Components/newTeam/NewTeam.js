@@ -37,7 +37,7 @@ const NewTeam = () => {
          <h1 className='newTitle'>New Team</h1>
          <div className='divLink'> <Link to={`/teams`} className='newLinkBack'>Back</Link> </div>
          <div className='newTeam_Wrap' >
-                <form className='newTeam_Form' onSubmit={handleSubmit} >
+                <form className='newTeam_Form' nSubmit={handleSubmit}o >
                     <label htmlFor="">Name:</label>
                     <input id='name' type="text" onChange={handleInput}  placeholder="Name and lastname..." className='newInputteam' ></input>
                     <label htmlFor="">Image URL:</label> 
