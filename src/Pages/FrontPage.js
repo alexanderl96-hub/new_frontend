@@ -4,6 +4,7 @@ import Loading from '../Loading'
 import '../App.css'
 
 const FrontPage = () => {
+  const [word,setWord]= useState("Baseball Teams")
   const [count, setCount] = useState(<div className='Loading'><Loading/></div>);
   const [countInTimeout, setCountInTimeout] = useState(<div><Link to='/teams' className="TitleLink" >Baseball Teams </Link> </div> );
   
@@ -14,12 +15,36 @@ const FrontPage = () => {
     },5000);
     setCount()
   },[count])
+
+  function homeClick(){
+    if('Baseball Teams'){
+      setWord ('Click me')
+  }else{
+    setWord('Baseball Teams')
+  }
+  }
+  function homeClickOut(){
+    if('Click me'){
+      setWord ('Baseball Teams')
+  }else{
+    setWord('Click me')
+  }
+  }
+ 
   return (
     <div>
         <div className="app Title">
           {!countInTimeout ? (
             <div className='Team'>  
-              <Link to='/teams' className="TitleLink" >Baseball Teams </Link> 
+            <p className='soccer'>LA Dodgers</p>
+            <p   className='arrows'> NY Mets</p>
+              <Link to='/teams' className="TitleLink" onMouseOver={homeClick} onMouseOut={homeClickOut}> {word}</Link> 
+              <div className='martir'>
+                  <p className='sportL'>New York Yankees</p>
+              </div>
+           
+               <p   className='soccer'>Atlanta Braves</p>
+               <p className='arrows'>Red Sox</p>
          </div> 
           )
           :

@@ -9,15 +9,16 @@ body{
   
 }
 .app{
-  font: bolder 150px "Alfa Slab One";
+  font: bolder 145px "Alfa Slab One";
   text-align: center;
-  padding-top: 18%;
-  padding-bottom: 7.86%;
+  padding-top: 14%;
+  padding-bottom: 14%;
 } 
  .Title{
   mix-blend-mode: multiply;
   background-color:#733033;
-  height: 374.5px;
+  height: 405px;
+ 
 }
 
 .Team:hover{
@@ -37,6 +38,61 @@ body{
   padding-top: 20px;
   color: green;
 }
+
+.sportL{
+  animation: slideInRight 10s;
+  font-size: 32px;
+  color: white;
+  margin-left: -920px; 
+  transition: all 400s;
+}
+@keyframes slideInRight {
+  from {
+    transform: translate3d(800px, 200px, 0);
+    visibility: visible;
+   
+  }
+
+  to {
+    transform: translate3d(-200px, 20px, 0);
+    visibility: hidden;
+    color: transparent;
+  }
+ 
+}
+
+.soccer{
+  animation: slideOutRight 10s;
+  font-size: 52px;
+  color: white;
+}
+@keyframes slideOutRight {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    transform: translate3d(55%, 0, 0);
+  }
+}
+.arrows{
+  animation: fadeInDownBig 12s;
+  color: white;
+  font-size: 82px;
+}
+@keyframes fadeInDownBig {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -2000px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
 @media only screen and (max-width: 768px) {
   body {
     margin: 0;
