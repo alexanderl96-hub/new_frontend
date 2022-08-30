@@ -28,6 +28,9 @@ function Navbar() {
            <Link to={'/teams/allFavorites'} className='nav-inner'>
                <div className='nav-inner-inner'>Favorites</div>
            </Link>
+           <Link to={'/teams/newpage'} className='nav-inner'>
+               <div className='nav-inner-inner'>New Page</div>
+           </Link>
          </div>
          </div>
     </div>

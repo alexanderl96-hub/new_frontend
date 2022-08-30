@@ -1,0 +1,118 @@
+.sectionNav{
+    display: flex;
+    flex-direction: row;
+    margin:10px;
+    padding:2px;
+    
+}
+.return{
+    font-size: 35px;
+    margin-left: -260px; 
+    opacity: 1;
+    width: 860px;
+}
+.innerSectionNav{
+   width: 50px;
+}
+.editPlayer{
+    margin-left: 180px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+.deletePlayer{
+    margin-left: 190px;
+    border-radius: 4px;
+    font-size: 24px;
+}
+
+.section2{
+    height: 500px;
+    width: 100%;
+    /* background-color: #80808095;  */
+}
+.section2Container{
+    display: flex;
+    flex-direction: row;
+}
+.innerSection2{
+    display: flex;
+    flex-direction: column;
+}
+.inner-innersection2{
+    width: 250px;
+    height: 350px;
+    border: 2px solid white;
+    border-radius: 12px;
+    margin-top: 40px;
+    background-color: gray;
+}
+.image{
+    width: 250px;
+    height: 351px;
+    border-radius: 12px;
+}
+.innersection2H3{
+    margin-top: 20px;
+    height: 20px;
+    width: 230px;
+    padding:10px;
+    background-color: white;
+    border-radius: 12px;
+}
+
+.innerSection2-3{
+    width: 400px;
+    height: 330px;
+    border: 2px solid white;
+    border-radius: 12px;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: white;
+    text-align: justify;
+}
+.innerSectionStart{
+    margin-top: 20px;
+    text-align: center;
+}
+.flow{
+    display:grid;
+    gap: var(--flow-spacer,1rem)
+}
+.section3{ 
+    display:grid;
+    grid-auto-flow: column;
+    overflow: auto;
+    overflow-y: hidden;
+}
+.scrollPlayers{
+    display:grid;
+    grid-auto-flow: column;
+    /* overflow-y: hidden; */
+   
+}
+.media-group{
+    grid-auto-columns: 1fr;
+   
+}
+.media-group-container{
+    margin: 3px;
+    height: 210px; 
+}
+.media-group-container:hover{
+    cursor: pointer;
+    box-shadow: 5px 3px 3px 5px;
+    border-radius: 12px;
+}
+.media-group-container > h3 {
+    background-color: white;
+    border-radius: 3px;
+    height: 50px;
+}
+.media-group > img {
+    background-color: gray;
+    border-radius: 12px;
+    width: 160px;
+    height: 160px;
+    aspect-ratio: 16/9;
+    /* object-fit: cover; */
+}
