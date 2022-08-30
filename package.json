@@ -11,6 +11,7 @@
     "react-dom": "^18.0.0",
     "react-history-router": "^1.4.1",
     "react-loading": "^2.0.3",
+    "react-rating-stars-component": "^2.2.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "sass": "^1.54.5",

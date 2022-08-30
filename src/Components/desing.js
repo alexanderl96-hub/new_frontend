@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
+import ReactStars from "react-rating-stars-component"
 import './desing.css'
 import Second from './seconddesing'
 
@@ -8,15 +9,29 @@ const Desing = () => {
     const [ newI, setNewI]= useState([])
     const [nombre, setCoachName] = useState([])
     const [search, setSearch] = useState([])
+    const [ab, setAB] = useState([])
+    let sum = 0
+    let fisrt = 0
     let params = useParams()
     let teamId = params.id
 
-    // function chooseP (e){
-    //     console.log(e.target.id);
-    //     setCoachName(e.target.id)
-    // //    setMember({...newMember, [e.target.id]: value })
-   
-    // }
+
+    const ratingChanged = (ab) => { 
+      console.log(ab)
+      let rest = ab
+      if(ab ===  0.500 ){ rest = 5.0 }
+      else if(ab >= 0.450 && ab < 0.500){ rest = 4.5 }
+      else if(ab >= 0.400 && ab < 0.450){ rest = 4.0 }
+      else if(ab >= 0.350 && ab < 0.400){ rest = 3.5 }
+      else if(ab >= 0.300 && ab < 0.350){ rest = 3.0 }
+      else if(ab >= 0.250 && ab< 0.300){ rest = 2.5 }
+      else if(ab >= 0.200 && ab < 0.250){ rest = 2.0 }
+      else if(ab >= 0.150 && ab < 0.200){ rest = 1.5 }
+      else if(ab >= 0.100 && ab < 0.150){ rest = 1.0 }
+      else if(ab >= 0.50 && ab < 0.10){ rest = 4.5 }
+      else if(ab >= 0.10){ rest = 0.0}
+      return rest
+    }; 
     const articule = (artist) => {
         let pro = "";
         let allt = artist.split(" ");
@@ -28,18 +43,32 @@ const Desing = () => {
         return pro
       };
     useEffect(() => {
-        let nombre = search.name
         fetch(`https://my-baseball-teams.herokuapp.com/groups`)
         .then(res => res.json())
         .then(data =>{
           setNewGroup(data)
-          setNewI(data)
           setCoachName(data)
+
+          // setNewI(data)
         })
       },[search])
-
-      console.log(nombre, 'nombre')
-      console.log(teamId)
+      useEffect(() => {
+        fetch(`https://my-baseball-teams.herokuapp.com/playersStats`)
+        .then(res => res.json())
+        .then(data =>{
+          let arr = data.map((stat,i) => {return stat.players_id === Number(search) ? stat.average: null })
+            setNewI(arr = arr.map((a , index)=>  a !== null ? setAB(a) : ''))
+        })
+    },[search])
+   
+    sum = ratingChanged(ab)
+    fisrt = ratingChanged(ab)
+      // console.log(newI,'kjkjs')
+      // // console.log(search, 'search')
+      // // console.log(teamId)
+      // console.log(ab)
+      // console.log(sum)
+      // console.log(fisrt)
 
   return (
    <div style={{ overflowX: 'hidden',overflowY: 'hidden', backgroundColor: '#80808095'}}>
@@ -79,7 +108,17 @@ const Desing = () => {
                                    <p><span>Weight:</span> {a.weight}</p>
                                    {/* <Link to={`/teams/groups/${teamId}`} >More</Link> */}
                                  </div>
-                               <div className='innerSectionStart'>{a.team_id}</div>
+                               <div className='innerSectionStart'>
+                               <ReactStars 
+                                  count={5}
+                                  value={fisrt}
+                                  color='gray'
+                                  edit={false}
+                                  size={35}
+                                  isHalf={true}
+                                  onChange={sum}
+                                  /> 
+                               </div>
                            </div>
                        </div> : null}
                         </div>
@@ -125,7 +164,7 @@ const Desing = () => {
                return (
                    <div className='scrollPlayers' >
                       { Number(teamId) === a.team_id ? 
-                      <div className='media-group-container'  onClick={(e)=>setSearch(a.id)}  > 
+                      <div className={`media-group-container ? change : media-group-container`}  onClick={(e)=>setSearch(a.id)}  > 
                           <div className='media-group' > <img src={a.imag} alt='' /> </div>  
                            <h3  >{articule(a.name)}</h3>
                       </div> 
