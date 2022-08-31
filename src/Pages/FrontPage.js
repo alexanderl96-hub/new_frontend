@@ -2,12 +2,15 @@ import React, { useState, useEffect} from 'react'
 import {Link} from 'react-router-dom'
 import Loading from '../Loading'
 import '../App.css'
+import './front.css'
 
 const FrontPage = () => {
   const [word,setWord]= useState("Baseball Teams")
   const [count, setCount] = useState(<div className='Loading'><Loading/></div>);
   const [countInTimeout, setCountInTimeout] = useState(<div><Link to='/teams' className="TitleLink" >Baseball Teams </Link> </div> );
   
+   
+
   useEffect(() => {
    
     setTimeout(() => {
@@ -42,9 +45,20 @@ const FrontPage = () => {
               <div className='martir'>
                   <p className='sportL'>New York Yankees</p>
               </div>
+              <div className="container">
+                     <div className="carousel">
+                     <p className='slide'>New York Yankees</p>
+                     <p className='slide'>Atlanta Braves</p>
+                     <p className='slide'>Red Sox</p>
+                     <p className='slide'>New York Mets</p>
+                     <p className='slide'>LA Dodgers</p>
+                     <p className='slide'>New York Yankees</p>
+                     <p className='slide'>New York Yankees</p>
+                      </div>
+              </div>
            
-               <p   className='soccer'>Atlanta Braves</p>
-               <p className='arrows'>Red Sox</p>
+               {/* <p   className='soccer'>Atlanta Braves</p>
+               <p className='arrows'>Red Sox</p> */}
          </div> 
           )
           :

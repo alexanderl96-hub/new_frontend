@@ -6,6 +6,7 @@ body{
   /* background: url('/src/image/MLB-vector-logos.jpeg'); */
   background-size: contain;
   height: 100%; 
+  overflow-y: hidden;
   
 }
 .app{
