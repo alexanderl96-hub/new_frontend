@@ -25,9 +25,9 @@ function Navbar() {
            <Link to={'/teams/Season'} className='nav-inner'>
                <div className='nav-inner-inner'>Season</div>
            </Link>
-           <Link to={'/teams/allFavorites'} className='nav-inner'>
+           {/* <Link to={'/teams/allFavorites'} className='nav-inner'>
                <div className='nav-inner-inner'>Favorites</div>
-           </Link>
+           </Link> */}
            <Link to={'/teams/newpage'} className='nav-inner'>
                <div className='nav-inner-inner'>New Page</div>
            </Link>

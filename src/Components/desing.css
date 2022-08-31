@@ -26,9 +26,8 @@
 }
 
 .section2{
-    height: 500px;
+    height: 518px;
     width: 100%;
-    /* background-color: #80808095;  */
 }
 .section2Container{
     display: flex;
@@ -83,6 +82,11 @@
     padding: 10px;
     background-color: white;
     text-align: justify;
+}
+.changeMore:hover{
+  color:blue;
+  font-style:italic;
+  font-weight: bolder;
 }
 .innerSectionStart{
     margin-top: 20px;

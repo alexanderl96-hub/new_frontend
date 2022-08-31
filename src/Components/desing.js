@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import ReactStars from "react-rating-stars-component"
 import './desing.css'
+import axios from 'axios'
 import Second from './seconddesing'
 
 const Desing = () => {
@@ -10,26 +11,27 @@ const Desing = () => {
     const [nombre, setCoachName] = useState([])
     const [search, setSearch] = useState([])
     const [ab, setAB] = useState([])
-    let sum = 0
+    // const [group, setGroup] =useState([])
+    // let sum = 0
     let fisrt = 0
     let params = useParams()
     let teamId = params.id
 
 
-    const ratingChanged = (ab) => { 
+    const ratingChanged = (a) => { 
       console.log(ab)
       let rest = ab
       if(ab ===  0.500 ){ rest = 5.0 }
-      else if(ab >= 0.450 && ab < 0.500){ rest = 4.5 }
-      else if(ab >= 0.400 && ab < 0.450){ rest = 4.0 }
-      else if(ab >= 0.350 && ab < 0.400){ rest = 3.5 }
-      else if(ab >= 0.300 && ab < 0.350){ rest = 3.0 }
-      else if(ab >= 0.250 && ab< 0.300){ rest = 2.5 }
-      else if(ab >= 0.200 && ab < 0.250){ rest = 2.0 }
-      else if(ab >= 0.150 && ab < 0.200){ rest = 1.5 }
-      else if(ab >= 0.100 && ab < 0.150){ rest = 1.0 }
-      else if(ab >= 0.50 && ab < 0.10){ rest = 4.5 }
-      else if(ab >= 0.10){ rest = 0.0}
+      else if(a >= 0.450 && a < 0.500){ rest = 4.5 }
+      else if(a >= 0.400 && a < 0.450){ rest = 4.0 }
+      else if(a >= 0.350 && a < 0.400){ rest = 3.5 }
+      else if(a >= 0.300 && a < 0.350){ rest = 3.0 }
+      else if(a >= 0.250 && a< 0.300){ rest = 2.5 }
+      else if(a >= 0.200 && a < 0.250){ rest = 2.0 }
+      else if(a >= 0.150 && a < 0.200){ rest = 1.5 }
+      else if(a>= 0.100 && a < 0.150){ rest = 1.0 }
+      else if(a >= 0.50 && a < 0.10){ rest = 4.5 }
+      else if(a>= 0.10){ rest = 0.0}
       return rest
     }; 
     const articule = (artist) => {
@@ -60,24 +62,32 @@ const Desing = () => {
             setNewI(arr = arr.map((a , index)=>  a !== null ? setAB(a) : ''))
         })
     },[search])
-   
-    sum = ratingChanged(ab)
+    const handleDelete = () => {
+      axios.delete(`https://my-baseball-teams.herokuapp.com/groups/${search}`).then(() =>{
+          //  navigate(`/homebase`)
+      }, (error) => console.log(error))
+  };
+
+   // sum = ratingChanged(ab)
     fisrt = ratingChanged(ab)
       // console.log(newI,'kjkjs')
-      // // console.log(search, 'search')
-      // // console.log(teamId)
+      console.log(search, 'search')
+      console.log(teamId)
       // console.log(ab)
       // console.log(sum)
       // console.log(fisrt)
 
   return (
-   <div style={{ overflowX: 'hidden',overflowY: 'hidden', backgroundColor: '#80808095'}}>
+   <div style={{ overflowX: 'hidden',overflowY: 'hidden', backgroundColor: '#80808095',
+    marginBottom: '-155px'}}>
        
         <div className='sectionNav'>
             <Link to='/teams'className='return' ><h3 className='returnH3' >🔙</h3></Link>     
             <div className='innerSectionNav' > 
-               <button className='editPlayer' >Edit</button>
-               <h3 className='deletePlayer' >🚮</h3>
+            <Link to={`/teams/updateMember/${search}`}>
+               <button className='editPlayer' >Edit</button></Link>
+               <Link to={`/teams`} onClick={handleDelete}>
+               <h3 className='deletePlayer' >🚮</h3></Link>
             </div>
         </div>
         {/* <Second /> */}
@@ -106,17 +116,17 @@ const Desing = () => {
                                    <p><span>Throws:</span> {a.throws}</p>
                                    <p><span>Height:</span> {a.height}</p>
                                    <p><span>Weight:</span> {a.weight}</p>
-                                   {/* <Link to={`/teams/groups/${teamId}`} >More</Link> */}
+                                   <Link to={`/teams/groups/${search}`} className='changeMore'>More...</Link>
                                  </div>
                                <div className='innerSectionStart'>
                                <ReactStars 
                                   count={5}
-                                  value={fisrt}
+                                  value={ratingChanged(ab)}
                                   color='gray'
                                   edit={false}
                                   size={35}
                                   isHalf={true}
-                                  onChange={sum}
+                                  onChange={fisrt}
                                   /> 
                                </div>
                            </div>
@@ -173,7 +183,7 @@ const Desing = () => {
                )
            })}
          </div>
-        <div style={{backgroundColor: '#80808095',height:'20px'}}> </div>
+        {/* <div style={{backgroundColor: '#80808095',height:'20px'}}> </div> */}
        
    </div>
   )

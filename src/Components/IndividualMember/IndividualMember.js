@@ -75,7 +75,7 @@ useEffect(() => {
   return (
       <div  className='Main'>
           <div  className='Main2'>
-              <div > <Link to={`/teams/${group}`} className='memberLink1'>Back</Link> </div>
+              <div > <Link to={`/teams/newpage/${group}`} className='memberLink1'>Back</Link> </div>
               <div> 
                 <Link to={`/teams/updateMember/${memberId}`} className='memberLink'>Update Member
                 </Link>
