@@ -134,3 +134,22 @@
     aspect-ratio: 16/9;
     /* object-fit: cover; */
 }
+.miFlag {
+    display:flex;
+    justify-content: center;
+    width: 410px;
+    height: 360px;
+    border: 3px solid rgb(108, 70, 70);
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.762);
+    margin-left: 34%;
+    margin-top: 8px;
+    transition: all 1s;
+}
+
+.miFlag2 {
+    width: 410px;
+    height: 360px; 
+    border-radius: 5px;
+   
+}

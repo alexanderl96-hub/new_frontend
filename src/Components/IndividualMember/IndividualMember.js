@@ -25,58 +25,104 @@ const handleDelete = () => {
     }, (error) => console.log(error))
 };
 
-    useEffect(() => {
-        fetch(`https://my-baseball-teams.herokuapp.com/groups`)
-        .then(res => res.json())
-        .then(data =>{
-            setMember(data)
-        })
-  },[])
+//     useEffect(() => {
+//         fetch(`https://my-baseball-teams.herokuapp.com/groups`)
+//         .then(res => res.json())
+//         .then(data =>{
+//             setMember(data)
+//         })
+//   },[])
 
   useEffect(() => {
-    fetch(`https://my-baseball-teams.herokuapp.com/playersStats`)
+    fetch(`http://localhost:9000/groups`)
+    .then(res => res.json())
+    .then(data =>{
+        setMember(data)
+    })
+},[])
+//   useEffect(() => {
+//     fetch(`https://my-baseball-teams.herokuapp.com/playersStats`)
+//     .then(res => res.json())
+//     .then(data =>{
+//         setTeamID(data)
+//     })
+// },[])
+useEffect(() => {
+    fetch(`http://localhost:9000/playersStats`)
     .then(res => res.json())
     .then(data =>{
         setTeamID(data)
     })
 },[])
+
+// useEffect(() => {
+//     fetch(`https://my-baseball-teams.herokuapp.com/playersCareer`)
+//     .then(res => res.json())
+//     .then(data =>{
+//         setTeamCareerID(data)
+//     })
+// },[])
 useEffect(() => {
-    fetch(`https://my-baseball-teams.herokuapp.com/playersCareer`)
+    fetch(`http://localhost:9000/playersCareer`)
     .then(res => res.json())
     .then(data =>{
         setTeamCareerID(data)
     })
 },[])
 
+// useEffect(() => {
+//     fetch(`https://my-baseball-teams.herokuapp.com/pitchersStats`)
+//     .then(res => res.json())
+//     .then(data =>{
+//         setPitcherID(data)
+//     })
+// },[])
 useEffect(() => {
-    fetch(`https://my-baseball-teams.herokuapp.com/pitchersStats`)
+    fetch(`http://localhost:9000/pitchersStats`)
     .then(res => res.json())
     .then(data =>{
         setPitcherID(data)
     })
 },[])
+
+
+// useEffect(() => {
+//     fetch(`https://my-baseball-teams.herokuapp.com/pitchersCarrer`)
+//     .then(res => res.json())
+//     .then(data =>{
+//         setPitcherCareerID(data)
+//     })
+// },[])
 useEffect(() => {
-    fetch(`https://my-baseball-teams.herokuapp.com/pitchersCarrer`)
+    fetch(`http://localhost:9000/pitchersCarrer`)
     .then(res => res.json())
     .then(data =>{
         setPitcherCareerID(data)
     })
 },[])
 
-  useEffect(() => {
-    fetch(`https://my-baseball-teams.herokuapp.com/groups/${memberId}`)
+//   useEffect(() => {
+//     fetch(`https://my-baseball-teams.herokuapp.com/groups/${memberId}`)
+//     .then(res => res.json())
+//     .then(data =>{
+//         setGroup(data.team.team_id )
+//     })
+// },[memberId])
+
+useEffect(() => {
+    fetch(`http://localhost:9000/groups/${memberId}`)
     .then(res => res.json())
     .then(data =>{
         setGroup(data.team.team_id )
     })
-},[memberId])
+  },[memberId])
 
 
   return (
       <div  className='Main'>
           <div  className='Main2'>
               <div > <Link to={`/teams/newpage/${group}`} className='memberLink1'>Back</Link> </div>
-              <div> 
+              <div className='add-Update'> 
                 <Link to={`/teams/updateMember/${memberId}`} className='memberLink'>Update Member
                 </Link>
                 <Link to={`/teams/groups/${memberId}/addStats`} className='memberLink2'>Add Stats</Link>
@@ -133,9 +179,10 @@ useEffect(() => {
                                   <div className="teamPlayer_About4">
                                         <div style={{}} className="about4-1"> <span>Stats: </span>{player.stats ? player.stats : '-'}
                                              <div style={{}} className="about4-2">  
-                                             { teamId ? 
+                                   
+                                             { teamId  ? 
                                                     <div style={{backgroundColor: 'white', borderRadius: '5px'}} className='about-inner'> Game Stats:
-                                                    {teamId.map((stat, index)=>{
+                                                    {  teamId.map((stat, index)=>{
                                                         return(
                                                             <div>
                                                                 {Number(memberId) === stat.players_id ?  
@@ -175,8 +222,8 @@ useEffect(() => {
                                                         </div>
                                                         )
                                                     })}  
-                                                    </div> : null }
-                                                    { teamCareerId ? 
+                                            </div> : null }
+                                            { teamCareerId  ? 
                                                     <div style={{backgroundColor: 'white', borderRadius: '5px'}} className='about-inner'> Career Stats:
                                                      {teamCareerId.map((career, index)=>{
                                                          return(
@@ -221,8 +268,8 @@ useEffect(() => {
                                                          )
                                                      })}
                                                        
-                                                    </div> : null  }
-                                                    {pitcherId ?
+                                            </div> : null  }
+                                            {pitcherId ?
                                                     <div style={{backgroundColor: 'white', borderRadius: '5px'}} className='about-inner'> Pitcher Stats:
                                                     {pitcherId.map((pitcher, index)=>{
                                                         return(
@@ -266,8 +313,8 @@ useEffect(() => {
                                                         )
                                                     })}
                                                         
-                                                    </div> : null}
-                                                    {pitcherCareerId ? 
+                                            </div> : null}
+                                            {pitcherCareerId ? 
                                                     <div style={{backgroundColor: 'white', borderRadius: '5px'}} className='about-inner'> Career Pitcher Stats:
                                                     {pitcherCareerId.map((careerP, index)=>{
                                                         return(
@@ -312,7 +359,7 @@ useEffect(() => {
                                                         )
                                                     }) }
                                                        
-                                                    </div>
+                                            </div>
                                                     : null}
                                                     {/* {coachId ? <div>{
                                                         coachId.map((coach, index)=>{
@@ -336,8 +383,7 @@ useEffect(() => {
                                                             )
                                                         })
                                                     }</div> : null} */}
-                                                   
-                                                   
+                                                
                                              </div> 
                                         </div>
                                     </div>

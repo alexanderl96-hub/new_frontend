@@ -1,11 +1,12 @@
 .Main{
-    background-color: #0000ff6d; 
+    background: #0000ff6d; 
     padding: 15px; 
-    margin:0;
+    height: 860px;
     animation: fadein 1s;
     -moz-animation: fadein 1s; /* Firefox */
     -webkit-animation: fadein 1s; /* Safari and Chrome */
     -o-animation: fadein 1s;
+    position: fixed;
 }
 .Main2{
     display: flex; 
@@ -16,11 +17,14 @@
      width: 10%; 
      border-radius: 10px;
      padding: 10px;
-     margin-left: -250px;
+     margin-left: -400px;
     text-align: left;
 }
+.add-Update{
+    margin-right: 60px;
+}
 .memberLink{
-    padding: 10px;
+    padding: 9.5px;
     background-color: green;
     border-radius: 10px;
     margin-right: -10px;
@@ -35,7 +39,7 @@
 }
 .delBTn{
     margin-top: -19px;
-    margin-left: 130px;
+    margin-left: 95px;
 }
 
 
@@ -48,12 +52,14 @@
     padding-bottom: 15px;
 }
 .member_Img{
-    height: 175px;
-    width: 150px;
+    height: 235px;
+    width: 190px;
     border: 5px solid #595858;
     border-radius: 40px;
+    background-color: gray;
 }
 .member_Name{
+    margin-top:10px;
     font-weight: bold;
     font-size: 20px;
     text-align: center;
@@ -151,6 +157,7 @@
     padding:2px; 
     margin-top:-5px; 
     cursor: pointer; 
+    /* overflow-y: hidden; */
 }
 .about-inner{
     margin-bottom: 5%; 
@@ -175,19 +182,21 @@ span{
 
 
 
-/* .teamStats::-webkit-scrollbar-thumb{
-    border-radius: 8px;
-    background-color: red;
-}
+.about4-2::-webkit-scrollbar {
+    border-radius: 8px; 
+    background-color: gainsboro;
+    width: 10px;
+}  
 
-/* ::-webkit-scrollbar-thumb{
+/* ::-webkit-scrollbar-{
     border-radius: 8px;
     background-color: red;
 } */
-/* .teamStat::-webkit-scrollbar-track {
-    background-color: red;
+.about4-2::-webkit-scrollbar-thumb {
+    background: #0000ff6d; 
     border-radius: 8px;
-}  */
+    width: 7px;
+}  
 @media only screen and (max-width: 768px){
     .Main{
         background-color: #0000ff6d; 

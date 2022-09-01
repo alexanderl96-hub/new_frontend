@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import ReactStars from "react-rating-stars-component"
+// import DeleteIcon from '@mui/icons-material/Delete';
+
 import './desing.css'
 import axios from 'axios'
-import Second from './seconddesing'
+
 
 const Desing = () => {
     const [newgroup, setNewGroup] = useState([])
@@ -11,7 +13,7 @@ const Desing = () => {
     const [nombre, setCoachName] = useState([])
     const [search, setSearch] = useState([])
     const [ab, setAB] = useState([])
-    // const [group, setGroup] =useState([])
+     const [group, setGroup] =useState([])
     // let sum = 0
     let fisrt = 0
     let params = useParams()
@@ -44,24 +46,47 @@ const Desing = () => {
         }
         return pro
       };
-    useEffect(() => {
-        fetch(`https://my-baseball-teams.herokuapp.com/groups`)
+    // useEffect(() => {
+    //     fetch(`https://my-baseball-teams.herokuapp.com/groups`)
+    //     .then(res => res.json())
+    //     .then(data =>{
+    //       setNewGroup(data)
+    //       setCoachName(data)
+    //     })
+    //   },[search])
+      useEffect(() => {
+        fetch(`http://localhost:9000/groups`)
         .then(res => res.json())
         .then(data =>{
           setNewGroup(data)
           setCoachName(data)
-
-          // setNewI(data)
         })
       },[search])
       useEffect(() => {
-        fetch(`https://my-baseball-teams.herokuapp.com/playersStats`)
+        fetch(`http://localhost:9000/teams`)
         .then(res => res.json())
         .then(data =>{
-          let arr = data.map((stat,i) => {return stat.players_id === Number(search) ? stat.average: null })
-            setNewI(arr = arr.map((a , index)=>  a !== null ? setAB(a) : ''))
+          setGroup(data = data.filter((a,b )=> a.id === Number(teamId)))
         })
-    },[search])
+      },[teamId])
+
+    //   useEffect(() => {
+    //     fetch(`https://my-baseball-teams.herokuapp.com/playersStats`)
+    //     .then(res => res.json())
+    //     .then(data =>{
+    //       let arr = data.map((stat,i) => {return stat.players_id === Number(search) ? stat.average: null })
+    //         setNewI(arr = arr.map((a , index)=>  a !== null ? setAB(a) : ''))
+    //     })
+    // },[search])
+    useEffect(() => {
+      fetch(`http://localhost:9000/playersStats`)
+      .then(res => res.json())
+      .then(data =>{
+        let arr = data.map((stat,i) => {return stat.players_id === Number(search) ? stat.average: null })
+          setNewI(arr = arr.map((a , index)=>  a !== null ? setAB(a) : ''))
+      })
+  },[search])
+
     const handleDelete = () => {
       axios.delete(`https://my-baseball-teams.herokuapp.com/groups/${search}`).then(() =>{
           //  navigate(`/homebase`)
@@ -73,101 +98,78 @@ const Desing = () => {
       // console.log(newI,'kjkjs')
       console.log(search, 'search')
       console.log(teamId)
-      // console.log(ab)
+      console.log(group,'group')
       // console.log(sum)
       // console.log(fisrt)
 
   return (
-   <div style={{ overflowX: 'hidden',overflowY: 'hidden', backgroundColor: '#80808095',
-    marginBottom: '-155px'}}>
+   <div style={{ overflowX: 'hidden',overflowY: 'hidden', backgroundColor: '#80808095',}}>
        
         <div className='sectionNav'>
             <Link to='/teams'className='return' ><h3 className='returnH3' >🔙</h3></Link>     
-            <div className='innerSectionNav' > 
+            {/* <div className='innerSectionNav' > 
             <Link to={`/teams/updateMember/${search}`}>
                <button className='editPlayer' >Edit</button></Link>
                <Link to={`/teams`} onClick={handleDelete}>
-               <h3 className='deletePlayer' >🚮</h3></Link>
-            </div>
+              <h3 className='deletePlayer' >🚮</h3></Link>
+            </div> */}
+            {/* {DeleteIcon} */}
+            {/* <svg data-testid="DeleteIcon"> {DeleteIcon}</svg> */}
+
         </div>
-        {/* <Second /> */}
+
         <div className="section2"> 
-               { nombre.map((a, i)=>{
-                    return(
-                        <div>
-                           {search === a.id ?
-                              <div className="section2Container">   
-                   
-                              <div className="innerSection2">
-                                  <div className="inner-innersection2">
-                                   <img src={a.imag} alt='' className ='image' />
-                                  </div>
-                                  <h3 className="innersection2H3" >{articule(a.name)}</h3>
-                              </div>
-                              <div >
-                                <div className='innerSection2-3'> 
-                                   <hr/>
-                                   <p><span>Team:</span> {a.current_team}</p>
-                                   <p><span>Number:</span> {a.number}</p>
-                                   <p><span>Position:</span> {a.position}</p>
-                                   <p><span>Salary:</span> {a.salary}</p>
-                                   <p><span>About: </span>{a.about}</p>
-                                   <p><span>Bats:</span> {a.bats}</p>
-                                   <p><span>Throws:</span> {a.throws}</p>
-                                   <p><span>Height:</span> {a.height}</p>
-                                   <p><span>Weight:</span> {a.weight}</p>
-                                   <Link to={`/teams/groups/${search}`} className='changeMore'>More...</Link>
-                                 </div>
-                               <div className='innerSectionStart'>
-                               <ReactStars 
-                                  count={5}
-                                  value={ratingChanged(ab)}
-                                  color='gray'
-                                  edit={false}
-                                  size={35}
-                                  isHalf={true}
-                                  onChange={fisrt}
-                                  /> 
-                               </div>
-                           </div>
-                       </div> : null}
-                        </div>
-                    )})}
-                    {/* {Number(teamId) ? 
-                    newI.map((a , index)=>{return ( <div><p>{a.name}</p></div> )}): null} */}
-                    {/* { newI.map((a , index)=>{
+         
+               { search > 0 ? nombre.map((a, i)=>{
                 return(
-              <div id={index} >
-                         {Number(teamId) === a.team_id ?
-                        <div className="section2Container">   
-                
-                        <div className="innerSection2">
-                            <div className="inner-innersection2">
-                             <img src={a.imag} alt='' className ='image' />
-                            </div>
-                            <h3 className="innersection2H3" >{a.name}</h3>
-                        </div>
-                        <div >
-                          <div className='innerSection2-3'> 
-                             <p>Team: {a.current_team}</p>
-                             <p>Number: {a.number}</p>
-                             <p>Position: {a.position}</p>
-                             <p>Salary: {a.salary}</p>
-                             <p>About: {a.about}</p>
-                             <p>Bats: alexander</p>
-                             <p>Throws: alexander</p>
-                             <p>Height: alexander</p>
-                             <p>Weight: alexander</p>
-                             <Link to={`/teams/groups/${teamId}`} >More</Link>
+                    <div>
+                       {search === a.id ?
+                          <div className="section2Container">   
+               
+                          <div className="innerSection2">
+                              <div className="inner-innersection2">
+                               <img src={a.imag} alt='' className ='image' />
+                              </div>
+                              <h3 className="innersection2H3" >{articule(a.name)}</h3>
+                          </div>
+                          <div >
+                            <div className='innerSection2-3'> 
+                               <hr/>
+                               <p><span>Team:</span> {a.current_team}</p>
+                               <p><span>Number:</span> {a.number}</p>
+                               <p><span>Position:</span> {a.position}</p>
+                               <p><span>Salary:</span> {a.salary}</p>
+                               <p><span>About: </span>{a.about}</p>
+                               <p><span>Bats:</span> {a.bats}</p>
+                               <p><span>Throws:</span> {a.throws}</p>
+                               <p><span>Height:</span> {a.height}</p>
+                               <p><span>Weight:</span> {a.weight}</p>
+                               <Link to={`/teams/groups/${search}`} className='changeMore'>More...</Link>
+                             </div>
+                           <div className='innerSectionStart'>
+                           <ReactStars 
+                              count={5}
+                              value={ratingChanged(ab)}
+                              color='gray'
+                              edit={false}
+                              size={35}
+                              isHalf={true}
+                              onChange={0.300}
+                              /> 
                            </div>
-                         <div className='innerSectionStart'>{a.team_id}</div>
-                     </div>
-                 </div> : null}
-             </div>
-                
-                )})} */}
-           
-          
+                       </div>
+                   </div> : null}
+                    </div>
+                )}) : <div >  
+                   {group.map((a,i)=>{
+                     return(
+                       <div className='miFlag'>
+                         <img src={a.imag} alt='' className='miFlag2'/>
+                       </div>
+                     )
+                   })}
+                </div> } 
+      
         </div>
         <div className="section3">
            {newgroup.map((a, index)=>{
@@ -182,9 +184,7 @@ const Desing = () => {
                    </div>
                )
            })}
-         </div>
-        {/* <div style={{backgroundColor: '#80808095',height:'20px'}}> </div> */}
-       
+         </div>       
    </div>
   )
 }

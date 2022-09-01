@@ -23,9 +23,13 @@
     height: 125px;
     cursor: pointer;
     margin: 7px;
+    transition: all 0.5s;
   }
   .teamContainer:hover {
     box-shadow: 5px 3px 3px;
+    transform: scale(1.27);
+    border-radius: 45%;
+    /* transition: all */
   }
   a{
     text-decoration: none;

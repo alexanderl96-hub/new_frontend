@@ -55,7 +55,7 @@
     /* height: 100%; */
     -webkit-perspective: 700px;
     -ms-perspective: 700px;
-    perspective: 700px;
+    perspective: 570px;
   }
   .container .carousel {
     position: absolute;
@@ -75,6 +75,7 @@
     animation: turn 20s infinite linear;
   }
   .container .carousel .slide {
+      margin-top: 40px;
     position: absolute;
     width: 150px;
     height: 97px;
