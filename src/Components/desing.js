@@ -10,10 +10,16 @@ import axios from 'axios'
 const Desing = () => {
     const [newgroup, setNewGroup] = useState([])
     const [ newI, setNewI]= useState([])
+    const [ newtest, setNewtest]= useState([])
     const [nombre, setCoachName] = useState([])
     const [search, setSearch] = useState([])
     const [ab, setAB] = useState([])
      const [group, setGroup] =useState([])
+
+     const [start, setStart] =useState(0)
+     const [last, setLast] =useState(10)
+     const [start1, setPreviuos] =useState(0)
+     const [last1, setLastP] =useState(10)
     // let sum = 0
     let fisrt = 0
     let params = useParams()
@@ -46,6 +52,29 @@ const Desing = () => {
         }
         return pro
       };
+
+    function nextrow (){
+      let value = newtest.length -10
+      if(last >= newtest.length ){
+        setLast(newtest.length )  
+      }
+      console.log( start > value)
+      setStart(start + 10)
+      setLast(last + 10)
+       setPreviuos(start+ 10)
+      setLastP(last+ 10)
+    }
+    function previuosrow (){
+      // let value = newtest.length -10
+      // if(last >= newtest.length ){
+      //   setLast(newtest.length )  
+      // }
+      // console.log( start > value)
+      setPreviuos(start1 - 10)
+      setLastP(last1 - 10)
+      setStart(start -10)
+      setLast(last - 10)
+    }
     // useEffect(() => {
     //     fetch(`https://my-baseball-teams.herokuapp.com/groups`)
     //     .then(res => res.json())
@@ -60,6 +89,7 @@ const Desing = () => {
         .then(data =>{
           setNewGroup(data)
           setCoachName(data)
+          setNewtest(data = data.filter((a,b)=> a.team_id === Number(teamId)))
         })
       },[search])
       useEffect(() => {
@@ -96,14 +126,16 @@ const Desing = () => {
    // sum = ratingChanged(ab)
     fisrt = ratingChanged(ab)
       // console.log(newI,'kjkjs')
-      console.log(search, 'search')
-      console.log(teamId)
-      console.log(group,'group')
+      // console.log(search, 'search')
+      // console.log(teamId)
+      // console.log(group,'group')
       // console.log(sum)
       // console.log(fisrt)
+      console.log(newtest.slice(start,last), 'test')
+      console.log(newtest.slice(start1,last1), 'testp')
 
   return (
-   <div style={{ overflowX: 'hidden',overflowY: 'hidden', backgroundColor: '#80808095',}}>
+   <div className='MainDesing'style={{ }}>
        
         <div className='sectionNav'>
             <Link to='/teams'className='return' ><h3 className='returnH3' >🔙</h3></Link>     
@@ -171,20 +203,27 @@ const Desing = () => {
                 </div> } 
       
         </div>
+        <button onClick={previuosrow }>{start <= 0 ? null : 'Back'}</button>
+         <button onClick={nextrow} >{last > newtest.length ? null : 'Forward'}</button>  
+         {/* {new} */}
         <div className="section3">
-           {newgroup.map((a, index)=>{
+           {newtest.slice(start,last).map((a, index)=>{
                return (
-                   <div className='scrollPlayers' >
+                   <div className='scrollPlayers' >              
                       { Number(teamId) === a.team_id ? 
                       <div className={`media-group-container ? change : media-group-container`}  onClick={(e)=>setSearch(a.id)}  > 
                           <div className='media-group' > <img src={a.imag} alt='' /> </div>  
                            <h3  >{articule(a.name)}</h3>
                       </div> 
-                       : null }                
+                       : <div className={`section4`}  onClick={(e)=>setSearch(a.id)}  > 
+                           <div className='media-group' > <img src={a.imag} alt='' /> </div>  
+                         </div> }                
                    </div>
                )
            })}
-         </div>       
+             
+         </div> 
+             
    </div>
   )
 }

@@ -7,6 +7,7 @@ import './MemberUpdate.css'
 const MemberUpDate = () => {
   const [member, setMemberid] = useState([])
   const [memberName, setMemberName] = useState([])
+  const [memberImg, setMemberImg] = useState([])
   const navigate = useNavigate(); 
   let { id } = useParams();
   const [newMember,setMember] = useState({
@@ -66,6 +67,7 @@ const MemberUpDate = () => {
         .then(data =>{
             setMemberid(data.team.team_id)
             setMemberName(data.team.name)
+            setMemberImg(data.team.imag)
         })
   },[id])
 
@@ -108,7 +110,7 @@ const MemberUpDate = () => {
                                 <input id='about' type="text" onChange={handleInput}  placeholder="About..." className='inputTAbout'></input>
                             </div>
                             <div  className='divImage'>
-                                <img src={newMember.imag ? newMember.imag : null } alt='NewImage' className='photo' />
+                                <img src={newMember.imag ? newMember.imag : memberImg } alt='NewImage' className='photo' />
                             </div>
                            
                  <buttom type='submit' className='newMemberButton' onClick={handleSubmit}  >Submit</buttom>

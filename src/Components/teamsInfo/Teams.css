@@ -11,6 +11,8 @@
     flex-wrap: wrap;
     padding: 2px;
     /* height: 700px; */
+    background-color: rgba(148, 145, 145, 0.645);
+
 }
 @keyframes fadein {
     from { opacity: 0; }

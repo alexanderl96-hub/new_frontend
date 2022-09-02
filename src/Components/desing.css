@@ -1,3 +1,11 @@
+.MainDesing{
+    overflow-x: hidden;
+    overflow-y: hidden;
+     background-color: #80808095;
+}
+.MainDesing > button{
+    cursor:pointer
+}
 .sectionNav{
     display: flex;
     flex-direction: row;
@@ -26,7 +34,7 @@
 }
 
 .section2{
-    height: 518px;
+    height: 514px;
     width: 100%;
 }
 .section2Container{
@@ -112,11 +120,13 @@
     grid-auto-flow: column;
     overflow: auto;
     overflow-y: hidden;
+    animation: fadeInRight 3s;
 }
 .scrollPlayers{
     display:grid;
     grid-auto-flow: column;
     /* overflow-y: hidden; */
+    animation: fadeInRight 3s;
    
 }
 .media-group{
@@ -126,6 +136,7 @@
 .media-group-container{
     margin: 3px;
     height: 210px; 
+   
 }
 .media-group-container:hover{
     cursor: pointer;
@@ -163,4 +174,13 @@
     height: 360px; 
     border-radius: 5px;
    
+}
+.section4{
+    /* display:grid;
+    grid-auto-flow: column;
+    overflow: auto;
+    overflow-y: hidden;
+    animation: fadeInRight 3s; */
+    background-color: gray;
+    height: 250px;
 }

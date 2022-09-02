@@ -40,8 +40,15 @@
 .divImage{
     margin-top: 25px;
     height: 340px;
-    width: 300px;
+    width: 295px;
     margin-left: 100px;
     border-radius: 40px;
-    border: 5px solid gray;
+    border: 7px solid gray;
+    background-color: rgba(255, 0, 0, 0.894);
+}
+.photo{
+    height: 342px;
+    width: 300px;
+    margin-left: -1.5px;
+    margin-top: -1px;
 }
