@@ -2,9 +2,11 @@ import React,  { useState, useEffect}from 'react'
 import { useParams, Link, useNavigate} from 'react-router-dom'
 import axios from "axios";
 import '../newMember/NewMember.css'
+import './MemberUpdate.css'
 
 const MemberUpDate = () => {
   const [member, setMemberid] = useState([])
+  const [memberName, setMemberName] = useState([])
   const navigate = useNavigate(); 
   let { id } = useParams();
   const [newMember,setMember] = useState({
@@ -63,64 +65,49 @@ const MemberUpDate = () => {
         .then(res => res.json())
         .then(data =>{
             setMemberid(data.team.team_id)
+            setMemberName(data.team.name)
         })
   },[id])
 
   console.log(member)
   return (
-         <div className='newMember_Container'>
+         <div className='Update_Container'>
            <h1 className='newTitle'>UpDate Member</h1>
          <div style={{}} className='wrapLink'> <Link to={`/teams/groups/${id}`} className='newLinkBackNew' >Back</Link> </div>
          <div >
-         <form onSubmit={handleSubmit} className='newMember_AboutGrid'>
-                            {/* <label className='label-1' >Name: </label> */}
-                            <input id='name' type="text" onChange={handleInput} placeholder='Name...' className='input-1' ></input>
-                            {/* <label className='label-2' >Team_Id: </label> */}
-                            <input id='team_id' type="text" onChange={handleInput} placeholder={'team_id = ' +member} className='input-2' ></input>
-                            {/* <label className='label-3' >Nickname: </label> */}
-                            <input id='nickname'type="text" onChange={handleInput}  placeholder="Nickname..." className='input-3' ></input>
-                            {/* <label className='label-4' >Image URL: </label> */}
-                            <input id='imag' type="text" onChange={handleInput}  placeholder="Url..." className='input-4' ></input>
-                            {/* <label className='label-5' >Born: </label> */}
-                            <input id='born' type="text" onChange={handleInput}  placeholder="Months day, year" className='input-5' ></input>
-                            {/* <label className='label-6' >City: </label> */}
-                            <input id='city' type="text" onChange={handleInput}  placeholder="City..." className='input-6' ></input>
-                            {/* <label className='label-7' >State: </label> */}
-                            <input id='state' type="text" onChange={handleInput} placeholder="State..."  className='input-7' ></input>
-                            {/* <label className='label-8' >Country: </label> */}
-                            <input id='country' type="text" onChange={handleInput} placeholder="Country..." className='input-8' ></input>
-                            {/* <label>Age: </label> */}
-                            <input id='age' type="text" onChange={handleInput}  placeholder="Age..." className='input-9'></input>
-                            {/* <label>Height: </label> */}
-                            <input id='height' type="text" onChange={handleInput}  placeholder="Height..."  className='input-10' ></input>
-                            {/* <label>Weight: </label> */}
-                            <input id='weight' type="text" onChange={handleInput}  placeholder="Weight..." className='input-11' ></input>
-                            {/* <label>Current Team: </label> */}
-                            <input id='current_team' type="text" onChange={handleInput} placeholder="Current Team..." className='input-12' ></input>
-                            {/* <label>Salary: </label> */}
-                            <input id='salary' type="text" onChange={handleInput}  placeholder="Salary..." className='input-13' ></input>
-                            {/* <label>Number: </label> */}
-                            <input id='number' type="number" onChange={handleInput} placeholder="Number..." className='input-14' ></input>
-                            {/* <label>Education: </label> */}
-                            <input id='education' type="text" onChange={handleInput}  placeholder="Education..." className='input-15'></input>
-                            {/* <label>Spouse: </label> */}
-                            <input id='spouse' type="text" onChange={handleInput}  placeholder="Spouse..." className='input-16'></input>
-                            {/* <label>Parents: </label> */}
-                            <input id='parents' type="text" onChange={handleInput}  placeholder="Parents..." className='input-17'></input>
-                            {/* <label>Children: </label> */}
-                            <input id='children' type="text" onChange={handleInput}  placeholder="Children..." className='input-18'></input>
-                            {/* <label>Siblings: </label> */}
-                            <input id='siblings' type="text" onChange={handleInput}  placeholder="Siblings..." className='input-19'></input>
-                            {/* <label>Position: </label> */}
-                            <input id='position' type="text" onChange={handleInput} placeholder="Position..." className='input-20'></input>
-                            {/* <label>Bats: </label> */}
-                            <input id='bats' type="text" onChange={handleInput}  placeholder="Bats..." className='input-21'></input>
-                            {/* <label>Throws: </label> */}
-                            <input id='throws' type="text" onChange={handleInput}  placeholder="Throws..." className='input-22'></input>
-                            {/* <label>Stats: </label> */}
-                            <input id='stats' type="text" onChange={handleInput}  placeholder={'Stats id = ' + id} className='input-23'></input>
-                            <input id='about' type="text" onChange={handleInput}  placeholder="About..." className='input-24'></input>
-                            <div  className='div'>
+           <h2>{memberName}</h2>
+         <form onSubmit={handleSubmit} className='newMemberUpdate'>
+                           <div className='innerUpdate'>
+                                <input id='name' type="text" onChange={handleInput} placeholder={memberName} className='inputT' ></input>
+                                <input id='team_id' type="text" onChange={handleInput} placeholder={'team_id = ' +member} className='inputT' ></input>
+                                <input id='nickname'type="text" onChange={handleInput}  placeholder="Nickname..." className='inputT' ></input>
+                                <input id='imag' type="text" onChange={handleInput}  placeholder="Url..." className='inputT' ></input>
+                                <input id='born' type="text" onChange={handleInput}  placeholder="Months day, year" className='inputT' ></input>
+                                <input id='city' type="text" onChange={handleInput}  placeholder="City..." className='inputT' ></input>
+                                <input id='state' type="text" onChange={handleInput} placeholder="State..."  className='inputT' ></input>
+                                <input id='country' type="text" onChange={handleInput} placeholder="Country..." className='inputT' ></input>
+                            </div>
+                            <div className='innerUpdate'>
+                                <input id='age' type="text" onChange={handleInput}  placeholder="Age..." className='inputT'></input>
+                                <input id='height' type="text" onChange={handleInput}  placeholder="Height..."  className='inputT' ></input>
+                                <input id='weight' type="text" onChange={handleInput}  placeholder="Weight..." className='inputT' ></input>
+                                <input id='current_team' type="text" onChange={handleInput} placeholder="Current Team..." className='inputT' ></input>
+                                <input id='salary' type="text" onChange={handleInput}  placeholder="Salary..." className='inputT' ></input>
+                                <input id='number' type="number" onChange={handleInput} placeholder="Number..." className='inputT' ></input>
+                                <input id='education' type="text" onChange={handleInput}  placeholder="Education..." className='inputT'></input>
+                                <input id='spouse' type="text" onChange={handleInput}  placeholder="Spouse..." className='inputT'></input>
+                            </div>
+                            <div className='innerUpdate'>
+                                <input id='parents' type="text" onChange={handleInput}  placeholder="Parents..." className='inputT'></input>
+                                <input id='children' type="text" onChange={handleInput}  placeholder="Children..." className='inputT'></input>
+                                <input id='siblings' type="text" onChange={handleInput}  placeholder="Siblings..." className='inputT'></input>
+                                <input id='position' type="text" onChange={handleInput} placeholder="Position..." className='inputT'></input>
+                                <input id='bats' type="text" onChange={handleInput}  placeholder="Bats..." className='inputT'></input>
+                                <input id='throws' type="text" onChange={handleInput}  placeholder="Throws..." className='inputT'></input>
+                                <input id='stats' type="text" onChange={handleInput}  placeholder={'Stats id = ' + id} className='inputT'></input>
+                                <input id='about' type="text" onChange={handleInput}  placeholder="About..." className='inputTAbout'></input>
+                            </div>
+                            <div  className='divImage'>
                                 <img src={newMember.imag ? newMember.imag : null } alt='NewImage' className='photo' />
                             </div>
                            

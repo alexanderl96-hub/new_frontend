@@ -1,0 +1,133 @@
+.StasContainer{
+    text-align: center;
+    padding-bottom: 10px; 
+    background-color: rgba(148, 145, 145, 0.645);
+    height: 818px;
+    transition: all 1.5s;
+    animation: fadein 0.5s;
+  -moz-animation: fadein 0.5s; /* Firefox */
+  -webkit-animation: fadein 0.5s; /* Safari and Chrome */
+  -o-animation: fadein 0.5s;
+}
+.newTitle{
+    background-color: rgb(134, 131, 131);
+    color: white;
+    font-family: cursive;
+    box-shadow: 0 4px 2px -1px rgb(49, 49, 49);
+    margin-bottom: 3px;
+}
+
+.ContainerStats {
+    display: flex;
+    flex-direction: row;
+    height: 350px;
+}
+
+.PlayersSats{
+ 
+    width: 250px;
+    margin-top: 5px;
+}
+.PlayersSats1{
+ 
+    width: 250px;
+    margin-top: 5px;
+}
+.PlayersSats2{
+  
+    width: 250px;
+    margin-top: 5px;
+}
+.PlayersSats3{
+    width: 250px;
+    margin-top: 5px;
+}
+
+.PlayersSats h3 {
+   margin-top: 10px;
+   background-color: white;
+   border-radius: 30px;
+   padding: 3px;
+   width: 200px;
+}
+.PlayersSats1 h3 {
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 30px;
+    padding: 3px;
+    width: 200px;
+ }
+ .PlayersSats2 h3 {
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 30px;
+    padding: 3px;
+    width: 200px;
+ }
+ .PlayersSats3 h3 {
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 30px;
+    padding: 3px;
+    width: 200px;
+ }
+
+.PlayersSats > form input {
+    margin: 5px;
+    width: 100px;
+    text-align: center;
+}
+.PlayersSats1 > form input {
+    margin: 5px;
+    width: 100px;
+    text-align: center;
+}
+.PlayersSats2 > form input {
+    margin: 5px;
+    width: 100px;
+    text-align: center;
+}
+.PlayersSats3 > form input {
+    margin: 5px;
+    width: 100px;
+    text-align: center;
+}
+
+.StasContainer >img {
+    margin-top: -20px;
+   border: 1px solid;
+   border-radius: 15px;
+    width: 250px;
+    height: 320px;
+    background-color: rgba(255, 0, 0, 0.919);
+}
+
+.PlayersSats > button {
+    font-size: 16px;
+   border-radius: 30px;
+   cursor: pointer;
+   margin-top: 10px;
+}
+.PlayersSats1 > button {
+    font-size: 16px;
+   border-radius: 30px;
+   cursor: pointer;
+   margin-top: 10px;
+}
+.PlayersSats2> button {
+    font-size: 16px;
+   border-radius: 30px;
+   cursor: pointer;
+   margin-top: 10px;
+}
+.PlayersSats3 > button {
+    font-size: 16px;
+   border-radius: 30px;
+   cursor: pointer;
+   margin-top: 10px;
+}
+
+
+
+
+

@@ -115,7 +115,7 @@ const Desing = () => {
             </div> */}
             {/* {DeleteIcon} */}
             {/* <svg data-testid="DeleteIcon"> {DeleteIcon}</svg> */}
-
+            <Link to={`/teams/newMember/${teamId}`} id={teamId} className='newadded'>New</Link>
         </div>
 
         <div className="section2"> 

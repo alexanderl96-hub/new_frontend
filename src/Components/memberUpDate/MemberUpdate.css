@@ -1,0 +1,47 @@
+.Update_Container{
+    text-align: center;
+    padding-bottom: 10px; 
+    background-color: rgba(148, 145, 145, 0.645);
+    height: 818px;
+    transition: all 1.5s;
+    animation: fadein 0.5s;
+  -moz-animation: fadein 0.5s; /* Firefox */
+  -webkit-animation: fadein 0.5s; /* Safari and Chrome */
+  -o-animation: fadein 0.5s;
+}
+.Update_Container > div h2 {
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 30px;
+    padding: 3px;
+    width: 250px;
+}
+.newMemberUpdate{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.innerUpdate{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+.inputT{
+    width: 300px;
+    margin:5px;
+}
+.inputTAbout{
+    width: 300px;
+    height: 100px;
+    text-align: top;
+
+}
+.divImage{
+    margin-top: 25px;
+    height: 340px;
+    width: 300px;
+    margin-left: 100px;
+    border-radius: 40px;
+    border: 5px solid gray;
+}

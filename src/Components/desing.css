@@ -34,7 +34,18 @@
     flex-direction: row;
     animation: fadeInRight 2s;
 }
-
+.newadded{
+    text-decoration: none; 
+    border-radius: 50px;
+    background-color: rgb(134, 131, 131);
+    padding: 7px;
+    color: white;
+    cursor: pointer;
+    margin-left: 30%;
+    margin-top: 20px; 
+    width: 50px;
+    text-align:center;
+}
 
 @keyframes fadeInRight {
     from {

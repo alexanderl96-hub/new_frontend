@@ -10,7 +10,7 @@
     justify-content: center;
     flex-wrap: wrap;
     padding: 2px;
-    height: 700px;
+    /* height: 700px; */
 }
 @keyframes fadein {
     from { opacity: 0; }

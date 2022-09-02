@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import { useParams} from 'react-router-dom'
+import {Link, useParams} from 'react-router-dom'
+import './addStatsPlayers.css'
 
 const AddStatsPlayers = () => {
+   const [memberHold, setMemberHold] = useState([])
+   const [checkId, setCheckId] = useState([])
    const [statPlayers, setStatPlayers] = useState({
     players_id: '', 
     game: '',
@@ -65,96 +68,126 @@ const AddStatsPlayers = () => {
   let params = useParams()
   let memberId = params.id
 
-  //use useEffect to filter into the data the position of the member id
+ // useEffect(() => {
+    //     fetch(`https://my-baseball-teams.herokuapp.com/groups`)
+    //     .then(res => res.json())
+    //     .then(data =>{
+    //       setNewGroup(data)
+    //       setCoachName(data)
+    //     })
+    //   },[search])
+    useEffect(() => {
+        fetch(`http://localhost:9000/groups`)
+        .then(res => res.json())
+        .then(data =>{
+            setMemberHold(data = data.filter(a => a.id === Number(memberId)))
+            setCheckId(data = data.filter(a => a.id === Number(memberId)).map((a,i)=>{return a.id}))
+        
+        })
+    },[memberId])
+//  const handleInput = (e) =>{
+//     const {value} = e.target
+//     setMember({...newMember, [e.target.id]: value})
+//   }
+
+//   const handleSubmit = (e) =>{
+//     e.preventDefault()
+//     addMember(newMember)
+//   }
+//   const addMember = (newMember) => {
+//     axios.post(`https://my-baseball-teams.herokuapp.com/groups`, newMember).then((res)=>{
+//       navigate(`/teams/updateteam/${id}`);
+//       })
+//   }
 
 console.log(memberId)
+console.log(memberHold,'memberHold')
+console.log(checkId)
 
   return (
-    <div>
-        <h1>addStatsPlayers</h1>
+    <div className='StasContainer'>
+        <h1 className='newTitle'>Add Stats</h1>
+        <div style={{}} className='wrapLink'> <Link to={`/teams/groups/${memberId}`} className='newLinkBackNew' >Back</Link> </div>
         {/* -- check the member id and the position before display data */}
-        <div style={{marginLeft: 'auto'}}>
-            <h3>Add Players Stats:</h3>
-            <form>
-                <input type="number" placeholder={memberId}/>
-                <input type="text" placeholder="game"/>
-                <input type="text" placeholder="game_date"/>
-                <input type="number" placeholder="ab"/>
-                <input type="number" placeholder="r"/>
-                <input type="number" placeholder="h"/>
-                <input type="number" placeholder="rb"/>
-                <input type="number" placeholder="bb"/>
-                <input type="number" placeholder="so"/> 
-                <input type="number" placeholder="hr"/>
-                <input type="number" placeholder="sb"/>
-                <input type="number" placeholder="average"/>
-            </form>
-            <button type="submit">Submit</button>
-            {/* -- display an image of the belonging id in an independet div*/}
-        </div>
+        <div className="ContainerStats">
+            <div className='PlayersSats'>
+                <h3>Players Stats</h3>
+                <form>
+                        <input type="number" placeholder={memberId}/>
+                        <input type="text" placeholder="game"/>
+                        <input type="text" placeholder="game_date"/>
+                        <input type="number" placeholder="ab"/>
+                        <input type="number" placeholder="r"/>
+                        <input type="number" placeholder="h"/>
+                        <input type="number" placeholder="rb"/>
+                        <input type="number" placeholder="bb"/>
+                        <input type="number" placeholder="so"/> 
+                        <input type="number" placeholder="hr"/>
+                        <input type="number" placeholder="sb"/>
+                        <input type="number" placeholder="average"/>
+                </form>
+                <button type="submit" >AddStats</button>
+            </div>
+            <div className='PlayersSats1'>
+                <h3>Career Players Stats</h3>
+                <form>
+                        <input type="number" placeholder={memberId}/>
+                        <input type="number" placeholder="game_year"/>
+                        <input type="text" placeholder="Team"/>
+                        <input type="number" placeholder="career_gp"/>
+                        <input type="number" placeholder="career_ab"/>
+                        <input type="number" placeholder="career_r"/>
+                        <input type="number" placeholder="career_h"/>
+                        <input type="number" placeholder="career_rbi"/>
+                        <input type="number" placeholder="career_bb"/> 
+                        <input type="number" placeholder="career_so"/>
+                        <input type="number" placeholder="career_hr"/>
+                        <input type="number" placeholder="career_average"/>
+                </form>
+                <button type="submit">AddStats</button>
+            </div> 
 
-        {/* -- check the member id and the position before display data */}
-        <div>
-           <h3>Add Career Players Stats:</h3>
-            <form>
-                <input type="number" placeholder={memberId}/>
-                <input type="number" placeholder="game_year"/>
-                <input type="text" placeholder="Team"/>
-                <input type="number" placeholder="career_gp"/>
-                <input type="number" placeholder="career_ab"/>
-                <input type="number" placeholder="career_r"/>
-                <input type="number" placeholder="career_h"/>
-                <input type="number" placeholder="career_rbi"/>
-                <input type="number" placeholder="career_bb"/> 
-                <input type="number" placeholder="career_so"/>
-                <input type="number" placeholder="career_hr"/>
-                <input type="number" placeholder="career_average"/>
-            </form>
-            <button type="submit">Submit</button>
-             {/* -- display an image of the belonging id in an independet div*/}
+            <div className='PlayersSats2'>
+                <h3>Pitcher Stats</h3>
+                <form>
+                        <input type="number" placeholder={memberId}/>
+                        <input type="text" placeholder="game"/>
+                        <input type="text" placeholder="game_date"/>
+                        <input type="number" placeholder="ip"/>
+                        <input type="number" placeholder="h"/>
+                        <input type="number" placeholder="r"/>
+                        <input type="number" placeholder="er"/>
+                        <input type="number" placeholder="hr"/>
+                        <input type="number" placeholder="bb"/> 
+                        <input type="number" placeholder="so"/>
+                        <input type="number" placeholder="sv"/>
+                        <input type="number" placeholder="era"/>
+                </form>
+                <button type="submit">AddStats</button>
+            </div>
+            <div className='PlayersSats3'>
+                <h3>Career Pitcher Stats</h3>
+                <form>
+                        <input type="number" placeholder={memberId}/>
+                        <input type="number" placeholder="game_year"/>
+                        <input type="text" placeholder="team"/>
+                        <input type="number" placeholder="career_gp"/>
+                        <input type="number" placeholder="career_cg"/>
+                        <input type="number" placeholder="career_er"/>
+                        <input type="number" placeholder="career_so"/>
+                        <input type="number" placeholder="career_w"/>
+                        <input type="number" placeholder="career_l"/> 
+                        <input type="number" placeholder="career_sv"/>
+                        <input type="number" placeholder="career_whip"/>
+                        <input type="number" placeholder="career_era"/>
+                </form>
+                <button type="submit">AddStats</button>
+            </div>
         </div>
-
-        {/* -- check the member id and the position before display data */}
-        <div>
-            <h3>Add Pitcher Stats:</h3>
-            <form>
-                <input type="number" placeholder={memberId}/>
-                <input type="text" placeholder="game"/>
-                <input type="text" placeholder="game_date"/>
-                <input type="number" placeholder="ip"/>
-                <input type="number" placeholder="h"/>
-                <input type="number" placeholder="r"/>
-                <input type="number" placeholder="er"/>
-                <input type="number" placeholder="hr"/>
-                <input type="number" placeholder="bb"/> 
-                <input type="number" placeholder="so"/>
-                <input type="number" placeholder="sv"/>
-                <input type="number" placeholder="era"/>
-            </form>
-            <button type="submit">Submit</button>
-             {/* -- display an image of the belonging id in an independet div*/}
-        </div>
-
-        {/* -- check the member id and the position before display data */}
-        <div>
-            <h3>Add Career Pitcher Stats:</h3>
-            <form>
-                <input type="number" placeholder={memberId}/>
-                <input type="number" placeholder="game_year"/>
-                <input type="text" placeholder="team"/>
-                <input type="number" placeholder="career_gp"/>
-                <input type="number" placeholder="career_cg"/>
-                <input type="number" placeholder="career_er"/>
-                <input type="number" placeholder="career_so"/>
-                <input type="number" placeholder="career_w"/>
-                <input type="number" placeholder="career_l"/> 
-                <input type="number" placeholder="career_sv"/>
-                <input type="number" placeholder="career_whip"/>
-                <input type="number" placeholder="career_era"/>
-            </form>
-            <button type="submit">Submit</button>
-             {/* -- display an image of the belonging id in an independet div*/}
-        </div>
+         {memberHold.map((a,i)=>{
+                 return(
+                     <><img src={a.imag} alt='' /></>
+                 )})}
     </div>
   )
 }

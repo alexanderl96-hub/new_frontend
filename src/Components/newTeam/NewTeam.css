@@ -2,11 +2,12 @@
     text-align: center;
     padding-bottom: 10px; 
     background-color: rgba(148, 145, 145, 0.645);
-    height: 100%;
-    animation: fadein 1.5s;
-  -moz-animation: fadein 1.5s; /* Firefox */
-  -webkit-animation: fadein 1.5s; /* Safari and Chrome */
-  -o-animation: fadein 1.5s;
+    height: 818px;
+    transition: all 1.5s;
+    animation: fadein 0.5s;
+  -moz-animation: fadein 0.5s; /* Firefox */
+  -webkit-animation: fadein 0.5s; /* Safari and Chrome */
+  -o-animation: fadein 0.5s;
 }
 .newTitle{
     background-color: rgb(134, 131, 131);
@@ -16,9 +17,11 @@
     margin-bottom: 7px;
 }
 .divLink{
-    padding-top: 5px; 
+    padding-top: 10px; 
     text-align: start; 
-    margin-left: 20px; 
+    margin-left: 20px;
+    margin-top: 15px;
+    margin-bottom: 38px;
 }
 .newLinkBack{
     margin-bottom: 35px;
