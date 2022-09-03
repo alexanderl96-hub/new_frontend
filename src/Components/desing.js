@@ -54,11 +54,13 @@ const Desing = () => {
       };
 
     function nextrow (){
-      let value = newtest.length -10
-      if(last >= newtest.length ){
+      const value = newtest.length - 10
+      let count = Math.abs(value)
+      if(last > value){
+        setStart(count)
         setLast(newtest.length )  
       }
-      console.log( start > value)
+      // console.log(last, start , count, value)
       setStart(start + 10)
       setLast(last + 10)
        setPreviuos(start+ 10)
@@ -203,9 +205,10 @@ const Desing = () => {
                 </div> } 
       
         </div>
-        <button onClick={previuosrow }>{start <= 0 ? null : 'Back'}</button>
-         <button onClick={nextrow} >{last > newtest.length ? null : 'Forward'}</button>  
-         {/* {new} */}
+        <div className='mid'>
+        {start <= 0 ? null : <button onClick={previuosrow } className='button1'>Back</button>}
+        {last > newtest.length ? null :  <button onClick={nextrow} className='button2'>Forward</button>  }
+        </div>         {/* {new} */}
         <div className="section3">
            {newtest.slice(start,last).map((a, index)=>{
                return (

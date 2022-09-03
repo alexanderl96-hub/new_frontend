@@ -3,8 +3,20 @@
     overflow-y: hidden;
      background-color: #80808095;
 }
-.MainDesing > button{
-    cursor:pointer
+.mid{
+    display:flex;
+    flex-direction: row;
+
+}
+.button1{
+    margin-left: 20px;
+    width: 65px;
+    cursor:pointer;
+}
+.button2{
+   margin-right: 20px;
+   width: 65px;
+   cursor:pointer;
 }
 .sectionNav{
     display: flex;
@@ -121,6 +133,7 @@
     overflow: auto;
     overflow-y: hidden;
     animation: fadeInRight 3s;
+    /* position: relative; */
 }
 .scrollPlayers{
     display:grid;

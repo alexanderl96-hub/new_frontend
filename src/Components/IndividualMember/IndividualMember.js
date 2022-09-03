@@ -19,8 +19,13 @@ const IndividualMember = () => {
   
 
 // const navigate = useNavigate();   
+// const handleDelete = () => {
+//     axios.delete(`https://my-baseball-teams.herokuapp.com/groups/${memberId}`).then(() =>{
+//         //  navigate(`/homebase`)
+//     }, (error) => console.log(error))
+// };
 const handleDelete = () => {
-    axios.delete(`https://my-baseball-teams.herokuapp.com/groups/${memberId}`).then(() =>{
+    axios.delete(`http://localhost:9000/groups/${memberId}`).then(() =>{
         //  navigate(`/homebase`)
     }, (error) => console.log(error))
 };
@@ -127,7 +132,7 @@ useEffect(() => {
                 </Link>
                 <Link to={`/teams/groups/${memberId}/addStats`} className='memberLink2'>Add Stats</Link>
                 <div className='delBTn'> 
-                    <Link to={`/teams/${group}`} onClick={handleDelete} className="teamLinkDelete" >Delete</Link>
+                    <Link to={`/teams/newpage/${group}`} onClick={handleDelete} className="teamLinkDelete" >Delete</Link>
                 </div>
                 {/* give the css to add Stats buttonLink */}
                 {/* <Link to={`/teams/groups/${memberId}/addStats`} className='memberLink2'>Add Stats</Link> */}
@@ -186,7 +191,7 @@ useEffect(() => {
                                                         return(
                                                             <div>
                                                                 {Number(memberId) === stat.players_id ?  
-                                                                    <div style={{backgroundColor: 'white', borderRadius: '5px'}} className='about-inner1'>
+                                                                    <div className='about-inner1'>
                                                                         <div style={{marginBottom: '5px'}} className='about-inner2'> GAME
                                                                         <div style={{marginTop: '5px'}}>{stat.game_date} {stat.game}</div>
                                                                         </div>
@@ -230,37 +235,37 @@ useEffect(() => {
                                                              <div>
                                                                  {Number(memberId) === career.players_id ? 
                                                                   <div style={{}} className='about-inner1'>
-                                                                  <div style={{marginTop: '5px'}}>Year
+                                                                  <div style={{marginTop: '5px'}} className='about-inner2-2'>Year
                                                                      <div>{career.game_year}</div> 
                                                                   </div>
                                                                   <div style={{marginTop: '5px'}} className='about-innerTeam'>Team
                                                                      <div>{career.team}</div> 
                                                                   </div>
-                                                                  <div> GP
+                                                                  <div  className='help'> GP
                                                                      <div>{career.career_gp}</div> 
                                                                   </div>
-                                                                  <div> AB
+                                                                  <div  className='help'> AB
                                                                      <div>{career.career_ab}</div> 
-                                                                  </div>
-                                                                  <div> R
+                                                                  </div >
+                                                                  <div  className='help'> R
                                                                      <div>{career.career_r}</div> 
                                                                   </div>
-                                                                  <div> H
+                                                                  <div  className='help'> H
                                                                      <div>{career.career_h}</div> 
                                                                   </div>
-                                                                  <div> RBI
+                                                                  <div  className='help'> RBI
                                                                      <div>{career.career_rbi}</div> 
                                                                   </div>
-                                                                  <div> BB
+                                                                  <div  className='help'> BB
                                                                      <div>{career.career_bb}</div> 
                                                                   </div>
-                                                                  <div> SO
+                                                                  <div  className='help'> SO
                                                                      <div>{career.career_so}</div> 
                                                                   </div>
-                                                                  <div> HR
+                                                                  <div  className='help'> HR
                                                                      <div>{career.career_hr}</div> 
                                                                   </div>
-                                                                  <div> AVG
+                                                                  <div  className='help'> AVG
                                                                      <div>{career.career_average}</div> 
                                                                   </div>
                                                           </div> : null}
@@ -327,31 +332,31 @@ useEffect(() => {
                                                                  <div style={{marginTop: '7px'}} className='about-innerTeam'>Team
                                                                       <div>{careerP.team}</div>
                                                                  </div>
-                                                                 <div> GP
+                                                                 <div className='help'> GP
                                                                       <div style={{textAlign: 'center'}}>{careerP.career_gp >= 0 ? careerP.career_gp : '-'}</div>
                                                                  </div>
-                                                                 <div> CG
+                                                                 <div className='help'> CG
                                                                       <div style={{textAlign: 'center'}}>{careerP.career_cg >= 0 ? careerP.career_cg : '-'}</div>
                                                                  </div>
-                                                                 <div> ER
+                                                                 <div className='help'> ER
                                                                       <div style={{textAlign: 'center'}}>{careerP.career_er >= 0 ? careerP.career_er : '-'}</div>
                                                                  </div>
-                                                                 <div> SO
+                                                                 <div className='help'> SO
                                                                       <div style={{textAlign: 'center'}}>{careerP.career_so >= 0 ? careerP.career_so : '-'}</div>
                                                                  </div>
-                                                                 <div> W
+                                                                 <div className='help'> W
                                                                       <div style={{textAlign: 'center'}}>{careerP.career_w >= 0 ? careerP.career_w : '-'}</div>
                                                                  </div>
-                                                                 <div> L
+                                                                 <div className='help'> L
                                                                       <div style={{textAlign: 'center'}}>{careerP.career_l >= 0 ? careerP.career_l : '-'}</div>
                                                                  </div>
-                                                                 <div> Sv
+                                                                 <div className='help'> Sv
                                                                       <div style={{textAlign: 'center'}}>{careerP.career_sv >= 0 ? careerP.career_sv : '-'}</div>
                                                                  </div>
-                                                                 <div> WHIP
+                                                                 <div className='help'> WHIP
                                                                       <div style={{textAlign: 'center'}}>{careerP.career_whip >= 0 ? careerP.career_whip : '-'}</div>
                                                                  </div>
-                                                                 <div> ERA
+                                                                 <div className='help'> ERA
                                                                       <div style={{textAlign: 'center'}}>{careerP.career_era >= 0 ? careerP.career_era : '-'}</div>
                                                                  </div>
                                                          </div>: null}
