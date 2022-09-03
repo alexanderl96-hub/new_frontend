@@ -91,23 +91,72 @@ const AddStatsPlayers = () => {
     const {value} = e.target
     setStatPlayers({...statPlayers, [e.target.id]: value})
   }
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-     updatedTeam(statPlayers, memberId)
-    navigate(`/teams/groups/${memberId}`)
+  const handleInput2 = (e) =>{
+    const {value} = e.target
+    setStatCareer({...statCareer, [e.target.id]: value})
+  }
+    const handleInput3 = (e) =>{
+    const {value} = e.target
+    setStatPitcher({...statPitcher, [e.target.id]: value})
+  }
+  const handleInput4 = (e) =>{
+    const {value} = e.target
+    setStatPCareer({...statPCareer, [e.target.id]: value})
+  }
+/* update stats */
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+//      updatedTeam(statPlayers, memberId)
+//     navigate(`/teams/groups/${memberId}`)
     
-  };
-  const updatedTeam = (update, id) => {
-    axios.put(`http://localhost:9000/playersStats/${id}`, update).then(
-      (res) => {
-        const newTeam = [...statPlayers];
-        newTeam[id] = update;
-        setStatPlayers(newTeam);
-      },
-      (error) => console.log(error)
-    );
-  };
+//   };
+//   const updatedTeam = (update, id) => {
+//     axios.put(`http://localhost:9000/playersStats/${id}`, update).then(
+//       (res) => {
+//         const newTeam = [...statPlayers];
+//         newTeam[id] = update;
+//         setStatPlayers(newTeam);
+//       },
+//       (error) => console.log(error)
+//     );
+//   };
+/* add new stats*/
+  const handleSubmit = (e) =>{
+    e.preventDefault()
+    addStatsPlayers(statPlayers)
+  }
+   const handleSubmit2 = (e) =>{
+    e.preventDefault()
+    addStatsPlayers2(statCareer)
+  }
+  const handleSubmit3 = (e) =>{
+    e.preventDefault()
+    addStatsPlayers3(statPitcher)
+  }
+  const handleSubmit4 = (e) =>{
+    e.preventDefault()
+    addStatsPlayers4(statPCareer)
+  }
+  const addStatsPlayers = (newPlayers) => {
+    axios.post(`http://localhost:9000/playersStats`, newPlayers).then((res)=>{
+      navigate(`/teams/groups/${memberId}`);
+      })
+  }
+   const addStatsPlayers2 = (newPlayers) => {
+    axios.post(`http://localhost:9000/playersCareer`, newPlayers).then((res)=>{
+      navigate(`/teams/groups/${memberId}`);
+      })
+  }
+  const addStatsPlayers3 = (newPlayers) => {
+    axios.post(`http://localhost:9000/pitchersStats`, newPlayers).then((res)=>{
+      navigate(`/teams/groups/${memberId}`);
+      })
+  }
+   const addStatsPlayers4 = (newPlayers) => {
+    axios.post(`http://localhost:9000/pitchersCarrer`, newPlayers).then((res)=>{
+      navigate(`/teams/groups/${memberId}`);
+      })
+  }
 //   const addMember = (newMember) => {
 //     axios.post(`https://my-baseball-teams.herokuapp.com/groups`, newMember).then((res)=>{
 //       navigate(`/teams/updateteam/${id}`);
@@ -141,62 +190,62 @@ console.log(statPlayers)
                         <input id='sb' type="number"  onChange={handleInput} placeholder="sb"/>
                         <input id='average' type="number" onChange={handleInput} placeholder="average"/>
                 </form>
-                <button type="submit" onSubmit={handleSubmit}>AddStats</button>
+                <button type="submit" onClick={handleSubmit}>AddStats</button>
             </div>
             <div className='PlayersSats1'>
                 <h3>Career Players Stats</h3>
-                <form>
-                        <input type="number" placeholder={memberId}/>
-                        <input type="number" placeholder="game_year"/>
-                        <input type="text" placeholder="Team"/>
-                        <input type="number" placeholder="career_gp"/>
-                        <input type="number" placeholder="career_ab"/>
-                        <input type="number" placeholder="career_r"/>
-                        <input type="number" placeholder="career_h"/>
-                        <input type="number" placeholder="career_rbi"/>
-                        <input type="number" placeholder="career_bb"/> 
-                        <input type="number" placeholder="career_so"/>
-                        <input type="number" placeholder="career_hr"/>
-                        <input type="number" placeholder="career_average"/>
+                <form onSubmit={handleSubmit2}>
+                        <input id='players_id' type="number" onChange={handleInput2} placeholder={memberId}/>
+                        <input id='game_year' type="number" onChange={handleInput2} placeholder="game_year"/>
+                        <input id='team' type="text"  onChange={handleInput2} placeholder="Team"/>
+                        <input id='career_gp' type="number"  onChange={handleInput2} placeholder="career_gp"/>
+                        <input id='career_ab' type="number" onChange={handleInput2} placeholder="career_ab"/>
+                        <input id='career_r' type="number" onChange={handleInput2} placeholder="career_r"/>
+                        <input id='career_h' type="number" onChange={handleInput2} placeholder="career_h"/>
+                        <input id='career_rbi' type="number" onChange={handleInput2} placeholder="career_rbi"/>
+                        <input id='career_bb' type="number" onChange={handleInput2} placeholder="career_bb"/> 
+                        <input id='career_so' type="number" onChange={handleInput2} placeholder="career_so"/>
+                        <input id='career_hr' type="number" onChange={handleInput2} placeholder="career_hr"/>
+                        <input id='career_average' type="number" onChange={handleInput2} placeholder="career_average"/>
                 </form>
-                <button type="submit">AddStats</button>
+                <button type="submit" onClick={handleSubmit2} >AddStats</button>
             </div> 
 
             <div className='PlayersSats2'>
                 <h3>Pitcher Stats</h3>
-                <form>
-                        <input type="number" placeholder={memberId}/>
-                        <input type="text" placeholder="game"/>
-                        <input type="text" placeholder="game_date"/>
-                        <input type="number" placeholder="ip"/>
-                        <input type="number" placeholder="h"/>
-                        <input type="number" placeholder="r"/>
-                        <input type="number" placeholder="er"/>
-                        <input type="number" placeholder="hr"/>
-                        <input type="number" placeholder="bb"/> 
-                        <input type="number" placeholder="so"/>
-                        <input type="number" placeholder="sv"/>
-                        <input type="number" placeholder="era"/>
+                <form onSubmit={handleSubmit3}>
+                        <input id='players_id' type="number"onChange={handleInput3}  placeholder={memberId}/>
+                        <input id='game' type="text" onChange={handleInput3} placeholder="game"/>
+                        <input id='game_date' type="text" onChange={handleInput3} placeholder="game_date"/>
+                        <input id='ip' type="number" onChange={handleInput3} placeholder="ip"/>
+                        <input id='h' type="number" onChange={handleInput3} placeholder="h"/>
+                        <input id='r' type="number" onChange={handleInput3} placeholder="r"/>
+                        <input id='er' type="number" onChange={handleInput3} placeholder="er"/>
+                        <input id='hr' type="number" onChange={handleInput3} placeholder="hr"/>
+                        <input id='bb' type="number" onChange={handleInput3} placeholder="bb"/> 
+                        <input id='so' type="number" onChange={handleInput3} placeholder="so"/>
+                        <input id='sv' type="number" onChange={handleInput3} placeholder="sv"/>
+                        <input id='era' type="number" onChange={handleInput3} placeholder="era"/>
                 </form>
-                <button type="submit">AddStats</button>
+                <button type="submit" onClick={handleSubmit3}>AddStats</button>
             </div>
             <div className='PlayersSats3'>
                 <h3>Career Pitcher Stats</h3>
-                <form>
-                        <input type="number" placeholder={memberId}/>
-                        <input type="number" placeholder="game_year"/>
-                        <input type="text" placeholder="team"/>
-                        <input type="number" placeholder="career_gp"/>
-                        <input type="number" placeholder="career_cg"/>
-                        <input type="number" placeholder="career_er"/>
-                        <input type="number" placeholder="career_so"/>
-                        <input type="number" placeholder="career_w"/>
-                        <input type="number" placeholder="career_l"/> 
-                        <input type="number" placeholder="career_sv"/>
-                        <input type="number" placeholder="career_whip"/>
-                        <input type="number" placeholder="career_era"/>
+                <form onSubmit={handleSubmit4}>
+                        <input id='pitcher_id' type="number" onChange={handleInput4} placeholder={memberId}/>
+                        <input id='game_year' type="number" onChange={handleInput4} placeholder="game_year"/>
+                        <input id='team' type="text" onChange={handleInput4} placeholder="team"/>
+                        <input id='career_gp' type="number" onChange={handleInput4} placeholder="career_gp"/>
+                        <input id='career_cg' type="number" onChange={handleInput4} placeholder="career_cg"/>
+                        <input id='career_er' type="number" onChange={handleInput4} placeholder="career_er"/>
+                        <input id='career_so' type="number" onChange={handleInput4} placeholder="career_so"/>
+                        <input id='career_w' type="number" onChange={handleInput4} placeholder="career_w"/>
+                        <input id='career_l' type="number" onChange={handleInput4} placeholder="career_l"/> 
+                        <input id='career_sv' type="number" onChange={handleInput4} placeholder="career_sv"/>
+                        <input id='career_whip' type="number" onChange={handleInput4} placeholder="career_whip"/>
+                        <input id='career_era' type="number" onChange={handleInput4} placeholder="career_era"/>
                 </form>
-                <button type="submit">AddStats</button>
+                <button type="submit" onClick={handleSubmit4}>AddStats</button>
             </div>
         </div>
          {memberHold.map((a,i)=>{

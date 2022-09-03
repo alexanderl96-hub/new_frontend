@@ -28,7 +28,24 @@ const handleDelete = () => {
     axios.delete(`http://localhost:9000/groups/${memberId}`).then(() =>{
         //  navigate(`/homebase`)
     }, (error) => console.log(error))
+    axios.delete(`http://localhost:9000/playersStats/${memberId}`).then(() =>{
+        //  navigate(`/homebase`)
+    }, (error) => console.log(error))
+    axios.delete(`http://localhost:9000/playersCareer/${memberId}`).then(() =>{
+        //  navigate(`/homebase`)
+    }, (error) => console.log(error))
+    axios.delete(`http://localhost:9000/pitchersStats/${memberId}`).then(() =>{
+        //  navigate(`/homebase`)
+    }, (error) => console.log(error))
+    axios.delete(`http://localhost:9000/pitchersCarrer/${memberId}`).then(() =>{
+        //  navigate(`/homebase`)
+    }, (error) => console.log(error))
 };
+// const handleDeleteStats = () => {
+//     axios.delete(`http://localhost:9000/playersStats/${memberId}`).then(() =>{
+//         //  navigate(`/homebase`)
+//     }, (error) => console.log(error))
+// };
 
 //     useEffect(() => {
 //         fetch(`https://my-baseball-teams.herokuapp.com/groups`)
@@ -132,7 +149,7 @@ useEffect(() => {
                 </Link>
                 <Link to={`/teams/groups/${memberId}/addStats`} className='memberLink2'>Add Stats</Link>
                 <div className='delBTn'> 
-                    <Link to={`/teams/newpage/${group}`} onClick={handleDelete} className="teamLinkDelete" >Delete</Link>
+                    <Link to={`/teams/newpage/${group}`} onClick={handleDelete}  className="teamLinkDelete" >Delete</Link>
                 </div>
                 {/* give the css to add Stats buttonLink */}
                 {/* <Link to={`/teams/groups/${memberId}/addStats`} className='memberLink2'>Add Stats</Link> */}

@@ -119,11 +119,11 @@ const Desing = () => {
       })
   },[search])
 
-    const handleDelete = () => {
-      axios.delete(`https://my-baseball-teams.herokuapp.com/groups/${search}`).then(() =>{
-          //  navigate(`/homebase`)
-      }, (error) => console.log(error))
-  };
+    // const handleDelete = () => {
+  //     axios.delete(`https://my-baseball-teams.herokuapp.com/groups/${search}`).then(() =>{
+  //         //  navigate(`/homebase`)
+  //     }, (error) => console.log(error))
+  // };
 
    // sum = ratingChanged(ab)
     fisrt = ratingChanged(ab)
