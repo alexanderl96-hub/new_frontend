@@ -181,7 +181,7 @@
     margin-top: 8px;
     transition: all 1s;
     backface-visibility: visible;
-    animation: flip 2.3s;
+    animation: flip 3.5s;
 }
 @keyframes flip {
     from {

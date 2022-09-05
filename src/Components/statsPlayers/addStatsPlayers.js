@@ -70,23 +70,25 @@ const AddStatsPlayers = () => {
   let params = useParams()
   let memberId = params.id
 
- // useEffect(() => {
-    //     fetch(`https://my-baseball-teams.herokuapp.com/groups`)
-    //     .then(res => res.json())
-    //     .then(data =>{
-    //       setNewGroup(data)
-    //       setCoachName(data)
-    //     })
-    //   },[search])
-    useEffect(() => {
-        fetch(`http://localhost:9000/groups`)
+  useEffect(() => {
+         fetch(`https://my-baseball-teams.herokuapp.com/groups`)
         .then(res => res.json())
         .then(data =>{
-            setMemberHold(data = data.filter(a => a.id === Number(memberId)))
-            setCheckId(data = data.filter(a => a.id === Number(memberId)).map((a,i)=>{return a.id}))
+    //       setNewGroup(data)
+    //       setCoachName(data)
+    setMemberHold(data = data.filter(a => a.id === Number(memberId)))
+    setCheckId(data = data.filter(a => a.id === Number(memberId)).map((a,i)=>{return a.id}))
+         })
+       },[memberId])
+    // useEffect(() => {
+    //     fetch(`http://localhost:9000/groups`)
+    //     .then(res => res.json())
+    //     .then(data =>{
+    //         setMemberHold(data = data.filter(a => a.id === Number(memberId)))
+    //         setCheckId(data = data.filter(a => a.id === Number(memberId)).map((a,i)=>{return a.id}))
         
-        })
-    },[memberId])
+    //     })
+    // },[memberId])
  const handleInput = (e) =>{
     const {value} = e.target
     setStatPlayers({...statPlayers, [e.target.id]: value})
@@ -137,23 +139,43 @@ const AddStatsPlayers = () => {
     e.preventDefault()
     addStatsPlayers4(statPCareer)
   }
+  // const addStatsPlayers = (newPlayers) => {
+  //   axios.post(`http://localhost:9000/playersStats`, newPlayers).then((res)=>{
+  //     navigate(`/teams/groups/${memberId}`);
+  //     })
+  // }
   const addStatsPlayers = (newPlayers) => {
-    axios.post(`http://localhost:9000/playersStats`, newPlayers).then((res)=>{
+    axios.post(`https://my-baseball-teams.herokuapp.com/playersStats`, newPlayers).then((res)=>{
       navigate(`/teams/groups/${memberId}`);
       })
   }
-   const addStatsPlayers2 = (newPlayers) => {
-    axios.post(`http://localhost:9000/playersCareer`, newPlayers).then((res)=>{
+  //  const addStatsPlayers2 = (newPlayers) => {
+  //   axios.post(`http://localhost:9000/playersCareer`, newPlayers).then((res)=>{
+  //     navigate(`/teams/groups/${memberId}`);
+  //     })
+  // }
+  const addStatsPlayers2 = (newPlayers) => {
+    axios.post(`https://my-baseball-teams.herokuapp.com/playersCareer`, newPlayers).then((res)=>{
       navigate(`/teams/groups/${memberId}`);
       })
   }
+  // const addStatsPlayers3 = (newPlayers) => {
+  //   axios.post(`http://localhost:9000/pitchersStats`, newPlayers).then((res)=>{
+  //     navigate(`/teams/groups/${memberId}`);
+  //     })
+  // }
   const addStatsPlayers3 = (newPlayers) => {
-    axios.post(`http://localhost:9000/pitchersStats`, newPlayers).then((res)=>{
+    axios.post(`https://my-baseball-teams.herokuapp.com/pitchersStats`, newPlayers).then((res)=>{
       navigate(`/teams/groups/${memberId}`);
       })
   }
-   const addStatsPlayers4 = (newPlayers) => {
-    axios.post(`http://localhost:9000/pitchersCarrer`, newPlayers).then((res)=>{
+  //  const addStatsPlayers4 = (newPlayers) => {
+  //   axios.post(`http://localhost:9000/pitchersCarrer`, newPlayers).then((res)=>{
+  //     navigate(`/teams/groups/${memberId}`);
+  //     })
+  // }
+  const addStatsPlayers4 = (newPlayers) => {
+    axios.post(`https://my-baseball-teams.herokuapp.com/pitchersCarrer`, newPlayers).then((res)=>{
       navigate(`/teams/groups/${memberId}`);
       })
   }

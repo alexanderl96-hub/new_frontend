@@ -20,7 +20,6 @@ const Desing = () => {
      const [last, setLast] =useState(10)
      const [start1, setPreviuos] =useState(0)
      const [last1, setLastP] =useState(10)
-    // let sum = 0
     let fisrt = 0
     let params = useParams()
     let teamId = params.id
@@ -60,95 +59,75 @@ const Desing = () => {
         setStart(count)
         setLast(newtest.length )  
       }
-      // console.log(last, start , count, value)
       setStart(start + 10)
       setLast(last + 10)
        setPreviuos(start+ 10)
       setLastP(last+ 10)
     }
     function previuosrow (){
-      // let value = newtest.length -10
-      // if(last >= newtest.length ){
-      //   setLast(newtest.length )  
-      // }
-      // console.log( start > value)
       setPreviuos(start1 - 10)
       setLastP(last1 - 10)
       setStart(start -10)
       setLast(last - 10)
     }
-    // useEffect(() => {
-    //     fetch(`https://my-baseball-teams.herokuapp.com/groups`)
-    //     .then(res => res.json())
-    //     .then(data =>{
-    //       setNewGroup(data)
-    //       setCoachName(data)
-    //     })
-    //   },[search])
-      useEffect(() => {
-        fetch(`http://localhost:9000/groups`)
-        .then(res => res.json())
-        .then(data =>{
-          setNewGroup(data)
-          setCoachName(data)
+     useEffect(() => {
+         fetch(`https://my-baseball-teams.herokuapp.com/groups`)
+         .then(res => res.json())
+         .then(data =>{
+           setNewGroup(data)
+           setCoachName(data)
           setNewtest(data = data.filter((a,b)=> a.team_id === Number(teamId)))
-        })
-      },[search])
+         })
+       },[teamId])
+      // useEffect(() => {
+      //   fetch(`http://localhost:9000/groups`)
+      //   .then(res => res.json())
+      //   .then(data =>{
+      //     setNewGroup(data)
+      //     setCoachName(data)
+      //     setNewtest(data = data.filter((a,b)=> a.team_id === Number(teamId)))
+      //   })
+      // },[search])
+      // useEffect(() => {
+      //   fetch(`http://localhost:9000/teams`)
+      //   .then(res => res.json())
+      //   .then(data =>{
+      //     setGroup(data = data.filter((a,b )=> a.id === Number(teamId)))
+      //   })
+      // },[teamId])
       useEffect(() => {
-        fetch(`http://localhost:9000/teams`)
+        fetch(`https://my-baseball-teams.herokuapp.com/teams`)
         .then(res => res.json())
         .then(data =>{
           setGroup(data = data.filter((a,b )=> a.id === Number(teamId)))
         })
       },[teamId])
 
-    //   useEffect(() => {
-    //     fetch(`https://my-baseball-teams.herokuapp.com/playersStats`)
-    //     .then(res => res.json())
-    //     .then(data =>{
-    //       let arr = data.map((stat,i) => {return stat.players_id === Number(search) ? stat.average: null })
-    //         setNewI(arr = arr.map((a , index)=>  a !== null ? setAB(a) : ''))
-    //     })
-    // },[search])
-    useEffect(() => {
-      fetch(`http://localhost:9000/playersStats`)
-      .then(res => res.json())
-      .then(data =>{
-        let arr = data.map((stat,i) => {return stat.players_id === Number(search) ? stat.average: null })
-          setNewI(arr = arr.map((a , index)=>  a !== null ? setAB(a) : ''))
-      })
-  },[search])
+       useEffect(() => {
+         fetch(`https://my-baseball-teams.herokuapp.com/playersStats`)
+         .then(res => res.json())
+         .then(data =>{
+          let arr = data.map((stat,i) => {return stat.players_id === Number(search) ? stat.average: null })
+            setNewI(arr = arr.map((a , index)=>  a !== null ? setAB(a) : ''))
+         })
+     },[search])
+  //   useEffect(() => {
+  //     fetch(`http://localhost:9000/playersStats`)
+  //     .then(res => res.json())
+  //     .then(data =>{
+  //       let arr = data.map((stat,i) => {return stat.players_id === Number(search) ? stat.average: null })
+  //         setNewI(arr = arr.map((a , index)=>  a !== null ? setAB(a) : ''))
+  //     })
+  // },[search])
 
-    // const handleDelete = () => {
-  //     axios.delete(`https://my-baseball-teams.herokuapp.com/groups/${search}`).then(() =>{
-  //         //  navigate(`/homebase`)
-  //     }, (error) => console.log(error))
-  // };
-
-   // sum = ratingChanged(ab)
     fisrt = ratingChanged(ab)
-      // console.log(newI,'kjkjs')
-      // console.log(search, 'search')
-      // console.log(teamId)
-      // console.log(group,'group')
-      // console.log(sum)
-      // console.log(fisrt)
-      console.log(newtest.slice(start,last), 'test')
-      console.log(newtest.slice(start1,last1), 'testp')
+      
 
   return (
-   <div className='MainDesing'style={{ }}>
+   <div className='MainDesing'>
        
         <div className='sectionNav'>
             <Link to='/teams'className='return' ><h3 className='returnH3' >🔙</h3></Link>     
-            {/* <div className='innerSectionNav' > 
-            <Link to={`/teams/updateMember/${search}`}>
-               <button className='editPlayer' >Edit</button></Link>
-               <Link to={`/teams`} onClick={handleDelete}>
-              <h3 className='deletePlayer' >🚮</h3></Link>
-            </div> */}
-            {/* {DeleteIcon} */}
-            {/* <svg data-testid="DeleteIcon"> {DeleteIcon}</svg> */}
             <Link to={`/teams/newMember/${teamId}`} id={teamId} className='newadded'>New</Link>
         </div>
 
