@@ -79,29 +79,22 @@ const NewMember = () => {
               return age-1
             }
           }
-  //   useEffect(() => {
-  //       fetch(`https://my-baseball-teams.herokuapp.com/teams/${id}`)
-  //       .then(res => res.json())
-  //       .then(data =>{
-  //           setGroup(data.team)
-  //       })
-  // },[id])
+    useEffect(() => {
+        fetch(`https://my-baseball-teams.herokuapp.com/teams/${id}`)
+        .then(res => res.json())
+        .then(data =>{
+            setGroup(data.team)
+        })
+  },[id])
 
-  /* calculate the age of new player
-  const myBirthday = new Date('1987-07-22');
-const rightNow = new Date();
+//   useEffect(() => {
+//     fetch(`http://localhost:9000/teams/${id}`)
+//     .then(res => res.json())
+//     .then(data =>{
+//         setGroup(data.team)
+//     })
+// },[id])
 
-const numberOfMsIHaveLived = rightNow - myBirthday;  */
-  useEffect(() => {
-    fetch(`http://localhost:9000/teams/${id}`)
-    .then(res => res.json())
-    .then(data =>{
-        setGroup(data.team)
-    })
-},[id])
-
-console.log(currentAge, group.name)
-console.log(hoyB, monthB, yearB)
   return (
     <div className='newMember_Container'>
          <h1 className='newTitle'>New Member</h1>

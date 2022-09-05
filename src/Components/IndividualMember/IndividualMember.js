@@ -25,19 +25,19 @@ const IndividualMember = () => {
 //     }, (error) => console.log(error))
 // };
 const handleDelete = () => {
-    axios.delete(`http://localhost:9000/groups/${memberId}`).then(() =>{
+    axios.delete(`https://my-baseball-teams.herokuapp.com/groups/${memberId}`).then(() =>{
         //  navigate(`/homebase`)
     }, (error) => console.log(error))
-    axios.delete(`http://localhost:9000/playersStats/${memberId}`).then(() =>{
+    axios.delete(`https://my-baseball-teams.herokuapp.com/playersStats/${memberId}`).then(() =>{
         //  navigate(`/homebase`)
     }, (error) => console.log(error))
-    axios.delete(`http://localhost:9000/playersCareer/${memberId}`).then(() =>{
+    axios.delete(`https://my-baseball-teams.herokuapp.com/playersCareer/${memberId}`).then(() =>{
         //  navigate(`/homebase`)
     }, (error) => console.log(error))
-    axios.delete(`http://localhost:9000/pitchersStats/${memberId}`).then(() =>{
+    axios.delete(`https://my-baseball-teams.herokuapp.com/pitchersStats/${memberId}`).then(() =>{
         //  navigate(`/homebase`)
     }, (error) => console.log(error))
-    axios.delete(`http://localhost:9000/pitchersCarrer/${memberId}`).then(() =>{
+    axios.delete(`https://my-baseball-teams.herokuapp.com/pitchersCarrer/${memberId}`).then(() =>{
         //  navigate(`/homebase`)
     }, (error) => console.log(error))
 };
@@ -47,97 +47,97 @@ const handleDelete = () => {
 //     }, (error) => console.log(error))
 // };
 
-//     useEffect(() => {
-//         fetch(`https://my-baseball-teams.herokuapp.com/groups`)
-//         .then(res => res.json())
-//         .then(data =>{
-//             setMember(data)
-//         })
-//   },[])
+    useEffect(() => {
+        fetch(`https://my-baseball-teams.herokuapp.com/groups`)
+        .then(res => res.json())
+        .then(data =>{
+            setMember(data)
+        })
+  },[])
 
-  useEffect(() => {
-    fetch(`http://localhost:9000/groups`)
-    .then(res => res.json())
-    .then(data =>{
-        setMember(data)
-    })
-},[])
 //   useEffect(() => {
-//     fetch(`https://my-baseball-teams.herokuapp.com/playersStats`)
+//     fetch(`http://localhost:9000/groups`)
 //     .then(res => res.json())
 //     .then(data =>{
-//         setTeamID(data)
+//         setMember(data)
 //     })
 // },[])
-useEffect(() => {
-    fetch(`http://localhost:9000/playersStats`)
+  useEffect(() => {
+    fetch(`https://my-baseball-teams.herokuapp.com/playersStats`)
     .then(res => res.json())
     .then(data =>{
         setTeamID(data)
     })
 },[])
-
 // useEffect(() => {
-//     fetch(`https://my-baseball-teams.herokuapp.com/playersCareer`)
+//     fetch(`http://localhost:9000/playersStats`)
+//     .then(res => res.json())
+//     .then(data =>{
+//         setTeamID(data)
+//     })
+// },[])
+
+useEffect(() => {
+    fetch(`https://my-baseball-teams.herokuapp.com/playersCareer`)
+    .then(res => res.json())
+    .then(data =>{
+        setTeamCareerID(data)
+    })
+ },[])
+// useEffect(() => {
+//     fetch(`http://localhost:9000/playersCareer`)
 //     .then(res => res.json())
 //     .then(data =>{
 //         setTeamCareerID(data)
 //     })
 // },[])
-useEffect(() => {
-    fetch(`http://localhost:9000/playersCareer`)
-    .then(res => res.json())
-    .then(data =>{
-        setTeamCareerID(data)
-    })
-},[])
 
-// useEffect(() => {
-//     fetch(`https://my-baseball-teams.herokuapp.com/pitchersStats`)
-//     .then(res => res.json())
-//     .then(data =>{
-//         setPitcherID(data)
-//     })
-// },[])
 useEffect(() => {
-    fetch(`http://localhost:9000/pitchersStats`)
+    fetch(`https://my-baseball-teams.herokuapp.com/pitchersStats`)
     .then(res => res.json())
     .then(data =>{
         setPitcherID(data)
     })
 },[])
-
-
 // useEffect(() => {
-//     fetch(`https://my-baseball-teams.herokuapp.com/pitchersCarrer`)
+//     fetch(`http://localhost:9000/pitchersStats`)
 //     .then(res => res.json())
 //     .then(data =>{
-//         setPitcherCareerID(data)
+//         setPitcherID(data)
 //     })
 // },[])
+
+
 useEffect(() => {
-    fetch(`http://localhost:9000/pitchersCarrer`)
+    fetch(`https://my-baseball-teams.herokuapp.com/pitchersCarrer`)
     .then(res => res.json())
     .then(data =>{
         setPitcherCareerID(data)
     })
 },[])
-
-//   useEffect(() => {
-//     fetch(`https://my-baseball-teams.herokuapp.com/groups/${memberId}`)
+// useEffect(() => {
+//     fetch(`http://localhost:9000/pitchersCarrer`)
 //     .then(res => res.json())
 //     .then(data =>{
-//         setGroup(data.team.team_id )
+//         setPitcherCareerID(data)
 //     })
-// },[memberId])
+// },[])
 
-useEffect(() => {
-    fetch(`http://localhost:9000/groups/${memberId}`)
+  useEffect(() => {
+    fetch(`https://my-baseball-teams.herokuapp.com/groups/${memberId}`)
     .then(res => res.json())
     .then(data =>{
         setGroup(data.team.team_id )
     })
-  },[memberId])
+},[memberId])
+
+// useEffect(() => {
+//     fetch(`http://localhost:9000/groups/${memberId}`)
+//     .then(res => res.json())
+//     .then(data =>{
+//         setGroup(data.team.team_id )
+//     })
+//   },[memberId])
 
 
   return (

@@ -185,10 +185,6 @@ const AddStatsPlayers = () => {
 //       })
 //   }
 
-console.log(memberId)
-console.log(memberHold,'memberHold')
-console.log(checkId)
-console.log(statPlayers)
 
   return (
     <div className='StasContainer'>
