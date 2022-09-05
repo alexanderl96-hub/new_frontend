@@ -7,7 +7,12 @@ import axios from 'axios'
 const NewMember = () => {
     const navigate = useNavigate();
     let { id } = useParams();
-    const [group, setGroup] = useState([])
+    const [group, setGroup] = useState([]);
+    const date = new Date();
+    const year = date.getFullYear()
+    const month = date.getMonth()+1
+    const hoy = date.getDate()
+   
     const [newMember,setMember] = useState({
        name: '',
        team_id: '',
@@ -44,17 +49,36 @@ const NewMember = () => {
         e.preventDefault()
         addMember(newMember)
       }
-      // const addMember = (newMember) => {
-      //   axios.post(`https://my-baseball-teams.herokuapp.com/groups`, newMember).then((res)=>{
-      //     navigate(`/teams/newpage/${id}`);
-      //     })
-      // }
       const addMember = (newMember) => {
-        axios.post(`http://localhost:9000/groups`, newMember).then((res)=>{
+        axios.post(`https://my-baseball-teams.herokuapp.com/groups`, newMember).then((res)=>{
           navigate(`/teams/newpage/${id}`);
           })
       }
+      // const addMember = (newMember) => {
+      //   axios.post(`http://localhost:9000/groups`, newMember).then((res)=>{
+      //     navigate(`/teams/newpage/${id}`);
+      //     })
+      // }
+      let monterValue = newMember.born.split(' ')[0]
+      let hoyValue = newMember.born.split(' ')[1]
+      let yearValue = newMember.born.split(' ').slice(-1).join()
     
+      const dateBirth = new Date(`${Number(yearValue)}-${monterValue}-${hoyValue}`)
+      const yearB = dateBirth.getFullYear()
+      const monthB = dateBirth.getMonth()+1
+      const hoyB = dateBirth.getDate()
+
+      const age = year - yearB
+      // const currentAge = monthB <= month && hoyB >= hoy ? age  : age-1
+      const currentAge = () =>{
+            if(monthB <= month){
+              return age
+            }else if(monthB <= month && hoyB > hoy){
+              return age-1
+            }else{
+              return age-1
+            }
+          }
   //   useEffect(() => {
   //       fetch(`https://my-baseball-teams.herokuapp.com/teams/${id}`)
   //       .then(res => res.json())
@@ -62,6 +86,12 @@ const NewMember = () => {
   //           setGroup(data.team)
   //       })
   // },[id])
+
+  /* calculate the age of new player
+  const myBirthday = new Date('1987-07-22');
+const rightNow = new Date();
+
+const numberOfMsIHaveLived = rightNow - myBirthday;  */
   useEffect(() => {
     fetch(`http://localhost:9000/teams/${id}`)
     .then(res => res.json())
@@ -70,6 +100,8 @@ const NewMember = () => {
     })
 },[id])
 
+console.log(currentAge, group.name)
+console.log(hoyB, monthB, yearB)
   return (
     <div className='newMember_Container'>
          <h1 className='newTitle'>New Member</h1>
@@ -88,10 +120,10 @@ const NewMember = () => {
                                 <input id='country' type="text" onChange={handleInput} placeholder="Country..." className='inputT' ></input>
                             </div>
                             <div className='innerNew'>
-                                <input id='age' type="text" onChange={handleInput}  placeholder="Age..." className='inputT'></input>
+                                <input id='age' type="text" onChange={handleInput}  placeholder={`Age.. ${currentAge(age) === Number(currentAge(age)) ? currentAge(age) : '' }`}className='inputT'></input>
                                 <input id='height' type="text" onChange={handleInput}  placeholder="Height..."  className='inputT' ></input>
                                 <input id='weight' type="text" onChange={handleInput}  placeholder="Weight..." className='inputT' ></input>
-                                <input id='current_team' type="text" onChange={handleInput} placeholder="Current Team..." className='inputT' ></input>
+                                <input id='current_team' type="text" onChange={handleInput} placeholder={"Current Team... " +group.name} className='inputT' ></input>
                                 <input id='salary' type="text" onChange={handleInput}  placeholder="Salary..." className='inputT' ></input>
                                 <input id='number' type="number" onChange={handleInput} placeholder="Number..." className='inputT' ></input>
                                 <input id='education' type="text" onChange={handleInput}  placeholder="Education..." className='inputT'></input>
