@@ -45,11 +45,11 @@ const Players = () => {
   return (
     <div style={{width:'100%'}} >
         <Navbar/>
-        <h1>Players</h1>
+        <h1 style={{backgroundColor: 'red',color: 'white',width:'10%', borderRadius: '10px', marginTop: '5px', marginBottom: '5px'}}>Players</h1>
         <div style={{display:'flex'}}>
             <div >
                 <fom onChange={handleSubmit} >
-                <input id='name' type='text' onChange={handleInput} placeholder="🔍" style={{padding: '2px',  marginLeft: '400px',width: '300px'}} ></input>
+                <input id='name' type='text' onChange={handleInput} placeholder="🔍" style={{padding: '2px',  marginLeft: '500px',width: '300px'}} ></input>
                 {/* <button type='submit' onClick={handleReset} style={{padding: '2px', fontSize: '15px', marginLeft: '-49px'}} >Reset</button> */}
                 </fom>
             </div>

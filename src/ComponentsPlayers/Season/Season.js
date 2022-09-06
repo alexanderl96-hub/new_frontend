@@ -15,13 +15,13 @@ const Season = () => {
   return (
     <div>
         <Navbar/>
-        <h1>Season</h1>
+        <h1 style={{backgroundColor: '#0000ffa6',color: 'white',width:'10%', borderRadius: '10px', marginTop: '5px', marginBottom: '5px'}}>Season</h1>
         <div>
           {season.map((data, index)=>{
            return ( 
              <div id={index}>
                {/* {data.points_team > data.points_vs ? data.points_team  :null} */}
-               <div style={{ background: 'blue', marginBottom: '3px', display: 'flex', margin:'4px', borderRadius: '3px',  height: '90px'  }}>
+               <div style={{ background: '#0000ffa6', marginBottom: '3px', display: 'flex', margin:'4px', borderRadius: '3px',  height: '90px'  }}>
                   <div >
                      <div style={{ color: 'white', textAlign: 'center', width: '70px'}}>{data.date}</div>
                   </div>

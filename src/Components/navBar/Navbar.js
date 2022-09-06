@@ -7,7 +7,7 @@ function Navbar() {
     <div className="navbar">
         <div style={{}} className="navbar1">
           <div style={{}} className="navbar2">
-            <h1 style={{}} className="navbar3">Showing Team</h1>
+            <h1 style={{}} className="navbar3">USA Teams</h1>
             <Link to={'/teams/new'}>
                 <h4 style={{}} className='navAddgroup'>Add +</h4>
             </Link>

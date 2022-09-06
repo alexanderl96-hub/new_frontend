@@ -50,11 +50,11 @@ const Coaches = () => {
   return (
     <div style={{width:'100%'}} >
         <Navbar/>
-        <h1>Coaches</h1>
+        <h1 style={{backgroundColor: 'gray',color: 'white',width:'10%', borderRadius: '10px', marginTop: '5px', marginBottom: '5px'}}>Coaches</h1>
         <div style={{display:'flex'}}>
             <div >
                 <fom onChange={handleSubmit} >
-                   <input id='name' type='text' onChange={handleInput} placeholder="🔍" style={{padding: '2px',color:'blue',  marginLeft: '400px',width: '300px'}} ></input>
+                   <input id='name' type='text' onChange={handleInput} placeholder="🔍" style={{padding: '2px',color:'blue',  marginLeft: '500px',width: '300px'}} ></input>
                 </fom>
             </div>
             <div>{coach.length === coachName.length ? 

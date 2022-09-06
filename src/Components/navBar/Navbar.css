@@ -8,7 +8,7 @@
   display: flex;
 }
 .navbar3{
-  margin-left: 40%;
+  margin-left: 750px;
 }
 h1{
     display: flex;
@@ -22,7 +22,7 @@ h1{
   width: 50px; 
   text-align: center; 
   background-color: white; 
-  margin-left: 130%; 
+  margin-left: 100%; 
   margin-top: 20px;
   cursor: pointer; 
 }  
