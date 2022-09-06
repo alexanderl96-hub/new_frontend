@@ -41,7 +41,9 @@ const FrontPage = () => {
             <div className='Team'>  
             <p className='soccer'>LA Dodgers</p>
             <p   className='arrows'> NY Mets</p>
+             <span className='spanArrow'>&#8674;</span>
               <Link to='/teams' className="TitleLink" onMouseOver={homeClick} onMouseOut={homeClickOut}> {word}</Link> 
+             
               <div className='martir'>
                   <p className='sportL'>New York Yankees</p>
               </div>

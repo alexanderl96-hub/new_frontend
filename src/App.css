@@ -80,12 +80,12 @@ body{
 .arrows{
   animation: fadeInDownBig 12s;
   color: white;
-  font-size: 82px;
+  font-size: 62px;
 }
 @keyframes fadeInDownBig {
   from {
     opacity: 0;
-    transform: translate3d(0, -2000px, 0);
+    transform: translate3d(0, -1000px, 0);
   }
 
   to {

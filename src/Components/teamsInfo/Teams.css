@@ -9,11 +9,10 @@
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 5px;
+    padding: 2px;
     height: 760px;
     background-color: rgba(148, 145, 145, 0.645);
     position: relative;
-   
 
 }
 @keyframes fadein {

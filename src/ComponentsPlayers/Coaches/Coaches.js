@@ -54,7 +54,7 @@ const Coaches = () => {
         <div style={{display:'flex'}}>
             <div >
                 <fom onChange={handleSubmit} >
-                   <input id='name' type='text' onChange={handleInput} placeholder="🔍" style={{padding: '2px',color:'blue',  marginLeft: '500px',width: '300px'}} ></input>
+                   <input id='name' type='text' onChange={handleInput} placeholder="🔍" style={{padding: '2px',color:'blue',  marginLeft: '400px',width: '300px'}} ></input>
                 </fom>
             </div>
             <div>{coach.length === coachName.length ? 

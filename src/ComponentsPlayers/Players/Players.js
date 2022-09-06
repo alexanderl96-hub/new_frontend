@@ -49,7 +49,7 @@ const Players = () => {
         <div style={{display:'flex'}}>
             <div >
                 <fom onChange={handleSubmit} >
-                <input id='name' type='text' onChange={handleInput} placeholder="🔍" style={{padding: '2px',  marginLeft: '500px',width: '300px'}} ></input>
+                <input id='name' type='text' onChange={handleInput} placeholder="🔍" style={{padding: '2px',  marginLeft: '400px',width: '300px'}} ></input>
                 {/* <button type='submit' onClick={handleReset} style={{padding: '2px', fontSize: '15px', marginLeft: '-49px'}} >Reset</button> */}
                 </fom>
             </div>
