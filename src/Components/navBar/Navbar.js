@@ -2,34 +2,31 @@ import React from 'react'
 import './Navbar.css'
 import { Link } from 'react-router-dom'
 
-function Navbar() {
+function Navbar({id}) {
   return (
     <div className="navbar">
-        <div className="navbar1">
-          <div className="navbar2">
-            <h1 className="navbar3">USA Teams</h1>
-            <Link to={'/teams/new'}>
-                <h4 className='navAddgroup'>Add Team</h4>
-            </Link>
-         </div>
-         <div className="nav">
-            <Link to={'/teams'} className='nav-inner'>
-               <div className='nav-inner-inner'>Team</div>
+          <div className="nav">
+            <Link to={'/'} className='nav-inner' >
+               <div className='nav-inner-inner1'>TEAMS</div>
             </Link>
             <Link to={'/teams/allplayers'} className='nav-inner'>
-               <div className='nav-inner-inner' >Players</div>
+               <div className='nav-inner-inner' >PLAYERS</div>
             </Link>
-            <Link to={'/teams/allCoaches'} className='nav-inner'>
-               <div className='nav-inner-inner'>Coaches</div>
+            <Link to={'/teams/allCoaches'} className='nav-inner' >
+               <div className='nav-inner-inner'>COACHES</div>
             </Link>
-           <Link to={'/teams/Season'} className='nav-inner'>
-               <div className='nav-inner-inner'>Season</div>
+           <Link to={'/teams/Season'} className='nav-inner' >
+               <div className='nav-inner-inner'>SEASON</div>
            </Link>
            {/* <Link to={'/teams/allFavorites'} className='nav-inner'>
                <div className='nav-inner-inner'>Favorites</div>
            </Link> */}
          </div>
-         </div>
+          <div className="nav2">        
+            <Link to={'/teams/new'}>
+                <h2 className='navAddgroup'>Add Team</h2>
+            </Link>
+           </div>
     </div>
   )
 }

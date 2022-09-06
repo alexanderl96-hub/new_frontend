@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import './App.css';
 
-import FrontPage from './Pages/FrontPage'
+// import FrontPage from './Pages/FrontPage'
 import Teams from '../src/Components/teamsInfo/Teams'
 import IndividualTeam from '../src/Components/textFolder/TextFolder'
 import TeamUpDate from './Components/teamUpDate/TeamUpDate'
@@ -30,8 +30,8 @@ function App() {
     <div className="App">
       <Router >
         <Routes>
-          <Route exact path="/" element={<FrontPage/>}/>
-          <Route exact path="/teams" element={<Teams/>}/>
+          {/* <Route exact path="/" element={<FrontPage/>}/> */}
+          <Route exact path="/" element={<Teams/>}/>
           <Route  path="/teams/:id" element={<IndividualTeam/>}/>
           <Route  path="/teams/groups/:id" element={<IndividualMember/>}/>
           <Route  path="/teams/updateteam/:id" element={<TeamUpDate/>}/>

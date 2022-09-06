@@ -1,12 +1,21 @@
 body{
   margin: 0;
-  background: url('/src/image/MLB-vector-logos.jpeg');
+  /* background: url('/src/image/MLB-vector-logos.jpeg'); */
+  -webkit-font-smoothing: antialiased;
+  -webkit-box-direction: normal;
+  background-color: rgb(236, 236, 236);
+  color: rgb(51, 51, 51);
+  display: flex;
+  flex-direction: column;
+  font-family: mlb-primary, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  height: 100%;
+  line-height: 1.5;
 }
 .App{
   /* background: url('/src/image/MLB-vector-logos.jpeg'); */
-  background-size: contain;
+  /* background-size: contain;
   height: 100%; 
-  overflow-y: hidden;
+  overflow-y: hidden; */
   
 }
 .app{

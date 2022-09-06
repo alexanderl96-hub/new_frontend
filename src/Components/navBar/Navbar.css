@@ -1,14 +1,24 @@
-.navbar1{
+.navbar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   background-color: gray;
-  padding: 10px;
+  padding: 5px;
+  height: 50px;
   box-shadow: 2px 4px 4px black;
 }
-.navbar2{
-  padding: 5px;
+.nav{
   display: flex;
+  position: static;
+  color: white;
+  cursor: pointer;
+  margin-left: 30px;
 }
-.navbar3{
-  margin-left: 605px;
+.nav2{
+  display: flex;
+  position: static;
+  color: white;
+  cursor: pointer;
 }
 h1{
     display: flex;
@@ -16,34 +26,26 @@ h1{
     color: #e20909;
   }
 .navAddgroup{
-  border: 1px solid; 
-  padding: 2px;
+  color: white;
   font-size: 15px;
   border-radius: 3px; 
   width: 80px; 
   text-align: center; 
-  background-color: white; 
-  margin-left: 55%; 
-  margin-top: 20px;
+  margin-left: 700px; 
   cursor: pointer; 
 }  
-.nav{
-    display: flex;
-    position: static;
-    color: white;
-    cursor: pointer;
-  }
+
 .nav:hover{
   border-radius: 10px;
 }
 .nav-inner{
-  width: 70px;
+   width: 90px;
    padding: 2px;
    color: white;
-   border-radius: 10px;
    text-align: center;
    transition: all 1s;
 }
+
 .nav-inner:hover{
   background-color: white;
   color: black;
@@ -52,9 +54,7 @@ h1{
 .nav-inner-inner{
    color: white;
 }
-.nav-inner-inner:hover{
-  color: black;
-}
+
 
   @media only screen and (max-width: 768px){
    

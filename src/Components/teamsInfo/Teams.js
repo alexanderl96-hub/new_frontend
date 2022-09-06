@@ -6,6 +6,7 @@ import './Teams.css'
 
 
 
+
 const Teams = () => {
     const [teams, setTeams] = useState([])
 
@@ -29,6 +30,7 @@ const Teams = () => {
   return (
     <div className='home'>
         <Navbar />
+         <h1 className="navbar3">USA Teams</h1>
          <div className='Container'>
          {teams.map((team, index)=>{
              return (
