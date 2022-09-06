@@ -8,6 +8,8 @@ const MemberUpDate = () => {
   const [member, setMemberid] = useState([])
   const [memberName, setMemberName] = useState([])
   const [memberImg, setMemberImg] = useState([])
+  const [memberTeam, setMemberTeam] = useState([])
+
   const navigate = useNavigate(); 
   let { id } = useParams();
   const [newMember,setMember] = useState({
@@ -78,6 +80,7 @@ const MemberUpDate = () => {
             setMemberid(data.team.team_id)
             setMemberName(data.team.name)
             setMemberImg(data.team.imag)
+            setMemberTeam(data.team.current_team)
         })
   },[id])
   //  useEffect(() => {
@@ -112,7 +115,7 @@ const MemberUpDate = () => {
                                 <input id='age' type="text" onChange={handleInput}  placeholder="Age..." className='inputT'></input>
                                 <input id='height' type="text" onChange={handleInput}  placeholder="Height..."  className='inputT' ></input>
                                 <input id='weight' type="text" onChange={handleInput}  placeholder="Weight..." className='inputT' ></input>
-                                <input id='current_team' type="text" onChange={handleInput} placeholder="Current Team..." className='inputT' ></input>
+                                <input id='current_team' type="text" onChange={handleInput} placeholder={memberTeam} className='inputT' ></input>
                                 <input id='salary' type="text" onChange={handleInput}  placeholder="Salary..." className='inputT' ></input>
                                 <input id='number' type="number" onChange={handleInput} placeholder="Number..." className='inputT' ></input>
                                 <input id='education' type="text" onChange={handleInput}  placeholder="Education..." className='inputT'></input>

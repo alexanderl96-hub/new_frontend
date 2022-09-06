@@ -59,16 +59,16 @@ const Desing = () => {
         setStart(count)
         setLast(newtest.length )  
       }
-      setStart(start + 10)
-      setLast(last + 10)
-       setPreviuos(start+ 10)
-      setLastP(last+ 10)
+      setStart(start + 8)
+      setLast(last + 8)
+       setPreviuos(start+ 8)
+      setLastP(last+ 8)
     }
     function previuosrow (){
-      setPreviuos(start1 - 10)
-      setLastP(last1 - 10)
-      setStart(start -10)
-      setLast(last - 10)
+      setPreviuos(start1 - 8)
+      setLastP(last1 - 8)
+      setStart(start -8)
+      setLast(last - 8)
     }
      useEffect(() => {
          fetch(`https://my-baseball-teams.herokuapp.com/groups`)
@@ -185,9 +185,9 @@ const Desing = () => {
       
         </div>
         <div className='mid'>
-        {start <= 0 ? null : <button onClick={previuosrow } className='button1'>Back</button>}
-        {last > newtest.length ? null :  <button onClick={nextrow} className='button2'>Forward</button>  }
-        </div>         {/* {new} */}
+        {start <= 0 ? null : <button onClick={previuosrow } className='button1'>&#10148;</button>}
+        {last > newtest.length ? null :  <button onClick={nextrow} className='button2'>&#10148;</button>  }
+        </div>  
         <div className="section3">
            {newtest.slice(start,last).map((a, index)=>{
                return (

@@ -5,11 +5,11 @@ import { Link } from 'react-router-dom'
 function Navbar() {
   return (
     <div className="navbar">
-        <div style={{}} className="navbar1">
-          <div style={{}} className="navbar2">
-            <h1 style={{}} className="navbar3">USA Teams</h1>
+        <div className="navbar1">
+          <div className="navbar2">
+            <h1 className="navbar3">USA Teams</h1>
             <Link to={'/teams/new'}>
-                <h4 style={{}} className='navAddgroup'>Add +</h4>
+                <h4 className='navAddgroup'>Add Team</h4>
             </Link>
          </div>
          <div className="nav">

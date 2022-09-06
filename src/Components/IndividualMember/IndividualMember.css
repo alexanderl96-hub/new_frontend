@@ -1,12 +1,12 @@
 .Main{
     background: #0000ff6d; 
     padding: 15px; 
-    height: 860px;
+    height: 780px;
     animation: fadein 1s;
     -moz-animation: fadein 1s; /* Firefox */
     -webkit-animation: fadein 1s; /* Safari and Chrome */
     -o-animation: fadein 1s;
-    position: fixed;
+    /* position: fixed; */
 }
 .Main2{
     display: flex; 
@@ -17,7 +17,7 @@
      width: 10%; 
      border-radius: 10px;
      padding: 10px;
-     margin-left: -400px;
+     margin-left: -300px;
     text-align: left;
 }
 .add-Update{

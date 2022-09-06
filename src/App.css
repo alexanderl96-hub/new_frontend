@@ -10,12 +10,13 @@ body{
   
 }
 .app{
-  font: bolder 145px "Alfa Slab One";
+  font: bolder 135px "Alfa Slab One";
   text-align: center;
   padding-top: 14%;
   padding-bottom: 14%;
 } 
  .Title{
+  /* background-size: contain; */
   mix-blend-mode: multiply;
   background-color:#733033;
   height: 405px;
