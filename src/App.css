@@ -9,30 +9,30 @@ body{
   flex-direction: column;
   font-family: mlb-primary, "Helvetica Neue", Helvetica, Arial, sans-serif;
   height: 100%;
-  line-height: 1.5;
+  /* line-height: 1.5; */
 }
-.App{
-  /* background: url('/src/image/MLB-vector-logos.jpeg'); */
-  /* background-size: contain;
+/*.App{
+  background: url('/src/image/MLB-vector-logos.jpeg'); 
+  background-size: contain;
   height: 100%; 
-  overflow-y: hidden; */
+  overflow-y: hidden; 
   
-}
-.app{
+}*/
+/* .app{
   font: bolder 135px "Alfa Slab One";
   text-align: center;
   padding-top: 14%;
   padding-bottom: 14%;
-} 
- .Title{
-  /* background-size: contain; */
+}  */
+ /* .Title{
+  background-size: contain;
   mix-blend-mode: multiply;
   background-color:#733033;
   height: 405px;
  
-}
+} */
 
-.Team:hover{
+/* .Team:hover{
  cursor: pointer;
 }
 .TitleLink{
@@ -41,9 +41,9 @@ body{
 }
 .TitleLink:hover{
   color: #52FF52;
-}
+} */
 
-.Loading{
+/* .Loading{
   width: 150px;
   height: 150px;
   padding-top: 20px;
@@ -56,8 +56,8 @@ body{
   color: white;
   margin-left: -920px; 
   transition: all 400s;
-}
-@keyframes slideInRight {
+} */
+/* @keyframes slideInRight {
   from {
     transform: translate3d(800px, 200px, 0);
     visibility: visible;
@@ -70,9 +70,9 @@ body{
     color: transparent;
   }
  
-}
+} */
 
-.soccer{
+/* .soccer{
   animation: slideOutRight 10s;
   font-size: 52px;
   color: white;
@@ -102,8 +102,8 @@ body{
     opacity: 1;
     transform: translate3d(0, 0, 0);
   }
-}
-
+} */
+/* 
 @media only screen and (max-width: 768px) {
   body {
     margin: 0;
@@ -127,4 +127,4 @@ body{
     height: 535px;
   }
  
-}
+} */

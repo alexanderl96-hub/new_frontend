@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import ReactStars from "react-rating-stars-component"
 // import DeleteIcon from '@mui/icons-material/Delete';
-
+import Navbar from '../Components/navBar/Navbar'
 import './desing.css'
 import axios from 'axios'
 
@@ -17,9 +17,9 @@ const Desing = () => {
      const [group, setGroup] =useState([])
 
      const [start, setStart] =useState(0)
-     const [last, setLast] =useState(10)
+     const [last, setLast] =useState(6)
      const [start1, setPreviuos] =useState(0)
-     const [last1, setLastP] =useState(10)
+     const [last1, setLastP] =useState(6)
     let fisrt = 0
     let params = useParams()
     let teamId = params.id
@@ -53,22 +53,22 @@ const Desing = () => {
       };
 
     function nextrow (){
-      const value = newtest.length - 10
+      const value = newtest.length - 6
       let count = Math.abs(value)
       if(last > value){
-        setStart(count)
-        setLast(newtest.length )  
+        setStart(newtest.slice(count, -2))
+         setLast(newtest.length )  
       }
-      setStart(start + 8)
-      setLast(last + 8)
-       setPreviuos(start+ 8)
-      setLastP(last+ 8)
+      setStart(start + 6)
+      setLast(last + 6)
+       setPreviuos(start+ 6)
+      setLastP(last+ 6)
     }
     function previuosrow (){
-      setPreviuos(start1 - 8)
-      setLastP(last1 - 8)
-      setStart(start -8)
-      setLast(last - 8)
+      setPreviuos(start1 - 6)
+      setLastP(last1 - 6)
+      setStart(start -6)
+      setLast(last - 6)
     }
      useEffect(() => {
          fetch(`https://my-baseball-teams.herokuapp.com/groups`)
@@ -125,11 +125,11 @@ const Desing = () => {
 
   return (
    <div className='MainDesing'>
-       
-        <div className='sectionNav'>
+        <Navbar />
+        {/* <div className='sectionNav'>
             <Link to='/teams'className='return' ><h3 className='returnH3' >🔙</h3></Link>     
             <Link to={`/teams/newMember/${teamId}`} id={teamId} className='newadded'>New</Link>
-        </div>
+        </div> */}
 
         <div className="section2"> 
          
@@ -153,10 +153,10 @@ const Desing = () => {
                                <p><span>Position:</span> {a.position}</p>
                                <p><span>Salary:</span> {a.salary}</p>
                                <p><span>About: </span>{a.about}</p>
-                               <p><span>Bats:</span> {a.bats}</p>
+                               {/* <p><span>Bats:</span> {a.bats}</p>
                                <p><span>Throws:</span> {a.throws}</p>
                                <p><span>Height:</span> {a.height}</p>
-                               <p><span>Weight:</span> {a.weight}</p>
+                               <p><span>Weight:</span> {a.weight}</p> */}
                                <Link to={`/teams/groups/${search}`} className='changeMore'>More...</Link>
                              </div>
                            <div className='innerSectionStart'>
@@ -186,7 +186,7 @@ const Desing = () => {
         </div>
         <div className='mid'>
         {start <= 0 ? null : <button onClick={previuosrow } className='button1'>&#10148;</button>}
-        {last > newtest.length ? null :  <button onClick={nextrow} className='button2'>&#10148;</button>  }
+        {last >= newtest.length ? null :  <button onClick={nextrow} className='button2'>&#10148;</button>  }
         </div>  
         <div className="section3">
            {newtest.slice(start,last).map((a, index)=>{

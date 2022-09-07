@@ -1,7 +1,7 @@
 .Main{
     background: #0000ff6d; 
-    padding: 15px; 
-    height: 780px;
+    /* padding: 15px;  */
+    /* height: 780px; */
     animation: fadein 1s;
     -moz-animation: fadein 1s; /* Firefox */
     -webkit-animation: fadein 1s; /* Safari and Chrome */
@@ -11,6 +11,9 @@
 .Main2{
     display: flex; 
     padding: 10px;
+}
+.first{
+    /* width: 100%; */
 }
 .memberLink1{
     background-color: gray;

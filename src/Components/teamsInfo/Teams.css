@@ -11,9 +11,15 @@
     justify-content: center;
     flex-wrap: wrap;
     padding: 2px;
-    height: 760px;
+    /* height: 760px; */
     position: relative;
-
+}
+.pageTitle{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+    color: white;
+    font-family: cursive;
 }
 @keyframes fadein {
     from { opacity: 0; }

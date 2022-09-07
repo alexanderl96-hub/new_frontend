@@ -2,8 +2,9 @@
     overflow-x: hidden;
     overflow-y: hidden;
      background-color: #80808095;
-     height: 780px;
-     position: relative;
+     height: 100%;
+     width: 1440px;
+     /* position: relative; */
 }
 .mid{
     display:flex;
@@ -70,13 +71,13 @@
 }
 
 .section2{
-    height: 450px;
+    height: 400px;
     width: 100%;
 }
 .section2Container{
     display: flex;
     flex-direction: row;
-    animation: fadeInRight 2s;
+    /* animation: fadeInRight 2s; */
 }
 .newadded{
     text-decoration: none; 
@@ -91,7 +92,7 @@
     text-align:center;
 }
 
-@keyframes fadeInRight {
+/* @keyframes fadeInRight {
     from {
       opacity: 0;
       transform: translate3d(100%, 0, 0);
@@ -101,27 +102,27 @@
       opacity: 1;
       transform: translate3d(0, 0, 0);
     }
-  }
+  } */
 .innerSection2{
     display: flex;
     flex-direction: column;
 }
 .inner-innersection2{
-    width: 250px;
-    height: 350px;
+    width: 220px;
+    height: 250px;
     border: 2px solid white;
     border-radius: 12px;
-    margin-top: 40px;
+    margin-top: -20px;
     background-color: gray;
 }
 .image{
-    width: 250px;
-    height: 351px;
+    width: 220px;
+    height: 250px;
     border-radius: 12px;
 }
 .innersection2H3{
     margin-top: 20px;
-    height: 20px;
+    height: 25px;
     width: 230px;
     padding:10px;
     background-color: white;
@@ -129,12 +130,13 @@
 }
 
 .innerSection2-3{
-    width: 400px;
-    height: 330px;
+    width: 540px;
+    height: 250px;
     border: 2px solid white;
     border-radius: 12px;
     margin-top: 20px;
     padding: 10px;
+    /* margin: -10px; */
     background-color: white;
     text-align: justify;
 }
@@ -173,7 +175,7 @@
 }
 .media-group-container{
     margin: 3px;
-    height: 210px;  width: 160px;
+    height: 220px;  width: 160px;
     background-color: rgba(255, 255, 255, 0.762);
     border-radius: 12.8px;
 
@@ -187,7 +189,7 @@
 .media-group-container > h3 {
     background-color: white;
     border-radius: 13px;
-    height: 50px;
+    height: 60px;
 }
 .media-group > img {
     background-color: gray;
@@ -208,10 +210,10 @@
     margin-left: 34%;
     margin-top: 8px;
     transition: all 1s;
-    backface-visibility: visible;
-    animation: flip 3.5s;
+    /* backface-visibility: visible; */
+    /* animation: flip 3.5s; */
 }
-@keyframes flip {
+/* @keyframes flip {
     from {
       transform: perspective(300px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, -360deg);
       animation-timing-function: ease-out;
@@ -239,7 +241,7 @@
       transform: perspective(300px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
       animation-timing-function: ease-in;
     }
-  }
+  } */
 
 .miFlag2 {
     width: 460px;

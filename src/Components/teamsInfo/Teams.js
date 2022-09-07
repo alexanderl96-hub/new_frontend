@@ -30,7 +30,7 @@ const Teams = () => {
   return (
     <div className='home'>
         <Navbar />
-         <h1 className="navbar3">USA Teams</h1>
+         <h1 className="pageTitle">USA Teams</h1>
          <div className='Container'>
          {teams.map((team, index)=>{
              return (

@@ -2,10 +2,12 @@ import React,  { useState, useEffect }from 'react'
 import { useParams, Link} from 'react-router-dom'
 import './IndividualMember.css'
 import axios from 'axios'
+import Navbar from '../navBar/Navbar'
 
 
 const IndividualMember = () => {
    const [member, setMember] = useState([])
+   const [memberImg, setMemberImg] = useState([])
    const [teamId, setTeamID] = useState([])
    const [teamCareerId, setTeamCareerID] = useState([])
    const [pitcherId, setPitcherID] = useState([])
@@ -128,6 +130,7 @@ useEffect(() => {
     .then(res => res.json())
     .then(data =>{
         setGroup(data.team.team_id )
+        setMemberImg(data.team.imag)
     })
 },[memberId])
 
@@ -142,19 +145,23 @@ useEffect(() => {
 
   return (
       <div  className='Main'>
+            <Navbar />
           <div  className='Main2'>
-              <div > <Link to={`/teams/newpage/${group}`} className='memberLink1'>Back</Link> </div>
+          
+              {/* <div > <Link to={`/teams/newpage/${group}`} className='memberLink1'>Back</Link> </div>
               <div className='add-Update'> 
                 <Link to={`/teams/updateMember/${memberId}`} className='memberLink'>Update Member
                 </Link>
-                <Link to={`/teams/groups/${memberId}/addStats`} className='memberLink2'>Add Stats</Link>
-                <div className='delBTn'> 
+                <Link to={`/teams/groups/${memberId}/addStats`} className='memberLink2'>Add Stats</Link> */}
+                {/* <div className='delBTn'> 
                     <Link to={`/teams/newpage/${group}`} onClick={handleDelete}  className="teamLinkDelete" >Delete</Link>
-                </div>
+                </div> */}
                 {/* give the css to add Stats buttonLink */}
                 {/* <Link to={`/teams/groups/${memberId}/addStats`} className='memberLink2'>Add Stats</Link> */}
-              </div>
-          </div>     
+              {/* </div> */}
+              
+          </div>   
+         
           {member.map((player, index) =>{
               return (
                    <div className="IndividualContainer">

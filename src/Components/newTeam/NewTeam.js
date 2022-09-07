@@ -3,6 +3,7 @@ import { Link , useNavigate } from 'react-router-dom'
 import axios from "axios";
 import '../teamUpDate/TeamUpDate.css'
 import './NewTeam.css'
+import Navbar from '../navBar/Navbar'
 
 
 const NewTeam = () => {
@@ -34,9 +35,10 @@ const NewTeam = () => {
 
   return (
     <div className='newTeam_Container'>
-         <h1 className='newTitle'>New Team</h1>
-         <div className='divLink'> <Link to={`/teams`} className='newLinkBack'>Back</Link> </div>
+         <Navbar />
          <div className='newTeam_Wrap' >
+         <h1 className='newTeam'>New Team</h1>
+         {/* <div className='newTeam_Name'><h3>{newTeam.name}</h3></div> */}
                 <form className='newTeam_Form' nSubmit={handleSubmit}o >
                     <label htmlFor="">Name:</label>
                     <input id='name' type="text" onChange={handleInput}  placeholder="Name and lastname..." className='newInputteam' ></input>
@@ -56,7 +58,7 @@ const NewTeam = () => {
                 </form>
            
          </div>
-         <div className='newTeam_Name'><h3>{newTeam.name}</h3></div>
+        
       </div>
   )
 }
