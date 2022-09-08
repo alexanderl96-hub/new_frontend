@@ -193,7 +193,7 @@ const Desing = () => {
                return (
                    <div className='scrollPlayers' >              
                       { Number(teamId) === a.team_id ? 
-                      <div className={`media-group-container ? change : media-group-container`}  onClick={(e)=>setSearch(a.id)}  > 
+                      <div className={`media-group-container `}  onClick={(e)=>setSearch(a.id)}  > 
                           <div className='media-group' > <img src={a.imag} alt='' /> </div>  
                            <h3  >{articule(a.name)}</h3>
                       </div> 

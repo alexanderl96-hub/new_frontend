@@ -17,7 +17,7 @@ function Navbar({id}) {
   return (
     <div className="navbar">
           <div className="nav" >
-            <Link to='/teams' className='nav-inner' 
+            <Link to='/' className='nav-inner' 
              id='teams' onClick={()=>setClassName(true)} >
                <div className={className === true ? 'nav-inner-inner2' : 'nav-inner-inner' }  >TEAMS</div>
             </Link>

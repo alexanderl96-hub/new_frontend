@@ -1,20 +1,125 @@
 .Main{
-    background: #0000ff6d; 
-    /* padding: 15px;  */
-    /* height: 780px; */
+    background-color: #030353ec; 
+    /* padding: 15px;  */;
     animation: fadein 1s;
     -moz-animation: fadein 1s; /* Firefox */
     -webkit-animation: fadein 1s; /* Safari and Chrome */
     -o-animation: fadein 1s;
     /* position: fixed; */
+    height: 100%;
 }
 .Main2{
-    display: flex; 
-    padding: 10px;
+    /* display: flex; 
+    padding: 10px; */
 }
-.first{
-    /* width: 100%; */
+.divTop{
+    background: linear-gradient(#4256ec, #101125);
+    display: flex;
+    flex-direction: column;
+    text-align: center; 
+    margin-left: 180px;
+    margin-right:180px;
+    height: 480px;
+    margin-top:0.5px;
+    /* background-image: url('https://images2.minutemediacdn.com/image/fetch/w_1046,h_485,c_fill,g_auto,f_auto/https%3A%2F%2Fnolanwritin.com%2Fwp-content%2Fuploads%2Fimagn-images%2F2017%2F07%2F17949891-850x560.jpeg'); */
 }
+.divTop-inner{
+    color: white;
+    height: 50px;
+    width: 100%;
+    background-color:#2c2424;
+    font-family: cursive;
+    font-size: 30px;
+    
+}
+
+.divTop > img{
+    border: 12px solid white;
+    border-radius: 50%;
+    height: 170px;
+    width: 170px;
+    margin-top: 45px;
+    margin-left: 91%;
+    object-fit: cover;
+}
+.divTop > h2{
+    margin-top: 110px;
+    color:White;
+    width: 400px;
+    margin-right: 580px;
+    margin-left: 20px;
+    /* position: relative; */
+}
+.divTop > h3{
+    color:White;
+    width: 400px;
+    margin-top: -15px;
+    margin-right: 660px;
+    margin-left: 20px;
+}
+.divMedium{
+    margin-left: 180px;
+    margin-right:180px;
+    background: rgb(240, 233, 233);
+    box-shadow: 0px -15px 20px 1px #111;
+}
+.IndividualContin{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+     grid-template-rows: repeat(3, 1fr);
+
+
+}
+.IndividualWrapper{
+    margin: 20px;
+    grid-column: 1 / 2;
+    grid-row: 1;
+    /* background-color: red; */
+}
+.IndividualWrapper2{
+    margin: 20px;
+     grid-column: 2 / 3;
+    grid-row: 1;
+    /* background-color: yellow; */
+}
+.IndividualWrapper3{
+    margin: 20px;
+    grid-column: 3 / 4;
+    grid-row: 1;
+     /* background-color: green; */
+}
+.IndividualWrapper4{
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    grid-column: 1 / 4;
+    grid-row: 2;
+    
+    /* background-color: blue; */
+}
+.IndividualWrapper5{
+    margin: 10px;
+    grid-column: 1 / 4;
+    grid-row: 3;
+    /* background-color: orange; */
+}
+
+.team_About1{
+
+}
+.team_About2{
+
+}
+.team_About3{
+
+}
+.team_About4{
+ text-align: center;
+}
+.team_About5{
+
+}
+
 .memberLink1{
     background-color: gray;
      width: 10%; 

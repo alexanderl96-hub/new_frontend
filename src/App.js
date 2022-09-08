@@ -31,7 +31,7 @@ function App() {
       <Router >
         <Routes>
           {/* <Route exact path="/" element={<FrontPage/>}/> */}
-          <Route exact path="/teams" element={<Teams/>}/>
+          <Route exact path="/" element={<Teams/>}/>
           <Route  path="/teams/:id" element={<IndividualTeam/>}/>
           <Route  path="/teams/groups/:id" element={<IndividualMember/>}/>
           <Route  path="/teams/updateteam/:id" element={<TeamUpDate/>}/>

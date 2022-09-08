@@ -8,6 +8,11 @@ import Navbar from '../navBar/Navbar'
 const IndividualMember = () => {
    const [member, setMember] = useState([])
    const [memberImg, setMemberImg] = useState([])
+   const [memberTeam, setMemberTeam] = useState([])
+   const [memberAge, setMemberAge] = useState([])
+   const [memberName, setMemberName] = useState([])
+   const [memberNumber, setMemberNumber] = useState([])
+   const [memberPosition, setMemberPosition] = useState([])
    const [teamId, setTeamID] = useState([])
    const [teamCareerId, setTeamCareerID] = useState([])
    const [pitcherId, setPitcherID] = useState([])
@@ -125,24 +130,36 @@ useEffect(() => {
 //     })
 // },[])
 
-  useEffect(() => {
-    fetch(`https://my-baseball-teams.herokuapp.com/groups/${memberId}`)
-    .then(res => res.json())
-    .then(data =>{
-        setGroup(data.team.team_id )
-        setMemberImg(data.team.imag)
-    })
-},[memberId])
-
-// useEffect(() => {
-//     fetch(`http://localhost:9000/groups/${memberId}`)
+//   useEffect(() => {
+//     fetch(`https://my-baseball-teams.herokuapp.com/groups/${memberId}`)
 //     .then(res => res.json())
 //     .then(data =>{
 //         setGroup(data.team.team_id )
+//         setMemberImg(data.team.imag)
+//         setMemberTeam(data.team.current_team)
+//         setMemberAge(data.team.age)
+//         setMemberPosition(data.team.position)
+//         setMemberName(data.team.name)
+//         setMemberNumber(data.team.number)
 //     })
-//   },[memberId])
+// },[memberId])
+var sectionStyle = {  backgroundImage: "url(" + { memberImg } + ")"
+};
+useEffect(() => {
+    fetch(`http://localhost:9000/groups/${memberId}`)
+    .then(res => res.json())
+    .then(data =>{
+        setGroup(data.team.team_id )
+setMemberImg(data.team.imag)
+setMemberTeam(data.team.current_team)
+setMemberAge(data.team.age)
+setMemberPosition(data.team.position)
+setMemberName(data.team.name)
+setMemberNumber(data.team.number)
+    })
+  },[memberId])
 
-
+console.log(memberImg, group)
   return (
       <div  className='Main'>
             <Navbar />
@@ -161,7 +178,61 @@ useEffect(() => {
               {/* </div> */}
               
           </div>   
-         
+          <div style={{backgroundImage: `url(${memberImg})`}} className='divTop'>
+               <div className='divTop-inner'>Member
+
+               </div>
+               <img src={memberImg} alt='1'  />
+               <h2>{memberName} {memberNumber ? `# ${memberNumber}`: ''}</h2>
+               <h3>{memberTeam} | {memberPosition} | Age: {memberAge}</h3>
+               
+          </div>
+          <div className='divMedium'>
+            <div className="IndividualContin">
+                   <div className='IndividualWrapper'>
+                        <div className="team_About1">
+                            {/* <div> <span>Age:</span>  years</div>  */}
+                            <div> <span>Born:</span> May 27, 1987</div> 
+                            <div> <span>City: </span> Santiago De Cuba</div> 
+                            <div> <span>State:</span> Santiago De Cuba</div>
+                            <div> <span>Country:</span> Cuba</div> 
+                            <div> <span>Education:</span> Art, Desing</div>
+                        </div>
+                   </div>
+                   <div className='IndividualWrapper2'>
+                        <div className="team_About2">
+                            <div> <span>Nickname:</span> Yarini</div>
+                            <div > <span>Parents:</span> Silvia Vilma, Jesus B. La Rosa</div> 
+                            <div> <span>Spouse: </span> - </div> 
+                            <div> <span>Children:</span> 0</div>
+                            <div> <span>Siblings:</span> Jesus La Rosa Perez</div>
+                        </div>
+                   </div>
+                   <div className='IndividualWrapper3'>
+                        <div className="team_About3">         
+                            <div> <span>Bats:</span> Right</div>
+                            <div> <span>Throws:</span> Right</div>
+                            <div> <span>Height:</span> 5`9, (174cm)</div>
+                            <div> <span>Weight: </span> 150lbs, (68kg)</div>
+                            <div> <span>Salary:</span> 0</div>
+                        </div>
+                   </div>
+                   <div className='IndividualWrapper4'>
+                        <div className="team_About4">
+                            <div> <span>About: </span> <div> The CSS Grid Layout Module offers a grid-based layout 
+                            system, with rows and columns, making it easier to design web pages without having 
+                            to use floats and positioning.</div> </div> 
+                        </div>
+                   </div>
+                   <div className='IndividualWrapper5'>
+                        <div className="team_About5">
+                            <div style={{}} className="about4-1"> <span>Stats: </span>{memberId}</div>  
+                        </div>
+                   </div>
+            </div>
+
+          </div>
+        
           {member.map((player, index) =>{
               return (
                    <div className="IndividualContainer">
