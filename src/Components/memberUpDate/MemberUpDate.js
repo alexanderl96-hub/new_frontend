@@ -17,6 +17,7 @@ const MemberUpDate = () => {
     team_id: '',
     nickname: '',
     imag: '',
+    imag2: '',
     born: '',
     city: '',
     state: '',
@@ -129,6 +130,7 @@ const MemberUpDate = () => {
                                 <input id='bats' type="text" onChange={handleInput}  placeholder="Bats..." className='inputT'></input>
                                 <input id='throws' type="text" onChange={handleInput}  placeholder="Throws..." className='inputT'></input>
                                 <input id='stats' type="text" onChange={handleInput}  placeholder={'Stats id = ' + id} className='inputT'></input>
+                                <input id='imag2' type="text" onChange={handleInput}  placeholder="Background..." className='inputT' ></input>
                                 <input id='about' type="text" onChange={handleInput}  placeholder="About..." className='inputTAbout'></input>
                             </div>
                             <div  className='divImage'>
