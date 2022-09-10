@@ -3,12 +3,18 @@ import { useParams, Link, useNavigate} from 'react-router-dom'
 import axios from "axios";
 import '../newMember/NewMember.css'
 import './MemberUpdate.css'
+import Navbar from '../navBar/Navbar'
 
 const MemberUpDate = () => {
   const [member, setMemberid] = useState([])
   const [memberName, setMemberName] = useState([])
   const [memberImg, setMemberImg] = useState([])
   const [memberTeam, setMemberTeam] = useState([])
+  const [memberAge, setMemberAge] = useState([])
+  const [memberCity, setMemberCity] = useState([])
+  const [memberState, setMemberState] = useState([])
+  const [memberHeight, setMemberHeight] = useState([])
+  const [memberWeight, setMemberWeight] = useState([])
 
   const navigate = useNavigate(); 
   let { id } = useParams();
@@ -53,18 +59,8 @@ const MemberUpDate = () => {
     navigate(`/teams/groups/${id}`)
     
   };
-  const updatedTeam = (update, id) => {
-    axios.put(`https://my-baseball-teams.herokuapp.com/groups/${id}`, update).then(
-      (res) => {
-        const newTeam = [...newMember];
-        newTeam[id] = update;
-        setMember(newTeam);
-      },
-      (error) => console.log(error)
-    );
-  };
-  //  const updatedTeam = (update, id) => {
-  //   axios.put(`http://localhost:9000/groups/${id}`, update).then(
+  // const updatedTeam = (update, id) => {
+  //   axios.put(`https://my-baseball-teams.herokuapp.com/groups/${id}`, update).then(
   //     (res) => {
   //       const newTeam = [...newMember];
   //       newTeam[id] = update;
@@ -73,34 +69,51 @@ const MemberUpDate = () => {
   //     (error) => console.log(error)
   //   );
   // };
+   const updatedTeam = (update, id) => {
+    axios.put(`http://localhost:9000/groups/${id}`, update).then(
+      (res) => {
+        const newTeam = [...newMember];
+        newTeam[id] = update;
+        setMember(newTeam);
+      },
+      (error) => console.log(error)
+    );
+  };
  
-  useEffect(() => {
-    fetch(`https://my-baseball-teams.herokuapp.com/groups/${id}`)
+  // useEffect(() => {
+  //   fetch(`https://my-baseball-teams.herokuapp.com/groups/${id}`)
+  //       .then(res => res.json())
+  //       .then(data =>{
+  //           setMemberid(data.team.team_id)
+  //           setMemberName(data.team.name)
+  //           setMemberImg(data.team.imag)
+  //           setMemberTeam(data.team.current_team)
+  //       })
+  // },[id])
+   useEffect(() => {
+    fetch(`http://localhost:9000/groups/${id}`)
         .then(res => res.json())
         .then(data =>{
             setMemberid(data.team.team_id)
             setMemberName(data.team.name)
             setMemberImg(data.team.imag)
             setMemberTeam(data.team.current_team)
+            setMemberAge(data.team.age)
+            setMemberCity(data.team.city)
+            setMemberState(data.team.state)
+            setMemberHeight(data.team.height)
+            setMemberWeight(data.team.weight)
         })
   },[id])
-  //  useEffect(() => {
-  //   fetch(`http://localhost:9000/groups/${id}`)
-  //       .then(res => res.json())
-  //       .then(data =>{
-  //           setMemberid(data.team.team_id)
-  //           setMemberName(data.team.name)
-  //           setMemberImg(data.team.imag)
-  //       })
-  // },[id])
 
   console.log(member)
   return (
          <div className='Update_Container'>
-           <h1 className='newTitle'>UpDate Member</h1>
-         <div style={{}} className='wrapLink'> <Link to={`/teams/groups/${id}`} className='newLinkBackNew' >Back</Link> </div>
+             <Navbar />
+           <h1 >UpDate Member</h1>
+            <h2>{memberName}</h2>
          <div >
-           <h2>{memberName}</h2>
+          
          <form onSubmit={handleSubmit} className='newMemberUpdate'>
                            <div className='innerUpdate'>
                                 <input id='name' type="text" onChange={handleInput} placeholder={memberName} className='inputT' ></input>
@@ -121,6 +134,7 @@ const MemberUpDate = () => {
                                 <input id='number' type="number" onChange={handleInput} placeholder="Number..." className='inputT' ></input>
                                 <input id='education' type="text" onChange={handleInput}  placeholder="Education..." className='inputT'></input>
                                 <input id='spouse' type="text" onChange={handleInput}  placeholder="Spouse..." className='inputT'></input>
+                                <buttom type='submit' className='newMemUpButton' onClick={handleSubmit}  >Submit</buttom>
                             </div>
                             <div className='innerUpdate'>
                                 <input id='parents' type="text" onChange={handleInput}  placeholder="Parents..." className='inputT'></input>
@@ -134,10 +148,22 @@ const MemberUpDate = () => {
                                 <input id='about' type="text" onChange={handleInput}  placeholder="About..." className='inputTAbout'></input>
                             </div>
                             <div  className='divImage'>
-                                <img src={newMember.imag ? newMember.imag : memberImg } alt='NewImage' className='photo' />
+                                <img src={newMember.imag ? newMember.imag : memberImg } alt='NewImage' className='photo1' />
+                                <div style={{backgroundColor: '#efeaea9d'}}>
+                                    <hr/>
+                                    <div className='Upcheck'>  <p className='a'>Edad:</p> <p className='b'>{newMember.age ? newMember.age : memberAge}</p> </div>
+                                  
+                                    <div className='Upcheck'>  <p className='a'>City:</p> <p className='b'>{newMember.city ? newMember.city : memberCity}</p> </div>
+                                    
+                                    <div className='Upcheck'>  <p className='a'>State:</p> <p className='b'>{newMember.state ? newMember.state : memberState}</p> </div>
+                                  
+                                    <div className='Upcheck'>  <p className='a'>Height:</p> <p className='b'>{newMember.height ? newMember.height : memberHeight}</p> </div>
+                                  
+                                    <div className='Upcheck'>  <p className='a'>Weight:</p> <p className='b'>{newMember.weight ? newMember.weight : memberWeight}</p> </div>
+                                </div>
                             </div>
                            
-                 <buttom type='submit' className='newMemberButton' onClick={handleSubmit}  >Submit</buttom>
+                 
              </form>
          </div>
       </div>

@@ -1,20 +1,26 @@
 .Update_Container{
     text-align: center;
     padding-bottom: 10px; 
-    background-color: rgba(148, 145, 145, 0.645);
-    height: 780px;
+    /* background-color: rgba(148, 145, 145, 0.645); */
+    /* height: 780px; */
     transition: all 1.5s;
     animation: fadein 0.5s;
   -moz-animation: fadein 0.5s; /* Firefox */
   -webkit-animation: fadein 0.5s; /* Safari and Chrome */
   -o-animation: fadein 0.5s;
 }
-.Update_Container > div h2 {
-    margin-top: 10px;
-    background-color: white;
+.Update_Container > h1{
+    color: black;
+    font-family: cursive;
+    margin-left: -75%;
+}
+.Update_Container > h2 {
+    margin-top: -70px;
+    margin-left: 420px;
+    /* background-color: white; */
     border-radius: 30px;
     padding: 3px;
-    width: 250px;
+    width: 460px;
 }
 .newMemberUpdate{
     display: flex;
@@ -25,30 +31,49 @@
     display: flex;
     flex-direction: column;
     margin-top: 20px;
-    margin-left: 50px;
 }
 .inputT{
-    width: 200px;
-    margin:5px;
+    width: 325px;
+    height: 40px;
+    padding-left: 4px;
 }
 .inputTAbout{
-    width: 300px;
+    width: 325px;
     height: 100px;
-    text-align: top;
-
+    padding-left: 4px;
 }
 .divImage{
-    margin-top: 20px;
-    height: 340px;
-    width: 295px;
-    margin-left: 100px;
-    border-radius: 40px;
-    border: 7px solid gray;
-    background-color: rgba(255, 0, 0, 0.894);
+    margin-top: -78px;
+    height: 680px;
+    width: 347px;
+    border: 10px solid rgba(128, 128, 128, 0.33);
+    background-color: rgba(8, 6, 6, 0.894);
 }
-.photo{
-    height: 342px;
-    width: 300px;
+.photo1{
+    margin-top: -75px;
+    height: 442px;
+    width: 348px;
     margin-left: -1.5px;
     margin-top: -1px;
+    object-fit: cover;
+}
+.newMemUpButton{
+    width: 80px;
+    padding: 10px;
+    background-color: rgba(110, 110, 242, 0.856);
+    margin-top: 50px;
+    font-size: 17px;
+    margin-left: 115px;
+    border-radius: 30px
+}
+.Upcheck{
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr);
+    height: 43px;
+}
+.a{
+    margin-right: -50px;
+}
+.b {
+    margin-left: -110px;
 }

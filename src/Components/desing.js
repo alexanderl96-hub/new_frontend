@@ -165,7 +165,7 @@ const Desing = () => {
                               value={ratingChanged(ab)}
                               color='gray'
                               edit={false}
-                              size={35}
+                              size={30}
                               isHalf={true}
                               onChange={0.300}
                               /> 
@@ -188,6 +188,7 @@ const Desing = () => {
         {start <= 0 ? null : <button onClick={previuosrow } className='button1'>&#10148;</button>}
         {last >= newtest.length ? null :  <button onClick={nextrow} className='button2'>&#10148;</button>  }
         </div>  
+        {newtest.length > 0 ? 
         <div className="section3">
            {newtest.slice(start,last).map((a, index)=>{
                return (
@@ -198,14 +199,18 @@ const Desing = () => {
                            <h3  >{articule(a.name)}</h3>
                       </div> 
                        : <div className={`section4`}  onClick={(e)=>setSearch(a.id)}  > 
-                           <div className='media-group' > <img src={a.imag} alt='' /> </div>  
+                           <div className='media-group' > Hola </div>  
                          </div> }                
                    </div>
                )
-           })}
-             
+           })}          
          </div> 
-             
+             :  <div className="section3-empty">
+                <div className=''  > 
+                          <div className=''> </div>  
+                           <h3  >No Players Available</h3>
+                      </div> 
+               </div>}
    </div>
   )
 }

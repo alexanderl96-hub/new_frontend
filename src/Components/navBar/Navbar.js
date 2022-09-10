@@ -1,5 +1,6 @@
 import React, { useState  } from 'react'
 import './Navbar.css'
+import { FaLongArrowAltDown, FaLongArrowAltLeft, FaLongArrowAltRight,FaLockOpen, FaLongArrowAltUp, FaUser, FaUserAlt, FaUserAltSlash, FaUserAstronaut, FaUserCheck, FaUserCircle, FaUserClock, FaUserCog, FaUserEdit, FaUserFriends, FaUserGraduate, FaUserInjured, FaUserLock, FaUserMd, FaUserMinus, FaUserNinja, FaUserNurse, FaUserPlus, FaUserSecret, FaUserShield, FaUserSlash, FaUserTag, FaUserTie, FaUserTimes, FaUsers, FaUsersCog, FaUsersSlash, } from 'react-icons/fa';
 import { Link } from 'react-router-dom'
 import { homeObjOne } from '../navBar/Data'
 
@@ -39,7 +40,7 @@ function Navbar({id}) {
                 <div className='navAddgroup'>ADD TEAM</div>
             </Link>
             <Link to={'/teams/new'}>
-                <div className='navlogIn'>LOG IN  <img src='' alt='1'/></div>  
+                <div className='navlogIn'>LOG IN  <FaUser /></div>  
             </Link>
            </div>
     </div>

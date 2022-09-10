@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import {Link, useParams,useNavigate} from 'react-router-dom'
 import './addStatsPlayers.css'
 import axios from "axios";
+import Navbar from '../navBar/Navbar'
 
 const AddStatsPlayers = () => {
     const navigate = useNavigate();
@@ -188,10 +189,18 @@ const AddStatsPlayers = () => {
 
   return (
     <div className='StasContainer'>
-        <h1 className='newTitle'>Add Stats</h1>
-        <div style={{}} className='wrapLink'> <Link to={`/teams/groups/${memberId}`} className='newLinkBackNew' >Back</Link> </div>
-        {/* -- check the member id and the position before display data */}
-        <div className="ContainerStats">
+        <Navbar />
+        <h1 >Add Stats</h1>
+        <div className='StasContainer-inner'>
+              <div className='innerImg'>
+                  {memberHold.map((a,i)=>{
+                    return(
+                        <><img src={a.imag} alt='' className='fondo' /></>
+                    )})}              
+              </div>
+              <div className="ContainerStats">
+              <div className='Major'>
+                {/* <div className='Major-in1'></div> */}
             <div className='PlayersSats'>
                 <h3>Players Stats</h3>
                 <form onSubmit={handleSubmit}>
@@ -229,6 +238,8 @@ const AddStatsPlayers = () => {
                 <button type="submit" onClick={handleSubmit2} >AddStats</button>
             </div> 
 
+            {/* <div className='Major-in2'></div> */}
+
             <div className='PlayersSats2'>
                 <h3>Pitcher Stats</h3>
                 <form onSubmit={handleSubmit3}>
@@ -265,11 +276,13 @@ const AddStatsPlayers = () => {
                 </form>
                 <button type="submit" onClick={handleSubmit4}>AddStats</button>
             </div>
+            </div>
         </div>
-         {memberHold.map((a,i)=>{
-                 return(
-                     <><img src={a.imag} alt='' /></>
-                 )})}
+
+        </div>
+        {/* -- check the member id and the position before display data */}
+       
+        
     </div>
   )
 }

@@ -59,7 +59,7 @@ input{
     width: 20%;
     margin: 0 auto;
     font-size: 17px;
-    border-radius: 7px;
+    /* border-radius: 7px; */
 }
 .div{
     height: 240px;

@@ -49,16 +49,16 @@ const NewMember = () => {
         e.preventDefault()
         addMember(newMember)
       }
-      const addMember = (newMember) => {
-        axios.post(`https://my-baseball-teams.herokuapp.com/groups`, newMember).then((res)=>{
-          navigate(`/teams/newpage/${id}`);
-          })
-      }
       // const addMember = (newMember) => {
-      //   axios.post(`http://localhost:9000/groups`, newMember).then((res)=>{
+      //   axios.post(`https://my-baseball-teams.herokuapp.com/groups`, newMember).then((res)=>{
       //     navigate(`/teams/newpage/${id}`);
       //     })
       // }
+      const addMember = (newMember) => {
+        axios.post(`http://localhost:9000/groups`, newMember).then((res)=>{
+          navigate(`/teams/newpage/${id}`);
+          })
+      }
       let monterValue = newMember.born.split(' ')[0]
       let hoyValue = newMember.born.split(' ')[1]
       let yearValue = newMember.born.split(' ').slice(-1).join()
@@ -79,21 +79,21 @@ const NewMember = () => {
               return age-1
             }
           }
-    useEffect(() => {
-        fetch(`https://my-baseball-teams.herokuapp.com/teams/${id}`)
-        .then(res => res.json())
-        .then(data =>{
-            setGroup(data.team)
-        })
-  },[id])
+  //   useEffect(() => {
+  //       fetch(`https://my-baseball-teams.herokuapp.com/teams/${id}`)
+  //       .then(res => res.json())
+  //       .then(data =>{
+  //           setGroup(data.team)
+  //       })
+  // },[id])
 
-//   useEffect(() => {
-//     fetch(`http://localhost:9000/teams/${id}`)
-//     .then(res => res.json())
-//     .then(data =>{
-//         setGroup(data.team)
-//     })
-// },[id])
+  useEffect(() => {
+    fetch(`http://localhost:9000/teams/${id}`)
+    .then(res => res.json())
+    .then(data =>{
+        setGroup(data.team)
+    })
+},[id])
 
   return (
     <div className='newMember_Container'>

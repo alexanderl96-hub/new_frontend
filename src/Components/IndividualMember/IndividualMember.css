@@ -1,4 +1,4 @@
-.Main{
+.MainMember{
     background-color: #030353ec; 
     /* padding: 15px;  */;
     animation: fadein 1s;
@@ -6,7 +6,7 @@
     -webkit-animation: fadein 1s; /* Safari and Chrome */
     -o-animation: fadein 1s;
     /* position: fixed; */
-    height: 2500px;
+    height: 100%;
 }
 .Main2{
     /* display: flex; 
@@ -19,7 +19,7 @@
     text-align: center; 
     margin-left: 180px;
     margin-right:180px;
-    height: 480px;
+    height: 100%;
     margin-top:0.5px;
     /* background-image: url('https://images2.minutemediacdn.com/image/fetch/w_1046,h_485,c_fill,g_auto,f_auto/https%3A%2F%2Fnolanwritin.com%2Fwp-content%2Fuploads%2Fimagn-images%2F2017%2F07%2F17949891-850x560.jpeg'); */
 }
@@ -31,6 +31,22 @@
     font-family: cursive;
     font-size: 30px;
     
+}
+.divEdit{
+    text-decoration: none;
+    color: white;
+    margin-left: 350px;
+    margin-right: -350px;
+    font-size: 25px;
+}
+.divEdit2{
+    text-decoration: none;
+    color: white;
+    text-align: center;
+     margin-left: 430px;
+    margin-right: -420px;
+    font-size: 20px; 
+   
 }
 
 .divTop > img{
@@ -62,6 +78,7 @@
     margin-right:180px;
     background: rgb(240, 233, 233);
     box-shadow: 0px -15px 20px 1px #111;
+    height: 100%;
 }
 .IndividualContin{
     display:grid;
@@ -112,7 +129,18 @@
     grid-row: 4;
     /* background-color: white; */
 }
-
+.IndividualWrapper7{
+    margin-left:10px;
+    margin-right:10px;
+    grid-column: 1 / 4;
+    grid-row: 5;
+}
+.IndividualWrapper8{
+    margin-left:10px;
+    margin-right:10px;
+    grid-column: 1 / 4;
+    grid-row: 6;
+}
 .class1{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -264,7 +292,24 @@
     margin-right: 20px;
     /* text-align: left; */
 }
-
+.pitcher{
+    width: 220px;
+}
+.pitcher-inner1{
+     display:grid;
+    grid-template-columns: repeat(10, 1fr);
+    text-align: center;
+    grid-auto-rows: minmax(100px, auto);
+    padding-top: 10px;
+    height: 30px;
+    margin-left: 20px;
+    margin-right: -7px;
+}
+.pitcher-inner{
+    width: 172px;
+    margin-left: 30px;
+    text-align: left;
+}
 .team_About2{
 
 }

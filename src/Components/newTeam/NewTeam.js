@@ -27,8 +27,13 @@ const NewTeam = () => {
     e.preventDefault()
     addTeam(newTeam)
   }
+  // const addTeam = (newTeam) => {
+  //   axios.post(`https://my-baseball-teams.herokuapp.com/teams`, newTeam).then((res)=>{
+  //     navigate('/teams');
+  //     })
+  // }
   const addTeam = (newTeam) => {
-    axios.post(`https://my-baseball-teams.herokuapp.com/teams`, newTeam).then((res)=>{
+    axios.post(`http://localhost:9000/teams`, newTeam).then((res)=>{
       navigate('/teams');
       })
   }
