@@ -44,17 +44,18 @@
 }
 .divImage{
     margin-top: -78px;
-    height: 680px;
+    height: 640px;
     width: 347px;
     border: 10px solid rgba(128, 128, 128, 0.33);
     background-color: rgba(8, 6, 6, 0.894);
 }
 .photo1{
     margin-top: -75px;
-    height: 442px;
+    height: 422px;
     width: 348px;
     margin-left: -1.5px;
     margin-top: -1px;
+    filter: brightness(1.25);
     object-fit: cover;
 }
 .newMemUpButton{
@@ -69,7 +70,7 @@
 .Upcheck{
     display: grid; 
     grid-template-columns: repeat(2, 1fr);
-    height: 43px;
+    height: 39.2px;
 }
 .a{
     margin-right: -50px;

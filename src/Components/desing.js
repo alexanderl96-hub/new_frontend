@@ -4,6 +4,7 @@ import ReactStars from "react-rating-stars-component"
 // import DeleteIcon from '@mui/icons-material/Delete';
 import Navbar from '../Components/navBar/Navbar'
 import './desing.css'
+import {FaUserAlt, FaUserPlus} from 'react-icons/fa';
 import axios from 'axios'
 
 
@@ -126,11 +127,10 @@ const Desing = () => {
   return (
    <div className='MainDesing'>
         <Navbar />
-        {/* <div className='sectionNav'>
-            <Link to='/teams'className='return' ><h3 className='returnH3' >🔙</h3></Link>     
-            <Link to={`/teams/newMember/${teamId}`} id={teamId} className='newadded'>New</Link>
-        </div> */}
-
+        <div style={{ color: 'white', height: '45px',width: '100%',
+    fontFamily: 'cursive', marginTop: '13px'}}>
+           <Link to={`/teams/newMember/${teamId}`} id={teamId} className='newadded'> <FaUserPlus /></Link>
+        </div>
         <div className="section2"> 
          
                { search > 0 ? nombre.map((a, i)=>{

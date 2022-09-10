@@ -25,10 +25,13 @@
     border: 1px solid;
     margin: 20px;
     height: 460px;
+    background-color: rgba(8, 6, 6, 0.894);
+    color: white;
 }
 .fondo{
     width: 250px;
     height: 260px;
+    filter: brightness(1.30);
 }
 .ContainerStats{
     grid-column: 2/3;

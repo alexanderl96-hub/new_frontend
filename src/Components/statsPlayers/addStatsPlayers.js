@@ -195,7 +195,14 @@ const AddStatsPlayers = () => {
               <div className='innerImg'>
                   {memberHold.map((a,i)=>{
                     return(
-                        <><img src={a.imag} alt='' className='fondo' /></>
+                        <div >
+                          <img src={a.imag} alt='' className='fondo' />
+                          <h3  style={{height: '15px'}}>{a.name}</h3>
+                          <h4 style={{height: '15px'}}>{a.city} - {a.age}</h4>
+                          <h4 style={{height: '15px'}}>{a.height} - {a.weight}</h4>
+                          <h4 style={{height: '15px'}}>{a.salary}</h4>
+                          <h4 style={{height: '15px'}}>{a.current_team}</h4>
+                        </div>
                     )})}              
               </div>
               <div className="ContainerStats">
