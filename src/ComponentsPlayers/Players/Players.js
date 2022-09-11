@@ -1,5 +1,6 @@
 import React,  { useState, useEffect }from 'react'
 import Navbar from '../../Components/navBar/Navbar'
+import './players.css'
 
 
 const Players = () => {    
@@ -43,21 +44,25 @@ const Players = () => {
  }
 
   return (
-    <div style={{width:'100%'}} >
+    <div  >
         <Navbar/>
-        <h1 style={{backgroundColor: 'red',color: 'white',width:'10%', borderRadius: '10px', marginTop: '5px', marginBottom: '5px'}}>Players</h1>
-        <div style={{display:'flex'}}>
-            <div >
-                <fom onChange={handleSubmit} >
-                <input id='name' type='text' onChange={handleInput} placeholder="🔍" style={{padding: '2px',  marginLeft: '400px',width: '300px'}} ></input>
+        {/* <h1 style={{backgroundColor: 'red',color: 'white',width:'10%', borderRadius: '10px', marginTop: '5px', marginBottom: '5px'}}>Players</h1> */}
+        <div className='navPlay'>
+            <h1 >Players</h1>
+
+            <div className='divForm'>
+                <form onChange={handleSubmit} >
+                <input id='name' type='text' onChange={handleInput} placeholder="🔍" style={{}} ></input>
                 {/* <button type='submit' onClick={handleReset} style={{padding: '2px', fontSize: '15px', marginLeft: '-49px'}} >Reset</button> */}
-                </fom>
+                </form>
             </div>
-            <div>{val.length === allplayers.length ? 
-                 <div style={{backgroundColor: 'red', color: 'white', width: '80px', borderRadius: '10px', padding:'1px', textAlign: 'center'}}>Players: {allplayers.length}</div> : 
-                  <div>{val.length > 0 ? 
-                    <div style={{backgroundColor: 'red', color: 'white', width: '80px', borderRadius: '10px',padding:'1px', textAlign: 'center'}}>Match: {val.length}</div> : 
-                       <div style={{backgroundColor: 'red', color: 'white', width: '95px', borderRadius: '10px',padding:'1px', textAlign: 'center'}}>Not matchers</div>}</div>}</div>
+            <div className='divMatch'>
+                {val.length === allplayers.length ? 
+                 <div className='divMatchAll'>Players: {allplayers.length}</div> : 
+                  <div className='divMatchPart'>{val.length > 0 ? 
+                    <div >Match: {val.length}</div> : 
+                       <div className='divMatchNone'>Not matchers</div>}</div>}
+            </div>
         </div>
         <div style={{}}>
         { val.length  ? 
@@ -82,7 +87,8 @@ const Players = () => {
                       )
                    })}
              </div> : 
-              <div >
+              <div style={{backgroundColor: 'red', height: '200px'}}>
+                  No found
                     {/* {allplayers.map((player, index) =>{
                         return (
                             <div style={{justifyItems: 'center'}} key={index}>
@@ -109,4 +115,5 @@ const Players = () => {
   )
 }
 
-export default Players
+ export default Players
+//<img src={'https://cdn.iconscout.com/icon/premium/png-256-thumb/baseball-player-1488400-1259743.png'} alt='' />

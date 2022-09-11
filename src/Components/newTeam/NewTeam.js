@@ -41,15 +41,14 @@ const NewTeam = () => {
   return (
     <div className='newTeam_Container'>
          <Navbar />
-         <div className='newTeam_Wrap' >
-         <h1 className='newTeam'>New Team</h1>
+         <h1>New Team</h1>
+         <div className='newTeam_Wrap' >      
          {/* <div className='newTeam_Name'><h3>{newTeam.name}</h3></div> */}
-                <form className='newTeam_Form' nSubmit={handleSubmit}o >
+                <form className='newTeam_Form' onSubmit={handleSubmit} >
                     <label htmlFor="">Name:</label>
                     <input id='name' type="text" onChange={handleInput}  placeholder="Name and lastname..." className='newInputteam' ></input>
                     <label htmlFor="">Image URL:</label> 
                     <input id='imag' type="text" onChange={handleInput} value='' placeholder="Image URL..." className='newInputteam' ></input>
-                    <hr/>
                     <div className="newTeam_photo1">
                             <img
                             src={newTeam.imag ? newTeam.imag : null}

@@ -36,19 +36,26 @@
     text-decoration: none;
     color: white;
     margin-left: 350px;
-    margin-right: -350px;
-    font-size: 25px;
+    margin-right: -460px;
+    font-size: 20px;
 }
 .divEdit2{
     text-decoration: none;
     color: white;
     text-align: center;
-     margin-left: 430px;
+     margin-left: 350px;
     margin-right: -420px;
     font-size: 20px; 
    
 }
-
+.divEdit3{
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    margin-left: 390px;
+    margin-right: -410px;
+    font-size: 20px; 
+}
 .divTop > img{
     border: 12px solid white;
     border-radius: 50%;

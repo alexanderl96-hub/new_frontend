@@ -1,7 +1,7 @@
 import React,  { useState, useEffect }from 'react'
 import { useParams, Link} from 'react-router-dom'
 // import { BiEdit} from "react-icons/fa";
-import {FaPlus, FaStackExchange, FaStackOverflow, FaStackpath, FaStamp,  FaEdit,FaStats,FaAd, FaAddressBook, FaAddressCard, FaAdjust, FaUber, FaUbuntu, FaUikit, FaUmbraco, FaUmbrella, FaUmbrellaBeach,
+import {FaPlus, FaRecycle ,FaStackExchange, FaStackOverflow, FaStackpath, FaStamp,  FaEdit,FaStats,FaAd, FaAddressBook, FaAddressCard, FaAdjust, FaUber, FaUbuntu, FaUikit, FaUmbraco, FaUmbrella, FaUmbrellaBeach,
      FaUncharted, FaUnderline, FaUndo, FaUndoAlt, FaUniregistry, FaUnity, FaUniversalAccess,
       FaUniversity, FaUnlink, FaUnlock, FaUnlockAlt, FaUnsplash, FaUntappd, FaUpload, 
       FaUps, FaUsb, FaUser, FaUserAlt, FaUserAltSlash, FaUserAstronaut, FaUserCheck, 
@@ -173,14 +173,13 @@ setMemberNumber(data.team.number)
   return (
       <div  className='MainMember'>
             <Navbar />
-                {/* <div className='delBTn'> 
-                    <Link to={`/teams/newpage/${group}`} onClick={handleDelete}  className="teamLinkDelete" >Delete</Link>
-                </div> */}
+                
           <div style={{backgroundImage: `url(${memberImg2})`}} className='divTop'>
                <div className='divTop-inner'>Member
                      {/* <img src={FaEdit} alt='edit' /> */}
-                     <Link to={`/teams/groups/${memberId}/addStats`} className='divEdit2'> <FaPlus /></Link> 
-                     <Link to={`/teams/updateMember/${memberId}`} className='divEdit'> <FaUserEdit /></Link>
+                     <Link to={`/teams/newpage/${group}`} onClick={handleDelete}  className="divEdit2" ><FaRecycle /></Link>
+                     <Link to={`/teams/groups/${memberId}/addStats`} className='divEdit'> <FaPlus /> </Link> 
+                     <Link to={`/teams/updateMember/${memberId}`} className='divEdit3'> <FaUserEdit /></Link>
                     
                </div>
                <img src={memberImg} alt='1'  />

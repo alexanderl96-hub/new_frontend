@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link} from 'react-router-dom'
 import Navbar from '../../Components/navBar/Navbar'
+import './coaches.css'
 
 const Coaches = () => {
     const [coach, setCoach] = useState([])
@@ -50,18 +51,19 @@ const Coaches = () => {
   return (
     <div style={{width:'100%'}} >
         <Navbar/>
-        <h1 style={{backgroundColor: 'gray',color: 'white',width:'10%', borderRadius: '10px', marginTop: '5px', marginBottom: '5px'}}>Coaches</h1>
-        <div style={{display:'flex'}}>
-            <div >
-                <fom onChange={handleSubmit} >
-                   <input id='name' type='text' onChange={handleInput} placeholder="🔍" style={{padding: '2px',color:'blue',  marginLeft: '400px',width: '300px'}} ></input>
-                </fom>
+        <div className='navCoach'>
+        <h1 >Coaches</h1>
+            <div className='divForm'>
+                <form onChange={handleSubmit} >
+                   <input id='name' type='text' onChange={handleInput} placeholder="🔍" ></input>
+                </form>
             </div>
-            <div>{coach.length === coachName.length ? 
-                 <div style={{backgroundColor: 'gray', color: 'white', width: '80px', borderRadius: '10px', padding:'1px', textAlign: 'center'}}>Players: {coach.length}</div> : 
-                  <div>{coachName.length > 0 ? 
-                    <div style={{backgroundColor: 'gray', color: 'white', width: '80px', borderRadius: '10px',padding:'1px', textAlign: 'center'}}>Match: {coachName.length}</div> : 
-                       <div style={{backgroundColor: 'gray', color: 'white', width: '95px', borderRadius: '10px',padding:'1px', textAlign: 'center'}}>Not matchers</div>}</div>}</div>
+            <div className='divMatch'>{coach.length === coachName.length ? 
+                 <div className='divMatchAll' >Players: {coach.length}</div> : 
+                  <div className='divMatchPart'>{coachName.length > 0 ? 
+                    <div >Match: {coachName.length}</div> : 
+                       <div className='divMatchNone'>Not matchers</div>}</div>}
+            </div>
 
         </div>
         <div>

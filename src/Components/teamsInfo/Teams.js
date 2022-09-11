@@ -11,20 +11,20 @@ const Teams = () => {
     const [teams, setTeams] = useState([])
 
     
-    // useEffect(() => {
-    //     fetch(`https://my-baseball-teams.herokuapp.com/teams`)
-    //     .then(res => res.json())
-    //     .then(data =>{
-    //         setTeams(data)
-    //     })
-    // },[])
     useEffect(() => {
-        fetch(`http://localhost:9000/teams`)
+        fetch(`https://my-baseball-teams.herokuapp.com/teams`)
         .then(res => res.json())
         .then(data =>{
             setTeams(data)
         })
     },[])
+    // useEffect(() => {
+    //     fetch(`http://localhost:9000/teams`)
+    //     .then(res => res.json())
+    //     .then(data =>{
+    //         setTeams(data)
+    //     })
+    // },[])
   
     
   return (

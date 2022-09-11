@@ -54,27 +54,51 @@
 .innerNew2{
     display: flex;
     flex-direction: column;
-    background-color: white;
+    background-color: rgb(106, 103, 103);
     width: 740px;
-    margin-top: 20px;
-    margin-left: 50px;
+    height: 510px;
+    margin-top: 40px;
+    margin-left: 630px;
+    border-radius: 4px;
+    border: 1.5px solid black;
+    position: absolute;
 }
-
+.innerNew2:hover{
+    border: none;
+}
+.innerNew3{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    background-color: rgb(186, 180, 180);
+    width: 740px;
+    height: 510px;
+    margin-top: -20px;
+    margin-left: -20px;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+}
+.innerNew3:hover{
+    border: 1.5px solid rgb(110, 104, 104);
+}
 .newMemberButton{
-    margin-top: 120px;
-    width: 10%;
+    margin-top: 25px;
+    width: 90px;
     font-size: 15px;
     cursor: pointer;
-    border-radius: 4px;
-    background-color: white;
+    border-radius: 30px;
+    margin-left: 205px;
+    margin-right: -100px;
+    padding: 8px;
+    background-color: rgb(105, 215, 240);
 }
 .newMemberButton:hover{
    background-color: aqua;
 }
 .photo{
-    height: 240px;
-    width: 200px;
-    border-radius: 40px;
+    height: 200px;
+    width: 160px;
 }
 
 input{
@@ -84,9 +108,98 @@ input{
     /* border-radius: 7px; */
 }
 .div{
-    height: 190px;
-    width: 150px;
+    height: 200px;
+    width: 160px;
     border: 5px solid rgb(24, 23, 23);
+    border-radius: 4px;
+    grid-column: 1/2;
+    grid-row: 1;
+
+}
+.div2{
+    margin-top: -10px;
+    width: 200px;
+    grid-column: 2/3;
+    grid-row: 1;
+}
+.div2 > h3{
+    margin-bottom: 35px;
+}
+.div2 > h5{
+    /* border: 1px solid rgb(24, 23, 23); */
+    height: 35px;
+    margin-left: 10px;
+    margin-top: -21.5px;
+    font-family: cursive;
+    font-size: 15.5px;
+    text-align: start;
+}
+.div3 {
+    grid-column: 3/4;
+    grid-row: 1;
+}
+.div3 > p{
+    /* border: 1px solid black; */
+    height: 130px;
+    width: 250px;
+    margin-right: 10px;
+    margin-top: 38px;
+    text-align: justify;
+    padding: 4px;
+    font-size: 15px;
+    font-family: cursive;
+    font-weight: bolder;
+}
+.div4{
+    grid-column: 1/2;
+    grid-row: 2;
+    width: 250px;
+   margin-top: -25px;
+}
+.div4 > h5 span {
+    color: white;
+}
+.div4 > h5{
+    height: 20px;
+    margin-left: 10px;
+    padding-top: 2px;
+    font-family: cursive;
+    font-size: 15.5px;
+    text-align: start;
+}
+.div5{
+    /* border: 1px solid black; */
+    grid-column: 2/3;
+    grid-row: 2;
+    margin-top: -25px;
+}
+.div5 > h5 span {
+    color: white;
+}
+.div5 > h5{
+    height: 20px;
+    margin-left: 10px;
+    padding-top: 2px;
+    font-family: cursive;
+    font-size: 15.5px;
+    text-align: start;
+}
+.div6{
+    /* border: 1px solid black; */
+    grid-column: 3/4;
+    grid-row: 2;
+    margin-top: -25px;
+}
+.div6 > h5 span{
+    color: white; 
+}
+.div6 > h5{
+    height: 20px;
+    margin-left: 10px;
+    padding-top: 2px;
+    font-family: cursive;
+    font-size: 15.5px;
+    text-align: start;
 }
 @media only screen and (max-width: 768px){
     .newMember_Container{
