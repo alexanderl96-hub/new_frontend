@@ -1,0 +1,59 @@
+/*linear-gradient(45deg, red 0 50%, blue 50% 100%);*/
+.navSeason{
+    height: 50px;
+    width: 100%;
+    background-color: rgb(46, 38, 102);
+    display: flex;
+    flex-direction: row;
+    /* background-color: rgb(57, 57, 219); */
+}
+.navSeason > h1{
+    color: white;
+    font-family: cursive;
+    margin-top: 1px;
+    font-size: 25px;
+    margin-left: 15px;
+}
+.season-inner{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    margin-left:90px;
+    margin-right: 40px;
+}
+.card{
+    background: linear-gradient(55deg, red 0 50%, blue 50% 100%);
+    width: 220px; 
+    height: 325px;
+    color: white; 
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px; 
+    border: 1px solid;
+    box-shadow: 3px 4px 2px black;
+    margin:10px;
+}
+.card > div{
+    margin-top: 30px;
+}
+.date{
+    margin-top: -18px;
+    margin-left: 36px;
+}
+.teamName{
+  margin-left: 150px;
+  margin-top: 20px;
+}
+.teamNameImg{
+    margin-left: 145px;
+    margin-top: 10px;
+}
+.teamVs{
+    margin-top: 60px;
+    margin-left: 20px;
+}
+.teamNameImg2{
+    margin-left: 10px;
+    margin-top: 13px;
+}

@@ -1,6 +1,8 @@
 import React,  { useState, useEffect }from 'react'
 import Navbar from '../../Components/navBar/Navbar'
 import './players.css'
+import {Link} from 'react-router-dom'
+// import {articule} from '../../Components/desing'
 
 
 const Players = () => {    
@@ -11,12 +13,22 @@ const Players = () => {
         name: '',
     })
 
+    const articule = (artist) => {
+        let pro = "";
+        let allt = artist.split(" ");
+        if(allt.length >= 3){
+          pro = allt[0] +' '+ allt[1] +' '+ allt[2]
+        }else{
+          pro = allt.join(' ')
+        }
+        return pro
+      };
     useEffect(() => {
         let name = search.name
         fetch(`https://my-baseball-teams.herokuapp.com/groups`)
         .then(res => res.json())
         .then(data =>{
-            setAllPlayers(data)
+            setAllPlayers(data = data.filter(element => !element.position.includes('Team')))
             setVal(data = data.filter(g => g.name.includes(name))); 
         })
   },[search])
@@ -34,14 +46,14 @@ const Players = () => {
 //         setSearch({ [e.target.value] : "" })
 //   }
 
- const open = (e) =>{
-    if(more === '⌄'){
-        setMore('⌃')
+//  const open = (e) =>{
+//     if(more === '⌄'){
+//         setMore('⌃')
         
-    }else{
-        setMore('⌄')
-    }
- }
+//     }else{
+//         setMore('⌄')
+//     }
+//  }
 
   return (
     <div  >
@@ -64,51 +76,47 @@ const Players = () => {
                        <div className='divMatchNone'>Not matchers</div>}</div>}
             </div>
         </div>
-        <div style={{}}>
+        <div className='payContent2'>
         { val.length  ? 
-             <div style={{ paddingBottom: '10px', height: '100%'}}>
+             <div className='payContCoach'>
                   {val.map((player, index)=>{
                       return(
-                        <div style={{}} key={index} >
-                        <div style={{ backgroundColor: 'red', color: 'white', margin: '10px', display: 'flex',
-                        padding: '10px', borderRadius: '10px', boxShadow: '3px 4px 2px black'}}>
-                            <img src={player.imag} alt={player.id} 
-                            style={{height: '110px', width: '140px', border: '1px solid', borderRadius: '10px'}} />
-                            <h3 style={{width: '200px'}}>{player.name}</h3>
-                            <div style={{width: '200px'}}>
-                                <h4><span>{player.current_team}</span></h4>
-                                <hr/>
-                                <h4>{player.position}</h4>
+                        <div  key={index} >
+                            <Link to={`/teams/groups/${player.id}`} style={{textDecoration: 'none'}}>
+                            <div className='playDivCont'>
+                                <img src={player.imag} alt={player.id}  />
+                                <h3 >{articule(player.name)}</h3>
+                                <div style={{width: '170px', height: '100px'}}>
+                                   <hr/>
+                                    <h4 className='child1'><span>{player.current_team}</span></h4>
+                                    <h4 className='child2'>{player.position}</h4>
+                                </div>
+                                {/* <p style={{width:'1px', cursor: 'pointer'}} onClick={open}>{more}</p>  */}
+                            
                             </div>
-                                         <p style={{width:'1px', cursor: 'pointer'}} onClick={open}>{more}</p> 
-                         
+                            </Link>
                         </div>
-                    </div>
                       )
                    })}
              </div> : 
-              <div style={{backgroundColor: 'red', height: '200px'}}>
-                  No found
-                    {/* {allplayers.map((player, index) =>{
-                        return (
-                            <div style={{justifyItems: 'center'}} key={index}>
-                                <div style={{ backgroundColor: 'red', margin: '10px', display: 'flex',
-                                padding: '10px', borderRadius: '10px'}}>
-                                    <img src={player.imag} alt={player.id} 
-                                    style={{height: '110px', width: '140px', border: '1px solid', borderRadius: '10px'}} />
-                                    <h3 style={{width: '200px'}}>{player.name}</h3>
-                                    <div style={{width: '200px'}}>
-                                        <h4><span>{player.current_team}</span></h4>
-                                        <hr/>
-                                        <h4>{player.position}</h4>
-                                    </div>
-                                         <p style={{width:'1px', cursor: 'pointer'}} onClick={open}>{more}</p> 
-                                      
-                                 
-                                </div>
-                            </div>
-                        )
-                    })} */}
+              <div className="container">
+                 
+                  <div className="carousel">
+                      <p className='slide'>No Player Found</p>
+                      <p className='slide'>No Player Found</p>
+                      <p className='slide'>No Player Found</p>                     
+                      <p className='slide'>No Player Found</p>
+                      <p className='slide'>No Player Found</p>
+                      <p className='slide'>No Player Found</p>
+                      <p className='slide'>No Player Found</p>
+                      <p className='slide'>No Player Found</p>
+                      <p className='slide'>No Player Found</p>
+                      <p className='slide'>No Player Found</p>                     
+                      <p className='slide'>No Player Found</p>
+                      <p className='slide'>No Player Found</p>
+                      <p className='slide'>No Player Found</p>
+                      <p className='slide'>No Player Found</p>
+                </div>
           </div>}
           </div>
     </div>

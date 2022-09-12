@@ -1,8 +1,23 @@
 import React, { useState, useEffect }from 'react'
 import Navbar from '../../Components/navBar/Navbar'
+import './season.css'
 
 const Season = () => {
   const [season, setSeason] =useState([])
+
+
+  // function date(num){
+  //   let year = ''
+  //   let month = ''
+  //   let day = ''
+  //   if(num.length < 8 ){
+  //     year = num.toString().slice(3)
+  //     day = num.toString().slice(1,3)
+  //     month = num.toString().slice(0,1)
+  //   }
+   
+  //   return month+'/'+day+'/'+year
+  // }
 
   useEffect(() => {
     fetch('https://my-baseball-teams.herokuapp.com/season')
@@ -11,41 +26,39 @@ const Season = () => {
       setSeason(data)
     })
   },[])
-  console.log(season )
+  console.log(season)
   return (
     <div>
         <Navbar/>
-        <h1 style={{backgroundColor: '#0000ffa6',color: 'white',width:'10%', borderRadius: '10px', marginTop: '5px', marginBottom: '5px'}}>Season</h1>
-        <div>
+        <div className='navSeason'>
+        <h1 >Season</h1>
+        <div className='season-inner'>
           {season.map((data, index)=>{
            return ( 
-             <div id={index}>
+             <div id={index} className='card'>
                {/* {data.points_team > data.points_vs ? data.points_team  :null} */}
-               <div style={{ background: '#0000ffa6', marginBottom: '3px', display: 'flex', margin:'4px', borderRadius: '3px',  height: '90px'  }}>
+               <div >
                   <div >
-                     <div style={{ color: 'white', textAlign: 'center', width: '70px'}}>{data.date}</div>
+                     <div className='date'>{data.date}</div>
                   </div>
                   <div >
-                    <div style={{ textAlign: 'center',width: '70px'}}>{data.team_name}</div>
+                    <div className='teamName'>{data.team_name}</div>
+                    <div className='teamNameImg'>
+                     <img src={data.image_team} alt={index} style={{width: '30px',  height: '30px', borderRadius: '50px'}}/>
+                     <div style={{width: '10px', textAlign: 'center', marginLeft: '55px', marginTop:'-27px'}}>{data.points_team}</div></div>
                   </div>
-                  <div style={{display:'flex', textAlign: 'center', width: '20px'}}><h1>vs</h1></div>
+                  <div ><h1 style={{color:'white'}}>vs</h1></div>
                   <div>
-                    <div style={{ textAlign: 'center',width: '70px'}}>{data.team_vs}</div>
-                  </div>
-                  <div style={{display:'flex',color: 'white', flexDirection: 'row', gap:'15px', }}>
-                    <div style={{alignItems: 'center'}}>
-                    <img src={data.image_team} alt={index} style={{width: '30px',  height: '30px', borderRadius: '50px'}}/></div>
-                    <div style={{width: '10px', textAlign: 'center'}}>{data.points_team}</div>
-                  </div>
-                  <div style={{display:'flex',color: 'white', flexDirection: 'row', gap:'15px'}} > 
-                    <div style={{textAlign: 'center' }}>
+                    <div className='teamVs'>{data.team_vs}</div>
+                    <div className='teamNameImg2'>
                       <img src={data.image_vs} alt={index} style={{width: '30px', height: '30px',borderRadius: '50px'}} /></div>
-                    <div style={{width: '10px', textAlign: 'center' }}>{data.points_vs}</div>
+                      <div style={{width: '10px', textAlign: 'center',marginLeft: '65px', marginTop:'-28px' }}>{data.points_vs}</div>
                   </div>
                 </div>
              </div>
             )
           })}
+        </div>
         </div>
     </div>
   )
