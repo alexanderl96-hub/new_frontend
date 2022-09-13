@@ -12,12 +12,14 @@ const NewMember = () => {
     const year = date.getFullYear()
     const month = date.getMonth()+1
     const hoy = date.getDate()
+    const [classT, setClassT] = useState('innerNew3')
    
     const [newMember,setMember] = useState({
        name: '',
        team_id: '',
        nickname: '',
        imag: '',
+       imag2: '',
        born: '',
        city: '',
        state: '',
@@ -48,17 +50,52 @@ const NewMember = () => {
       const handleSubmit = (e) =>{
         e.preventDefault()
         addMember(newMember)
+        setClassT('intoFade')
       }
-      const addMember = (newMember) => {
-        axios.post(`https://my-baseball-teams.herokuapp.com/groups`, newMember).then((res)=>{
-          navigate(`/teams/newpage/${id}`);
-          })
+      const handleDelete = (e) =>{
+        setClassT('innerNew3')
       }
+      
       // const addMember = (newMember) => {
-      //   axios.post(`http://localhost:9000/groups`, newMember).then((res)=>{
+      //   axios.post(`https://my-baseball-teams.herokuapp.com/groups`, newMember).then((res)=>{
       //     navigate(`/teams/newpage/${id}`);
       //     })
       // }
+      const addMember = ( newMember) => {
+        axios.post(`http://localhost:9000/groups`, newMember).then((res)=>{   
+          setMember({
+            name: '',
+            team_id: '',
+            nickname: '',
+            imag: '',
+            born: '',
+            city: '',
+            state: '',
+            country: '',
+            age: '',
+            height: '',
+            weight: '',
+            current_team: '',
+            salary: '',
+            number: '',
+            education: '',
+            spouse: '',
+            parents: '',
+            children: '',
+            siblings: '',
+            position: '',
+            bats: '',
+            throws: '',
+            stats: '',
+            about: '',
+          })
+          //  setClassT('innerNew3')
+          navigate(`/teams/newMember/${id}`);
+          
+          })
+      }
+
+     
       let monterValue = newMember.born.split(' ')[0]
       let hoyValue = newMember.born.split(' ')[1]
       let yearValue = newMember.born.split(' ').slice(-1).join()
@@ -79,22 +116,23 @@ const NewMember = () => {
               return age-1
             }
           }
-    useEffect(() => {
-        fetch(`https://my-baseball-teams.herokuapp.com/teams/${id}`)
-        .then(res => res.json())
-        .then(data =>{
-            setGroup(data.team)
-        })
-  },[id])
+  //   useEffect(() => {
+  //       fetch(`https://my-baseball-teams.herokuapp.com/teams/${id}`)
+  //       .then(res => res.json())
+  //       .then(data =>{
+  //           setGroup(data.team)
+  //       })
+  // },[id])
 
-//   useEffect(() => {
-//     fetch(`http://localhost:9000/teams/${id}`)
-//     .then(res => res.json())
-//     .then(data =>{
-//         setGroup(data.team)
-//     })
-// },[id])
+  useEffect(() => {
+    fetch(`http://localhost:9000/teams/${id}`)
+    .then(res => res.json())
+    .then(data =>{
+        setGroup(data.team)
+    })
+},[id, classT])
 
+console.log(classT)
   return (
     <div className='newMember_Container'>
         <Navbar />
@@ -104,40 +142,43 @@ const NewMember = () => {
              <div style={{display: 'flex'}} >
              <form onSubmit={handleSubmit} className='newMember_AboutGrid'>
                               <div className='innerNew'>
-                                <input id='name' type="text" onChange={handleInput} placeholder='Name...' className='inputNew' ></input>
-                                <input id='team_id' type="text" onChange={handleInput} placeholder={'team_id = ' +id} className='inputNew' ></input>
-                                <input id='nickname'type="text" onChange={handleInput}  placeholder="Nickname..." className='inputNew' ></input>
-                                <input id='imag' type="text" onChange={handleInput}  placeholder="Url..." className='inputNew' ></input>
-                                <input id='born' type="text" onChange={handleInput}  placeholder="Months day, year" className='inputNew' ></input>
-                                <input id='state' type="text" onChange={handleInput}  placeholder="City..." className='inputNew' ></input>
-                                <input id='city' type="text" onChange={handleInput} placeholder="State..."  className='inputNew' ></input>
-                                <input id='country' type="text" onChange={handleInput} placeholder="Country..." className='inputNew' ></input>
-                                <input id='age' type="text" onChange={handleInput}  placeholder={`Age.. ${currentAge(age) === Number(currentAge(age)) ? currentAge(age) : '' }`}className='inputNew'></input>
-                                <input id='height' type="text" onChange={handleInput}  placeholder="Height..."  className='inputNew' ></input>
-                                <input id='weight' type="text" onChange={handleInput}  placeholder="Weight..." className='inputNew' ></input>
-                                <input id='current_team' type="text" onChange={handleInput} placeholder={group.name} className='inputNew' ></input>
-                                <input id='salary' type="text" onChange={handleInput}  placeholder="Salary..." className='inputNew' ></input>
-                                <buttom type='submit' className='newMemberButton' onClick={handleSubmit}  >Add New</buttom>
+                                <input id='name' type="text" onChange={handleInput} value={newMember.name}  placeholder='Name...' className='inputNew' ></input>
+                                <input id='team_id' type="text" onChange={handleInput} value={newMember.team_id} placeholder={'team_id = ' +id} className='inputNew' ></input>
+                                <input id='nickname'type="text" onChange={handleInput} value={newMember.nickname} placeholder="Nickname..." className='inputNew' ></input>
+                                <input id='imag' type="text" onChange={handleInput}  value={newMember.imag} placeholder="Url..." className='inputNew' ></input>
+                                <input id='born' type="text" onChange={handleInput} value={newMember.born} placeholder="Months day, year" className='inputNew' ></input>
+                                <input id='state' type="text" onChange={handleInput} value={newMember.state} placeholder="City..." className='inputNew' ></input>
+                                <input id='city' type="text" onChange={handleInput} value={newMember.city} placeholder="State..."  className='inputNew' ></input>
+                                <input id='country' type="text" onChange={handleInput} value={newMember.country} placeholder="Country..." className='inputNew' ></input>
+                                <input id='age' type="text" onChange={handleInput} value={newMember.age} placeholder={`Age.. ${currentAge(age) === Number(currentAge(age)) ? currentAge(age) : '' }`}className='inputNew'></input>
+                                <input id='height' type="text" onChange={handleInput} value={newMember.height} placeholder="Height..."  className='inputNew' ></input>
+                                <input id='weight' type="text" onChange={handleInput} value={newMember.weight} placeholder="Weight..." className='inputNew' ></input>
+                                <input id='current_team' type="text" onChange={handleInput} value={newMember.current_team} placeholder={group.name} className='inputNew' ></input>
+                                <input id='salary' type="text" onChange={handleInput} value={newMember.salary} placeholder="Salary..." className='inputNew' ></input>
+                                <buttom type='submit' className='newMemberButton' onClick={ newMember.name === ''  ?  handleDelete : handleSubmit } >{classT === 'intoFade' ? 'Refresh' : 'Add New'}</buttom>
+                                 {/* <buttom type='submit' className='newMemberButton' onClick={handleDelete}  >Refresh</buttom> */}
+
                             </div>
                             <div className='innerNew'>                      
-                                <input id='number' type="number" onChange={handleInput} placeholder="Number..." className='inputNew' ></input>
-                                <input id='education' type="text" onChange={handleInput}  placeholder="Education..." className='inputNew'></input>
-                                <input id='spouse' type="text" onChange={handleInput}  placeholder="Spouse..." className='inputNew'></input>
-                                <input id='parents' type="text" onChange={handleInput}  placeholder="Parents..." className='inputNew'></input>
-                                <input id='children' type="text" onChange={handleInput}  placeholder="Children..." className='inputNew'></input>
-                                <input id='siblings' type="text" onChange={handleInput}  placeholder="Siblings..." className='inputNew'></input>
-                                <input id='position' type="text" onChange={handleInput} placeholder="Position..." className='inputNew'></input>
-                                <input id='bats' type="text" onChange={handleInput}  placeholder="Bats..." className='inputNew'></input>
-                                <input id='throws' type="text" onChange={handleInput}  placeholder="Throws..." className='inputNew'></input>
-                                <input id='stats' type="text" onChange={handleInput}  placeholder={'Stats id = ' + id} className='inputNew'></input>
-                                <input id='about' type="text" onChange={handleInput}  placeholder="About..." className='inputNewAbout'></input>
+                                <input id='number' type="number" onChange={handleInput} value={newMember.number} placeholder="Number..." className='inputNew' ></input>
+                                <input id='education' type="text" onChange={handleInput} value={newMember.education} placeholder="Education..." className='inputNew'></input>
+                                <input id='spouse' type="text" onChange={handleInput} value={newMember.spouse} placeholder="Spouse..." className='inputNew'></input>
+                                <input id='parents' type="text" onChange={handleInput} value={newMember.parents} placeholder="Parents..." className='inputNew'></input>
+                                <input id='children' type="text" onChange={handleInput} value={newMember.children} placeholder="Children..." className='inputNew'></input>
+                                <input id='siblings' type="text" onChange={handleInput} value={newMember.siblings} placeholder="Siblings..." className='inputNew'></input>
+                                <input id='position' type="text" onChange={handleInput} value={newMember.position} placeholder="Position..." className='inputNew'></input>
+                                <input id='bats' type="text" onChange={handleInput} value={newMember.bats} placeholder="Bats..." className='inputNew'></input>
+                                <input id='throws' type="text" onChange={handleInput} value={newMember.throws} placeholder="Throws..." className='inputNew'></input>
+                                <input id='stats' type="text" onChange={handleInput} value={newMember.stats} placeholder={'Stats id = ' + id} className='inputNew'></input>
+                                <input id='imag2' type="text" onChange={handleInput} value={newMember.imag2} placeholder="Background..." className='inputNew' ></input>
+                                <input id='about' type="text" onChange={handleInput} value={newMember.about} placeholder="About..." className='inputNewAbout'></input>
                             </div>
                            
                            
                  {/* <buttom type='submit' className='newMemberButton' onClick={handleSubmit}  >Add New</buttom> */}
              </form>
              <div className='innerNew2'>
-                                <div className='innerNew3'>
+                                <div className={classT}>
                                     <div  className='div'>
                                         <img src={newMember.imag ? newMember.imag : null } alt='NewImage' className='photo' />
                                     </div>

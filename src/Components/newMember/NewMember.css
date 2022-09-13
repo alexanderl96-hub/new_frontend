@@ -19,7 +19,7 @@
 }
 .inputNewAbout{
     width: 225px;
-    height: 100px;
+    height: 67px;
     padding-left: 4px;
 }
 
@@ -78,7 +78,30 @@
     border-radius: 4px;
     position: relative;
     cursor: pointer;
+    /* animation: faOutUpBig; */
 }
+.intoFade{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    background-color: rgb(186, 180, 180);
+    width: 740px;
+    height: 510px;
+    margin-top: -20px;
+    margin-left: -20px;
+    border-radius: 4px;
+    animation: fadeOutUpBig 2s; 
+}
+@keyframes fadeOutUpBig{
+    from {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+      transform: translate3d(0, -1000px, 0);
+    }
+  }
 .innerNew3:hover{
     border: 1.5px solid rgb(110, 104, 104);
 }
