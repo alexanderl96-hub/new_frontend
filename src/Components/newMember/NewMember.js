@@ -56,14 +56,9 @@ const NewMember = () => {
         setClassT('innerNew3')
       }
       
-      // const addMember = (newMember) => {
-      //   axios.post(`https://my-baseball-teams.herokuapp.com/groups`, newMember).then((res)=>{
-      //     navigate(`/teams/newpage/${id}`);
-      //     })
-      // }
-      const addMember = ( newMember) => {
-        axios.post(`http://localhost:9000/groups`, newMember).then((res)=>{   
-          setMember({
+       const addMember = (newMember) => {
+        axios.post(`https://my-baseball-teams.herokuapp.com/groups`, newMember).then((res)=>{
+            setMember({
             name: '',
             team_id: '',
             nickname: '',
@@ -88,12 +83,47 @@ const NewMember = () => {
             throws: '',
             stats: '',
             about: '',
+            imag2: '',
           })
-          //  setClassT('innerNew3')
+          
           navigate(`/teams/newMember/${id}`);
           
           })
       }
+      // const addMember = ( newMember) => {
+      //   axios.post(`http://localhost:9000/groups`, newMember).then((res)=>{   
+      //     setMember({
+      //       name: '',
+      //       team_id: '',
+      //       nickname: '',
+      //       imag: '',
+      //       born: '',
+      //       city: '',
+      //       state: '',
+      //       country: '',
+      //       age: '',
+      //       height: '',
+      //       weight: '',
+      //       current_team: '',
+      //       salary: '',
+      //       number: '',
+      //       education: '',
+      //       spouse: '',
+      //       parents: '',
+      //       children: '',
+      //       siblings: '',
+      //       position: '',
+      //       bats: '',
+      //       throws: '',
+      //       stats: '',
+      //       about: '',
+      //       imag2: '',
+      //     })
+          
+      //     navigate(`/teams/newMember/${id}`);
+          
+      //     })
+      // }
 
      
       let monterValue = newMember.born.split(' ')[0]
@@ -116,21 +146,21 @@ const NewMember = () => {
               return age-1
             }
           }
-  //   useEffect(() => {
-  //       fetch(`https://my-baseball-teams.herokuapp.com/teams/${id}`)
-  //       .then(res => res.json())
-  //       .then(data =>{
-  //           setGroup(data.team)
-  //       })
-  // },[id])
+    useEffect(() => {
+        fetch(`https://my-baseball-teams.herokuapp.com/teams/${id}`)
+        .then(res => res.json())
+        .then(data =>{
+            setGroup(data.team)
+        })
+  },[id,classT])
 
-  useEffect(() => {
-    fetch(`http://localhost:9000/teams/${id}`)
-    .then(res => res.json())
-    .then(data =>{
-        setGroup(data.team)
-    })
-},[id, classT])
+//   useEffect(() => {
+//     fetch(`http://localhost:9000/teams/${id}`)
+//     .then(res => res.json())
+//     .then(data =>{
+//         setGroup(data.team)
+//     })
+// },[id, classT])
 
 console.log(classT)
   return (

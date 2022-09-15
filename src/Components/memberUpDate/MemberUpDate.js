@@ -59,18 +59,8 @@ const MemberUpDate = () => {
     navigate(`/teams/groups/${id}`)
     
   };
-  // const updatedTeam = (update, id) => {
-  //   axios.put(`https://my-baseball-teams.herokuapp.com/groups/${id}`, update).then(
-  //     (res) => {
-  //       const newTeam = [...newMember];
-  //       newTeam[id] = update;
-  //       setMember(newTeam);
-  //     },
-  //     (error) => console.log(error)
-  //   );
-  // };
-   const updatedTeam = (update, id) => {
-    axios.put(`http://localhost:9000/groups/${id}`, update).then(
+  const updatedTeam = (update, id) => {
+    axios.put(`https://my-baseball-teams.herokuapp.com/groups/${id}`, update).then(
       (res) => {
         const newTeam = [...newMember];
         newTeam[id] = update;
@@ -79,32 +69,47 @@ const MemberUpDate = () => {
       (error) => console.log(error)
     );
   };
+  //  const updatedTeam = (update, id) => {
+  //   axios.put(`http://localhost:9000/groups/${id}`, update).then(
+  //     (res) => {
+  //       const newTeam = [...newMember];
+  //       newTeam[id] = update;
+  //       setMember(newTeam);
+  //     },
+  //     (error) => console.log(error)
+  //   );
+  // };
  
-  // useEffect(() => {
-  //   fetch(`https://my-baseball-teams.herokuapp.com/groups/${id}`)
+  useEffect(() => {
+    fetch(`https://my-baseball-teams.herokuapp.com/groups/${id}`)
+        .then(res => res.json())
+        .then(data =>{
+          setMemberid(data.team.team_id)
+          setMemberName(data.team.name)
+          setMemberImg(data.team.imag)
+          setMemberTeam(data.team.current_team)
+          setMemberAge(data.team.age)
+          setMemberCity(data.team.city)
+          setMemberState(data.team.state)
+          setMemberHeight(data.team.height)
+          setMemberWeight(data.team.weight)
+        })
+  },[id])
+  //  useEffect(() => {
+  //   fetch(`http://localhost:9000/groups/${id}`)
   //       .then(res => res.json())
   //       .then(data =>{
   //           setMemberid(data.team.team_id)
   //           setMemberName(data.team.name)
   //           setMemberImg(data.team.imag)
   //           setMemberTeam(data.team.current_team)
+  //           setMemberAge(data.team.age)
+  //           setMemberCity(data.team.city)
+  //           setMemberState(data.team.state)
+  //           setMemberHeight(data.team.height)
+  //           setMemberWeight(data.team.weight)
   //       })
   // },[id])
-   useEffect(() => {
-    fetch(`http://localhost:9000/groups/${id}`)
-        .then(res => res.json())
-        .then(data =>{
-            setMemberid(data.team.team_id)
-            setMemberName(data.team.name)
-            setMemberImg(data.team.imag)
-            setMemberTeam(data.team.current_team)
-            setMemberAge(data.team.age)
-            setMemberCity(data.team.city)
-            setMemberState(data.team.state)
-            setMemberHeight(data.team.height)
-            setMemberWeight(data.team.weight)
-        })
-  },[id])
 
   console.log(member)
   return (

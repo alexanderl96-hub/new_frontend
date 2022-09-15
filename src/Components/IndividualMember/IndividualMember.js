@@ -71,110 +71,119 @@ const handleDelete = () => {
 //         })
 //   },[])
 
-  useEffect(() => {
-    fetch(`http://localhost:9000/groups`)
+useEffect(() => {
+    fetch(`https://my-baseball-teams.herokuapp.com/groups`)
     .then(res => res.json())
     .then(data =>{
         setMember(data)
     })
 },[])
 //   useEffect(() => {
-//     fetch(`https://my-baseball-teams.herokuapp.com/playersStats`)
+//     fetch(`http://localhost:9000/groups`)
 //     .then(res => res.json())
 //     .then(data =>{
-//         setTeamID(data)
+//         setMember(data)
 //     })
 // },[])
-useEffect(() => {
-    fetch(`http://localhost:9000/playersStats`)
+  useEffect(() => {
+    fetch(`https://my-baseball-teams.herokuapp.com/playersStats`)
     .then(res => res.json())
     .then(data =>{
         setTeamID(data)
     })
 },[])
-
 // useEffect(() => {
-//     fetch(`https://my-baseball-teams.herokuapp.com/playersCareer`)
+//     fetch(`http://localhost:9000/playersStats`)
 //     .then(res => res.json())
 //     .then(data =>{
-//         setTeamCareerID(data)
+//         setTeamID(data)
 //     })
-//  },[])
+// },[])
+
 useEffect(() => {
-    fetch(`http://localhost:9000/playersCareer`)
+    fetch(`https://my-baseball-teams.herokuapp.com/playersCareer`)
     .then(res => res.json())
     .then(data =>{
         setTeamCareerID(data)
     })
-},[])
-
+ },[])
 // useEffect(() => {
-//     fetch(`https://my-baseball-teams.herokuapp.com/pitchersStats`)
+//     fetch(`http://localhost:9000/playersCareer`)
 //     .then(res => res.json())
 //     .then(data =>{
-//         setPitcherID(data)
+//         setTeamCareerID(data)
 //     })
 // },[])
+
 useEffect(() => {
-    fetch(`http://localhost:9000/pitchersStats`)
+    fetch(`https://my-baseball-teams.herokuapp.com/pitchersStats`)
     .then(res => res.json())
     .then(data =>{
         setPitcherID(data)
     })
 },[])
-
-
 // useEffect(() => {
-//     fetch(`https://my-baseball-teams.herokuapp.com/pitchersCarrer`)
+//     fetch(`http://localhost:9000/pitchersStats`)
 //     .then(res => res.json())
 //     .then(data =>{
-//         setPitcherCareerID(data)
+//         setPitcherID(data)
 //     })
 // },[])
+
+
 useEffect(() => {
-    fetch(`http://localhost:9000/pitchersCarrer`)
+    fetch(`https://my-baseball-teams.herokuapp.com/pitchersCarrer`)
     .then(res => res.json())
     .then(data =>{
         setPitcherCareerID(data)
     })
 },[])
-
-//   useEffect(() => {
-//     fetch(`https://my-baseball-teams.herokuapp.com/groups/${memberId}`)
+// useEffect(() => {
+//     fetch(`http://localhost:9000/pitchersCarrer`)
 //     .then(res => res.json())
 //     .then(data =>{
-//         setGroup(data.team.team_id )
-//         setMemberImg(data.team.imag)
-//         setMemberImg2(data.team.imag2)
-//         setMemberTeam(data.team.current_team)
-//         setMemberAge(data.team.age)
-//         setMemberPosition(data.team.position)
-//         setMemberName(data.team.name)
-//         setMemberNumber(data.team.number)
+//         setPitcherCareerID(data)
 //     })
-// },[memberId])
-// var sectionStyle = {  backgroundImage: url('https://images2.minutemediacdn.com/image/fetch/w_1046,h_485,c_fill,g_auto,f_auto/https%3A%2F%2Fnolanwritin.com%2Fwp-content%2Fuploads%2Fimagn-images%2F2017%2F07%2F17949891-850x560.jpeg')
-// };
-useEffect(() => {
-    fetch(`http://localhost:9000/groups/${memberId}`)
+// },[])
+
+  useEffect(() => {
+    fetch(`https://my-baseball-teams.herokuapp.com/groups/${memberId}`)
     .then(res => res.json())
     .then(data =>{
         setGroup(data.team.team_id )
-setMemberImg(data.team.imag)
-setMemberTeam(data.team.current_team)
-setMemberAge(data.team.age)
-setMemberPosition(data.team.position)
-setMemberName(data.team.name)
-setMemberNumber(data.team.number)
+        setMemberImg(data.team.imag)
+        setMemberImg2(data.team.imag2)
+        setMemberTeam(data.team.current_team)
+        setMemberAge(data.team.age)
+        setMemberPosition(data.team.position)
+        setMemberName(data.team.name)
+        setMemberNumber(data.team.number)
     })
-  },[memberId])
+},[memberId])
+// var sectionStyle = {  backgroundImage: url('https://images2.minutemediacdn.com/image/fetch/w_1046,h_485,c_fill,g_auto,f_auto/https%3A%2F%2Fnolanwritin.com%2Fwp-content%2Fuploads%2Fimagn-images%2F2017%2F07%2F17949891-850x560.jpeg')
+// };
+
+// useEffect(() => {
+//     fetch(`http://localhost:9000/groups/${memberId}`)
+//     .then(res => res.json())
+//     .then(data =>{
+//         setGroup(data.team.team_id )
+// setMemberImg(data.team.imag)
+// setMemberTeam(data.team.current_team)
+// setMemberAge(data.team.age)
+// setMemberPosition(data.team.position)
+// setMemberName(data.team.name)
+// setMemberNumber(data.team.number)
+//     })
+//   },[memberId])
 
  console.log(teamId, group)
   return (
       <div  className='MainMember'>
+          <div>
             <Navbar />
-                
-          <div style={{backgroundImage: `url(${memberImg2})`}} className='divTop'>
+            {/* style={{backgroundImage: `url(${memberImg2})`}}     */}
+          <div className='divTop'>
                <div className='divTop-inner'>Member
                      {/* <img src={FaEdit} alt='edit' /> */}
                      <Link to={`/teams/newpage/${group}`} onClick={handleDelete}  className="divEdit2" ><FaRecycle /></Link>
@@ -410,7 +419,8 @@ setMemberNumber(data.team.number)
                     : null}
             </div>
             ) }) }
-          </div>        
+          </div>  
+          </div>      
       </div>
    
   )

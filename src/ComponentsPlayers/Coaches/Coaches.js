@@ -45,18 +45,18 @@ const Coaches = () => {
        setCount(coachName)
      }
   
-    const targetId =(e)=>{
-        let current = e.target.id
-        if(current && on){
-            setVal(current)
-            setMore('⌃')
-            setON(false)
-        }else{
-            setVal()
-            setMore('⌄')
-            setON(true)
-        }
-    }
+    // const targetId =(e)=>{
+    //     let current = e.target.id
+    //     if(current && on){
+    //         setVal(current)
+    //         setMore('⌃')
+    //         setON(false)
+    //     }else{
+    //         setVal()
+    //         setMore('⌄')
+    //         setON(true)
+    //     }
+    // }
 
 console.log(count)
 console.log( coach, 'coach')

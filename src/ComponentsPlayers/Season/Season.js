@@ -6,18 +6,16 @@ const Season = () => {
   const [season, setSeason] =useState([])
 
 
-  // function date(num){
-  //   let year = ''
-  //   let month = ''
-  //   let day = ''
-  //   if(num.length < 8 ){
-  //     year = num.toString().slice(3)
-  //     day = num.toString().slice(1,3)
-  //     month = num.toString().slice(0,1)
-  //   }
+  function date(num){
+    let year = ''
+    let month = ''
+    let day = ''
+    year = num.toString().slice(3)
+    day = num.toString().slice(1,3)
+     month = num.toString().slice(0,1).length < 2 ? `0${num.toString().slice(0,1)}` : num.toString().slice(0,1)
    
-  //   return month+'/'+day+'/'+year
-  // }
+    return month+'/'+day+'/'+year
+  }
 
   useEffect(() => {
     fetch('https://my-baseball-teams.herokuapp.com/season')
@@ -39,7 +37,7 @@ const Season = () => {
                {/* {data.points_team > data.points_vs ? data.points_team  :null} */}
                <div >
                   <div >
-                     <div className='date'>{data.date}</div>
+                     <div className='date'>{date(data.date)}</div>
                   </div>
                   <div >
                     <div className='teamName'>{data.team_name}</div>
