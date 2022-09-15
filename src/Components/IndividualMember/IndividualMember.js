@@ -183,7 +183,7 @@ useEffect(() => {
           <div>
             <Navbar />
             {/* style={{backgroundImage: `url(${memberImg2})`}}     */}
-          <div className='divTop'>
+          <div style={{backgroundImage: `url(${memberImg2})`}}  className='divTop'>
                <div className='divTop-inner'>Member
                      {/* <img src={FaEdit} alt='edit' /> */}
                      <Link to={`/teams/newpage/${group}`} onClick={handleDelete}  className="divEdit2" ><FaRecycle /></Link>
