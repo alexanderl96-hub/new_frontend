@@ -12,7 +12,7 @@ const Teams = () => {
 
     
     useEffect(() => {
-        fetch(`https://my-baseball-teams.herokuapp.com/teams`)
+        fetch(`https://my-baseball-teams.adaptable.app/teams`)
         .then(res => res.json())
         .then(data =>{
             setTeams(data)
