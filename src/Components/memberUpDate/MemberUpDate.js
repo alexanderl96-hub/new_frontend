@@ -60,7 +60,7 @@ const MemberUpDate = () => {
     
   };
   const updatedTeam = (update, id) => {
-    axios.put(`https://my-baseball-teams.herokuapp.com/groups/${id}`, update).then(
+    axios.put(`https://my-baseball-teams.adaptable.app/groups/${id}`, update).then(
       (res) => {
         const newTeam = [...newMember];
         newTeam[id] = update;
@@ -81,7 +81,7 @@ const MemberUpDate = () => {
   // };
  
   useEffect(() => {
-    fetch(`https://my-baseball-teams.herokuapp.com/groups/${id}`)
+    fetch(`https://my-baseball-teams.adaptable.app/groups/${id}`)
         .then(res => res.json())
         .then(data =>{
           setMemberid(data.team.team_id)

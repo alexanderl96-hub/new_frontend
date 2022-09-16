@@ -72,7 +72,7 @@ const AddStatsPlayers = () => {
   let memberId = params.id
 
   useEffect(() => {
-         fetch(`https://my-baseball-teams.herokuapp.com/groups`)
+         fetch(`https://my-baseball-teams.adaptable.app/groups`)
         .then(res => res.json())
         .then(data =>{
     //       setNewGroup(data)
@@ -146,7 +146,7 @@ const AddStatsPlayers = () => {
   //     })
   // }
   const addStatsPlayers = (newPlayers) => {
-    axios.post(`https://my-baseball-teams.herokuapp.com/playersStats`, newPlayers).then((res)=>{
+    axios.post(`https://my-baseball-teams.adaptable.app/playersStats`, newPlayers).then((res)=>{
       navigate(`/teams/groups/${memberId}`);
       })
   }
@@ -156,7 +156,7 @@ const AddStatsPlayers = () => {
   //     })
   // }
   const addStatsPlayers2 = (newPlayers) => {
-    axios.post(`https://my-baseball-teams.herokuapp.com/playersCareer`, newPlayers).then((res)=>{
+    axios.post(`https://my-baseball-teams.adaptable.app/playersCareer`, newPlayers).then((res)=>{
       navigate(`/teams/groups/${memberId}`);
       })
   }
@@ -166,7 +166,7 @@ const AddStatsPlayers = () => {
   //     })
   // }
   const addStatsPlayers3 = (newPlayers) => {
-    axios.post(`https://my-baseball-teams.herokuapp.com/pitchersStats`, newPlayers).then((res)=>{
+    axios.post(`https://my-baseball-teams.adaptable.app/pitchersStats`, newPlayers).then((res)=>{
       navigate(`/teams/groups/${memberId}`);
       })
   }
@@ -176,7 +176,7 @@ const AddStatsPlayers = () => {
   //     })
   // }
   const addStatsPlayers4 = (newPlayers) => {
-    axios.post(`https://my-baseball-teams.herokuapp.com/pitchersCarrer`, newPlayers).then((res)=>{
+    axios.post(`https://my-baseball-teams.adaptable.app/pitchersCarrer`, newPlayers).then((res)=>{
       navigate(`/teams/groups/${memberId}`);
       })
   }

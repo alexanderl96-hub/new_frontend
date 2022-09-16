@@ -24,7 +24,7 @@ const NewMember = () => {
        city: '',
        state: '',
        country: '',
-       age: '',
+       age: '' ,
        height: '',
        weight: '',
        current_team: '',
@@ -57,7 +57,7 @@ const NewMember = () => {
       }
       
        const addMember = (newMember) => {
-        axios.post(`https://my-baseball-teams.herokuapp.com/groups`, newMember).then((res)=>{
+        axios.post(`https://my-baseball-teams.adaptable.app/groups`, newMember).then((res)=>{
             setMember({
             name: '',
             team_id: '',
@@ -147,7 +147,7 @@ const NewMember = () => {
             }
           }
     useEffect(() => {
-        fetch(`https://my-baseball-teams.herokuapp.com/teams/${id}`)
+        fetch(`https://my-baseball-teams.adaptable.app/teams/${id}`)
         .then(res => res.json())
         .then(data =>{
             setGroup(data.team)
@@ -180,7 +180,7 @@ console.log(classT)
                                 <input id='state' type="text" onChange={handleInput} value={newMember.state} placeholder="City..." className='inputNew' ></input>
                                 <input id='city' type="text" onChange={handleInput} value={newMember.city} placeholder="State..."  className='inputNew' ></input>
                                 <input id='country' type="text" onChange={handleInput} value={newMember.country} placeholder="Country..." className='inputNew' ></input>
-                                <input id='age' type="text" onChange={handleInput} value={newMember.age} placeholder={`Age.. ${currentAge(age) === Number(currentAge(age)) ? currentAge(age) : '' }`}className='inputNew'></input>
+                                <input id='age' type="text" onChange={!handleInput } value={currentAge(age) ? currentAge(age) : newMember.age} placeholder="Age..." className='inputNew'></input>
                                 <input id='height' type="text" onChange={handleInput} value={newMember.height} placeholder="Height..."  className='inputNew' ></input>
                                 <input id='weight' type="text" onChange={handleInput} value={newMember.weight} placeholder="Weight..." className='inputNew' ></input>
                                 <input id='current_team' type="text" onChange={handleInput} value={newMember.current_team} placeholder={group.name} className='inputNew' ></input>
@@ -216,7 +216,7 @@ console.log(classT)
                                             <h3>Primary Information</h3> 
                                             <h5>{newMember.name}</h5>
                                             <h5>{newMember.born}</h5>
-                                            <h5>{newMember.state+ ' ,'} {newMember.city}</h5>
+                                            <h5>{newMember.state ? newMember.state+ ' ,' : ''} {newMember.city}</h5>
                                             <h5>{newMember.country}</h5>
                                      </div>
                                      <div className='div3'>
@@ -232,7 +232,7 @@ console.log(classT)
                                      </div>
                                      <div className='div5'>
                                             <h5><span>Nickname:</span> {newMember.nickname}</h5>
-                                            <h5><span>Age:</span> {newMember.age}</h5>
+                                            <h5><span>Age:</span> {currentAge(age) ? currentAge(age) : ''}</h5>
                                             <h5><span>Height:</span> {newMember.height}</h5>
                                             <h5><span>Weight:</span> {newMember.weight}</h5>
                                             <h5><span>Salary:</span> {newMember.salary}</h5>

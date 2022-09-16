@@ -28,7 +28,7 @@ const NewTeam = () => {
     addTeam(newTeam)
   }
   const addTeam = (newTeam) => {
-    axios.post(`https://my-baseball-teams.herokuapp.com/teams`, newTeam).then((res)=>{
+    axios.post(`https://my-baseball-teams.adaptable.app/teams`, newTeam).then((res)=>{
       navigate('/teams');
       })
   }

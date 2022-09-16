@@ -41,19 +41,19 @@ const IndividualMember = () => {
 //     }, (error) => console.log(error))
 // };
 const handleDelete = () => {
-    axios.delete(`https://my-baseball-teams.herokuapp.com/groups/${memberId}`).then(() =>{
+    axios.delete(`https://my-baseball-teams.adaptable.app/groups/${memberId}`).then(() =>{
         //  navigate(`/homebase`)
     }, (error) => console.log(error))
-    axios.delete(`https://my-baseball-teams.herokuapp.com/playersStats/${memberId}`).then(() =>{
+    axios.delete(`https://my-baseball-teams.adaptable.app/playersStats/${memberId}`).then(() =>{
         //  navigate(`/homebase`)
     }, (error) => console.log(error))
-    axios.delete(`https://my-baseball-teams.herokuapp.com/playersCareer/${memberId}`).then(() =>{
+    axios.delete(`https://my-baseball-teams.adaptable.app/playersCareer/${memberId}`).then(() =>{
         //  navigate(`/homebase`)
     }, (error) => console.log(error))
-    axios.delete(`https://my-baseball-teams.herokuapp.com/pitchersStats/${memberId}`).then(() =>{
+    axios.delete(`https://my-baseball-teams.adaptable.app/pitchersStats/${memberId}`).then(() =>{
         //  navigate(`/homebase`)
     }, (error) => console.log(error))
-    axios.delete(`https://my-baseball-teams.herokuapp.com/pitchersCarrer/${memberId}`).then(() =>{
+    axios.delete(`https://my-baseball-teams.adaptable.app/pitchersCarrer/${memberId}`).then(() =>{
         //  navigate(`/homebase`)
     }, (error) => console.log(error))
 };
@@ -72,7 +72,7 @@ const handleDelete = () => {
 //   },[])
 
 useEffect(() => {
-    fetch(`https://my-baseball-teams.herokuapp.com/groups`)
+    fetch(`https://my-baseball-teams.adaptable.app/groups`)
     .then(res => res.json())
     .then(data =>{
         setMember(data)
@@ -86,7 +86,7 @@ useEffect(() => {
 //     })
 // },[])
   useEffect(() => {
-    fetch(`https://my-baseball-teams.herokuapp.com/playersStats`)
+    fetch(`https://my-baseball-teams.adaptable.app/playersStats`)
     .then(res => res.json())
     .then(data =>{
         setTeamID(data)
@@ -101,7 +101,7 @@ useEffect(() => {
 // },[])
 
 useEffect(() => {
-    fetch(`https://my-baseball-teams.herokuapp.com/playersCareer`)
+    fetch(`https://my-baseball-teams.adaptable.app/playersCareer`)
     .then(res => res.json())
     .then(data =>{
         setTeamCareerID(data)
@@ -116,7 +116,7 @@ useEffect(() => {
 // },[])
 
 useEffect(() => {
-    fetch(`https://my-baseball-teams.herokuapp.com/pitchersStats`)
+    fetch(`https://my-baseball-teams.adaptable.app/pitchersStats`)
     .then(res => res.json())
     .then(data =>{
         setPitcherID(data)
@@ -132,7 +132,7 @@ useEffect(() => {
 
 
 useEffect(() => {
-    fetch(`https://my-baseball-teams.herokuapp.com/pitchersCarrer`)
+    fetch(`https://my-baseball-teams.adaptable.app/pitchersCarrer`)
     .then(res => res.json())
     .then(data =>{
         setPitcherCareerID(data)
@@ -147,7 +147,7 @@ useEffect(() => {
 // },[])
 
   useEffect(() => {
-    fetch(`https://my-baseball-teams.herokuapp.com/groups/${memberId}`)
+    fetch(`https://my-baseball-teams.adaptable.app/groups/${memberId}`)
     .then(res => res.json())
     .then(data =>{
         setGroup(data.team.team_id )
@@ -160,8 +160,7 @@ useEffect(() => {
         setMemberNumber(data.team.number)
     })
 },[memberId])
-// var sectionStyle = {  backgroundImage: url('https://images2.minutemediacdn.com/image/fetch/w_1046,h_485,c_fill,g_auto,f_auto/https%3A%2F%2Fnolanwritin.com%2Fwp-content%2Fuploads%2Fimagn-images%2F2017%2F07%2F17949891-850x560.jpeg')
-// };
+
 
 // useEffect(() => {
 //     fetch(`http://localhost:9000/groups/${memberId}`)
@@ -180,10 +179,9 @@ useEffect(() => {
  console.log(teamId, group)
   return (
       <div  className='MainMember'>
-        <div >
             <Navbar />
             {/* style={{backgroundImage: `url(${memberImg2})`}}     */}
-          <div style={{backgroundImage: `url(${memberImg2})`}}  className='divTop'>
+          <div style={{backgroundImage: `url(${memberImg2})`}}   className='divTop'>
                <div className='divTop-inner'>Member
                      {/* <img src={FaEdit} alt='edit' /> */}
                      <Link to={`/teams/newpage/${group}`} onClick={handleDelete}  className="divEdit2" ><FaRecycle /></Link>
@@ -281,7 +279,7 @@ useEffect(() => {
 
                             <div className='IndividualWrapper6'>
                                <div className="team_About5">
-                                    <h2 style={{color: 'white'}}>Career Stats</h2>
+                                    <h2 >Career Stats</h2>
                                     <div className='statsGrid2'>
                                         <div className='career'>YEAR</div>
                                         <div className='career'>TEAM</div>
@@ -327,7 +325,7 @@ useEffect(() => {
 
                             <div className='IndividualWrapper7'>
                                <div className="team_About5">
-                                    <h2 style={{color: 'white'}}>Pitcher Stats</h2>
+                                    <h2 >Pitcher Stats</h2>
                                     <div className='statsGrid'>
                                         <div className='pitcher'>GAME</div>
                                         <div>IP</div>
@@ -371,7 +369,7 @@ useEffect(() => {
 
                             <div className='IndividualWrapper8'>
                                <div className="team_About5">
-                                    <h2 style={{color: 'white'}}>Career Pitcher Stats</h2>
+                                    <h2 >Career Pitcher Stats</h2>
                                     <div className='statsGrid2'>
                                         <div className='career'>YEAR</div>
                                         <div className='career'>TEAM</div>
@@ -390,7 +388,7 @@ useEffect(() => {
                                                     marginRight: '-10px', color: 'white'}} > 
                                                     {  pitcherCareerId.map((careerP, index)=>{
                                                         return(
-                                                            <div>
+                                                            <div >
                                                                 {Number(memberId) === careerP.pitcher_id  ?  
                                                                     <div className='about-inner2'>
                                                                         <div className='career1'>{careerP.game_year} </div>
@@ -420,7 +418,6 @@ useEffect(() => {
                     : null}
             </div>
             ) }) }
-          </div>  
           </div>      
       </div>
    
