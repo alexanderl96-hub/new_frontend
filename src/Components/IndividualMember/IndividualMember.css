@@ -1,5 +1,5 @@
 .MainMember{
-    background-color: #030353ec; 
+    background: #030353ec; 
     /* padding: 15px;  */;
     animation: fadein 1s;
     -moz-animation: fadein 1s; /* Firefox */
@@ -19,7 +19,7 @@
     text-align: center; 
     margin-left: 180px;
     margin-right:180px;
-    height: 100%;
+    /* height: 100%; */
     margin-top:0.5px;
     /* background-image: url('https://images2.minutemediacdn.com/image/fetch/w_1046,h_485,c_fill,g_auto,f_auto/https%3A%2F%2Fnolanwritin.com%2Fwp-content%2Fuploads%2Fimagn-images%2F2017%2F07%2F17949891-850x560.jpeg'); */
 }
@@ -90,8 +90,8 @@
 .IndividualContin{
     display:grid;
     grid-template-columns: repeat(3, 1fr);
-     grid-template-rows: repeat(6, 1fr);
-    height: 500px;
+     grid-auto-rows: repeat(1fr);
+    /* height: 500px; */
 
 }
 .IndividualWrapper{

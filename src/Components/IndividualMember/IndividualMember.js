@@ -180,7 +180,7 @@ useEffect(() => {
  console.log(teamId, group)
   return (
       <div  className='MainMember'>
-          <div>
+        <div >
             <Navbar />
             {/* style={{backgroundImage: `url(${memberImg2})`}}     */}
           <div style={{backgroundImage: `url(${memberImg2})`}}  className='divTop'>
@@ -196,6 +196,7 @@ useEffect(() => {
                <h3>{memberTeam} | {memberPosition} | Age: {memberAge}</h3>
                
           </div>
+         
           <div className='divMedium'>
           {member.map((player, index) =>{
               return (   

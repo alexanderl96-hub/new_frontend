@@ -72,7 +72,7 @@ const Desing = () => {
       setLast(last - 6)
     }
      useEffect(() => {
-         fetch(`https://my-baseball-teams.herokuapp.com/groups`)
+         fetch(`https://my-baseball-teams.adaptable.app/groups`)
          .then(res => res.json())
          .then(data =>{
            setNewGroup(data)
@@ -97,7 +97,7 @@ const Desing = () => {
       //   })
       // },[teamId])
       useEffect(() => {
-        fetch(`https://my-baseball-teams.herokuapp.com/teams`)
+        fetch(`https://my-baseball-teams.adaptable.app/teams`)
         .then(res => res.json())
         .then(data =>{
           setGroup(data = data.filter((a,b )=> a.id === Number(teamId)))
@@ -105,7 +105,7 @@ const Desing = () => {
       },[teamId])
 
        useEffect(() => {
-         fetch(`https://my-baseball-teams.herokuapp.com/playersStats`)
+         fetch(`https://my-baseball-teams.adaptable.app/playersStats`)
          .then(res => res.json())
          .then(data =>{
           let arr = data.map((stat,i) => {return stat.players_id === Number(search) ? stat.average: null })

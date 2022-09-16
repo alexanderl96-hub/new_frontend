@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link} from 'react-router-dom'
 import Navbar from '../../Components/navBar/Navbar'
 import './coaches.css'
+import Loading from '../../Loading'
 
 const Coaches = () => {
     const [coach, setCoach] = useState([])
@@ -13,7 +14,15 @@ const Coaches = () => {
     const [search, setSearch] = useState({
         name: '',
     })
-
+    const [countOut, setCountOut] = useState(<div className='Loading'><Loading/></div>);
+    const [countInTimeout, setCountInTimeout] = useState([]);
+    useEffect(() => {
+     
+      setTimeout(() => {
+        setCountInTimeout(countOut)
+      },2000);
+      setCountOut()
+    },[countOut])
    
     const articule = (artist) => {
         let pro = "";
@@ -78,6 +87,8 @@ console.log( coach, 'coach')
             </div>
 
         </div>
+        {!countInTimeout ? (
+
         <div className='payContent2' >
             {coachName.length  ? 
                 <div className='payContCoach'>
@@ -115,6 +126,9 @@ console.log( coach, 'coach')
               </div> }
             
         </div>
+        ) : (
+            <div className='Loading'><Loading/></div>
+          )}
     </div>
   )
 }

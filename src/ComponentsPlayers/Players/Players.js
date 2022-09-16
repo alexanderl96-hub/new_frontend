@@ -2,6 +2,7 @@ import React,  { useState, useEffect }from 'react'
 import Navbar from '../../Components/navBar/Navbar'
 import './players.css'
 import {Link} from 'react-router-dom'
+import Loading from '../../Loading'
 // import {articule} from '../../Components/desing'
 
 
@@ -12,6 +13,15 @@ const Players = () => {
     const [search, setSearch] = useState({
         name: '',
     })
+    const [count, setCount] = useState(<div className='Loading'><Loading/></div>);
+  const [countInTimeout, setCountInTimeout] = useState([]);
+  useEffect(() => {
+   
+    setTimeout(() => {
+      setCountInTimeout(count)
+    },2000);
+    setCount()
+  },[count])
 
     const articule = (artist) => {
         let pro = "";
@@ -25,7 +35,7 @@ const Players = () => {
       };
     useEffect(() => {
         let name = search.name
-        fetch(`https://my-baseball-teams.herokuapp.com/groups`)
+        fetch(`https://my-baseball-teams.adaptable.app/groups`)
         .then(res => res.json())
         .then(data =>{
             setAllPlayers(data = data.filter(element => !element.position.includes('Team')))
@@ -76,6 +86,9 @@ const Players = () => {
                        <div className='divMatchNone'>Not matchers</div>}</div>}
             </div>
         </div>
+
+       {!countInTimeout ? (
+
         <div className='payContent2'>
         { val.length  ? 
              <div className='payContCoach'>
@@ -119,6 +132,10 @@ const Players = () => {
                 </div>
           </div>}
           </div>
+
+          ) : (
+            <div className='Loading'><Loading/></div>
+          )}
     </div>
   )
 }

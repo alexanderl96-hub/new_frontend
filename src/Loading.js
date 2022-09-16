@@ -5,14 +5,14 @@ import { Section, Title, Article, Prop, list } from "./generic";
 
 const Loading = () => {
     return (
-    <Section>
+    <Section style={{ paddingTop:'18%'}}>
         {list.map(l => (
             l.props === "spinningBubbles" ? 
             <ReactLoading 
               type={l.props} 
               color={'white'} 
-              height={200} 
-              width={375}/> : null
+              height={30} 
+              width={100}/> : null
         ))}
         {/* <ReactLoading type={l.prop} color="#fff" />  */}
     {/* <Title>React Loading</Title>
