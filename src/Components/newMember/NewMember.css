@@ -12,34 +12,6 @@
     font-family: cursive;
     margin-left: -80%;
 }
-.inputNew{
-    width: 225px;
-    height: 30px;
-    padding-left: 4px;
-}
-.inputNewAbout{
-    width: 225px;
-    height: 67px;
-    padding-left: 4px;
-}
-
-.wrapLink{
-    padding-top: 10px; 
-    text-align: start; 
-    margin-left: 20px;
-    margin-top: 15px;
-    margin-bottom: 38px;
-}
-.newLinkBackNew{
-    margin-bottom: 35px;
-    text-decoration: none; 
-    margin-left: 30px;
-    border-radius: 5px;
-    background-color: rgb(134, 131, 131);
-    padding: 5px;
-    font-size: 17px;
-    cursor: pointer;
-}
 .newMember_AboutGrid{
     display: flex;
     flex-direction: row;
@@ -50,6 +22,16 @@
     flex-direction: column;
     margin-top: 20px;
     margin-left: 50px;
+}
+.inputNew{
+    width: 225px;
+    height: 30px;
+    padding-left: 4px;
+}
+.inputNewAbout{
+    width: 225px;
+    height: 67px;
+    padding-left: 4px;
 }
 .innerNew2{
     display: flex;
@@ -128,7 +110,6 @@ input{
     width: 20%;
     margin: 0 auto;
     font-size: 17px;
-    /* border-radius: 7px; */
 }
 .div{
     height: 200px;
@@ -137,7 +118,6 @@ input{
     border-radius: 4px;
     grid-column: 1/2;
     grid-row: 1;
-
 }
 .div2{
     margin-top: -10px;
@@ -149,7 +129,6 @@ input{
     margin-bottom: 35px;
 }
 .div2 > h5{
-    /* border: 1px solid rgb(24, 23, 23); */
     height: 35px;
     margin-left: 10px;
     margin-top: -21.5px;
@@ -162,7 +141,6 @@ input{
     grid-row: 1;
 }
 .div3 > p{
-    /* border: 1px solid black; */
     height: 130px;
     width: 250px;
     margin-right: 10px;
@@ -191,7 +169,6 @@ input{
     text-align: start;
 }
 .div5{
-    /* border: 1px solid black; */
     grid-column: 2/3;
     grid-row: 2;
     margin-top: -25px;
@@ -208,7 +185,6 @@ input{
     text-align: start;
 }
 .div6{
-    /* border: 1px solid black; */
     grid-column: 3/4;
     grid-row: 2;
     margin-top: -25px;

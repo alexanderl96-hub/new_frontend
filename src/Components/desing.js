@@ -153,10 +153,6 @@ const Desing = () => {
                                <p><span>Position:</span> {a.position}</p>
                                <p><span>Salary:</span> {a.salary}</p>
                                <p><span>About: </span>{a.about}</p>
-                               {/* <p><span>Bats:</span> {a.bats}</p>
-                               <p><span>Throws:</span> {a.throws}</p>
-                               <p><span>Height:</span> {a.height}</p>
-                               <p><span>Weight:</span> {a.weight}</p> */}
                                <Link to={`/teams/groups/${search}`} className='changeMore'>More...</Link>
                              </div>
                            <div className='innerSectionStart'>

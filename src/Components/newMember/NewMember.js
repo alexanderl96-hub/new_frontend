@@ -167,7 +167,6 @@ console.log(classT)
     <div className='newMember_Container'>
         <Navbar />
          <h1 >New Member</h1>
-         {/* <div className='wrapLink'> <Link to={`/teams/newpage/${group.id}`} className='newLinkBackNew'>Back</Link> </div> */}
          <div>
              <div style={{display: 'flex'}} >
              <form onSubmit={handleSubmit} className='newMember_AboutGrid'>

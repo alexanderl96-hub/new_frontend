@@ -207,7 +207,6 @@ const AddStatsPlayers = () => {
               </div>
               <div className="ContainerStats">
               <div className='Major'>
-                {/* <div className='Major-in1'></div> */}
             <div className='PlayersSats'>
                 <h3>Players Stats</h3>
                 <form onSubmit={handleSubmit}>

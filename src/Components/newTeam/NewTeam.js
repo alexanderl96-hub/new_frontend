@@ -1,7 +1,7 @@
 import React, { useState  } from 'react'
 import { Link , useNavigate } from 'react-router-dom'
 import axios from "axios";
-import '../teamUpDate/TeamUpDate.css'
+// import '../teamUpDate/TeamUpDate.css'
 import './NewTeam.css'
 import Navbar from '../navBar/Navbar'
 
@@ -43,7 +43,6 @@ const NewTeam = () => {
          <Navbar />
          <h1>New Team</h1>
          <div className='newTeam_Wrap' >      
-         {/* <div className='newTeam_Name'><h3>{newTeam.name}</h3></div> */}
                 <form className='newTeam_Form' onSubmit={handleSubmit} >
                     <label htmlFor="">Name:</label>
                     <input id='name' type="text" onChange={handleInput}  placeholder="Name and lastname..." className='newInputteam' ></input>

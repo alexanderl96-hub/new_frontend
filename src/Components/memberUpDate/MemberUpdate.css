@@ -1,8 +1,6 @@
 .Update_Container{
     text-align: center;
     padding-bottom: 10px; 
-    /* background-color: rgba(148, 145, 145, 0.645); */
-    /* height: 780px; */
     transition: all 1.5s;
     animation: fadein 0.5s;
   -moz-animation: fadein 0.5s; /* Firefox */
@@ -17,7 +15,6 @@
 .Update_Container > h2 {
     margin-top: -70px;
     margin-left: 420px;
-    /* background-color: white; */
     border-radius: 30px;
     padding: 3px;
     width: 460px;
@@ -65,7 +62,8 @@
     margin-top: 50px;
     font-size: 17px;
     margin-left: 115px;
-    border-radius: 30px
+    border-radius: 30px;
+    cursor: pointer;
 }
 .Upcheck{
     display: grid; 
@@ -78,3 +76,4 @@
 .b {
     margin-left: -110px;
 }
+@media only screen and (max-width: 768px){}
