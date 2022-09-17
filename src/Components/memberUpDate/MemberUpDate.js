@@ -7,14 +7,20 @@ import Navbar from '../navBar/Navbar'
 
 const MemberUpDate = () => {
   const [member, setMemberid] = useState([])
+
   const [memberName, setMemberName] = useState([])
   const [memberImg, setMemberImg] = useState([])
   const [memberTeam, setMemberTeam] = useState([])
   const [memberAge, setMemberAge] = useState([])
+  const [memberBirth, setMemberBirth] = useState([])
   const [memberCity, setMemberCity] = useState([])
   const [memberState, setMemberState] = useState([])
   const [memberHeight, setMemberHeight] = useState([])
   const [memberWeight, setMemberWeight] = useState([])
+  const date = new Date();
+  const year = date.getFullYear()
+  const month = date.getMonth()+1
+  const hoy = date.getDate()
 
   const navigate = useNavigate(); 
   let { id } = useParams();
@@ -46,7 +52,7 @@ const MemberUpDate = () => {
     about: '',
  })
 
-
+ 
 
   const handleInput =(e)=>{
     const {value} = e.target;
@@ -79,7 +85,6 @@ const MemberUpDate = () => {
   //     (error) => console.log(error)
   //   );
   // };
- 
   useEffect(() => {
     fetch(`https://my-baseball-teams.adaptable.app/groups/${id}`)
         .then(res => res.json())
@@ -89,12 +94,38 @@ const MemberUpDate = () => {
           setMemberImg(data.team.imag)
           setMemberTeam(data.team.current_team)
           setMemberAge(data.team.age)
+          setMemberBirth(data.team.born)
           setMemberCity(data.team.city)
           setMemberState(data.team.state)
           setMemberHeight(data.team.height)
           setMemberWeight(data.team.weight)
         })
   },[id])
+
+
+     let monterValue = memberBirth.toString().split(' ')[0]
+     let hoyValue = memberBirth.toString().split(' ')[1]
+     let yearValue = memberBirth.toString().split(' ').slice(-1).join()
+    
+        const dateBirth = new Date(`${Number(yearValue)}-${monterValue}-${hoyValue}`)
+      const yearB = dateBirth.getFullYear()
+      const monthB = dateBirth.getMonth()+1
+      const hoyB = dateBirth.getDate()
+
+        const age = year - yearB
+      // // const currentAge = monthB <= month && hoyB >= hoy ? age  : age-1
+      const currentAge = () =>{
+            if(monthB <= month){
+              return age
+            }else if(monthB <= month && hoyB > hoy){
+              return age-1
+            }else{
+              return age-1
+            }
+          }
+
+ console.log(currentAge(age))
+ 
   //  useEffect(() => {
   //   fetch(`http://localhost:9000/groups/${id}`)
   //       .then(res => res.json())
@@ -111,7 +142,7 @@ const MemberUpDate = () => {
   //       })
   // },[id])
 
-  console.log(member)
+  console.log()
   return (
          <div className='Update_Container'>
              <Navbar />
@@ -121,20 +152,20 @@ const MemberUpDate = () => {
           
          <form onSubmit={handleSubmit} className='newMemberUpdate'>
                            <div className='innerUpdate'>
-                                <input id='name' type="text" onChange={handleInput} placeholder={memberName} className='inputT' ></input>
-                                <input id='team_id' type="text" onChange={handleInput} placeholder={'team_id = ' +member} className='inputT' ></input>
-                                <input id='nickname'type="text" onChange={handleInput}  placeholder="Nickname..." className='inputT' ></input>
+                                <input id='name' type="text" onChange={handleInput} value={memberName ? memberName : newMember.name}placeholder={memberName} className='inputT' ></input>
+                                <input id='team_id' type="text" onChange={handleInput} value={member ? member : ''} placeholder={'team_id = ' +member} className='inputT' ></input>
+                                <input id='nickname'type="text" onChange={handleInput}  placeholder={"Nickname..." } className='inputT' ></input>
                                 <input id='imag' type="text" onChange={handleInput}  placeholder="Url..." className='inputT' ></input>
-                                <input id='born' type="text" onChange={handleInput}  placeholder="Months day, year" className='inputT' ></input>
-                                <input id='city' type="text" onChange={handleInput}  placeholder="City..." className='inputT' ></input>
-                                <input id='state' type="text" onChange={handleInput} placeholder="State..."  className='inputT' ></input>
+                                <input id='born' type="text" onChange={handleInput} value={memberBirth } placeholder="Months day, year" className='inputT' ></input>
+                                <input id='city' type="text" onChange={handleInput}  value={memberCity ? memberCity : ''} placeholder="City..." className='inputT' ></input>
+                                <input id='state' type="text" onChange={handleInput} value={memberState ? memberState : ''} placeholder="State..."  className='inputT' ></input>
                                 <input id='country' type="text" onChange={handleInput} placeholder="Country..." className='inputT' ></input>
                             </div>
                             <div className='innerUpdate'>
-                                <input id='age' type="text" onChange={handleInput}  placeholder="Age..." className='inputT'></input>
+                                <input id='age' type="text" onChange={handleInput}  placeholder={currentAge(age)} className='inputT'></input>
                                 <input id='height' type="text" onChange={handleInput}  placeholder="Height..."  className='inputT' ></input>
                                 <input id='weight' type="text" onChange={handleInput}  placeholder="Weight..." className='inputT' ></input>
-                                <input id='current_team' type="text" onChange={handleInput} placeholder={memberTeam} className='inputT' ></input>
+                                <input id='current_team' type="text" onChange={handleInput} value={memberTeam ? memberTeam : ''} placeholder={memberTeam} className='inputT' ></input>
                                 <input id='salary' type="text" onChange={handleInput}  placeholder="Salary..." className='inputT' ></input>
                                 <input id='number' type="number" onChange={handleInput} placeholder="Number..." className='inputT' ></input>
                                 <input id='education' type="text" onChange={handleInput}  placeholder="Education..." className='inputT'></input>
@@ -148,7 +179,7 @@ const MemberUpDate = () => {
                                 <input id='position' type="text" onChange={handleInput} placeholder="Position..." className='inputT'></input>
                                 <input id='bats' type="text" onChange={handleInput}  placeholder="Bats..." className='inputT'></input>
                                 <input id='throws' type="text" onChange={handleInput}  placeholder="Throws..." className='inputT'></input>
-                                <input id='stats' type="text" onChange={handleInput}  placeholder={'Stats id = ' + id} className='inputT'></input>
+                                <input id='stats' type="text" onChange={handleInput}  value={id ? id : ''}placeholder={'Stats id = ' + id} className='inputT'></input>
                                 <input id='imag2' type="text" onChange={handleInput}  placeholder="Background..." className='inputT' ></input>
                                 <input id='about' type="text" onChange={handleInput}  placeholder="About..." className='inputTAbout'></input>
                             </div>
@@ -156,7 +187,7 @@ const MemberUpDate = () => {
                                 <img src={newMember.imag ? newMember.imag : memberImg } alt='NewImage' className='photo1' />
                                 <div style={{backgroundColor: '#efeaea9d'}}>
                                     <hr/>
-                                    <div className='Upcheck'>  <p className='a'>Edad:</p> <p className='b'>{newMember.age ? newMember.age : memberAge}</p> </div>
+                                    <div className='Upcheck'>  <p className='a'>Edad:</p> <p className='b'>{newMember.age ? newMember.age : currentAge(age)}</p> </div>
                                   
                                     <div className='Upcheck'>  <p className='a'>City:</p> <p className='b'>{newMember.city ? newMember.city : memberCity}</p> </div>
                                     
