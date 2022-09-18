@@ -70,7 +70,7 @@ const Coaches = () => {
 console.log(count)
 console.log( coach, 'coach')
   return (
-    <div style={{width:'100%'}} >
+    <div  className='coachMainContent' >
         <Navbar/>
         <div className='navCoach'>
         <h1 >Coaches</h1>
@@ -83,7 +83,7 @@ console.log( coach, 'coach')
                  <div className='divMatchAll' >Players: {count.length}</div> : 
                   <div className='divMatchPart'>{coachName.length > 0 ? 
                     <div >Match: {coachName.length}</div> : 
-                       <div className='divMatchNone'>Not matchers</div>}</div>}
+                       <div className='divMatchNone'>None</div>}</div>}
             </div>
 
         </div>
@@ -116,7 +116,6 @@ console.log( coach, 'coach')
                         <p className='slide'>No Coaches Found</p>
                         <p className='slide'>No Coaches Found</p>
                         <p className='slide'>No Coaches Found</p>                     
-                        <p className='slide'>No Coaches Found</p>
                         <p className='slide'>No Coaches Found</p>
                         <p className='slide'>No Coaches Found</p>
                         <p className='slide'>No Coaches Found</p>

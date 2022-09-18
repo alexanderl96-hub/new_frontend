@@ -66,7 +66,7 @@ const Players = () => {
 //  }
 
   return (
-    <div  >
+    <div className='playerMainContent'  >
         <Navbar/>
         {/* <h1 style={{backgroundColor: 'red',color: 'white',width:'10%', borderRadius: '10px', marginTop: '5px', marginBottom: '5px'}}>Players</h1> */}
         <div className='navPlay'>
@@ -83,7 +83,7 @@ const Players = () => {
                  <div className='divMatchAll'>Players: {allplayers.length}</div> : 
                   <div className='divMatchPart'>{val.length > 0 ? 
                     <div >Match: {val.length}</div> : 
-                       <div className='divMatchNone'>Not matchers</div>}</div>}
+                       <div className='divMatchNone'>None</div>}</div>}
             </div>
         </div>
 

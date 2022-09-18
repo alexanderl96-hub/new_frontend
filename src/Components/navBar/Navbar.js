@@ -34,7 +34,7 @@ function Navbar({id}) {
                 <div className='navAddgroup'> TEAM</div>
             </Link>
             <Link to={'/teams/new'}>
-                <div className='navlogIn'>LOG IN  <FaUser /></div>  
+                <div className='navlogIn'>LOG <FaUser /></div>  
             </Link>
            </div>
     </div>

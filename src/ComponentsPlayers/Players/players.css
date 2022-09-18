@@ -1,3 +1,7 @@
+.playerMainContent{
+  width: 100%;
+}
+
 .navPlay {
     height: 50px;
     width: 100%;
@@ -239,3 +243,245 @@
     -ms-transform: rotateY(308.5714285714deg) translateZ(196px);
     transform: rotateY(308.5714285714deg) translateZ(196px);
   }  
+
+  @media only screen and (max-width: 768px){
+    .playerMainContent{
+      width: 100%;
+      margin: 0;
+    }
+    .navPlay {
+      height: 40px;
+      width: 100%;
+      background-color: rgb(46, 38, 102);
+      display: flex;
+      flex-direction: row;
+  }
+  .navPlay > h1{
+    color: white;
+    font-family: cursive;
+    margin-top: 1px;
+    font-size: 20px;
+    margin-left: 5px;
+  }
+  .navPlay > .divForm{
+    margin-top: 5px;
+  }
+  .divForm > form input{
+    margin-left: 20px;
+    padding: 2px;
+    width: 185px;
+  }
+  .navPlay > .divMatch{
+    margin-top: 7px;
+    margin-left: -400px;
+  }
+  .navPlay > .divMatch >.divMatchAll{
+    height: 19px;
+    font-size: 14px;
+    background-color: red;
+    color: white;
+    padding-top:5px;
+    width: 80px;
+     border-radius: 10px; 
+     padding:1px; 
+     text-align: center;
+     margin-left: 410px;
+}
+.navPlay > .divMatch >.divMatchPart{
+  height: 19px;
+  font-size: 14px;
+  background-color: red;
+  color: white;
+  padding-top:5px;
+  width: 80px;
+   border-radius: 10px; 
+   padding:1px; 
+   text-align: center;
+   margin-left: 410px;
+}
+.navPlay > .divMatch >.divMatchNone{
+  height: 19px;
+  font-size: 14px;
+  background-color: red;
+  color: white;
+  padding-top:5px;
+  width: 80px;
+   border-radius: 10px; 
+   padding:1px; 
+   text-align: center;
+   margin-left: 410px;
+}
+.payContent2{
+  margin-left: 15px;
+  margin-right: 10px;
+}
+.payContent2 > .payContentReturn{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 3px; 
+ 
+}
+.playDivCont{
+  background-color: rgb(222, 16, 16); 
+  width: 150px; 
+  height: 190px;
+  color: white; 
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px; 
+  border: 1px solid;
+  box-shadow: 3px 4px 2px black;
+}
+.playDivCont > img {
+  width: 70px; 
+  height: 90px;
+  border: 1px solid; 
+  border-radius: 10px;
+}
+.playDivCont > h3 {
+  font-size: 13px;
+  width: 50px;
+  height: 60px;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+.child1{
+  margin-top: -4px;
+}
+.child2{
+  margin-top: -12px;
+  font-size: 13.5px;
+}
+.container {
+  position: absolute;
+  width: 90%;
+  height: 50%;
+  -webkit-perspective: 700px;
+  -ms-perspective: 700px;
+  perspective: 700px;
+  overflow-y: hidden;
+}
+.container .carousel {
+  position: absolute;
+  left: 35%;
+  top: 50%;
+  width: 100px;
+  height: 27px;
+  margin-top: -45.5px;
+  transform-style: preserve-3d;
+  -webkit-transform: rotateX(-5deg) rotateY(0);
+  -ms-transform: rotateX(-5deg) rotateY(0);
+  transform: rotateX(-5deg) rotateY(0);
+  -webkit-animation: turn 20s infinite linear;
+  -moz-animation: turn 20s infinite linear;
+  -o-animation: turn 20s infinite linear;
+  animation: turn 20s infinite linear;
+}
+.container .carousel .slide {
+  margin-top: 80px;
+  position: absolute;
+  width: 100px;
+  height: 80px;
+  border-radius: 8px;
+  font-size: 20px;
+  box-shadow: 0 0 4px 1px #fff;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: black;
+  background-color: rgba(255, 0, 0, 0.346);
+}
+
+
+@-webkit-keyframes turn {
+  50% {
+    -webkit-transform: rotateX(5deg) rotateY(0.5turn);
+    -ms-transform: rotateX(5deg) rotateY(0.5turn);
+    transform: rotateX(5deg) rotateY(0.5turn);
+  }
+  100% {
+    -webkit-transform: rotateX(-5deg) rotateY(1turn);
+    -ms-transform: rotateX(-5deg) rotateY(1turn);
+    transform: rotateX(-5deg) rotateY(1turn);
+  }
+} 
+
+ @-moz-keyframes turn {
+  50% {
+    -webkit-transform: rotateX(5deg) rotateY(0.5turn);
+    -ms-transform: rotateX(5deg) rotateY(0.5turn);
+    transform: rotateX(5deg) rotateY(0.5turn);
+  }
+  100% {
+    -webkit-transform: rotateX(-5deg) rotateY(1turn);
+    -ms-transform: rotateX(-5deg) rotateY(1turn);
+    transform: rotateX(-5deg) rotateY(1turn);
+  }
+} 
+
+ @-o-keyframes turn {
+  50% {
+    -webkit-transform: rotateX(5deg) rotateY(0.5turn);
+    -ms-transform: rotateX(5deg) rotateY(0.5turn);
+    transform: rotateX(5deg) rotateY(0.5turn);
+  }
+  100% {
+    -webkit-transform: rotateX(-5deg) rotateY(1turn);
+    -ms-transform: rotateX(-5deg) rotateY(1turn);
+    transform: rotateX(-5deg) rotateY(1turn);
+  }
+} 
+
+ @keyframes turn {
+  50% {
+    -webkit-transform: rotateX(5deg) rotateY(0.5turn);
+    -ms-transform: rotateX(5deg) rotateY(0.5turn);
+    transform: rotateX(5deg) rotateY(0.5turn);
+  }
+  100% {
+    -webkit-transform: rotateX(-5deg) rotateY(1turn);
+    -ms-transform: rotateX(-5deg) rotateY(1turn);
+    transform: rotateX(-5deg) rotateY(1turn);
+  }
+} 
+
+
+.container .carousel .slide:nth-child(1) {
+  -webkit-transform: rotateY(0deg) translateZ(196px);
+  -ms-transform: rotateY(0deg) translateZ(196px);
+  transform: rotateY(0deg) translateZ(196px);
+}
+.container .carousel .slide:nth-child(2) {
+  -webkit-transform: rotateY(51.4285714286deg) translateZ(196px);
+  -ms-transform: rotateY(51.4285714286deg) translateZ(196px);
+  transform: rotateY(51.4285714286deg) translateZ(196px);
+}
+.container .carousel .slide:nth-child(3) {
+  -webkit-transform: rotateY(102.8571428571deg) translateZ(196px);
+  -ms-transform: rotateY(102.8571428571deg) translateZ(196px);
+  transform: rotateY(102.8571428571deg) translateZ(196px);
+}
+.container .carousel .slide:nth-child(4) {
+  -webkit-transform: rotateY(154.2857142857deg) translateZ(196px);
+  -ms-transform: rotateY(154.2857142857deg) translateZ(196px);
+  transform: rotateY(154.2857142857deg) translateZ(196px);
+}
+.container .carousel .slide:nth-child(5) {
+  -webkit-transform: rotateY(205.7142857143deg) translateZ(196px);
+  -ms-transform: rotateY(205.7142857143deg) translateZ(196px);
+  transform: rotateY(205.7142857143deg) translateZ(196px);
+}
+.container .carousel .slide:nth-child(6) {
+  -webkit-transform: rotateY(257.1428571429deg) translateZ(196px);
+  -ms-transform: rotateY(257.1428571429deg) translateZ(196px);
+  transform: rotateY(257.1428571429deg) translateZ(196px);
+}
+.container .carousel .slide:nth-child(7) {
+  -webkit-transform: rotateY(308.5714285714deg) translateZ(196px);
+  -ms-transform: rotateY(308.5714285714deg) translateZ(196px);
+  transform: rotateY(308.5714285714deg) translateZ(196px);
+}  
+
+}
