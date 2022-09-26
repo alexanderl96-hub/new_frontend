@@ -1,139 +1,28 @@
-body{
+body {
   margin: 0;
-  /* background: url('/src/image/MLB-vector-logos.jpeg'); */
   -webkit-font-smoothing: antialiased;
   -webkit-box-direction: normal;
   background-color: rgb(236, 236, 236);
   color: rgb(51, 51, 51);
-  display: flex;
-  flex-direction: column;
   font-family: mlb-primary, "Helvetica Neue", Helvetica, Arial, sans-serif;
   width: 100%;
   height: 100%;
-  /* line-height: 1.5; */
 }
-/*.App{
-  background: url('/src/image/MLB-vector-logos.jpeg'); 
-  background-size: contain;
-  height: 100%; 
-  overflow-y: hidden; 
-  
-}*/
-/* .app{
-  font: bolder 135px "Alfa Slab One";
-  text-align: center;
-  padding-top: 14%;
-  padding-bottom: 14%;
-}  */
- /* .Title{
-  background-size: contain;
-  mix-blend-mode: multiply;
-  background-color:#733033;
-  height: 405px;
- 
-} */
-
-/* .Team:hover{
- cursor: pointer;
-}
-.TitleLink{
-  text-decoration: none;
-  color: white;
-}
-.TitleLink:hover{
-  color: #52FF52;
-} */
-
-/* .Loading{
-  width: 150px;
-  height: 150px;
-  padding-top: 20px;
-  color: green;
-}
-
-.sportL{
-  animation: slideInRight 10s;
-  font-size: 32px;
-  color: white;
-  margin-left: -920px; 
-  transition: all 400s;
-} */
-/* @keyframes slideInRight {
-  from {
-    transform: translate3d(800px, 200px, 0);
-    visibility: visible;
-   
-  }
-
-  to {
-    transform: translate3d(-200px, 20px, 0);
-    visibility: hidden;
-    color: transparent;
-  }
- 
-} */
-
-/* .soccer{
-  animation: slideOutRight 10s;
-  font-size: 52px;
-  color: white;
-}
-@keyframes slideOutRight {
-  from {
-    transform: translate3d(0, 0, 0);
-  }
-
-  to {
-    visibility: hidden;
-    transform: translate3d(55%, 0, 0);
-  }
-}
-.arrows{
-  animation: fadeInDownBig 12s;
-  color: white;
-  font-size: 62px;
-}
-@keyframes fadeInDownBig {
-  from {
-    opacity: 0;
-    transform: translate3d(0, -1000px, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-} */
-/* 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   body {
     margin: 0;
-    background: url('/src/image/MLB-vector-logos.jpeg');
-  }
-  .App{
-    height:100%;
     width: 100%;
-    background-size: contain;
-    
   }
-  .app{
-    font: bolder 80px "Alfa Slab One";
-    padding-top: 80%;
-    text-align: center;
-    flex-wrap: wrap;
-  }
-  .Title{
-    mix-blend-mode: multiply;
-    background-color:#733033;
-    height: 535px;
-  }
- 
-} */
+}
 @media only screen and (max-width: 768px) {
   body {
     margin: 0;
     width: 100%;
-    height: 100%;
-    /* background: url('/src/image/MLB-vector-logos.jpeg'); */
+  }
+}
+@media only screen and (max-width: 360px) and (min-width: 340px) {
+  body {
+    margin: 0;
+    width: 100%;
   }
 }

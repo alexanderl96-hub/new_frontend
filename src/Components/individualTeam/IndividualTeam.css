@@ -1,66 +1,120 @@
-.Individual{
+.Individual {
   animation: fadein 0.5s;
   -moz-animation: fadein 0.5s; /* Firefox */
   -webkit-animation: fadein 0.5s; /* Safari and Chrome */
   -o-animation: fadein 0.5s;
-  /* width: 100%; */
 }
-.img{
-    height: 80px;
-    width: 80px;
-    margin-left:105px;
-    margin-top:5%;
+.img {
+  height: 80px;
+  width: 80px;
+  margin-left: 105px;
+  margin-top: 5%;
+  border-radius: 50%;
+}
+
+.teamContainer {
+  background-color: rgb(241, 237, 237);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 10px;
+  width: 290px;
+  height: 140px;
+  cursor: pointer;
+  margin: 7px;
+  transition: all 0.5s;
+}
+.teamContainer:hover {
+  box-shadow: 5px 4px 4px black;
+  transform: scale(1.12);
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+@media only screen and (max-width: 1024px) {
+  .Individual {
+    animation: fadein 0.5s;
+    -moz-animation: fadein 0.5s; /* Firefox */
+    -webkit-animation: fadein 0.5s; /* Safari and Chrome */
+    -o-animation: fadein 0.5s;
+    /* width: 100%; */
+    /* height: 100%; */
+  }
+  .img {
+    height: 60px;
+    width: 60px;
+    margin-left: 45px;
+    margin-top: 3.5%;
     border-radius: 50%;
   }
-  
   .teamContainer {
     background-color: rgb(241, 237, 237);
-    padding: 10px;
     display: flex;
     flex-direction: column;
     text-align: center;
     border-radius: 10px;
-    width: 290px;
-    height: 140px;
+    width: 150px;
+    height: 100px;
     cursor: pointer;
-    margin: 7px;
     transition: all 0.5s;
   }
-  .teamContainer:hover {
-    box-shadow: 5px 4px 4px black;
-    transform: scale(1.12)
+}
+
+@media only screen and (max-width: 768px) {
+  .Individual {
+    animation: fadein 0.5s;
+    -moz-animation: fadein 0.5s; /* Firefox */
+    -webkit-animation: fadein 0.5s; /* Safari and Chrome */
+    -o-animation: fadein 0.5s;
+    /* width: 100%; */
   }
-  a{
-    text-decoration: none;
-    color: #333
+  .img {
+    height: 60px;
+    width: 60px;
+    margin-left: 45px;
+    margin-top: 3.5%;
+    border-radius: 50%;
   }
-  @media only screen and (max-width: 768px){
-    .Individual{
-      animation: fadein 0.5s;
-      -moz-animation: fadein 0.5s; /* Firefox */
-      -webkit-animation: fadein 0.5s; /* Safari and Chrome */
-      -o-animation: fadein 0.5s;
-      /* width: 100%; */
-    }
-    .img{
-      height: 60px;
-      width: 60px;
-      margin-left:45px;
-      margin-top:3.5%;
-      border-radius: 50%;
-    }
-    .teamContainer {
-      background-color: rgb(241, 237, 237);
-      /* padding: 10px; */
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      border-radius: 10px;
-      width: 150px;
-      height: 100px;
-      cursor: pointer;
-      margin: 5px;
-      transition: all 0.5s;
-    }
-    
+  .teamContainer {
+    background-color: rgb(241, 237, 237);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 10px;
+    width: 150px;
+    height: 100px;
+    cursor: pointer;
+    margin: 3px;
+    transition: all 0.5s;
   }
+}
+@media only screen and (max-width: 360px) {
+  .Individual {
+    animation: fadein 0.5s;
+    -moz-animation: fadein 0.5s; /* Firefox */
+    -webkit-animation: fadein 0.5s; /* Safari and Chrome */
+    -o-animation: fadein 0.5s;
+    /* width: 100%; */
+  }
+  .img {
+    height: 60px;
+    width: 60px;
+    margin-left: 45px;
+    margin-top: 3.5%;
+    border-radius: 50%;
+  }
+  .teamContainer {
+    background-color: rgb(241, 237, 237);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 10px;
+    width: 150px;
+    height: 100px;
+    cursor: pointer;
+    margin: 3px;
+    transition: all 0.5s;
+  }
+}
