@@ -189,7 +189,8 @@
       transform: translate3d(0, 0, 0);
     }
   } 
-/*Nest Hub Max*/
+
+  /*Nest Hub Max (max-width: 1280px; max-heigth: 800px;)*/
   @media only screen and (max-width: 1280px){
     .MainDesing{
         overflow-x: hidden;
@@ -359,7 +360,8 @@
         text-align: center;
     }
   }
-  /*Nest Hub */
+
+  /*Nest Hub (max-width: 1024px; max-heigth: 600px;)*/
   @media only screen and (max-width: 1024px){
     .MainDesing{
         overflow-x: hidden;
@@ -531,25 +533,23 @@
     }
     
   }
-  /*Samsung Galaxy A51/71  (max-width: 412px; max-heigth: 914px;)*/
- /*Galaxy Fold (max-width: 280px; max-heigth: 653px;)*/
-  /*Surface Duo  (max-width: 540px; max-heigth: 720px;)*/
-  /*Surface Pro 7  (max-width: 912px; max-heigth: 1368px;)*/
+ 
+/*Surface Pro 7  (max-width: 912px; max-heigth: 1368px;)*/
+ /* @media only screen and (max-width: 912px){} */
+
+/*iPad Air  (max-width: 820px; max-heigth: 1180px;)*/
+/* @media only screen and (max-width: 820px){} */
+
   /*iPad mini  (max-width: 768px; max-heigth: 1024px;)*/
-  /*iPad Air  (max-width: 912px; max-heigth: 1368px;)*/
-  /*Surface Pro 7  (max-width: 912px; max-heigth: 1368px;)*/
-  /*Samsung Galaxy S20 Ultra  (max-width: 412px; max-heigth: 915px;)*/
-  /*Samsung Galaxy S8+  (max-width: 360px; max-heigth: 740px;)*/
-  /*Pixel 5 (max-width: 393px; max-heigth: 851px;)*/
-  /*iPhone 12 Pro  (max-width: 390px; max-heigth: 844px;)*/
+  /* @media only screen and (max-width: 768px){} */
+
+ /*Surface Duo  (max-width: 540px; max-heigth: 720px;)*/
+ /* @media only screen and (max-width: 540px){} */
+
+   /*iPhone 13 Pro Max  (max-width: 428px; max-heigth: 926px;)*/
+   /* @media only screen and (max-width: 428px){} */
+
   /*iPhone XR  (max-width: 414px; max-heigth: 896px;)*/
-  /*iPhone SE (max-width: 375px; max-heigth: 667px;)*/
-  /*iPhone 13 Pro Max  (max-width: 428px; max-heigth: 926px;)*/
-
-
-
-  
-
   @media only screen and (max-width: 414px){
     .MainDesing{
         overflow-x: hidden;
@@ -722,6 +722,20 @@
         animation : bouncearrow 1.7s infinite;
     }
   }
+
+  /*Samsung Galaxy S20 Ultra  (max-width: 412px; max-heigth: 915px;)*/
+  /* @media only screen and (max-width: 412px){} */
+
+  /*Samsung Galaxy A51/71  (max-width: 412px; max-heigth: 914px;)*/
+  /* @media only screen and (max-width: 412px){} */
+
+    /*Pixel 5 (max-width: 393px; max-heigth: 851px;)*/
+    /* @media only screen and (max-width: 393px){} */
+
+  /*iPhone 12 Pro  (max-width: 390px; max-heigth: 844px;)*/
+  /* @media only screen and (max-width: 390px){} */
+
+   /*iPhone SE (max-width: 375px; max-heigth: 667px;)*/
   @media only screen and (max-width: 375px) and (min-width: 300px){
     .MainDesing{
         overflow-x: hidden;
@@ -894,3 +908,63 @@
         animation : bouncearrow 1.7s infinite;
     }
   }
+
+ /*Samsung Galaxy S8+  (max-width: 360px; max-heigth: 740px;)*/
+   /* @media only screen and (max-width: 360px){} */
+
+ /*Galaxy Fold (max-width: 280px; max-heigth: 653px;)*/
+ /* @media only screen and (max-width: 280px){} */
+
+
+
+
+
+
+
+ 
+
+/*Nest Hub Max (max-width: 1280px; max-heigth: 800px;)*/
+/* @media only screen and (max-width: 1280px){} */
+
+/*Nest Hub (max-width: 1024px; max-heigth: 600px;)*/
+/* @media only screen and (max-width: 1024px){} */
+
+ /*Surface Pro 7  (max-width: 912px; max-heigth: 1368px;)*/
+ /* @media only screen and (max-width: 912px){} */
+
+/*iPad Air  (max-width: 820px; max-heigth: 1180px;)*/
+/* @media only screen and (max-width: 820px){} */
+
+  /*iPad mini  (max-width: 768px; max-heigth: 1024px;)*/
+  /* @media only screen and (max-width: 768px){} */
+
+ /*Surface Duo  (max-width: 540px; max-heigth: 720px;)*/
+ /* @media only screen and (max-width: 540px){} */
+
+   /*iPhone 13 Pro Max  (max-width: 428px; max-heigth: 926px;)*/
+   /* @media only screen and (max-width: 428px){} */
+
+  /*iPhone XR  (max-width: 414px; max-heigth: 896px;)*/
+  /* @media only screen and (max-width: 414px){} */
+
+  /*Samsung Galaxy S20 Ultra  (max-width: 412px; max-heigth: 915px;)*/
+  /* @media only screen and (max-width: 412px){} */
+
+  /*Samsung Galaxy A51/71  (max-width: 412px; max-heigth: 914px;)*/
+  /* @media only screen and (max-width: 412px){} */
+
+    /*Pixel 5 (max-width: 393px; max-heigth: 851px;)*/
+    /* @media only screen and (max-width: 393px){} */
+
+  /*iPhone 12 Pro  (max-width: 390px; max-heigth: 844px;)*/
+  /* @media only screen and (max-width: 390px){} */
+
+   /*iPhone SE (max-width: 375px; max-heigth: 667px;)*/
+   /* @media only screen and (max-width: 375px){} */
+
+   /*Samsung Galaxy S8+  (max-width: 360px; max-heigth: 740px;)*/
+   /* @media only screen and (max-width: 360px){} */
+
+ /*Galaxy Fold (max-width: 280px; max-heigth: 653px;)*/
+ /* @media only screen and (max-width: 280px){} */
+ 

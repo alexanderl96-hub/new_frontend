@@ -372,8 +372,6 @@
     flex-direction: row;
     text-align: center;
     flex-wrap: wrap;
-    /* height: 100%;
-        width: 100%; */
   }
   .pageTitle {
     margin-top: 10px;
