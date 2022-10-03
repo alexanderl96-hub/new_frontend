@@ -41,7 +41,7 @@ const Coaches = () => {
         .then(res => res.json())
         .then(data => {
             setCoach(data = data.filter(element => element.position.includes('Team')));
-            setCoachName(data = data.filter(g => g.name.includes(namecoach)));
+            setCoachName(data = data.filter(g => g.name.includes(namecoach ) ));
         })
     },[search]);
 
