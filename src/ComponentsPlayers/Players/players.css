@@ -166,7 +166,7 @@
  .container {
     position: absolute;
     width: 80%;
-    height: 80%;
+    height: 90%;
     -webkit-perspective: 500px;
     -ms-perspective: 500px;
     perspective: 500px;
@@ -174,9 +174,9 @@
   }
   .container .carousel {
     position: absolute;
-    left: 45%;
+    left: 35%;
     top: 40%;
-    width: 180px;
+    width: 160px;
     height: 57px;
     /* margin-left: -70px; */
     margin-top: -45.5px;

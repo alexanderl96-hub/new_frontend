@@ -36,7 +36,8 @@ const Season = () => {
              <div id={index} className='card'>
                {/* {data.points_team > data.points_vs ? data.points_team  :null} */}
                <div >
-                  <div >
+              
+                  <div className='dateTop'>
                      <div className='date'>{date(data.date)}</div>
                   </div>
                   <div >
