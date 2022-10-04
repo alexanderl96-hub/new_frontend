@@ -3,7 +3,6 @@
 }
 .navCoach{
     height: 50px;
-    /* width: 100%; */
     background-color: rgb(46, 38, 102);
     display: flex;
     flex-direction: row;
@@ -65,7 +64,7 @@
 }
 
 .payContent2{
-    margin-left: 190px;
+    margin-left: 195px;
     margin-right: 100px;
 }
 .payContent2 > .payContCoach {
@@ -77,7 +76,7 @@
 .playDivCoach{
     background-color: rgb(168, 163, 163); 
     width: 170px; 
-    height: 205px;
+    height: 195px;
     color: white; 
     display: flex;
     flex-wrap: wrap;
@@ -249,7 +248,7 @@
     margin:0;
   }
   .navCoach{
-    height: 40px;
+    height: 45px;
     background-color: rgb(46, 38, 102);
     display: flex;
     flex-direction: row;
@@ -262,7 +261,7 @@
     margin-left: 4%;
    }
    .navCoach > .divForm{
-    margin-top: 5px;
+    margin-top: 7px;
    }
    .divForm > form input{
     margin-left: 80%;
