@@ -42,16 +42,17 @@ const Season = () => {
                   </div>
                   <div >
                     <div className='teamName'>{data.team_name}</div>
-                    <div className='teamNameImg'>
-                     <img src={data.image_team} alt={index} style={{width: '30px',  height: '30px', borderRadius: '50px'}}/>
-                     <div style={{width: '10px', textAlign: 'center', marginLeft: '55px', marginTop:'-27px'}}>{data.points_team}</div></div>
+                      <div className='teamNameImg'>
+                          <img src={data.image_team} alt={index}/>
+                          <div >{data.points_team}</div>
+                      </div>
                   </div>
-                  <div ><h1 style={{color:'white'}}>vs</h1></div>
+                  <div ><h1 className='VS'>vs</h1></div>
                   <div>
                     <div className='teamVs'>{data.team_vs}</div>
                     <div className='teamNameImg2'>
-                      <img src={data.image_vs} alt={index} style={{width: '30px', height: '30px',borderRadius: '50px'}} /></div>
-                      <div style={{width: '10px', textAlign: 'center',marginLeft: '65px', marginTop:'-28px' }}>{data.points_vs}</div>
+                      <img src={data.image_vs} alt={index}  /></div>
+                      <div className= 'lastpoint'>{data.points_vs}</div>
                   </div>
                 </div>
              </div>
