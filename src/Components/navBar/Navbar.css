@@ -31,10 +31,12 @@ h1 {
   width: 100px;
   text-align: center;
   margin-left: 600px;
+  margin-top: 3px;
   cursor: pointer;
 }
 .navlogIn {
   color: white;
+  margin-top: 2px;
 }
 .nav:hover {
   border-radius: 10px;
@@ -390,7 +392,7 @@ justify-content: space-around;
       width: 55px;
       margin-right: 10px;
       font-size: 10.5px;
-      margin-top: 15%;
+      margin-top: 13.6%;
     }
     .nav > a.active {
       text-decoration: underline;
