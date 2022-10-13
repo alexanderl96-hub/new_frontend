@@ -168,8 +168,8 @@ console.log(classT)
         <Navbar />
          <h1 >New Member</h1>
          <div>
-             <div style={{display: 'flex'}} >
-             <form onSubmit={handleSubmit} className='newMember_AboutGrid'>
+             <div  className="newMemberWrap">
+                     <form onSubmit={handleSubmit} className='newMember_AboutGrid'>
                               <div className='innerNew'>
                                 <input id='name' type="text" onChange={handleInput} value={newMember.name}  placeholder='Name...' className='inputNew' ></input>
                                 <input id='team_id' type="text" onChange={handleInput} value={newMember.team_id} placeholder={'team_id = ' +id} className='inputNew' ></input>
@@ -204,8 +204,8 @@ console.log(classT)
                             </div>
                            
                            
-                 {/* <buttom type='submit' className='newMemberButton' onClick={handleSubmit}  >Add New</buttom> */}
-             </form>
+                        {/* <buttom type='submit' className='newMemberButton' onClick={handleSubmit}  >Add New</buttom> */}
+                    </form>
              <div className='innerNew2'>
                                 <div className={classT}>
                                     <div  className='div'>
