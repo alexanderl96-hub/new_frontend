@@ -181,19 +181,18 @@ useEffect(() => {
       <div  className='MainMember'>
             <Navbar />
             {/* style={{backgroundImage: `url(${memberImg2})`}}     */}
-          <div style={{backgroundImage: `url(${memberImg2})`}}   className='divTop'>
+          <div className='divTop'>
+              {/* <img src={memberImg2} alt='alt' className='divTop-ImgBackground'> </img> */}
                <div className='divTop-inner'>Member
                      {/* <img src={FaEdit} alt='edit' /> */}
                      <Link to={`/teams/updateMember/${memberId}`} className='divEdit3'> <FaUserEdit /></Link>
                      <Link to={`/teams/groups/${memberId}/addStats`} className='divEdit'> <FaPlus /> </Link> 
-                     <Link to={`/teams/newpage/${group}`} onClick={handleDelete}  className="divEdit2" ><FaRecycle /></Link>
-                    
-                    
+                     <Link to={`/teams/newpage/${group}`} onClick={handleDelete}  className="divEdit2" ><FaRecycle /></Link>   
                </div>
                <img src={memberImg} alt='1'  />
                <h2>{memberName} {memberNumber ? `# ${memberNumber}`: ''}</h2>
                <h3>{memberTeam} | {memberPosition} | Age: {memberAge}</h3>
-               
+              
           </div>
          
           <div className='divMedium'>

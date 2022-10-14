@@ -33,9 +33,10 @@ function Navbar({id}) {
             <Link to={'/teams/new'}>
                 <div className='navAddgroup'> TEAM</div>
             </Link>
-            <Link to={'/teams/new'}>
+            <div className='navlogIn'>LOG <FaUser /></div> 
+            {/* <Link to={'/teams/new'}>
                 <div className='navlogIn'>LOG <FaUser /></div>  
-            </Link>
+            </Link> */}
            </div>
     </div>
   )
