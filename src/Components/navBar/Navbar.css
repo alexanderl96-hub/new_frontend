@@ -416,29 +416,29 @@ justify-content: space-around;
     }
     .nav-inner {
       margin-top: 1%;
-      font-size: 10.5px;
-      margin-left: -42px;
+      font-size: 9px;
+      margin-left: -47px;
     }
     .nav2 {
       display: flex;
       color: white;
       margin-top: 3.5%;
       cursor: pointer;
-      font-size: 10.5px;
+      font-size: 9px;
     }
     .navAddgroup {
       color: white;
       border-radius: 3px;
       text-align: center;
-      margin-left: 40px;
+      margin-left: 10px;
       cursor: pointer;
-      margin-top: 11%;
+      margin-top: 17.5%;
       width: 50px;
     }
     .navlogIn {
       color: white;
       width: 50px;
-      font-size: 10.5px;
+      font-size: 9px;
       margin-top: 16.5%;
     }
     .nav > a.active {

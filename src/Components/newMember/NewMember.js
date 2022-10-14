@@ -209,7 +209,7 @@ console.log(classT)
              <div className='innerNew2'>
                                 <div className={classT}>
                                     <div  className='div'>
-                                        <img src={newMember.imag ? newMember.imag : null } alt='NewImage' className='photo' />
+                                        <img src={newMember.imag ? newMember.imag : null } alt="" className='photo' />
                                     </div>
                                      <div className='div2'>
                                             <h3>Primary Information</h3> 
