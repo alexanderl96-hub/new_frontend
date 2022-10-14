@@ -1929,7 +1929,7 @@ input{
     }
   }
 
-  /*Samsung Galaxy S20 Ultra  (max-width: 412px; max-heigth: 915px;)*/ /* fix bug*/
+  /*Samsung Galaxy S20 Ultra  (max-width: 412px; max-heigth: 915px;)*/ 
   @media only screen and (max-width: 412px){
     .newMember_Container{
         text-align: center;
@@ -1944,7 +1944,7 @@ input{
         color: black;
         font-family: cursive;
         margin-left: -60%;
-        font-size: 20px;
+        font-size: 15px;
     }
     .newMemberWrap{
         display: flex;
@@ -1960,7 +1960,7 @@ input{
     .innerNew{
         display: flex;
         flex-direction: column;
-        margin-top: -18px;
+        margin-top: -10px;
         margin-left: 5px;
     }
     .inputNew{
@@ -1980,7 +1980,7 @@ input{
         flex-direction: column;
         background-color: rgb(106, 103, 103);
         width: 385px;
-        height: 550px;
+        height: 440px;
         margin-top: 280px;
         margin-left: 23px;
         border-radius: 4px;
@@ -1995,7 +1995,7 @@ input{
         grid-template-rows: repeat(2, 1fr);
         background-color: rgb(186, 180, 180);
         width: 385px;
-        height: 550px;
+        height: 440px;
         margin-top: -20px;
         margin-left: -20px;
         border-radius: 4px;
@@ -2008,7 +2008,7 @@ input{
         grid-template-rows: repeat(2, 1fr);
         background-color: rgb(186, 180, 180);
         width: 385px;
-        height: 550px;
+        height: 440px;
         margin-top: -20px;
         margin-left: -20px;
         border-radius: 4px;
@@ -2024,11 +2024,9 @@ input{
           transform: translate3d(0, -1000px, 0);
         }
       }
-    /* .innerNew3:hover{
-        border: 1.5px solid rgb(110, 104, 104);
-    } */
+  
     .newMemberButton{
-        margin-top: 590px;
+        margin-top: 490px;
         width: 60px;
         font-size: 11px;
         cursor: pointer;
@@ -2038,9 +2036,7 @@ input{
         padding: 4px;
         background-color: rgb(105, 215, 240);
     }
-    /* .newMemberButton:hover{
-       background-color: aqua;
-    } */
+ 
     .photo{
         height: 90px;
         width: 70px;
@@ -2061,22 +2057,22 @@ input{
     }
     .div2{
         margin-top: -10px;
-        width: 100px;
+        width: 110px;
         grid-column: 2/3;
         grid-row: 1;
-        margin-left: -45px;
+        margin-left: -55px;
     }
     .div2 > h3{
-        margin-bottom: -15px;
-        font-size: 9.5px;
+        margin-bottom: -1px;
+        font-size: 10.5px;
     }
     .div2 > h5{
-        height: 20px;
+        height: 15px;
         margin-left: 10px;
-        margin-top: -15px;
+        margin-top: 1px;
         margin-bottom: 2px;
         font-family: cursive;
-        font-size: 8px;
+        font-size: 9px;
         text-align: start;
     }
     .div3 {
@@ -2088,10 +2084,10 @@ input{
         height: 130px;
         width: 155px;
         margin-right: 10px;
-        margin-top: 10px;
+        margin-top: 5px;
         text-align: justify;
         padding: 2px;
-        font-size: 8px;
+        font-size: 9px;
         font-family: cursive;
         font-weight: bolder;
     }
@@ -2099,7 +2095,7 @@ input{
         grid-column: 1/2;
         grid-row: 2;
         width: 140px;
-       margin-top: -10px;
+       margin-top: -25px;
     }
     .div4 > h5 span {
         color: white;
@@ -2109,13 +2105,13 @@ input{
         margin-left: 10px;
         padding-top: 2px;
         font-family: cursive;
-        font-size: 11.5px;
+        font-size: 9px;
         text-align: start;
     }
     .div5{
         grid-column: 2/3;
         grid-row: 2;
-        margin-top: -10px;
+        margin-top: -25px;
     }
     .div5 > h5 span {
         color: white;
@@ -2125,13 +2121,13 @@ input{
         margin-left: 10px;
         padding-top: 2px;
         font-family: cursive;
-        font-size: 11.5px;
+        font-size: 9px;
         text-align: start;
     }
     .div6{
         grid-column: 3/4;
         grid-row: 2;
-        margin-top: -10px;
+        margin-top: -25px;
     }
     .div6 > h5 span{
         color: white; 
@@ -2141,27 +2137,27 @@ input{
         margin-left: 10px;
         padding-top: 2px;
         font-family: cursive;
-        font-size: 11.5px;
+        font-size: 9px;
         text-align: start;
     }
   }
 
-  /*Samsung Galaxy A51/71  (max-width: 412px; max-heigth: 914px;)*/ /* fix bug*/
-  @media only screen and (max-width: 412px){
+  /*Samsung Galaxy A51/71  (max-width: 412px; max-heigth: 914px;)*/ 
+  /* @media only screen and (max-width: 412px){ 
     .newMember_Container{
         text-align: center;
         padding-bottom: 10px; 
         transition: all 1.5s;
         animation: fadein 0.5s;
-      -moz-animation: fadein 0.5s; /* Firefox */
-      -webkit-animation: fadein 0.5s; /* Safari and Chrome */
+      -moz-animation: fadein 0.5s; 
+      -webkit-animation: fadein 0.5s; 
       -o-animation: fadein 0.5s;
     }
     .newMember_Container > h1 {
         color: black;
         font-family: cursive;
         margin-left: -60%;
-        font-size: 20px;
+        font-size: 15px;
     }
     .newMemberWrap{
         display: flex;
@@ -2241,9 +2237,6 @@ input{
           transform: translate3d(0, -1000px, 0);
         }
       }
-    /* .innerNew3:hover{
-        border: 1.5px solid rgb(110, 104, 104);
-    } */
     .newMemberButton{
         margin-top: 590px;
         width: 60px;
@@ -2255,9 +2248,6 @@ input{
         padding: 4px;
         background-color: rgb(105, 215, 240);
     }
-    /* .newMemberButton:hover{
-       background-color: aqua;
-    } */
     .photo{
         height: 130px;
         width: 90px;
@@ -2361,9 +2351,9 @@ input{
         font-size: 11.5px;
         text-align: start;
     }
-  }
+  }  */
 
-    /*Pixel 5 (max-width: 393px; max-heigth: 851px;)*/ /* fix bug*/
+    /*Pixel 5 (max-width: 393px; max-heigth: 851px;)*/ 
     @media only screen and (max-width: 393px){
         .newMember_Container{
             text-align: center;
@@ -2378,7 +2368,7 @@ input{
             color: black;
             font-family: cursive;
             margin-left: -60%;
-            font-size: 20px;
+            font-size: 16px;
         }
         .newMemberWrap{
             display: flex;
@@ -2394,28 +2384,28 @@ input{
         .innerNew{
             display: flex;
             flex-direction: column;
-            margin-top: -18px;
+            margin-top: -10px;
             margin-left: 5px;
         }
         .inputNew{
             width: 130px;
             height: 15px;
             padding-left: 3px;
-            font-size: 11px;
+            font-size: 9px;
         }
         .inputNewAbout{
             width: 130px;
             height: 36px;
             padding-left: 3px;
-            font-size: 11px;
+            font-size: 9px;
         }
         .innerNew2{
             display: flex;
             flex-direction: column;
             background-color: rgb(106, 103, 103);
             width: 365px;
-            height: 520px;
-            margin-top: 280px;
+            height: 380px;
+            margin-top: 290px;
             margin-left: 23px;
             border-radius: 4px;
             border: 1.5px solid black;
@@ -2428,8 +2418,8 @@ input{
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(2, 1fr);
             background-color: rgb(186, 180, 180);
-            width: 365px;
-            height: 520px;
+            width: 375px;
+            height: 380px;
             margin-top: -20px;
             margin-left: -20px;
             border-radius: 4px;
@@ -2441,8 +2431,8 @@ input{
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(2, 1fr);
             background-color: rgb(186, 180, 180);
-            width: 365px;
-            height: 520px;
+            width: 375px;
+            height: 380px;
             margin-top: -20px;
             margin-left: -20px;
             border-radius: 4px;
@@ -2462,7 +2452,7 @@ input{
             border: 1.5px solid rgb(110, 104, 104);
         } */
         .newMemberButton{
-            margin-top: 560px;
+            margin-top: 450px;
             width: 60px;
             font-size: 11px;
             cursor: pointer;
@@ -2476,8 +2466,8 @@ input{
            background-color: aqua;
         } */
         .photo{
-            height: 130px;
-            width: 90px;
+            height: 90px;
+            width: 70px;
         }
         
         input{
@@ -2486,8 +2476,8 @@ input{
             font-size: 17px;
         }
         .div{
-            height: 130px;
-            width: 90px;
+            height: 90px;
+            width: 70px;
             border: 5px solid rgb(24, 23, 23);
             border-radius: 4px;
             grid-column: 1/2;
@@ -2498,19 +2488,19 @@ input{
             width: 110px;
             grid-column: 2/3;
             grid-row: 1;
-            margin-left: -35px;
+            margin-left: -50px;
         }
         .div2 > h3{
-            margin-bottom: 15px;
-            font-size: 12px;
+            margin-bottom: -2px;
+            font-size: 10.5px;
         }
         .div2 > h5{
-            height: 25px;
-            margin-left: 10px;
-            margin-top: 5.5px;
+            height: 15px;
+            margin-left: 8px;
+            margin-top: 2px;
             margin-bottom: 2px;
             font-family: cursive;
-            font-size: 10px;
+            font-size: 9px;
             text-align: start;
         }
         .div3 {
@@ -2520,9 +2510,9 @@ input{
         }
         .div3 > p{
             height: 130px;
-            width: 155px;
+            width: 165px;
             margin-right: 10px;
-            margin-top: 30px;
+            margin-top: 3px;
             text-align: justify;
             padding: 2px;
             font-size: 10px;
@@ -2539,11 +2529,11 @@ input{
             color: white;
         }
         .div4 > h5{
-            height: 50px;
+            height: 25px;
             margin-left: 10px;
             padding-top: 2px;
             font-family: cursive;
-            font-size: 11.5px;
+            font-size: 9px;
             text-align: start;
         }
         .div5{
@@ -2555,11 +2545,11 @@ input{
             color: white;
         }
         .div5 > h5{
-            height: 50px;
+            height: 25px;
             margin-left: 10px;
             padding-top: 2px;
             font-family: cursive;
-            font-size: 11.5px;
+            font-size: 9px;
             text-align: start;
         }
         .div6{
@@ -2571,234 +2561,17 @@ input{
             color: white; 
         }
         .div6 > h5{
-            height: 50px;
+            height: 25px;
             margin-left: 10px;
             padding-top: 2px;
             font-family: cursive;
-            font-size: 11.5px;
+            font-size: 9px;
             text-align: start;
         }
     }
 
-  /*iPhone 12 Pro  (max-width: 390px; max-heigth: 844px;)*/ /* fix bug*/
+  /*iPhone 12 Pro  (max-width: 390px; max-heigth: 844px;)*/ 
   @media only screen and (max-width: 390px){
-    .newMember_Container{
-        text-align: center;
-        padding-bottom: 10px; 
-        transition: all 1.5s;
-        animation: fadein 0.5s;
-      -moz-animation: fadein 0.5s; /* Firefox */
-      -webkit-animation: fadein 0.5s; /* Safari and Chrome */
-      -o-animation: fadein 0.5s;
-    }
-    .newMember_Container > h1 {
-        color: black;
-        font-family: cursive;
-        margin-left: -60%;
-        font-size: 20px;
-    }
-    .newMemberWrap{
-        display: flex;
-        flex-direction: column;
-    }
-    .newMember_AboutGrid{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-left: -15px;
-    }
-    .innerNew{
-        display: flex;
-        flex-direction: column;
-        margin-top: -18px;
-        margin-left: 5px;
-    }
-    .inputNew{
-        width: 130px;
-        height: 15px;
-        padding-left: 3px;
-        font-size: 11px;
-    }
-    .inputNewAbout{
-        width: 130px;
-        height: 36px;
-        padding-left: 3px;
-        font-size: 11px;
-    }
-    .innerNew2{
-        display: flex;
-        flex-direction: column;
-        background-color: rgb(106, 103, 103);
-        width: 365px;
-        height: 520px;
-        margin-top: 280px;
-        margin-left: 23px;
-        border-radius: 4px;
-        border: 1.5px solid black;
-        justify-content: center;
-        position: absolute;
-    }
-
-    .innerNew3{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        background-color: rgb(186, 180, 180);
-        width: 365px;
-        height: 520px;
-        margin-top: -20px;
-        margin-left: -20px;
-        border-radius: 4px;
-        position: relative;
-        cursor: pointer;
-    }
-    .intoFade{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        background-color: rgb(186, 180, 180);
-        width: 365px;
-        height: 520px;
-        margin-top: -20px;
-        margin-left: -20px;
-        border-radius: 4px;
-        animation: fadeOutUpBig 2s; 
-    }
-    @keyframes fadeOutUpBig{
-        from {
-          opacity: 1;
-        }
-      
-        to {
-          opacity: 0;
-          transform: translate3d(0, -1000px, 0);
-        }
-      }
-    /* .innerNew3:hover{
-        border: 1.5px solid rgb(110, 104, 104);
-    } */
-    .newMemberButton{
-        margin-top: 560px;
-        width: 60px;
-        font-size: 11px;
-        cursor: pointer;
-        border-radius: 30px;
-        margin-left: 110px;
-        margin-right: -100px;
-        padding: 4px;
-        background-color: rgb(105, 215, 240);
-    }
-    /* .newMemberButton:hover{
-       background-color: aqua;
-    } */
-    .photo{
-        height: 130px;
-        width: 90px;
-    }
-    
-    input{
-        width: 20%;
-        margin: 0 auto;
-        font-size: 17px;
-    }
-    .div{
-        height: 130px;
-        width: 90px;
-        border: 5px solid rgb(24, 23, 23);
-        border-radius: 4px;
-        grid-column: 1/2;
-        grid-row: 1;
-    }
-    .div2{
-        margin-top: -10px;
-        width: 110px;
-        grid-column: 2/3;
-        grid-row: 1;
-        margin-left: -35px;
-    }
-    .div2 > h3{
-        margin-bottom: 15px;
-        font-size: 12px;
-    }
-    .div2 > h5{
-        height: 25px;
-        margin-left: 10px;
-        margin-top: 5.5px;
-        margin-bottom: 2px;
-        font-family: cursive;
-        font-size: 10px;
-        text-align: start;
-    }
-    .div3 {
-        grid-column: 3/4;
-        grid-row: 1;
-        margin-left: -55px;
-    }
-    .div3 > p{
-        height: 130px;
-        width: 155px;
-        margin-right: 10px;
-        margin-top: 30px;
-        text-align: justify;
-        padding: 2px;
-        font-size: 10px;
-        font-family: cursive;
-        font-weight: bolder;
-    }
-    .div4{
-        grid-column: 1/2;
-        grid-row: 2;
-        width: 130px;
-       margin-top: -25px;
-    }
-    .div4 > h5 span {
-        color: white;
-    }
-    .div4 > h5{
-        height: 50px;
-        margin-left: 10px;
-        padding-top: 2px;
-        font-family: cursive;
-        font-size: 11.5px;
-        text-align: start;
-    }
-    .div5{
-        grid-column: 2/3;
-        grid-row: 2;
-        margin-top: -25px;
-    }
-    .div5 > h5 span {
-        color: white;
-    }
-    .div5 > h5{
-        height: 50px;
-        margin-left: 10px;
-        padding-top: 2px;
-        font-family: cursive;
-        font-size: 11.5px;
-        text-align: start;
-    }
-    .div6{
-        grid-column: 3/4;
-        grid-row: 2;
-        margin-top: -25px;
-    }
-    .div6 > h5 span{
-        color: white; 
-    }
-    .div6 > h5{
-        height: 50px;
-        margin-left: 10px;
-        padding-top: 2px;
-        font-family: cursive;
-        font-size: 11.5px;
-        text-align: start;
-    }
-  }
-
-   /*iPhone SE (max-width: 375px; max-heigth: 667px;)*/  /* fix bug*/
-   @media only screen and (max-width: 375px){
     .newMember_Container{
         text-align: center;
         padding-bottom: 10px; 
@@ -2828,29 +2601,29 @@ input{
     .innerNew{
         display: flex;
         flex-direction: column;
-        margin-top: -15px;
+        margin-top: -10px;
         margin-left: 5px;
     }
     .inputNew{
         width: 130px;
-        height: 13px;
+        height: 15px;
         padding-left: 3px;
-        font-size: 10px;
+        font-size: 9px;
     }
     .inputNewAbout{
         width: 130px;
-        height: 32px;
+        height: 36px;
         padding-left: 3px;
-        font-size: 10px;
+        font-size: 9px;
     }
     .innerNew2{
         display: flex;
         flex-direction: column;
         background-color: rgb(106, 103, 103);
-        width: 344px;
-        height: 410px;
-        margin-top: 260px;
-        margin-left: 24px;
+        width: 362px;
+        height: 370px;
+        margin-top: 290px;
+        margin-left: 23px;
         border-radius: 4px;
         border: 1.5px solid black;
         justify-content: center;
@@ -2862,8 +2635,8 @@ input{
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 1fr);
         background-color: rgb(186, 180, 180);
-        width: 350px;
-        height: 410px;
+        width: 370px;
+        height: 370px;
         margin-top: -20px;
         margin-left: -20px;
         border-radius: 4px;
@@ -2875,8 +2648,8 @@ input{
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 1fr);
         background-color: rgb(186, 180, 180);
-        width: 350px;
-        height: 410px;
+        width: 370px;
+        height: 370px;
         margin-top: -20px;
         margin-left: -20px;
         border-radius: 4px;
@@ -2896,9 +2669,9 @@ input{
         border: 1.5px solid rgb(110, 104, 104);
     } */
     .newMemberButton{
-        margin-top: 450px;
+        margin-top: 440px;
         width: 60px;
-        font-size: 11px;
+        font-size: 10px;
         cursor: pointer;
         border-radius: 30px;
         margin-left: 110px;
@@ -2910,7 +2683,7 @@ input{
        background-color: aqua;
     } */
     .photo{
-        height: 110px;
+        height: 90px;
         width: 70px;
     }
     
@@ -2920,7 +2693,224 @@ input{
         font-size: 17px;
     }
     .div{
-        height: 110px;
+        height: 90px;
+        width: 70px;
+        border: 5px solid rgb(24, 23, 23);
+        border-radius: 4px;
+        grid-column: 1/2;
+        grid-row: 1;
+    }
+    .div2{
+        margin-top: -10px;
+        width: 110px;
+        grid-column: 2/3;
+        grid-row: 1;
+        margin-left: -50px;
+    }
+    .div2 > h3{
+        margin-bottom: -2px;
+        font-size: 10px;
+    }
+    .div2 > h5{
+        height: 25px;
+        margin-left: 8px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        font-family: cursive;
+        font-size: 9px;
+        text-align: start;
+    }
+    .div3 {
+        grid-column: 3/4;
+        grid-row: 1;
+        margin-left: -55px;
+    }
+    .div3 > p{
+        height: 130px;
+        width: 165px;
+        margin-right: 10px;
+        margin-top: 3px;
+        text-align: justify;
+        padding: 2px;
+        font-size: 9px;
+        font-family: cursive;
+        font-weight: bolder;
+    }
+    .div4{
+        grid-column: 1/2;
+        grid-row: 2;
+        width: 130px;
+       margin-top: -25px;
+    }
+    .div4 > h5 span {
+        color: white;
+    }
+    .div4 > h5{
+        height: 25px;
+        margin-left: 10px;
+        padding-top: 2px;
+        font-family: cursive;
+        font-size: 9px;
+        text-align: start;
+    }
+    .div5{
+        grid-column: 2/3;
+        grid-row: 2;
+        margin-top: -25px;
+    }
+    .div5 > h5 span {
+        color: white;
+    }
+    .div5 > h5{
+        height: 25px;
+        margin-left: 10px;
+        padding-top: 2px;
+        font-family: cursive;
+        font-size: 9px;
+        text-align: start;
+    }
+    .div6{
+        grid-column: 3/4;
+        grid-row: 2;
+        margin-top: -25px;
+    }
+    .div6 > h5 span{
+        color: white; 
+    }
+    .div6 > h5{
+        height: 25px;
+        margin-left: 10px;
+        padding-top: 2px;
+        font-family: cursive;
+        font-size: 9px;
+        text-align: start;
+    }
+  }
+
+   /*iPhone SE (max-width: 375px; max-heigth: 667px;)*/  /* fix bug*/
+   @media only screen and (max-width: 375px){
+    .newMember_Container{
+        text-align: center;
+        padding-bottom: 10px; 
+        transition: all 1.5s;
+        animation: fadein 0.5s;
+      -moz-animation: fadein 0.5s; /* Firefox */
+      -webkit-animation: fadein 0.5s; /* Safari and Chrome */
+      -o-animation: fadein 0.5s;
+    }
+    .newMember_Container > h1 {
+        color: black;
+        font-family: cursive;
+        margin-left: -60%;
+        font-size: 15px;
+    }
+    .newMemberWrap{
+        display: flex;
+        flex-direction: column;
+    }
+    .newMember_AboutGrid{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-left: -15px;
+    }
+    .innerNew{
+        display: flex;
+        flex-direction: column;
+        margin-top: -14px;
+        margin-left: 5px;
+    }
+    .inputNew{
+        width: 130px;
+        height: 12px;
+        padding-left: 3px;
+        font-size: 8px;
+    }
+    .inputNewAbout{
+        width: 130px;
+        height: 30px;
+        padding-left: 3px;
+        font-size: 8px;
+    }
+    .innerNew2{
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(106, 103, 103);
+        width: 344px;
+        height: 290px;
+        margin-top: 240px;
+        margin-left: 24px;
+        border-radius: 4px;
+        border: 1.5px solid black;
+        justify-content: center;
+        position: absolute;
+    }
+
+    .innerNew3{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        background-color: rgb(186, 180, 180);
+        width: 350px;
+        height: 290px;
+        margin-top: -20px;
+        margin-left: -20px;
+        border-radius: 4px;
+        position: relative;
+        cursor: pointer;
+    }
+    .intoFade{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        background-color: rgb(186, 180, 180);
+        width: 350px;
+        height: 290px;
+        margin-top: -20px;
+        margin-left: -20px;
+        border-radius: 4px;
+        animation: fadeOutUpBig 2s; 
+    }
+    @keyframes fadeOutUpBig{
+        from {
+          opacity: 1;
+        }
+      
+        to {
+          opacity: 0;
+          transform: translate3d(0, -1000px, 0);
+        }
+      }
+    /* .innerNew3:hover{
+        border: 1.5px solid rgb(110, 104, 104);
+    } */
+    .newMemberButton{
+        margin-top: 320px;
+        width: 60px;
+        font-size: 9px;
+        cursor: pointer;
+        border-radius: 30px;
+        margin-left: 110px;
+        margin-right: -100px;
+        padding: 4px;
+        background-color: rgb(105, 215, 240);
+    }
+    /* .newMemberButton:hover{
+       background-color: aqua;
+    } */
+    .photo{
+        height: 90px;
+        width: 70px;
+    }
+    
+    input{
+        width: 20%;
+        margin: 0 auto;
+        font-size: 17px;
+    }
+    .div{
+        height: 90px;
         width: 70px;
         border: 5px solid rgb(24, 23, 23);
         border-radius: 4px;
@@ -2936,30 +2926,30 @@ input{
     }
     .div2 > h3{
         margin-bottom: 1px;
-        font-size: 11px;
+        font-size: 9.5px;
     }
     .div2 > h5{
-        height: 20px;
-        margin-left: 10px;
-        margin-top: 5.5px;
+        height: 18px;
+        margin-left: 8px;
+        margin-top: 2px;
         margin-bottom: 2px;
         font-family: cursive;
-        font-size: 10px;
+        font-size: 8px;
         text-align: start;
     }
     .div3 {
         grid-column: 3/4;
         grid-row: 1;
-        margin-left: -55px;
+        margin-left: -45px;
     }
     .div3 > p{
         height: 130px;
         width: 155px;
         margin-right: 10px;
-        margin-top: 5px;
+        margin-top: 3px;
         text-align: justify;
         padding: 2px;
-        font-size: 10px;
+        font-size: 8px;
         font-family: cursive;
         font-weight: bolder;
     }
@@ -2967,49 +2957,49 @@ input{
         grid-column: 1/2;
         grid-row: 2;
         width: 130px;
-       margin-top: -25px;
+       margin-top: -45px;
     }
     .div4 > h5 span {
         color: white;
     }
     .div4 > h5{
-        height: 30px;
+        height: 20px;
         margin-left: 10px;
         padding-top: 2px;
         font-family: cursive;
-        font-size: 10px;
+        font-size: 8px;
         text-align: start;
     }
     .div5{
         grid-column: 2/3;
         grid-row: 2;
-        margin-top: -25px;
+        margin-top: -45px;
     }
     .div5 > h5 span {
         color: white;
     }
     .div5 > h5{
-        height: 30px;
+        height: 20px;
         margin-left: 10px;
         padding-top: 2px;
         font-family: cursive;
-        font-size: 10px;
+        font-size: 8px;
         text-align: start;
     }
     .div6{
         grid-column: 3/4;
         grid-row: 2;
-        margin-top: -25px;
+        margin-top: -45px;
     }
     .div6 > h5 span{
         color: white; 
     }
     .div6 > h5{
-        height: 30px;
+        height: 20px;
         margin-left: 10px;
         padding-top: 2px;
         font-family: cursive;
-        font-size: 10px;
+        font-size: 8px;
         text-align: start;
     }
    }
@@ -3232,7 +3222,223 @@ input{
    }
 
  /*Galaxy Fold (max-width: 280px; max-heigth: 653px;)*/
- /* @media only screen and (max-width: 280px){} */
+ @media only screen and (max-width: 280px){
+    .newMember_Container{
+        text-align: center;
+        padding-bottom: 10px; 
+        transition: all 1.5s;
+        animation: fadein 0.5s;
+      -moz-animation: fadein 0.5s; /* Firefox */
+      -webkit-animation: fadein 0.5s; /* Safari and Chrome */
+      -o-animation: fadein 0.5s;
+    }
+    .newMember_Container > h1 {
+        color: black;
+        font-family: cursive;
+        margin-left: -60%;
+        font-size: 12px;
+    }
+    .newMemberWrap{
+        display: flex;
+        flex-direction: column;
+    }
+    .newMember_AboutGrid{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-left: -15px;
+    }
+    .innerNew{
+        display: flex;
+        flex-direction: column;
+        margin-top: -10px;
+        margin-left: 5px;
+    }
+    .inputNew{
+        width: 100px;
+        height: 10px;
+        padding-left: 3px;
+        font-size: 7px;
+    }
+    .inputNewAbout{
+        width: 100px;
+        height: 26px;
+        padding-left: 3px;
+        font-size: 7px;
+    }
+    .innerNew2{
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(106, 103, 103);
+        width: 250px;
+        height: 300px;
+        margin-top: 220px;
+        margin-left: 24px;
+        border-radius: 4px;
+        border: 1.5px solid black;
+        justify-content: center;
+        position: absolute;
+    }
+
+    .innerNew3{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        background-color: rgb(186, 180, 180);
+        width: 265px;
+        height: 300px;
+        margin-top: -20px;
+        margin-left: -20px;
+        border-radius: 4px;
+        position: relative;
+        cursor: pointer;
+    }
+    .intoFade{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        background-color: rgb(186, 180, 180);
+        width: 265px;
+        height: 300px;
+        margin-top: -20px;
+        margin-left: -20px;
+        border-radius: 4px;
+        animation: fadeOutUpBig 2s; 
+    }
+    @keyframes fadeOutUpBig{
+        from {
+          opacity: 1;
+        }
+      
+        to {
+          opacity: 0;
+          transform: translate3d(0, -1000px, 0);
+        }
+      }
+    /* .innerNew3:hover{
+        border: 1.5px solid rgb(110, 104, 104);
+    } */
+    .newMemberButton{
+        margin-top: 340px;
+        width: 40px;
+        font-size: 7px;
+        cursor: pointer;
+        border-radius: 30px;
+        margin-left: 90px;
+        margin-right: -100px;
+        padding: 4px;
+        background-color: rgb(105, 215, 240);
+    }
+    /* .newMemberButton:hover{
+       background-color: aqua;
+    } */
+    .photo{
+        height: 70px;
+        width: 50px;
+    }
+    
+    input{
+        width: 20%;
+        margin: 0 auto;
+        font-size: 17px;
+    }
+    .div{
+        height: 70px;
+        width: 50px;
+        border: 3px solid rgb(24, 23, 23);
+        border-radius: 4px;
+        grid-column: 1/2;
+        grid-row: 1;
+    }
+    .div2{
+        margin-top: -10px;
+        width: 80px;
+        grid-column: 2/3;
+        grid-row: 1;
+        margin-left: -40px;
+    }
+    .div2 > h3{
+        margin-bottom: -2px;
+        font-size: 8px;
+    }
+    .div2 > h5{
+        height: 17px;
+        margin-left: 7px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        font-family: cursive;
+        font-size: 7px;
+        text-align: start;
+    }
+    .div3 {
+        grid-column: 3/4;
+        grid-row: 1;
+        margin-left: -47px;
+    }
+    .div3 > p{
+        height: 130px;
+        width: 130px;
+        margin-right: 10px;
+        margin-top: 5px;
+        text-align: justify;
+        padding: 2px;
+        font-size: 7px;
+        font-family: cursive;
+        font-weight: bolder;
+    }
+    .div4{
+        grid-column: 1/2;
+        grid-row: 2;
+        width: 95px;
+       margin-top: -50px;
+    }
+    .div4 > h5 span {
+        color: white;
+    }
+    .div4 > h5{
+        height: 23px;
+        margin-left: 10px;
+        padding-top: 2px;
+        font-family: cursive;
+        font-size: 7px;
+        text-align: start;
+    }
+    .div5{
+        grid-column: 2/3;
+        grid-row: 2;
+        margin-top: -50px;
+        width: 80px;
+    }
+    .div5 > h5 span {
+        color: white;
+    }
+    .div5 > h5{
+        height: 23px;
+        margin-left: 10px;
+        padding-top: 2px;
+        font-family: cursive;
+        font-size: 7px;
+        text-align: start;
+    }
+    .div6{
+        grid-column: 3/4;
+        grid-row: 2;
+        margin-top: -50px;
+        width: 95px;
+    }
+    .div6 > h5 span{
+        color: white; 
+    }
+    .div6 > h5{
+        height: 23px;
+        margin-left: 10px;
+        padding-top: 2px;
+        font-family: cursive;
+        font-size: 7px;
+        text-align: start;
+    }
+ }
 
 
 
