@@ -197,11 +197,11 @@ const AddStatsPlayers = () => {
                     return(
                         <div >
                           <img src={a.imag} alt='' className='fondo' />
-                          <h3  style={{height: '15px'}}>{a.name}</h3>
-                          <h4 style={{height: '15px'}}>{a.city} - {a.age}</h4>
-                          <h4 style={{height: '15px'}}>{a.height} - {a.weight}</h4>
-                          <h4 style={{height: '15px'}}>{a.salary}</h4>
-                          <h4 style={{height: '15px'}}>{a.current_team}</h4>
+                          <h3  className='fondoINt'>{a.name}</h3>
+                          <h4  className='fondoINt'>{a.city} - {a.age}</h4>
+                          <h4  className='fondoINt'>{a.height} - {a.weight}</h4>
+                          <h4  className='fondoINt'>{a.salary}</h4>
+                          <h4  className='fondoINt'>{a.current_team}</h4>
                         </div>
                     )})}              
               </div>
