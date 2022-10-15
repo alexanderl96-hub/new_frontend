@@ -249,23 +249,22 @@ useEffect(() => {
                                             <div>AVG</div>
                                         </div>
                                         { teamId  ? 
-                                                    <div style={{backgroundColor: 'red', marginLeft: '-10px',
-                                                    marginRight: '-10px', color: 'white'}} > 
+                                                    <div className = 'statsPlayerMap'> 
                                                     {  teamId.map((stat, index)=>{
                                                         return(
                                                             <div>
                                                                 {Number(memberId) === stat.players_id ?  
                                                                     <div className='about-inner1'>
                                                                         <div className='game-inner'>{stat.game_date} {stat.game}</div>
-                                                                        <div style={{textAlign: 'center',width:'60px'}}>{stat.ab >= 0 ? stat.ab : '-'}</div>
-                                                                        <div style={{textAlign: 'center',width:'60px'}}>{stat.r >= 0 ? stat.r : '-'}</div>
-                                                                        <div style={{textAlign: 'center',width:'60px'}}>{stat.h >= 0 ? stat.h : '-'}</div>
-                                                                        <div style={{textAlign: 'center',width:'60px'}}>{stat.rb >= 0 ? stat.rb : '-'}</div>
-                                                                        <div style={{textAlign: 'center',width:'60px'}}>{stat.bb >= 0 ? stat.bb : '-'}</div>
-                                                                        <div style={{textAlign: 'center',width:'60px'}}>{stat.so  >= 0 ? stat.so : '-'}</div>
-                                                                        <div style={{textAlign: 'center',width:'60px'}}>{stat.hr >= 0 ? stat.hr : '-'}</div>
-                                                                        <div style={{textAlign: 'center',width:'60px'}}>{stat.sb  >= 0 ? stat.sb : '-'}</div>
-                                                                        <div style={{textAlign: 'center',width:'60px'}}>{stat.average  >= 0 ? stat.average : '-'}</div>
+                                                                        <div className= 'gameInnerPoint'>{stat.ab >= 0 ? stat.ab : '-'}</div>
+                                                                        <div className= 'gameInnerPoint'>{stat.r >= 0 ? stat.r : '-'}</div>
+                                                                        <div className= 'gameInnerPoint'>{stat.h >= 0 ? stat.h : '-'}</div>
+                                                                        <div className= 'gameInnerPoint'>{stat.rb >= 0 ? stat.rb : '-'}</div>
+                                                                        <div className= 'gameInnerPoint'>{stat.bb >= 0 ? stat.bb : '-'}</div>
+                                                                        <div className= 'gameInnerPoint'>{stat.so  >= 0 ? stat.so : '-'}</div>
+                                                                        <div className= 'gameInnerPoint'>{stat.hr >= 0 ? stat.hr : '-'}</div>
+                                                                        <div className= 'gameInnerPoint'>{stat.sb  >= 0 ? stat.sb : '-'}</div>
+                                                                        <div className= 'gameInnerPoint'>{stat.average  >= 0 ? stat.average : '-'}</div>
                                                                     </div>
                                                                    
                                                             : null}
@@ -294,8 +293,7 @@ useEffect(() => {
                                         <div>AVG</div>
                                     </div>
                                     {teamCareerId  ? 
-                                                    <div style={{backgroundColor: 'red', marginLeft: '-10px',
-                                                    marginRight: '-10px', color: 'white'}} > 
+                                                    <div className = 'statsPlayerMap' > 
                                                     {  teamCareerId.map((career, index)=>{
                                                         return(
                                                             <div>
@@ -303,15 +301,15 @@ useEffect(() => {
                                                                     <div className='about-inner2'>
                                                                         <div className='career1'>{career.game_year} </div>
                                                                         <div className='career2'>{career.team} </div>
-                                                                        <div style={{textAlign: 'center',width:'80px'}}>{career.career_gp}</div>
-                                                                        <div style={{textAlign: 'center',width:'80px'}}>{career.career_ab}</div>
-                                                                        <div style={{textAlign: 'center',width:'80px'}}>{career.career_r}</div>
-                                                                        <div style={{textAlign: 'center',width:'80px'}}>{career.career_h}</div>
-                                                                        <div style={{textAlign: 'center',width:'80px'}}>{career.career_rbi}</div>
-                                                                        <div style={{textAlign: 'center',width:'80px'}}>{career.career_bb}</div>
-                                                                        <div style={{textAlign: 'center',width:'80px'}}>{career.career_so}</div>
-                                                                        <div style={{textAlign: 'center',width:'80px'}}>{career.career_hr}</div>
-                                                                        <div style={{textAlign: 'center',width:'80px'}}>{career.career_average}</div>
+                                                                        <div className= 'gameInnerPoint2'>{career.career_gp}</div>
+                                                                        <div className= 'gameInnerPoint2'>{career.career_ab}</div>
+                                                                        <div className= 'gameInnerPoint2'>{career.career_r}</div>
+                                                                        <div className= 'gameInnerPoint2'>{career.career_h}</div>
+                                                                        <div className= 'gameInnerPoint2'>{career.career_rbi}</div>
+                                                                        <div className= 'gameInnerPoint2'>{career.career_bb}</div>
+                                                                        <div className= 'gameInnerPoint2'>{career.career_so}</div>
+                                                                        <div className= 'gameInnerPoint2'>{career.career_hr}</div>
+                                                                        <div className= 'gameInnerPoint2'>{career.career_average}</div>
                                                                     </div>
                                                                    
                                                             : null}
@@ -339,23 +337,22 @@ useEffect(() => {
                                         <div>ERA</div>
                                     </div>
                                     {pitcherId  ? 
-                                                    <div style={{backgroundColor: 'red', marginLeft: '-10px',
-                                                    marginRight: '-10px', color: 'white'}} > 
+                                                    <div className = 'statsPlayerMap'> 
                                                     {  pitcherId.map((pitcher, index)=>{
                                                         return(
                                                             <div>
                                                                 {Number(memberId) === pitcher.players_id  ?  
                                                                     <div className='pitcher-inner1'>
                                                                         <div className='pitcher-inner'>{pitcher.game_date}{pitcher.team} </div>
-                                                                        <div style={{textAlign: 'center',width:'80px'}}>{pitcher.ip >= 0 ? pitcher.ip : '-'}</div>
-                                                                        <div style={{textAlign: 'center',width:'80px'}}>{pitcher.h >= 0 ? pitcher.h : '-'}</div>
-                                                                        <div style={{textAlign: 'center',width:'80px'}}>{pitcher.r >= 0 ? pitcher.r : '-'}</div>
-                                                                        <div style={{textAlign: 'center',width:'80px'}}>{pitcher.er >= 0 ? pitcher.er : '-'}</div>
-                                                                        <div style={{textAlign: 'center',width:'80px'}}>{pitcher.hr >= 0 ? pitcher.hr : '-'}</div>
-                                                                        <div style={{textAlign: 'center',width:'80px'}}>{pitcher.bb >= 0 ? pitcher.bb : '-'}</div>
-                                                                        <div style={{textAlign: 'center',width:'80px'}}>{pitcher.so >= 0 ? pitcher.so : '-'}</div>
-                                                                        <div style={{textAlign: 'center',width:'80px'}}>{pitcher.sv >= 0 ? pitcher.sv : '-'}</div>
-                                                                        <div style={{textAlign: 'center',width:'80px'}}>{pitcher.era >= 0 ? pitcher.era : '-'}</div>
+                                                                        <div className= 'gameInnerPoint2'>{pitcher.ip >= 0 ? pitcher.ip : '-'}</div>
+                                                                    <div className= 'gameInnerPoint2'>{pitcher.h >= 0 ? pitcher.h : '-'}</div>
+                                                                        <div className= 'gameInnerPoint2'>{pitcher.r >= 0 ? pitcher.r : '-'}</div>
+                                                                        <div className= 'gameInnerPoint2'>{pitcher.er >= 0 ? pitcher.er : '-'}</div>
+                                                                        <div className= 'gameInnerPoint2'>{pitcher.hr >= 0 ? pitcher.hr : '-'}</div>
+                                                                        <div className= 'gameInnerPoint2'>{pitcher.bb >= 0 ? pitcher.bb : '-'}</div>
+                                                                        <div className= 'gameInnerPoint2'>{pitcher.so >= 0 ? pitcher.so : '-'}</div>
+                                                                        <div className= 'gameInnerPoint2'>{pitcher.sv >= 0 ? pitcher.sv : '-'}</div>
+                                                                        <div className= 'gameInnerPoint2'>{pitcher.era >= 0 ? pitcher.era : '-'}</div>
                                                                     </div>
                                                                    
                                                             : null}
@@ -384,8 +381,7 @@ useEffect(() => {
                                         <div>ERA</div>
                                     </div>
                                     {pitcherCareerId  ? 
-                                                    <div style={{backgroundColor: 'red', marginLeft: '-10px',
-                                                    marginRight: '-10px', color: 'white'}} > 
+                                                    <div className = 'statsPlayerMap' > 
                                                     {  pitcherCareerId.map((careerP, index)=>{
                                                         return(
                                                             <div >
@@ -393,15 +389,15 @@ useEffect(() => {
                                                                     <div className='about-inner2'>
                                                                         <div className='career1'>{careerP.game_year} </div>
                                                                         <div className='career2'>{careerP.team} </div>
-                                                                        <div style={{textAlign: 'center',width:'80px'}}>{careerP.career_gp >= 0 ? careerP.career_gp : '-'}</div>
-                                                                        <div style={{textAlign: 'center',width:'80px'}}>{careerP.career_cg >= 0 ? careerP.career_cg : '-'}</div>
-                                                                        <div style={{textAlign: 'center',width:'80px'}}>{careerP.career_er >= 0 ? careerP.career_er : '-'}</div>
-                                                                        <div style={{textAlign: 'center',width:'80px'}}>{careerP.career_so >= 0 ? careerP.career_so : '-'}</div>
-                                                                        <div style={{textAlign: 'center',width:'80px'}}>{careerP.career_w >= 0 ? careerP.career_w : '-'}</div>
-                                                                        <div style={{textAlign: 'center',width:'80px'}}>{careerP.career_l >= 0 ? careerP.career_l : '-'}</div>
-                                                                        <div style={{textAlign: 'center',width:'80px'}}>{careerP.career_sv >= 0 ? careerP.career_sv : '-'}</div>
-                                                                        <div style={{textAlign: 'center',width:'80px'}}>{careerP.career_whip >= 0 ? careerP.career_whip : '-'}</div>
-                                                                        <div style={{textAlign: 'center',width:'80px'}}>{careerP.career_era >= 0 ? careerP.career_era : '-'}</div>
+                                                                        <div className= 'gameInnerPoint2'>{careerP.career_gp >= 0 ? careerP.career_gp : '-'}</div>
+                                                                        <div className= 'gameInnerPoint2'>{careerP.career_cg >= 0 ? careerP.career_cg : '-'}</div>
+                                                                        <div className= 'gameInnerPoint2'>{careerP.career_er >= 0 ? careerP.career_er : '-'}</div>
+                                                                        <div className= 'gameInnerPoint2'>{careerP.career_so >= 0 ? careerP.career_so : '-'}</div>
+                                                                        <div className= 'gameInnerPoint2'>{careerP.career_w >= 0 ? careerP.career_w : '-'}</div>
+                                                                        <div className= 'gameInnerPoint2'>{careerP.career_l >= 0 ? careerP.career_l : '-'}</div>
+                                                                        <div className= 'gameInnerPoint2'>{careerP.career_sv >= 0 ? careerP.career_sv : '-'}</div>
+                                                                        <div className= 'gameInnerPoint2'>{careerP.career_whip >= 0 ? careerP.career_whip : '-'}</div>
+                                                                        <div className= 'gameInnerPoint2'>{careerP.career_era >= 0 ? careerP.career_era : '-'}</div>
                                                                     </div>
                                                                    
                                                             : null}
