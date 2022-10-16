@@ -293,7 +293,7 @@ useEffect(() => {
                                         <div>AVG</div>
                                     </div>
                                     {teamCareerId  ? 
-                                                    <div className = 'statsPlayerMap' > 
+                                                    <div className = 'statsPlayerMap2' > 
                                                     {  teamCareerId.map((career, index)=>{
                                                         return(
                                                             <div>
@@ -324,7 +324,7 @@ useEffect(() => {
                             <div className='IndividualWrapper7'>
                                <div className="team_About5">
                                     <h2 >Pitcher Stats</h2>
-                                    <div className='statsGrid'>
+                                    <div className='statsGridPitcher'>
                                         <div className='pitcher'>GAME</div>
                                         <div>IP</div>
                                         <div>H</div>
@@ -337,7 +337,7 @@ useEffect(() => {
                                         <div>ERA</div>
                                     </div>
                                     {pitcherId  ? 
-                                                    <div className = 'statsPlayerMap'> 
+                                                    <div className = 'statsPlayerMapPitcher'> 
                                                     {  pitcherId.map((pitcher, index)=>{
                                                         return(
                                                             <div>
@@ -367,7 +367,7 @@ useEffect(() => {
                             <div className='IndividualWrapper8'>
                                <div className="team_About5">
                                     <h2 >Career Pitcher Stats</h2>
-                                    <div className='statsGrid2'>
+                                    <div className='statsGrid2PitcherCarrer'>
                                         <div className='career'>YEAR</div>
                                         <div className='career'>TEAM</div>
                                         <div>GP</div>
@@ -381,7 +381,7 @@ useEffect(() => {
                                         <div>ERA</div>
                                     </div>
                                     {pitcherCareerId  ? 
-                                                    <div className = 'statsPlayerMap' > 
+                                                    <div className = 'statsPlayerMap4' > 
                                                     {  pitcherCareerId.map((careerP, index)=>{
                                                         return(
                                                             <div >
