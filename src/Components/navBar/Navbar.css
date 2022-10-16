@@ -335,16 +335,17 @@ justify-content: space-around;
     color: white;
     border-radius: 3px;
     text-align: center;
-    margin-left: -20px;
+    margin-left: -40px;
     cursor: pointer;
-    margin-top: 15%;
+    margin-top: 21%;
     width: 60px;
   }
   .navlogIn {
     color: white;
-    width: 55px;
+    width: 50px;
     font-size: 11px;
-    margin-top: 7%;
+    margin-top: 5%;
+    margin-right: 10px;
   }
   .nav > a.active {
     text-decoration: underline;
@@ -385,11 +386,11 @@ justify-content: space-around;
       margin-left: 50px;
       cursor: pointer;
       margin-top: 9%;
-      width: 55px;
+      width: 50px;
     }
     .navlogIn {
       color: white;
-      width: 55px;
+      width: 50px;
       margin-right: 10px;
       font-size: 10.5px;
       margin-top: 5%;
