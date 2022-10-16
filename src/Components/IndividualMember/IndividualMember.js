@@ -345,7 +345,7 @@ useEffect(() => {
                                                                     <div className='pitcher-inner1'>
                                                                         <div className='pitcher-inner'>{pitcher.game_date}{pitcher.team} </div>
                                                                         <div className= 'gameInnerPoint2'>{pitcher.ip >= 0 ? pitcher.ip : '-'}</div>
-                                                                    <div className= 'gameInnerPoint2'>{pitcher.h >= 0 ? pitcher.h : '-'}</div>
+                                                                        <div className= 'gameInnerPoint2'>{pitcher.h >= 0 ? pitcher.h : '-'}</div>
                                                                         <div className= 'gameInnerPoint2'>{pitcher.r >= 0 ? pitcher.r : '-'}</div>
                                                                         <div className= 'gameInnerPoint2'>{pitcher.er >= 0 ? pitcher.er : '-'}</div>
                                                                         <div className= 'gameInnerPoint2'>{pitcher.hr >= 0 ? pitcher.hr : '-'}</div>

@@ -1,12 +1,11 @@
 .MainMember{
     background: #030353ec; 
-    width: 100%;
     animation: fadein 1s;
     -moz-animation: fadein 1s; /* Firefox */
     -webkit-animation: fadein 1s; /* Safari and Chrome */
     -o-animation: fadein 1s;
     /* position: fixed; */
-    /* height: 100%; */
+    height: 100%;
    /* margin-bottom: 30px; */
 }
 .divTop{
@@ -86,7 +85,7 @@
 .IndividualContin{
     display:grid;
     grid-template-columns: repeat(3, 1fr);
-     grid-auto-rows: repeat(100px, auto);
+     grid-template-rows: repeat(1, 1fr);
 }
 .IndividualWrapper{
     margin: 20px;
@@ -116,7 +115,7 @@
     grid-row: 3;
 }
 .IndividualWrapper6{
-    margin-top: -10px;
+    /* margin-top: -10px; */
     margin-left:10px;
     margin-right:10px;
     grid-column: 1 / 4;
@@ -139,7 +138,10 @@
    }
 .team_About5{
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
+   }
+   .team_About5 > h2{
+       width: 430px;
    }
 .class1{
     display: grid;
@@ -165,63 +167,74 @@
     width: 50px;
     height: 20px;
     grid-column: 1 / 2;
+    font-weight: bold;
 }
 .class2 > span {
     width: 50px;
     height: 20px;
     grid-column: 1 / 2;
+     font-weight: bold;
 }
 .class3 > span {
     width: 50px;
     height: 20px;
     grid-column: 1 / 2;
+    font-weight: bold;
 }
 .class4 > span {
     width: 50px;
     height: 20px;
     grid-column: 1 / 2;
+    font-weight: bold;
 }
 .class5 > span {
     width: 50px;
      height: 20px;
     grid-column: 1 / 2;
+    font-weight: bold;
 }
 .class1 > p {
     width: 210px;
     margin-top: 1.5px;
     font-size: 13.5px;
     grid-column: 2 / 3;
+    height: 40px;
 }
 .class2 > p {
     width: 210px;
     margin-top: 1.5px;
     font-size: 13.5px;
     grid-column: 2 / 3;
+    height: 40px;
 }
 .class3 > p {
     width: 210px;
     margin-top: 1.5px;
     font-size: 13.5px;
     grid-column: 2 / 3;
+    height: 40px;
 }
 .class4 > p {
     width: 210px;
     margin-top: 1.5px;
     font-size: 13.5px;
     grid-column: 2 / 3;
+    height: 40px;
 }
 .class5 > p {
     width: 210px;
     margin-top: 1.5px;
     font-size: 13.5px;
     grid-column: 2 / 3;
+    height: 40px;
 }
 .classAbout > span {
-  
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
  }
 .classAbout > div{
     margin-top: 10px;
+    font-size: 14px;
     /* text-align: justify; */
  }
 .statsGrid{
@@ -252,6 +265,7 @@
     width: 240px;
 }
 .statsPlayerMap{
+    /* margin-top: 90px; */
     background-color: red;
      margin-left: -10px;
     margin-right: -10px; 
@@ -1045,7 +1059,7 @@
  @media only screen and (max-width: 912px){
     .MainMember{
         background: #030353ec; 
-        width: 100%;
+        /* width: 100%; */
         animation: fadein 1s;
         -moz-animation: fadein 1s; /* Firefox */
         -webkit-animation: fadein 1s; /* Safari and Chrome */
@@ -1057,51 +1071,51 @@
         display: flex;
         flex-direction: column;
         text-align: center; 
-        margin-left: 100px;
-        margin-right:100px;
+        margin-left: 90px;
+        margin-right:90px;
         margin-top:0.5px;
         /* background-image: url('https://images2.minutemediacdn.com/image/fetch/w_1046,h_485,c_fill,g_auto,f_auto/https%3A%2F%2Fnolanwritin.com%2Fwp-content%2Fuploads%2Fimagn-images%2F2017%2F07%2F17949891-850x560.jpeg'); */
     }
     .divTop-ImgBackground{
-        margin-left: 100px;
-        margin-right:100px; 
+        margin-left: 90px;
+        margin-right:90px; 
     }
     
     .divTop-inner{
         color: white;
         background-color:#2c2424;
         font-family: cursive;
-        font-size: 20px; 
+        font-size: 18px; 
     }
     .divEdit{
         text-decoration: none;
         color: white;
-        margin-left: 140px;
-        margin-right: -132px;
-        font-size: 15px;
+        margin-left: 110px;
+        margin-right: -112px;
+        font-size: 13px;
     }
     .divEdit2{
         text-decoration: none;
         color: white;
         text-align: center;
-         margin-left: 160px;
-        margin-right: -120px;
-        font-size: 15px; 
+         margin-left: 130px;
+        margin-right: -100px;
+        font-size: 13px; 
        
     }
     .divEdit3{
         text-decoration: none;
         color: white;
         text-align: center;
-        margin-left: 430px;
-        margin-right: -100px;
-        font-size: 15px; 
+        margin-left: 400px;
+        margin-right: -90px;
+        font-size: 13px; 
     }
     .divTop > img{
-        border: 12px solid white;
+        border: 8px solid white;
         border-radius: 50%;
-        height: 110px;
-        width: 110px;
+        height: 100px;
+        width: 100px;
         margin-top: 50px;
         margin-left: 90%;
         object-fit: cover;
@@ -1112,7 +1126,7 @@
         width: 380px;
         margin-right: 580px;
         margin-left: 20px;
-        font-size: 19px; 
+        font-size: 18px; 
     }
     .divTop > h3{
         color:White;
@@ -1120,38 +1134,38 @@
         margin-top: -15px;
         margin-right: 660px;
         margin-left: 20px;
-        font-size: 17px; 
+        font-size: 16px; 
     }
     .divMedium{
-        margin-left: 100px;
-        margin-right:100px;
+        margin-left: 90px;
+        margin-right:90px;
         background: rgb(240, 233, 233);
         box-shadow: 0px -15px 20px 1px #111;
     }
     .IndividualContin{
         display:grid;
         grid-template-columns: repeat(3, 1fr);
-         grid-auto-rows: repeat(6, 1fr);
+         grid-auto-rows: repeat(4, 1fr);
     }
     .IndividualWrapper{
-        margin: 16px;
+        margin: 15px;
         grid-column: 1 / 2;
         grid-row: 1;
     }
     .IndividualWrapper2{
-        margin: 16px;
+        margin: 15px;
         grid-column: 2 / 3;
         grid-row: 1;
     }
     .IndividualWrapper3{
-        margin: 16px;
+        margin: 15px;
         grid-column: 3 / 4;
         grid-row: 1;
     }
     .IndividualWrapper4{
-        margin-top: 16px;
-        margin-left: 100px;
-        margin-right: 100px;
+        margin-top: 15px;
+        margin-left: 50px;
+        margin-right: 120px;
         grid-column: 1 / 4;
         grid-row: 2;
     }
@@ -1189,6 +1203,9 @@
         display: flex;
         flex-direction: column;
        }
+       .team_About5 > h2{
+           font-size: 15px;
+       }
     .class1{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -1213,86 +1230,85 @@
         width: 50px;
         height: 20px;
         grid-column: 1 / 2;
-        font-size: 12px;
+        font-size: 10px;
         font-weight: bold;
     }
     .class2 > span {
         width: 50px;
         height: 20px;
         grid-column: 1 / 2;
-        font-size: 12px;
+        font-size: 10px;
         font-weight: bold;
     }
     .class3 > span {
         width: 50px;
         height: 20px;
         grid-column: 1 / 2;
-        font-size: 12px;
+        font-size: 10px;
         font-weight: bold;
     }
     .class4 > span {
         width: 50px;
         height: 20px;
         grid-column: 1 / 2;
-        font-size: 12px;
+        font-size: 10px;
         font-weight: bold;
     }
     .class5 > span {
         width: 50px;
          height: 20px;
         grid-column: 1 / 2;
-        font-size: 12px;
+        font-size: 10px;
         font-weight: bold;
     }
     .class1 > p {
-        width: 160px;
+        width: 140px;
         margin-top: 1.5px;
         grid-column: 2 / 3;
-        margin-left: 20px;
-        height: 40px;
-        font-size: 12px;
+        margin-left: 10px;
+        height: 30px;
+        font-size: 10px;
     }
     .class2 > p {
-        width: 160px;
+        width: 140px;
         margin-top: 1.5px;
         grid-column: 2 / 3;
-        margin-left: 20px;
-        height: 40px;
-        font-size: 12px;
+        margin-left: 10px;
+        height: 30px;
+        font-size: 10px;
     }
     .class3 > p {
-        width: 160px;
+        width: 140px;
         margin-top: 1.5px;
         grid-column: 2 / 3;
-        margin-left: 20px;
-        height: 40px;
-        font-size: 12px;
+        margin-left: 10px;
+        height: 30px;
+        font-size: 10px;
     }
     .class4 > p {
-        width: 160px;
+        width: 140px;
         margin-top: 1.5px;
         grid-column: 2 / 3;
-        margin-left: 20px;
-        height: 40px;
-        font-size: 12.5px;
+        margin-left: 10px;
+        height: 30px;
+        font-size: 10px;
     }
     .class5 > p {
         width: 160px;
         margin-top: 1.5px;
         grid-column: 2 / 3;
-        margin-left: 20px;
+        margin-left: 10px;
         height: 40px;
-        font-size: 12.5px;
+        font-size: 10px;
     }
     .classAbout > span {
         margin-bottom: 5px;
-        font-size: 13.5px;
+        font-size: 11px;
         font-weight: bold;
      }
     .classAbout > div{
         margin-top: 5px;
-        font-size: 12.5px;
-        /* text-align: justify; */
+        font-size: 11px;
      }
     .statsGrid{
         background-color: #2c2424;
@@ -1303,7 +1319,8 @@
         grid-auto-rows: minmax(100px, auto);
         height: 30px;
         margin-left: -10px;
-        margin-right: -8px;
+        margin-right: 8px;
+        font-size: 14px;
     }
     .statsGrid2{
         background-color: #2c2424;
@@ -1314,15 +1331,15 @@
         grid-auto-rows: minmax(100px, auto);
         height: 30px;
         margin-left: -10px;
-        margin-right: -8px;
+        margin-right: 8px;
     }
     .game{
-        width: 220px;
+        width: 200px;
     }
     .statsPlayerMap{
         background-color: red;
          margin-left: -10px;
-        margin-right: -8px; 
+        margin-right: 8px; 
         color: white;
     }
     .about-inner1{
@@ -1337,7 +1354,7 @@
     }
     .game-inner{
         width: 180px;
-        margin-left: 62px;
+        margin-left: 32px;
         text-align: left;
     }
     .gameInnerPoint{
@@ -1364,7 +1381,7 @@
     }
     .career1{
         width: 50px;
-        margin-left: 30px;
+        margin-left: 27px;
     }
     .career2{
         width: 70px;
@@ -1392,7 +1409,357 @@
  }
 
 /*iPad Air  (max-width: 820px; max-heigth: 1180px;)*/
-/* @media only screen and (max-width: 820px){} */
+@media only screen and (max-width: 820px){
+    .MainMember{
+        background: #030353ec; 
+        /* width: 100%; */
+        animation: fadein 1s;
+        -moz-animation: fadein 1s; /* Firefox */
+        -webkit-animation: fadein 1s; /* Safari and Chrome */
+        -o-animation: fadein 1s;
+        /* height: 100%; */
+    }
+    .divTop{
+        background: linear-gradient(#4256ec, #101125);
+        display: flex;
+        flex-direction: column;
+        text-align: center; 
+        margin-left: 90px;
+        margin-right:90px;
+        margin-top:0.5px;
+        /* background-image: url('https://images2.minutemediacdn.com/image/fetch/w_1046,h_485,c_fill,g_auto,f_auto/https%3A%2F%2Fnolanwritin.com%2Fwp-content%2Fuploads%2Fimagn-images%2F2017%2F07%2F17949891-850x560.jpeg'); */
+    }
+    .divTop-ImgBackground{
+        margin-left: 90px;
+        margin-right:90px; 
+    }
+    
+    .divTop-inner{
+        color: white;
+        background-color:#2c2424;
+        font-family: cursive;
+        font-size: 18px; 
+    }
+    .divEdit{
+        text-decoration: none;
+        color: white;
+        margin-left: 110px;
+        margin-right: -112px;
+        font-size: 13px;
+    }
+    .divEdit2{
+        text-decoration: none;
+        color: white;
+        text-align: center;
+         margin-left: 130px;
+        margin-right: -100px;
+        font-size: 13px; 
+       
+    }
+    .divEdit3{
+        text-decoration: none;
+        color: white;
+        text-align: center;
+        margin-left: 400px;
+        margin-right: -90px;
+        font-size: 13px; 
+    }
+    .divTop > img{
+        border: 8px solid white;
+        border-radius: 50%;
+        height: 100px;
+        width: 100px;
+        margin-top: 50px;
+        margin-left: 90%;
+        object-fit: cover;
+    }
+    .divTop > h2{
+        margin-top: 100px;
+        color:White;
+        width: 380px;
+        margin-right: 580px;
+        margin-left: 20px;
+        font-size: 18px; 
+    }
+    .divTop > h3{
+        color:White;
+        width: 400px;
+        margin-top: -15px;
+        margin-right: 660px;
+        margin-left: 20px;
+        font-size: 16px; 
+    }
+    .divMedium{
+        margin-left: 90px;
+        margin-right:90px;
+        background: rgb(240, 233, 233);
+        box-shadow: 0px -15px 20px 1px #111;
+    }
+    .IndividualContin{
+        display:grid;
+        grid-template-columns: repeat(3, 1fr);
+         grid-auto-rows: repeat(4, 1fr);
+    }
+    .IndividualWrapper{
+        margin: 15px;
+        grid-column: 1 / 2;
+        grid-row: 1;
+    }
+    .IndividualWrapper2{
+        margin: 15px;
+        grid-column: 2 / 3;
+        grid-row: 1;
+    }
+    .IndividualWrapper3{
+        margin: 15px;
+        grid-column: 3 / 4;
+        grid-row: 1;
+    }
+    .IndividualWrapper4{
+        margin-top: 15px;
+        margin-left: 50px;
+        margin-right: 120px;
+        grid-column: 1 / 4;
+        grid-row: 2;
+    }
+    .IndividualWrapper5{
+        margin: 10px;
+        grid-column: 1 / 4;
+        grid-row: 3;
+        color: red;
+    }
+    .IndividualWrapper6{
+        margin-left:10px;
+        margin-right:10px;
+        grid-column: 1 / 4;
+        grid-row: 4;
+        color: red;
+    }
+    .IndividualWrapper7{
+        margin-left:10px;
+        margin-right:10px;
+        grid-column: 1 / 4;
+        grid-row: 5;
+        color: red;
+    }
+    .IndividualWrapper8{
+        margin-left:10px;
+        margin-right:10px;
+        grid-column: 1 / 4;
+        grid-row: 6;
+        color: red;
+    }
+    .team_About4{
+        text-align: center;
+       }
+    .team_About5{
+        display: flex;
+        flex-direction: column;
+       }
+       .team_About5 > h2{
+           font-size: 15px;
+       }
+    .class1{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .class2{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .class3{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .class4{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .class5{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .class1 > span {
+        width: 50px;
+        height: 20px;
+        grid-column: 1 / 2;
+        font-size: 10px;
+        font-weight: bold;
+    }
+    .class2 > span {
+        width: 50px;
+        height: 20px;
+        grid-column: 1 / 2;
+        font-size: 10px;
+        font-weight: bold;
+    }
+    .class3 > span {
+        width: 50px;
+        height: 20px;
+        grid-column: 1 / 2;
+        font-size: 10px;
+        font-weight: bold;
+    }
+    .class4 > span {
+        width: 50px;
+        height: 20px;
+        grid-column: 1 / 2;
+        font-size: 10px;
+        font-weight: bold;
+    }
+    .class5 > span {
+        width: 50px;
+         height: 20px;
+        grid-column: 1 / 2;
+        font-size: 10px;
+        font-weight: bold;
+    }
+    .class1 > p {
+        width: 140px;
+        margin-top: 1.5px;
+        grid-column: 2 / 3;
+        margin-left: 10px;
+        height: 30px;
+        font-size: 10px;
+    }
+    .class2 > p {
+        width: 140px;
+        margin-top: 1.5px;
+        grid-column: 2 / 3;
+        margin-left: 10px;
+        height: 30px;
+        font-size: 10px;
+    }
+    .class3 > p {
+        width: 140px;
+        margin-top: 1.5px;
+        grid-column: 2 / 3;
+        margin-left: 10px;
+        height: 30px;
+        font-size: 10px;
+    }
+    .class4 > p {
+        width: 140px;
+        margin-top: 1.5px;
+        grid-column: 2 / 3;
+        margin-left: 10px;
+        height: 30px;
+        font-size: 10px;
+    }
+    .class5 > p {
+        width: 160px;
+        margin-top: 1.5px;
+        grid-column: 2 / 3;
+        margin-left: 10px;
+        height: 40px;
+        font-size: 10px;
+    }
+    .classAbout > span {
+        margin-bottom: 5px;
+        font-size: 11px;
+        font-weight: bold;
+     }
+    .classAbout > div{
+        margin-top: 5px;
+        font-size: 11px;
+     }
+    .statsGrid{
+        background-color: #2c2424;
+        color:white;
+        display:grid;
+        grid-template-columns: repeat(10, 1fr);
+        text-align: center;
+        grid-auto-rows: minmax(100px, auto);
+        height: 30px;
+        margin-left: -10px;
+        margin-right: 8px;
+        font-size: 14px;
+    }
+    .statsGrid2{
+        background-color: #2c2424;
+        color:white;
+        display:grid;
+        grid-template-columns: repeat(11, 1fr);
+        text-align: center;
+        grid-auto-rows: minmax(100px, auto);
+        height: 30px;
+        margin-left: -10px;
+        margin-right: 8px;
+    }
+    .game{
+        width: 200px;
+    }
+    .statsPlayerMap{
+        background-color: red;
+         margin-left: -10px;
+        margin-right: 8px; 
+        color: white;
+    }
+    .about-inner1{
+        display:grid;
+        grid-template-columns: repeat(10, 1fr);
+        text-align: center;
+        grid-auto-rows: minmax(100px, auto);
+        padding-top: 10px;
+        height: 30px;
+        margin-left: -10px;
+        margin-right: -8px;
+    }
+    .game-inner{
+        width: 180px;
+        margin-left: 32px;
+        text-align: left;
+    }
+    .gameInnerPoint{
+        text-align: center;
+        width:50px;
+    }
+    .gameInnerPoint2{
+        text-align: center;
+        width:50px;
+    }
+    .career{
+        width: 68px;
+        margin-left: 22px;
+        margin-right: 18px;
+    }
+    .about-inner2{
+        display:grid;
+        grid-template-columns: repeat(11, 1fr);
+        text-align: center;
+        grid-auto-rows: minmax(100px, auto);
+        height: 30px;
+        margin-left: 1px;
+        margin-right: -10px;
+    }
+    .career1{
+        width: 50px;
+        margin-left: 27px;
+    }
+    .career2{
+        width: 70px;
+        margin-left: 50px;
+        margin-right: 20px;
+    }
+    .pitcher{
+        width: 220px;
+    }
+    .pitcher-inner1{
+         display:grid;
+        grid-template-columns: repeat(10, 1fr);
+        text-align: center;
+        grid-auto-rows: minmax(100px, auto);
+        padding-top: 10px;
+        height: 30px;
+        margin-left: 20px;
+        margin-right: -7px;
+    }
+    .pitcher-inner{
+        width: 142px;
+        margin-left: 65px;
+        text-align: left;
+    }
+}
 
   /*iPad mini  (max-width: 768px; max-heigth: 1024px;)*/
 @media only screen and (max-width: 768px){
