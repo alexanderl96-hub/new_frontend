@@ -179,7 +179,7 @@ console.log(classT)
                                 <input id='state' type="text" onChange={handleInput} value={newMember.state} placeholder="City..." className='inputNew' ></input>
                                 <input id='city' type="text" onChange={handleInput} value={newMember.city} placeholder="State..."  className='inputNew' ></input>
                                 <input id='country' type="text" onChange={handleInput} value={newMember.country} placeholder="Country..." className='inputNew' ></input>
-                                <input id='age' type="text" onChange={!handleInput } value={currentAge(age) ? currentAge(age) : newMember.age} placeholder="Age..." className='inputNew'></input>
+                                <input id='age' type="text" onChange={handleInput} value={ newMember.age} placeholder={ currentAge(age)} className='inputNew'></input>
                                 <input id='height' type="text" onChange={handleInput} value={newMember.height} placeholder="Height..."  className='inputNew' ></input>
                                 <input id='weight' type="text" onChange={handleInput} value={newMember.weight} placeholder="Weight..." className='inputNew' ></input>
                                 <input id='current_team' type="text" onChange={handleInput} value={newMember.current_team} placeholder={group.name} className='inputNew' ></input>

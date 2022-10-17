@@ -12,6 +12,13 @@
     text-decoration: none; 
     font-size: 25px;
 }
+.trash{
+    color: white;
+    cursor: pointer;
+    margin-left: 3%;
+    text-decoration: none; 
+    font-size: 25px;
+}
 .section2{
     height: 400px;
     width: 100%;

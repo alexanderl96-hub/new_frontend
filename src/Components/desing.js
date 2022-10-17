@@ -4,7 +4,7 @@ import ReactStars from "react-rating-stars-component"
 // import DeleteIcon from '@mui/icons-material/Delete';
 import Navbar from '../Components/navBar/Navbar'
 import './desing.css'
-import {FaUserAlt, FaUserPlus} from 'react-icons/fa';
+import {FaBurn, FaTrash,FaUserPlus} from 'react-icons/fa';
 import axios from 'axios'
 
 
@@ -100,7 +100,7 @@ const Desing = () => {
         fetch(`https://my-baseball-teams.adaptable.app/teams`)
         .then(res => res.json())
         .then(data =>{
-          setGroup(data = data.filter((a,b )=> a.id === Number(teamId)))
+          setGroup(data = data.filter((a)=> a.id === Number(teamId)))
         })
       },[teamId])
 
@@ -112,6 +112,12 @@ const Desing = () => {
             setNewI(arr = arr.map((a , index)=>  a !== null ? setAB(a) : ''))
          })
      },[search])
+
+     const handleDelete = () => {
+      axios.delete(`https://my-baseball-teams.adaptable.app/teams/${teamId}`).then(() =>{
+        //  navigate(`/homebase`)
+    }, (error) => console.log(error))
+     }
   //   useEffect(() => {
   //     fetch(`http://localhost:9000/playersStats`)
   //     .then(res => res.json())
@@ -128,8 +134,10 @@ const Desing = () => {
    <div className='MainDesing'>
         <Navbar />
         <div style={{ color: 'white', height: '45px',width: '100%',
-    fontFamily: 'cursive', marginTop: '13px'}}>
+    fontFamily: 'cursive', marginTop: '13px', display: 'flex'}}>
+          
            <Link to={`/teams/newMember/${teamId}`} id={teamId} className='newadded'> <FaUserPlus /></Link>
+           <Link to={`/`} id={teamId} className='trash' onClick={handleDelete}> <FaTrash /></Link>
         </div>
         <div className="section2"> 
          

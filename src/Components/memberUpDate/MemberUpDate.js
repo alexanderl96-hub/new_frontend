@@ -152,7 +152,7 @@ const MemberUpDate = () => {
           
          <form onSubmit={handleSubmit} className='newMemberUpdate'>
                            <div className='innerUpdate'>
-                                <input id='name' type="text" onChange={handleInput} value={memberName ? memberName : newMember.name}placeholder={memberName} className='inputT' ></input>
+                                <input id='name' type="text" onChange={handleInput} value={memberName ? memberName : newMember.name} placeholder={memberName} className='inputT' ></input>
                                 <input id='team_id' type="text" onChange={handleInput} value={member ? member : ''} placeholder={'team_id = ' +member} className='inputT' ></input>
                                 <input id='nickname'type="text" onChange={handleInput}  placeholder={"Nickname..." } className='inputT' ></input>
                                 <input id='imag' type="text" onChange={handleInput}  placeholder="Url..." className='inputT' ></input>

@@ -29,7 +29,7 @@ const NewTeam = () => {
   }
   const addTeam = (newTeam) => {
     axios.post(`https://my-baseball-teams.adaptable.app/teams`, newTeam).then((res)=>{
-      navigate('/teams');
+      navigate('/');
       })
   }
   // const addTeam = (newTeam) => {
