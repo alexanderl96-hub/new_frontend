@@ -5,6 +5,14 @@
      height: 100%;
      width: 100%;
 }
+.desingIcon{
+    color: white;
+    height: 45px;
+    width: 100%;
+    font-family: cursive;
+    margin-top: 13px; 
+    display: flex;
+}
 .newadded{ 
     color: white;
     cursor: pointer;
@@ -15,9 +23,10 @@
 .trash{
     color: white;
     cursor: pointer;
+    margin-top: 3px;
     margin-left: 3%;
     text-decoration: none; 
-    font-size: 25px;
+    font-size: 21px;
 }
 .section2{
     height: 400px;
@@ -206,15 +215,31 @@
          height: 100%;
          width: 100%;
     }
+    .desingIcon{
+        color: white;
+        height: 45px;
+        width: 100%;
+        font-family: cursive;
+        margin-top: 13px; 
+        display: flex;
+    }
     .newadded{ 
         color: white;
         cursor: pointer;
-        margin-left: 90%;
+        margin-left: 87%;
         text-decoration: none; 
-        font-size: 30px;
+        font-size: 25px;
+    }
+    .trash{
+        color: white;
+        cursor: pointer;
+        margin-top: 3px;
+        margin-left: 3%;
+        text-decoration: none; 
+        font-size: 21px;
     }
     .section2{
-        height: 430px;
+        height: 420px;
     }
     .section2Container{
         display: flex;
@@ -275,7 +300,7 @@
         display:flex;
         justify-content: center;
         width: 460px;
-        height: 350px;
+        height: 340px;
         border: 3px solid rgb(108, 70, 70);
         border-radius: 8px;
         background-color: rgba(255, 255, 255, 0.762);
@@ -285,7 +310,7 @@
     }
     .miFlag2 {
         width: 460px;
-        height: 350px; 
+        height: 340px; 
         border-radius: 5px;
        
     }
@@ -377,15 +402,31 @@
          height:100%;
          width: 100%;
     }
+    .desingIcon{
+        color: white;
+        height: 45px;
+        width: 100%;
+        font-family: cursive;
+        margin-top: 13px; 
+        display: flex;
+    }
     .newadded{ 
         color: white;
         cursor: pointer;
-        margin-left: 90%;
+        margin-left: 87%;
         text-decoration: none; 
-        font-size: 22px;
+        font-size: 25px;
+    }
+    .trash{
+        color: white;
+        cursor: pointer;
+        margin-top: 3px;
+        margin-left: 3%;
+        text-decoration: none; 
+        font-size: 21px;
     }
     .section2{
-        height: 320px;
+        height: 315px;
     }
     .section2Container{
         display: flex;
@@ -550,16 +591,31 @@
          height:100%;
          width: 100%;
     }
+    .desingIcon{
+        color: white;
+        height: 45px;
+        width: 100%;
+        font-family: cursive;
+        margin-top: 13px; 
+        display: flex;
+    }
     .newadded{ 
         color: white;
         cursor: pointer;
-        margin-left: 90%;
+        margin-left: 80%;
         text-decoration: none; 
-        font-size: 32px;
-        margin-top: 10%;
+        font-size: 40px;
+    }
+    .trash{
+        color: white;
+        cursor: pointer;
+        margin-top: 3px;
+        margin-left: 4%;
+        text-decoration: none; 
+        font-size: 36px;
     }
     .section2{
-        height: 918.7px;
+        height: 888.7px;
     }
     .section2Container{
         display: flex;
@@ -617,7 +673,7 @@
         color: rgba(0, 0, 255, 0.828);
     }
     .innerSectionStart{
-        margin-top: 5px;
+        margin-top: 10px;
         text-align: center;
          margin-left: 55px;
     }
@@ -686,8 +742,8 @@
         margin: 5px;
     }
     .media-group-container{
-        height: 240px; 
-        width: 180px;
+        height: 270px; 
+        width: 200px;
         background-color: rgba(255, 255, 255, 0.762);
         border-radius: 12.8px;
     }
@@ -695,7 +751,7 @@
         background-color: white;
         border-radius: 13px;
         height: 50px;
-        font-size:18px;
+        font-size:19px;
         text-align: center;
     }
     .media-group{
@@ -704,14 +760,14 @@
     .media-group > img {
         background-color: gray;
         border-radius: 12px;
-        width: 180px;
-        height: 170px;
+        width: 200px;
+        height: 200px;
         aspect-ratio: 16/9;
         object-fit: cover;
     }
     .section3-empty{
         background-color: rgba(128, 128, 128, 0);
-        height: 302px;
+        height: 312px;
         text-align: center;
     }
     
@@ -726,13 +782,28 @@
          height:100%;
          width: 100%;
     }
+    .desingIcon{
+        color: white;
+        height: 45px;
+        width: 100%;
+        font-family: cursive;
+        margin-top: 13px; 
+        display: flex;
+    }
     .newadded{ 
         color: white;
         cursor: pointer;
-        margin-left: 90%;
+        margin-left: 80%;
         text-decoration: none; 
-        font-size: 32px;
-        margin-top: 10%;
+        font-size: 40px;
+    }
+    .trash{
+        color: white;
+        cursor: pointer;
+        margin-top: 3px;
+        margin-left: 4%;
+        text-decoration: none; 
+        font-size: 36px;
     }
     .section2{
         height: 733px;
@@ -901,22 +972,37 @@
          height:100%;
          width: 100%;
     }
+    .desingIcon{
+        color: white;
+        height: 45px;
+        width: 100%;
+        font-family: cursive;
+        margin-top: 13px; 
+        display: flex;
+    }
     .newadded{ 
         color: white;
         cursor: pointer;
-        margin-left: 90%;
+        margin-left: 80%;
         text-decoration: none; 
-        font-size: 27px;
-        margin-top: 10%;
+        font-size: 35px;
+    }
+    .trash{
+        color: white;
+        cursor: pointer;
+        margin-top: 3px;
+        margin-left: 4%;
+        text-decoration: none; 
+        font-size: 31px;
     }
     .section2{
-        height: 595px;
+        height: 601px;
     }
     .section2Container{
         display: flex;
         flex-direction: row;
         animation: fadeInRight 2s;
-        margin-top: 116px;
+        margin-top: 100px;
     }
     .innerSection2{
         display: flex;
@@ -924,7 +1010,7 @@
     }
     .inner-innersection2{
         width: 280px;
-        height: 270px;
+        height: 265px;
         border: 2px solid white;
         border-radius: 12px;
         margin-top: -90px;
@@ -933,7 +1019,7 @@
     }
     .image{
         width: 280px;
-        height: 270px;
+        height: 265px;
         border-radius: 12px;
     }
     .innersection2H3{
@@ -949,7 +1035,7 @@
     }
     .innerSection2-3{
         width: 650px;
-        height: 240px;
+        height: 225px;
         border: 2px solid white;
         border-radius: 12px;
         margin-top: 260px;
@@ -1076,22 +1162,37 @@
          height:100%;
          width: 100%;
     }
+    .desingIcon{
+        color: white;
+        height: 45px;
+        width: 100%;
+        font-family: cursive;
+        margin-top: 13px; 
+        display: flex;
+    }
     .newadded{ 
         color: white;
         cursor: pointer;
-        margin-left: 90%;
+        margin-left: 80%;
         text-decoration: none; 
-        font-size: 27px;
-        margin-top: 10%;
+        font-size: 25px;
+    }
+    .trash{
+        color: white;
+        cursor: pointer;
+        margin-top: 3px;
+        margin-left: 4%;
+        text-decoration: none; 
+        font-size: 21px;
     }
     .section2{
-        height: 482px;
+        height: 448px;
     }
     .section2Container{
         display: flex;
         flex-direction: row;
         animation: fadeInRight 2s;
-        margin-top: 15px;
+        margin-top: 10px;
     }
     .innerSection2{
         display: flex;
@@ -1099,16 +1200,16 @@
     }
     .inner-innersection2{
         width: 170px;
-        height: 150px;
+        height: 160px;
         border: 2px solid white;
         border-radius: 12px;
-        margin-top: -60px;
+        margin-top: -30px;
         margin-left: 30%;
         background-color: gray;
     }
     .image{
         width: 170px;
-        height: 150px;
+        height: 160px;
         border-radius: 12px;
     }
     .innersection2H3{
@@ -1124,10 +1225,10 @@
     }
     .innerSection2-3{
         width: 450px;
-        height: 200px;
+        height: 180px;
         border: 2px solid white;
         border-radius: 12px;
-        margin-top: 110px;
+        margin-top: 145px;
         padding: 4px;
         margin-left: -155px;
         background-color: white;
@@ -1204,7 +1305,7 @@
         overflow: auto;
         overflow-y: hidden;
         margin-left: 5px;
-        margin-top: -60px;
+        /* margin-top: -40px; */
     }
     .scrollPlayers{
         display:grid;
@@ -1237,7 +1338,7 @@
     }
     .section3-empty{
         background-color: rgba(128, 128, 128, 0);
-        height: 250px;
+        height: 200px;
         text-align: center;
     }
  }

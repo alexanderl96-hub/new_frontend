@@ -133,9 +133,7 @@ const Desing = () => {
   return (
    <div className='MainDesing'>
         <Navbar />
-        <div style={{ color: 'white', height: '45px',width: '100%',
-    fontFamily: 'cursive', marginTop: '13px', display: 'flex'}}>
-          
+        <div className='desingIcon'>
            <Link to={`/teams/newMember/${teamId}`} id={teamId} className='newadded'> <FaUserPlus /></Link>
            <Link to={`/`} id={teamId} className='trash' onClick={handleDelete}> <FaTrash /></Link>
         </div>

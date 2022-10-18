@@ -249,30 +249,32 @@ useEffect(() => {
                                             <div>SB</div>
                                             <div>AVG</div>
                                         </div>
-                                        { teamId  ? 
-                                                    <div className = 'statsPlayerMap'> 
-                                                    {  teamId.map((stat, index)=>{
-                                                        return(
-                                                            <div>
-                                                                {Number(memberId) === stat.players_id ?  
-                                                                    <div className='about-inner1'>
-                                                                        <div className='game-inner'>{stat.game_date} {stat.game}</div>
-                                                                        <div className= 'gameInnerPoint'>{stat.ab >= 0 ? stat.ab : '-'}</div>
-                                                                        <div className= 'gameInnerPoint'>{stat.r >= 0 ? stat.r : '-'}</div>
-                                                                        <div className= 'gameInnerPoint'>{stat.h >= 0 ? stat.h : '-'}</div>
-                                                                        <div className= 'gameInnerPoint'>{stat.rb >= 0 ? stat.rb : '-'}</div>
-                                                                        <div className= 'gameInnerPoint'>{stat.bb >= 0 ? stat.bb : '-'}</div>
-                                                                        <div className= 'gameInnerPoint'>{stat.so  >= 0 ? stat.so : '-'}</div>
-                                                                        <div className= 'gameInnerPoint'>{stat.hr >= 0 ? stat.hr : '-'}</div>
-                                                                        <div className= 'gameInnerPoint'>{stat.sb  >= 0 ? stat.sb : '-'}</div>
-                                                                        <div className= 'gameInnerPoint'>{stat.average  >= 0 ? stat.average : '-'}</div>
-                                                                    </div>
-                                                                   
-                                                            : null}
-                                                        </div>
-                                                        )
-                                                    })}  
-                                            </div> : null }
+                                        <div>
+                                            { teamId  ? 
+                                                        <div className = 'statsPlayerMap'> 
+                                                        {  teamId.map((stat, index)=>{
+                                                            return(
+                                                                <div>
+                                                                    {Number(memberId) === stat.players_id ?  
+                                                                        <div className='about-inner1'>
+                                                                            <div className='game-inner'>{stat.game_date} {stat.game}</div>
+                                                                            <div className= 'gameInnerPoint'>{stat.ab >= 0 ? stat.ab : '-'}</div>
+                                                                            <div className= 'gameInnerPoint'>{stat.r >= 0 ? stat.r : '-'}</div>
+                                                                            <div className= 'gameInnerPoint'>{stat.h >= 0 ? stat.h : '-'}</div>
+                                                                            <div className= 'gameInnerPoint'>{stat.rb >= 0 ? stat.rb : '-'}</div>
+                                                                            <div className= 'gameInnerPoint'>{stat.bb >= 0 ? stat.bb : '-'}</div>
+                                                                            <div className= 'gameInnerPoint'>{stat.so  >= 0 ? stat.so : '-'}</div>
+                                                                            <div className= 'gameInnerPoint'>{stat.hr >= 0 ? stat.hr : '-'}</div>
+                                                                            <div className= 'gameInnerPoint'>{stat.sb  >= 0 ? stat.sb : '-'}</div>
+                                                                            <div className= 'gameInnerPoint'>{stat.average  >= 0 ? stat.average : '-'}</div>
+                                                                        </div>
+                                                                    
+                                                                : null}
+                                                            </div>
+                                                            )
+                                                        })}  
+                                                </div> : null }
+                                        </div>
                                     </div>
                             </div>
                              
@@ -401,8 +403,8 @@ useEffect(() => {
                                                                         <div className= 'gameInnerPoint2'>{careerP.career_era >= 0 ? careerP.career_era : '-'}</div>
                                                                     </div>
                                                                    
-                                                            : null}
-                                                        </div>
+                                                                : null}
+                                                            </div>
                                                         )
                                                     })}  
                                             </div> : null }                                          
