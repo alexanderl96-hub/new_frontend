@@ -177,13 +177,13 @@ useEffect(() => {
 //     })
 //   },[memberId])
 
- console.log(teamId, group)
+ console.log(teamId, group, memberImg2)
   return (
       <div  className='MainMember'>
             <Navbar />
             {/* style={{backgroundImage: `url(${memberImg2})`}}     */}
-          <div className='divTop'>
-              {/* <img src={memberImg2} alt='alt' className='divTop-ImgBackground'> </img> */}
+          <div className='divTop' style={{backgroundImage: `url(${memberImg2})`}} >
+              {/* <img src={memberImg2} alt='alt' className='divTop-ImgBackground'>  */}
                <div className='divTop-inner'>Member
                      {/* <img src={FaEdit} alt='edit' /> */}
                      <Link to={`/teams/updateMember/${memberId}`} className='divEdit3'> <FaUserEdit /></Link>
@@ -193,7 +193,7 @@ useEffect(() => {
                <img src={memberImg} alt='1'  />
                <h2>{memberName} {memberNumber ? `# ${memberNumber}`: ''}</h2>
                <h3>{memberTeam} | {memberPosition} | Age: {memberAge}</h3>
-              
+              {/* </img> */}
           </div>
          
           <div className='divMedium'>
