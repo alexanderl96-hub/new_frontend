@@ -176,8 +176,8 @@ console.log(classT)
                                 <input id='nickname'type="text" onChange={handleInput} value={newMember.nickname} placeholder="Nickname..." className='inputNew' ></input>
                                 <input id='imag' type="text" onChange={handleInput}  value={newMember.imag} placeholder="Url..." className='inputNew' ></input>
                                 <input id='born' type="text" onChange={handleInput} value={newMember.born} placeholder="Months day, year" className='inputNew' ></input>
-                                <input id='state' type="text" onChange={handleInput} value={newMember.state} placeholder="City..." className='inputNew' ></input>
-                                <input id='city' type="text" onChange={handleInput} value={newMember.city} placeholder="State..."  className='inputNew' ></input>
+                                <input id='city' type="text" onChange={handleInput} value={newMember.city} placeholder="City..."  className='inputNew' ></input>
+                                <input id='state' type="text" onChange={handleInput} value={newMember.state} placeholder="State..." className='inputNew' ></input>
                                 <input id='country' type="text" onChange={handleInput} value={newMember.country} placeholder="Country..." className='inputNew' ></input>
                                 <input id='age' type="text" onChange={handleInput} value={ newMember.age} placeholder={ currentAge(age)} className='inputNew'></input>
                                 <input id='height' type="text" onChange={handleInput} value={newMember.height} placeholder="Height..."  className='inputNew' ></input>
