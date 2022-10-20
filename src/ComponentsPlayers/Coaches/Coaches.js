@@ -37,7 +37,7 @@ const Coaches = () => {
 
     useEffect(() =>{
         let namecoach = search.name
-        fetch(`https://my-baseball-teams.herokuapp.com/groups`)
+        fetch(`https://my-baseball-teams.adaptable.app/groups`)
         .then(res => res.json())
         .then(data => {
             setCoach(data = data.filter(element => element.position.includes('Team')));

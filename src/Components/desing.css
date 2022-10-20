@@ -150,11 +150,12 @@
     display:grid;
     grid-auto-flow: column;
     margin-bottom: 15px;
+    
 }
 .media-group-container{
     height: 230px; 
     width: 180px;
-    background-color: rgba(255, 255, 255, 0.762);
+    background-color: white;
     border-radius: 12.8px;
 }
 .media-group-container:hover{
@@ -172,9 +173,11 @@
 .media-group{
     grid-auto-columns: 1fr;
    
+   
 }
 .media-group > img {
-    background-color: gray;
+    background-color: white;
+    border-bottom-style: solid ;
     border-radius: 12px;
     width: 180px;
     height: 160px;

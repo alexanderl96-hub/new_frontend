@@ -29,36 +29,36 @@
 .navCoach > .divMatch >.divMatchAll{
     height: 22px;
     font-size: 17px;
-    background-color: gray;
-    color: white;
+    background-color: white;
+    color: black;
     padding-top:5px;
-    width: 90px;
+    width: 100px;
      border-radius: 10px; 
-     padding:1px; 
+     padding:2px;  
      text-align: center;
      margin-left: 450px;
 }
 .navCoach > .divMatch >.divMatchPart{
     height: 22px;
     font-size: 17px;
-    background-color: gray;
-    color: white;
+    background-color: white;
+    color: black;
     padding-top:5px;
-    width: 105px;
+    width: 100px;
      border-radius: 10px; 
-     padding:1px; 
+     padding:2px; 
      text-align: center;
      margin-left: 450px;
 }
 .navCoach > .divMatch >.divMatchNone{
     height: 22px;
     font-size: 17px;
-    background-color: gray;
-    color: white;
+    background-color: white;
+    color: black;
     padding-top:5px;
-    width: 105px;
+    width: 100px;
      border-radius: 10px; 
-     padding:1px; 
+     padding:2px;  
      text-align: center;
      margin-left: 450px;
 }
@@ -74,7 +74,6 @@
     margin-top: 3px; 
 }
 .playDivCoach{
-    background-color: rgb(168, 163, 163); 
     width: 170px; 
     height: 195px;
     color: white; 
@@ -83,11 +82,13 @@
     padding: 10px; 
     border: 1px solid;
     box-shadow: 3px 4px 2px black;
+    background: linear-gradient(#4256ec, #17193a);
+
 }
 .playDivCoach:hover{
     color: black;
     border: 1px solid;
-    background-color: white; 
+    background: white; 
     cursor:pointer;
     transform: scale(1)
 }
@@ -111,7 +112,6 @@
 .child2{
     margin-top: -12px;
     font-size: 14px;
-    color: black;
 }
 
 @-webkit-keyframes turn {

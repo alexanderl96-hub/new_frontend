@@ -30,22 +30,24 @@
 .navPlay > .divMatch >.divMatchAll{
   height: 22px;
   font-size: 17px;
-    background-color: red;
-    color: white;
+    background-color: white;
+    color: black;
     padding-top:5px;
-    width: 90px;
+    width: 100px;
      border-radius: 10px; 
-     padding:1px; 
+     padding:2px; 
      text-align: center;
      margin-left: 450px;
 }
 .navPlay > .divMatch >.divMatchPart{
     height: 22px;
     font-size: 17px;
-    background-color: red;
-    color: white;
+    background-color: white;
+    color: black;
     padding-top:5px;
-    width: 105px;
+    width: 100px;
+     border-radius: 10px; 
+     padding:2px; 
      border-radius: 10px; 
      padding:1px; 
      text-align: center;
@@ -54,12 +56,12 @@
 .navPlay > .divMatch >.divMatchNone{
     height: 22px;
     font-size: 17px;
-    background-color: red;
-    color: white;
+    background-color: white;
+    color: black;
     padding-top:5px;
-    width: 105px;
+    width: 100px;
      border-radius: 10px; 
-     padding:1px; 
+     padding:2px; 
      text-align: center;
      margin-left: 450px;
 }
@@ -75,7 +77,6 @@
    
 }
 .playDivCont{
-    background-color: red; 
     width: 170px; 
     height: 195px;
     color: white; 
@@ -84,11 +85,12 @@
     padding: 10px; 
     border: 1px solid;
     box-shadow: 3px 4px 2px black;
+    background: linear-gradient(#4256ec, #17193a);
 }
 .playDivCont:hover{
     color: black;
     border: 1px solid;
-    background-color: white; 
+    background: white; 
     cursor:pointer;
     transform: scale(1)
 }
@@ -111,7 +113,6 @@
 .child2{
   margin-top: -12px;
   font-size: 14px;
-  color: black;
 }
 
 
@@ -201,8 +202,8 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    color: black;
-    background-color: rgba(255, 0, 0, 0.346);
+    color: white;
+    background-color: rgba(115, 113, 113, 0.27);
   }
   .container .carousel .slide:nth-child(1) {
     -webkit-transform: rotateY(0deg) translateZ(196px);
@@ -562,6 +563,7 @@
     padding: 10px; 
     border: 1px solid;
     box-shadow: 3px 4px 2px black;
+   
   }
   .playDivCont > img {
     width: 70px; 
