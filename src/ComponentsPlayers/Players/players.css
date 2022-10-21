@@ -66,7 +66,7 @@
      margin-left: 450px;
 }
 .payContent2{
-  margin-left: 200px;
+  margin-left: 180px;
   margin-right: 100px;
 }
 .payContent2 > .payContentReturn{
@@ -86,6 +86,7 @@
     border: 1px solid;
     box-shadow: 3px 4px 2px black;
     background: linear-gradient(#4256ec, #17193a);
+    margin: 5px;
 }
 .playDivCont:hover{
     color: black;
