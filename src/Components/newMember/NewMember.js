@@ -8,6 +8,7 @@ const NewMember = () => {
     const navigate = useNavigate();
     let { id } = useParams();
     const [group, setGroup] = useState([]);
+    const [kg, setKG] = useState([]);
     const date = new Date();
     const year = date.getFullYear()
     const month = date.getMonth()+1
@@ -45,6 +46,7 @@ const NewMember = () => {
     const handleInput = (e) =>{
         const {value} = e.target
         setMember({...newMember, [e.target.id]: value})
+         
       }
     
       const handleSubmit = (e) =>{
@@ -161,8 +163,43 @@ const NewMember = () => {
 //         setGroup(data.team)
 //     })
 // },[id, classT])
+const educationLen = (about) => {
+  let pro = [];
+  let i = 0
+  let str = about.split(" ");
+  while(i < str.length){
+     pro.push(str[i])
+     i++
+  }
+return pro.length <= 5 ?  pro.join(' ') : pro.slice(0, 7).join(' ') + ' '+"..." 
+};
 
-console.log(classT)
+const aboutLength = (about) => {
+  let pro = [];
+  let i = 0
+  let str = about.split(" ");
+  while(i < str.length ){
+     pro.push(str[i])
+     i++
+  }
+  return pro.length <= 31 ?  pro.join(' ') : pro.slice(0, 32).join(' ') + ' '+"..."
+};
+
+// let str = newMember.weight
+
+function convertInKG(str){
+  let convert = Number(str.slice(0, -4))/2.205
+  return   convert.toString()[2] === '.' ? 
+   Number(convert.toString().split('').slice(0, 4).join('')) : 
+    Number(convert.toString().split('').slice(0, 5).join(''))
+}
+
+function convertFootInCm (height){
+  let change = height[0] + '.' + height.slice(2)
+  return String(Number(change)*30.48).slice(0, 5)
+}
+
+console.log(classT, )
   return (
     <div className='newMember_Container'>
         <Navbar />
@@ -181,7 +218,7 @@ console.log(classT)
                                 <input id='country' type="text" onChange={handleInput} value={newMember.country} placeholder="Country..." className='inputNew' ></input>
                                 <input id='age' type="text" onChange={handleInput} value={ newMember.age} placeholder={ currentAge(age)} className='inputNew'></input>
                                 <input id='height' type="text" onChange={handleInput} value={newMember.height} placeholder="Height..."  className='inputNew' ></input>
-                                <input id='weight' type="text" onChange={handleInput} value={newMember.weight} placeholder="Weight..." className='inputNew' ></input>
+                                <input id='weight' type="text" onChange={handleInput} value={newMember.weight}  placeholder="Weight..."  className='inputNew' ></input>
                                 <input id='current_team' type="text" onChange={handleInput} value={newMember.current_team} placeholder={group.name} className='inputNew' ></input>
                                 <input id='salary' type="text" onChange={handleInput} value={newMember.salary} placeholder="Salary..." className='inputNew' ></input>
                                 <buttom type='submit' className='newMemberButton' onClick={ newMember.name === ''  ?  handleDelete : handleSubmit } >{classT === 'intoFade' ? 'Refresh' : 'Add New'}</buttom>
@@ -219,27 +256,27 @@ console.log(classT)
                                             <h5>{newMember.country}</h5>
                                      </div>
                                      <div className='div3'>
-                                        <p>{newMember.about}</p>
+                                        <p>{aboutLength(newMember.about)}</p>
                                      </div>
 
                                      <div className='div4'>
-                                            <h5><span>Spouse:</span> {newMember.spouse}</h5>
-                                            <h5><span>Parents:</span> {newMember.parents}</h5>
-                                            <h5><span>Siblings:</span> {newMember.siblings}</h5>
-                                            <h5><span>Children:</span> {newMember.children}</h5>
-                                            <h5><span>Education:</span> {newMember.education}</h5>
+                                            <h5><span>Spouse:</span> {educationLen(newMember.spouse)}</h5>
+                                            <h5><span>Parents:</span> {educationLen(newMember.parents)}</h5>
+                                            <h5><span>Siblings:</span> {educationLen(newMember.siblings)}</h5>
+                                            <h5><span>Children:</span> {educationLen(newMember.children)}</h5>
+                                            <h5><span>Education:</span> {educationLen(newMember.education)}</h5>
                                      </div>
                                      <div className='div5'>
                                             <h5><span>Nickname:</span> {newMember.nickname}</h5>
                                             <h5><span>Age:</span> {currentAge(age) ? currentAge(age) : ''}</h5>
-                                            <h5><span>Height:</span> {newMember.height}</h5>
-                                            <h5><span>Weight:</span> {newMember.weight}</h5>
+                                            <h5><span>Height:</span> {newMember.height ? newMember.height + ", ("+ convertFootInCm(newMember.height)+"cm)" : ''}</h5>
+                                            <h5><span>Weight:</span> {newMember.weight ? newMember.weight + " ("+convertInKG(newMember.weight)+"kg)" : ''}</h5>
                                             <h5><span>Salary:</span> {newMember.salary}</h5>
                                      </div>
                                      <div className='div6'>
                                            <h5><span>Team:</span> {newMember.current_team} {newMember.team_id}</h5>
                                             <h5><span>Number: #</span> {newMember.number}</h5>
-                                            <h5><span>Position:</span> {newMember.position}</h5>
+                                            <h5><span>Position:</span> {educationLen(newMember.position)}</h5>
                                             <h5><span>Bats:</span> {newMember.bats}</h5>
                                             <h5><span>Throws:</span> {newMember.throws}</h5>
                                      </div>

@@ -16,6 +16,8 @@
     margin-left: 180px;
     margin-right:180px;
     margin-top:0.5px;
+    /* aspect-ratio: 21/3; */
+    object-fit: cover;
     /* background-image: url('https://images2.minutemediacdn.com/image/fetch/w_1046,h_485,c_fill,g_auto,f_auto/https%3A%2F%2Fnolanwritin.com%2Fwp-content%2Fuploads%2Fimagn-images%2F2017%2F07%2F17949891-850x560.jpeg'); */
 }
 .divTop-ImgBackground{

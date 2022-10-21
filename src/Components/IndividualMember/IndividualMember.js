@@ -163,6 +163,19 @@ useEffect(() => {
 },[memberId])
 
 
+function convertInKG(str){
+    let convert = Number(str.slice(0, -4))/2.205
+    return   convert.toString()[2] === '.' ? 
+     Number(convert.toString().split('').slice(0, 4).join('')) : 
+      Number(convert.toString().split('').slice(0, 5).join(''))
+  
+  }
+
+  function convertFootInCm (height){
+    let change = height[0] + '.' + height.slice(2)
+    return String(Number(change)*30.48).slice(0, 5)
+  }
+
 // useEffect(() => {
 //     fetch(`http://localhost:9000/groups/${memberId}`)
 //     .then(res => res.json())
@@ -224,8 +237,8 @@ useEffect(() => {
                                     <div className="team_About3">         
                                         <div className='class1'> <span>Bats:</span> <p>{player.bats ? player.bats : '-'}</p></div>
                                         <div className='class2'> <span>Throws:</span> <p>{player.bats ? player.bats : '-'}</p></div>
-                                        <div className='class3'> <span>Height:</span><p>{player.height ? player.height : '-'}</p> </div>
-                                        <div className='class4'> <span>Weight: </span> <p>{player.weight ? player.weight : '-'}</p></div>
+                                        <div className='class3'> <span>Height:</span><p>{player.height  &&  player.height !== 'unknown' ? player.height + ", ("+ convertFootInCm(player.height)+"cm)" : '-'}</p> </div>
+                                        <div className='class4'> <span>Weight: </span> <p>{player.weight && player.weight !== 'unknown' ? player.weight  + ", ("+convertInKG(player.weight)+"kg)" : '-'}</p></div>
                                         <div className='class5'> <span>Salary:</span><p>{player?.salary ? player.salary : '-'}</p> </div>
                                     </div>
                             </div>
