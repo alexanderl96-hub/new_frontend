@@ -165,10 +165,7 @@ useEffect(() => {
 
 function convertInKG(str){
     let convert = Number(str.slice(0, -4))/2.205
-    return   convert.toString()[2] === '.' ? 
-     Number(convert.toString().split('').slice(0, 4).join('')) : 
-      Number(convert.toString().split('').slice(0, 5).join(''))
-  
+    return Number(convert.toFixed(1))
   }
 
   function convertFootInCm (height){
