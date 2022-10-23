@@ -90,7 +90,8 @@ useEffect(() => {
     fetch(`https://my-baseball-teams.adaptable.app/playersStats`)
     .then(res => res.json())
     .then(data =>{
-        setTeamID(data)
+        setTeamID(data.filter(a=> a.players_id === Number(memberId)))
+        // data.filter(a=> a.includes)
     })
 },[])
 // useEffect(() => {
@@ -187,7 +188,11 @@ function convertInKG(str){
 //     })
 //   },[memberId])
 
- console.log(teamId, group, memberImg2)
+
+//  console.log(teamId.filter(a=> a.players_id  === Number(memberId) ).sort(), 'sortPlayer')
+//  console.log(teamCareerId.filter(a=> a.players_id  === Number(memberId) ), 'sortPitcher')
+//  console.log(pitcherId.filter(a=> a.players_id  === Number(memberId)), 'sortPitcher')
+//  console.log(pitcherCareerId.filter(a=> a.pitcher_id  === Number(memberId)), 'sortPitcher')
   return (
       <div  className='MainMember'>
             <Navbar />
@@ -265,7 +270,7 @@ function convertInKG(str){
                                                         {  teamId.map((stat, index)=>{
                                                             return(
                                                                 <div>
-                                                                    {Number(memberId) === stat.players_id ?  
+                                                                    {stat.players_id ?  
                                                                         <div className='about-inner1'>
                                                                             <div className='game-inner'>{stat.game_date} {stat.game}</div>
                                                                             <div className= 'gameInnerPoint'>{stat.ab >= 0 ? stat.ab : '-'}</div>

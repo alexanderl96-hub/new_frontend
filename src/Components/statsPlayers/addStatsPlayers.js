@@ -186,7 +186,7 @@ const AddStatsPlayers = () => {
 //       })
 //   }
 
-
+console.log(statPitcher, 'check')
   return (
     <div className='StasContainer'>
         <Navbar />
@@ -249,7 +249,7 @@ const AddStatsPlayers = () => {
             <div className='PlayersSats2'>
                 <h3>Pitcher Stats</h3>
                 <form onSubmit={handleSubmit3}>
-                        <input id='players_id' type="number"onChange={handleInput3}  placeholder={memberId}/>
+                        <input id='players_id' type="number" onChange={handleInput3}  placeholder={memberId}/>
                         <input id='game' type="text" onChange={handleInput3} placeholder="game"/>
                         <input id='game_date' type="text" onChange={handleInput3} placeholder="game_date"/>
                         <input id='ip' type="number" onChange={handleInput3} placeholder="ip"/>

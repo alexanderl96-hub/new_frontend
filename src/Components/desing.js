@@ -169,7 +169,7 @@ const Desing = () => {
                               edit={false}
                               size={30}
                               isHalf={true}
-                              onChange={0.300}
+                              onChange={ratingChanged(ab)}
                               /> 
                            </div>
                        </div>

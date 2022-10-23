@@ -76,6 +76,10 @@
     background-color: white;
     text-align: justify;
 }
+.innerSection2-3 > p span{
+    font-weight: bold;
+
+}
 .innerSection2-3 > p{
     margin: 3px;
 }
