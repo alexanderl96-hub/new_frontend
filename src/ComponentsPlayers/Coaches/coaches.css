@@ -64,14 +64,13 @@
 }
 
 .payContent2{
-    margin-left: 175px;
-    margin-right: 100px;
+  margin: 3.5%
 }
 .payContent2 > .payContCoach {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-top: 3px; 
+    margin-left: 19px; 
 }
 .playDivCoach{
     width: 170px; 
@@ -79,7 +78,7 @@
     color: white; 
     display: flex;
     flex-wrap: wrap;
-    padding: 10px; 
+    padding: 13px; 
     border: 1px solid;
     box-shadow: 3px 4px 2px black;
     background: linear-gradient(#4256ec, #17193a);
@@ -98,6 +97,7 @@
     height: 100px;
     border: 1px solid; 
     border-radius: 10px;
+    background: white;
 }
 .playDivCoach > h3 {
     font-size: 13px;
@@ -257,12 +257,12 @@
    .navCoach > h1{
     color: white;
     font-family: cursive;
-    margin-top: 1px;
+    margin-top: 8px;
     font-size: 20px;
     margin-left: 4%;
    }
    .navCoach > .divForm{
-    margin-top: 7px;
+    margin-top: 9px;
    }
    .divForm > form input{
     margin-left: 80%;
@@ -270,63 +270,59 @@
     width: 400px;
    }
    .navCoach > .divMatch{
-    margin-top: 8px;
-    margin-left: 17%;
+    margin-top: 13px;
+    margin-left: 10%;
    }
    .navCoach > .divMatch >.divMatchAll{
     height: 19px;
     font-size: 14px;
     background-color: gray;
     color: white;
-    padding-top:5px;
-    width: 85px;
+    padding:1px;
+    width: 90px;
      border-radius: 10px; 
-     padding:1px; 
      text-align: center;
-     margin-left: 410px;
+     margin-left: 400px;
    }
    .navCoach > .divMatch >.divMatchPart{
       height: 19px;
       font-size: 14px;
       background-color: gray;
       color: white;
-      padding-top:5px;
-      width: 70px;
+      padding:1px;
+      width: 90px;
       border-radius: 10px; 
-      padding:1px; 
       text-align: center;
-      margin-left: 410px;
+      margin-left: 400px;
    }
    .navCoach > .divMatch >.divMatchNone{
     height: 19px;
     font-size: 13px;
     background-color: gray;
     color: white;
-    padding-top:5px;
-    width: 70px;
+    padding:1px;
+    width: 90px;
     border-radius: 10px; 
-    padding:1px; 
     text-align: center;
-    margin-left: 410px;
+    margin-left: 400px;
    }
    .payContent2{
-      margin-left: 9.2%;
-      margin-right: 8%;
+      margin: 4%;
     }
     .payContent2 > .payContCoach {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      margin-top: 5px; 
+      margin-left: 5px; 
       }
     .playDivCoach{
         background-color: rgb(168, 163, 163); 
-        width: 150px; 
+        width: 155px; 
         height: 190px;
         color: white; 
         display: flex;
         flex-wrap: wrap;
-        padding: 10px; 
+        padding: 13px; 
         border: 1px solid;
         box-shadow: 3px 4px 2px black;
     }
@@ -362,7 +358,7 @@
     }
     .container2 .carousel2 {
       position: absolute;
-      left: 42%;
+      left: 48%;
       top: 50%;
       width: 100px;
       height: 27px;
@@ -495,12 +491,12 @@ transform: rotateY(308.5714285714deg) translateZ(196px);
    .navCoach > h1{
     color: white;
     font-family: cursive;
-    margin-top: 2px;
+    margin-top: 5px;
     font-size: 20px;
     margin-left: 4%;
    }
    .navCoach > .divForm{
-    margin-top: 6px;
+    margin-top: 8.5px;
    }
    .divForm > form input{
     margin-left: 75%;
@@ -508,54 +504,50 @@ transform: rotateY(308.5714285714deg) translateZ(196px);
     width: 320px;
    }
    .navCoach > .divMatch{
-    margin-top: 9px;
-    margin-left: 8%;
+    margin-top: 12px;
+    margin-left: 4%;
    }
    .navCoach > .divMatch >.divMatchAll{
     height: 19px;
     font-size: 14px;
     background-color: gray;
     color: white;
-    padding-top:5px;
-    width: 85px;
-     border-radius: 10px; 
-     padding:1px; 
+    padding:1px;
+    width: 90px;
+     border-radius: 10px;  
      text-align: center;
-     margin-left: 410px;
+     margin-left: 330px;
    }
    .navCoach > .divMatch >.divMatchPart{
       height: 19px;
       font-size: 14px;
       background-color: gray;
       color: white;
-      padding-top:5px;
-      width: 70px;
+      padding:1px;
+      width: 90px;
       border-radius: 10px; 
-      padding:1px; 
       text-align: center;
-      margin-left: 410px;
+      margin-left: 330px;
    }
    .navCoach > .divMatch >.divMatchNone{
     height: 19px;
     font-size: 13px;
     background-color: gray;
     color: white;
-    padding-top:5px;
-    width: 70px;
-    border-radius: 10px; 
-    padding:1px; 
+    padding:1px;
+    width: 90px;
+    border-radius: 10px;  
     text-align: center;
-    margin-left: 410px;
+    margin-left: 330px;
    }
    .payContent2{
-      margin-left: 5.4%;
-      margin-right: 5%;
+      margin: 1%;
     }
     .payContent2 > .payContCoach {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      margin-top: 5px; 
+      margin-left: 2.7px; 
       }
     .playDivCoach{
         background-color: rgb(168, 163, 163); 
@@ -564,7 +556,7 @@ transform: rotateY(308.5714285714deg) translateZ(196px);
         color: white; 
         display: flex;
         flex-wrap: wrap;
-        padding: 10px; 
+        padding: 13px; 
         border: 1px solid;
         box-shadow: 3px 4px 2px black;
     }
@@ -600,7 +592,7 @@ transform: rotateY(308.5714285714deg) translateZ(196px);
     }
     .container2 .carousel2 {
       position: absolute;
-      left: 45%;
+      left: 48.5%;
       top: 45%;
       width: 100px;
       height: 27px;
@@ -618,9 +610,9 @@ transform: rotateY(308.5714285714deg) translateZ(196px);
     margin-top: 80px;
     position: absolute;
     width: 100px;
-    height: 80px;
+    height: 60px;
     border-radius: 8px;
-    font-size: 20px;
+    font-size: 18px;
     box-shadow: 0 0 4px 1px #fff;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -733,7 +725,7 @@ transform: rotateY(308.5714285714deg) translateZ(196px);
    .navCoach > h1{
     color: white;
     font-family: cursive;
-    margin-top: 4px;
+    margin-top: 5px;
     font-size: 24px;
     margin-left: 4%;
    }
@@ -754,46 +746,42 @@ transform: rotateY(308.5714285714deg) translateZ(196px);
     font-size: 14px;
     background-color: gray;
     color: white;
-    padding-top:5px;
-    width: 85px;
-     border-radius: 10px; 
-     padding:1px; 
+    padding:1px;
+    width: 90px;
+     border-radius: 10px;  
      text-align: center;
-     margin-left: 410px;
+     margin-left: 330px;
    }
    .navCoach > .divMatch >.divMatchPart{
       height: 19px;
       font-size: 14px;
       background-color: gray;
       color: white;
-      padding-top:5px;
-      width: 70px;
-      border-radius: 10px; 
-      padding:1px; 
+      padding:1px;
+      width: 90px;
+      border-radius: 10px;  
       text-align: center;
-      margin-left: 410px;
+      margin-left: 330px;
    }
    .navCoach > .divMatch >.divMatchNone{
     height: 19px;
-    font-size: 13px;
+    font-size: 14px;
     background-color: gray;
     color: white;
-    padding-top:5px;
-    width: 70px;
+    padding:1px;
+    width: 90px;
     border-radius: 10px; 
-    padding:1px; 
     text-align: center;
-    margin-left: 410px;
+    margin-left: 330px;
    }
    .payContent2{
-      margin-left: 5.4%;
-      margin-right: 5%;
+      margin: 1.7%;
     }
     .payContent2 > .payContCoach {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      margin-top: 7px; 
+      margin-left: 1.4px; 
       }
     .playDivCoach{
         background-color: rgb(168, 163, 163); 
@@ -802,7 +790,7 @@ transform: rotateY(308.5714285714deg) translateZ(196px);
         color: white; 
         display: flex;
         flex-wrap: wrap;
-        padding: 10px; 
+        padding: 13px; 
         border: 1px solid;
         box-shadow: 3px 4px 2px black;
     }
@@ -838,7 +826,7 @@ transform: rotateY(308.5714285714deg) translateZ(196px);
     }
     .container2 .carousel2 {
       position: absolute;
-      left: 43.5%;
+      left: 48%;
       top: 45%;
       width: 100px;
       height: 27px;
@@ -971,12 +959,12 @@ transform: rotateY(308.5714285714deg) translateZ(196px);
    .navCoach > h1{
     color: white;
     font-family: cursive;
-    margin-top: 4px;
-    font-size: 26px;
+    margin-top: 6px;
+    font-size: 24px;
     margin-left: 4%;
    }
    .navCoach > .divForm{
-    margin-top: 13px;
+    margin-top: 14px;
    }
    .divForm > form input{
     margin-left: 45%;
@@ -985,53 +973,49 @@ transform: rotateY(308.5714285714deg) translateZ(196px);
    }
    .navCoach > .divMatch{
     margin-top: 18px;
-    margin-left: -17%;
+    margin-left: -12%;
    }
    .navCoach > .divMatch >.divMatchAll{
     height: 20px;
     font-size: 16px;
     background-color: gray;
     color: white;
-    padding-top:5px;
+    padding:1px;
     width: 95px;
      border-radius: 10px; 
-     padding:1px; 
      text-align: center;
-     margin-left: 400px;
+     margin-left: 330px;
    }
    .navCoach > .divMatch >.divMatchPart{
       height: 20px;
       font-size: 16px;
       background-color: gray;
       color: white;
-      padding-top:5px;
+      padding:1px;
       width: 95px;
-      border-radius: 10px; 
-      padding:1px; 
+      border-radius: 10px;  
       text-align: center;
-      margin-left: 410px;
+      margin-left: 330px;
    }
    .navCoach > .divMatch >.divMatchNone{
-    height: 19px;
+    height: 20px;
     font-size: 13px;
     background-color: gray;
     color: white;
-    padding-top:5px;
+    padding:1px;
     width: 85px;
     border-radius: 10px; 
-    padding:1px; 
     text-align: center;
-    margin-left: 410px;
+    margin-left: 330px;
    }
    .payContent2{
-      margin-left: 12.6%;
-      margin-right: 6%;
+      margin: 4%;
     }
     .payContent2 > .payContCoach {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      margin-top: 7px; 
+      margin-left: 45px; 
       }
     .playDivCoach{
         background-color: rgb(168, 163, 163); 
@@ -1040,7 +1024,7 @@ transform: rotateY(308.5714285714deg) translateZ(196px);
         color: white; 
         display: flex;
         flex-wrap: wrap;
-        padding: 10px; 
+        padding: 13px; 
         border: 1px solid;
         box-shadow: 3px 4px 2px black;
     }
@@ -1076,7 +1060,7 @@ transform: rotateY(308.5714285714deg) translateZ(196px);
     }
     .container2 .carousel2 {
       position: absolute;
-      left: 40%;
+      left: 49%;
       top: 45%;
       width: 100px;
       height: 27px;
@@ -1201,7 +1185,7 @@ transform: rotateY(308.5714285714deg) translateZ(196px);
       margin:0;
     }
     .navCoach{
-      height: 55px;
+      height: 50px;
       background-color: rgb(46, 38, 102);
       display: flex;
       flex-direction: row;
@@ -1210,7 +1194,7 @@ transform: rotateY(308.5714285714deg) translateZ(196px);
       color: white;
       font-family: cursive;
       margin-top: 8px;
-      font-size: 24px;
+      font-size: 23px;
       margin-left: 4%;
      }
      .navCoach > .divForm{
@@ -1220,56 +1204,53 @@ transform: rotateY(308.5714285714deg) translateZ(196px);
       margin-left: 40%;
       padding: 2px;
       width: 290px;
+      font-size: 17px;
      }
      .navCoach > .divMatch{
       margin-top: 18px;
-      margin-left: -25%;
+      margin-left: -15%;
      }
      .navCoach > .divMatch >.divMatchAll{
       height: 20px;
       font-size: 16px;
       background-color: gray;
       color: white;
-      padding-top:5px;
+      padding:1px;
       width: 95px;
        border-radius: 10px; 
-       padding:1px; 
        text-align: center;
-       margin-left: 400px;
+       margin-left: 320px;
      }
      .navCoach > .divMatch >.divMatchPart{
         height: 20px;
         font-size: 16px;
         background-color: gray;
         color: white;
-        padding-top:5px;
+        padding:1px;
         width: 95px;
         border-radius: 10px; 
-        padding:1px; 
         text-align: center;
-        margin-left: 410px;
+        margin-left: 320px;
      }
      .navCoach > .divMatch >.divMatchNone{
-      height: 19px;
-      font-size: 13px;
+      height: 20px;
+      font-size: 16px;
       background-color: gray;
       color: white;
-      padding-top:5px;
-      width: 85px;
+      padding:1px;
+      width: 95px;
       border-radius: 10px; 
-      padding:1px; 
       text-align: center;
-      margin-left: 410px;
+      margin-left: 320px;
      }
      .payContent2{
-        margin-left: 9.7%;
-        margin-right: 6%;
+        margin: 4%;
       }
       .payContent2 > .payContCoach {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        margin-top: 7px; 
+        margin-left: 22px; 
         }
       .playDivCoach{
           background-color: rgb(168, 163, 163); 
@@ -1278,7 +1259,7 @@ transform: rotateY(308.5714285714deg) translateZ(196px);
           color: white; 
           display: flex;
           flex-wrap: wrap;
-          padding: 10px; 
+          padding: 13px; 
           border: 1px solid;
           box-shadow: 3px 4px 2px black;
       }
@@ -1314,7 +1295,7 @@ transform: rotateY(308.5714285714deg) translateZ(196px);
       }
       .container2 .carousel2 {
         position: absolute;
-        left: 40%;
+        left: 43%;
         top: 45%;
         width: 100px;
         height: 27px;
@@ -1447,8 +1428,8 @@ transform: rotateY(308.5714285714deg) translateZ(196px);
    .navCoach > h1{
     color: white;
     font-family: cursive;
-    margin-top: 5px;
-    font-size: 22px;
+    margin-top: 4px;
+    font-size: 20px;
     margin-left: 4%;
    }
    .navCoach > .divForm{
@@ -1456,67 +1437,64 @@ transform: rotateY(308.5714285714deg) translateZ(196px);
    }
    .divForm > form input{
     margin-left: 25%;
-    padding: 2px;
-    width: 220px;
+    padding: 1.6px;
+    width: 210px;
+    font-size: 15px;
    }
    .navCoach > .divMatch{
-    margin-top: 10px;
-    margin-left: -55%;
+    margin-top: 11px;
+    margin-left: -25%;
    }
    .navCoach > .divMatch >.divMatchAll{
-    height: 20px;
+    height: 19px;
     font-size: 14px;
     background-color: gray;
     color: white;
-    padding-top:5px;
-    width: 70px;
-     border-radius: 10px; 
-     padding:1px; 
+    padding:1px;
+    width: 75px;
+     border-radius: 10px;  
      text-align: center;
-     margin-left: 400px;
+     margin-left: 230px;
    }
    .navCoach > .divMatch >.divMatchPart{
-      height: 20px;
+      height: 19px;
       font-size: 14px;
       background-color: gray;
       color: white;
-      padding-top:5px;
-      width: 70px;
-      border-radius: 10px; 
-      padding:1px; 
+      padding:1px;
+      width: 75px;
+      border-radius: 10px;  
       text-align: center;
-      margin-left: 410px;
+      margin-left: 230px;
    }
    .navCoach > .divMatch >.divMatchNone{
     height: 19px;
-    font-size: 13px;
+    font-size: 14px;
     background-color: gray;
     color: white;
-    padding-top:5px;
-    width: 70px;
+    padding:1px;
+    width: 75px;
     border-radius: 10px; 
-    padding:1px; 
     text-align: center;
-    margin-left: 410px;
+    margin-left: 230px;
    }
    .payContent2{
-      margin-left: 12%;
-      margin-right: 6%;
+      margin: 4%;
     }
     .payContent2 > .payContCoach {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      margin-top: 7px; 
+      margin-left: 27px; 
       }
     .playDivCoach{
         background-color: rgb(168, 163, 163); 
         width: 180px; 
-        height: 180px;
+        height: 190px;
         color: white; 
         display: flex;
         flex-wrap: wrap;
-        padding: 10px; 
+        padding: 13px; 
         border: 1px solid;
         box-shadow: 3px 4px 2px black;
     }
@@ -1543,16 +1521,16 @@ transform: rotateY(308.5714285714deg) translateZ(196px);
     
     .container2 {
       position: absolute;
-      width: 80%;
+      width: 90%;
       height: 70%;
-      -webkit-perspective: 700px;
-      -ms-perspective: 700px;
-      perspective: 700px;
+      -webkit-perspective: 1000px;
+      -ms-perspective: 1000px;
+      perspective: 1000px;
       overflow-y: hidden; 
     }
     .container2 .carousel2 {
       position: absolute;
-      left: 37%;
+      left: 41%;
       top: 45%;
       width: 100px;
       height: 27px;
@@ -1569,10 +1547,10 @@ transform: rotateY(308.5714285714deg) translateZ(196px);
     .container2 .carousel2 .slide {
     margin-top: 80px;
     position: absolute;
-    width: 100px;
-    height: 80px;
+    width: 80px;
+    height: 60px;
     border-radius: 8px;
-    font-size: 20px;
+    font-size: 18px;
     box-shadow: 0 0 4px 1px #fff;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -1685,9 +1663,9 @@ transform: rotateY(308.5714285714deg) translateZ(196px);
      .navCoach > h1{
       color: white;
       font-family: cursive;
-      margin-top: 5px;
-      font-size: 18px;
-      margin-left: 2%;
+      margin-top: 6px;
+      font-size: 16px;
+      margin-left: 2.5%;
      }
      .navCoach > .divForm{
       margin-top: 8px;
@@ -1696,57 +1674,53 @@ transform: rotateY(308.5714285714deg) translateZ(196px);
       margin-left: 25%;
       padding: 2px;
       height: 15px;
-      width: 180px;
+      width: 170px;
      }
      .navCoach > .divMatch{
-      margin-top: 10px;
-      margin-left: -75%;
+      margin-top: 10.5px;
+      margin-left: -5%;
      }
      .navCoach > .divMatch >.divMatchAll{
       height: 16px;
       font-size: 13px;
       background-color: gray;
       color: white;
-      padding-top:5px;
-      width: 70px;
+      padding:1px;
+      width: 75px;
        border-radius: 10px; 
-       padding:1px; 
        text-align: center;
-       margin-left: 400px;
+       margin-left: 100px;
      }
      .navCoach > .divMatch >.divMatchPart{
         height: 16px;
         font-size: 13px;
         background-color: gray;
         color: white;
-        padding-top:5px;
-        width: 70px;
+        padding:1px;
+        width: 75px;
         border-radius: 10px; 
-        padding:1px; 
         text-align: center;
-        margin-left: 410px;
+        margin-left: 100px;
      }
      .navCoach > .divMatch >.divMatchNone{
       height: 16px;
       font-size: 13px;
       background-color: gray;
       color: white;
-      padding-top:5px;
-      width: 70px;
+      padding:1px;
+      width: 75px;
       border-radius: 10px; 
-      padding:1px; 
       text-align: center;
-      margin-left: 410px;
+      margin-left: 100px;
      }
      .payContent2{
-        margin-left: 9.4%;
-        margin-right: 8%;
+        margin: 2%;
       }
       .payContent2 > .payContCoach {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        margin-top: 7px; 
+        margin-left: 16px; 
         }
       .playDivCoach{
           background-color: rgb(168, 163, 163); 
@@ -1755,7 +1729,7 @@ transform: rotateY(308.5714285714deg) translateZ(196px);
           color: white; 
           display: flex;
           flex-wrap: wrap;
-          padding: 10px; 
+          padding: 13px; 
           border: 1px solid;
           box-shadow: 3px 4px 2px black;
       }
@@ -1783,16 +1757,16 @@ transform: rotateY(308.5714285714deg) translateZ(196px);
       
       .container2 {
         position: absolute;
-        width: 80%;
+        width: 95%;
         height: 70%;
-        -webkit-perspective: 700px;
-        -ms-perspective: 700px;
-        perspective: 700px;
+        -webkit-perspective: 900px;
+        -ms-perspective: 900px;
+        perspective: 900px;
         overflow-y: hidden; 
       }
       .container2 .carousel2 {
         position: absolute;
-        left: 37%;
+        left: 36%;
         top: 45%;
         width: 100px;
         height: 27px;
@@ -1917,7 +1891,7 @@ transform: rotateY(308.5714285714deg) translateZ(196px);
       margin:0;
     }
     .navCoach{
-      height: 30px;
+      height: 35px;
       background-color: rgb(46, 38, 102);
       display: flex;
       flex-direction: row;
@@ -1930,72 +1904,69 @@ transform: rotateY(308.5714285714deg) translateZ(196px);
       margin-left: 2%;
      }
      .navCoach > .divForm{
-      margin-top: 6px;
+      margin-top: 7px;
      }
      .divForm > form input{
       margin-left: 25%;
+      font-size: 12px;
       padding: 2px;
       height: 13px;
-      width: 170px;
+      width: 160px;
      }
      .navCoach > .divMatch{
-      margin-top: 8px;
-      margin-left: -80%;
+      margin-top: 10px;
+      margin-left: -5%;
      }
      .navCoach > .divMatch >.divMatchAll{
-      height: 16px;
-      font-size: 13px;
+      height: 15px;
+      font-size: 12.5px;
       background-color: gray;
       color: white;
-      padding-top:5px;
-      width: 70px;
+      padding:1px;
+      width: 75px;
        border-radius: 10px; 
-       padding:1px; 
        text-align: center;
-       margin-left: 400px;
+       margin-left: 90px;
      }
      .navCoach > .divMatch >.divMatchPart{
-        height: 16px;
-        font-size: 13px;
+        height: 15px;
+        font-size: 12.5px;
         background-color: gray;
         color: white;
-        padding-top:5px;
-        width: 70px;
+        padding:1px;
+        width: 75px;
         border-radius: 10px; 
-        padding:1px; 
         text-align: center;
-        margin-left: 410px;
+        margin-left: 90px;
      }
      .navCoach > .divMatch >.divMatchNone{
-      height: 16px;
-      font-size: 13px;
+      height: 15px;
+      font-size: 12.5px;
       background-color: gray;
       color: white;
-      padding-top:5px;
-      width: 70px;
-      border-radius: 10px; 
-      padding:1px; 
+      padding:1px;
+      width: 75px;
+      border-radius: 10px;  
       text-align: center;
       margin-left: 410px;
      }
      .payContent2{
-        margin-left: 10.7%;
-        margin-right: 8%;
+        margin: 3%;
       }
       .payContent2 > .payContCoach {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        margin-top: 7px; 
+        margin-left: 13.5px; 
         }
       .playDivCoach{
           background-color: rgb(168, 163, 163); 
           width: 140px; 
-          height: 150px;
+          height: 160px;
           color: white; 
           display: flex;
           flex-wrap: wrap;
-          padding: 10px; 
+          padding: 13px; 
           border: 1px solid;
           box-shadow: 3px 4px 2px black;
       }
@@ -2023,16 +1994,16 @@ transform: rotateY(308.5714285714deg) translateZ(196px);
       
       .container2 {
         position: absolute;
-        width: 80%;
+        width: 94%;
         height: 70%;
-        -webkit-perspective: 700px;
-        -ms-perspective: 700px;
-        perspective: 700px;
+        -webkit-perspective: 900px;
+        -ms-perspective: 900px;
+        perspective: 900px;
         overflow-y: hidden; 
       }
       .container2 .carousel2 {
         position: absolute;
-        left: 37%;
+        left: 36%;
         top: 45%;
         width: 100px;
         height: 27px;
@@ -2152,7 +2123,7 @@ transform: rotateY(308.5714285714deg) translateZ(196px);
   }
 
   /*Samsung Galaxy S20 Ultra  (max-width: 412px; max-heigth: 915px;)*/
-  @media only screen and (max-width: 412px){
+  /* @media only screen and (max-width: 412px){
     .coachMainContent{
       margin:0;
     }
@@ -2390,7 +2361,7 @@ transform: rotateY(308.5714285714deg) translateZ(196px);
   -ms-transform: rotateY(308.5714285714deg) translateZ(196px);
   transform: rotateY(308.5714285714deg) translateZ(196px);
   } 
-  }
+  } */
 
   /*Samsung Galaxy A51/71  (max-width: 412px; max-heigth: 914px;)*/
   @media only screen and (max-width: 412px){
@@ -2398,7 +2369,7 @@ transform: rotateY(308.5714285714deg) translateZ(196px);
       margin:0;
     }
     .navCoach{
-      height: 30px;
+      height: 35px;
       background-color: rgb(46, 38, 102);
       display: flex;
       flex-direction: row;
@@ -2406,78 +2377,74 @@ transform: rotateY(308.5714285714deg) translateZ(196px);
      .navCoach > h1{
       color: white;
       font-family: cursive;
-      margin-top: 5px;
+      margin-top: 3px;
       font-size: 16px;
-      margin-left: 2%;
+      margin-left: 3%;
      }
      .navCoach > .divForm{
-      margin-top: 6px;
+      margin-top: 7.5px;
      }
      .divForm > form input{
-      margin-left: 25%;
+      margin-left: 22%;
       padding: 2px;
       font-size: 12px;
       height: 13px;
-      width: 170px;
+      width: 165px;
      }
      .navCoach > .divMatch{
-      margin-top: 8px;
-      margin-left: -80%;
+      margin-top: 10px;
+      margin-left: -5%;
      }
      .navCoach > .divMatch >.divMatchAll{
-      height: 16px;
-      font-size: 13px;
+      height: 15px;
+      font-size: 12px;
       background-color: gray;
       color: white;
-      padding-top:5px;
-      width: 70px;
-       border-radius: 10px; 
-       padding:1px; 
+      padding:1px;
+      width: 75px;
+       border-radius: 10px;  
        text-align: center;
-       margin-left: 400px;
+       margin-left: 90px;
      }
      .navCoach > .divMatch >.divMatchPart{
-        height: 16px;
-        font-size: 13px;
+        height: 15px;
+        font-size: 12px;
         background-color: gray;
         color: white;
-        padding-top:5px;
-        width: 70px;
-        border-radius: 10px; 
-        padding:1px; 
+        padding:1px;
+        width: 75px;
+        border-radius: 10px;  
         text-align: center;
-        margin-left: 410px;
+        margin-left: 90px;
      }
      .navCoach > .divMatch >.divMatchNone{
-      height: 16px;
-      font-size: 13px;
+      height: 15px;
+      font-size: 12px;
       background-color: gray;
       color: white;
-      padding-top:5px;
-      width: 70px;
+      padding:1px;
+      width: 75px;
       border-radius: 10px; 
-      padding:1px; 
       text-align: center;
-      margin-left: 410px;
+      margin-left: 90px;
      }
      .payContent2{
-        margin-left: 10.5%;
-        margin-right: 8.2%;
+        margin: 2%;
       }
       .payContent2 > .payContCoach {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        margin-top: 7px; 
+        margin-left: 17.5px; 
         }
       .playDivCoach{
           background-color: rgb(168, 163, 163); 
           width: 140px; 
-          height: 150px;
+          height: 160px;
           color: white; 
           display: flex;
           flex-wrap: wrap;
-          padding: 10px; 
+          padding: 13px; 
           border: 1px solid;
           box-shadow: 3px 4px 2px black;
       }
@@ -2505,11 +2472,11 @@ transform: rotateY(308.5714285714deg) translateZ(196px);
       
       .container2 {
         position: absolute;
-        width: 80%;
+        width: 95.5%;
         height: 70%;
-        -webkit-perspective: 700px;
-        -ms-perspective: 700px;
-        perspective: 700px;
+        -webkit-perspective: 900px;
+        -ms-perspective: 900px;
+        perspective: 900px;
         overflow-y: hidden; 
       }
       .container2 .carousel2 {
@@ -2647,78 +2614,74 @@ transform: rotateY(308.5714285714deg) translateZ(196px);
        .navCoach > h1{
         color: white;
         font-family: cursive;
-        margin-top: 5px;
-        font-size: 16px;
-        margin-left: 2%;
+        margin-top: 2.5px;
+        font-size: 15px;
+        margin-left: 3%;
        }
        .navCoach > .divForm{
-        margin-top: 3px;
+        margin-top: 4px;
        }
        .divForm > form input{
-        margin-left: 25%;
-        padding: 2px;
-        font-size: 12px;
-        height: 13px;
-        width: 170px;
+        margin-left: 21%;
+        padding: 1.3px;
+        font-size: 11px;
+        height: 12px;
+        width: 160px;
        }
        .navCoach > .divMatch{
         margin-top: 8px;
-        margin-left: -85%;
+        margin-left: -5%;
        }
        .navCoach > .divMatch >.divMatchAll{
         height: 14px;
         font-size: 11px;
         background-color: gray;
         color: white;
-        padding-top:5px;
-        width: 60px;
-         border-radius: 10px; 
-         padding:1px; 
+        padding:1px;
+        width: 65px;
+         border-radius: 10px;  
          text-align: center;
-         margin-left: 400px;
+         margin-left: 90px;
        }
        .navCoach > .divMatch >.divMatchPart{
           height: 14px;
           font-size: 11px;
           background-color: gray;
           color: white;
-          padding-top:5px;
-          width: 60px;
-          border-radius: 10px; 
-          padding:1px; 
+          padding:1px;
+          width: 65px;
+          border-radius: 10px;  
           text-align: center;
-          margin-left: 410px;
+          margin-left: 90px;
        }
        .navCoach > .divMatch >.divMatchNone{
         height: 14px;
         font-size: 11px;
         background-color: gray;
         color: white;
-        padding-top:5px;
-        width: 60px;
+        padding:1px;
+        width: 65px;
         border-radius: 10px; 
-        padding:1px; 
         text-align: center;
-        margin-left: 410px;
+        margin-left: 90px;
        }
        .payContent2{
-          margin-left: 9.7%;
-          margin-right: 6.2%;
+          margin: 3%;
         }
         .payContent2 > .payContCoach {
           display: flex;
           flex-direction: row;
           flex-wrap: wrap;
-          margin-top: 7px; 
+          margin-left: 5.5px; 
           }
         .playDivCoach{
             background-color: rgb(168, 163, 163); 
-            width: 135px; 
-            height: 150px;
+            width: 140px; 
+            height: 155px;
             color: white; 
             display: flex;
             flex-wrap: wrap;
-            padding: 10px; 
+            padding: 13px; 
             border: 1px solid;
             box-shadow: 3px 4px 2px black;
         }
@@ -2746,16 +2709,16 @@ transform: rotateY(308.5714285714deg) translateZ(196px);
         
         .container2 {
           position: absolute;
-          width: 80%;
+          width: 94%;
           height: 70%;
-          -webkit-perspective: 700px;
-          -ms-perspective: 700px;
-          perspective: 700px;
+          -webkit-perspective: 900px;
+          -ms-perspective: 900px;
+          perspective: 900px;
           overflow-y: hidden; 
         }
         .container2 .carousel2 {
           position: absolute;
-          left: 37%;
+          left: 35%;
           top: 45%;
           width: 100px;
           height: 27px;
@@ -2775,7 +2738,7 @@ transform: rotateY(308.5714285714deg) translateZ(196px);
         width: 100px;
         height: 80px;
         border-radius: 8px;
-        font-size: 20px;
+        font-size: 18px;
         box-shadow: 0 0 4px 1px #fff;
         -webkit-user-select: none;
         -moz-user-select: none;
@@ -2880,7 +2843,7 @@ transform: rotateY(308.5714285714deg) translateZ(196px);
       margin:0;
     }
     .navCoach{
-      height: 30px;
+      height: 33px;
       background-color: rgb(46, 38, 102);
       display: flex;
       flex-direction: row;
@@ -2888,78 +2851,74 @@ transform: rotateY(308.5714285714deg) translateZ(196px);
      .navCoach > h1{
       color: white;
       font-family: cursive;
-      margin-top: 5px;
-      font-size: 16px;
-      margin-left: 2%;
+      margin-top: 3px;
+      font-size: 15px;
+      margin-left: 3%;
      }
      .navCoach > .divForm{
-      margin-top: 3px;
+      margin-top: 5.5px;
      }
      .divForm > form input{
-      margin-left: 25%;
-      padding: 2px;
-      font-size: 12px;
-      height: 13px;
+      margin-left: 18%;
+      padding: 1.7px;
+      font-size: 11.5px;
+      height: 12px;
       width: 170px;
      }
      .navCoach > .divMatch{
       margin-top: 8px;
-      margin-left: -85%;
+      margin-left: -5%;
      }
      .navCoach > .divMatch >.divMatchAll{
       height: 14px;
       font-size: 11px;
       background-color: gray;
       color: white;
-      padding-top:5px;
-      width: 60px;
+      padding:1px;
+      width: 65px;
        border-radius: 10px; 
-       padding:1px; 
        text-align: center;
-       margin-left: 400px;
+       margin-left: 85px;
      }
      .navCoach > .divMatch >.divMatchPart{
         height: 14px;
         font-size: 11px;
         background-color: gray;
         color: white;
-        padding-top:5px;
-        width: 60px;
+        padding:1px;
+        width: 65px;
         border-radius: 10px; 
-        padding:1px; 
         text-align: center;
-        margin-left: 410px;
+        margin-left: 85px;
      }
      .navCoach > .divMatch >.divMatchNone{
       height: 14px;
       font-size: 11px;
       background-color: gray;
       color: white;
-      padding-top:5px;
-      width: 60px;
+      padding:1px;
+      width: 65px;
       border-radius: 10px; 
-      padding:1px; 
       text-align: center;
-      margin-left: 410px;
+      margin-left: 85px;
      }
      .payContent2{
-        margin-left: 9.7%;
-        margin-right: 6.2%;
+        margin: 2%;
       }
       .payContent2 > .payContCoach {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        margin-top: 7px; 
+        margin-left: 7px; 
         }
       .playDivCoach{
           background-color: rgb(168, 163, 163); 
-          width: 135px; 
-          height: 150px;
+          width: 140px; 
+          height: 155px;
           color: white; 
           display: flex;
           flex-wrap: wrap;
-          padding: 10px; 
+          padding: 13px; 
           border: 1px solid;
           box-shadow: 3px 4px 2px black;
       }
@@ -2987,11 +2946,11 @@ transform: rotateY(308.5714285714deg) translateZ(196px);
       
       .container2 {
         position: absolute;
-        width: 80%;
+        width: 95.7%;
         height: 70%;
-        -webkit-perspective: 700px;
-        -ms-perspective: 700px;
-        perspective: 700px;
+        -webkit-perspective: 900px;
+        -ms-perspective: 900px;
+        perspective: 900px;
         overflow-y: hidden; 
       }
       .container2 .carousel2 {
@@ -3016,7 +2975,7 @@ transform: rotateY(308.5714285714deg) translateZ(196px);
       width: 100px;
       height: 80px;
       border-radius: 8px;
-      font-size: 20px;
+      font-size: 18px;
       box-shadow: 0 0 4px 1px #fff;
       -webkit-user-select: none;
       -moz-user-select: none;
@@ -3121,7 +3080,7 @@ transform: rotateY(308.5714285714deg) translateZ(196px);
       margin:0;
     }
     .navCoach{
-      height: 30px;
+      height: 32px;
       background-color: rgb(46, 38, 102);
       display: flex;
       flex-direction: row;
@@ -3129,78 +3088,74 @@ transform: rotateY(308.5714285714deg) translateZ(196px);
      .navCoach > h1{
       color: white;
       font-family: cursive;
-      margin-top: 5px;
-      font-size: 16px;
-      margin-left: 2%;
+      margin-top: 3px;
+      font-size: 15px;
+      margin-left: 3%;
      }
      .navCoach > .divForm{
-      margin-top: 3px;
+      margin-top: 4.5px;
      }
      .divForm > form input{
-      margin-left: 25%;
+      margin-left: 17%;
       padding: 2px;
-      font-size: 12px;
-      height: 13px;
+      font-size: 11.5px;
+      height: 12.5px;
       width: 160px;
      }
      .navCoach > .divMatch{
       margin-top: 8px;
-      margin-left: -92%;
+      margin-left: -5%;
      }
      .navCoach > .divMatch >.divMatchAll{
       height: 14px;
       font-size: 11px;
       background-color: gray;
       color: white;
-      padding-top:5px;
-      width: 60px;
-       border-radius: 10px; 
-       padding:1px; 
+      padding:1px;
+      width: 65px;
+       border-radius: 10px;  
        text-align: center;
-       margin-left: 400px;
+       margin-left: 80px;
      }
      .navCoach > .divMatch >.divMatchPart{
-        height: 14px;
-        font-size: 11px;
-        background-color: gray;
-        color: white;
-        padding-top:5px;
-        width: 60px;
-        border-radius: 10px; 
-        padding:1px; 
-        text-align: center;
-        margin-left: 410px;
+      height: 14px;
+      font-size: 11px;
+      background-color: gray;
+      color: white;
+      padding:1px;
+      width: 65px;
+       border-radius: 10px;  
+       text-align: center;
+       margin-left: 80px;
      }
      .navCoach > .divMatch >.divMatchNone{
       height: 14px;
       font-size: 11px;
       background-color: gray;
       color: white;
-      padding-top:5px;
-      width: 60px;
-      border-radius: 10px; 
-      padding:1px; 
-      text-align: center;
-      margin-left: 410px;
+      padding:1px;
+      width: 65px;
+       border-radius: 10px;  
+       text-align: center;
+       margin-left: 80px;
      }
      .payContent2{
-        margin-left: 8%;
-        margin-right: 7.5%;
+        margin: 2%;
       }
       .payContent2 > .payContCoach {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        margin-top: 7px; 
+        margin-left: 1px; 
         }
       .playDivCoach{
           background-color: rgb(168, 163, 163); 
-          width: 135px; 
-          height: 150px;
+          width: 140px; 
+          height: 155px;
           color: white; 
           display: flex;
           flex-wrap: wrap;
-          padding: 10px; 
+          padding: 13px; 
           border: 1px solid;
           box-shadow: 3px 4px 2px black;
       }
@@ -3228,11 +3183,11 @@ transform: rotateY(308.5714285714deg) translateZ(196px);
       
       .container2 {
         position: absolute;
-        width: 80%;
+        width: 95.5%;
         height: 70%;
-        -webkit-perspective: 700px;
-        -ms-perspective: 700px;
-        perspective: 700px;
+        -webkit-perspective: 900px;
+        -ms-perspective: 900px;
+        perspective: 900px;
         overflow-y: hidden; 
       }
       .container2 .carousel2 {
@@ -3362,7 +3317,7 @@ transform: rotateY(308.5714285714deg) translateZ(196px);
       margin:0;
     }
     .navCoach{
-      height: 30px;
+      height: 32px;
       background-color: rgb(46, 38, 102);
       display: flex;
       flex-direction: row;
@@ -3370,15 +3325,15 @@ transform: rotateY(308.5714285714deg) translateZ(196px);
      .navCoach > h1{
       color: white;
       font-family: cursive;
-      margin-top: 2px;
-      font-size: 16px;
-      margin-left: 2%;
+      margin-top: 3px;
+      font-size: 15px;
+      margin-left: 3%;
      }
      .navCoach > .divForm{
-      margin-top: 3px;
+      margin-top: 5px;
      }
      .divForm > form input{
-      margin-left: 20%;
+      margin-left: 16%;
       padding: 2px;
       font-size: 12px;
       height: 12px;
@@ -3386,62 +3341,58 @@ transform: rotateY(308.5714285714deg) translateZ(196px);
      }
      .navCoach > .divMatch{
       margin-top: 8px;
-      margin-left: -98%;
+      margin-left: -5%;
      }
      .navCoach > .divMatch >.divMatchAll{
       height: 14px;
       font-size: 11px;
       background-color: gray;
       color: white;
-      padding-top:5px;
-      width: 60px;
-       border-radius: 10px; 
-       padding:1px; 
+      padding:1px;
+      width: 63px;
+       border-radius: 10px;  
        text-align: center;
-       margin-left: 400px;
+       margin-left: 70px;
      }
      .navCoach > .divMatch >.divMatchPart{
-        height: 14px;
-        font-size: 11px;
-        background-color: gray;
-        color: white;
-        padding-top:5px;
-        width: 60px;
-        border-radius: 10px; 
-        padding:1px; 
-        text-align: center;
-        margin-left: 410px;
+      height: 14px;
+      font-size: 11px;
+      background-color: gray;
+      color: white;
+      padding:1px;
+      width: 63px;
+       border-radius: 10px;  
+       text-align: center;
+       margin-left: 70px;
      }
      .navCoach > .divMatch >.divMatchNone{
       height: 14px;
       font-size: 11px;
       background-color: gray;
       color: white;
-      padding-top:5px;
-      width: 60px;
-      border-radius: 10px; 
-      padding:1px; 
-      text-align: center;
-      margin-left: 410px;
+      padding:1px;
+      width: 63px;
+       border-radius: 10px;  
+       text-align: center;
+       margin-left: 70px;
      }
      .payContent2{
-        margin-left: 6%;
-        margin-right: 5.5%;
+        margin: 0.2%;
       }
       .payContent2 > .payContCoach {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        margin-top: 7px; 
+        margin-left: 0.8px; 
         }
       .playDivCoach{
           background-color: rgb(168, 163, 163); 
-          width: 135px; 
-          height: 150px;
+          width: 140px; 
+          height: 155px;
           color: white; 
           display: flex;
           flex-wrap: wrap;
-          padding: 10px; 
+          padding: 13px; 
           border: 1px solid;
           box-shadow: 3px 4px 2px black;
       }
@@ -3469,11 +3420,11 @@ transform: rotateY(308.5714285714deg) translateZ(196px);
       
       .container2 {
         position: absolute;
-        width: 80%;
+        width: 94%;
         height: 70%;
-        -webkit-perspective: 700px;
-        -ms-perspective: 700px;
-        perspective: 700px;
+        -webkit-perspective: 900px;
+        -ms-perspective: 900px;
+        perspective: 900px;
         overflow-y: hidden; 
       }
       .container2 .carousel2 {
@@ -3496,9 +3447,9 @@ transform: rotateY(308.5714285714deg) translateZ(196px);
       margin-top: 80px;
       position: absolute;
       width: 100px;
-      height: 80px;
+      height: 60px;
       border-radius: 8px;
-      font-size: 20px;
+      font-size: 18px;
       box-shadow: 0 0 4px 1px #fff;
       -webkit-user-select: none;
       -moz-user-select: none;
@@ -3612,68 +3563,64 @@ transform: rotateY(308.5714285714deg) translateZ(196px);
     color: white;
     font-family: cursive;
     margin-top: 4px;
-    font-size: 13px;
+    font-size: 12px;
     margin-left: 2%;
    }
    .navCoach > .divForm{
     margin-top: 3px;
    }
    .divForm > form input{
-    margin-left: 10%;
+    margin-left: 7%;
     padding: 2px;
-    font-size: 12px;
-    height: 12px;
-    width: 120px;
+    font-size: 11px;
+    height: 11px;
+    width: 100px;
    }
    .navCoach > .divMatch{
     margin-top: 7px;
-    margin-left: -138%;
+    margin-left: -5%;
    }
    .navCoach > .divMatch >.divMatchAll{
     height: 13px;
     font-size: 10px;
     background-color: gray;
     color: white;
-    padding-top:5px;
+    padding:1px;
     width: 60px;
      border-radius: 10px; 
-     padding:1px; 
      text-align: center;
-     margin-left: 400px;
+     margin-left: 60px;
    }
    .navCoach > .divMatch >.divMatchPart{
-      height: 13px;
-      font-size: 10px;
-      background-color: gray;
-      color: white;
-      padding-top:5px;
-      width: 60px;
-      border-radius: 10px; 
-      padding:1px; 
-      text-align: center;
-      margin-left: 410px;
+    height: 13px;
+    font-size: 10px;
+    background-color: gray;
+    color: white;
+    padding:1px;
+    width: 60px;
+     border-radius: 10px; 
+     text-align: center;
+     margin-left: 60px;
    }
    .navCoach > .divMatch >.divMatchNone{
     height: 13px;
     font-size: 10px;
     background-color: gray;
     color: white;
-    padding-top:5px;
+    padding:1px;
     width: 60px;
-    border-radius: 10px; 
-    padding:1px; 
-    text-align: center;
-    margin-left: 410px;
+     border-radius: 10px; 
+     text-align: center;
+     margin-left: 60px;
    }
    .payContent2{
-      margin-left: 6%;
-      margin-right: 5.5%;
+      margin: 0.5%;
     }
     .payContent2 > .payContCoach {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      margin-top: 7px; 
+      margin-left: 0.3px; 
       }
     .playDivCoach{
         background-color: rgb(168, 163, 163); 
@@ -3682,7 +3629,7 @@ transform: rotateY(308.5714285714deg) translateZ(196px);
         color: white; 
         display: flex;
         flex-wrap: wrap;
-        padding: 10px; 
+        padding: 13px; 
         border: 1px solid;
         box-shadow: 3px 4px 2px black;
     }
@@ -3710,16 +3657,16 @@ transform: rotateY(308.5714285714deg) translateZ(196px);
     
     .container2 {
       position: absolute;
-      width: 80%;
+      width: 99%;
       height: 70%;
-      -webkit-perspective: 700px;
-      -ms-perspective: 700px;
-      perspective: 700px;
+      -webkit-perspective: 900px;
+      -ms-perspective: 900px;
+      perspective: 900px;
       overflow-y: hidden; 
     }
     .container2 .carousel2 {
       position: absolute;
-      left: 37%;
+      left: 30%;
       top: 45%;
       width: 100px;
       height: 27px;
@@ -3736,10 +3683,10 @@ transform: rotateY(308.5714285714deg) translateZ(196px);
     .container2 .carousel2 .slide {
     margin-top: 80px;
     position: absolute;
-    width: 100px;
-    height: 80px;
+    width: 70px;
+    height: 60px;
     border-radius: 8px;
-    font-size: 20px;
+    font-size: 13px;
     box-shadow: 0 0 4px 1px #fff;
     -webkit-user-select: none;
     -moz-user-select: none;

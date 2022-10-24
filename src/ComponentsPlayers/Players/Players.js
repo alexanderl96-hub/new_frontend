@@ -89,9 +89,9 @@ const Players = () => {
 
        {!countInTimeout ? (
 
-        <div className='payContent2'>
+        <div className='payContentPlayer'>
         { val.length  ? 
-             <div className='payContCoach'>
+             <div className='payContentReturn'>
                   {val.map((player, index)=>{
                       return(
                         <div  key={index} >

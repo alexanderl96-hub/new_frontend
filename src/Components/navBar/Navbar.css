@@ -128,7 +128,7 @@ justify-content: space-around;
     flex-direction: row;
     justify-content: space-between;
     background-color: gray;
-    height: 60px;
+    height: 50px;
     box-shadow: 2px 4px 4px black;
   }
   .nav {
@@ -136,12 +136,13 @@ justify-content: space-around;
     color: white;
   }
   .nav-inner {
-    margin-top: 1.5%;
+    margin-top: 1%; 
+    font-size: 15px;
   }
   .nav2 {
     display: flex;
     color: white;
-    margin-top: 2.5%;
+    margin-top: 2.2%;
     margin-right: 30px;
     cursor: pointer;
   }
@@ -152,12 +153,15 @@ justify-content: space-around;
     text-align: center;
     margin-left: -110px;
     cursor: pointer;
-    margin-top: 1.7px;
+    margin-top: 1.3px;
+    font-size: 15px;
   }
   .navlogIn {
     color: white;
     width: 100px;
     margin-right: -10px;
+    font-size: 15px;
+    margin-top: 1.3px;
   }
   .nav > a.active {
     margin-top: -0.4%;
@@ -179,8 +183,8 @@ justify-content: space-around;
     color: white;
   }
   .nav-inner {
-    margin-top: 1.9%;
-    font-size: 19px;
+    margin-top: 2%;
+    font-size: 16px;
     margin-left: 5px;
   }
   .nav2 {
@@ -189,7 +193,7 @@ justify-content: space-around;
     margin-top: 3.2%;
     margin-right: 30px;
     cursor: pointer;
-    font-size: 19px;
+  
 
   }
   .navAddgroup {
@@ -200,14 +204,16 @@ justify-content: space-around;
     margin-left: -110px;
     cursor: pointer;
     margin-top: 1.7px;
+    font-size: 16px;
   }
   .navlogIn {
     color: white;
     width: 100px;
     margin-right: -10px;
+    font-size: 16px;
   }
   .nav > a.active {
-    margin-top: 1.9%;
+    margin-top: 1%;
   }
  }
 
@@ -218,7 +224,7 @@ justify-content: space-around;
     flex-direction: row;
     justify-content: space-between;
     background-color: gray;
-    height: 70px;
+    height: 60px;
     box-shadow: 2px 4px 4px black;
   }
   .nav {
@@ -227,7 +233,7 @@ justify-content: space-around;
   }
   .nav-inner {
     margin-top: 1.9%;
-    font-size: 19px;
+    font-size: 15px;
     margin-left: 5px;
   }
   .nav2 {
@@ -236,7 +242,7 @@ justify-content: space-around;
     margin-top: 3.2%;
     margin-right: 30px;
     cursor: pointer;
-    font-size: 19px;
+   
 
   }
   .navAddgroup {
@@ -247,11 +253,14 @@ justify-content: space-around;
     margin-left: -110px;
     cursor: pointer;
     margin-top: 1.7px;
+    font-size: 15px;
   }
   .navlogIn {
     color: white;
     width: 100px;
     margin-right: -10px;
+    font-size: 15px;
+    margin-top: 1.5px;
   }
   .nav > a.active {
     margin-top: -0.4%;
@@ -265,7 +274,7 @@ justify-content: space-around;
     flex-direction: row;
     justify-content: space-between;
     background-color: gray;
-    height: 60px;
+    height: 55px;
     box-shadow: 2px 4px 4px black;
   }
   .nav {
@@ -283,7 +292,6 @@ justify-content: space-around;
     margin-top: 3.5%;
     margin-right: 10px;
     cursor: pointer;
-    font-size: 14px;
   }
   .navAddgroup {
     color: white;
@@ -293,6 +301,7 @@ justify-content: space-around;
     margin-left: -110px;
     cursor: pointer;
     margin-top: 1.7px;
+    font-size: 14px;
   }
   .navlogIn {
     color: white;
@@ -329,23 +338,21 @@ justify-content: space-around;
     color: white;
     margin-top: 3.5%;
     cursor: pointer;
-    font-size: 11px;
   }
   .navAddgroup {
     color: white;
     border-radius: 3px;
     text-align: center;
-    margin-left: -40px;
+    margin-left: -10px;
     cursor: pointer;
-    margin-top: 21%;
-    width: 60px;
+    margin-top: 8%;
+    font-size: 11px;
   }
   .navlogIn {
     color: white;
-    width: 50px;
     font-size: 11px;
-    margin-top: 5%;
-    margin-right: 10px;
+    margin-top: 3.5%;
+    margin-right: -10px;
   }
   .nav > a.active {
     text-decoration: underline;
@@ -425,7 +432,7 @@ justify-content: space-around;
       color: white;
       margin-top: 3.5%;
       cursor: pointer;
-      font-size: 9px;
+   
     }
     .navAddgroup {
       color: white;
@@ -435,6 +442,7 @@ justify-content: space-around;
       cursor: pointer;
       margin-top: 17.5%;
       width: 50px;
+      font-size: 9px;
     }
     .navlogIn {
       color: white;
@@ -450,7 +458,7 @@ justify-content: space-around;
   }
 
   /*Samsung Galaxy S20 Ultra  (max-width: 412px; max-heigth: 915px;)*/
-  @media only screen and (max-width: 412px){
+  /* @media only screen and (max-width: 412px){
     .navbar {
       display: flex;
       flex-direction: row;
@@ -480,7 +488,7 @@ justify-content: space-around;
       text-align: center;
       margin-left: 40px;
       cursor: pointer;
-      margin-top: 11%;
+      margin-top: 13%;
       width: 50px;
     }
     .navlogIn {
@@ -494,7 +502,7 @@ justify-content: space-around;
       font-weight: bold;
       margin-top: -0.4%;
     }
-  }
+  } */
 
   /*Samsung Galaxy A51/71  (max-width: 412px; max-heigth: 914px;)*/
   @media only screen and (max-width: 412px){
@@ -519,7 +527,7 @@ justify-content: space-around;
       color: white;
       margin-top: 3.5%;
       cursor: pointer;
-      font-size: 10.5px;
+    
     }
     .navAddgroup {
       color: white;
@@ -529,6 +537,7 @@ justify-content: space-around;
       cursor: pointer;
       margin-top: 11%;
       width: 50px;
+      font-size: 10.5px;
     }
     .navlogIn {
       color: white;
@@ -757,22 +766,20 @@ justify-content: space-around;
     color: white;
     margin-top: 3.5%;
     cursor: pointer;
-    font-size: 7px;
   }
   .navAddgroup {
     color: white;
     border-radius: 3px;
     text-align: center;
-    margin-left: 40px;
+    margin-left: 25px;
     cursor: pointer;
     margin-top: 22%;
-    width: 25px;
+    font-size: 7px;
   }
   .navlogIn {
     color: white;
-    width: 30px;
     font-size: 7px;
-    margin-top: 13%;
+    margin-top: 12%;
   }
  
   .nav > a.active {
