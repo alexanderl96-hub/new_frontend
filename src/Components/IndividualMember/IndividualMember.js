@@ -27,7 +27,7 @@ const IndividualMember = () => {
    const [teamCareerId, setTeamCareerID] = useState([])
    const [pitcherId, setPitcherID] = useState([])
    const [pitcherCareerId, setPitcherCareerID] = useState([])
-//    const [coachId, setCoachID] = useState([])
+//    const [text, setText] = useState([])
    const [group, setGroup] =useState([])
   
 
@@ -90,7 +90,9 @@ useEffect(() => {
     fetch(`https://my-baseball-teams.adaptable.app/playersStats`)
     .then(res => res.json())
     .then(data =>{
-        setTeamID(data.filter(a=> a.players_id === Number(memberId)))
+         let playerStats = data.filter(a => a.players_id === Number(memberId))
+         playerStats.sort((a,b)=> b.id - a.id) 
+         setTeamID(playerStats)
         // data.filter(a=> a.includes)
     })
 },[])
@@ -106,7 +108,9 @@ useEffect(() => {
     fetch(`https://my-baseball-teams.adaptable.app/playersCareer`)
     .then(res => res.json())
     .then(data =>{
-        setTeamCareerID(data)
+        let playerStats = data.filter(a => a.players_id === Number(memberId))
+        playerStats.sort((a,b)=> b.id - a.id) 
+        setTeamCareerID( playerStats)
     })
  },[])
 // useEffect(() => {
@@ -121,7 +125,9 @@ useEffect(() => {
     fetch(`https://my-baseball-teams.adaptable.app/pitchersStats`)
     .then(res => res.json())
     .then(data =>{
-        setPitcherID(data)
+        let playerStats = data.filter(a => a.players_id === Number(memberId))
+        playerStats.sort((a,b)=> b.id - a.id) 
+        setPitcherID( playerStats)
     })
 },[])
 // useEffect(() => {
@@ -137,7 +143,9 @@ useEffect(() => {
     fetch(`https://my-baseball-teams.adaptable.app/pitchersCarrer`)
     .then(res => res.json())
     .then(data =>{
-        setPitcherCareerID(data)
+         let playerStats = data.filter(a => a.pitcher_id === Number(memberId))
+         playerStats.sort((a,b)=> b.id - a.id) 
+        setPitcherCareerID( playerStats)
     })
 },[])
 // useEffect(() => {
@@ -189,7 +197,7 @@ function convertInKG(str){
 //   },[memberId])
 
 
-//  console.log(teamId.filter(a=> a.players_id  === Number(memberId) ).sort(), 'sortPlayer')
+ console.log(teamId, 'sortPlayer')
 //  console.log(teamCareerId.filter(a=> a.players_id  === Number(memberId) ), 'sortPitcher')
 //  console.log(pitcherId.filter(a=> a.players_id  === Number(memberId)), 'sortPitcher')
 //  console.log(pitcherCareerId.filter(a=> a.pitcher_id  === Number(memberId)), 'sortPitcher')
@@ -248,6 +256,12 @@ function convertInKG(str){
                                     <div className="team_About4">
                                         <div className='classAbout'> <span>About: </span> <div>{player.about ? player.about : '-'}.</div> </div> 
                                     </div>
+                                    <div className="team_About4">
+                                          <Link to={`/teams/CurrentHistagram/${memberId}`} style={{textDecoration: 'none'}}>
+                                             <div className="Histogram">Histogram Player</div>
+                                          </Link> 
+                                    </div>
+                                   
                             </div>
                             <div className='IndividualWrapper5'>
                                     <div className="team_About5">
@@ -315,9 +329,9 @@ function convertInKG(str){
                                                     {  teamCareerId.map((career, index)=>{
                                                         return(
                                                             <div>
-                                                                {Number(memberId) === career.players_id  ?  
+                                                                {career.players_id  ?  
                                                                     <div className='about-inner2'>
-                                                                        <div className='career1'>{career.game_year} </div>
+                                                                        <div className='career1'>{career.game_year  > 0 ? career.game_year : ''} </div>
                                                                         <div className='career2'>{career.team} </div>
                                                                         <div className= 'gameInnerPoint2'>{career.career_gp}</div>
                                                                         <div className= 'gameInnerPoint2'>{career.career_ab}</div>
@@ -359,7 +373,7 @@ function convertInKG(str){
                                                     {  pitcherId.map((pitcher, index)=>{
                                                         return(
                                                             <div>
-                                                                {Number(memberId) === pitcher.players_id  ?  
+                                                                {pitcher.players_id  ?  
                                                                     <div className='pitcher-inner1'>
                                                                         <div className='pitcher-inner'>{pitcher.game_date}{pitcher.team} </div>
                                                                         <div className= 'gameInnerPoint2'>{pitcher.ip >= 0 ? pitcher.ip : '-'}</div>
@@ -403,9 +417,9 @@ function convertInKG(str){
                                                     {  pitcherCareerId.map((careerP, index)=>{
                                                         return(
                                                             <div >
-                                                                {Number(memberId) === careerP.pitcher_id  ?  
+                                                                {careerP.pitcher_id  ?  
                                                                     <div className='about-inner2'>
-                                                                        <div className='career1'>{careerP.game_year} </div>
+                                                                        <div className='career1'>{careerP.game_year > 0 ? careerP.game_year : ''} </div>
                                                                         <div className='career2'>{careerP.team} </div>
                                                                         <div className= 'gameInnerPoint2'>{careerP.career_gp >= 0 ? careerP.career_gp : '-'}</div>
                                                                         <div className= 'gameInnerPoint2'>{careerP.career_cg >= 0 ? careerP.career_cg : '-'}</div>

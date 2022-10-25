@@ -17,6 +17,7 @@ import Coaches from '../src/ComponentsPlayers/Coaches/Coaches'
 import Season from '../src/ComponentsPlayers/Season/Season'
 import AddStats from '../src/Components/statsPlayers/addStatsPlayers'
 import Desing from '../src/Components/desing'
+import CurrentHistagram from '../src/Components/Histogram/CurrentHistagram'
 
 function App() {
  
@@ -33,7 +34,8 @@ function App() {
           <Route  path="/teams/allCoaches" element={<Coaches/>}/>
           <Route  path="/teams/Season" element={<Season/>}/>
           <Route  path="/teams/groups/:id/addStats" element={<AddStats/>}/>
-          <Route  path="/teams/newpage/:id" element={<Desing/>}/>        
+          <Route  path="/teams/newpage/:id" element={<Desing/>}/>  
+          <Route  path="/teams/CurrentHistagram/:id" element={<CurrentHistagram/>}/>      
          </Routes>
       </Router>
        

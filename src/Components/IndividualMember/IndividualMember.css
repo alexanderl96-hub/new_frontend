@@ -241,6 +241,13 @@
     font-size: 14px;
     /* text-align: justify; */
  }
+ .Histogram {
+     margin-top: 15px;
+     background-color: rgb(208, 130, 29);
+     border-radius: 30px;
+     padding: 3px;
+     cursor: pointer;
+ }
 .statsGrid{
     background-color: #2c2424;
     color:white;
