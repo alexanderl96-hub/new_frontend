@@ -1,38 +1,80 @@
 import React, { useState, useEffect } from 'react'
 import { Chart } from "react-google-charts";
-import { useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom';
 
 
  const CurrentHistagram = ()=> {
     const [member, setMember] = useState([])
     const [playerYear, setPlayerYear] = useState([])
     const [playerGP, setPlayerGP] = useState([])
-    const [playerCG, setPlayerCG] = useState([])
-    const [playerER, setPlayerER] = useState([])
+    const [playerAB, setPlayerAB] = useState([])
+    const [playerR, setPlayerR] = useState([])
     const [playerSO, setPlayerSO] = useState([])
-    const [playerW, setPlayerW] = useState([])
-    const [playerL, setPlayerL] = useState([])
-    const [playerSV, setPlayerSV] = useState([])
-    const [playerWHIP, setPlayerWHIP] = useState([])
-    const [playerERA, setPlayerERA] = useState([])
+    const [playerH, setPlayerH] = useState([])
+    const [playerRBI, setPlayerRBI] = useState([])
+    const [playerBB, setPlayerBB] = useState([])
+    const [playerHR, setPlayerHR] = useState([])
+    const [playerAVE, setPlayerAVE] = useState([])
+    const [pitcherYear, setPitcherYear] = useState([])
+    const [pitcherGP, setPitcherGP] = useState([])
+    const [pitcherCG, setPitcherCG] = useState([])
+    const [pitcherER, setPitcherER] = useState([])
+    const [pitcherSO, setPitcherSO] = useState([])
+    const [pitcherW, setPitcherW] = useState([])
+    const [pitcherL, setPitcherL] = useState([])
+    const [pitcherSV, setPitcherSV] = useState([])
+    const [pitcherWHIP, setPitcherWHIP] = useState([])
+    const [pitcherERA, setPitcherERA] = useState([])
+    const [currentDate, setCurrDate] = useState([])
+    const [currentAb, setCurrAB] = useState([])
+    const [currentR, setCurrR] = useState([])
+    const [currentH, setCurrH] = useState([])
+    const [currentRb, setCurrRB] = useState([])
+    const [currentBb, setCurrBB] = useState([])
+    const [currentHr, setCurrHR] = useState([])
+    const [currentSo, setCurrSO] = useState([])
+    const [currentSb, setCurrSB] = useState([])
+    const [currentAVE, setCurrAVE] = useState([])
   
     let params = useParams()
     let memberId = params.id
 
     const data = [
         ["Year", "GP", "AB", "R", "H", "RBI", "BB", "SO", "HR", "AVG"],
-        [String(playerYear['0']), playerGP['0'], playerCG['0'], playerER['0'], playerSO['0'], playerW['0'], playerL['0'], playerSV['0'], playerWHIP['0'], playerERA['0']], /*      */ 
-        [playerYear['1'], playerGP['1'], playerCG['1'], playerER['1'], playerSO['1'], playerW['1'], playerL['1'], playerSV['1'], playerWHIP['1'], playerERA['1']],    
-        [playerYear['2'], playerGP['2'], playerCG['2'], playerER['2'], playerSO['2'], playerW['2'], playerL['2'], playerSV['2'], playerWHIP['2'], playerERA['2']],
-        [playerYear['3'], playerGP['3'], playerCG['3'], playerER['3'], playerSO['3'], playerW['3'], playerL['3'], playerSV['3'], playerWHIP['3'], playerERA['3']],
-        [playerYear['4'], playerGP['4'], playerCG['4'], playerER['4'], playerSO['4'], playerW['4'], playerL['4'], playerSV['4'], playerWHIP['4'], playerERA['4']],
+        [String(playerYear['0']), playerGP['0'], playerAB['0'], playerR['0'], playerSO['0'], playerH['0'], playerRBI['0'], playerBB['0'], playerHR['0'], playerAVE['0']], /*      */ 
+        [playerYear['1'], playerGP['1'], playerAB['1'], playerR['1'], playerSO['1'], playerH['1'], playerRBI['1'], playerBB['1'], playerHR['1'], playerAVE['1']],    
+        [playerYear['2'], playerGP['2'], playerAB['2'], playerR['2'], playerSO['2'], playerH['2'], playerRBI['2'], playerBB['2'], playerHR['2'], playerAVE['2']],
+        [playerYear['3'], playerGP['3'], playerAB['3'], playerR['3'], playerSO['3'], playerH['3'], playerRBI['3'], playerBB['3'], playerHR['3'], playerAVE['3']],
+        [playerYear['4'], playerGP['4'], playerAB['4'], playerR['4'], playerSO['4'], playerH['4'], playerRBI['4'], playerBB['4'], playerHR['4'], playerAVE['4']],
 
+      ];
+      const dataPitcher = [
+        ["Year", "GP", "AB", "R", "H", "RBI", "BB", "SO", "HR", "AVG"],
+        [String(pitcherYear['0']), pitcherGP['0'], pitcherCG['0'], pitcherER['0'], pitcherSO['0'], pitcherW['0'], pitcherL['0'], pitcherSV['0'], pitcherWHIP['0'], pitcherERA['0']], /*      */ 
+        [pitcherYear['1'], pitcherGP['1'], pitcherCG['1'], pitcherER['1'], pitcherSO['1'], pitcherW['1'], pitcherL['1'], pitcherSV['1'], pitcherWHIP['1'], pitcherERA['1']],    
+        [pitcherYear['2'], pitcherGP['2'], pitcherCG['2'], pitcherER['2'], pitcherSO['2'], pitcherW['2'], pitcherL['2'], pitcherSV['2'], pitcherWHIP['2'], pitcherERA['2']],
+        [pitcherYear['3'], pitcherGP['3'], pitcherCG['3'], pitcherER['3'], pitcherSO['3'], pitcherW['3'], pitcherL['3'], pitcherSV['3'], pitcherWHIP['3'], pitcherERA['3']],
+        [pitcherYear['4'], pitcherGP['4'], pitcherCG['4'], pitcherER['4'], pitcherSO['4'], pitcherW['4'], pitcherL['4'], pitcherSV['4'], pitcherWHIP['4'], pitcherERA['4']],
+        
+      ]
+      const dataCurrent = [
+        ["Date", "AB", "R", "H", "RB", "BB", "SO", "HR", "SB", "AVG"],
+        [currentDate['0'], currentAb['0'], currentR['0'], currentH['0'], currentRb['0'], currentBb['0'], currentSo['0'], currentHr['0'], currentSb['0'], currentAVE['0']], /*      */ 
+        [currentDate['1'], currentAb['1'], currentR['1'], currentH['1'], currentRb['1'], currentBb['1'], currentSo['1'], currentHr['1'], currentSb['1'], currentAVE['1']],    
+        [currentDate['2'], currentAb['2'], currentR['2'], currentH['2'], currentRb['2'], currentBb['2'], currentSo['2'], currentHr['2'], currentSb['2'], currentAVE['2']],
+        [currentDate['3'], currentAb['3'], currentR['3'], currentH['3'], currentRb['3'], currentBb['3'], currentSo['3'], currentHr['3'], currentSb['3'], currentAVE['3']],
+        [currentDate['4'], currentAb['4'], currentR['4'], currentH['4'], currentRb['4'], currentBb['4'], currentSo['4'], currentHr['4'], currentSb['4'], currentAVE['4']],
+    
       ];
 
       const options = {
         title: member.toString(),
         is3D: true,
         backgroundColor: 'transparent',
+        chart: {
+            // title: " Current Season",
+           // subtitle: "in millions of dollars (USD)",
+          },
       };
       useEffect(() => {
         fetch(`https://my-baseball-teams.adaptable.app/groups`)
@@ -71,34 +113,149 @@ import { useParams } from 'react-router-dom'
                 
             })
              
+            setPitcherYear(storeYear)    
+            setPitcherGP(storeGP)
+            setPitcherCG(storeCG)
+            setPitcherER(storeER)
+            setPitcherSO(storeSO)
+            setPitcherW(storeW)
+            setPitcherL(storeL)
+            setPitcherSV(storeSV)
+            setPitcherWHIP(storeWHIP)
+            setPitcherERA(storeERA)
+        })
+      },[memberId])
+  
+      useEffect(() => {
+        fetch(`https://my-baseball-teams.adaptable.app/playersCareer`)
+        .then(res => res.json())
+        .then(data =>{
+            let storeYear= []
+            let storeGP = []   
+            let storeAB = []
+            let storeR = []
+            let storeH = []
+            let storeRBI = []
+            let storeBB = []
+            let storeSO = []
+            let storeHR = []
+            let storeAVE = []
+            let val = data.filter(a => a.players_id === Number(memberId)).slice(-5)
+            val.forEach((elem)=>{
+                storeYear.push(elem.game_year)
+                storeGP.push(elem.career_gp)
+                storeAB.push(elem.career_ab)
+                storeR.push(elem.career_r)
+                storeH.push(elem.career_h)
+                 storeRBI.push(elem.career_rbi)
+                 storeBB.push(elem.career_bb)
+                 storeSO.push(elem.career_so)
+                 storeHR.push(elem.career_hr)
+                 storeAVE.push(elem.career_ave)
+                
+            })
+             
              setPlayerYear(storeYear)    
                 setPlayerGP(storeGP)
-                setPlayerCG(storeCG)
-                setPlayerER(storeER)
+                setPlayerAB(storeAB)
+                setPlayerR(storeR)
+                setPlayerH(storeH)
+                setPlayerRBI(storeRBI)
+                setPlayerBB(storeBB)
                 setPlayerSO(storeSO)
-                setPlayerW(storeW)
-                setPlayerL(storeL)
-                setPlayerSV(storeSV)
-                setPlayerWHIP(storeWHIP)
-                setPlayerERA(storeERA)
+                setPlayerHR(storeHR)
+                setPlayerAVE(storeAVE)
         })
       },[memberId])
 
+      useEffect(() => {
+        fetch(`https://my-baseball-teams.adaptable.app/playersStats`)
+        .then(res => res.json())
+        .then(data =>{
+            let storeDate= []
+            let storeSB = []   
+            let storeAB = []
+            let storeR = []
+            let storeH = []
+            let storeRB = []
+            let storeBB = []
+            let storeSO = []
+            let storeHR = []
+            let storeAVE = []
+            let val = data.filter(a => a.players_id === Number(memberId)).slice(-3).sort((a,b)=>a.id-b.id)
+            val.forEach((elem)=>{
+                storeDate.push(elem.game_date)
+                storeSB.push(elem.sb)
+                storeAB.push(elem.ab)
+                storeR.push(elem.r)
+                storeH.push(elem.h)
+                 storeRB.push(elem.rb)
+                 storeBB.push(elem.bb)
+                 storeSO.push(elem.so)
+                 storeHR.push(elem.hr)
+                 storeAVE.push(elem.ave)
+                
+            })
+            console.log(storeDate, 'sort')
+                setCurrDate(storeDate)    
+                setCurrSB(storeSB)
+                setCurrAB(storeAB)
+                setCurrR(storeR)
+                setCurrH(storeH)
+                setCurrRB(storeRB)
+                setCurrBB(storeBB)
+                setCurrSO(storeSO)
+                setCurrHR(storeHR)
+                setCurrAVE(storeAVE)
+        })
+      },[memberId])
 
+      console.log()
   return (
-    <div>
-            <div>
+    <div style={{display:'flex', flexDirection: 'row', justifyContent: 'center'}}>
+        <div>
+
+                { pitcherYear.length > 0 ? 
+                <div style={{textAlign: 'center'}}>
                 <Chart
                 chartType="PieChart"
-                width='80%'
+                width='750px'
                 height="600px"
-                data={data}
+                data={ dataPitcher }
                 options={options}
                 />
-
-                <p style={{marginLeft: '300px', fontSize: '20px'}}>Career Pitcher Stats</p>
-            </div>
-             <div></div>
+                <p style={{marginLeft: '-200px', fontSize: '20px'}}>Career Pitcher Stats</p>
+            </div> :null}
+                
+            
+                {playerYear.length > 0 ?   
+                <div style={{textAlign: 'center'}} > 
+                    <Chart
+                    chartType="PieChart"
+                    width='750px'
+                    height="600px"
+                    data={data}
+                    options={options}
+                    />
+                    <p style={{ marginLeft: '-200px',fontSize: '20px'}}>Career Player Stats</p>
+                </div>      
+                : null}
+           
+           </div>
+           <div>
+           { currentDate.length > 0 ? 
+                <div style={{marginTop: '100px', textAlign: 'center'}}>
+                <Chart
+                chartType="Line"
+                width='750px'
+                height="500px"
+                data={ dataCurrent }
+                options={options}
+                />
+                <p style={{ fontSize: '20px'}}> Player Current Season</p>
+            </div> :null}
+                
+           </div>
     </div>
   );
 }

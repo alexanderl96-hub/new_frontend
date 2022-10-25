@@ -95,7 +95,7 @@ useEffect(() => {
          setTeamID(playerStats)
         // data.filter(a=> a.includes)
     })
-},[])
+},[memberId])
 // useEffect(() => {
 //     fetch(`http://localhost:9000/playersStats`)
 //     .then(res => res.json())
@@ -112,7 +112,7 @@ useEffect(() => {
         playerStats.sort((a,b)=> b.id - a.id) 
         setTeamCareerID( playerStats)
     })
- },[])
+ },[memberId])
 // useEffect(() => {
 //     fetch(`http://localhost:9000/playersCareer`)
 //     .then(res => res.json())
@@ -129,7 +129,7 @@ useEffect(() => {
         playerStats.sort((a,b)=> b.id - a.id) 
         setPitcherID( playerStats)
     })
-},[])
+},[memberId])
 // useEffect(() => {
 //     fetch(`http://localhost:9000/pitchersStats`)
 //     .then(res => res.json())
@@ -147,7 +147,7 @@ useEffect(() => {
          playerStats.sort((a,b)=> b.id - a.id) 
         setPitcherCareerID( playerStats)
     })
-},[])
+},[memberId])
 // useEffect(() => {
 //     fetch(`http://localhost:9000/pitchersCarrer`)
 //     .then(res => res.json())
