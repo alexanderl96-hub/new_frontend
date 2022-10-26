@@ -272,7 +272,7 @@ import { useParams } from 'react-router-dom';
         })
       },[memberId])
     
-      console.log(currPitDate.length)
+      console.log(playerYear)
   return (
     <div style={{display:'flex', flexDirection: 'row', justifyContent: 'center'}}>
         <div>

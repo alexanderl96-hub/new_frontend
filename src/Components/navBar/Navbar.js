@@ -3,6 +3,7 @@ import './Navbar.css'
 import { FaHome, FaUser } from 'react-icons/fa';
 import { NavLink , Link} from 'react-router-dom'
 import imageLogo from '../../image/FullLogoTransparent.png'
+import frontLogo from '../../image/FullLogo.png'
 
 function Navbar({id}) {
   const [className, setClassName] = useState(false)
@@ -20,6 +21,10 @@ function Navbar({id}) {
   return (
     <div className="navbar">
           <div className="nav" >
+         
+            <div className='navLogo'>
+               <img src={frontLogo} alt="1" className='forntLogo'/>
+            </div>
             
             <NavLink to='/' className='nav-inner' 
              id='teams' onClick={()=>setClassName(true)} >

@@ -258,7 +258,7 @@ function convertInKG(str){
                                     </div>
                                     <div className="team_About4">
                                           <Link to={`/teams/CurrentHistagram/${memberId}`} style={{textDecoration: 'none'}}>
-                                             <div className="Histogram">Histogram Player</div>
+                                             <div className="Histogram">Player Statistics</div>
                                           </Link> 
                                     </div>
                                    
