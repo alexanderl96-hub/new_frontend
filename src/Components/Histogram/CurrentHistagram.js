@@ -35,6 +35,16 @@ import { useParams } from 'react-router-dom';
     const [currentSo, setCurrSO] = useState([])
     const [currentSb, setCurrSB] = useState([])
     const [currentAVE, setCurrAVE] = useState([])
+    const [currPitDate, setCurrPitDate] = useState([])
+    const [currPitIp, setCurrPitIP] = useState([])
+    const [currPitR, setCurrPitR] = useState([])
+    const [currPitH, setCurrPitH] = useState([])
+    const [currPitEr, setCurrPitEr] = useState([])
+    const [currPitBb, setCurrPitBB] = useState([])
+    const [currPitHr, setCurrPitHR] = useState([])
+    const [currPitSo, setCurrPitSO] = useState([])
+    const [currPitSv, setCurrPitSv] = useState([])
+    const [currPitERA, setCurrPitERA] = useState([])
   
     let params = useParams()
     let memberId = params.id
@@ -66,6 +76,16 @@ import { useParams } from 'react-router-dom';
         [currentDate['4'], currentAb['4'], currentR['4'], currentH['4'], currentRb['4'], currentBb['4'], currentSo['4'], currentHr['4'], currentSb['4'], currentAVE['4']],
     
       ];
+       
+ const dataCurrPit = [
+    ["Date", "H", "R", "ER", "IP", "HR", "BB", "SO", "SV", "ERA"],
+    [currPitDate['0'], currPitH['0'], currPitR['0'], currPitEr['0'], currPitIp['0'], currPitHr['0'], currPitBb['0'], currPitSo['0'], currPitSv['0'], currPitERA['0']], /*      */ 
+    [currPitDate['1'], currPitH['1'], currPitR['1'], currPitEr['1'], currPitIp['1'], currPitHr['1'],currPitBb['1'], currPitSo['1'],  currPitSv['1'], currPitERA['1']],    
+    [currPitDate['2'], currPitH['2'], currPitR['2'], currPitEr['2'], currPitIp['2'], currPitHr['2'],currPitBb['2'], currPitSo['2'],  currPitSv['2'], currPitERA['2']],
+    [currPitDate['3'], currPitH['3'], currPitR['3'], currPitEr['3'], currPitIp['3'], currPitHr['3'],currPitBb['3'], currPitSo['3'],  currPitSv['3'], currPitERA['3']],
+    [currPitDate['4'], currPitH['4'], currPitR['4'], currPitEr['4'], currPitIp['4'], currPitHr['4'],currPitBb['4'], currPitSo['4'],  currPitSv['4'], currPitERA['4']],
+  ];
+
 
       const options = {
         title: member.toString(),
@@ -98,7 +118,7 @@ import { useParams } from 'react-router-dom';
             let storeSV = []
             let storeWHIP = []
             let storeERA = []
-            let val = data.filter(a => a.pitcher_id === Number(memberId)).slice(-5)
+            let val = data.filter(a => a.pitcher_id === Number(memberId)).slice(-5).sort((a,b)=>a.id-b.id)
             val.forEach((elem)=>{
                 storeYear.push(elem.game_year)
                 storeGP.push(elem.career_gp)
@@ -140,7 +160,7 @@ import { useParams } from 'react-router-dom';
             let storeSO = []
             let storeHR = []
             let storeAVE = []
-            let val = data.filter(a => a.players_id === Number(memberId)).slice(-5)
+            let val = data.filter(a => a.players_id === Number(memberId)).slice(-5).sort((a,b)=>a.id-b.id)
             val.forEach((elem)=>{
                 storeYear.push(elem.game_year)
                 storeGP.push(elem.career_gp)
@@ -182,7 +202,7 @@ import { useParams } from 'react-router-dom';
             let storeSO = []
             let storeHR = []
             let storeAVE = []
-            let val = data.filter(a => a.players_id === Number(memberId)).slice(-3).sort((a,b)=>a.id-b.id)
+            let val = data.filter(a => a.players_id === Number(memberId)).slice(-7).sort((a,b)=>a.id-b.id)
             val.forEach((elem)=>{
                 storeDate.push(elem.game_date)
                 storeSB.push(elem.sb)
@@ -210,7 +230,49 @@ import { useParams } from 'react-router-dom';
         })
       },[memberId])
 
-      console.log()
+      useEffect(() => {
+        fetch(`https://my-baseball-teams.adaptable.app/pitchersStats`)
+        .then(res => res.json())
+        .then(data =>{
+            let storeDate= []
+            let storeIp = []   
+            let storeH = []
+            let storeR = []
+            let storeEr = []
+            let storeHr = []
+            let storeBB = []
+            let storeSO = []
+            let storeSv = []
+            let storeERA = []
+            let val = data.filter(a => a.players_id === Number(memberId)).slice(-7).sort((a,b)=>a.id-b.id)
+            val.forEach((elem)=>{
+                storeDate.push(elem.game_date)
+                storeIp.push(elem.ip)
+                storeH.push(elem.h)
+                storeR.push(elem.r)
+                storeEr.push(elem.er)
+                 storeHr.push(elem.hr)
+                 storeBB.push(elem.bb)
+                 storeSO.push(elem.so)
+                 storeSv.push(elem.sv)
+                 storeERA.push(elem.era)
+                
+            })
+            console.log(storeDate, 'sort')
+                setCurrPitDate(storeDate)    
+                setCurrPitSv(storeSv)
+                setCurrPitIP(storeIp)
+                setCurrPitR(storeR)
+                setCurrPitH(storeH)
+                setCurrPitEr(storeEr)
+                setCurrPitBB(storeBB)
+                setCurrPitSO(storeSO)
+                setCurrPitHR(storeHr)
+                setCurrPitERA(storeERA)
+        })
+      },[memberId])
+    
+      console.log(currPitDate.length)
   return (
     <div style={{display:'flex', flexDirection: 'row', justifyContent: 'center'}}>
         <div>
@@ -243,6 +305,7 @@ import { useParams } from 'react-router-dom';
            
            </div>
            <div>
+          
            { currentDate.length > 0 ? 
                 <div style={{marginTop: '100px', textAlign: 'center'}}>
                 <Chart
@@ -254,7 +317,17 @@ import { useParams } from 'react-router-dom';
                 />
                 <p style={{ fontSize: '20px'}}> Player Current Season</p>
             </div> :null}
-                
+            { currPitDate.length > 0 ? 
+                <div style={{marginTop: '100px', textAlign: 'center'}}>
+                <Chart
+                chartType="Line"
+                width='750px'
+                height="500px"
+                data={ dataCurrPit }
+                options={options}
+                />
+                <p style={{ fontSize: '20px'}}> Pitcher Current Season</p>
+            </div> :null}
            </div>
     </div>
   );

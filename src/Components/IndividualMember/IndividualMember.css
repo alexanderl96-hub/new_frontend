@@ -248,6 +248,11 @@
      padding: 3px;
      cursor: pointer;
  }
+ .Histogram:hover {
+    background-color: rgb(29, 98, 208);
+    color: white;
+    cursor: pointer;
+}
 .statsGrid{
     background-color: #2c2424;
     color:white;
@@ -393,7 +398,7 @@
      margin-left: -10px;
     margin-right: -10px; 
     color: white;
-    margin-bottom: 100px;
+    margin-bottom: 110px;
 }
 
 

@@ -27,9 +27,8 @@ const Desing = () => {
 
 
     const ratingChanged = (a) => { 
-      console.log(ab)
-      let rest = ab
-      if(ab ===  0.500 ){ rest = 5.0 }
+      let rest = 0
+      if(a ===  0.500 ){ rest = 5.0 }
       else if(a >= 0.450 && a < 0.500){ rest = 4.5 }
       else if(a >= 0.400 && a < 0.450){ rest = 4.0 }
       else if(a >= 0.350 && a < 0.400){ rest = 3.5 }
@@ -105,11 +104,12 @@ const Desing = () => {
       },[teamId])
 
        useEffect(() => {
-         fetch(`https://my-baseball-teams.adaptable.app/playersStats`)
+         fetch(`https://my-baseball-teams.adaptable.app/playersCareer`)
          .then(res => res.json())
          .then(data =>{
-          let arr = data.map((stat,i) => {return stat.players_id === Number(search) ? stat.average: null })
-            setNewI(arr = arr.map((a , index)=>  a !== null ? setAB(a) : ''))
+          let arr = data.filter(stat => stat.players_id === Number(search))
+            setNewI(arr.sort((a,b)=>a.id-b.id).slice(-1).map(a => a.career_average
+              ))
          })
      },[search])
 
@@ -127,7 +127,7 @@ const Desing = () => {
   //     })
   // },[search])
 
-    fisrt = ratingChanged(ab)
+    fisrt = ratingChanged(Number(newI.join()))
       
 
   return (
@@ -164,12 +164,12 @@ const Desing = () => {
                            <div className='innerSectionStart'>
                            <ReactStars 
                               count={5}
-                              value={ratingChanged(ab)}
+                              value={fisrt}
                               color='gray'
                               edit={false}
                               size={30}
                               isHalf={true}
-                              onChange={ratingChanged(ab)}
+                              onChange={fisrt}
                               /> 
                            </div>
                        </div>
