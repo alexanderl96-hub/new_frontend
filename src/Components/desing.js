@@ -37,7 +37,7 @@ const Desing = () => {
       else if(a >= 0.200 && a < 0.250){ rest = 2.0 }
       else if(a >= 0.150 && a < 0.200){ rest = 1.5 }
       else if(a>= 0.100 && a < 0.150){ rest = 1.0 }
-      else if(a >= 0.50 && a < 0.10){ rest = 4.5 }
+      else if(a >= 0.50 && a < 0.10){ rest = 0.5 }
       else if(a>= 0.10){ rest = 0.0}
       return rest
     }; 

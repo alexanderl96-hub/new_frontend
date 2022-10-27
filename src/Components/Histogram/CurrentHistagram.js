@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Chart } from "react-google-charts";
 import { useParams } from 'react-router-dom';
-
+import './CurrentHistagram.css';
 
  const CurrentHistagram = ()=> {
     const [member, setMember] = useState([])
@@ -96,6 +96,24 @@ import { useParams } from 'react-router-dom';
            // subtitle: "in millions of dollars (USD)",
           },
       };
+      
+     
+    const ratingChanged = (a) => { 
+      let rest = 0
+      if(a >=  0.300 ){ rest = 5.0 }
+      else if(a >= 0.275 && a < 0.300){ rest = 4.5 }
+      else if(a >= 0.250 && a < 0.275){ rest = 4.0 }
+      else if(a >= 0.225 && a < 0.250){ rest = 3.5 }
+      else if(a >= 0.200 && a < 0.225){ rest = 3.0 }
+      else if(a >= 0.175 && a < 0.200){ rest = 2.5 }
+      else if(a >= 0.150 && a < 0.175){ rest = 2.0 }
+      else if(a >= 0.125 && a < 0.150){ rest = 1.5 }
+      else if(a>= 0.100 && a < 0.125){ rest = 1.0 }
+      else if(a >= 0.50 && a < 0.10){ rest = 0.5 }
+      else if(a>= 0.10){ rest = 0.0}
+      return rest
+    }; 
+
       useEffect(() => {
         fetch(`https://my-baseball-teams.adaptable.app/groups`)
         .then(res => res.json())
@@ -171,7 +189,7 @@ import { useParams } from 'react-router-dom';
                  storeBB.push(elem.career_bb)
                  storeSO.push(elem.career_so)
                  storeHR.push(elem.career_hr)
-                 storeAVE.push(elem.career_ave)
+                 storeAVE.push(ratingChanged(elem.career_average))
                 
             })
              
@@ -213,10 +231,10 @@ import { useParams } from 'react-router-dom';
                  storeBB.push(elem.bb)
                  storeSO.push(elem.so)
                  storeHR.push(elem.hr)
-                 storeAVE.push(elem.ave)
+                 storeAVE.push(ratingChanged(elem.average))
                 
             })
-            console.log(storeDate, 'sort')
+            console.log(storeAVE, 'sortlast')
                 setCurrDate(storeDate)    
                 setCurrSB(storeSB)
                 setCurrAB(storeAB)
@@ -258,7 +276,7 @@ import { useParams } from 'react-router-dom';
                  storeERA.push(elem.era)
                 
             })
-            console.log(storeDate, 'sort')
+            console.log(storeERA, 'sort')
                 setCurrPitDate(storeDate)    
                 setCurrPitSv(storeSv)
                 setCurrPitIP(storeIp)
@@ -272,61 +290,60 @@ import { useParams } from 'react-router-dom';
         })
       },[memberId])
     
-      console.log(playerYear)
+      console.log(playerYear, pitcherERA)
   return (
-    <div style={{display:'flex', flexDirection: 'row', justifyContent: 'center'}}>
+    <div className='MainContStatc'>
         <div>
-
                 { pitcherYear.length > 0 ? 
-                <div style={{textAlign: 'center'}}>
+                <div className='pitcherCarStatc'>
                 <Chart
                 chartType="PieChart"
-                width='750px'
+                width='650px'
                 height="600px"
                 data={ dataPitcher }
                 options={options}
                 />
-                <p style={{marginLeft: '-200px', fontSize: '20px'}}>Career Pitcher Stats</p>
+                <p >Career Pitcher Stats</p>
             </div> :null}
                 
             
                 {playerYear.length > 0 ?   
-                <div style={{textAlign: 'center'}} > 
+                <div className='pitcherCarStatc'> 
                     <Chart
                     chartType="PieChart"
-                    width='750px'
+                    width='650px'
                     height="600px"
                     data={data}
                     options={options}
                     />
-                    <p style={{ marginLeft: '-200px',fontSize: '20px'}}>Career Player Stats</p>
+                    <p >Career Player Stats</p>
                 </div>      
                 : null}
            
-           </div>
-           <div>
+          </div>
+          <div>
           
            { currentDate.length > 0 ? 
-                <div style={{marginTop: '100px', textAlign: 'center'}}>
+                <div className='currStatc'>
                 <Chart
                 chartType="Line"
-                width='750px'
+                width='650px'
                 height="500px"
                 data={ dataCurrent }
                 options={options}
                 />
-                <p style={{ fontSize: '20px'}}> Player Current Season</p>
+                <p > Player Current Season</p>
             </div> :null}
             { currPitDate.length > 0 ? 
-                <div style={{marginTop: '100px', textAlign: 'center'}}>
+                <div className='currStatc'>
                 <Chart
                 chartType="Line"
-                width='750px'
+                width='650px'
                 height="500px"
                 data={ dataCurrPit }
                 options={options}
                 />
-                <p style={{ fontSize: '20px'}}> Pitcher Current Season</p>
+                <p > Pitcher Current Season</p>
             </div> :null}
            </div>
     </div>
