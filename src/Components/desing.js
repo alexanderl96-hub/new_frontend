@@ -4,7 +4,7 @@ import ReactStars from "react-rating-stars-component"
 // import DeleteIcon from '@mui/icons-material/Delete';
 import Navbar from '../Components/navBar/Navbar'
 import './desing.css'
-import {FaBurn, FaTrash,FaUserPlus} from 'react-icons/fa';
+import { FaTrash,FaUserPlus} from 'react-icons/fa';
 import axios from 'axios'
 
 

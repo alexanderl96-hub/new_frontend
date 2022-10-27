@@ -1,14 +1,7 @@
 import React,  { useState, useEffect }from 'react'
 import { useParams, Link} from 'react-router-dom'
 // import { BiEdit} from "react-icons/fa";
-import {FaPlus, FaRecycle ,FaStackExchange, FaStackOverflow, FaStackpath, FaStamp,  FaEdit,FaStats,FaAd, FaAddressBook, FaAddressCard, 
-    FaAdjust, FaUber, FaUbuntu, FaUikit, FaUmbraco, FaUmbrella, FaUmbrellaBeach,
-     FaUncharted, FaUnderline, FaUndo, FaUndoAlt, FaUniregistry, FaUnity, FaUniversalAccess,
-      FaUniversity, FaUnlink, FaUnlock, FaUnlockAlt, FaUnsplash, FaUntappd, FaUpload, 
-      FaUps, FaUsb, FaUser, FaUserAlt, FaUserAltSlash, FaUserAstronaut, FaUserCheck, 
-      FaUserCircle, FaUserClock, FaUserCog, FaUserEdit, FaUserFriends, FaUserGraduate,
-       FaUserInjured, FaUserLock, FaUserMd, FaUserMinus, FaUserNinja, FaUserNurse,
-        FaUserPlus, FaUserSecret, FaUserShield, FaUserSlash, } from 'react-icons/fa';
+import {FaPlus, FaRecycle , FaUserEdit } from 'react-icons/fa';
 import './IndividualMember.css'
 import axios from 'axios'
 import Navbar from '../navBar/Navbar'
