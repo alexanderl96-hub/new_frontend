@@ -3,12 +3,10 @@ import Navbar from '../../Components/navBar/Navbar'
 import './players.css'
 import {Link} from 'react-router-dom'
 import Loading from '../../Loading'
-// import {articule} from '../../Components/desing'
 
 
 const Players = () => {    
     const [allplayers, setAllPlayers] = useState([])
-    const [more, setMore] = useState(['⌄'])
     const [val, setVal] = useState([])
     const [search, setSearch] = useState({
         name: '',
@@ -52,30 +50,17 @@ const Players = () => {
      e.preventDefault()
     setVal(val)
   }
-//   const handleReset = (e) =>{
-//         setSearch({ [e.target.value] : "" })
-//   }
 
-//  const open = (e) =>{
-//     if(more === '⌄'){
-//         setMore('⌃')
-        
-//     }else{
-//         setMore('⌄')
-//     }
-//  }
 
   return (
     <div className='playerMainContent'  >
         <Navbar/>
-        {/* <h1 style={{backgroundColor: 'red',color: 'white',width:'10%', borderRadius: '10px', marginTop: '5px', marginBottom: '5px'}}>Players</h1> */}
         <div className='navPlay'>
             <h1 >Players</h1>
 
             <div className='divForm'>
                 <form onChange={handleSubmit} >
-                <input id='name' type='text' onChange={handleInput} placeholder="🔍" style={{}} ></input>
-                {/* <button type='submit' onClick={handleReset} style={{padding: '2px', fontSize: '15px', marginLeft: '-49px'}} >Reset</button> */}
+                <input id='name' type='text' onChange={handleInput} placeholder="🔍"  />
                 </form>
             </div>
             <div className='divMatch'>

@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react'
-import {Link, useParams,useNavigate} from 'react-router-dom'
+import { useParams,useNavigate} from 'react-router-dom'
 import './addStatsPlayers.css'
 import axios from "axios";
 import Navbar from '../navBar/Navbar'
 
 const AddStatsPlayers = () => {
-    const navigate = useNavigate();
+   const navigate = useNavigate();
    const [memberHold, setMemberHold] = useState([])
-   const [checkId, setCheckId] = useState([])
    const [statPlayers, setStatPlayers] = useState({
     players_id: '', 
     game: '',
@@ -75,10 +74,7 @@ const AddStatsPlayers = () => {
          fetch(`https://my-baseball-teams.adaptable.app/groups`)
         .then(res => res.json())
         .then(data =>{
-    //       setNewGroup(data)
-    //       setCoachName(data)
     setMemberHold(data = data.filter(a => a.id === Number(memberId)))
-    setCheckId(data = data.filter(a => a.id === Number(memberId)).map((a,i)=>{return a.id}))
          })
        },[memberId])
     // useEffect(() => {

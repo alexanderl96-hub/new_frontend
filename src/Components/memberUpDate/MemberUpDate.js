@@ -1,5 +1,5 @@
 import React,  { useState, useEffect}from 'react'
-import { useParams, Link, useNavigate} from 'react-router-dom'
+import { useParams, useNavigate} from 'react-router-dom'
 import axios from "axios";
 import '../newMember/NewMember.css'
 import './MemberUpdate.css'
@@ -7,11 +7,9 @@ import Navbar from '../navBar/Navbar'
 
 const MemberUpDate = () => {
   const [member, setMemberid] = useState([])
-
   const [memberName, setMemberName] = useState([])
   const [memberImg, setMemberImg] = useState([])
   const [memberTeam, setMemberTeam] = useState([])
-  const [memberAge, setMemberAge] = useState([])
   const [memberBirth, setMemberBirth] = useState([])
   const [memberCity, setMemberCity] = useState([])
   const [memberState, setMemberState] = useState([])
@@ -93,7 +91,7 @@ const MemberUpDate = () => {
           setMemberName(data.team.name)
           setMemberImg(data.team.imag)
           setMemberTeam(data.team.current_team)
-          setMemberAge(data.team.age)
+          // setMemberAge(data.team.age)
           setMemberBirth(data.team.born)
           setMemberCity(data.team.city)
           setMemberState(data.team.state)

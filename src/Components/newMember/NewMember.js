@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Link , useNavigate, useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import './NewMember.css'
 import axios from 'axios'
 import Navbar from '../navBar/Navbar'
@@ -8,7 +8,6 @@ const NewMember = () => {
     const navigate = useNavigate();
     let { id } = useParams();
     const [group, setGroup] = useState([]);
-    const [kg, setKG] = useState([]);
     const date = new Date();
     const year = date.getFullYear()
     const month = date.getMonth()+1
@@ -171,7 +170,7 @@ const educationLen = (about) => {
      pro.push(str[i])
      i++
   }
-return pro.length <= 5 ?  pro.join(' ') : pro.slice(0, 7).join(' ') + ' '+"..." 
+return pro.length <= 5 ?  pro.join(' ') : pro.slice(0, 7).join(' ').concat(' ...')
 };
 
 const aboutLength = (about) => {
@@ -182,7 +181,7 @@ const aboutLength = (about) => {
      pro.push(str[i])
      i++
   }
-  return pro.length <= 31 ?  pro.join(' ') : pro.slice(0, 32).join(' ') + ' '+"..."
+  return pro.length <= 31 ?  pro.join(' ') : pro.slice(0, 32).join(' ').concat(' ...')
 };
 
 // let str = newMember.weight
@@ -216,7 +215,7 @@ console.log(classT, )
                                 <input id='city' type="text" onChange={handleInput} value={newMember.city} placeholder="City..."  className='inputNew' ></input>
                                 <input id='state' type="text" onChange={handleInput} value={newMember.state} placeholder="State..." className='inputNew' ></input>
                                 <input id='country' type="text" onChange={handleInput} value={newMember.country} placeholder="Country..." className='inputNew' ></input>
-                                <input id='age' type="text" onChange={handleInput} value={ newMember.age} placeholder={ currentAge(age)} className='inputNew'></input>
+                                <input id='age' type="text" onChange={handleInput} value={ newMember.age} placeholder={ !currentAge(age) ? "Age": currentAge(age)} className='inputNew'></input>
                                 <input id='height' type="text" onChange={handleInput} value={newMember.height} placeholder="Height..."  className='inputNew' ></input>
                                 <input id='weight' type="text" onChange={handleInput} value={newMember.weight}  placeholder="Weight..."  className='inputNew' ></input>
                                 <input id='current_team' type="text" onChange={handleInput} value={newMember.current_team} placeholder={group.name} className='inputNew' ></input>

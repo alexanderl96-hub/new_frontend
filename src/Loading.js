@@ -1,16 +1,16 @@
 import React from 'react'
 import ReactLoading from 'react-loading'
-import { Section, Title, Article, Prop, list } from "./generic";
+import { Section, list } from "./generic";
 
 
 const Loading = () => {
     return (
-    <Section style={{ paddingTop:'18%'}}>
+    <Section style={{ paddingTop:'18%',}}>
         {list.map(l => (
             l.props === "spinningBubbles" ? 
             <ReactLoading 
               type={l.props} 
-              color={'white'} 
+              color={'blue'} 
               height={30} 
               width={100}/> : null
         ))}

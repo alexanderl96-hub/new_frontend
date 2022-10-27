@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import IndividualTeam from '../individualTeam/IndividualTeam'
-import Desing from '../desing'
 import Navbar from '../navBar/Navbar'
 import './Teams.css'
 

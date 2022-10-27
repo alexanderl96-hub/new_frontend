@@ -9,14 +9,11 @@ import axios from 'axios'
 
 
 const Desing = () => {
-    const [newgroup, setNewGroup] = useState([])
     const [ newI, setNewI]= useState([])
     const [ newtest, setNewtest]= useState([])
     const [nombre, setCoachName] = useState([])
     const [search, setSearch] = useState([])
-    const [ab, setAB] = useState([])
      const [group, setGroup] =useState([])
-
      const [start, setStart] =useState(0)
      const [last, setLast] =useState(6)
      const [start1, setPreviuos] =useState(0)
@@ -74,7 +71,6 @@ const Desing = () => {
          fetch(`https://my-baseball-teams.adaptable.app/groups`)
          .then(res => res.json())
          .then(data =>{
-           setNewGroup(data)
            setCoachName(data)
           setNewtest(data = data.filter((a,b)=> a.team_id === Number(teamId)))
          })
