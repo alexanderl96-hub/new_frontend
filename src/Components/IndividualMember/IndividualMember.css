@@ -246,6 +246,7 @@
      background-color: rgb(208, 130, 29);
      border-radius: 30px;
      padding: 3px;
+     text-decoration: underline;
      cursor: pointer;
  }
  .Histogram:hover {

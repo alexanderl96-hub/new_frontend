@@ -7,6 +7,8 @@
   -moz-animation: fadein 0.5s; /* Firefox */
   -webkit-animation: fadein 0.5s; /* Safari and Chrome */
   -o-animation: fadein 0.5s;
+  background: rgb(195, 194, 194); 
+
 }
 .newTeam_Container > h1 {
     color: white;

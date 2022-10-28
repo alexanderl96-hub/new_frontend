@@ -155,7 +155,7 @@ const Desing = () => {
                                <p><span>Position:</span> {a.position}</p>
                                <p><span>Salary:</span> {a.salary}</p>
                                <p><span>About: </span>{a.about}</p>
-                               <Link to={`/teams/groups/${search}`} className='changeMore'>More...</Link>
+                               <Link to={`/teams/groups/${search}`} className='changeMore'> See More...</Link>
                              </div>
                            <div className='innerSectionStart'>
                            <ReactStars 

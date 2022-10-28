@@ -5,8 +5,8 @@ import { NavLink , Link} from 'react-router-dom'
 import imageLogo from '../../image/FullLogoTransparent.png'
 import frontLogo from '../../image/FullLogo.png'
 
-function Navbar({id}) {
-  const [className, setClassName] = useState(false)
+function Navbar() {
+  const [menuIdActive, setMenuIdActive] = useState('')
   const [sideNavar, setSideNavar]= useState('sideNavar')
 
   function changeNav(){
@@ -16,7 +16,7 @@ function Navbar({id}) {
       setSideNavar('sideNavar')
     }
   }
-  
+  console.log(menuIdActive)
   
   return (
     <div className="navbar">
@@ -27,17 +27,17 @@ function Navbar({id}) {
             </div>
             
             <NavLink to='/' className='nav-inner' 
-             id='teams' onClick={()=>setClassName(true)} >
+             id='teams' onClick={(e)=>setMenuIdActive(e.target.id)} >
                <div >TEAMS </div>
                
             </NavLink>
-            <NavLink to={'/teams/allplayers'} className='nav-inner'   >
+            <NavLink to={'/teams/allplayers'} className='nav-inner'   id='player' onClick={(e)=>setMenuIdActive(e.target.id)}  >
                <div  >PLAYERS</div>
             </NavLink>
-            <NavLink to={'/teams/allCoaches'} className='nav-inner' >
+            <NavLink to={'/teams/allCoaches'} className='nav-inner'  id='coach' onClick={(e)=>setMenuIdActive(e.target.id)} >
                <div >COACHES</div>
             </NavLink>
-           <NavLink to={'/teams/Season'} className='nav-inner' >
+           <NavLink to={'/teams/Season'} className='nav-inner'  id='season' onClick={(e)=>setMenuIdActive(e.target.id)} >
                <div >SEASON</div>
            </NavLink>
            {/* <Link to={'/teams/allFavorites'} className='nav-inner'>
@@ -56,7 +56,7 @@ function Navbar({id}) {
            </div>  
            <div  className={sideNavar} >
                   <div>
-                      <FaHome id="home" onClick={changeNav}/>
+                      <FaHome id="home" onClick={changeNav}/>          
                  </div>
                 <div className='entrada'>
                       <div>
@@ -71,6 +71,7 @@ function Navbar({id}) {
                       <NavLink to="" className='topicLink' >Log In</NavLink>
                 </div>
            </div>
+           {/* <img src={imageLogo} alt="1"  className='topicLogoFront' /> */}
     </div>
   )
 }

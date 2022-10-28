@@ -1,9 +1,10 @@
 .MainDesing{
     overflow-x: hidden;
     overflow-y: hidden;
-     background-color: #80808095;
+     /* background-color: #80808095; */
      height: 100%;
      width: 100%;
+     background: rgb(194, 192, 192); 
 }
 .desingIcon{
     color: white;
@@ -83,10 +84,15 @@
 .innerSection2-3 > p{
     margin: 3px;
 }
+.changeMore{
+    text-decoration: underline;
+    font-size: 15.4px;
+}
 .changeMore:hover{
     color:blue;
     font-style:italic;
     font-weight: bolder;
+    font-size: 15.4px;
   }
 .innerSectionStart{
     margin-top: 20px;
@@ -218,7 +224,6 @@
     .MainDesing{
         overflow-x: hidden;
         overflow-y: hidden;
-         background-color: #80808095;
          height: 100%;
          width: 100%;
     }
@@ -332,7 +337,7 @@
         bottom: 40px;
         width: 60px;
         height: 185px;
-        color: white;
+        color: black;
         transform: rotate(180deg);
         background-color: transparent;
         border: none;
@@ -346,7 +351,7 @@
         bottom: 40px;
         width: 60px;
         height: 185px;
-        color: white;
+        color: black;
         background-color: transparent;
         border: none;
         font-size: 30px;
@@ -369,14 +374,12 @@
     .media-group-container{
         height: 240px; 
         width: 180px;
-        background-color: rgba(255, 255, 255, 0.762);
         border-radius: 12.8px;
     }
     .media-group-container:hover{
         box-shadow: 5px 3px 3px 5px;
     }
     .media-group-container > h3 {
-        background-color: white;
         border-radius: 13px;
         height: 60px;
         text-align: center;
@@ -386,7 +389,7 @@
        
     }
     .media-group > img {
-        background-color: gray;
+        background: white;
         border-radius: 12px;
         width: 180px;
         height: 160px;
@@ -1355,9 +1358,11 @@
     .MainDesing{
         overflow-x: hidden;
         overflow-y: hidden;
-         background-color: #80808095;
+         /* background-color: #80808095; */
          height:100%;
          width: 100%;
+         background: rgb(194, 192, 192); 
+
     }
     .newadded{ 
         color: white;
@@ -1530,7 +1535,7 @@
     .MainDesing{
         overflow-x: hidden;
         overflow-y: hidden;
-         background-color: #80808095;
+         /* background-color: #80808095; */
          height:100%;
          width: 100%;
     }
