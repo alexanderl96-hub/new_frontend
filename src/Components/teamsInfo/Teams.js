@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import IndividualTeam from '../individualTeam/IndividualTeam'
 import Navbar from '../navBar/Navbar'
+import Footer from '../Footer/Footer.js'
 import './Teams.css'
 
 
@@ -38,6 +39,7 @@ const Teams = () => {
              )
          })}
          </div>
+         <Footer/>
     </div>
   )
 }

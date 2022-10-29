@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Chart } from "react-google-charts";
 import { useParams } from 'react-router-dom';
 import './CurrentHistagram.css';
+import NavBar from '../navBar/Navbar'
 
  const CurrentHistagram = ()=> {
     const [member, setMember] = useState([])
@@ -74,7 +75,9 @@ import './CurrentHistagram.css';
         [currentDate['2'], currentAb['2'], currentR['2'], currentH['2'], currentRb['2'], currentBb['2'], currentSo['2'], currentHr['2'], currentSb['2'], currentAVE['2']],
         [currentDate['3'], currentAb['3'], currentR['3'], currentH['3'], currentRb['3'], currentBb['3'], currentSo['3'], currentHr['3'], currentSb['3'], currentAVE['3']],
         [currentDate['4'], currentAb['4'], currentR['4'], currentH['4'], currentRb['4'], currentBb['4'], currentSo['4'], currentHr['4'], currentSb['4'], currentAVE['4']],
-    
+        [currentDate['5'], currentAb['5'], currentR['5'], currentH['5'], currentRb['5'], currentBb['5'], currentSo['5'], currentHr['5'], currentSb['5'], currentAVE['5']],
+        [currentDate['6'], currentAb['6'], currentR['6'], currentH['6'], currentRb['6'], currentBb['6'], currentSo['6'], currentHr['6'], currentSb['6'], currentAVE['6']],
+        
       ];
        
  const dataCurrPit = [
@@ -84,6 +87,9 @@ import './CurrentHistagram.css';
     [currPitDate['2'], currPitH['2'], currPitR['2'], currPitEr['2'], currPitIp['2'], currPitHr['2'],currPitBb['2'], currPitSo['2'],  currPitSv['2'], currPitERA['2']],
     [currPitDate['3'], currPitH['3'], currPitR['3'], currPitEr['3'], currPitIp['3'], currPitHr['3'],currPitBb['3'], currPitSo['3'],  currPitSv['3'], currPitERA['3']],
     [currPitDate['4'], currPitH['4'], currPitR['4'], currPitEr['4'], currPitIp['4'], currPitHr['4'],currPitBb['4'], currPitSo['4'],  currPitSv['4'], currPitERA['4']],
+    [currPitDate['5'], currPitH['5'], currPitR['5'], currPitEr['5'], currPitIp['5'], currPitHr['5'],currPitBb['5'], currPitSo['5'],  currPitSv['5'], currPitERA['5']],
+    [currPitDate['6'], currPitH['6'], currPitR['6'], currPitEr['6'], currPitIp['6'], currPitHr['6'],currPitBb['6'], currPitSo['6'],  currPitSv['6'], currPitERA['6']],
+    
   ];
 
 
@@ -292,6 +298,8 @@ import './CurrentHistagram.css';
     
       console.log(playerYear, pitcherERA)
   return (
+    <div>
+      <NavBar/>
     <div className='MainContStatc'>
         <div>
                 { pitcherYear.length > 0 ? 
@@ -299,7 +307,7 @@ import './CurrentHistagram.css';
                 <Chart
                 chartType="PieChart"
                 width='650px'
-                height="600px"
+                height="550px"
                 data={ dataPitcher }
                 options={options}
                 />
@@ -312,7 +320,7 @@ import './CurrentHistagram.css';
                     <Chart
                     chartType="PieChart"
                     width='650px'
-                    height="600px"
+                    height="550px"
                     data={data}
                     options={options}
                     />
@@ -328,7 +336,7 @@ import './CurrentHistagram.css';
                 <Chart
                 chartType="Line"
                 width='650px'
-                height="500px"
+                height="450px"
                 data={ dataCurrent }
                 options={options}
                 />
@@ -339,7 +347,7 @@ import './CurrentHistagram.css';
                 <Chart
                 chartType="Line"
                 width='650px'
-                height="500px"
+                height="450px"
                 data={ dataCurrPit }
                 options={options}
                 />
@@ -347,6 +355,7 @@ import './CurrentHistagram.css';
             </div> :null}
            </div>
     </div>
+  </div>
   );
 }
 export default CurrentHistagram;

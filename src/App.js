@@ -18,6 +18,15 @@ import Season from '../src/ComponentsPlayers/Season/Season'
 import AddStats from '../src/Components/statsPlayers/addStatsPlayers'
 import Desing from '../src/Components/desing'
 import CurrentHistagram from '../src/Components/Histogram/CurrentHistagram'
+import About from '../src/Components/AboutUs/about'
+import News from '../src/Components/LatestsNews/News'
+import SpringTraining from '../src/Components/LatestsNews/Spring'
+import Exhibition from '../src/Components/LatestsNews/Exhibition'
+import AllStart from '../src/Components/LatestsNews/AllStart'
+import DivisionSeries from '../src/Components/LatestsNews/DivisionSeries'
+import FirstRound from '../src/Components/LatestsNews/FirstRound'
+import LeagueChampionship from '../src/Components/LatestsNews/LeagueChampionship'
+import WorldSeries from '../src/Components/LatestsNews/WorldSeries'
 
 function App() {
  
@@ -33,6 +42,15 @@ function App() {
           <Route  path="/teams/allplayers" element={<Allplayers/>}/>
           <Route  path="/teams/allCoaches" element={<Coaches/>}/>
           <Route  path="/teams/Season" element={<Season/>}/>
+          <Route  path="/teams/About" element={<About/>}/>
+          <Route  path="/teams/News" element={<News/>}/>
+          <Route  path="/teams/News/SpringTraining" element={<SpringTraining/>}/>
+          <Route  path="/teams/News/Exhibition" element={<Exhibition/>}/>
+          <Route  path="/teams/News/AllStart" element={<AllStart/>}/>
+          <Route  path="/teams/News/DivisionSeries" element={<DivisionSeries/>}/>
+          <Route  path="/teams/News/FirstRound(wildCard)" element={<FirstRound/>}/>
+          <Route  path="/teams/News/LeagueChampionship" element={<LeagueChampionship/>}/>
+          <Route  path="/teams/News/WorldSeries" element={<WorldSeries/>}/>
           <Route  path="/teams/groups/:id/addStats" element={<AddStats/>}/>
           <Route  path="/teams/newpage/:id" element={<Desing/>}/>  
           <Route  path="/teams/CurrentHistagram/:id" element={<CurrentHistagram/>}/>      

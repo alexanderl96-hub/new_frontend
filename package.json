@@ -19,6 +19,8 @@
     "react-rating-stars-component": "^2.2.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
+    "react-scroll": "^1.8.8",
+    "react-scroll-to-top": "^3.0.0",
     "sass": "^1.54.5",
     "tachyons-components": "^1.0.1",
     "web-vitals": "^2.1.4"
