@@ -479,9 +479,9 @@ h1 {
     color: white;
   }
   .nav-inner {
-    margin-top: 1%;
-    font-size: 11px;
-    margin-left: -25px;
+    margin-top: -1%;
+    font-size: 10px;
+    margin-left: -29px;
   }
   .nav2 {
     display: flex;
@@ -495,14 +495,14 @@ h1 {
     text-align: center;
     margin-left: -5px;
     cursor: pointer;
-    margin-top: 8%;
-    font-size: 11px;
+    margin-top: -1%;
+    font-size: 10px;
   }
   .navlogIn {
     color: white;
-    font-size: 11px;
-    margin-top: 3.5%;
-    margin-right: -5px;
+    font-size: 10px;
+    margin-top: -0.5%;
+    margin-right: 4px;
   }
   .nav > a.active {
     text-decoration: underline;
@@ -586,7 +586,7 @@ h1 {
   background-color: rgba(9, 58, 58, 0.783);
   position: fixed;
   width: 180px;
-  height: 40%;
+  height: 10%;
   margin-left: -180px;
   transition: all 1.0s linear;
   visibility: visible;
@@ -597,7 +597,7 @@ h1 {
   background-color: rgba(9, 58, 58, 0.783);
   position: fixed;
   width: 180px;
-  height: 47.7%;
+  height: 51.5%;
   margin-left: 0px;
   transition: all 1.0s linear;
   visibility: visible;
@@ -698,7 +698,7 @@ h1 {
   background-color: rgba(9, 58, 58, 0.783);
   position: fixed;
   width: 180px;
-  height: 40%;
+  height: 10%;
   margin-left: -180px;
   transition: all 1.0s linear;
   visibility: visible;
@@ -709,7 +709,7 @@ h1 {
   background-color: rgba(9, 58, 58, 0.783);
   position: fixed;
   width: 180px;
-  height: 48.3%;
+  height: 53.2%;
   margin-left: 0px;
   transition: all 1.0s linear;
   visibility: visible;
@@ -852,7 +852,7 @@ h1 {
   background-color: rgba(9, 58, 58, 0.783);
   position: fixed;
   width: 180px;
-  height: 40%;
+  height: 10%;
   margin-left: -180px;
   transition: all 1.0s linear;
   visibility: visible;
@@ -863,7 +863,7 @@ h1 {
   background-color: rgba(9, 58, 58, 0.783);
   position: fixed;
   width: 180px;
-  height: 47.25%;
+  height: 52.2%;
   margin-left: 0px;
   transition: all 1.0s linear;
   visibility: visible;
@@ -958,7 +958,7 @@ h1 {
   background-color: rgba(9, 58, 58, 0.783);
   position: fixed;
   width: 180px;
-  height: 40%;
+  height: 10%;
   margin-left: -180px;
   transition: all 1.0s linear;
   visibility: visible;
@@ -969,7 +969,7 @@ h1 {
   background-color: rgba(9, 58, 58, 0.783);
   position: fixed;
   width: 180px;
-  height: 50.8%;
+  height: 55%;
   margin-left: 0px;
   transition: all 1.0s linear;
   visibility: visible;
@@ -996,7 +996,7 @@ h1 {
   border-bottom: 1px solid black;
   padding: 12.1px 10px;
   list-style: none;
-  font-size: 15.5px;
+  font-size: 14.5px;
   visibility: visible;
   
 }
@@ -1063,7 +1063,7 @@ h1 {
       background-color: rgba(9, 58, 58, 0.783);
       position: fixed;
       width: 180px;
-      height: 40%;
+      height: 10%;
       margin-left: -180px;
       transition: all 1.0s linear;
       visibility: visible;
@@ -1074,7 +1074,7 @@ h1 {
       background-color: rgba(9, 58, 58, 0.783);
       position: fixed;
       width: 180px;
-      height: 51.2%;
+      height: 55.6%;
       margin-left: 0px;
       transition: all 1.0s linear;
       visibility: visible;
@@ -1101,7 +1101,7 @@ h1 {
       border-bottom: 1px solid black;
       padding: 12.1px 10px;
       list-style: none;
-      font-size: 15.5px;
+      font-size: 14.5px;
       visibility: visible;
       
     }
@@ -1168,7 +1168,7 @@ h1 {
       background-color: rgba(9, 58, 58, 0.783);
       position: fixed;
       width: 180px;
-      height: 40%;
+      height: 10%;
       margin-left: -180px;
       transition: all 1.0s linear;
       visibility: visible;
@@ -1192,8 +1192,8 @@ h1 {
       
     }
     .topicLogo{
-      margin-top: 10px;
-      height: 60px;
+      margin-top: 8px;
+      height: 50px;
       /* filter: invert(100%); */
       visibility: visible;
      
@@ -1204,9 +1204,9 @@ h1 {
       color: white;
       text-align: center;
       border-bottom: 1px solid black;
-      padding: 12.1px 10px;
+      padding: 11.1px 10px;
       list-style: none;
-      font-size: 15.5px;
+      font-size: 14px;
       visibility: visible;
       
     }
@@ -1275,7 +1275,7 @@ h1 {
   background-color: rgba(9, 58, 58, 0.783);
   position: fixed;
   width: 180px;
-  height: 40%;
+  height: 10%;
   margin-left: -180px;
   transition: all 1.0s linear;
   visibility: visible;
@@ -1299,8 +1299,8 @@ h1 {
   
 }
 .topicLogo{
-  margin-top: 10px;
-  height: 60px;
+  margin-top: 8px;
+  height: 50px;
   /* filter: invert(100%); */
   visibility: visible;
  
@@ -1311,9 +1311,9 @@ h1 {
   color: white;
   text-align: center;
   border-bottom: 1px solid black;
-  padding: 12.1px 10px;
+  padding: 11.1px 10px;
   list-style: none;
-  font-size: 15.5px;
+  font-size: 13.5px;
   visibility: visible;
   
 }
@@ -1382,7 +1382,7 @@ h1 {
   background-color: rgba(9, 58, 58, 0.783);
   position: fixed;
   width: 140px;
-  height: 40%;
+  height: 10%;
   margin-left: -140px;
   transition: all 1.0s linear;
   visibility: visible;
@@ -1393,7 +1393,7 @@ h1 {
   background-color: rgba(9, 58, 58, 0.783);
   position: fixed;
   width: 140px;
-  height: 64.2%;
+  height: 62.2%;
   margin-left: 0px;
   transition: all 1.0s linear;
   visibility: visible;
@@ -1406,8 +1406,8 @@ h1 {
   
 }
 .topicLogo{
-  margin-top: 10px;
-  height: 60px;
+  margin-top: 8px;
+  height: 50px;
   /* filter: invert(100%); */
   visibility: visible;
  
@@ -1418,7 +1418,7 @@ h1 {
   color: white;
   text-align: center;
   border-bottom: 1px solid black;
-  padding: 12.1px 10px;
+  padding: 10.1px 10px;
   list-style: none;
   font-size: 13.5px;
   visibility: visible;
@@ -1428,8 +1428,8 @@ h1 {
 #home{
   position: relative;
   margin-left: 155px;
-  font-size: 20px;
-  height: 55px;
+  font-size: 18px;
+  height: 45px;
   filter: invert(100%);
   cursor: pointer;
    visibility: visible;
