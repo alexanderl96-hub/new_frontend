@@ -126,7 +126,7 @@
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 30px;
-    color: white;
+    color: rgb(58, 56, 56);
     font-family: cursive;
   }
   @keyframes fadein {
@@ -189,7 +189,6 @@
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 30px;
-    color: white;
     font-family: cursive;
   }
   @keyframes fadein {
@@ -252,7 +251,6 @@
   margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 30px;
-  color: white;
   font-family: cursive;
 }
 @keyframes fadein {
@@ -315,7 +313,6 @@
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 30px;
-    color: white;
     font-family: cursive;
   }
   @keyframes fadein {
@@ -378,7 +375,6 @@
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 30px;
-    color: white;
     font-family: cursive;
   }
   @keyframes fadein {
@@ -441,7 +437,6 @@
   margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 30px;
-  color: white;
   font-family: cursive;
 }
 @keyframes fadein {
@@ -504,7 +499,6 @@
   margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 30px;
-  color: white;
   font-family: cursive;
 }
 @keyframes fadein {
@@ -567,7 +561,6 @@
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 30px;
-    color: white;
     font-family: cursive;
   }
   @keyframes fadein {
@@ -630,7 +623,6 @@
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 30px;
-    color: white;
     font-family: cursive;
   }
   @keyframes fadein {
@@ -693,7 +685,7 @@
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 30px;
-    color: white;
+
     font-family: cursive;
   }
   @keyframes fadein {
@@ -756,7 +748,6 @@
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 30px;
-    color: white;
     font-family: cursive;
   }
   @keyframes fadein {
@@ -819,7 +810,6 @@
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 30px;
-    color: white;
     font-family: cursive;
   }
   @keyframes fadein {
@@ -882,7 +872,6 @@
   margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 30px;
-  color: white;
   font-family: cursive;
 }
 @keyframes fadein {
@@ -945,7 +934,6 @@
         margin-top: 10px;
         margin-bottom: 10px;
         margin-left: 30px;
-        color: white;
         font-family: cursive;
       }
       @keyframes fadein {
@@ -1008,7 +996,6 @@
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 30px;
-    color: white;
     font-family: cursive;
   }
   @keyframes fadein {
