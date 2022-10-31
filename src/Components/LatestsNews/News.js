@@ -64,9 +64,9 @@ const News = () => {
          </div>
 
         <div>
-            <div style={{display: 'flex', justifyContent: 'space-evenly', background: 'blue', height: '35px', color: 'white', alignItems: 'center'}}>
+            <div style={{display: 'flex', justifyContent: 'space-evenly', background: '#2e2666', height: '40px', color: 'white', alignItems: 'center'}}>
               <NavLink to={'/teams/News'} >
-                <div style={{cursor: 'pointer', color: 'white', textDecoration:'underline'}}>Regular Season</div></NavLink>
+                <div style={{cursor: 'pointer', textDecoration:'underline', fontFamily: 'cursive' , color: 'gray'}}>Regular Season</div></NavLink>
                 <NavLink to='/teams/News/SpringTraining'>
                 <div style={{cursor: 'pointer', color: 'white'}}>Spring Training</div></NavLink>
                 <NavLink to='/teams/News/Exhibition'>

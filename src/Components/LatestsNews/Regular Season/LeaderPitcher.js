@@ -15,18 +15,15 @@ const LeaderPitcher = () => {
   return (
     <div>
          <div>
-           <p>Leader Pitcher Regular Season Top-10</p>
+           <p className='allHitTitle' >Leader Pitcher Regular Season Top-10</p>
             {leaderPitcher ? leaderPitcher.map((pit, index)=>{
-                return(
-                    <div>
-                        <div style={{margin: '10px'}}>
+                return (
+                        <div className='cardHit' key={index} >
                             <div>Era: {pit.era} / {pit.name_display_first_last} / {pit.team_name}</div>
                             <div>League: {pit.league} / {pit.sport}</div>
                         </div>
-                       
-                    </div>
                 )
-            }) : null}
+            }) :  <div className='noneInfo' >No Information Found</div>}
         </div>
     </div>
   )

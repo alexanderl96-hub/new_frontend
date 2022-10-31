@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import NavBar from '../navBar/Navbar'
 import { NavLink} from 'react-router-dom'
 import Footer from '../Footer/Footer'
+import FirstHit from './First Round/firstHit'
+import FirstPit from './First Round/firstPit'
 
 const FirstRound = () => {
     const [transaction, setTransaction] = useState([])
@@ -46,7 +48,7 @@ const FirstRound = () => {
          </div>
 
          <div>
-            <div style={{display: 'flex', justifyContent: 'space-evenly', background: 'blue', height: '35px', color: 'white', alignItems: 'center'}}>
+            <div style={{display: 'flex', justifyContent: 'space-evenly', background: '#2e2666', height: '40px', color: 'white', alignItems: 'center'}}>
               <NavLink to='/teams/News' >
                 <div style={{cursor: 'pointer', color: 'white'}}>Regular Season</div></NavLink>
                 <NavLink to='/teams/News/SpringTraining'>
@@ -58,7 +60,7 @@ const FirstRound = () => {
                 <NavLink to='/teams/News/DivisionSeries'>
                 <div style={{cursor: 'pointer', color: 'white'}}>Division Series</div></NavLink>
                 <NavLink to='/teams/News/FirstRound(wildCard)'>
-                <div style={{cursor: 'pointer', color: 'white',textDecoration:'underline'}}>First Round</div></NavLink>
+                <div style={{cursor: 'pointer',textDecoration:'underline', fontFamily: 'cursive', color: 'gray'}}>First Round</div></NavLink>
                 <NavLink to='/teams/News/LeagueChampionship'>
                 <div style={{cursor: 'pointer', color: 'white'}}>League Championship</div></NavLink>
                 <NavLink to='/teams/News/WorldSeries'>
@@ -66,7 +68,10 @@ const FirstRound = () => {
             </div>
         </div>
 
-
+        <div style={{display: 'flex', justifyContent: 'space-evenly'}}>
+            <FirstHit />
+            <FirstPit />
+        </div>
 
 
         <Footer />

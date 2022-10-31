@@ -1,22 +1,22 @@
 import React, { useState, useEffect } from 'react'
+import '../style.css'
 
-const SpringHit = () => {
-    const [springHiter, setSpringHiter]= useState([])
-
+const AllStartHit = () => {
+    const [allHiter, setAllHiter]= useState([])
 
     useEffect(() => {
-        fetch(`http://lookup-service-prod.mlb.com/json/named.leader_hitting_repeater.bam?sport_code='mlb'&results=10&game_type='S'&season='2022'&sort_column=ab`)
+        fetch(`http://lookup-service-prod.mlb.com/json/named.leader_hitting_repeater.bam?sport_code='mlb'&results=10&game_type='A'&season='2022'&sort_column=ab`)
         .then(res => res.json())
         .then(data =>{
-            setSpringHiter(data.leader_hitting_repeater.leader_hitting_mux.queryResults.row)
+            setAllHiter(data.leader_hitting_repeater.leader_hitting_mux.queryResults.row)
         })
     },[])
-console.log(springHiter)
+
   return (
     <div>
-         <div>
-           <p className='allHitTitle' >Leader Hitting Spring Traning Top-10</p>
-            {springHiter ? springHiter.map((hit, index)=>{
+          <div>
+           <p className='allHitTitle' >Leader Hitting All Start Game Top-10</p>
+            {allHiter ? allHiter.map((hit, index)=>{
                 return(
                         <div className='cardHit' key={index} >
                                 <div>AB: {hit.ab} / {hit.name_display_first_last} / {hit.team_name}</div>
@@ -29,4 +29,4 @@ console.log(springHiter)
   )
 }
 
-export default SpringHit
+export default AllStartHit

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import '../style.css'
 
 const LeaderHitting = () => {
     const [leaderHit, setLeaderHitting] = useState([])
@@ -14,20 +15,16 @@ const LeaderHitting = () => {
 
   return (
     <div>
-
-            <div>
-            <p>Leader Hitting Regular Season Top-10</p>
+            <div >
+            <p className='allHitTitle' >Leader Hitting Regular Season Top-10</p>
                 {leaderHit ? leaderHit.map((hit, index)=>{
                     return(
-                        <div>
-                            <div style={{margin: '10px'}}>
+                            <div className='cardHit' key={index} >
                                 <div>AB: {hit.ab} / {hit.name_display_first_last} / {hit.team_name}</div>
                                 <div>League: {hit.league} / {hit.sport}</div>
-                            </div>
-                        
-                        </div>
+                            </div>  
                     )
-                }) : null}
+                }) :  <div className='noneInfo' >No Information Found</div>}
             </div>
     </div>
   )

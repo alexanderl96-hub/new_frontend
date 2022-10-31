@@ -47,11 +47,11 @@ const Sprint = () => {
                 </div>
          </div>
         <div>
-            <div style={{display: 'flex', justifyContent: 'space-evenly', background: 'blue', height: '35px', color: 'white', alignItems: 'center'}}>
+            <div style={{display: 'flex', justifyContent: 'space-evenly', background: '#2e2666', height: '40px', color: 'white', alignItems: 'center'}}>
               <NavLink to='/teams/News' >
                 <div style={{cursor: 'pointer', color: 'white'}}>Regular Season</div></NavLink>
                 <NavLink to='/teams/News/SpringTraining'>
-                <div style={{cursor: 'pointer', color: 'white',textDecoration:'underline'}}>Spring Training</div></NavLink>
+                <div style={{cursor: 'pointer',textDecoration:'underline', fontFamily: 'cursive' , color: 'gray'}}>Spring Training</div></NavLink>
                 <NavLink to='/teams/News/Exhibition'>
                 <div style={{cursor: 'pointer', color: 'white'}}>Exhibition</div></NavLink>
                 <NavLink to='/teams/News/AllStart'>

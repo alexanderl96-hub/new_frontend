@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import NavBar from '../navBar/Navbar'
 import { NavLink} from 'react-router-dom'
 import Footer from '../Footer/Footer'
+import WorldHit from './World Series/worldSeriesHit'
+import WorldPit from './World Series/worldSeriesPit'
 
 const WorldSeries = () => {
     const [transaction, setTransaction] = useState([])
@@ -46,7 +48,7 @@ const WorldSeries = () => {
          </div>
 
          <div>
-            <div style={{display: 'flex', justifyContent: 'space-evenly', background: 'blue', height: '35px', color: 'white', alignItems: 'center'}}>
+            <div style={{display: 'flex', justifyContent: 'space-evenly', background: '#2e2666', height: '40px', color: 'white', alignItems: 'center'}}>
               <NavLink to='/teams/News' >
                 <div style={{cursor: 'pointer', color: 'white'}}>Regular Season</div></NavLink>
                 <NavLink to='/teams/News/SpringTraining'>
@@ -62,12 +64,15 @@ const WorldSeries = () => {
                 <NavLink to='/teams/News/LeagueChampionship'>
                 <div style={{cursor: 'pointer', color: 'white'}}>League Championship</div></NavLink>
                 <NavLink to='/teams/News/WorldSeries'>
-                <div style={{cursor: 'pointer', color: 'white',textDecoration:'underline'}}>World Series</div></NavLink>
+                <div style={{cursor: 'pointer',textDecoration:'underline', fontFamily: 'cursive', color: 'gray'}}>World Series</div></NavLink>
             </div>
         </div>
 
       
-
+        <div style={{display: 'flex', justifyContent: 'space-evenly'}}>
+            <WorldHit />
+            <WorldPit />
+        </div>
       <Footer />
     </div>
   )

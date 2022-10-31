@@ -1,21 +1,20 @@
 import React, { useState, useEffect } from 'react'
 
-const SpringPit = () => {
-    const [springPit, setSprintPit] = useState([])
+const FirstPit = () => {
+    const [firstPit, setFirstPit] = useState([])
 
     useEffect(() => {
-        fetch(`http://lookup-service-prod.mlb.com/json/named.leader_pitching_repeater.bam?sport_code='mlb'&results=10&game_type='S'&season='2022'&sort_column=era`)
+        fetch(`http://lookup-service-prod.mlb.com/json/named.leader_pitching_repeater.bam?sport_code='mlb'&results=10&game_type='F'&season='2022'&sort_column=era`)
         .then(res => res.json())
         .then(data =>{
-            setSprintPit(data.leader_pitching_repeater.leader_pitching_mux.queryResults.row)
+            setFirstPit(data.leader_pitching_repeater.leader_pitching_mux.queryResults.row)
         })
     },[])
-console.log(springPit)
   return (
     <div>
          <div>
-           <p className='allHitTitle' >Leader Pitcher Spring Traning Top-10</p>
-            {springPit ?  springPit.map((pit, index)=>{
+           <p className='allHitTitle' >Leader Pitcher First Round/Wild Card Top-10</p>
+            {firstPit ?  firstPit.map((pit, index)=>{
                 return(
                         <div className='cardHit' key={index} >
                             <div>Era: {pit.era} / {pit.name_display_first_last} / {pit.team_name}</div>
@@ -28,4 +27,4 @@ console.log(springPit)
   )
 }
 
-export default SpringPit
+export default FirstPit
