@@ -3,6 +3,7 @@ import { Chart } from "react-google-charts";
 import { useParams } from 'react-router-dom';
 import './CurrentHistagram.css';
 import NavBar from '../navBar/Navbar'
+import Footer from '../Footer/Footer'
 
  const CurrentHistagram = ()=> {
     const [member, setMember] = useState([])
@@ -306,8 +307,8 @@ import NavBar from '../navBar/Navbar'
                 <div className='pitcherCarStatc'>
                 <Chart
                 chartType="PieChart"
-                width='650px'
-                height="550px"
+                width='100%'
+                height="450px"
                 data={ dataPitcher }
                 options={options}
                 />
@@ -319,8 +320,8 @@ import NavBar from '../navBar/Navbar'
                 <div className='pitcherCarStatc'> 
                     <Chart
                     chartType="PieChart"
-                    width='650px'
-                    height="550px"
+                    width='100%'
+                    height="450px"
                     data={data}
                     options={options}
                     />
@@ -335,7 +336,7 @@ import NavBar from '../navBar/Navbar'
                 <div className='currStatc'>
                 <Chart
                 chartType="Line"
-                width='650px'
+                width='100%'
                 height="450px"
                 data={ dataCurrent }
                 options={options}
@@ -346,7 +347,7 @@ import NavBar from '../navBar/Navbar'
                 <div className='currStatc'>
                 <Chart
                 chartType="Line"
-                width='650px'
+                width='100%'
                 height="450px"
                 data={ dataCurrPit }
                 options={options}
@@ -355,6 +356,7 @@ import NavBar from '../navBar/Navbar'
             </div> :null}
            </div>
     </div>
+    <Footer />
   </div>
   );
 }
