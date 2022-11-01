@@ -1,75 +1,40 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import NavBar from '../navBar/Navbar'
 import { NavLink} from 'react-router-dom'
 import Footer from '../Footer/Footer'
 import WorldHit from './World Series/worldSeriesHit'
 import WorldPit from './World Series/worldSeriesPit'
+import Transcitions from './Transcitions'
 
 const WorldSeries = () => {
-    const [transaction, setTransaction] = useState([])
-
-    useEffect(() => {
-      fetch(`http://lookup-service-prod.mlb.com/json/named.transaction_all.bam?sport_code='mlb'&start_date='20221101'&end_date='20221231'`)
-      .then(res => res.json())
-      .then(data =>{
-          setTransaction(data.transaction_all.queryResults.row)
-      })
-  },[])
+  
   return (
     <div>
-  <NavBar />
-        <div style={{display: 'flex',  justifyContent: 'space-around'}}>
-            <h2 style={{marginLeft: '30px'}}>News</h2>
-            <div style={{display: 'flex',}}>
-                { transaction.map((a, index)=>{
-                    return(
-                        <div>
-                            <div style={{display: 'flex', flexDirection: 'column', width: '500px', margin:'5px'}}>
-                                <div>
-                                    {a.effective_date} 
-                                </div>                     
-                                <div >
-                                    {a.note}
-                                </div>
-                                <div style={{textAlign: 'center'}}>
-                                    {a.name_display_first_last} / {a.orig_asset}
-                                </div>
-                                <div style={{textAlign: 'center'}}>
-                                    {a.team} {a.orig_asset_type} {a.trans_date_cd}
-                                </div>
-                                <div style={{textAlign: 'center'}}>
-                                    {a.type_cd}
-                                </div>    
-                            </div>
-                        </div>
-                    )
-                })}
-                </div>
-         </div>
-
+        <NavBar />
+        <Transcitions />
          <div>
-            <div style={{display: 'flex', justifyContent: 'space-evenly', background: '#2e2666', height: '40px', color: 'white', alignItems: 'center'}}>
+            <div className='newsNavbar' >
               <NavLink to='/teams/News' >
-                <div style={{cursor: 'pointer', color: 'white'}}>Regular Season</div></NavLink>
+                <div className='newsNavAll'>Regular Season</div></NavLink>
                 <NavLink to='/teams/News/SpringTraining'>
-                <div style={{cursor: 'pointer', color: 'white'}}>Spring Training</div></NavLink>
+                <div className='newsNavAll'>Spring Training</div></NavLink>
                 <NavLink to='/teams/News/Exhibition'>
-                <div style={{cursor: 'pointer', color: 'white'}}>Exhibition</div></NavLink>
+                <div className='newsNavAll'>Exhibition</div></NavLink>
                 <NavLink to='/teams/News/AllStart'>
-                <div style={{cursor: 'pointer', color: 'white'}}>All Start Game</div></NavLink>
+                <div className='newsNavAll'>All Start Game</div></NavLink>
                 <NavLink to='/teams/News/DivisionSeries'>
-                <div style={{cursor: 'pointer', color: 'white'}}>Division Series</div></NavLink>
+                <div className='newsNavAll'>Division Series</div></NavLink>
                 <NavLink to='/teams/News/FirstRound(wildCard)'>
-                <div style={{cursor: 'pointer', color: 'white'}}>First Round</div></NavLink>
+                <div className='newsNavAll'>First Round</div></NavLink>
                 <NavLink to='/teams/News/LeagueChampionship'>
-                <div style={{cursor: 'pointer', color: 'white'}}>League Championship</div></NavLink>
+                <div className='newsNavAll'>League Championship</div></NavLink>
                 <NavLink to='/teams/News/WorldSeries'>
-                <div style={{cursor: 'pointer',textDecoration:'underline', fontFamily: 'cursive', color: 'gray'}}>World Series</div></NavLink>
+                <div className='navRegularS' >World Series</div></NavLink>
             </div>
         </div>
 
       
-        <div style={{display: 'flex', justifyContent: 'space-evenly'}}>
+        <div className='newsNavComponent'>
             <WorldHit />
             <WorldPit />
         </div>

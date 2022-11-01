@@ -24,8 +24,53 @@
     text-align: center;
 }
 
-
-
+.mainNews{
+    display: flex; 
+    justify-content: space-around;
+}
+.mainNews > h2 {
+    margin-left: 70px;
+}
+.mainNews-firstinner{
+    /* display: flex;  */
+    display:grid;
+    grid-auto-flow: column;
+    overflow: auto;
+    overflow-y: hidden; 
+    margin-left: 50px;
+    cursor: pointer;
+}
+.newsMap{
+    display: flex; 
+    flex-direction: column; 
+    width: 500px; 
+    margin:5px;
+}
+.newsMap-Name{
+    text-align: center;
+}
+.newsNavbar{
+    display: flex; 
+    justify-content: space-evenly; 
+    background: #2e2666; 
+    height: 40px; 
+    color: white; 
+    align-items: center;
+}
+.newsNavAll{
+    cursor: pointer; 
+    color: white;
+}
+.navRegularS{
+    cursor: pointer; 
+    text-decoration: underline; 
+    font-family: cursive; 
+    color: gray;
+}
+.newsNavComponent{
+    display: flex; 
+    justify-content: space-evenly;
+}
 /*Nest Hub Max (max-width: 1280px; max-heigth: 800px;)*/
 /* @media only screen and (max-width: 1280px){} */
 
