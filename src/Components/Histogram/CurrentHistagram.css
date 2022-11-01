@@ -216,36 +216,193 @@
     .currStatc{
         margin-top: 200px;
         text-align: center; 
-        width: 90%;
+        width: 95%;
         height: 350px;
-        margin-left: 20px;
+        margin-left: 15px;
         margin-bottom: 200px;
     }
     .currStatc > p {
-        font-size: 18px;
+        font-size: 16px;
     }
    }
 
   /*iPhone XR  (max-width: 414px; max-heigth: 896px;)*/
-  /* @media only screen and (max-width: 414px){} */
+  @media only screen and (max-width: 414px){
+    .MainContStatc{
+        display:flex; 
+        flex-direction: column; 
+        justify-content: center;
+    }
+    .pitcherCarStatc{
+        width: 80%;
+        margin-top: 10px;
+        margin-left: 50px;
+    }
+    .pitcherCarStatc > p {
+        margin-left: -30px;
+        font-size: 16px;
+    }
+    .currStatc{
+        margin-top: 200px;
+        text-align: center; 
+        width: 95%;
+        height: 350px;
+        margin-left: 15px;
+        margin-bottom: 200px;
+    }
+    .currStatc > p {
+        font-size: 16px;
+    }
+  }
 
   /*Samsung Galaxy S20 Ultra  (max-width: 412px; max-heigth: 915px;)*/
-  /* @media only screen and (max-width: 412px){} */
+  @media only screen and (max-width: 412px){
+    .MainContStatc{
+        display:flex; 
+        flex-direction: column; 
+        justify-content: center;
+    }
+    .pitcherCarStatc{
+        width: 80%;
+        margin-top: 10px;
+        margin-left: 50px;
+    }
+    .pitcherCarStatc > p {
+        margin-left: -30px;
+        font-size: 16px;
+    }
+    .currStatc{
+        margin-top: 200px;
+        text-align: center; 
+        width: 95%;
+        height: 350px;
+        margin-left: 13px;
+        margin-bottom: 200px;
+    }
+    .currStatc > p {
+        font-size: 16px;
+    }
+  }
 
   /*Samsung Galaxy A51/71  (max-width: 412px; max-heigth: 914px;)*/
   /* @media only screen and (max-width: 412px){} */
 
     /*Pixel 5 (max-width: 393px; max-heigth: 851px;)*/
-    /* @media only screen and (max-width: 393px){} */
+    @media only screen and (max-width: 393px){
+        .MainContStatc{
+            display:flex; 
+            flex-direction: column; 
+            justify-content: center;
+        }
+        .pitcherCarStatc{
+            width: 80%;
+            margin-top: 10px;
+            margin-left: 50px;
+        }
+        .pitcherCarStatc > p {
+            margin-left: -30px;
+            font-size: 16px;
+        }
+        .currStatc{
+            margin-top: 200px;
+            text-align: center; 
+            width: 95%;
+            height: 350px;
+            margin-left: 10px;
+            margin-bottom: 200px;
+        }
+        .currStatc > p {
+            font-size: 16px;
+        }
+    }
 
   /*iPhone 12 Pro  (max-width: 390px; max-heigth: 844px;)*/
-  /* @media only screen and (max-width: 390px){} */
+  @media only screen and (max-width: 390px){
+    .MainContStatc{
+        display:flex; 
+        flex-direction: column; 
+        justify-content: center;
+    }
+    .pitcherCarStatc{
+        width: 80%;
+        margin-top: 10px;
+        margin-left: 50px;
+    }
+    .pitcherCarStatc > p {
+        margin-left: -30px;
+        font-size: 16px;
+    }
+    .currStatc{
+        margin-top: 200px;
+        text-align: center; 
+        width: 92%;
+        height: 350px;
+        margin-left: 12px;
+        margin-bottom: 200px;
+    }
+    .currStatc > p {
+        font-size: 16px;
+    }
+  }
 
    /*iPhone SE (max-width: 375px; max-heigth: 667px;)*/
-   /* @media only screen and (max-width: 375px){} */
+   @media only screen and (max-width: 375px){
+    .MainContStatc{
+        display:flex; 
+        flex-direction: column; 
+        justify-content: center;
+    }
+    .pitcherCarStatc{
+        width: 80%;
+        margin-top: 10px;
+        margin-left: 50px;
+    }
+    .pitcherCarStatc > p {
+        margin-left: -30px;
+        font-size: 16px;
+    }
+    .currStatc{
+        margin-top: 200px;
+        text-align: center; 
+        width: 95%;
+        height: 350px;
+        margin-left: 10px;
+        margin-bottom: 200px;
+    }
+    .currStatc > p {
+        font-size: 16px;
+    }
+   }
 
    /*Samsung Galaxy S8+  (max-width: 360px; max-heigth: 740px;)*/
    /* @media only screen and (max-width: 360px){} */
 
  /*Galaxy Fold (max-width: 280px; max-heigth: 653px;)*/
- /* @media only screen and (max-width: 280px){} */
+ @media only screen and (max-width: 280px){
+    .MainContStatc{
+        display:flex; 
+        flex-direction: column; 
+        justify-content: center;
+    }
+    .pitcherCarStatc{
+        width: 90%;
+        margin-top: 10px;
+        margin-left: 0px;
+    }
+    .pitcherCarStatc > p {
+        margin-left: -30px;
+        font-size: 12px;
+        margin-top: -100px;
+    }
+    .currStatc{
+        margin-top: 60px;
+        text-align: center; 
+        width: 93%;
+        height: 350px;
+        margin-left: 10px;
+        margin-bottom: 150px;
+    }
+    .currStatc > p {
+        font-size: 12px;
+    }
+ }
