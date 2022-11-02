@@ -72,6 +72,7 @@
     justify-content: space-evenly;
 }
 .seconddropNav{
+    height: 0px;
     visibility: hidden; 
 }
 .drop{
@@ -164,12 +165,22 @@
     .newsMap-Name{
         font-size: 13px;
     }
+    .seconddropNav{
+        display: flex;  
+        background: #2e2666;
+        height: 50px;
+        color: white; 
+        justify-content: flex-end; 
+        align-items: center;
+        visibility: visible;
+    }
     .drop{
         display: flex;  
         background: #093a3ac8; 
         justify-content: flex-end;
         height: 0px;
          transition: width 3s, height 4s;  
+         visibility: visible;
          /* smooth: flex; */
     }
     .drop2{
@@ -178,7 +189,8 @@
         position: absolute;  
         background: #022525d3; 
         transition-timing-function:ease;  
-        /* margin-left: 50% */
+        visibility: visible;
+        margin-left: 67.6%
     }
     .mainNews > h2 {
         font-size: 15px;

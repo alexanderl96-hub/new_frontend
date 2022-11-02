@@ -60,14 +60,42 @@ const Transcitions = () => {
         return [year, month, today].join('')
       }
 
+      const handleRandomNew = (e) => { 
+        let store = []
+   
+    let arrMonths = [1, 2, 3]
+      arrMonths.forEach((n, i)=>{
+          while(store.length < 3){
+          const r = Math.floor(Math.random()* e.length-1)+1
+           if(store.indexOf(e[r]) === -1 ){store.push(e[r]) } 
+        } 
+      }) 
+   console.log(store)
+      
+   setInterval( function ()  {
+      store = []
+     let arrMonths = [1, 2, 3]
+      arrMonths.forEach((n, i)=>{
+        while(store.length < 3){
+          const r = Math.floor(Math.random()* e.length-1)+1
+           if(store.indexOf(e[r]) === -1 ){store.push(e[r]) } 
+        }  
+      }) 
+     
+     console.log(store)
+ 
+ }, 25000);
+   }
     useEffect(() => {
         fetch(`http://lookup-service-prod.mlb.com/json/named.transaction_all.bam?sport_code='mlb'&start_date='${serachFromlastTwoMonth(previous)}'&end_date='${currentDate(current)}'`)
         .then(res => res.json())
         .then(data =>{
+              // let start = handleRandomNew(data.transaction_all.queryResults.row)
+            //  console.log(start,'start')
             setTransaction(data.transaction_all.queryResults.row)
         })
     },[])
-   console.log(currentValue, clasDrop)
+   console.log(currentValue, clasDrop, transaction)
   return (
     <div>
          <div className='mainNews'>
@@ -75,7 +103,7 @@ const Transcitions = () => {
             <div className='mainNews-firstinner' >
                 { transaction.map((a, index)=>{
                     return(
-                        <div>
+                        <div key={index}>
                             <div className= 'newsMap'>
                                 <div >
                                     { changeDate(a.effective_date)} 
@@ -98,7 +126,7 @@ const Transcitions = () => {
                 })}
                 </div>
          </div>
-         <div  role="button" onClick={()=> toggle(!open)} style={{  display: 'flex',  background: '#2e2666',height: '50px',color: 'white', justifyContent: 'flex-end' ,alignItems: 'center',}} className='seconddropNav'>
+         <div  role="button" onClick={()=> toggle(!open)}  className='seconddropNav'>
          {/* <p >{open ? 'Close': "Open"} </p> */}
            <p onClick={changeNav} style={{ margin: '10px' }}>{open ? <p>Close <FaArrowUp/></p> : <p> Open <FaArrowDown/></p>}</p>
          </div>
