@@ -1,9 +1,29 @@
 import React, { useState, useEffect } from 'react'
+import { NavLink} from 'react-router-dom'
+import {FaArrowDown,  FaArrowUp,} from 'react-icons/fa';
 
 const Transcitions = () => {
     const [transaction, setTransaction] = useState([])
+    const [open, setOpen] = useState(false)
+    const [currentValue, setCurrentValue] = useState('')
+    const [clasDrop, setClasDrop] = useState('drop')
+
+    function handleInput (e){
+      const {value} = e.target
+      setCurrentValue(value)
+    }
+    
+    function changeNav(){
+      if(clasDrop === 'drop'){
+        setClasDrop('drop2')
+      }else if(clasDrop === 'drop2'){
+        setClasDrop('drop')
+      }
+    }
+    const toggle = ()=> setOpen(!open)
     let previous = new Date()
     let current = new Date()
+
 
     function currentDate(value){
         let date = new Date(value);
@@ -47,7 +67,7 @@ const Transcitions = () => {
             setTransaction(data.transaction_all.queryResults.row)
         })
     },[])
-   console.log(serachFromlastTwoMonth(previous), transaction)
+   console.log(currentValue, clasDrop)
   return (
     <div>
          <div className='mainNews'>
@@ -57,10 +77,10 @@ const Transcitions = () => {
                     return(
                         <div>
                             <div className= 'newsMap'>
-                                <div>
+                                <div >
                                     { changeDate(a.effective_date)} 
                                 </div>                     
-                                <div >
+                                <div  className= 'newsMap-Name'>
                                     {a.note}
                                 </div>
                                 <div className= 'newsMap-Name'>
@@ -78,6 +98,29 @@ const Transcitions = () => {
                 })}
                 </div>
          </div>
+         <div  role="button" onClick={()=> toggle(!open)} style={{  display: 'flex',  background: '#2e2666',height: '50px',color: 'white', justifyContent: 'flex-end' ,alignItems: 'center',}} className='seconddropNav'>
+         {/* <p >{open ? 'Close': "Open"} </p> */}
+           <p onClick={changeNav} style={{ margin: '10px' }}>{open ? <p>Close <FaArrowUp/></p> : <p> Open <FaArrowDown/></p>}</p>
+         </div>
+         {open ?
+          <div className={clasDrop}>
+              <NavLink to='/teams/News' >
+                <div value='Regular Season' smooth style={{textDecoration: 'none',color: 'white', margin:'7px', textAlign:'center' }} onClick={handleInput}>Regular Season</div></NavLink>
+                <NavLink to='/teams/News/SpringTraining'>
+                <div value='Spring Training' style={{textDecoration: 'none',color: 'white',  margin:'7px', textAlign:'center' }} onClick={handleInput}>Spring Training</div></NavLink>
+                <NavLink to='/teams/News/Exhibition'>
+                <div style={{textDecoration: 'none',color: 'white', margin:'7px', textAlign:'center'  }}>Exhibition</div></NavLink>
+                <NavLink to='/teams/News/AllStart'>
+                <div style={{textDecoration: 'none',color: 'white',  margin:'7px', textAlign:'center' }}>All Start Game</div></NavLink>
+                <NavLink to='/teams/News/DivisionSeries'>
+                <div style={{textDecoration: 'none',color: 'white', margin:'7px', textAlign:'center'  }}>Division Series</div></NavLink>
+                <NavLink to='/teams/News/FirstRound(wildCard)'>
+                <div style={{textDecoration: 'none',color: 'white', margin:'7px', textAlign:'center'  }}>First Round</div></NavLink>
+                <NavLink to='/teams/News/LeagueChampionship'>
+                <div style={{textDecoration: 'none',color: 'white',  margin:'7px', textAlign:'center' }}>League Championship</div></NavLink>
+                <NavLink to='/teams/News/WorldSeries'>
+                <div style={{textDecoration: 'none',color: 'white', margin:'7px', textAlign:'center'  }}>World Series</div></NavLink>
+         </div>: null}
     </div>
   )
 }

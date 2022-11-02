@@ -69,8 +69,8 @@ function Navbar() {
                       <NavLink to="/teams/allplayers" className='topicLink' >Players</NavLink>
                       <NavLink to="/teams/allCoaches" className='topicLink' >Coaches</NavLink>
                       <NavLink to="/teams/Season" className='topicLink' >Season</NavLink>
-                      <NavLink to="teams/News" className='topicLink' >News</NavLink>
-                      <NavLink to="teams/About" className='topicLink' >About</NavLink>
+                      <NavLink to="/teams/News" className='topicLink' >News</NavLink>
+                      <NavLink to="/teams/About" className='topicLink' >About</NavLink>
                       <NavLink to="/teams/new" className='topicLink' >New Team</NavLink>
                       <NavLink to="" className='topicLink' >Log In</NavLink>
                 </div>

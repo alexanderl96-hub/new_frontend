@@ -82,7 +82,7 @@ h1 {
   visibility: hidden;
 }
  .sideNavar2{
-  background-color: rgba(9, 58, 58, 0.783);
+  background-color: #093a3ac8;
   position: fixed;
   width: 180px;
   height: 47%;
@@ -595,7 +595,7 @@ h1 {
 
  .sideNavar2{
   background-color: rgba(9, 58, 58, 0.783);
-  position: fixed;
+  position: absolute;
   width: 180px;
   height: 477px;
   margin-left: 0px;
@@ -634,7 +634,7 @@ h1 {
 }
 
 #home{
-  position: relative;
+  position: absolute;
   margin-left: 190px;
   font-size: 20px;
   height: 55px;
