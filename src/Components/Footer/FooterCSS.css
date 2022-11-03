@@ -57,13 +57,14 @@
 .legal-inner > p{
     margin-left: 50px;
     font-size: 15px;
-}
-.legal-inner > p:hover{
     color: white;
+    cursor:pointer;
 }
+
 .legal-yearLogo > p{
     margin-left: 50px;
     font-size: 16px;
+    color: rgba(255, 255, 255, 0.67);
 }
 
 

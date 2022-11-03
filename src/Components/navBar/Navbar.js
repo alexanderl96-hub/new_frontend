@@ -50,9 +50,9 @@ function Navbar() {
          </div>
           <div className="nav2">        
             <Link to={'/teams/new'}>
-                <div className='navAddgroup'> TEAM</div>
+                <div className='navAddgroup'> ADD</div>
             </Link>
-            <div className='navlogIn'>LOG <FaUser /></div> 
+            {/* <div className='navlogIn'>LOG <FaUser /></div>  */}
             {/* <Link to={'/teams/new'}>
                 <div className='navlogIn'>LOG <FaUser /></div>  
             </Link> */}
