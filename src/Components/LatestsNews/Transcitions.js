@@ -60,32 +60,32 @@ const Transcitions = () => {
         return [year, month, today].join('')
       }
 
-      const handleRandomNew = (e) => { 
-        let store = []
+//       const handleRandomNew = (e) => { 
+//         let store = []
    
-    let arrMonths = [1, 2, 3]
-      arrMonths.forEach((n, i)=>{
-          while(store.length < 3){
-          const r = Math.floor(Math.random()* e.length-1)+1
-           if(store.indexOf(e[r]) === -1 ){store.push(e[r]) } 
-        } 
-      }) 
-   console.log(store)
+//     let arrMonths = [1, 2, 3]
+//       arrMonths.forEach((n, i)=>{
+//           while(store.length < 3){
+//           const r = Math.floor(Math.random()* e.length-1)+1
+//            if(store.indexOf(e[r]) === -1 ){store.push(e[r]) } 
+//         } 
+//       }) 
+//    console.log(store)
       
-   setInterval( function ()  {
-      store = []
-     let arrMonths = [1, 2, 3]
-      arrMonths.forEach((n, i)=>{
-        while(store.length < 3){
-          const r = Math.floor(Math.random()* e.length-1)+1
-           if(store.indexOf(e[r]) === -1 ){store.push(e[r]) } 
-        }  
-      }) 
+//    setInterval( function ()  {
+//       store = []
+//      let arrMonths = [1, 2, 3]
+//       arrMonths.forEach((n, i)=>{
+//         while(store.length < 3){
+//           const r = Math.floor(Math.random()* e.length-1)+1
+//            if(store.indexOf(e[r]) === -1 ){store.push(e[r]) } 
+//         }  
+//       }) 
      
-     console.log(store)
+//      console.log(store)
  
- }, 25000);
-   }
+//  }, 25000);
+//    }
     useEffect(() => {
         fetch(`http://lookup-service-prod.mlb.com/json/named.transaction_all.bam?sport_code='mlb'&start_date='${serachFromlastTwoMonth(previous)}'&end_date='${currentDate(current)}'`)
         .then(res => res.json())
@@ -105,7 +105,7 @@ const Transcitions = () => {
                     return(
                         <div key={index}>
                             <div className= 'newsMap'>
-                                <div >
+                                <div className='dateEffect'>
                                     { changeDate(a.effective_date)} 
                                 </div>                     
                                 <div  className= 'newsMap-Name'>
@@ -133,21 +133,21 @@ const Transcitions = () => {
          {open ?
           <div className={clasDrop}>
               <NavLink to='/teams/News' >
-                <div value='Regular Season' smooth style={{textDecoration: 'none',color: 'white', margin:'7px', textAlign:'center' }} onClick={handleInput}>Regular Season</div></NavLink>
+                <div value='Regular Season' smooth className='dropNavItem' onClick={handleInput}>Regular Season</div></NavLink>
                 <NavLink to='/teams/News/SpringTraining'>
-                <div value='Spring Training' style={{textDecoration: 'none',color: 'white',  margin:'7px', textAlign:'center' }} onClick={handleInput}>Spring Training</div></NavLink>
+                <div value='Spring Training' smooth className='dropNavItem'  onClick={handleInput}>Spring Training</div></NavLink>
                 <NavLink to='/teams/News/Exhibition'>
-                <div style={{textDecoration: 'none',color: 'white', margin:'7px', textAlign:'center'  }}>Exhibition</div></NavLink>
+                <div smooth className='dropNavItem' >Exhibition</div></NavLink>
                 <NavLink to='/teams/News/AllStart'>
-                <div style={{textDecoration: 'none',color: 'white',  margin:'7px', textAlign:'center' }}>All Start Game</div></NavLink>
+                <div smooth className='dropNavItem' >All Start Game</div></NavLink>
                 <NavLink to='/teams/News/DivisionSeries'>
-                <div style={{textDecoration: 'none',color: 'white', margin:'7px', textAlign:'center'  }}>Division Series</div></NavLink>
+                <div smooth className='dropNavItem' >Division Series</div></NavLink>
                 <NavLink to='/teams/News/FirstRound(wildCard)'>
-                <div style={{textDecoration: 'none',color: 'white', margin:'7px', textAlign:'center'  }}>First Round</div></NavLink>
+                <div smooth className='dropNavItem' >First Round</div></NavLink>
                 <NavLink to='/teams/News/LeagueChampionship'>
-                <div style={{textDecoration: 'none',color: 'white',  margin:'7px', textAlign:'center' }}>League Championship</div></NavLink>
+                <div smooth className='dropNavItem' >League Championship</div></NavLink>
                 <NavLink to='/teams/News/WorldSeries'>
-                <div style={{textDecoration: 'none',color: 'white', margin:'7px', textAlign:'center'  }}>World Series</div></NavLink>
+                <div smooth className='dropNavItem' >World Series</div></NavLink>
          </div>: null}
     </div>
   )
