@@ -1,13 +1,23 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import NavBar from '../navBar/Navbar'
 import { NavLink} from 'react-router-dom'
 import Footer from '../Footer/Footer'
 import DivisionHit from './Division Series/divisionHit'
 import DivisionPit from './Division Series/divisionPit'
 import Transcitions from './Transcitions'
+import LoadingHome from '../../../src/Loading'
 
 const DivisionSeries = () => {
+  const [count, setCount] = useState(<div className='LoadingFront'><LoadingHome/></div>);
+  const [countInTimeout, setCountInTimeout] = useState([]);
+  useEffect(() => {
    
+    setTimeout(() => {
+      setCountInTimeout(count)
+    },2000);
+    setCount()
+  },[count])
+
   return (
     <div>
          <NavBar />
@@ -33,10 +43,11 @@ const DivisionSeries = () => {
             </div>
         </div>
 
-        <div className='newsNavComponent' >
+        {!countInTimeout ? 
+        <div className='newsNavComponent' smooth >
             <DivisionHit />
             <DivisionPit />
-        </div>
+        </div>: <div className='LoadingFront'><LoadingHome/></div>}
 
         <Footer />
     </div>

@@ -2,7 +2,17 @@ import React, { useState, useEffect } from 'react'
 
 const SpringPit = () => {
     const [springPit, setSprintPit] = useState([])
+    const [count, setCount] = useState(0)
+    const [countInTimeout, setCountInTimeout] = useState([]);
 
+    useEffect(() => {
+     
+      setTimeout(() => {
+        setCountInTimeout(count)
+      },500);
+      setCount()
+    },[count])
+    
     useEffect(() => {
         fetch(`http://lookup-service-prod.mlb.com/json/named.leader_pitching_repeater.bam?sport_code='mlb'&results=10&game_type='S'&season='2022'&sort_column=era`)
         .then(res => res.json())
@@ -17,7 +27,7 @@ console.log(springPit)
            <p className='allHitTitle' >Leader Pitcher Spring Traning Top-10</p>
             {springPit ?  springPit.map((pit, index)=>{
                 return(
-                        <div className='cardHit' key={index} >
+                        <div className={ !countInTimeout ?  'cardHittrans' : 'cardHit'} key={index} >
                             <div>Era: {pit.era} / {pit.name_display_first_last} / {pit.team_name}</div>
                             <div>League: {pit.league} / {pit.sport}</div>
                         </div>

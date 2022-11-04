@@ -112,7 +112,11 @@
 input{
     width: 20%;
     margin: 0 auto;
-    font-size: 17px;
+    font-size: 16px;
+
+}
+input::placeholder{
+    font-style: italic;
 }
 .div{
     height: 200px;

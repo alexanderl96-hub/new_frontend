@@ -1,13 +1,23 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import NavBar from '../navBar/Navbar'
 import { NavLink} from 'react-router-dom'
 import Footer from '../Footer/Footer'
 import ChampionHit from './League Championship/championHit'
 import ChampionPit from './League Championship/championPit'
 import Transcitions from './Transcitions'
+import LoadingHome from '../../../src/Loading'
 
 const LeagueChampionship = () => {
+  const [count, setCount] = useState(<div className='LoadingFront'><LoadingHome/></div>);
+  const [countInTimeout, setCountInTimeout] = useState([]);
+  useEffect(() => {
    
+    setTimeout(() => {
+      setCountInTimeout(count)
+    },2000);
+    setCount()
+  },[count])
+
   return (
     <div>
           <NavBar />
@@ -33,10 +43,11 @@ const LeagueChampionship = () => {
             </div>
         </div>
         
+        {!countInTimeout ? 
         <div className='newsNavComponent' >
             <ChampionHit />
             <ChampionPit />
-        </div>
+        </div> : <div className='LoadingFront'><LoadingHome/></div>}
 
 
         <Footer />

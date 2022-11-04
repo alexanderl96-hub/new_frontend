@@ -14,14 +14,6 @@ const Loading = () => {
               height={30} 
               width={100}/> : null
         ))}
-        {/* <ReactLoading type={l.prop} color="#fff" />  */}
-    {/* <Title>React Loading</Title>
-    {list.map(l => (
-      <Article key={l.prop}>
-        <ReactLoading type={l.prop} color="#fff" />
-        <Prop>{l.name}</Prop>
-      </Article>
-    ))} */}
   </Section>
     )
 }

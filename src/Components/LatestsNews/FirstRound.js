@@ -1,13 +1,23 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import NavBar from '../navBar/Navbar'
 import { NavLink} from 'react-router-dom'
 import Footer from '../Footer/Footer'
 import FirstHit from './First Round/firstHit'
 import FirstPit from './First Round/firstPit'
 import Transcitions from './Transcitions'
+import LoadingHome from '../../../src/Loading'
 
 const FirstRound = () => {
-  
+  const [count, setCount] = useState(<div className='LoadingFront'><LoadingHome/></div>);
+  const [countInTimeout, setCountInTimeout] = useState([]);
+  useEffect(() => {
+   
+    setTimeout(() => {
+      setCountInTimeout(count)
+    },2000);
+    setCount()
+  },[count])
+
   return (
     <div>
          <NavBar />
@@ -33,10 +43,11 @@ const FirstRound = () => {
             </div>
         </div>
 
+        {!countInTimeout ? 
         <div className='newsNavComponent' >
             <FirstHit />
             <FirstPit />
-        </div>
+        </div> : <div className='LoadingFront'><LoadingHome/></div>}
 
 
         <Footer />

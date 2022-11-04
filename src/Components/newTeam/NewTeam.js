@@ -44,7 +44,7 @@ const NewTeam = () => {
          <div className='newTeam_Wrap' >      
                 <form className='newTeam_Form' onSubmit={handleSubmit} >
                     <label htmlFor="">Name:</label>
-                    <input id='name' type="text" onChange={handleInput}  placeholder="Name and lastname..." className='newInputteam' ></input>
+                    <input id='name' type="text" onChange={handleInput}  placeholder="Name and Last name..." className='newInputteam' ></input>
                     <label htmlFor="">Image URL:</label> 
                     <input id='imag' type="text" onChange={handleInput} value='' placeholder="Image URL..." className='newInputteam' ></input>
                     <div className="newTeam_photo1">

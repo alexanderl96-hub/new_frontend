@@ -3,13 +3,22 @@ import IndividualTeam from '../individualTeam/IndividualTeam'
 import Navbar from '../navBar/Navbar'
 import Footer from '../Footer/Footer.js'
 import './Teams.css'
+import LoadingHome from '../../Loading'
 
 
 
 
 const Teams = () => {
     const [teams, setTeams] = useState([])
-
+    const [count, setCount] = useState(<div className='LoadingFront'><LoadingHome/></div>);
+    const [countInTimeout, setCountInTimeout] = useState([]);
+    useEffect(() => {
+     
+      setTimeout(() => {
+        setCountInTimeout(count)
+      },3000);
+      setCount()
+    },[count])
     
     useEffect(() => {
         fetch(`https://my-baseball-teams.adaptable.app/teams`)
@@ -31,6 +40,7 @@ const Teams = () => {
     <div className='home'>
         <Navbar />
          <h1 className="pageTitle">USA Teams</h1>
+         {!countInTimeout ? 
          <div className='Container'>
          {teams.map((team, index)=>{
              return (
@@ -38,7 +48,7 @@ const Teams = () => {
                
              )
          })}
-         </div>
+         </div> : <div className='LoadingFront'><LoadingHome/></div>}
          <Footer/>
     </div>
   )
