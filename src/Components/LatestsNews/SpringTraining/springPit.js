@@ -12,7 +12,7 @@ const SpringPit = () => {
       },500);
       setCount()
     },[count])
-    
+
     useEffect(() => {
         fetch(`http://lookup-service-prod.mlb.com/json/named.leader_pitching_repeater.bam?sport_code='mlb'&results=10&game_type='S'&season='2022'&sort_column=era`)
         .then(res => res.json())
@@ -23,7 +23,7 @@ const SpringPit = () => {
 console.log(springPit)
   return (
     <div>
-         <div>
+         <div style={{height: '300px'}}>
            <p className='allHitTitle' >Leader Pitcher Spring Traning Top-10</p>
             {springPit ?  springPit.map((pit, index)=>{
                 return(

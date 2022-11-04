@@ -22,7 +22,7 @@ const WorldSeriesPit = () => {
     },[])
   return (
     <div>
-         <div>
+         <div style={{height: '300px'}}>
            <p className='allHitTitle' >Leader Pitcher World Series Top-10</p>
             {worldPit ?  worldPit.map((pit, index)=>{
                 return(  

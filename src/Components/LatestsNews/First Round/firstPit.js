@@ -22,7 +22,7 @@ const FirstPit = () => {
     },[])
   return (
     <div>
-         <div>
+         <div style={{height: '300px'}}>
            <p className='allHitTitle' >Leader Pitcher First Round/Wild Card Top-10</p>
             {firstPit ?  firstPit.map((pit, index)=>{
                 return(

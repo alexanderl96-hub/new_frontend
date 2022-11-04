@@ -39,6 +39,8 @@ const Teams = () => {
   return (
     <div className='home'>
         <Navbar />
+        {/* Slideshow of sport image */}
+        {/* wheater information */}
          <h1 className="pageTitle">USA Teams</h1>
          {!countInTimeout ? 
          <div className='Container'>

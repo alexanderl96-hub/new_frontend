@@ -24,7 +24,7 @@ const LeaderPitcher = () => {
 
   return (
     <div>
-         <div>
+         <div style={{height: '300px'}}>
            <p className='allHitTitle' >Leader Pitcher Regular Season Top-10</p>
             {leaderPitcher ? leaderPitcher.map((pit, index)=>{
                 return (

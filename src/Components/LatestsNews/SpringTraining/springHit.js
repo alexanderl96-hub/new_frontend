@@ -23,7 +23,7 @@ const SpringHit = () => {
 console.log(springHiter)
   return (
     <div>
-         <div>
+         <div >
            <p className='allHitTitle' >Leader Hitting Spring Traning Top-10</p>
             {springHiter ? springHiter.map((hit, index)=>{
                 return(

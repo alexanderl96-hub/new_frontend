@@ -22,7 +22,7 @@ const AllStartPit = () => {
     },[])
   return (
     <div>
-        <div>
+        <div style={{height: '300px'}}>
            <p className='allHitTitle' >Leader Pitcher All Start Game Top-10</p>
             {allPit ?  allPit.map((pit, index)=>{
                 return(        

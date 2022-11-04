@@ -22,7 +22,7 @@ const DivisionPit = () => {
     },[])
   return (
     <div>
-         <div>
+         <div style={{height: '300px'}}>
            <p className='allHitTitle' >Leader Pitcher Division Series Top-10</p>
             {divPit ?  divPit.map((pit, index)=>{
                 return(

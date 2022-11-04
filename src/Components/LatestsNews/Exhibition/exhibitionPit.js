@@ -23,7 +23,7 @@ const ExhibitionPit = () => {
 
   return (
     <div>
-         <div>
+         <div style={{height: '300px'}}>
            <p className='allHitTitle' >Leader Pitcher Exhibition Top-10</p>
             {exhPit ?  exhPit.map((pit, index)=>{
                 return( 

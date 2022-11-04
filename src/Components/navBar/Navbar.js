@@ -1,6 +1,6 @@
 import React, { useState  } from 'react'
 import './Navbar.css'
-import { FaHome, FaUser } from 'react-icons/fa';
+import { FaHome} from 'react-icons/fa';
 import { NavLink , Link} from 'react-router-dom'
 import imageLogo from '../../image/FullLogoTransparent.png'
 import frontLogo from '../../image/FullLogo.png'

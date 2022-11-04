@@ -22,7 +22,7 @@ const ChampionPit = () => {
     },[])
   return (
     <div>
-         <div>
+         <div style={{height: '300px'}}>
            <p className='allHitTitle' >Leader Pitcher League Championship Top-10</p>
             {chamPit ?  chamPit.map((pit, index)=>{
                 return(

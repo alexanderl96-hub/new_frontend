@@ -5,7 +5,7 @@
 }
 
 .cardHit{
-    transition: all 1s ease-out;
+    /* transition: all 1s ease-out; */
     display: flex;
     flex-direction: column;
     margin: 10px;
@@ -23,7 +23,7 @@
 }
 .cardHittrans{
     width: 380px;
-    transition: all 1.5s ease-out;
+    transition: all 1.2s ease-out;
     display: flex;
     flex-direction: column;
     margin: 10px;
@@ -91,8 +91,9 @@
 .newsNavComponent{
     display: flex; 
     justify-content: space-evenly;
-    transition: all 1.3s;
+    transition: all 1.2s;
 }
+
 .seconddropNav{
     height: 0px;
     visibility: hidden; 

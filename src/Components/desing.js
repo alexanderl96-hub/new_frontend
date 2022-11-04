@@ -206,7 +206,7 @@ const Desing = () => {
              :  <div className="section3-empty">
                 <div className=''  > 
                           <div className=''> </div>  
-                           <h3  ></h3>
+                           {/* <h3></h3> */}
                       </div> 
                </div>}
    </div>
