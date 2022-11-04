@@ -4,6 +4,7 @@ import Navbar from '../navBar/Navbar'
 import Footer from '../Footer/Footer.js'
 import './Teams.css'
 import LoadingHome from '../../Loading'
+import SlideShow from '../SlideShow/SlideShow'
 
 
 
@@ -39,6 +40,7 @@ const Teams = () => {
   return (
     <div className='home'>
         <Navbar />
+        <SlideShow />
         {/* Slideshow of sport image */}
         {/* wheater information */}
          <h1 className="pageTitle">USA Teams</h1>
