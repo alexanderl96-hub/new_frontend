@@ -279,7 +279,7 @@ function convertInKG(str){
                                                                 <div>
                                                                     {stat.players_id ?  
                                                                         <div className='about-inner1'>
-                                                                            <div className='game-inner'>{stat.game_date} {stat.game}</div>
+                                                                            <div className='game-inner'>{stat.game_date}  {stat.game}</div>
                                                                             <div className= 'gameInnerPoint'>{stat.ab >= 0 ? stat.ab : '-'}</div>
                                                                             <div className= 'gameInnerPoint'>{stat.r >= 0 ? stat.r : '-'}</div>
                                                                             <div className= 'gameInnerPoint'>{stat.h >= 0 ? stat.h : '-'}</div>

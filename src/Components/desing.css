@@ -400,7 +400,7 @@
     }
     .section3-empty{
         background-color: rgba(128, 128, 128, 0);
-        height: 232.5px;
+        height: 260px;
         text-align: center;
     }
   }
@@ -781,7 +781,7 @@
     }
     .section3-empty{
         background-color: rgba(128, 128, 128, 0);
-        height: 312px;
+        height: 352px;
         text-align: center;
     }
     
@@ -973,7 +973,7 @@
     }
     .section3-empty{
         background-color: rgba(128, 128, 128, 0);
-        height: 306px;
+        /* height: 306px; */
         text-align: center;
     }
 }
@@ -1162,7 +1162,7 @@
     }
     .section3-empty{
         background-color: rgba(128, 128, 128, 0);
-        height: 302px;
+        /* height: 302px; */
         text-align: center;
     }
   }
@@ -1347,11 +1347,7 @@
         aspect-ratio: 16/9;
         object-fit: cover;
     }
-    .section3-empty{
-        background-color: rgba(128, 128, 128, 0);
-        height: 200px;
-        text-align: center;
-    }
+  
  }
 
    /*iPhone 13 Pro Max  (max-width: 428px; max-heigth: 926px;)*/
@@ -1527,11 +1523,7 @@
         aspect-ratio: 16/9;
         object-fit: cover;
     }
-    .section3-empty{
-        background-color: rgba(128, 128, 128, 0);
-        height: 300px;
-        text-align: center;
-    }
+ 
    }
 
   /*iPhone XR  (max-width: 414px; max-heigth: 896px;)*/
@@ -1699,11 +1691,7 @@
         aspect-ratio: 16/9;
         object-fit: cover;
     }
-    .section3-empty{
-        background-color: rgba(128, 128, 128, 0);
-        height: 300px;
-        text-align: center;
-    }
+ 
   }
 
   /*Samsung Galaxy S20 Ultra  (max-width: 412px; max-heigth: 915px;)*/
@@ -2217,11 +2205,7 @@
             aspect-ratio: 16/9;
             object-fit: cover;
         }
-        .section3-empty{
-            background-color: rgba(128, 128, 128, 0);
-            height: 300px;
-            text-align: center;
-        }
+
     }
 
   /*iPhone 12 Pro  (max-width: 390px; max-heigth: 844px;)*/
@@ -2388,11 +2372,7 @@
         aspect-ratio: 16/9;
         object-fit: cover;
     }
-    .section3-empty{
-        background-color: rgba(128, 128, 128, 0);
-        height: 300px;
-        text-align: center;
-    }
+
   }
 
    /*iPhone 11 Pro  (max-width: 375px; max-heigth: 812px;)*/
@@ -2732,11 +2712,7 @@
         aspect-ratio: 16/9;
         object-fit: cover;
     }
-    .section3-empty{
-        background-color: rgba(128, 128, 128, 0);
-        height: 300px;
-        text-align: center;
-    }
+
   }
 
  /*Samsung Galaxy S8+  (max-width: 360px; max-heigth: 740px;)*/
@@ -2902,11 +2878,7 @@
         aspect-ratio: 16/9;
         object-fit: cover;
     }
-    .section3-empty{
-        background-color: rgba(128, 128, 128, 0);
-        height: 300px;
-        text-align: center;
-    }
+
    }
 
  /*LG  (max-width: 360px; max-heigth: 640px;)*/
@@ -3077,11 +3049,7 @@
         aspect-ratio: 16/9;
         object-fit: cover;
     }
-    .section3-empty{
-        background-color: rgba(128, 128, 128, 0);
-        height: 300px;
-        text-align: center;
-    }
+
  }
 
 

@@ -4,9 +4,7 @@
     -moz-animation: fadein 1s; /* Firefox */
     -webkit-animation: fadein 1s; /* Safari and Chrome */
     -o-animation: fadein 1s;
-    /* position: fixed; */
     height: 100%;
-   /* margin-bottom: 30px; */
 }
 .divTop{
     background: linear-gradient(#4256ec, #101125);
@@ -15,8 +13,6 @@
     text-align: center; 
     margin-left: 180px;
     margin-right:180px;
-    /* margin-top:0.5px; */
-    /* aspect-ratio: 21/3; */
     object-fit: cover;
     /* background-image: url('https://images2.minutemediacdn.com/image/fetch/w_1046,h_485,c_fill,g_auto,f_auto/https%3A%2F%2Fnolanwritin.com%2Fwp-content%2Fuploads%2Fimagn-images%2F2017%2F07%2F17949891-850x560.jpeg'); */
 }
@@ -31,8 +27,6 @@
     background-color: black;
     font-family: cursive;
     font-size: 30px; 
-    /* margin-top:1px; */
-    /* box-shadow: 0px -2px 5px 1px #111; */
 }
 .divEdit{
     text-decoration: none;
@@ -73,13 +67,31 @@
     width: 400px;
     margin-right: 580px;
     margin-left: 20px;
+    border: 3px;
+    border-style: solid;
+    border-bottom-color: transparent;
+    border-left-color: white;
+    border-right-color: white;
+    border-top-color: white;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background: #2d2d2d90;
 }
 .divTop > h3{
     color:White;
     width: 400px;
-    margin-top: -15px;
+    margin-top: -20px;
     margin-right: 660px;
     margin-left: 20px;
+    border: 3px;
+    border-style: solid;
+    border-bottom-color: white;
+    border-left-color: white;
+    border-right-color: white;
+    border-top-color: transparent;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background: #2d2d2d90;
 }
 .divMedium{
     margin-left: 180px;
@@ -407,164 +419,54 @@
 
 
 
-
-
-
-/* 
-.about4-2::-webkit-scrollbar {
-    border-radius: 8px; 
-    background-color: gainsboro;
-    width: 10px;
-}  
-
-/* ::-webkit-scrollbar-{
-    border-radius: 8px;
-    background-color: red;
-} */
-/* .about4-2::-webkit-scrollbar-thumb {
-    background: #0000ff6d; 
-    border-radius: 8px;
-    width: 7px;
-}    */
-
 /*Nest Hub Max (max-width: 1280px; max-heigth: 800px;)*/
 @media only screen and (max-width: 1280px){
-    .MainMember{
-        background: #030353ec; 
-        /* width: 100%; */
-        animation: fadein 1s;
-        -moz-animation: fadein 1s; /* Firefox */
-        -webkit-animation: fadein 1s; /* Safari and Chrome */
-        -o-animation: fadein 1s;
-        /* height: 100%; */
-    }
-    .divTop{
-        background: linear-gradient(#4256ec, #101125);
-        display: flex;
-        flex-direction: column;
-        text-align: center; 
-        margin-left: 180px;
-        margin-right:180px;
-        margin-top:0.5px;
-        /* background-image: url('https://images2.minutemediacdn.com/image/fetch/w_1046,h_485,c_fill,g_auto,f_auto/https%3A%2F%2Fnolanwritin.com%2Fwp-content%2Fuploads%2Fimagn-images%2F2017%2F07%2F17949891-850x560.jpeg'); */
-    }
-    .divTop-ImgBackground{
-        margin-left: 180px;
-        margin-right:180px; 
-    }
-    
-    .divTop-inner{
-        color: white;
-        background-color:#2c2424;
-        font-family: cursive;
-        font-size: 30px; 
+    .divTop > h3{
+        margin-top: -20.43px;
     }
     .divEdit{
-        text-decoration: none;
-        color: white;
         margin-left: 170px;
         margin-right: -150px;
-        font-size: 20px;
     }
     .divEdit2{
-        text-decoration: none;
-        color: white;
-        text-align: center;
          margin-left: 190px;
         margin-right: -150px;
-        font-size: 20px; 
-       
     }
     .divEdit3{
-        text-decoration: none;
-        color: white;
-        text-align: center;
         margin-left: 460px;
         margin-right: -130px;
-        font-size: 20px; 
     }
     .divTop > img{
-        border: 12px solid white;
-        border-radius: 50%;
-        height: 170px;
-        width: 170px;
-        margin-top: 45px;
         margin-left: 89.5%;
-        object-fit: cover;
     }
-    .divTop > h2{
-        margin-top: 100px;
-        color:White;
-        width: 400px;
-        margin-right: 580px;
-        margin-left: 20px;
-    }
-    .divTop > h3{
-        color:White;
-        width: 400px;
-        margin-top: -15px;
-        margin-right: 660px;
-        margin-left: 20px;
-    }
-    .divMedium{
-        margin-left: 180px;
-        margin-right:180px;
-        background: rgb(240, 233, 233);
-        box-shadow: 0px -15px 20px 1px #111;
-    }
-    .IndividualContin{
-        display:grid;
-        grid-template-columns: repeat(3, 1fr);
-         grid-auto-rows: repeat(6, 1fr);
-    }
+  
     .IndividualWrapper{
-        margin: 18px;
-        grid-column: 1 / 2;
-        grid-row: 1;
+        margin: 15px;
+
     }
     .IndividualWrapper2{
-        margin: 18px;
-        grid-column: 2 / 3;
-        grid-row: 1;
+        margin: 15px;
+
     }
     .IndividualWrapper3{
-        margin: 18px;
-        grid-column: 3 / 4;
-        grid-row: 1;
+        margin: 15px;
+
     }
-    .IndividualWrapper4{
-        margin-top: 18px;
-        margin-left: 100px;
-        margin-right: 100px;
-        grid-column: 1 / 4;
-        grid-row: 2;
-    }
+
     .IndividualWrapper5{
-        margin: 10px;
-        grid-column: 1 / 4;
-        grid-row: 3;
+        margin: 7px;
         color: red;
     }
     .IndividualWrapper6{
-        /* margin-top: -10px; */
-        margin-left:10px;
-        margin-right:10px;
-        grid-column: 1 / 4;
-        grid-row: 4;
+        margin: 7px;
         color: red;
     }
     .IndividualWrapper7{
-        margin-left:10px;
-        margin-right:10px;
-        grid-column: 1 / 4;
-        grid-row: 5;
+        margin: 7px;
         color: red;
     }
     .IndividualWrapper8{
-        margin-left:10px;
-        margin-right:10px;
-        grid-column: 1 / 4;
-        grid-row: 6;
+        margin: 7px;
         color: red;
     }
     .team_About4{
@@ -575,100 +477,47 @@
         flex-direction: row;  
         flex-wrap: wrap;
        }
-    .class1{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .class2{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .class3{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .class4{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .class5{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
+   
     .class1 > span {
-        width: 50px;
-        height: 20px;
-        grid-column: 1 / 2;
         font-size: 13.5px;
-        font-weight: bold;
     }
     .class2 > span {
-        width: 50px;
-        height: 20px;
-        grid-column: 1 / 2;
         font-size: 13.5px;
-        font-weight: bold;
     }
     .class3 > span {
-        width: 50px;
-        height: 20px;
-        grid-column: 1 / 2;
         font-size: 13.5px;
-        font-weight: bold;
     }
     .class4 > span {
-        width: 50px;
-        height: 20px;
-        grid-column: 1 / 2;
         font-size: 13.5px;
-        font-weight: bold;
     }
     .class5 > span {
-        width: 50px;
-         height: 20px;
-        grid-column: 1 / 2;
         font-size: 13.5px;
-        font-weight: bold;
     }
+
     .class1 > p {
-        width: 210px;
-        margin-top: 1.5px;
-        grid-column: 2 / 3;
-        margin-left: 20px;
-        height: 40px;
-        font-size: 12.5px;
+        margin-left: 22px;
+        font-size: 13px;
+        flex-wrap: wrap;
     }
     .class2 > p {
-        width: 210px;
-        margin-top: 1.5px;
-        grid-column: 2 / 3;
-        margin-left: 20px;
-        height: 40px;
-        font-size: 12.5px;
+        margin-left: 22px;
+        font-size: 13px;
+        flex-wrap: wrap;
     }
     .class3 > p {
-        width: 210px;
-        margin-top: 1.5px;
-        grid-column: 2 / 3;
-        margin-left: 20px;
-        height: 40px;
-        font-size: 12.5px;
+        margin-left: 22px;
+        font-size: 13px;
+        flex-wrap: wrap;
     }
     .class4 > p {
-        width: 210px;
-        margin-top: 1.5px;
-        grid-column: 2 / 3;
-        margin-left: 20px;
-        height: 40px;
-        font-size: 12.5px;
+        margin-left: 22px;
+        font-size: 13px;
+        flex-wrap: wrap;
     }
     .class5 > p {
-        width: 210px;
-        margin-top: 1.5px;
-        grid-column: 2 / 3;
-        margin-left: 20px;
-        height: 40px;
-        font-size: 12.5px;
+        margin-left: 22px;
+        font-size: 13px;
+        flex-wrap: wrap;
     }
     .classAbout > span {
         margin-bottom: 5px;
@@ -677,37 +526,21 @@
      }
     .classAbout > div{
         margin-top: 5px;
-        font-size: 12.5px;
-        /* text-align: justify; */
+        font-size: 13px;
      }
+    
      .statsGrid{
-        background-color: #2c2424;
-        color:white;
-        display:grid;
-        grid-template-columns: repeat(10, 1fr);
-        text-align: center;
-        grid-auto-rows: minmax(100px, auto);
-        padding-top: 10px;
-        height: 30px;
-        margin-left: -10px;
-        margin-right: 18px;
+        margin-left: -7px;
+        margin-right: 9px;
     }
     .game{
         width: 210px;
     }
     .statsPlayerMap{
-        background-color: red;
-         margin-left: -10px;
-        margin-right: 18px; 
-        color: white;
+        margin-left: -7px;
+        margin-right: 9px; 
     }
     .about-inner1{
-        display:grid;
-        grid-template-columns: repeat(10, 1fr);
-        text-align: center;
-        grid-auto-rows: minmax(100px, auto);
-        padding-top: 10px;
-        height: 30px;
         margin-left: -10px;
         margin-right: -10px;
     }
@@ -722,133 +555,65 @@
     }
     
     .statsGrid2{
-        background-color: #2c2424;
-        color:white;
-        display:grid;
-        grid-template-columns: repeat(11, 1fr);
-        text-align: center;
-        grid-auto-rows: minmax(100px, auto);
-        padding-top: 10px;
-        height: 30px;
-        margin-left: -10px;
-        margin-right: 18px;
+        margin-left: -7px;
+        margin-right: 9px;
     }
     .career{
         width: 60px;
-        margin-left: 22px;
-        margin-right: 20px;
     }
     .statsPlayerMap2{
-        background-color: red;
-         margin-left: -10px;
-        margin-right: 18px; 
-        color: white;
+         margin-left: -7px;
+        margin-right: 9px; 
     }
     
     .about-inner2{
-        display:grid;
-        grid-template-columns: repeat(11, 1fr);
-        text-align: center;
-        grid-auto-rows: minmax(100px, auto);
-        padding-top: 10px;
-        height: 30px;
         margin-left: -2px;
         margin-right: -2px;
     }
-    .career1{
-        width: 60px;
-        margin-left: 22px;
-    }
+ 
     .career2{
-        width: 90px;
         margin-left: 30px;
         margin-right: 2px;
-        /* text-align: left; */
     }
-    .gameInnerPoint2{
-        text-align: center;
-        width:80px;
-    }
-    
-    
+
     .statsGridPitcher{
-        background-color: #2c2424;
-        color:white;
-        display:grid;
-        grid-template-columns: repeat(10, 1fr);
-        text-align: center;
-        grid-auto-rows: minmax(100px, auto);
-        padding-top: 10px;
-        height: 30px;
-        margin-left: -10px;
-        margin-right: 18px;
+        margin-left: -7px;
+        margin-right: 9px;
     }
     .pitcher{
         width: 200px;
     }
     .statsPlayerMapPitcher{
-        background-color: red;
-         margin-left: -10px;
-        margin-right: 18px; 
-        color: white;
+         margin-left: -7px;
+        margin-right: 9px; 
     }
     .pitcher-inner1{
-        display:grid;
-       grid-template-columns: repeat(10, 1fr);
-       text-align: center;
-       grid-auto-rows: minmax(100px, auto);
-       padding-top: 10px;
-       height: 30px;
        margin-left: -3px;
        margin-right: -3px;
     }
     .pitcher-inner{
        width: 135px;
        margin-left: 67px;
-       text-align: left;
     }
     
     .statsGrid2PitcherCarrer{
-        background-color: #2c2424;
-        color:white;
-        display:grid;
-        grid-template-columns: repeat(11, 1fr);
-        text-align: center;
-        grid-auto-rows: minmax(100px, auto);
-        padding-top: 10px;
-        height: 30px;
-        margin-left: -10px;
-        margin-right: 18px;
+        margin-left: -7px;
+        margin-right: 9px;
     }
     .statsPlayerMap4{
-        background-color: red;
-         margin-left: -10px;
-        margin-right: 18px; 
-        color: white;
+         margin-left: -7px;
+        margin-right: 9px; 
     }
     
 }
 
 /*Nest Hub (max-width: 1024px; max-heigth: 600px;)*/
 @media only screen and (max-width: 1024px){
-    .MainMember{
-        background: #030353ec; 
-        width: 100%;
-        animation: fadein 1s;
-        -moz-animation: fadein 1s; /* Firefox */
-        -webkit-animation: fadein 1s; /* Safari and Chrome */
-        -o-animation: fadein 1s;
-        /* height: 100%; */
-    }
+  
     .divTop{
-        background: linear-gradient(#4256ec, #101125);
-        display: flex;
-        flex-direction: column;
-        text-align: center; 
         margin-left: 120px;
         margin-right:120px;
-        margin-top:0.5px;
-        /* background-image: url('https://images2.minutemediacdn.com/image/fetch/w_1046,h_485,c_fill,g_auto,f_auto/https%3A%2F%2Fnolanwritin.com%2Fwp-content%2Fuploads%2Fimagn-images%2F2017%2F07%2F17949891-850x560.jpeg'); */
+        margin-top: 0.5px;
     }
     .divTop-ImgBackground{
         margin-left: 120px;
@@ -856,56 +621,39 @@
     }
     
     .divTop-inner{
-        color: white;
-        background-color:#2c2424;
-        font-family: cursive;
-        font-size: 20px; 
+        font-size: 25px; 
+        height: 40px;
     }
     .divEdit{
-        text-decoration: none;
-        color: white;
         margin-left: 140px;
         margin-right: -132px;
-        font-size: 15px;
+        font-size: 18px;
     }
     .divEdit2{
-        text-decoration: none;
-        color: white;
-        text-align: center;
          margin-left: 160px;
         margin-right: -120px;
-        font-size: 15px; 
+        font-size: 18px; 
        
     }
     .divEdit3{
-        text-decoration: none;
-        color: white;
-        text-align: center;
-        margin-left: 430px;
+        margin-left: 370px;
         margin-right: -100px;
-        font-size: 15px; 
+        font-size: 18px; 
     }
     .divTop > img{
-        border: 12px solid white;
-        border-radius: 50%;
-        height: 130px;
-        width: 130px;
-        margin-top: 45px;
-        margin-left: 90%;
-        object-fit: cover;
+        height: 155px;
+        width: 155px;
+        margin-left: 88.5%;
     }
     .divTop > h2{
-        margin-top: 100px;
-        color:White;
-        width: 380px;
+        width: 400px;
         margin-right: 580px;
         margin-left: 20px;
-        font-size: 19px; 
+        font-size: 20px; 
     }
     .divTop > h3{
-        color:White;
         width: 400px;
-        margin-top: -15px;
+        margin-top: -17px;
         margin-right: 660px;
         margin-left: 20px;
         font-size: 17px; 
@@ -913,188 +661,91 @@
     .divMedium{
         margin-left: 120px;
         margin-right:120px;
-        background: rgb(240, 233, 233);
-        box-shadow: 0px -15px 20px 1px #111;
-    }
-    .IndividualContin{
-        display:grid;
-        grid-template-columns: repeat(3, 1fr);
-         grid-auto-rows: repeat(6, 1fr);
     }
     .IndividualWrapper{
         margin: 16px;
-        grid-column: 1 / 2;
-        grid-row: 1;
     }
     .IndividualWrapper2{
         margin: 16px;
-        grid-column: 2 / 3;
-        grid-row: 1;
     }
     .IndividualWrapper3{
         margin: 16px;
-        grid-column: 3 / 4;
-        grid-row: 1;
     }
     .IndividualWrapper4{
         margin-top: 16px;
-        margin-left: 100px;
-        margin-right: 100px;
-        grid-column: 1 / 4;
-        grid-row: 2;
     }
     .IndividualWrapper5{
         margin: 10px;
-        grid-column: 1 / 4;
-        grid-row: 3;
-        color: red;
         font-size: 14px;
+    }
+    .Histogram {
+        font-size: 15px;
     }
     .IndividualWrapper6{
         margin-left:10px;
         margin-right:10px;
-        grid-column: 1 / 4;
-        grid-row: 4;
-        color: red;
         font-size: 14px;
     }
     .IndividualWrapper7{
         margin-left:10px;
         margin-right:10px;
-        grid-column: 1 / 4;
-        grid-row: 5;
-        color: red;
         font-size: 14px;
     }
     .IndividualWrapper8{
         margin-left:10px;
         margin-right:10px;
-        grid-column: 1 / 4;
-        grid-row: 6;
-        color: red;
         font-size: 14px;
     }
-    .team_About4{
-        text-align: center;
-       }
-    .team_About5{
-        display: flex;
-        flex-direction: column;
-       }
-    .class1{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .class2{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .class3{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .class4{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .class5{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
+  
     .class1 > span {
-        width: 50px;
-        height: 20px;
-        grid-column: 1 / 2;
-        font-size: 12px;
-        font-weight: bold;
+        font-size: 13px;
     }
     .class2 > span {
-        width: 50px;
-        height: 20px;
-        grid-column: 1 / 2;
-        font-size: 12px;
-        font-weight: bold;
+        font-size: 13px;
     }
     .class3 > span {
-        width: 50px;
-        height: 20px;
-        grid-column: 1 / 2;
-        font-size: 12px;
-        font-weight: bold;
+        font-size: 13px;
     }
     .class4 > span {
-        width: 50px;
-        height: 20px;
-        grid-column: 1 / 2;
-        font-size: 12px;
-        font-weight: bold;
+        font-size: 13px;
     }
     .class5 > span {
-        width: 50px;
-         height: 20px;
-        grid-column: 1 / 2;
-        font-size: 12px;
-        font-weight: bold;
+        font-size: 13px;
     }
     .class1 > p {
         width: 160px;
-        margin-top: 1.5px;
-        grid-column: 2 / 3;
         margin-left: 20px;
-        height: 40px;
-        font-size: 12px;
+        font-size: 13px;
     }
     .class2 > p {
         width: 160px;
-        margin-top: 1.5px;
-        grid-column: 2 / 3;
         margin-left: 20px;
-        height: 40px;
-        font-size: 12px;
+        font-size: 13px;
     }
     .class3 > p {
         width: 160px;
-        margin-top: 1.5px;
-        grid-column: 2 / 3;
         margin-left: 20px;
-        height: 40px;
-        font-size: 12px;
+        font-size: 13px;
     }
     .class4 > p {
         width: 160px;
-        margin-top: 1.5px;
-        grid-column: 2 / 3;
         margin-left: 20px;
-        height: 40px;
-        font-size: 12.5px;
+        font-size: 13px;
     }
     .class5 > p {
         width: 160px;
-        margin-top: 1.5px;
-        grid-column: 2 / 3;
         margin-left: 20px;
-        height: 40px;
-        font-size: 12.5px;
+        font-size: 13px;
     }
     .classAbout > span {
         margin-bottom: 5px;
         font-size: 13.5px;
-        font-weight: bold;
      }
     .classAbout > div{
         margin-top: 5px;
-        font-size: 12.5px;
-        /* text-align: justify; */
+        font-size: 13px;
      }
      .statsGrid{
-        background-color: #2c2424;
-        color:white;
-        display:grid;
-        grid-template-columns: repeat(10, 1fr);
-        text-align: center;
-        grid-auto-rows: minmax(100px, auto);
-        padding-top: 10px;
-        height: 30px;
         margin-left: -10px;
         margin-right: -8px;
         font-size: 13px;
@@ -1103,18 +754,10 @@
         width: 210px;
     }
     .statsPlayerMap{
-        background-color: red;
          margin-left: -10px;
         margin-right: -8px; 
-        color: white;
     }
     .about-inner1{
-        display:grid;
-        grid-template-columns: repeat(10, 1fr);
-        text-align: center;
-        grid-auto-rows: minmax(100px, auto);
-        padding-top: 10px;
-        height: 30px;
         margin-left: -2px;
         margin-right: -2px;
         font-size: 12.8px;
@@ -1124,20 +767,8 @@
         margin-left: 32px;
         text-align: left;
     }
-    .gameInnerPoint{
-        text-align: center;
-        width:60px;
-    }
     
     .statsGrid2{
-        background-color: #2c2424;
-        color:white;
-        display:grid;
-        grid-template-columns: repeat(11, 1fr);
-        text-align: center;
-        grid-auto-rows: minmax(100px, auto);
-        padding-top: 10px;
-        height: 30px;
         margin-left: -10px;
         margin-right: -8px;
         font-size: 13px;
@@ -1181,14 +812,6 @@
     
     
     .statsGridPitcher{
-        background-color: #2c2424;
-        color:white;
-        display:grid;
-        grid-template-columns: repeat(10, 1fr);
-        text-align: center;
-        grid-auto-rows: minmax(100px, auto);
-        padding-top: 10px;
-        height: 30px;
         margin-left: -10px;
         margin-right: -8px;
         font-size: 13px;
@@ -1197,18 +820,10 @@
         width: 200px;
     }
     .statsPlayerMapPitcher{
-        background-color: red;
          margin-left: -10px;
         margin-right: -8px; 
-        color: white;
     }
     .pitcher-inner1{
-        display:grid;
-       grid-template-columns: repeat(10, 1fr);
-       text-align: center;
-       grid-auto-rows: minmax(100px, auto);
-       padding-top: 10px;
-       height: 30px;
        margin-left: -3px;
        margin-right: -3px;
        font-size: 12.8
@@ -1220,46 +835,22 @@
     }
     
     .statsGrid2PitcherCarrer{
-        background-color: #2c2424;
-        color:white;
-        display:grid;
-        grid-template-columns: repeat(11, 1fr);
-        text-align: center;
-        grid-auto-rows: minmax(100px, auto);
-        padding-top: 10px;
-        height: 30px;
         margin-left: -10px;
         margin-right: -8px;
         font-size: 13px;
     }
     .statsPlayerMap4{
-        background-color: red;
          margin-left: -10px;
         margin-right: -8px; 
-        color: white;
     }
 }
 
  /*Surface Pro 7  (max-width: 912px; max-heigth: 1368px;)*/
  @media only screen and (max-width: 912px){
-    .MainMember{
-        background: #030353ec; 
-        /* width: 100%; */
-        animation: fadein 1s;
-        -moz-animation: fadein 1s; /* Firefox */
-        -webkit-animation: fadein 1s; /* Safari and Chrome */
-        -o-animation: fadein 1s;
-        /* height: 100%; */
-    }
     .divTop{
-        background: linear-gradient(#4256ec, #101125);
-        display: flex;
-        flex-direction: column;
-        text-align: center; 
         margin-left: 90px;
         margin-right:90px;
-        margin-top:0.5px;
-        /* background-image: url('https://images2.minutemediacdn.com/image/fetch/w_1046,h_485,c_fill,g_auto,f_auto/https%3A%2F%2Fnolanwritin.com%2Fwp-content%2Fuploads%2Fimagn-images%2F2017%2F07%2F17949891-850x560.jpeg'); */
+        margin-top:1px;
     }
     .divTop-ImgBackground{
         margin-left: 90px;
@@ -1267,262 +858,136 @@
     }
     
     .divTop-inner{
-        color: white;
-        background-color:#2c2424;
-        font-family: cursive;
-        font-size: 20px; 
+        font-size: 25px; 
     }
     .divEdit{
-        text-decoration: none;
-        color: white;
         margin-left: 110px;
         margin-right: -112px;
-        font-size: 15px;
+        font-size: 19px;
     }
     .divEdit2{
-        text-decoration: none;
-        color: white;
-        text-align: center;
          margin-left: 130px;
         margin-right: -100px;
-        font-size: 15px; 
+        font-size: 19px; 
        
     }
     .divEdit3{
-        text-decoration: none;
-        color: white;
-        text-align: center;
-        margin-left: 400px;
+        margin-left: 340px;
         margin-right: -90px;
-        font-size: 15px; 
+        font-size: 19px; 
     }
     .divTop > img{
-        border: 8px solid white;
-        border-radius: 50%;
-        height: 100px;
-        width: 100px;
-        margin-top: 50px;
-        margin-left: 90%;
-        object-fit: cover;
+        height: 150px;
+        width: 150px;
+        margin-left: 85%;
     }
     .divTop > h2{
-        margin-top: 100px;
-        color:White;
-        width: 380px;
-        margin-right: 580px;
-        margin-left: 20px;
+        width: 350px;
         font-size: 16px; 
     }
     .divTop > h3{
-        color:White;
-        width: 400px;
-        margin-top: -15px;
-        margin-right: 660px;
-        margin-left: 20px;
+        width: 350px;
+        margin-top: -14px;
         font-size: 14px; 
     }
     .divMedium{
         margin-left: 90px;
         margin-right:90px;
-        background: rgb(240, 233, 233);
-        box-shadow: 0px -15px 20px 1px #111;
-    }
-    .IndividualContin{
-        display:grid;
-        grid-template-columns: repeat(3, 1fr);
-         grid-auto-rows: repeat(4, 1fr);
     }
     .IndividualWrapper{
-        margin: 15px;
-        grid-column: 1 / 2;
-        grid-row: 1;
+        margin: 14px;
     }
     .IndividualWrapper2{
-        margin: 15px;
-        grid-column: 2 / 3;
-        grid-row: 1;
+        margin: 14px;
     }
     .IndividualWrapper3{
-        margin: 15px;
-        grid-column: 3 / 4;
-        grid-row: 1;
+        margin: 14px;
     }
     .IndividualWrapper4{
         margin-top: 15px;
         margin-left: 50px;
-        margin-right: 120px;
-        grid-column: 1 / 4;
-        grid-row: 2;
+        margin-right: 70px;
     }
     .IndividualWrapper5{
         margin: 10px;
-        grid-column: 1 / 4;
-        grid-row: 3;
-        color: red;
     }
     .IndividualWrapper6{
         margin-left:10px;
         margin-right:10px;
-        grid-column: 1 / 4;
-        grid-row: 4;
-        color: red;
     }
     .IndividualWrapper7{
         margin-left:10px;
         margin-right:10px;
-        grid-column: 1 / 4;
-        grid-row: 5;
-        color: red;
     }
     .IndividualWrapper8{
         margin-left:10px;
         margin-right:10px;
-        grid-column: 1 / 4;
-        grid-row: 6;
-        color: red;
     }
-    .team_About4{
-        text-align: center;
-       }
-    .team_About5{
-        display: flex;
-        flex-direction: column;
-       }
+ 
        .team_About5 > h2{
            font-size: 15px;
        }
-    .class1{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .class2{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .class3{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .class4{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .class5{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
+  
     .class1 > span {
-        width: 50px;
-        height: 20px;
-        grid-column: 1 / 2;
-        font-size: 10px;
-        font-weight: bold;
+        font-size: 11px;
     }
     .class2 > span {
-        width: 50px;
-        height: 20px;
-        grid-column: 1 / 2;
-        font-size: 10px;
-        font-weight: bold;
+        font-size: 11px;
     }
     .class3 > span {
-        width: 50px;
-        height: 20px;
-        grid-column: 1 / 2;
-        font-size: 10px;
-        font-weight: bold;
+        font-size: 11px;
     }
     .class4 > span {
-        width: 50px;
-        height: 20px;
-        grid-column: 1 / 2;
-        font-size: 10px;
-        font-weight: bold;
+        font-size: 11px;
     }
     .class5 > span {
-        width: 50px;
-         height: 20px;
-        grid-column: 1 / 2;
-        font-size: 10px;
-        font-weight: bold;
+        font-size: 11px;
     }
     .class1 > p {
         width: 140px;
-        margin-top: 1.5px;
-        grid-column: 2 / 3;
         margin-left: 10px;
-        height: 30px;
-        font-size: 10px;
+        font-size: 11px;
     }
     .class2 > p {
         width: 140px;
-        margin-top: 1.5px;
-        grid-column: 2 / 3;
         margin-left: 10px;
-        height: 30px;
-        font-size: 10px;
+        font-size: 11px;
     }
     .class3 > p {
         width: 140px;
-        margin-top: 1.5px;
-        grid-column: 2 / 3;
         margin-left: 10px;
-        height: 30px;
-        font-size: 10px;
+        font-size: 11px;
     }
     .class4 > p {
         width: 140px;
-        margin-top: 1.5px;
-        grid-column: 2 / 3;
         margin-left: 10px;
-        height: 30px;
-        font-size: 10px;
+        font-size: 11px;
     }
     .class5 > p {
-        width: 160px;
-        margin-top: 1.5px;
-        grid-column: 2 / 3;
+        width: 140px;
         margin-left: 10px;
-        height: 40px;
-        font-size: 10px;
+        font-size: 11px;
     }
     .classAbout > span {
-        margin-bottom: 5px;
-        font-size: 11px;
-        font-weight: bold;
+        font-size: 12px;
      }
     .classAbout > div{
-        margin-top: 5px;
-        font-size: 11px;
+        font-size: 11.5px;
      }
      .statsGrid{
-        background-color: #2c2424;
-        color:white;
-        display:grid;
-        grid-template-columns: repeat(10, 1fr);
-        text-align: center;
-        grid-auto-rows: minmax(100px, auto);
-        padding-top: 8px;
         height: 25px;
-        margin-left: -10px;
-        margin-right: 8px;
+        margin-left: -11px;
+        margin-right: -11px;
         font-size: 13px;
     }
     .game{
         width: 180px;
     }
     .statsPlayerMap{
-        background-color: red;
          margin-left: -10px;
-        margin-right: 8px; 
-        color: white;
+        margin-right: -10px; 
     }
     .about-inner1{
-        display:grid;
-        grid-template-columns: repeat(10, 1fr);
-        text-align: center;
-        grid-auto-rows: minmax(100px, auto);
-        padding-top: 10px;
         height: 25px;
         margin-left: -5px;
         margin-right: -5px;
@@ -1539,16 +1004,9 @@
     }
     
     .statsGrid2{
-        background-color: #2c2424;
-        color:white;
-        display:grid;
-        grid-template-columns: repeat(11, 1fr);
-        text-align: center;
-        grid-auto-rows: minmax(100px, auto);
-        padding-top: 8px;
         height: 25px;
-        margin-left: -10px;
-        margin-right: 8px;
+        margin-left: -11px;
+        margin-right: -11px;
         font-size: 13px;
     }
     .career{
@@ -1557,18 +1015,11 @@
         margin-right: 20px;
     }
     .statsPlayerMap2{
-        background-color: red;
          margin-left: -10px;
-        margin-right: 8px; 
-        color: white;
+        margin-right: -10px; 
     }
     
     .about-inner2{
-        display:grid;
-        grid-template-columns: repeat(11, 1fr);
-        text-align: center;
-        grid-auto-rows: minmax(100px, auto);
-        padding-top: 10px;
         height: 30px;
         margin-left: -2px;
         margin-right: -2px;
@@ -1590,33 +1041,19 @@
     
     
     .statsGridPitcher{
-        background-color: #2c2424;
-        color:white;
-        display:grid;
-        grid-template-columns: repeat(10, 1fr);
-        text-align: center;
-        grid-auto-rows: minmax(100px, auto);
-        padding-top: 8px;
         height: 25px;
-        margin-left: -10px;
-        margin-right: 8px;
+        margin-left: -11px;
+        margin-right: -11px;
         font-size: 13px;
     }
     .pitcher{
         width: 200px;
     }
     .statsPlayerMapPitcher{
-        background-color: red;
          margin-left: -10px;
-        margin-right: 8px; 
-        color: white;
+        margin-right: -10px; 
     }
     .pitcher-inner1{
-        display:grid;
-       grid-template-columns: repeat(10, 1fr);
-       text-align: center;
-       grid-auto-rows: minmax(100px, auto);
-       padding-top: 10px;
        height: 30px;
        margin-left: -3px;
        margin-right: -3px;
@@ -1629,23 +1066,14 @@
     }
     
     .statsGrid2PitcherCarrer{
-        background-color: #2c2424;
-        color:white;
-        display:grid;
-        grid-template-columns: repeat(11, 1fr);
-        text-align: center;
-        grid-auto-rows: minmax(100px, auto);
-        padding-top: 8px;
         height: 25px;
-        margin-left: -10px;
-        margin-right: 8px;
+        margin-left: -11px;
+        margin-right: -11px;
         font-size: 13px;
     }
     .statsPlayerMap4{
-        background-color: red;
          margin-left: -10px;
-        margin-right: 8px; 
-        color: white;
+        margin-right: -10px; 
     }
  }
 

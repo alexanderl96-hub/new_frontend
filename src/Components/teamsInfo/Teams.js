@@ -41,7 +41,6 @@ const Teams = () => {
     <div className='home'>
         <Navbar />
         <SlideShow />
-        {/* Slideshow of sport image */}
         {/* wheater information */}
          <h1 className="pageTitle">USA Teams</h1>
          {!countInTimeout ? 
