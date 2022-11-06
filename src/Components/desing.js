@@ -154,7 +154,7 @@ const Desing = () => {
                                <p><span>Number:</span> {a.number}</p>
                                <p><span>Position:</span> {a.position}</p>
                                <p><span>Salary:</span> {a.salary}</p>
-                               <p><span>About: </span>{a.about}  <Link to={`/teams/groups/${search}`} className='changeMore'> See More...</Link></p>
+                               <p><span>About: </span>{a.about}  <Link to={`/teams/groups/${search}`} className='changeMore'> More..→</Link></p>
                                {/* <Link to={`/teams/groups/${search}`} className='changeMore'> See More...</Link> */}
                              </div>
                            <div className='innerSectionStart'>

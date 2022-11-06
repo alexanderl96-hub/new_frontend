@@ -79,7 +79,6 @@ label{
     .newTeam_Container{
         text-align: center;
         padding-bottom: 10px; 
-        background-color: rgba(148, 145, 145, 0.645);
         transition: all 1.5s;
         animation: fadein 0.5s;
         -moz-animation: fadein 0.5s; /* Firefox */
@@ -87,7 +86,6 @@ label{
         -o-animation: fadein 0.5s;
     }
     .newTeam_Container > h1 {
-        color: white;
         font-family: cursive;
         margin-left: -80%;
     }
@@ -113,7 +111,6 @@ label{
     .newTeam_photo1{
         width: 420px;
         height: 260px;
-        border: 3px solid rgb(255, 252, 252);
         border-radius: 8px;
         background-color: rgba(255, 255, 255, 0.657);
         margin-left: 34%;
@@ -147,7 +144,6 @@ label{
     .newTeam_Container{
         text-align: center;
         padding-bottom: 10px; 
-        background-color: rgba(148, 145, 145, 0.645);
         transition: all 1.5s;
         animation: fadein 0.5s;
         -moz-animation: fadein 0.5s; /* Firefox */
@@ -155,7 +151,6 @@ label{
         -o-animation: fadein 0.5s;
     }
     .newTeam_Container > h1 {
-        color: white;
         font-family: cursive;
         margin-left: -75%;
     }
@@ -181,7 +176,6 @@ label{
     .newTeam_photo1{
         width: 420px;
         height: 230px;
-        border: 3px solid rgb(255, 252, 252);
         border-radius: 8px;
         background-color: rgba(255, 255, 255, 0.657);
         margin-left: 30%;
@@ -217,7 +211,6 @@ label{
         flex-direction: column;
         text-align: center;
         padding-bottom: 10px; 
-        background-color: rgba(148, 145, 145, 0.645);
         transition: all 1.5s;
         animation: fadein 0.5s;
         -moz-animation: fadein 0.5s; /* Firefox */
@@ -225,7 +218,6 @@ label{
         -o-animation: fadein 0.5s;
     }
     .newTeam_Container > h1 {
-        color: white;
         font-size: 45px;
         font-family: cursive;
         margin-top: 5%;
@@ -250,7 +242,6 @@ label{
     .newTeam_photo1{
         width: 500px;
         height: 320px;
-        border: 3px solid rgb(255, 252, 252);
         border-radius: 8px;
         background-color: rgba(255, 255, 255, 0.657);
         margin-left: 21%;
@@ -288,7 +279,6 @@ label{
         flex-direction: column;
         text-align: center;
         padding-bottom: 10px; 
-        background-color: rgba(148, 145, 145, 0.645);
         transition: all 1.5s;
         animation: fadein 0.5s;
         -moz-animation: fadein 0.5s; /* Firefox */
@@ -296,7 +286,6 @@ label{
         -o-animation: fadein 0.5s;
     }
     .newTeam_Container > h1 {
-        color: white;
         font-size: 35px;
         font-family: cursive;
         margin-top: 5%;
@@ -321,7 +310,6 @@ label{
     .newTeam_photo1{
         width: 500px;
         height: 300px;
-        border: 3px solid rgb(255, 252, 252);
         border-radius: 8px;
         background-color: rgba(255, 255, 255, 0.657);
         margin-left: 20%;
@@ -359,7 +347,6 @@ label{
         flex-direction: column;
         text-align: center;
         padding-bottom: 10px; 
-        background-color: rgba(148, 145, 145, 0.645);
         transition: all 1.5s;
         animation: fadein 0.5s;
         -moz-animation: fadein 0.5s; /* Firefox */
@@ -367,7 +354,6 @@ label{
         -o-animation: fadein 0.5s;
     }
     .newTeam_Container > h1 {
-        color: white;
         font-size: 35px;
         font-family: cursive;
         margin-top: 5%;
@@ -392,7 +378,6 @@ label{
     .newTeam_photo1{
         width: 500px;
         height: 300px;
-        border: 3px solid rgb(255, 252, 252);
         border-radius: 8px;
         background-color: rgba(255, 255, 255, 0.657);
         margin-left: 17%;
@@ -430,7 +415,6 @@ label{
         flex-direction: column;
         text-align: center;
         padding-bottom: 10px; 
-        background-color: rgba(148, 145, 145, 0.645);
         transition: all 1.5s;
         animation: fadein 0.5s;
         -moz-animation: fadein 0.5s; /* Firefox */
@@ -438,7 +422,6 @@ label{
         -o-animation: fadein 0.5s;
     }
     .newTeam_Container > h1 {
-        color: white;
         font-size: 20px;
         font-family: cursive;
         margin-top: 5%;
@@ -463,7 +446,6 @@ label{
     .newTeam_photo1{
         width: 400px;
         height: 250px;
-        border: 3px solid rgb(255, 252, 252);
         border-radius: 8px;
         background-color: rgba(255, 255, 255, 0.657);
         margin-left: 11%;
@@ -501,7 +483,6 @@ label{
         flex-direction: column;
         text-align: center;
         padding-bottom: 10px; 
-        background-color: rgba(148, 145, 145, 0.645);
         transition: all 1.5s;
         animation: fadein 0.5s;
         -moz-animation: fadein 0.5s; /* Firefox */
@@ -509,7 +490,6 @@ label{
         -o-animation: fadein 0.5s;
     }
     .newTeam_Container > h1 {
-        color: white;
         font-size: 22px;
         font-family: cursive;
         margin-left: -70%;
@@ -535,7 +515,6 @@ label{
     .newTeam_photo1{
         width: 330px;
         height: 230px;
-        border: 3px solid rgb(255, 252, 252);
         border-radius: 8px;
         background-color: rgba(255, 255, 255, 0.657);
         margin-left: 9.3%;
@@ -573,7 +552,6 @@ label{
         flex-direction: column;
         text-align: center;
         padding-bottom: 10px; 
-        background-color: rgba(148, 145, 145, 0.645);
         transition: all 1.5s;
         animation: fadein 0.5s;
         -moz-animation: fadein 0.5s; /* Firefox */
@@ -581,7 +559,6 @@ label{
         -o-animation: fadein 0.5s;
     }
     .newTeam_Container > h1 {
-        color: white;
         font-size: 22px;
         font-family: cursive;
         margin-left: -70%;
@@ -607,7 +584,6 @@ label{
     .newTeam_photo1{
         width: 330px;
         height: 230px;
-        border: 3px solid rgb(255, 252, 252);
         border-radius: 8px;
         background-color: rgba(255, 255, 255, 0.657);
         margin-left: 9.3%;
@@ -645,7 +621,6 @@ label{
         flex-direction: column;
         text-align: center;
         padding-bottom: 10px; 
-        background-color: rgba(148, 145, 145, 0.645);
         transition: all 1.5s;
         animation: fadein 0.5s;
         -moz-animation: fadein 0.5s; /* Firefox */
@@ -653,7 +628,6 @@ label{
         -o-animation: fadein 0.5s;
     }
     .newTeam_Container > h1 {
-        color: white;
         font-size: 22px;
         font-family: cursive;
         margin-left: -70%;
@@ -679,7 +653,6 @@ label{
     .newTeam_photo1{
         width: 330px;
         height: 230px;
-        border: 3px solid rgb(255, 252, 252);
         border-radius: 8px;
         background-color: rgba(255, 255, 255, 0.657);
         margin-left: 9.3%;
@@ -717,7 +690,6 @@ label{
         flex-direction: column;
         text-align: center;
         padding-bottom: 10px; 
-        background-color: rgba(148, 145, 145, 0.645);
         transition: all 1.5s;
         animation: fadein 0.5s;
         -moz-animation: fadein 0.5s; /* Firefox */
@@ -725,7 +697,6 @@ label{
         -o-animation: fadein 0.5s;
     }
     .newTeam_Container > h1 {
-        color: white;
         font-size: 22px;
         font-family: cursive;
         margin-left: -70%;
@@ -751,7 +722,6 @@ label{
     .newTeam_photo1{
         width: 330px;
         height: 230px;
-        border: 3px solid rgb(255, 252, 252);
         border-radius: 8px;
         background-color: rgba(255, 255, 255, 0.657);
         margin-left: 9.3%;
@@ -789,7 +759,6 @@ label{
             flex-direction: column;
             text-align: center;
             padding-bottom: 10px; 
-            background-color: rgba(148, 145, 145, 0.645);
             transition: all 1.5s;
             animation: fadein 0.5s;
             -moz-animation: fadein 0.5s; /* Firefox */
@@ -797,7 +766,6 @@ label{
             -o-animation: fadein 0.5s;
         }
         .newTeam_Container > h1 {
-            color: white;
             font-size: 22px;
             font-family: cursive;
             margin-left: -70%;
@@ -823,7 +791,6 @@ label{
         .newTeam_photo1{
             width: 330px;
             height: 230px;
-            border: 3px solid rgb(255, 252, 252);
             border-radius: 8px;
             background-color: rgba(255, 255, 255, 0.657);
             margin-left: 5.5%;
@@ -861,7 +828,6 @@ label{
         flex-direction: column;
         text-align: center;
         padding-bottom: 10px; 
-        background-color: rgba(148, 145, 145, 0.645);
         transition: all 1.5s;
         animation: fadein 0.5s;
         -moz-animation: fadein 0.5s; /* Firefox */
@@ -869,7 +835,6 @@ label{
         -o-animation: fadein 0.5s;
     }
     .newTeam_Container > h1 {
-        color: white;
         font-size: 22px;
         font-family: cursive;
         margin-left: -70%;
@@ -895,7 +860,6 @@ label{
     .newTeam_photo1{
         width: 330px;
         height: 230px;
-        border: 3px solid rgb(255, 252, 252);
         border-radius: 8px;
         background-color: rgba(255, 255, 255, 0.657);
         margin-left:5.5%;
@@ -933,7 +897,6 @@ label{
         flex-direction: column;
         text-align: center;
         padding-bottom: 10px; 
-        background-color: rgba(148, 145, 145, 0.645);
         transition: all 1.5s;
         animation: fadein 0.5s;
         -moz-animation: fadein 0.5s; /* Firefox */
@@ -941,7 +904,6 @@ label{
         -o-animation: fadein 0.5s;
     }
     .newTeam_Container > h1 {
-        color: white;
         font-size: 22px;
         font-family: cursive;
         margin-left: -70%;
@@ -967,7 +929,6 @@ label{
     .newTeam_photo1{
         width: 315px;
         height: 200px;
-        border: 3px solid rgb(255, 252, 252);
         border-radius: 8px;
         background-color: rgba(255, 255, 255, 0.657);
         margin-left: 5.4%;
@@ -1005,7 +966,6 @@ label{
         flex-direction: column;
         text-align: center;
         padding-bottom: 10px; 
-        background-color: rgba(148, 145, 145, 0.645);
         transition: all 1.5s;
         animation: fadein 0.5s;
         -moz-animation: fadein 0.5s; /* Firefox */
@@ -1013,7 +973,6 @@ label{
         -o-animation: fadein 0.5s;
     }
     .newTeam_Container > h1 {
-        color: white;
         font-size: 22px;
         font-family: cursive;
         margin-left: -65%;
@@ -1039,7 +998,6 @@ label{
     .newTeam_photo1{
         width: 300px;
         height: 230px;
-        border: 3px solid rgb(255, 252, 252);
         border-radius: 8px;
         background-color: rgba(255, 255, 255, 0.657);
         margin-left: 5.5%;
@@ -1077,7 +1035,6 @@ label{
         flex-direction: column;
         text-align: center;
         padding-bottom: 10px; 
-        background-color: rgba(148, 145, 145, 0.645);
         transition: all 1.5s;
         animation: fadein 0.5s;
         -moz-animation: fadein 0.5s; /* Firefox */
@@ -1085,7 +1042,6 @@ label{
         -o-animation: fadein 0.5s;
     }
     .newTeam_Container > h1 {
-        color: white;
         font-size: 20px;
         font-family: cursive;
         margin-left: -60%;
@@ -1111,7 +1067,6 @@ label{
     .newTeam_photo1{
         width: 245px;
         height: 200px;
-        border: 3px solid rgb(255, 252, 252);
         border-radius: 8px;
         background-color: rgba(255, 255, 255, 0.657);
         margin-left: 2.5%;
