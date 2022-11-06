@@ -5,6 +5,7 @@ import Footer from '../Footer/Footer.js'
 import './Teams.css'
 import LoadingHome from '../../Loading'
 import SlideShow from '../SlideShow/SlideShow'
+import Videos from '../Videos'
 
 
 
@@ -40,8 +41,12 @@ const Teams = () => {
   return (
     <div className='home'>
         <Navbar />
-        <SlideShow />
-        {/* wheater information */}
+        <div style={{display:'flex'}}>
+            {/* wheater app */}
+            <SlideShow />
+            <Videos />
+        </div>
+       
          <h1 className="pageTitle">USA Teams</h1>
          {!countInTimeout ? 
          <div className='Container'>

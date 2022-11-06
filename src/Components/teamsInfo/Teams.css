@@ -24,6 +24,11 @@
   margin-top: -60px;
   margin-bottom: 150px;
 }
+.videosSport{
+  padding-top: 30px; 
+  padding-right: 15px;
+}
+
 @keyframes fadein {
   from {
     opacity: 0;
@@ -70,12 +75,16 @@
   .LoadingFront{
     margin-bottom: 220px;
   }
+
 }
 
 /*Nest Hub (max-width: 1024px; max-heigth: 600px;)*/
 @media only screen and (max-width: 1024px) {
   .LoadingFront{
     margin-bottom: 180px;
+  }
+    .videosSport{
+    padding-right: 5px;
   }
 }
 
@@ -84,6 +93,9 @@
   .LoadingFront{
     margin-top: 300px;
     margin-bottom: 560px;
+  }
+  .videosSport{
+    display: none;
   }
 } 
 

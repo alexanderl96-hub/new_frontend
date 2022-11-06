@@ -278,8 +278,6 @@
   .navPlay > .divMatch >.divMatchAll{
     height: 17px;
     font-size: 14px;
-    background-color: gray;
-    color: white;
     padding: 2.3px;
     width: 85px;
      border-radius: 10px; 
@@ -289,8 +287,6 @@
   .navPlay > .divMatch >.divMatchPart{
     height: 17px;
     font-size: 14px;
-    background-color: gray;
-    color: white;
     padding: 2.3px;
     width: 85px;
     border-radius: 10px; 
@@ -300,8 +296,6 @@
   .navPlay > .divMatch >.divMatchNone{
     height: 17px;
     font-size: 14px;
-    background-color: gray;
-    color: white;
     padding: 2.3px;
     width: 85px;
     border-radius: 10px; 
@@ -510,8 +504,6 @@
   .navPlay > .divMatch >.divMatchAll{
     height: 17px;
     font-size: 14px;
-    background-color: gray;
-    color: white;
     padding: 3px;
     width: 85px;
      border-radius: 10px; 
@@ -521,8 +513,6 @@
   .navPlay > .divMatch >.divMatchPart{
     height: 17px;
       font-size: 14px;
-      background-color: gray;
-      color: white;
       padding: 3px;
       width: 70px;
       border-radius: 10px; 
@@ -532,8 +522,6 @@
   .navPlay > .divMatch >.divMatchNone{
     height: 17px;
     font-size: 14px;
-    background-color: gray;
-    color: white;
     padding: 3px;
     width: 70px;
     border-radius: 10px; 
@@ -743,8 +731,6 @@
   .navPlay > .divMatch >.divMatchAll{
     height: 19px;
     font-size: 14px;
-    background-color: gray;
-    color: white;
     padding:2px;
     width: 85px;
      border-radius: 10px; 
@@ -754,8 +740,6 @@
   .navPlay > .divMatch >.divMatchPart{
     height: 19px;
     font-size: 14px;
-    background-color: gray;
-    color: white;
     padding: 2px;
     width: 85px;
     border-radius: 10px;  
@@ -765,8 +749,6 @@
   .navPlay > .divMatch >.divMatchNone{
     height: 19px;
     font-size: 14px;
-    background-color: gray;
-    color: white;
     padding: 2px;
     width: 85px;
     border-radius: 10px;  
@@ -975,8 +957,6 @@
   .navPlay > .divMatch >.divMatchAll{
     height: 19px;
     font-size: 14px;
-    background-color: gray;
-    color: white;
     padding: 2px;
     width: 90px;
     border-radius: 10px; 
@@ -986,8 +966,6 @@
   .navPlay > .divMatch >.divMatchPart{
     height: 19px;
     font-size: 14px;
-    background-color: gray;
-    color: white;
     padding: 2px;
     width: 90px;
     border-radius: 10px; 
@@ -997,8 +975,6 @@
   .navPlay > .divMatch >.divMatchNone{
     height: 19px;
     font-size: 14px;
-    background-color: gray;
-    color: white;
     padding: 2px;
     width: 90px;
     border-radius: 10px; 
@@ -1207,8 +1183,6 @@
     .navPlay > .divMatch >.divMatchAll{
       height: 19px;
       font-size: 14px;
-      background-color: gray;
-      color: white;
       padding: 2px;
       width: 95px;
        border-radius: 10px; 
@@ -1218,8 +1192,6 @@
     .navPlay > .divMatch >.divMatchPart{
       height: 19px;
         font-size: 14px;
-        background-color: gray;
-        color: white;
         padding: 2px;
         width: 95px;
         border-radius: 10px; 
@@ -1229,8 +1201,6 @@
     .navPlay > .divMatch >.divMatchNone{
       height: 20px;
       font-size: 14px;
-      background-color: gray;
-      color: white;
       padding: 2px;
       width: 95px;
       border-radius: 10px; 
@@ -1440,8 +1410,6 @@
   .navPlay > .divMatch >.divMatchAll{
     height: 17px;
     font-size: 13px;
-    background-color: gray;
-    color: white;
     padding: 2px;
     width: 80px;
      border-radius: 10px; 
@@ -1451,8 +1419,6 @@
   .navPlay > .divMatch >.divMatchPart{
     height: 17px;
     font-size: 13px;
-    background-color: gray;
-    color: white;
     padding: 2px;
     width: 80px;
     border-radius: 10px; 
@@ -1462,8 +1428,6 @@
   .navPlay > .divMatch >.divMatchNone{
     height: 17px;
     font-size: 13px;
-    background-color: gray;
-    color: white;
     padding: 2px;
     width: 80px;
     border-radius: 10px; 
@@ -1673,8 +1637,6 @@
     .navPlay > .divMatch >.divMatchAll{
       height: 16px;
       font-size: 13px;
-      background-color: gray;
-      color: white;
       padding:1px;
       width: 80px;
        border-radius: 10px; 
@@ -1684,8 +1646,6 @@
     .navPlay > .divMatch >.divMatchPart{
       height: 16px;
         font-size: 13px;
-        background-color: gray;
-        color: white;
         padding:1px;
         width: 80px;
         border-radius: 10px; 
@@ -1695,8 +1655,6 @@
     .navPlay > .divMatch >.divMatchNone{
       height: 16px;
       font-size: 13px;
-      background-color: gray;
-      color: white;
       padding:1px;
       width: 80px;
       border-radius: 10px;  
@@ -1907,8 +1865,6 @@
     .navPlay > .divMatch >.divMatchAll{
       height: 15px;
       font-size: 12px;
-      background-color: gray;
-      color: white;
       padding:1px;
       width: 75px;
        border-radius: 10px; 
@@ -1918,8 +1874,6 @@
     .navPlay > .divMatch >.divMatchPart{
       height: 15px;
       font-size: 12px;
-      background-color: gray;
-      color: white;
       padding:1px;
       width: 75px;
       border-radius: 10px; 
@@ -1929,8 +1883,6 @@
     .navPlay > .divMatch >.divMatchNone{
       height: 15px;
       font-size: 12px;
-      background-color: gray;
-      color: white;
       padding:1px;
       width: 75px;
       border-radius: 10px; 
@@ -2380,8 +2332,6 @@
     .navPlay > .divMatch >.divMatchAll{
       height: 15px;
       font-size: 11.5px;
-      background-color: gray;
-      color: white;
       padding:1px;
       width: 75px;
        border-radius: 10px; 
@@ -2391,8 +2341,6 @@
     .navPlay > .divMatch >.divMatchPart{
       height: 15px;
       font-size: 11.5px;
-      background-color: gray;
-      color: white;
       padding:1px;
       width: 75px;
       border-radius: 10px;  
@@ -2402,8 +2350,6 @@
     .navPlay > .divMatch >.divMatchNone{
       height: 15px;
       font-size: 11.5px;
-      background-color: gray;
-      color: white;
       padding:1px;
       width: 75px;
       border-radius: 10px; 
@@ -2615,8 +2561,6 @@
       .navPlay > .divMatch >.divMatchAll{
         height: 13px;
         font-size: 11px;
-        background-color: gray;
-        color: white;
         padding:1px;
         width: 70px;
          border-radius: 10px; 
@@ -2626,8 +2570,6 @@
       .navPlay > .divMatch >.divMatchPart{
         height: 13px;
         font-size: 11px;
-        background-color: gray;
-        color: white;
         padding:1px;
         width: 70px;
         border-radius: 10px;  
@@ -2637,8 +2579,6 @@
       .navPlay > .divMatch >.divMatchNone{
         height: 13px;
         font-size: 11px;
-        background-color: gray;
-        color: white;
         padding:1px;
         width: 70px;
         border-radius: 10px;  
@@ -2849,8 +2789,6 @@
     .navPlay > .divMatch >.divMatchAll{
       height: 12.5px;
       font-size: 10.5px;
-      background-color: gray;
-      color: white;
       padding: 1px;
       width: 67px;
        border-radius: 10px;  
@@ -2860,8 +2798,6 @@
     .navPlay > .divMatch >.divMatchPart{
       height: 12.5px;
       font-size: 10.5px;
-      background-color: gray;
-      color: white;
       padding:1px;
       width: 67px;
       border-radius: 10px;  
@@ -2871,8 +2807,6 @@
     .navPlay > .divMatch >.divMatchNone{
       height: 12.5px;
       font-size: 10.5px;
-      background-color: gray;
-      color: white;
       padding:1px;
       width: 67px;
       border-radius: 10px; 
@@ -3083,8 +3017,6 @@
     .navPlay > .divMatch >.divMatchAll{
       height: 14px;
       font-size: 11px;
-      background-color: gray;
-      color: white;
       padding: 1px;
       width: 70px;
        border-radius: 10px; 
@@ -3094,8 +3026,6 @@
     .navPlay > .divMatch >.divMatchPart{
       height: 14px;
       font-size: 11px;
-      background-color: gray;
-      color: white;
       padding:1px;
       width: 70px;
       border-radius: 10px; 
@@ -3105,8 +3035,6 @@
     .navPlay > .divMatch >.divMatchNone{
       height: 14px;
       font-size: 11px;
-      background-color: gray;
-      color: white;
       padding:1px;
       width: 70px;
       border-radius: 10px; 
@@ -3317,8 +3245,6 @@
     .navPlay > .divMatch >.divMatchAll{
       height: 14px;
       font-size: 11px;
-      background-color: gray;
-      color: white;
       padding:1px;
       width: 70px;
        border-radius: 10px; 
@@ -3328,8 +3254,6 @@
     .navPlay > .divMatch >.divMatchPart{
       height: 14px;
       font-size: 11px;
-      background-color: gray;
-      color: white;
       padding:1px;
       width: 70px;
       border-radius: 10px; 
@@ -3339,8 +3263,6 @@
     .navPlay > .divMatch >.divMatchNone{
       height: 14px;
       font-size: 11px;
-      background-color: gray;
-      color: white;
       padding:1px;
       width: 70px;
       border-radius: 10px; 
@@ -3551,8 +3473,6 @@
   .navPlay > .divMatch >.divMatchAll{
     height: 12px;
     font-size: 9px;
-    background-color: gray;
-    color: white;
     padding:1px;
     width: 55px;
      border-radius: 10px;  
@@ -3562,8 +3482,6 @@
   .navPlay > .divMatch >.divMatchPart{
     height: 12px;
       font-size: 9px;
-      background-color: gray;
-      color: white;
       padding:1px;
       width: 55px;
       border-radius: 10px; 
@@ -3574,8 +3492,6 @@
   .navPlay > .divMatch >.divMatchNone{
     height: 12px;
     font-size: 9px;
-    background-color: gray;
-    color: white;
     padding:1px;
     width: 55px;
     border-radius: 10px; 
