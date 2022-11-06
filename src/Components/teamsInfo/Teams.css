@@ -25,8 +25,9 @@
   margin-bottom: 150px;
 }
 .videosSport{
-  padding-top: 30px; 
-  padding-right: 15px;
+  margin: 5px auto;
+  /* padding-top: 30px; 
+  padding-right: 15px; */
 }
 
 @keyframes fadein {

@@ -19,7 +19,7 @@ const SlideShow = () => {
        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-NUnEJs2B38JxxkjSvpQqn6tqEsrQFqkjOQ&usqp=CAU',
         'https://media.npr.org/assets/img/2019/10/18/gettyimages-1181439036_wide-323587b07afdb314a235148bd7d4e7b083c16003-s1400-c100.jpg', 
         'https://miro.medium.com/max/1400/1*VBNQk6nTmqp-MqGvYCTFlg.jpeg'];
-    const delay = 4000;
+    const delay = 6000;
 
 
   function resetTimeout() {

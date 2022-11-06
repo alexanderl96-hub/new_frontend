@@ -6,6 +6,8 @@ import './Teams.css'
 import LoadingHome from '../../Loading'
 import SlideShow from '../SlideShow/SlideShow'
 import Videos from '../Videos'
+// import Weather from '../Weather'
+// import  Weather  from '../Weather'
 
 
 
@@ -14,6 +16,7 @@ const Teams = () => {
     const [teams, setTeams] = useState([])
     const [count, setCount] = useState(<div className='LoadingFront'><LoadingHome/></div>);
     const [countInTimeout, setCountInTimeout] = useState([]);
+    
     useEffect(() => {
      
       setTimeout(() => {
@@ -37,14 +40,13 @@ const Teams = () => {
     //     })
     // },[])
   
-    
   return (
     <div className='home'>
         <Navbar />
         <div style={{display:'flex'}}>
             {/* wheater app */}
             <SlideShow />
-            <Videos />
+           {/* {Weather} */}
         </div>
        
          <h1 className="pageTitle">USA Teams</h1>
@@ -57,6 +59,11 @@ const Teams = () => {
              )
          })}
          </div> : <div className='LoadingFront'><LoadingHome/></div>}
+         <div style={{display:'flex'}}>
+         <Videos />
+         <Videos />
+         <Videos />
+         </div>
          <Footer/>
     </div>
   )

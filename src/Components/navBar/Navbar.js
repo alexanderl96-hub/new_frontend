@@ -23,7 +23,7 @@ function Navbar() {
           <div className="nav" >
          
             <div className='navLogo'>
-               <img src={frontLogo} alt="1" className='forntLogo'/>
+               <img src={imageLogo} alt="1" className='forntLogo'/>
             </div>
             
             <NavLink to='/' className='nav-inner' 

@@ -13,6 +13,7 @@
 }
 .teamContainer {
   background-color: rgb(2, 2, 220);
+   background-color: #070f3c;
   color: white;
   padding: 10px;
   display: flex;
