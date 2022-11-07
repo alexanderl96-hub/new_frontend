@@ -66,7 +66,7 @@ const About = () => {
             <div style={{background: '#070f3c', height: '90px', color: 'white', textAlign: 'center', paddingTop: '8px'}}>
                Software Development / Technology   
                  <p style={{color:'red', fontSize: '14px'}}>• JavaScript • React/Redux • Node.js • HTMl • CSS • Express • Git/GitHub • PostgreSQL APIs • VS Code • Data Structures • Algorithms • </p> 
-                 <a href={Resume} style={{color: 'white', textDecoration: 'underline', fontSize: '14px' }}>Resume ...</a>
+                 <a href={Resume} style={{color: 'white', textDecoration: 'underline', fontSize: '14px' }}>Resume</a>
             </div>
         
             <div style={{display:'flex', justifyContent: 'space-around', margin: '20px'}}>
@@ -76,7 +76,7 @@ const About = () => {
                   </div>
                 
                   <div style={{height: '80px', width: '250px', border: '2px solid #070f3c', padding: '10px', textAlign: 'center'}}>
-                          <FaMapMarkerAlt style={{fontSize: '28px'}}/> 
+                         <a href='https://www.google.com/maps/place/626+Riverside+Dr,+New+York,+NY+10031/@40.8237005,-73.9568611,17z/data=!3m1!4b1!4m5!3m4!1s0x89c2f666973658dd:0x10fef5e48a024bc1!8m2!3d40.8236965!4d-73.9546724'> <FaMapMarkerAlt style={{fontSize: '28px'}}/> </a>
                          <p><span>Location:</span> 626 Riverside Drive, New York, NY, 10031</p>      
                   </div>
                
