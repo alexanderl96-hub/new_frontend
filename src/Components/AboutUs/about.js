@@ -3,7 +3,7 @@ import NavBar from '../navBar/Navbar'
 import Footer from '../Footer/Footer'
 import Resume from '../PDF/Resume2022.pdf'
 import Logo from '../../image/FullLogo.png'
-import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaYoutube, FaMobile, FaMobileAlt, FaMapMarkerAlt} from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaYoutube, FaMobileAlt, FaMapMarkerAlt} from 'react-icons/fa'
 
 const About = () => {
   const [form, setForm] = useState(false)
@@ -49,11 +49,11 @@ const About = () => {
                   <p style={{ textAlign: 'justify',pointerEvents: 'auto'}}>From dancing and creating art, to building applications and choreographing code; 
                 I am a dancer turned software developer aspiring to have a positive impact on the world using 
                 technology.</p>
-                  <p style={{ textAlign: 'justify',pointerEvents: 'auto'}}>I recently joined the <a href="http://www.pursuit.org/">Pursuit</a> core program, which is an intensive <em>12 - month software engineering 
+                  <p style={{ textAlign: 'justify',pointerEvents: 'auto'}}>I recently joined the <a href="http://www.pursuit.org/" style={{textDecoration:'underline'}}>Pursuit</a> core program, which is an intensive <em>12 - month software engineering 
                     fellowship</em>, with a 9 percent acceptance rate. As a creative and 
                     diligent tech nerd I am a firm believer in the positive power of technology. My goal is 
                     to build and create programs that bring people closer together.  As a former performing 
-                    artist, I am passionate about the <a href="http://www.pursuit.org/">arts</a>, music and <a href="https://youtu.be/rY_fkUZL2qI">dance</a>. The 
+                    artist, I am passionate about the <a href="http://www.pursuit.org/" style={{textDecoration:'underline'}}>arts</a>, music and <a href="https://youtu.be/rY_fkUZL2qI" style={{textDecoration:'underline'}}>dance</a>. The 
                     Pursuit program has given me the chance to develop another creative outlet, and even 
                     though I spend most of my time in front of the computer these days I still perform, play 
                     drums and sing in my spare time.</p>
