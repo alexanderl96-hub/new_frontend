@@ -53,7 +53,7 @@ const About = () => {
                     fellowship</em>, with a 9 percent acceptance rate. As a creative and 
                     diligent tech nerd I am a firm believer in the positive power of technology. My goal is 
                     to build and create programs that bring people closer together.  As a former performing 
-                    artist, I am passionate about the <a href="http://www.pursuit.org/" style={{textDecoration:'underline'}}>arts</a>, music and <a href="https://youtu.be/rY_fkUZL2qI" style={{textDecoration:'underline'}}>dance</a>. The 
+                    artist, I am passionate about the <a href="https://www.instagram.com/p/B3TDzcgnO4M/" style={{textDecoration:'underline'}}>arts</a>, music and <a href="https://youtu.be/rY_fkUZL2qI" style={{textDecoration:'underline'}}>dance</a>. The 
                     Pursuit program has given me the chance to develop another creative outlet, and even 
                     though I spend most of my time in front of the computer these days I still perform, play 
                     drums and sing in my spare time.</p>
