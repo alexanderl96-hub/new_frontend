@@ -6,6 +6,8 @@ import './Teams.css'
 import LoadingHome from '../../Loading'
 import SlideShow from '../SlideShow/SlideShow'
 import Videos from '../Videos'
+import Videos2 from '../Videos2'
+import Videos3 from '../Videos3'
 // import Weather from '../Weather'
 // import  Weather  from '../Weather'
 
@@ -61,8 +63,8 @@ const Teams = () => {
          </div> : <div className='LoadingFront'><LoadingHome/></div>}
          <div style={{display:'flex'}}>
          <Videos />
-         <Videos />
-         <Videos />
+         <Videos2 />
+         <Videos3 />
          </div>
          <Footer/>
     </div>

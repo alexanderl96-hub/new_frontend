@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import './CurrentHistagram.css';
 import NavBar from '../navBar/Navbar'
 import Footer from '../Footer/Footer'
+import LoadingHome from '../../../src/Loading'
 
  const CurrentHistagram = ()=> {
     const [member, setMember] = useState([])
@@ -47,6 +48,17 @@ import Footer from '../Footer/Footer'
     const [currPitSo, setCurrPitSO] = useState([])
     const [currPitSv, setCurrPitSv] = useState([])
     const [currPitERA, setCurrPitERA] = useState([])
+
+    const [count, setCount] = useState(<div className='LoadingFront'><LoadingHome/></div>);
+    const [countInTimeout, setCountInTimeout] = useState([]);
+
+    useEffect(() => {
+     
+      setTimeout(() => {
+        setCountInTimeout(count)
+      },3000);
+      setCount()
+    },[count])
   
     let params = useParams()
     let memberId = params.id
@@ -301,6 +313,8 @@ import Footer from '../Footer/Footer'
   return (
     <div>
       <NavBar/>
+
+      {!countInTimeout ? 
     <div className='MainContStatc'>
         <div>
                 { pitcherYear.length > 0 ? 
@@ -355,7 +369,7 @@ import Footer from '../Footer/Footer'
                 <p > Pitcher Current Season</p>
             </div> :null}
            </div>
-    </div>
+    </div> : <div className='LoadingFrontH'><LoadingHome/></div>}
     <Footer />
   </div>
   );

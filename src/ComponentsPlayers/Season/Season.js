@@ -1,9 +1,20 @@
 import React, { useState, useEffect }from 'react'
 import Navbar from '../../Components/navBar/Navbar'
 import './season.css'
+import LoadingHome from '../../../src/Loading'
 
 const Season = () => {
   const [season, setSeason] =useState([])
+  const [count, setCount] = useState(<div className='LoadingFront'><LoadingHome/></div>);
+  const [countInTimeout, setCountInTimeout] = useState([]);
+
+  useEffect(() => {
+   
+    setTimeout(() => {
+      setCountInTimeout(count)
+    },3000);
+    setCount()
+  },[count])
 
 
   function date(num){
@@ -30,6 +41,7 @@ const Season = () => {
         <Navbar/>
         <div className='navSeason'>
         <h1 >Season</h1>
+        {!countInTimeout ? 
         <div className='season-inner'>
           {season.map((data, index)=>{
            return ( 
@@ -58,7 +70,7 @@ const Season = () => {
              </div>
             )
           })}
-        </div>
+        </div> : <div className='LoadingFrontS'><LoadingHome/></div>}
         </div>
     </div>
   )

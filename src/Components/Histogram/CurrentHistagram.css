@@ -2,6 +2,7 @@
     display:flex; 
     flex-direction: row; 
     justify-content: center;
+    height: 600px
 }
 .pitcherCarStatc{
     text-align: center;
@@ -21,7 +22,10 @@
     font-size: 20px;
 }
 
-
+.LoadingFrontH{
+    margin-top: -10px;
+    margin-bottom: 200px;
+  }
 
 
 
