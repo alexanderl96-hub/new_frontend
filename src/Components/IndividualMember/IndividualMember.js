@@ -204,7 +204,7 @@ function convertInKG(str){
                      {/* <img src={FaEdit} alt='edit' /> */}
                      <Link to={`/teams/updateMember/${memberId}`} className='divEdit3'> <FaUserEdit /></Link>
                      <Link to={`/teams/groups/${memberId}/addStats`} className='divEdit'> <FaPlus /> </Link> 
-                     <Link to={`/teams/newpage/${group}`} onClick={handleDelete}  className="divEdit2" ><FaRecycle /></Link>   
+                     <Link to={`/teams/allmembers/${group}`} onClick={handleDelete}  className="divEdit2" ><FaRecycle /></Link>   
                </div>
                <img src={memberImg} alt='1'  />
                <h2>{memberName} {memberNumber ? `# ${memberNumber}`: ''}</h2>

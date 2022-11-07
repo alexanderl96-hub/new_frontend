@@ -14,7 +14,7 @@ const FirstHit = () => {
     },[count])
 
     useEffect(() => {
-        fetch(`http://lookup-service-prod.mlb.com/json/named.leader_hitting_repeater.bam?sport_code='mlb'&results=10&game_type='F'&season='2022'&sort_column=ab`)
+        fetch(`http://lookup-service-prod.mlb.com/json/named.leader_hitting_repeater.bam?sport_code='mlb'&results=10&game_type='F'&season='${new Date().getFullYear()}'&sort_column=ab`)
         .then(res => res.json())
         .then(data =>{
             setFirstHiter(data.leader_hitting_repeater.leader_hitting_mux.queryResults.row)

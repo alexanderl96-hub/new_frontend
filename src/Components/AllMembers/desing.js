@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import ReactStars from "react-rating-stars-component"
 // import DeleteIcon from '@mui/icons-material/Delete';
-import Navbar from '../Components/navBar/Navbar'
+import Navbar from '../navBar/Navbar'
 import './desing.css'
 import { FaTrash,FaUserPlus} from 'react-icons/fa';
 import axios from 'axios'

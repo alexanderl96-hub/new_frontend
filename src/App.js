@@ -16,7 +16,8 @@ import Allplayers from '../src/ComponentsPlayers/Players/Players'
 import Coaches from '../src/ComponentsPlayers/Coaches/Coaches'
 import Season from '../src/ComponentsPlayers/Season/Season'
 import AddStats from '../src/Components/statsPlayers/addStatsPlayers'
-import Desing from '../src/Components/desing'
+import Desing from './Components/AllMembers/desing'
+import AllMembers from '../src/Components/AllMembers/desing'
 import CurrentHistagram from '../src/Components/Histogram/CurrentHistagram'
 import About from '../src/Components/AboutUs/about'
 import News from '../src/Components/LatestsNews/News'
@@ -53,6 +54,7 @@ function App() {
           <Route  path="/teams/News/WorldSeries" element={<WorldSeries/>}/>
           <Route  path="/teams/groups/:id/addStats" element={<AddStats/>}/>
           <Route  path="/teams/newpage/:id" element={<Desing/>}/>  
+          <Route  path="/teams/allmembers/:id" element={<AllMembers />}/> 
           <Route  path="/teams/CurrentHistagram/:id" element={<CurrentHistagram/>}/>      
          </Routes>
       </Router>

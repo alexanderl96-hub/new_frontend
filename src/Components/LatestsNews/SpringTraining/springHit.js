@@ -14,7 +14,7 @@ const SpringHit = () => {
     },[count])
 
     useEffect(() => {
-        fetch(`http://lookup-service-prod.mlb.com/json/named.leader_hitting_repeater.bam?sport_code='mlb'&results=10&game_type='S'&season='2022'&sort_column=ab`)
+        fetch(`http://lookup-service-prod.mlb.com/json/named.leader_hitting_repeater.bam?sport_code='mlb'&results=10&game_type='S'&season='${new Date().getFullYear()}'&sort_column=ab`)
         .then(res => res.json())
         .then(data =>{
             setSpringHiter(data.leader_hitting_repeater.leader_hitting_mux.queryResults.row)

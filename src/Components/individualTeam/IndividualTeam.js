@@ -8,7 +8,7 @@ const IndividualTeam = ({team}) => {
   return (
     <div className="Individual">
        
-      <Link to={`/teams/newpage/${team.id}`}  >
+      <Link to={`/teams/allmembers/${team.id}`}  >
         <div className="teamContainer"  > 
              <img src={team.imag} alt={team.id} className="img"/> 
              <div>{team.name}</div> 
