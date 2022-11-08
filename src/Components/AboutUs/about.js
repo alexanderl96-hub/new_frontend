@@ -1,18 +1,46 @@
-import React,{ useState } from 'react'
+import React,{ useState, useRef } from 'react'
 import NavBar from '../navBar/Navbar'
 import Footer from '../Footer/Footer'
 import Resume from '../PDF/Resume2022.pdf'
 import Logo from '../../image/FullLogo.png'
+import emailjs from '@emailjs/browser';
 import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaYoutube, FaMobileAlt, FaMapMarkerAlt} from 'react-icons/fa'
 
 const About = () => {
-  const [form, setForm] = useState(false)
+  const [formVal, setFormVal] = useState(false)
+  const form = useRef();
+  let nameUser = ''
+
+  function greet() {
+    alert(`Thanks you  Mrs./Ms. ${nameUser}`);
+   }
+   
+  const userTarget = (e)=> {
+    let {value} = e.target
+     nameUser = value
+   }
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_l9ugyfa', 'template_sg2t9wa', form.current, '3QmzbJgYVWWAUxKwm')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+      form.current.reset()
+       setTimeout(greet); 
+      setFormVal(false)
+      
+  };
+
 
   function handleForm (){
-    if(form === false){
-      setForm(true)
+    if(formVal === false){
+      setFormVal(true)
     }else{
-      setForm(false)
+      setFormVal(false)
     }
   }
   return (
@@ -63,10 +91,23 @@ const About = () => {
                 </div>
             </div>
 
-            <div style={{background: '#070f3c', height: '90px', color: 'white', textAlign: 'center', paddingTop: '8px'}}>
-               Software Development / Technology   
-                 <p style={{color:'red', fontSize: '14px'}}>• JavaScript • React/Redux • Node.js • HTMl • CSS • Express • Git/GitHub • PostgreSQL APIs • VS Code • Data Structures • Algorithms • </p> 
-                 <a href={Resume} style={{color: 'white', textDecoration: 'underline', fontSize: '14px' }}>Resume</a>
+            <div style={{background: '#070f3c', height: '95px', color: 'white', textAlign: 'center', paddingTop: '8px'}}>
+               Software Developer / Technology   
+                 <p style={{color:'red', fontSize: '14px', display:'flex', justifyContent: 'space-around', height: '20px', pointerEvents: 'auto'}}>
+                   <a href='https://www.codecademy.com/learn/introduction-to-javascript' style={{color:'red'}}>• JavaScript •</a>
+                   <a href='https://react-redux.js.org/tutorials/quick-start' style={{color:'red'}} >• React/Redux •</a>
+                   <a href='https://nodejs.org/en/' style={{color:'red'}} >• Node.js •</a>
+                   <a href='https://www.w3schools.com/html/html_intro.asp' style={{color:'red'}} >• HTMl •</a>
+                   <a href='https://www.w3schools.com/css/' style={{color:'red'}} >• CSS •</a>
+                   <a href='https://expressjs.com/' style={{color:'red'}} >• Express •</a>
+                   <a href='https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners' style={{color:'red'}} >• Git/GitHub •</a>
+                   <a href='https://www.postgresql.org/' style={{color:'red'}} >• PostgreSQL •</a>
+                   <a href='https://rapidapi.com/category/Database' style={{color:'red'}} >• APIs •</a>
+                   <a href='https://code.visualstudio.com/' style={{color:'red'}} >• VS Code •</a>
+                   <a href='https://www.geeksforgeeks.org/data-structures/' style={{color:'red'}} >• Data Structures •</a>
+                   <a href='https://www.geeksforgeeks.org/introduction-to-algorithms/' style={{color:'red'}} >• Algorithms •</a>
+                   </p>
+                 <a href={Resume} style={{color: 'white', textDecoration: 'underline', fontSize: '14px',}}>Resume</a>
             </div>
         
             <div style={{display:'flex', justifyContent: 'space-around', margin: '20px'}}>
@@ -92,17 +133,17 @@ const About = () => {
                 <h3>Contact us</h3>
                 <div onClick={handleForm} style={{border:'1px solid', cursor: 'pointer', height:'20px', marginTop:'15px', marginLeft: '10px', padding: '5px', borderRadius:'10px'}}> Fill Out The Form</div>
                 </div>
-                {form === true ? 
+                {formVal === true ? 
                 <div >
-                  <from style={{display: 'flex', flexDirection: 'column', gap:'10px', alignItems: 'center'}} >
-                    <label htmlFor="name" />
-                    <input placeholder='Name...' required  style={{ borderStyle: 'dashed', width: '300px'}}  />
-                    <label htmlFor="email" />
-                    <input  placeholder='Email...' required  style={{ borderStyle: 'dashed',width: '300px'}} />
-                    <label htmlFor="message" />
-                    <textarea  placeholder='Message...' required  style={{ borderStyle: 'dashed',width: '300px', height: '200px'}} />
-                    <button type='submit' style={{ margin:'5px', width: '70px', borderRadius:'10px', cursor: 'pointer', }} onClick={handleForm} >Submit</button>
-                  </from>
+                  <form ref={form} onSubmit={sendEmail} style={{display: 'flex', flexDirection: 'column', gap:'10px', alignItems: 'center'}} >
+                    <label htmlFor="for" />
+                    <input type='text' name="from_name" onChange={userTarget} placeholder='Name...' required  style={{ borderStyle: 'dashed', width: '300px', height: '30px' }}  />
+                    <label htmlFor="for" />
+                    <input type='email' name="from_email" placeholder='Email...' required  style={{ borderStyle: 'dashed',width: '300px', height: '30px' }} />
+                    <label htmlFor="for" />
+                    <textarea name='message' placeholder='Message...' required  style={{ borderStyle: 'dashed',width: '300px', height: '200px'}} />
+                    <button type='submit' value="Send" style={{ margin:'5px', width: '70px', borderRadius:'10px', cursor: 'pointer', }}  >Submit</button>
+                  </form>
                </div>
                : null}
             </div>
