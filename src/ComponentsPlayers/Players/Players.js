@@ -8,6 +8,7 @@ import Loading from '../../Loading'
 const Players = () => {    
     const [allplayers, setAllPlayers] = useState([])
     const [val, setVal] = useState([])
+    // const [day, setDay] = useState()
     const [search, setSearch] = useState({
         name: '',
     })
@@ -31,6 +32,21 @@ const Players = () => {
         }
         return pro
       };
+
+  //     useEffect(() => {
+  
+  //      setInterval(interval, 5000)
+  //     },[])
+  // var date = new Date()
+  //     function interval(){
+  //       if(!day){
+  //         let value = date.getFullYear()
+  //         setDay(Number(value))
+  //       }else if(day){
+  //         setDay('')
+  //       }
+  //     } 
+
     useEffect(() => {
         let name = search.name
         fetch(`https://my-baseball-teams.adaptable.app/groups`)
@@ -56,7 +72,7 @@ const Players = () => {
     <div className='playerMainContent'  >
         <Navbar/>
         <div className='navPlay'>
-            <h1 >Players</h1>
+            <h1 >Players </h1>
 
             <div className='divForm'>
                 <form onChange={handleSubmit} >

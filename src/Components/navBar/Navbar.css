@@ -76,7 +76,7 @@ h1 {
 }
 .nav > a.active {
   text-decoration: underline;
-  color: rgb(59, 58, 58);
+  color: rgba(107, 106, 106, 0.837);
   font-weight: bold;
 }
 
