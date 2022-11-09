@@ -92,7 +92,7 @@ const Transcitions = () => {
         .then(data =>{
               // let start = handleRandomNew(data.transaction_all.queryResults.row)
             //  console.log(start,'start')
-            setTransaction(data.transaction_all.queryResults.row)
+            setTransaction(data.transaction_all.queryResults.row.reverse())
         })
     },[])
    console.log(currentValue, clasDrop, transaction)
@@ -103,7 +103,7 @@ const Transcitions = () => {
             <div className='mainNews-firstinner' >
                 { transaction.map((a, index)=>{
                     return(
-                        <div key={index}>
+                        <div key={index} className='slidetrack'>
                             <div className= 'newsMap'>
                                 <div className='dateEffect'>
                                     { changeDate(a.effective_date)} 

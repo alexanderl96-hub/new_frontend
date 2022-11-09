@@ -57,10 +57,40 @@
     display:grid;
     grid-auto-flow: column;
     overflow: auto;
-    overflow-y: hidden; 
+    overflow: hidden; 
+     position: relative;
     margin-left: 50px;
     cursor: pointer;
 }
+.mainNews-firstinner::before, .mainNews-firstinner::after{
+    background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 60%);
+    content: "";
+    position: absolute;
+    z-index: 2;
+}
+.slidetrack{
+    -webkit-animation: scroll 40s linear infinite;
+    animation: scroll 40s linear infinite;
+    display: flex;
+}
+
+@-webkit-keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-250px * 7));
+    }
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-250px * 7));
+    }
+  }
 .newsMap{
     display: flex; 
     flex-direction: column; 

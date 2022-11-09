@@ -20,6 +20,15 @@ const About = () => {
     let {value} = e.target
      nameUser = value
    }
+  //  const phoneTarget =(e)=>{
+  //    let {value} = e.target
+  //   //  if(String(value).split('').length !== 10) return 'Invalid number'
+  //    let len = String(value).split('').length
+  //    let first = String(value).split('').slice(0,3).join('')
+  //    let middle = String(value).split('').slice(3,6).join('')
+  //    let rest = String(value).split('').slice(6,len).join('')
+  //      `(${first}) ${middle}-${rest}`
+  //  }
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -49,21 +58,21 @@ const About = () => {
         <NavBar />
         <div>
             <div style={{display: 'flex', margin: '10px', justifyContent: 'flex-end'}}> 
-             <a href='https://github.com/alexanderl96-hub/new_frontend'>
-                <FaGithub    style={{fontSize: '25px', margin: '3px' }} /> 
-             </a>
-             <a href='https://www.linkedin.com/in/alexander-la-rosa-p%C3%A9rez-2b36a085/'>
-                <FaLinkedin   style={{fontSize: '25px', margin: '3px'}} /> 
-             </a>
-             <a href='https://twitter.com/LperezAlexander' >
-                <FaTwitter   style={{fontSize: '25px', margin: '3px'}} /> 
-             </a>
-             <a href='https://www.instagram.com/larosa_cubart/'>
-                <FaInstagram  style={{fontSize: '25px', margin: '3px'}} /> 
-             </a>
-             <a href='https://youtu.be/rY_fkUZL2qI'>
-                <FaYoutube   style={{fontSize: '25px', margin: '3px' }} /> 
-            </a>
+                  <a href='https://github.com/alexanderl96-hub/new_frontend'>
+                      <FaGithub    style={{fontSize: '25px', margin: '3px' }} /> 
+                  </a>
+                  <a href='https://www.linkedin.com/in/alexander-la-rosa-p%C3%A9rez-2b36a085/'>
+                      <FaLinkedin   style={{fontSize: '25px', margin: '3px'}} /> 
+                  </a>
+                  <a href='https://twitter.com/LperezAlexander' >
+                      <FaTwitter   style={{fontSize: '25px', margin: '3px'}} /> 
+                  </a>
+                  <a href='https://www.instagram.com/larosa_cubart/'>
+                      <FaInstagram  style={{fontSize: '25px', margin: '3px'}} /> 
+                  </a>
+                  <a href='https://youtu.be/rY_fkUZL2qI'>
+                      <FaYoutube   style={{fontSize: '25px', margin: '3px' }} /> 
+                  </a>
             </div>
          
             <div style={{display: 'flex', justifyContent: 'space-around', margin: '15px'}}>
@@ -141,6 +150,8 @@ const About = () => {
                     <input type='text' name="from_name" onChange={userTarget} placeholder='Name...' required  style={{ borderStyle: 'dashed', width: '300px', height: '30px' }}  />
                     <label htmlFor="for" />
                     <input type='email' name="from_email" placeholder='Email...' required  style={{ borderStyle: 'dashed',width: '300px', height: '30px' }} />
+                    <label htmlFor="for" />
+                    <input type='text' name="from_phone"  placeholder='Phone...' required  style={{ borderStyle: 'dashed', width: '300px', height: '30px' }}  />
                     <label htmlFor="for" />
                     <textarea name='message' placeholder='Message...' required  style={{ borderStyle: 'dashed',width: '300px', height: '200px'}} />
                     <button type='submit' value="Send" style={{ margin:'5px', width: '70px', borderRadius:'10px', cursor: 'pointer', }}  >Submit</button>
