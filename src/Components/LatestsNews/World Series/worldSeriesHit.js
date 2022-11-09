@@ -23,7 +23,7 @@ const WorldSeriesHit = () => {
     },[])
   return (
     <div>
-          <div style={{transaction: 'all 2s ease-out'}}>
+          <div style={{transaction: 'all 2s ease-out',}} >
                 <p className='allHitTitle' >Leader Hitting World Series Top-10</p>
                     {worldHiter ? worldHiter.map((hit, index)=>{
                         return( 

@@ -3,7 +3,7 @@ import './Navbar.css'
 import { FaHome} from 'react-icons/fa';
 import { NavLink , Link} from 'react-router-dom'
 import imageLogo from '../../image/FullLogoTransparent.png'
-import frontLogo from '../../image/FullLogo.png'
+// import frontLogo from '../../image/FullLogo.png'
 
 function Navbar() {
   const [menuIdActive, setMenuIdActive] = useState('')
@@ -59,7 +59,8 @@ function Navbar() {
            </div>  
            <div  className={sideNavar} >
                   <div>
-                      <FaHome id="home" onClick={changeNav}/>          
+                      <FaHome id="home" onClick={changeNav}/>  
+                      
                  </div>
                 <div className='entrada'>
                       <div>

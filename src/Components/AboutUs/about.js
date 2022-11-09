@@ -13,6 +13,7 @@ const About = () => {
 
   function greet() {
     alert(`Thanks you  Mrs./Ms. ${nameUser}`);
+    
    }
    
   const userTarget = (e)=> {
