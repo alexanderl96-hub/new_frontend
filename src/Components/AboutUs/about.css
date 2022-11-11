@@ -1,0 +1,80 @@
+
+.media{
+    display: flex; 
+    margin: 10px; 
+    justify-content: flex-end;
+}
+.mediaIcon{
+    font-size: 25px; 
+    margin: 3px
+}
+.Image-Description{
+    display: flex;
+     justify-content: space-around;
+      margin: 15px;
+}
+.aboutImage{
+    height: 260px; 
+    border-radius: 10px;
+}
+.description{
+    width: 500px;
+    pointer-events: auto;
+}
+.description > p{
+    text-align: justify;
+}
+.description > p >a {
+    text-decoration: underline;
+}
+.description > p >a:hover{
+    color: blue;
+}
+.technology{
+    background: #070f3c;
+     height: 95px; 
+     color: white; 
+     text-align: center; 
+     padding-top: 8px;
+     pointer-events: auto;
+}
+.technology > p {
+    color:red; 
+    font-size: 14px; 
+    display:flex; 
+    justify-content: space-around; 
+    height: 20px; 
+}
+.technology > p >a{
+    color: red;
+}
+.technology > p >a:hover {
+    color: white;
+}
+.resume{
+    color: white; 
+    text-decoration: underline; 
+    font-size: 14px;
+}
+.concatInfo{
+    display:flex; 
+    justify-content: space-around; 
+    margin: 20px;
+}
+.concatInfoWeb{
+    height: 80px; 
+    width: 250px; 
+    border: 2px solid #070f3c;
+     padding: 10px;
+      text-align: center;
+}
+.concatInfoWeb > img{
+    height: 40px;
+     border-radius: 50px;
+}
+.concatInfoWeb > a .icon{
+    font-size: 28px;
+}
+.concatInfoWeb .icon{
+    font-size: 28px;
+}
