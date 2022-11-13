@@ -109,7 +109,7 @@ const About = () => {
                    <a href='https://www.codecademy.com/learn/introduction-to-javascript' >• JavaScript •</a>
                    <a href='https://react-redux.js.org/tutorials/quick-start'  >• React/Redux •</a>
                    <a href='https://nodejs.org/en/'  >• Node.js •</a>
-                   <a href='https://www.w3schools.com/html/html_intro.asp' >• HTMl •</a>
+                   <a href='https://www.w3schools.com/html/html_intro.asp' >• HTML •</a>
                    <a href='https://www.w3schools.com/css/'  >• CSS •</a>
                    <a href='https://expressjs.com/' >• Express •</a>
                    <a href='https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners' >• Git/GitHub •</a>
@@ -140,23 +140,23 @@ const About = () => {
                 
             </div>
          
-            <div style={{display: 'flex', padding: '5px', flexDirection: 'column'}}>
-              <div style={{display: 'flex', flexDirection: 'row'}}>
+            <div className='aboutForm'>
+              <div  className='aboutFillForm'>
                 <h3>Contact us</h3>
-                <div onClick={handleForm} style={{border:'1px solid', cursor: 'pointer', height:'20px', marginTop:'15px', marginLeft: '10px', padding: '5px', borderRadius:'10px'}}> Fill Out The Form</div>
+                <div onClick={handleForm} className='aboutOpenForm'>{formVal === false ? 'Fill Out The Form' : 'Close Form'} </div>
                 </div>
                 {formVal === true ? 
                 <div >
-                  <form ref={form} onSubmit={sendEmail} style={{display: 'flex', flexDirection: 'column', gap:'10px', alignItems: 'center'}} >
+                  <form ref={form} onSubmit={sendEmail} className='formEmails' >
                     <label htmlFor="for" />
-                    <input type='text' name="from_name" onChange={userTarget} placeholder='Name...' required  style={{ borderStyle: 'dashed', width: '300px', height: '30px' }}  />
+                    <input type='text' name="from_name" onChange={userTarget} placeholder='Name...' required   className='aboutInput' />
                     <label htmlFor="for" />
-                    <input type='email' name="from_email" placeholder='Email...' required  style={{ borderStyle: 'dashed',width: '300px', height: '30px' }} />
+                    <input type='email' name="from_email" placeholder='Email...' required   className='aboutInput' />
                     <label htmlFor="for" />
-                    <input type='text' name="from_phone" onChange={phoneTarget}  placeholder='Phone...' required  style={{ borderStyle: 'dashed', width: '300px', height: '30px' }}  />
+                    <input type='text' name="from_phone" onChange={phoneTarget}  placeholder='Phone...' required  className='aboutInput' />
                     <label htmlFor="for" />
-                    <textarea name='message' placeholder='Message...' required  style={{ borderStyle: 'dashed',width: '300px', height: '200px'}} />
-                    <button type='submit' value="Send" style={{ margin:'5px', width: '70px', borderRadius:'10px', cursor: 'pointer', }}  >Submit</button>
+                    <textarea name='message' placeholder='Message...' required className='aboutMess' />
+                    <button type='submit' value="Send"  className='aboutFormBott' >Submit</button>
                   </form>
                </div>
                : null}

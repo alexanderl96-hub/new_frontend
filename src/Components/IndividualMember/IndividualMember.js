@@ -368,7 +368,7 @@ function convertInKG(str){
                                                             <div>
                                                                 {pitcher.players_id  ?  
                                                                     <div className='pitcher-inner1'>
-                                                                        <div className='pitcher-inner'>{pitcher.game_date}{pitcher.team} </div>
+                                                                        <div className='pitcher-inner'>{pitcher.game_date} {pitcher.game} </div>
                                                                         <div className= 'gameInnerPoint2'>{pitcher.ip >= 0 ? pitcher.ip : '-'}</div>
                                                                         <div className= 'gameInnerPoint2'>{pitcher.h >= 0 ? pitcher.h : '-'}</div>
                                                                         <div className= 'gameInnerPoint2'>{pitcher.r >= 0 ? pitcher.r : '-'}</div>
