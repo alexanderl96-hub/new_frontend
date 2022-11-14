@@ -49,6 +49,7 @@ h1 {
 }
 .nav:hover {
   border-radius: 10px;
+ 
 }
 .nav-inner {
   width: 90px;
@@ -57,6 +58,7 @@ h1 {
   text-align: center;
   transition: all 1s;
 }
+
 .navLogo{
   width: 100px;
   padding: 2px;
@@ -76,8 +78,11 @@ h1 {
 }
 .nav > a.active {
   text-decoration: underline;
-  color: rgb(4,122,255);
+  color: rgb(77, 76, 76);
   font-weight: bold;
+}
+.nav > a:hover{
+  color: rgb(4,122,255);
 }
 
 .sideNavar{
