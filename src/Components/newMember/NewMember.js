@@ -137,7 +137,7 @@ const NewMember = () => {
       const hoyB = dateBirth.getDate()
 
       const age = year - yearB
-      // const currentAge = monthB <= month && hoyB >= hoy ? age  : age-1
+      
       const currentAge = () =>{
             if(monthB <= month){
               return age
@@ -184,7 +184,6 @@ const aboutLength = (about) => {
   return pro.length <= 31 ?  pro.join(' ') : pro.slice(0, 32).join(' ').concat(' ...')
 };
 
-// let str = newMember.weight
 
 function convertInKG(str){
   let convert = Number(str.slice(0, -4))/2.205
@@ -198,7 +197,7 @@ function convertFootInCm (height){
   return String(Number(change)*30.48).slice(0, 5)
 }
 
-console.log(classT, )
+console.log(newMember )
   return (
     <div className='newMember_Container'>
         <Navbar />

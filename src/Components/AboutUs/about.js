@@ -9,8 +9,9 @@ import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaYoutube, FaMobileAlt, F
 
 const About = () => {
   const [formVal, setFormVal] = useState(false)
+  const [inputValue, setInputValue] = useState('');
   const form = useRef();
-  let nameUser = ''
+  const [nameUser, setNameUser] = useState('')
 
   function greet() {
     alert(`Thanks you  Mrs./Ms. ${nameUser}`);
@@ -19,19 +20,36 @@ const About = () => {
    
   const userTarget = (e)=> {
     let {value} = e.target
-     nameUser = value
+     setNameUser(value) 
    }
 
-   const phoneTarget =(e)=>{
-      let {value} = e.target
-      let len = value.split('').length
-      let first = value.split('').slice(0,3).join('')
-     let middle = value.split('').slice(3,6).join('')
-      let rest = value.split('').slice(6,len).join('')
-      // return `(${first}) ${middle ? middle +'-': ''}${rest}`
-      console.log(`(${first}) ${middle ? middle +'-': ''}${rest}`)
-   }
 
+  const handleInput = (e) => {
+    // this is where we'll call our future formatPhoneNumber function that we haven't written yet.
+    const formattedPhoneNumber = formatPhoneNumber(e.target.value);
+    // we'll set the input value using our setInputValue
+    setInputValue(formattedPhoneNumber);
+  };
+
+
+  function formatPhoneNumber(value) {
+ 
+    if (!value) return value;
+  
+   
+    const phoneNumber = value.replace(/[^\d]/g, '');
+    const phoneNumberLength = phoneNumber.length;
+    if (phoneNumberLength < 4) return phoneNumber;
+  
+    if (phoneNumberLength < 7) {
+      return `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(3)}`;
+    }
+  
+    return `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(
+      3,
+      6
+    )}-${phoneNumber.slice(6, 10)}`;
+  }
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -55,6 +73,8 @@ const About = () => {
       setFormVal(false)
     }
   }
+
+
   return (
     <div>
         <NavBar />
@@ -153,7 +173,10 @@ const About = () => {
                     <label htmlFor="for" />
                     <input type='email' name="from_email" placeholder='Email...' required   className='aboutInput' />
                     <label htmlFor="for" />
-                    <input type='text' name="from_phone" onChange={phoneTarget}  placeholder='Phone...' required  className='aboutInput' />
+                    <input type="phone" name="from_phone" 
+                                          onChange={(e) => handleInput(e)} value={inputValue} 
+                                          placeholder='Phone...'
+                                           required    className='aboutInput' />
                     <label htmlFor="for" />
                     <textarea name='message' placeholder='Message...' required className='aboutMess' />
                     <button type='submit' value="Send"  className='aboutFormBott' >Submit</button>
