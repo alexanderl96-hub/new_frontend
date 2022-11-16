@@ -7,14 +7,16 @@ const Transcitions = () => {
     const [transaction, setTransaction] = useState([])
     const [open, setOpen] = useState(false)
     const [clasDrop, setClasDrop] = useState('drop')
-    const [currentValue, setCurrentValue] = useState('')
+    // const [currentValue, setCurrentValue] = useState('Game Type')
     const navigate = useNavigate();
 
 
     function handleInput (e){
       const {value} = e.target
-       setCurrentValue(value)
+      //  setCurrentValue(value)
         navigate(`/teams/News/${value}`)
+        // navigate('/app/report', { state: currentValue });
+        // window.history.replaceState(null, "Sport World", `/teams/News/${value}`)
     }
    
     function changeNav(){
@@ -99,7 +101,7 @@ const Transcitions = () => {
             setTransaction(data.transaction_all.queryResults.row.reverse())
         })
     },[])
-   console.log(currentValue)
+  //  console.log(currentValue)
   return (
     <div>
          <div className='mainNews'>
@@ -159,6 +161,7 @@ const Transcitions = () => {
            required
            style={{marginLeft: '10px', height: '27px', padding: '3px', borderRadius: '20px', cursor: 'pointer', background: '#070f3c', color: 'white'}}
           >
+           <option value=''  > Game Type</option>
            <option value='Regular'  >Regular Season</option>
            <option value='SpringTraining' > Spring Training</option>
            <option value='Exhibition' >Exhibition</option>
