@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.9.1",
+    "@emotion/styled": "^11.10.5",
     "@mui/icons-material": "^5.10.3",
     "@mui/styled-engine": "^5.10.3",
     "@testing-library/jest-dom": "^5.16.4",
@@ -24,6 +25,7 @@
     "react-scroll": "^1.8.8",
     "react-scroll-to-top": "^3.0.0",
     "sass": "^1.54.5",
+    "styled-components": "^5.3.6",
     "tachyons-components": "^1.0.1",
     "web-vitals": "^2.1.4"
   },

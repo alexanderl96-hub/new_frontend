@@ -44,7 +44,7 @@ function App() {
           <Route  path="/teams/allCoaches" element={<Coaches/>}/>
           <Route  path="/teams/Season" element={<Season/>}/>
           <Route  path="/teams/About" element={<About/>}/>
-          <Route  path="/teams/News" element={<News/>}/>
+          <Route  path="/teams/News/Regular" element={<News/>}/>
           <Route  path="/teams/News/SpringTraining" element={<SpringTraining/>}/>
           <Route  path="/teams/News/Exhibition" element={<Exhibition/>}/>
           <Route  path="/teams/News/AllStart" element={<AllStart/>}/>

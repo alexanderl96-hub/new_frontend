@@ -1,18 +1,22 @@
 import React, { useState, useEffect } from 'react'
 import { NavLink} from 'react-router-dom'
 import {FaArrowDown,  FaArrowUp,} from 'react-icons/fa';
+import { useNavigate} from 'react-router-dom'
 
 const Transcitions = () => {
     const [transaction, setTransaction] = useState([])
     const [open, setOpen] = useState(false)
-    const [currentValue, setCurrentValue] = useState('')
     const [clasDrop, setClasDrop] = useState('drop')
+    const [currentValue, setCurrentValue] = useState('')
+    const navigate = useNavigate();
+
 
     function handleInput (e){
       const {value} = e.target
-      setCurrentValue(value)
+       setCurrentValue(value)
+        navigate(`/teams/News/${value}`)
     }
-    
+   
     function changeNav(){
       if(clasDrop === 'drop'){
         setClasDrop('drop2')
@@ -95,7 +99,7 @@ const Transcitions = () => {
             setTransaction(data.transaction_all.queryResults.row.reverse())
         })
     },[])
-   console.log(currentValue, clasDrop, transaction)
+   console.log(currentValue)
   return (
     <div>
          <div className='mainNews'>
@@ -132,10 +136,10 @@ const Transcitions = () => {
          </div>
          {open ?
           <div className={clasDrop}>
-              <NavLink to='/teams/News' >
-                <div value='Regular Season' smooth className='dropNavItem' onClick={handleInput}>Regular Season</div></NavLink>
+              <NavLink to='/teams/News/Regular' >
+                <div value='Regular Season' smooth className='dropNavItem' >Regular Season</div></NavLink>
                 <NavLink to='/teams/News/SpringTraining'>
-                <div value='Spring Training' smooth className='dropNavItem'  onClick={handleInput}>Spring Training</div></NavLink>
+                <div value='Spring Training' smooth className='dropNavItem'  >Spring Training</div></NavLink>
                 <NavLink to='/teams/News/Exhibition'>
                 <div smooth className='dropNavItem' >Exhibition</div></NavLink>
                 <NavLink to='/teams/News/AllStart'>
@@ -149,6 +153,22 @@ const Transcitions = () => {
                 <NavLink to='/teams/News/WorldSeries'>
                 <div smooth className='dropNavItem' >World Series</div></NavLink>
          </div>: null}
+         <select 
+            name="forma"
+            onChange={handleInput}
+           required
+           style={{marginLeft: '10px', height: '27px', padding: '3px', borderRadius: '20px', cursor: 'pointer', background: '#070f3c', color: 'white'}}
+          >
+           <option value='Regular'  >Regular Season</option>
+           <option value='SpringTraining' > Spring Training</option>
+           <option value='Exhibition' >Exhibition</option>
+           <option value='AllStart' >All Start Game</option>
+           <option value='DivisionSeries' >Division Series</option>
+           <option value='FirstRound(wildCard)' >First Round</option>
+           <option value='LeagueChampionship' >League Championship</option>
+           <option value='WorldSeries' >World Series</option>
+          
+         </select>
     </div>
   )
 }
