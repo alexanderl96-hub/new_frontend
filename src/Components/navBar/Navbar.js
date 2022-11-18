@@ -9,6 +9,7 @@ function Navbar() {
   const [menuIdActive, setMenuIdActive] = useState('')
   const [sideNavar, setSideNavar]= useState('sideNavar')
 
+
   function changeNav(){
     if(sideNavar === 'sideNavar'){
       setSideNavar('sideNavar2')
@@ -43,7 +44,7 @@ function Navbar() {
            {/* <Link to={'/teams/allFavorites'} className='nav-inner'>
                <div className='nav-inner-inner'>Favorites</div>
            </Link>  */}
-            <NavLink to={'/teams/News/Regular'} className='nav-inner' id='news' onClick={(e)=>setMenuIdActive(e.target.id)} >
+            <NavLink to={`/teams/News/Regular`} className='nav-inner' id='news' onClick={(e)=>setMenuIdActive(e.target.id)} >
                <div >NEWS</div>
            </NavLink>
             

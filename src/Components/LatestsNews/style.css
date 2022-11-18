@@ -108,11 +108,7 @@
     color: white; 
     align-items: center;
 }
-/* .newsNavbar > div.active {
-    text-decoration: underline;
-    font-family: cursive; 
-    color: gray;
-} */
+
 .newsNavAll{
     cursor: pointer; 
     color: white;
@@ -126,7 +122,7 @@
 .newsNavComponent{
     display: flex; 
     justify-content: space-evenly;
-    transition: all 1.2s;
+    min-height: 470px;
 }
 
 .seconddropNav{
@@ -255,11 +251,13 @@
         display: flex;  
         background: #2e2666;
         height: 50px;
+        width: 50%;
         color: white; 
         justify-content: flex-end; 
         align-items: center;
         visibility: visible;
     }
+   
     .drop{
         display: flex;  
         background: #093a3ac8; 

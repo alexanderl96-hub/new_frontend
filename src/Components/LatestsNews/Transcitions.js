@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import { NavLink} from 'react-router-dom'
-import {FaArrowDown,  FaArrowUp,} from 'react-icons/fa';
 import LoadingHome from '../../../src/Loading.js'
 import Footer from '../Footer/Footer'
 
@@ -24,21 +22,18 @@ import WorldPit from '../LatestsNews/World Series/worldSeriesPit'
 
 const Transcitions = () => {
     const [transaction, setTransaction] = useState([])
-    const [open, setOpen] = useState(false)
-    const [clasDrop, setClasDrop] = useState('drop')
     const [currentValue, setCurrentValue] = useState('Regular')
     const [count, setCount] = useState(<div className='LoadingFront'><LoadingHome/></div>);
     const [countInTimeout, setCountInTimeout] = useState([]);
-    const [idvalue, setIdValue]= useState('Regular')
 
 
 
-    function valueTarget (e){
-      if(e.target.id ){
-        setIdValue(e.target.id)
-        window.history.replaceState(null, "Sport World", `/teams/News=${e.target.id}%Top-10`)
-      }       
-    }
+    // function valueTarget (e){
+    //   if(e.target.id ){
+    //     setIdValue(e.target.id)
+    //     window.history.replaceState(null, "Sport World", `/teams/News=${e.target.id}%Top-10`)
+    //   }       
+    // }
 
   useEffect(() => {
    
@@ -53,17 +48,20 @@ const Transcitions = () => {
     function handleInput (e){
       const {value} = e.target
         setCurrentValue(value)
-        window.history.replaceState(null, "Sport World", `/teams/News=${value}%Top-10`)
+        if(e.target.id ){
+          setCurrentValue(e.target.id)
+        } 
+        window.history.replaceState(null, "Sport World", `/teams/News=${value ? value : e.target.id}%Top-10`)
     }
    
-    function changeNav(){
-      if(clasDrop === 'drop'){
-        setClasDrop('drop2')
-      }else if(clasDrop === 'drop2'){
-        setClasDrop('drop')
-      }
-    }
-    const toggle = ()=> setOpen(!open)
+    // function changeNav(){
+    //   if(clasDrop === 'drop'){
+    //     setClasDrop('drop2')
+    //   }else if(clasDrop === 'drop2'){
+    //     setClasDrop('drop')
+    //   }
+    // }
+    // const toggle = ()=> setOpen(!open)
     let previous = new Date()
     let current = new Date()
 
@@ -138,7 +136,7 @@ const Transcitions = () => {
             setTransaction(data.transaction_all.queryResults.row.reverse())
         })
     },[])
-   console.log( idvalue)
+  //  console.log( idvalue)
   return (
     <div>
          <div className='mainNews'>
@@ -197,7 +195,7 @@ const Transcitions = () => {
             onChange={handleInput}
            required
            className='seconddropNav'
-           style={{marginLeft: '10px', height: '27px', padding: '3px', borderRadius: '20px', cursor: 'pointer', background: '#070f3c', color: 'white'}}
+           style={{marginLeft: '10px', height: '27px', padding: '3px', borderRadius: '20px', cursor: 'pointer', background: '#070f3c', color: 'white',}}
           >
            <option value='Regular'  >Regular Season</option>
            <option value='SpringTraining' > Spring Training</option>
@@ -209,16 +207,38 @@ const Transcitions = () => {
            <option value='WorldSeries' >World Series</option>
           
          </select>
+
+         <div>
+            <div className='newsNavbar' >
+             
+                <div id='Regular' className={  currentValue === 'Regular' ? 'navRegularS' : 'newsNavAll' } onClick={handleInput}>Regular Season</div>
+             
+                <div id='SpringTraining' className={ currentValue === 'SpringTraining' ? 'navRegularS' : 'newsNavAll' }  onClick={handleInput} >Spring Training</div>
+             
+                <div id='Exhibition' className={ currentValue === 'Exhibition' ?  'navRegularS' : 'newsNavAll'} onClick={handleInput} >Exhibition</div>
+
+                <div id='AllStart' className={currentValue === 'AllStart' ?  'navRegularS' : 'newsNavAll'} onClick={handleInput} >All Start Game</div>
+
+                <div id='DivisionSeries' className={currentValue === 'DivisionSeries' ?  'navRegularS' : 'newsNavAll'}  onClick={handleInput} >Division Series</div>
+
+                <div id='FirstRound(wildCard)' className={currentValue === 'FirstRound(wildCard)' ?  'navRegularS' : 'newsNavAll'}  onClick={handleInput}  >First Round</div>
+
+                <div id='LeagueChampionship' className={currentValue === 'LeagueChampionship' ?  'navRegularS' : 'newsNavAll'}  onClick={handleInput} >League Championship</div>
+
+                <div id='WorldSeries' className={currentValue === 'WorldSeries' ?  'navRegularS' : 'newsNavAll'} onClick={handleInput}  >World Series</div>
+            </div>
+        </div>
+
         {currentValue === 'Regular' ?
-            <div className='seconddropNav'>  {!countInTimeout ? 
+            <div >  {!countInTimeout ? 
                        <div className='newsNavComponent'>
                            <LeaderHitting />
                            <LeaderPitcher />
                        </div> : <div className='LoadingFront'><LoadingHome/></div>}
         </div> : null}
 
-        {currentValue === 'SpringTraining' ? 
-            <div className='seconddropNav'> {!countInTimeout ? 
+        {currentValue === 'SpringTraining'? 
+            <div > {!countInTimeout ? 
                       <div className='newsNavComponent'>
                           <SprintHit />
                           <SprintPit />
@@ -226,7 +246,7 @@ const Transcitions = () => {
         </div> : null}
 
         {currentValue === 'Exhibition' ? 
-            <div className='seconddropNav'>{!countInTimeout ? 
+            <div >{!countInTimeout ? 
                      <div className='newsNavComponent' smooth >
                          <ExhibitionHit />
                          <ExhibitionPit />
@@ -234,7 +254,7 @@ const Transcitions = () => {
         </div> : null}
 
         {currentValue === 'AllStart' ? 
-            <div className='seconddropNav'> {!countInTimeout ? 
+            <div > {!countInTimeout ? 
                       <div className='newsNavComponent'smooth>
                           <AllStartHit />
                           <AllStartPit />
@@ -242,15 +262,15 @@ const Transcitions = () => {
         </div> : null}
 
         {currentValue === 'DivisionSeries' ? 
-            <div className='seconddropNav'> {!countInTimeout ? 
+            <div > {!countInTimeout ? 
                       <div className='newsNavComponent' smooth >
                           <DivisionHit />
                           <DivisionPit />
                       </div>: <div className='LoadingFront'><LoadingHome/></div>}
         </div> : null}
 
-        {currentValue === 'FirstRound(wildCard)' ? 
-            <div className='seconddropNav'>{!countInTimeout ? 
+        {currentValue === 'FirstRound(wildCard)'? 
+            <div >{!countInTimeout ? 
                       <div className='newsNavComponent' >
                           <FirstHit />
                           <FirstPit />
@@ -258,43 +278,24 @@ const Transcitions = () => {
         </div> : null}
 
         {currentValue === 'LeagueChampionship' ? 
-            <div className='seconddropNav'> {!countInTimeout ? 
+            <div > {!countInTimeout ? 
                       <div className='newsNavComponent' >
                           <ChampionHit />
                           <ChampionPit />
                       </div> : <div className='LoadingFront'><LoadingHome/></div>}
         </div> : null}
 
-        {currentValue === 'WorldSeries' ? 
-           <div className='seconddropNav'> {!countInTimeout ? 
+        {currentValue === 'WorldSeries'  ? 
+           <div > {!countInTimeout ? 
                       <div className='newsNavComponent'>
                           <WorldHit />
                           <WorldPit />
                       </div> : <div className='LoadingFront'><LoadingHome/></div>}
         </div> : null}
 
-        <div>
-            <div className='newsNavbar' >
-             
-                <div id='Regular' className={  idvalue === 'Regular' ? 'navRegularS' : 'newsNavAll' } onClick={valueTarget}>Regular Season</div>
-             
-                <div id='Spring' className={ idvalue === 'Spring' ? 'navRegularS' : 'newsNavAll' }  onClick={valueTarget} >Spring Training</div>
-             
-                <div id='Exhibition' className={ idvalue === 'Exhibition' ?  'navRegularS' : 'newsNavAll'} onClick={valueTarget} >Exhibition</div>
-
-                <div id='AllStart' className={idvalue === 'AllStart' ?  'navRegularS' : 'newsNavAll'} onClick={valueTarget} >All Start Game</div>
-
-                <div id='Division' className={idvalue === 'Division' ?  'navRegularS' : 'newsNavAll'}  onClick={valueTarget} >Division Series</div>
-
-                <div id='FirstRound' className={idvalue === 'FirstRound' ?  'navRegularS' : 'newsNavAll'}  onClick={valueTarget}  >First Round</div>
-
-                <div id='League' className={idvalue === 'League' ?  'navRegularS' : 'newsNavAll'}  onClick={valueTarget} >League Championship</div>
-
-                <div id='World' className={idvalue === 'World' ?  'navRegularS' : 'newsNavAll'} onClick={valueTarget}  >World Series</div>
-            </div>
-        </div>
         
-       
+        
+       < Footer />
     </div>
   )
 }
