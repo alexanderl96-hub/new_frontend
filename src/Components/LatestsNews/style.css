@@ -108,16 +108,21 @@
     color: white; 
     align-items: center;
 }
+/* .newsNavbar > div.active {
+    text-decoration: underline;
+    font-family: cursive; 
+    color: gray;
+} */
 .newsNavAll{
     cursor: pointer; 
     color: white;
 }
-.navRegularS{
+  .navRegularS{
     cursor: pointer; 
     text-decoration: underline; 
     font-family: cursive; 
     color: gray;
-}
+} 
 .newsNavComponent{
     display: flex; 
     justify-content: space-evenly;

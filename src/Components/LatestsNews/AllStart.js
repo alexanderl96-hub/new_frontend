@@ -22,7 +22,7 @@ const AllStart = () => {
     <div>
          <NavBar />
          <Transcitions />
-         <div>
+         {/* <div>
             <div className='newsNavbar' >
               <NavLink to='/teams/News' >
                 <div className='newsNavAll' >Regular Season</div></NavLink>
@@ -41,16 +41,16 @@ const AllStart = () => {
                 <NavLink to='/teams/News/WorldSeries'>
                 <div className='newsNavAll' >World Series</div></NavLink>
             </div>
-        </div>
+        </div> */}
 
 
-        {!countInTimeout ? 
+        {/* {!countInTimeout ? 
         <div className='newsNavComponent'smooth>
             <AllStartHit />
             <AllStartPit />
-        </div> : <div className='LoadingFront'><LoadingHome/></div>}
+        </div> : <div className='LoadingFront'><LoadingHome/></div>} */}
 
-       <Footer />
+       {/* <Footer /> */}
     </div>
   )
 }

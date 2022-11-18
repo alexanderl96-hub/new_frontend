@@ -24,7 +24,7 @@ const Footer = () => {
            <NavLink to={'/teams/Season'} smooth={true} duration={500} className='footerNav' >
                <div >SEASON</div>
            </NavLink>
-           <NavLink to={'/teams/News'} smooth={true} duration={500} className='footerNav' >
+           <NavLink to={'/teams/News/Regular'} smooth={true} duration={500} className='footerNav' >
                <div >NEWS</div>
            </NavLink>
            <NavLink to={'/teams/About'} smooth={true} duration={500} className='footerNav' >
