@@ -29,22 +29,15 @@ const Transcitions = () => {
     const [currentValue, setCurrentValue] = useState('Regular')
     const [count, setCount] = useState(<div className='LoadingFront'><LoadingHome/></div>);
     const [countInTimeout, setCountInTimeout] = useState([]);
-    const [newsNavAll, setNewNavAll] = useState(true);
     const [idvalue, setIdValue]= useState('Regular')
 
 
 
     function valueTarget (e){
-      console.log(e.target.id)
-
-
       if(e.target.id ){
-        setNewNavAll(true)
         setIdValue(e.target.id)
-      }
-      setNewNavAll(false)
-      // setIdValue('Regular')
-       
+        window.history.replaceState(null, "Sport World", `/teams/News=${e.target.id}%Top-10`)
+      }       
     }
 
   useEffect(() => {
@@ -145,7 +138,7 @@ const Transcitions = () => {
             setTransaction(data.transaction_all.queryResults.row.reverse())
         })
     },[])
-   console.log(newsNavAll, idvalue)
+   console.log( idvalue)
   return (
     <div>
          <div className='mainNews'>
@@ -293,7 +286,7 @@ const Transcitions = () => {
 
                 <div id='Division' className={idvalue === 'Division' ?  'navRegularS' : 'newsNavAll'}  onClick={valueTarget} >Division Series</div>
 
-                <div id='FirstFound' className={idvalue === 'FirstRound' ?  'navRegularS' : 'newsNavAll'}  onClick={valueTarget}  >First Round</div>
+                <div id='FirstRound' className={idvalue === 'FirstRound' ?  'navRegularS' : 'newsNavAll'}  onClick={valueTarget}  >First Round</div>
 
                 <div id='League' className={idvalue === 'League' ?  'navRegularS' : 'newsNavAll'}  onClick={valueTarget} >League Championship</div>
 
