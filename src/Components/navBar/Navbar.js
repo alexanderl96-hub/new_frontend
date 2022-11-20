@@ -44,7 +44,7 @@ function Navbar() {
            {/* <Link to={'/teams/allFavorites'} className='nav-inner'>
                <div className='nav-inner-inner'>Favorites</div>
            </Link>  */}
-            <NavLink to={`/teams/News/Regular`} className='nav-inner' id='news' onClick={(e)=>setMenuIdActive(e.target.id)} >
+            <NavLink to={`/teams/News`} className='nav-inner' id='news' onClick={(e)=>setMenuIdActive(e.target.id)} >
                <div >NEWS</div>
            </NavLink>
             

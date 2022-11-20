@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import ReactStars from "react-rating-stars-component"
-// import DeleteIcon from '@mui/icons-material/Delete';
+import Footer from '../Footer/Footer'
 import Navbar from '../navBar/Navbar'
 import './desing.css'
 import { FaTrash,FaUserPlus} from 'react-icons/fa';
@@ -13,11 +13,14 @@ const Desing = () => {
     const [ newtest, setNewtest]= useState([])
     const [nombre, setCoachName] = useState([])
     const [search, setSearch] = useState([])
-     const [group, setGroup] =useState([])
-     const [start, setStart] =useState(0)
-     const [last, setLast] =useState(6)
+     const [group, setGroup] = useState([])
+     const [start, setStart] = useState(0)
+     const [last, setLast] = useState(6)
      const [start1, setPreviuos] =useState(0)
      const [last1, setLastP] =useState(6)
+     const [open, setOpen] = useState([false])
+     const [teams, setTeams] = useState([]);
+     const [handel, setHandel] = useState(0);
     let fisrt = 0
     let params = useParams()
     let teamId = params.id
@@ -50,16 +53,21 @@ const Desing = () => {
       };
 
     function nextrow (){
-      const value = newtest.length - 6
-      let count = Math.abs(value)
-      if(last > value){
-        setStart(newtest.slice(count, -2))
-         setLast(newtest.length )  
+      console.log(last,'outside')
+      const value = newtest.length - last 
+      let jump = value - last
+   
+
+      if(jump  <= 6){
+        console.log(start, 'start')// console.log(newtest.length - last)
+         setStart(newtest.slice(last))
+         setLast(newtest.slice(last + 2))  
       }
       setStart(start + 6)
       setLast(last + 6)
        setPreviuos(start+ 6)
       setLastP(last+ 6)
+    
     }
     function previuosrow (){
       setPreviuos(start1 - 6)
@@ -67,6 +75,22 @@ const Desing = () => {
       setStart(start -6)
       setLast(last - 6)
     }
+
+
+ 
+     function onHandleClick (e){
+         let value = 0
+       
+         if(e.target.id === 'prev' ){
+             value++
+             setHandel(handel - value)
+         }else if(e.target.id === 'next'){
+             value++
+             setHandel(handel + value)
+         }
+ 
+     }
+
      useEffect(() => {
          fetch(`https://my-baseball-teams.adaptable.app/groups`)
          .then(res => res.json())
@@ -124,15 +148,51 @@ const Desing = () => {
   // },[search])
 
     fisrt = ratingChanged(Number(newI.join()))
-      
+      console.log(search , open)
+
 
   return (
    <div className='MainDesing'>
         <Navbar />
+       
+           <div style={{display:'flex', flexDirection: 'row'}}>
+             <div style={{width: '14%', height: '145px',}}>
+             {group.map((a,i)=>{
+                     return(
+                       <div >
+                         <img src={a.imag} alt='' style={{width: '143%', height: '145px', background: 'white'}}  />
+                       </div>
+                     )
+                   })}
+             </div>
+              <div className='container'>
+                    <div id='prev' className='handel prev-handle' >
+                        <div id='prev' className='text' onClick={onHandleClick} >&#8249;</div>
+                  </div>
+                    <div className='Slider' >
+                    {newtest.map((a,i)=>{
+                        return(
+                          < >
+                              <img src={a.imag} alt='' onClick={(e)=>setSearch(a.id)} />
+                              {/* <p>{a.name}</p> */}
+                          </>
+                        )                
+                    })}
+                    </div>
+                    <div id='next' className='handel next-handle'  >
+                        <div id='next' className='text' onClick={onHandleClick} >&#8250;</div>
+                  </div>
+
+                </div> 
+                </div>
+        
+        
+       
         <div className='desingIcon'>
            <Link to={`/teams/newMember/${teamId}`} id={teamId} className='newadded'> <FaUserPlus /></Link>
            <Link to={`/`} id={teamId} className='trash' onClick={handleDelete}> <FaTrash /></Link>
         </div>
+
         <div className="section2"> 
          
                { search > 0 ? nombre.map((a, i)=>{
@@ -172,31 +232,60 @@ const Desing = () => {
                    </div> : null}
                     </div>
                 )}) : <div >  
-                   {group.map((a,i)=>{
+                   {newtest.slice(0,1).map((a,i)=>{
                      return(
-                       <div className='miFlag'>
-                         <img src={a.imag} alt='' className='miFlag2'/>
+                       <div className="section2Container" >
+                          <div className="innerSection2">
+                                  <div className="inner-innersection2">
+                                  <img src={a.imag} alt='' className ='image' />
+                                  </div>
+                                  <h3 className="innersection2H3" >{articule(a.name)}</h3>
+                              </div>
+                              <div >
+                            <div className='innerSection2-3'> 
+                               <hr/>
+                               <p><span>Team:</span> {a.current_team}</p>
+                               <p><span>Number:</span> {a.number}</p>
+                               <p><span>Position:</span> {a.position}</p>
+                               <p><span>Salary:</span> {a.salary}</p>
+                               <p><span>About: </span>{a.about}  <Link to={`/teams/groups/${a.id}`} className='changeMore'> More..→</Link></p>
+                               {/* <Link to={`/teams/groups/${search}`} className='changeMore'> See More...</Link> */}
+                             </div>
+                           <div className='innerSectionStart'>
+                           <ReactStars 
+                              count={5}
+                              value={fisrt}
+                              color='gray'
+                              edit={false}
+                              size={30}
+                              isHalf={true}
+                              onChange={fisrt}
+                              /> 
+                           </div>
                        </div>
+                       </div>
+                     
                      )
                    })}
                 </div> } 
       
         </div>
-        <div className='mid'>
+        <Footer />
+        {/* <div className='mid'>
         {start <= 0 ? null : <button onClick={previuosrow } className='button1'>&#10148;</button>}
         {last >= newtest.length ? null :  <button onClick={nextrow} className='button2'>&#10148;</button>  }
-        </div>  
-        {newtest.length > 0 ? 
+        </div>   */}
+        {/* {newtest.length > 0 ? 
         <div className="section3">
-           {newtest.slice(start,last).map((a, index)=>{
+           {newtest.slice(0,1).map((a, index)=>{
                return (
                    <div className='scrollPlayers' >              
                       { Number(teamId) === a.team_id ? 
-                      <div className={`media-group-container `}  onClick={(e)=>setSearch(a.id)}  > 
-                          <div className='media-group' > <img src={a.imag} alt='' /> </div>  
-                           <h3  >{articule(a.name)}</h3>
+                      <div className={`media-group-container `}  onClick={(e)=>setOpen(true)} > 
+                          <div className='media-group'  onClick={(e)=>setSearch(a.id)}  > <img src={a.imag} alt='' /> </div>  
+                           <h3 onClick={(e)=>setSearch(a.id)} >{articule(a.name)}</h3>
                       </div> 
-                       : <div className={`section4`}  onClick={(e)=>setSearch(a.id)}  > 
+                       : <div className={`section4`}    > 
                            <div className='media-group' > Hola </div>  
                          </div> }                
                    </div>
@@ -206,9 +295,9 @@ const Desing = () => {
              :  <div className="section3-empty">
                 <div className=''  > 
                           <div className=''> </div>  
-                           {/* <h3></h3> */}
+                           <h3></h3>
                       </div> 
-               </div>}
+               </div>} */}
    </div>
   )
 }

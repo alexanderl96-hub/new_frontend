@@ -24,7 +24,7 @@ const Footer = () => {
            <NavLink to={'/teams/Season'} smooth={true} duration={500} className='footerNav' >
                <div >SEASON</div>
            </NavLink>
-           <NavLink to={'/teams/News/Regular'} smooth={true} duration={500} className='footerNav' >
+           <NavLink to={'/teams/News'} smooth={true} duration={500} className='footerNav' >
                <div >NEWS</div>
            </NavLink>
            <NavLink to={'/teams/About'} smooth={true} duration={500} className='footerNav' >
@@ -37,10 +37,10 @@ const Footer = () => {
              </div>
              <div className='divLegalMain'>
                  <div className='legal-inner'>
-                    <p>Terms of Use</p>
-                    <p>Privacy Policy</p>
-                    <p>Legal Notices</p>
-                    <p>Contact Us</p>
+                    <NavLink to={'/teams/About'} style={{color:'white', margin: '10px'}} > <p>Terms of Use</p> </NavLink>
+                    <NavLink to={'/teams/About'} style={{color:'white', margin: '10px'}}  > <p>Privacy Policy</p> </NavLink>
+                    <NavLink to={'/teams/About'} style={{color:'white', margin: '10px'}}  >  <p>Legal Notices</p> </NavLink>
+                    <NavLink to={'/teams/About'} style={{color:'white', margin: '10px'}}  > <p>Contact Us</p> </NavLink>
                  </div>
                  <div className='legal-yearLogo'>
                      <p> {new Date().getFullYear()} Sport World</p>

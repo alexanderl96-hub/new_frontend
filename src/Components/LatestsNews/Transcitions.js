@@ -51,7 +51,7 @@ const Transcitions = () => {
         if(e.target.id ){
           setCurrentValue(e.target.id)
         } 
-        window.history.replaceState(null, "Sport World", `/teams/News=${value ? value : e.target.id}%Top-10`)
+        window.history.replaceState(null, "Sport World", `/teams/News`)
     }
    
     // function changeNav(){

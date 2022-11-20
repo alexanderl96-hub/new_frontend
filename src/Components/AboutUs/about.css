@@ -32,7 +32,7 @@
 }
 .technology{
     background: #070f3c;
-     height: 95px; 
+     height: 100px; 
      color: white; 
      text-align: center; 
      padding-top: 8px;
@@ -62,7 +62,7 @@
     margin: 20px;
 }
 .concatInfoWeb{
-    height: 80px; 
+    height: 100px; 
     width: 250px; 
     border: 2px solid #070f3c;
      padding: 10px;
@@ -90,7 +90,7 @@
 .aboutOpenForm{
     border:1px solid; 
     cursor: pointer;
-     height:20px; 
+     height:30px; 
      margin-top:15px; 
      margin-left: 10px; 
      padding: 5px; 

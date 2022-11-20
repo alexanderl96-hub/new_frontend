@@ -73,8 +73,8 @@
     margin-left: 19px; 
 }
 .playDivCoach{
-    width: 170px; 
-    height: 195px;
+    width: 200px; 
+    height: 220px;
     color: white; 
     display: flex;
     flex-wrap: wrap;
@@ -109,10 +109,11 @@
 }
 .child1{
     margin-top: -4px;
+    font-size: 15px;
 }
 .child2{
     margin-top: -12px;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 @-webkit-keyframes turn {

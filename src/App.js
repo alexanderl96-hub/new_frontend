@@ -21,6 +21,7 @@ import AllMembers from '../src/Components/AllMembers/desing'
 import CurrentHistagram from '../src/Components/Histogram/CurrentHistagram'
 import About from '../src/Components/AboutUs/about'
 import News from '../src/Components/LatestsNews/News'
+import Text from '../src/Components/text/text.js'
 
 
 function App() {
@@ -38,7 +39,8 @@ function App() {
           <Route  path="/teams/allCoaches" element={<Coaches/>}/>
           <Route  path="/teams/Season" element={<Season/>}/>
           <Route  path="/teams/About" element={<About/>}/>
-          <Route  path="/teams/News/Regular" element={<News/>}/>
+          <Route  path="/teams/News" element={<News/>}/>
+          <Route  path="/teams/Text" element={<Text/>}/>
           <Route  path="/teams/groups/:id/addStats" element={<AddStats/>}/>
           <Route  path="/teams/newpage/:id" element={<Desing/>}/>  
           <Route  path="/teams/allmembers/:id" element={<AllMembers />}/> 
