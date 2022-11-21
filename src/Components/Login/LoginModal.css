@@ -1,0 +1,6 @@
+.textField{
+    display: flex;
+    /* align-content: center; */
+    justify-content: flex-start;
+    /* width: 200px; */
+}

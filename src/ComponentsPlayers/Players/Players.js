@@ -1,5 +1,5 @@
 import React,  { useState, useEffect }from 'react'
-import Navbar from '../../Components/navBar/Navbar'
+// import Navbar from '../../Components/navBar/Navbar'
 import './players.css'
 import {Link} from 'react-router-dom'
 import Loading from '../../Loading'
@@ -70,7 +70,7 @@ const Players = () => {
 
   return (
     <div className='playerMainContent'  >
-        <Navbar/>
+        {/* <Navbar/> */}
         <div className='navPlay'>
             <h1 >Players </h1>
 

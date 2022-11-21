@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import IndividualTeam from '../individualTeam/IndividualTeam'
-import Navbar from '../navBar/Navbar'
+// import Navbar from '../navBar/Navbar'
 import Footer from '../Footer/Footer.js'
 import './Teams.css'
 import LoadingHome from '../../Loading'
@@ -44,7 +44,7 @@ const Teams = () => {
   
   return (
     <div className='home'>
-        <Navbar />
+        {/* <Navbar /> */}
         <div style={{display:'flex'}}>
             {/* wheater app */}
             <SlideShow />

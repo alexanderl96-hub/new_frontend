@@ -18,7 +18,7 @@
   display: flex;
   color: white;
   margin-top: 20px;
-  margin-right: 30px;
+  margin-right: 10px;
   cursor: pointer;
 }
 h1 {
@@ -28,11 +28,10 @@ h1 {
 .navAddgroup {
   color: white;
   border-radius: 3px;
-  width: 100px;
+  width: 90px;
   text-align: center;
-  margin-left: 600px;
+  margin-left: 100px;
   margin-top: 1px;
-  /* cursor: pointer; */
   pointer-events: auto;
   border: 2px;
   border-style: solid;

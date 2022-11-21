@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import ReactStars from "react-rating-stars-component"
 import Footer from '../Footer/Footer'
-import Navbar from '../navBar/Navbar'
+// import Navbar from '../navBar/Navbar'
 import './desing.css'
 import { FaTrash,FaUserPlus} from 'react-icons/fa';
 import axios from 'axios'
@@ -153,7 +153,7 @@ const Desing = () => {
 
   return (
    <div className='MainDesing'>
-        <Navbar />
+        {/* <Navbar /> */}
        
            <div style={{display:'flex', flexDirection: 'row'}}>
              <div style={{width: '14%', height: '145px',}}>

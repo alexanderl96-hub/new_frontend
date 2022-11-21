@@ -1,14 +1,18 @@
 import React, { useState  } from 'react'
 import './Navbar.css'
-import { FaHome} from 'react-icons/fa';
+import { FaHome, FaUser} from 'react-icons/fa';
 import { NavLink , Link} from 'react-router-dom'
 import imageLogo from '../../image/FullLogoTransparent.png'
 // import frontLogo from '../../image/FullLogo.png'
 
-function Navbar() {
+function Navbar({setOpenLoginModal, loggedIn, setLoggedIn}) {
   const [menuIdActive, setMenuIdActive] = useState('')
   const [sideNavar, setSideNavar]= useState('sideNavar')
-
+console.log(loggedIn)
+  const logOut = ()=>{
+    console.log('log out')
+    setLoggedIn(false)
+  }
 
   function changeNav(){
     if(sideNavar === 'sideNavar'){
@@ -17,7 +21,9 @@ function Navbar() {
       setSideNavar('sideNavar')
     }
   }
-  console.log(menuIdActive)
+  function handleClickModal (){
+    setOpenLoginModal(true)
+  }
   
   return (
     <div className="navbar">
@@ -50,10 +56,14 @@ function Navbar() {
             
          </div>
           <div className="nav2">        
-            <Link to={'/teams/new'}>
+            {/* <Link to={'/teams/new'}>
                 <div className='navAddgroup'> ADD</div>
-            </Link>
-            {/* <div className='navlogIn'>LOG <FaUser /></div>  */}
+            </Link> */}
+           {loggedIn === true ?  <button onClick={logOut} style={{color: 'black'}}>Log out</button> : 
+            <button  style={{color: 'black'}}>Log in</button>}
+            {/* {!loggedIn  <button  style={{color: 'black'}}>Log in</button>} */}
+            <div className='navlogIn' onClick={(e)=> setOpenLoginModal(true)} style={{marginTop:'-1px'}}>
+              <FaUser  style={{ border:'2px solid white', borderRadius: '50px', fontSize: '25px', padding: '1px', marginRight: '70px'}}/></div> 
             {/* <Link to={'/teams/new'}>
                 <div className='navlogIn'>LOG <FaUser /></div>  
             </Link> */}

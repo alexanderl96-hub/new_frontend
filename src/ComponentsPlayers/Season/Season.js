@@ -1,5 +1,5 @@
 import React, { useState, useEffect }from 'react'
-import Navbar from '../../Components/navBar/Navbar'
+// import Navbar from '../../Components/navBar/Navbar'
 import './season.css'
 import LoadingHome from '../../../src/Loading'
 
@@ -38,7 +38,7 @@ const Season = () => {
   console.log(season)
   return (
     <div>
-        <Navbar/>
+        {/* <Navbar/> */}
         <div className='navSeason'>
         <h1 >Season</h1>
         {!countInTimeout ? 

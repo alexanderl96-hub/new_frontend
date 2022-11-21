@@ -1,4 +1,4 @@
-import React from 'react'; 
+import React, { useState } from 'react'; 
 import {
   BrowserRouter as Router,
   Routes,
@@ -22,13 +22,19 @@ import CurrentHistagram from '../src/Components/Histogram/CurrentHistagram'
 import About from '../src/Components/AboutUs/about'
 import News from '../src/Components/LatestsNews/News'
 import Text from '../src/Components/text/text.js'
+import LoginModal from '../src/Components/Login/LoginModal'
+import NavBar from '../src/Components/navBar/Navbar'
 
 
 function App() {
- 
+  const [openLoginModal, setOpenLoginModal] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(localStorage.getItem('accessToken') ? true : false);
+ console.log(openLoginModal, loggedIn, 'string')
   return (
     <div className="App">
       <Router >
+        <NavBar setOpenLoginModal={setOpenLoginModal} loggedIn={loggedIn} setLoggedIn={setLoggedIn}  />
+        <LoginModal  openLoginModal={openLoginModal} setOpenLoginModal={setOpenLoginModal} setLoggedIn={setLoggedIn} />
         <Routes>
           <Route exact path="/" element={<Teams/>}/>
           <Route  path="/teams/groups/:id" element={<IndividualMember/>}/>

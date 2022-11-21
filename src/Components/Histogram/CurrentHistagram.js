@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Chart } from "react-google-charts";
 import { useParams } from 'react-router-dom';
 import './CurrentHistagram.css';
-import NavBar from '../navBar/Navbar'
+// import NavBar from '../navBar/Navbar'
 import Footer from '../Footer/Footer'
 import LoadingHome from '../../../src/Loading'
 
@@ -312,7 +312,7 @@ import LoadingHome from '../../../src/Loading'
       console.log(playerYear, pitcherERA)
   return (
     <div>
-      <NavBar/>
+      {/* <NavBar/> */}
 
       {!countInTimeout ? 
     <div className='MainContStatc'>

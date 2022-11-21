@@ -7,7 +7,7 @@ const News = () => {
 
   return (
     <div>
-       <NavBar />
+       {/* <NavBar /> */}
        <Transcitions />
     </div>
   )

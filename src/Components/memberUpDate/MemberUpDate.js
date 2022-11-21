@@ -3,7 +3,7 @@ import { useParams, useNavigate} from 'react-router-dom'
 import axios from "axios";
 import '../newMember/NewMember.css'
 import './MemberUpdate.css'
-import Navbar from '../navBar/Navbar'
+// import Navbar from '../navBar/Navbar'
 
 const MemberUpDate = () => {
   const [member, setMemberid] = useState([])
@@ -143,7 +143,7 @@ const MemberUpDate = () => {
   console.log()
   return (
          <div className='Update_Container'>
-             <Navbar />
+             {/* <Navbar /> */}
            <h1 >UpDate Member</h1>
             <h2>{memberName}</h2>
          <div >

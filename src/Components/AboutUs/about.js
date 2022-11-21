@@ -1,5 +1,5 @@
 import React,{ useState, useRef } from 'react'
-import NavBar from '../navBar/Navbar'
+// import NavBar from '../navBar/Navbar'
 import Footer from '../Footer/Footer'
 import Resume from '../PDF/Resume2022.pdf'
 import Logo from '../../image/FullLogo.png'
@@ -77,7 +77,7 @@ const About = () => {
 
   return (
     <div>
-        <NavBar />
+        {/* <NavBar /> */}
         <div>
             <div className='media'> 
                   <a href='https://github.com/alexanderl96-hub/new_frontend'>

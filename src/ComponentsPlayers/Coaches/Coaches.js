@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link} from 'react-router-dom'
-import Navbar from '../../Components/navBar/Navbar'
+// import Navbar from '../../Components/navBar/Navbar'
 import './coaches.css'
 import Loading from '../../Loading'
 
@@ -68,7 +68,7 @@ console.log(count)
 console.log( coach, 'coach')
   return (
     <div  className='coachMainContent' >
-        <Navbar/>
+        {/* <Navbar/> */}
         <div className='navCoach'>
         <h1 >Coaches</h1>
             <div className='divForm'>

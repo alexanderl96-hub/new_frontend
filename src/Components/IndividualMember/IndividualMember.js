@@ -4,7 +4,7 @@ import { useParams, Link} from 'react-router-dom'
 import {FaPlus, FaRecycle , FaUserEdit } from 'react-icons/fa';
 import './IndividualMember.css'
 import axios from 'axios'
-import Navbar from '../navBar/Navbar'
+// import Navbar from '../navBar/Navbar'
 
 
 const IndividualMember = () => {
@@ -196,7 +196,7 @@ function convertInKG(str){
 //  console.log(pitcherCareerId.filter(a=> a.pitcher_id  === Number(memberId)), 'sortPitcher')
   return (
       <div  className='MainMember'>
-            <Navbar />
+            {/* <Navbar /> */}
             {/* style={{backgroundImage: `url(${memberImg2})`}}     */}
           <div className='divTop' style={{backgroundImage: `url(${memberImg2})`}} >
               {/* <img src={memberImg2} alt='alt' className='divTop-ImgBackground'>  */}
