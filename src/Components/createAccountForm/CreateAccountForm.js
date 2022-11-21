@@ -6,7 +6,7 @@ import Box from '@mui/material/Box';
 
 // import Button from '../button/Button';
 
-// import './CreateAccountForm.scss';
+//  import { getStaticContextFromError } from '@remix-run/router';
 
 const CreateAccountForm = ({setOpenLoginModal, setLoggedIn}) => {
 
@@ -16,6 +16,7 @@ const CreateAccountForm = ({setOpenLoginModal, setLoggedIn}) => {
     const [emailError, setEmailError] = useState(false);
     const [password, setPassword] = useState('');
     const [image, setImage] = useState('');
+    const [formMessage, setFormMessage] = useState('');
   
  
      // on unfocus validate username
@@ -55,12 +56,20 @@ const CreateAccountForm = ({setOpenLoginModal, setLoggedIn}) => {
         .then(response => response.json())
         .then(data => {
             
-            setEmail('');
-            setUsername('');
-            setPassword('');
-            setImage('');
-            setOpenLoginModal(false);
-
+            if(data.status === 'error'){
+                if(data.message.includes('users_username_key')){
+                    setFormMessage('Please choose another username. This one is already taken.');
+                } else if (data.message.includes('users_email_key')){
+                    setFormMessage('Please choose another email. This one is already taken.');
+                }
+            }else{
+                setEmail('');
+                setUsername('');
+                setPassword('');
+                setImage('');
+                setOpenLoginModal(false);
+            }
+           
             // show toast that user was successfully created 
 
             localStorage.setItem('accessToken', data.accessToken);
@@ -81,9 +90,14 @@ const CreateAccountForm = ({setOpenLoginModal, setLoggedIn}) => {
         noValidate
         autoComplete="off"
     >
-        <Typography className="loginModal__title" id="modal-modal-title" variant="h6" component="h2">
+       <Typography className="loginModal__title" id="modal-modal-title" variant="h6" component="h2">
             Please Create an Account
         </Typography>
+        {formMessage && 
+            <div className="form__errorText" style={{"color" : "red"}}>
+                {formMessage}
+            </div>
+        }
         <TextField 
            id="outlined-basic" 
            label="Username" 

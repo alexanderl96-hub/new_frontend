@@ -11,6 +11,7 @@ const LoginAccountForm = ({setOpenLoginModal, setLoggedIn}) => {
     const [username, setUsername] = useState('');
     const [usernameError, setUsernameError] = useState(false);
     const [password, setPassword] = useState('');
+    let mse = ''
 
     // on unfocus validate username
     const validateUsername = () => {
@@ -38,8 +39,8 @@ const LoginAccountForm = ({setOpenLoginModal, setLoggedIn}) => {
         fetch('http://localhost:9000/users/login', reqOptions)
         .then(response => response.json())
         .then(data => {
-
-            console.log(data);
+            mse = data
+            console.log(data, 'data');
             // save token to local storage
             // set loggedin to true 
             // show toast that use has logged in
@@ -56,6 +57,7 @@ const LoginAccountForm = ({setOpenLoginModal, setLoggedIn}) => {
             console.log(error);
         })
     }
+    console.log(username, password, mse)
 
     return (
         <div>
@@ -90,9 +92,8 @@ const LoginAccountForm = ({setOpenLoginModal, setLoggedIn}) => {
                 onChange={(e) => setPassword(e.target.value)}
                 value={password}
             />
-           
         </Box>
-        <button onClick={logInUser} text="Log In"  style={{width: '100px', marginTop: '10%', cursor: 'pointer'}}>Log In</button>
+        <button onClick={logInUser} text="submit" style={{width: '100px', marginTop: '10%', cursor: 'pointer'}}>Log In</button>
         </div>
   )
 }

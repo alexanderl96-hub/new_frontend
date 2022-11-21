@@ -189,8 +189,8 @@ const Desing = () => {
         
        
         <div className='desingIcon'>
-           <Link to={`/teams/newMember/${teamId}`} id={teamId} className='newadded'> <FaUserPlus /></Link>
-           <Link to={`/`} id={teamId} className='trash' onClick={handleDelete}> <FaTrash /></Link>
+ <Link to={`/teams/newMember/${teamId}`} id={teamId} className='newadded'> <FaUserPlus /></Link>
+       <Link to={`/`} id={teamId} className='trash' onClick={handleDelete}> <FaTrash /></Link>
         </div>
 
         <div className="section2"> 

@@ -8,10 +8,12 @@ import imageLogo from '../../image/FullLogoTransparent.png'
 function Navbar({setOpenLoginModal, loggedIn, setLoggedIn}) {
   const [menuIdActive, setMenuIdActive] = useState('')
   const [sideNavar, setSideNavar]= useState('sideNavar')
-console.log(loggedIn)
+console.log(loggedIn, 'nsav')
+
   const logOut = ()=>{
-    console.log('log out')
+     localStorage.removeItem('accessToken');
     setLoggedIn(false)
+   
   }
 
   function changeNav(){
@@ -47,9 +49,6 @@ console.log(loggedIn)
            <NavLink to={'/teams/Season'} className='nav-inner'  id='season' onClick={(e)=>setMenuIdActive(e.target.id)} >
                <div >SEASON</div>
            </NavLink>
-           {/* <Link to={'/teams/allFavorites'} className='nav-inner'>
-               <div className='nav-inner-inner'>Favorites</div>
-           </Link>  */}
             <NavLink to={`/teams/News`} className='nav-inner' id='news' onClick={(e)=>setMenuIdActive(e.target.id)} >
                <div >NEWS</div>
            </NavLink>
@@ -59,8 +58,8 @@ console.log(loggedIn)
             {/* <Link to={'/teams/new'}>
                 <div className='navAddgroup'> ADD</div>
             </Link> */}
-           {loggedIn === true ?  <button onClick={logOut} style={{color: 'black'}}>Log out</button> : 
-            <button  style={{color: 'black'}}>Log in</button>}
+           {loggedIn && <button onClick={logOut} style={{color: 'black', cursor: 'pointer', marginLeft: '-15px' }}>Log out</button> }
+           {!loggedIn && <button  style={{color: 'black', cursor: 'pointer', marginLeft: '-15px'}}>Log in</button> }
             {/* {!loggedIn  <button  style={{color: 'black'}}>Log in</button>} */}
             <div className='navlogIn' onClick={(e)=> setOpenLoginModal(true)} style={{marginTop:'-1px'}}>
               <FaUser  style={{ border:'2px solid white', borderRadius: '50px', fontSize: '25px', padding: '1px', marginRight: '70px'}}/></div> 

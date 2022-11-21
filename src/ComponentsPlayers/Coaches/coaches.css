@@ -1,5 +1,6 @@
 .coachMainContent{
-  width:100%;
+  width: 100%;
+  overflow: hidden;
 }
 .navCoach{
     height: 50px;

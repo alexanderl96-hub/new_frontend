@@ -9,7 +9,7 @@ import LoginAccountForm from "../loginAccountForm/LoginAccountForm";
 
 import './LoginModal.css'
 
-function TabPanel(props: TabPanelProps) {
+function TabPanel(props) {
     const { children, value, index, ...other } = props;
   
     return (
@@ -28,7 +28,7 @@ function TabPanel(props: TabPanelProps) {
   }
 
 
-function a11yProps(index: number) {
+function a11yProps(index) {
     return {
       id: `simple-tab-${index}`,
       'aria-controls': `simple-tabpanel-${index}`,

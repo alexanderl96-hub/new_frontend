@@ -8,9 +8,9 @@ import Loading from '../../Loading'
 const Players = () => {    
     const [allplayers, setAllPlayers] = useState([])
     const [val, setVal] = useState([])
-    // const [day, setDay] = useState()
-    const [search, setSearch] = useState({
-        name: '',
+    const [openInput, setOpenInput] = useState(false)
+    const [searchName, setSearchName] = useState({
+        search: '',
     })
     const [count, setCount] = useState(<div className='Loading'><Loading/></div>);
   const [countInTimeout, setCountInTimeout] = useState([]);
@@ -46,20 +46,23 @@ const Players = () => {
   //         setDay('')
   //       }
   //     } 
+   function handleOpenInput (){
+     setOpenInput(true)
+   }
 
     useEffect(() => {
-        let name = search.name
+        let name = searchName.search
         fetch(`https://my-baseball-teams.adaptable.app/groups`)
         .then(res => res.json())
         .then(data =>{
             setAllPlayers(data = data.filter(element => !element.position.includes('Team')))
             setVal(data = data.filter(g => g.name.includes(name))); 
         })
-  },[search])
+  },[searchName])
  
   const handleInput = (e) =>{
     const {value} = e.target
-    setSearch({[e.target.id]: value})
+    setSearchName({[e.target.id]: value})
   }
  
   const handleSubmit = (e) =>{
@@ -72,19 +75,25 @@ const Players = () => {
     <div className='playerMainContent'  >
         {/* <Navbar/> */}
         <div className='navPlay'>
-            <h1 >Players </h1>
+           <div> Players </div>
 
-            <div className='divForm'>
-                <form onChange={handleSubmit} >
-                <input id='name' type='text' onChange={handleInput} placeholder="🔍"  />
-                </form>
+            <div className='divForm'>  
+              {/* { !openInput ?  <div onClick={handleOpenInput} className='divFormIcon'>🔍</div> : */}
+               <form onChange={handleSubmit} >
+                   { !openInput ?  <button onClick={handleOpenInput} className='divFormIcon'>Search</button> :
+                    <input id='search' type='text' onChange={handleInput} placeholder="Type ..." 
+                  /> }
+                </form>  
             </div>
+          
             <div className='divMatch'>
+           
+
                 {val.length === allplayers.length ? 
-                 <div className='divMatchAll'>Players: {allplayers.length}</div> : 
-                  <div className='divMatchPart'>{val.length > 0 ? 
-                    <div >Match: {val.length}</div> : 
-                       <div className='divMatchNone'>None</div>}</div>}
+                 <p className='divMatchAll'>Players: {allplayers.length}</p> : 
+                  <p className='divMatchPart'>{val.length > 0 ? 
+                    <p >Match: {val.length}</p> : 
+                       <p className='divMatchNone'>None</p>} </p>}
             </div>
         </div>
 

@@ -70,7 +70,7 @@ console.log( coach, 'coach')
     <div  className='coachMainContent' >
         {/* <Navbar/> */}
         <div className='navCoach'>
-        <h1 >Coaches</h1>
+           <h1 >Coaches</h1>
             <div className='divForm'>
                 <form onChange={handleSubmit} >
                    <input id='name' type='text' onChange={handleInput} placeholder="🔍" ></input>
