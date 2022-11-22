@@ -8,6 +8,7 @@ const Coaches = () => {
     const [coach, setCoach] = useState([])
     const [count, setCount] = useState([])
     const [coachName, setCoachName] = useState([])
+    const [openInput, setOpenInput] = useState(false)
     const [search, setSearch] = useState({
         name: '',
     })
@@ -63,6 +64,9 @@ const Coaches = () => {
     //         setON(true)
     //     }
     // }
+    function handleOpenInput (){
+      setOpenInput(true)
+    }
 
 console.log(count)
 console.log( coach, 'coach')
@@ -70,17 +74,19 @@ console.log( coach, 'coach')
     <div  className='coachMainContent' >
         {/* <Navbar/> */}
         <div className='navCoach'>
-           <h1 >Coaches</h1>
+           <div >Coaches</div>
             <div className='divForm'>
                 <form onChange={handleSubmit} >
-                   <input id='name' type='text' onChange={handleInput} placeholder="🔍" ></input>
+                { !openInput ?  <button onClick={handleOpenInput} className='divFormIcon'>Search</button> :
+                    <input id='name' type='text' onChange={handleInput} placeholder="Type ..."  
+                  /> }
                 </form>
             </div>
             <div className='divMatch'>{count.length === coachName.length ? 
-                 <div className='divMatchAll' >Players: {count.length}</div> : 
-                  <div className='divMatchPart'>{coachName.length > 0 ? 
-                    <div >Match: {coachName.length}</div> : 
-                       <div className='divMatchNone'>None</div>}</div>}
+                 <p className='divMatchAll' >Coaches: {coachName.length}</p> : 
+                  <p className='divMatchPart'>{coachName.length > 0 ? 
+                    <p>Match: {coachName.length}</p> : 
+                       <p className='divMatchNone'>None</p>}</p>}
             </div>
 
         </div>

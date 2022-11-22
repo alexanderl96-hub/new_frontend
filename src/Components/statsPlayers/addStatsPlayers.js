@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useParams,useNavigate} from 'react-router-dom'
 import './addStatsPlayers.css'
 import axios from "axios";
-// import Navbar from '../navBar/Navbar'
+
 
 const AddStatsPlayers = () => {
    const navigate = useNavigate();
@@ -185,7 +185,7 @@ const AddStatsPlayers = () => {
 console.log(statPitcher, 'check')
   return (
     <div className='StasContainer'>
-        {/* <Navbar /> */}
+    
         <h1 >Add Stats</h1>
         <div className='StasContainer-inner'>
               <div className='innerImg'>

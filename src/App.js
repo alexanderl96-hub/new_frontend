@@ -24,6 +24,7 @@ import News from '../src/Components/LatestsNews/News'
 import Text from '../src/Components/text/text.js'
 import LoginModal from '../src/Components/Login/LoginModal'
 import NavBar from '../src/Components/navBar/Navbar'
+import Footer from '../src/Components/Footer/Footer'
 
 
 function App() {
@@ -37,7 +38,7 @@ function App() {
             <LoginModal  openLoginModal={openLoginModal} setOpenLoginModal={setOpenLoginModal} setLoggedIn={setLoggedIn} />
               <Routes>
                   <Route exact path="/" element={<Teams/>}/>
-                  <Route  path="/teams/groups/:id" element={<IndividualMember/>}/>
+                  <Route  path="/teams/groups/:id" element={<IndividualMember/>} loggedIn={loggedIn} />
                   <Route  path="/teams/updateMember/:id" element={<UpDateMember/>}/>
                   <Route  path="/teams/new" element={<NewTeam/>}/>
                   <Route  path="/teams/newMember/:id" element={<NewMember/>}/>
@@ -49,9 +50,10 @@ function App() {
                   <Route  path="/teams/Text" element={<Text/>}/>
                   <Route  path="/teams/groups/:id/addStats" element={<AddStats/>}/>
                   <Route  path="/teams/newpage/:id" element={<Desing/>} />  
-                  <Route  path="/teams/allmembers/:id" element={<AllMembers />}  /> 
+                  <Route  path="/teams/allmembers/:id" element={<AllMembers />} loggedIn={loggedIn}  /> 
                   <Route  path="/teams/CurrentHistagram/:id" element={<CurrentHistagram/>}/>      
               </Routes>
+              <Footer />
           </div>
       </Router>
   );

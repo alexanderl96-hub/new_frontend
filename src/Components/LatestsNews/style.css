@@ -48,6 +48,7 @@
 .mainNews{
     display: flex; 
     justify-content: space-around;
+    min-height: 137px;
 }
 .mainNews > h2 {
     margin-left: 70px;
@@ -61,6 +62,8 @@
      position: relative;
     margin-left: 50px;
     cursor: pointer;
+    min-width: 90%;
+  
 }
 .mainNews-firstinner::before, .mainNews-firstinner::after{
     background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 60%);

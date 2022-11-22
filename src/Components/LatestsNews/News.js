@@ -1,13 +1,12 @@
 import React  from 'react'
 import Transcitions from './Transcitions'
-import NavBar from '../navBar/Navbar'
+
 
 
 const News = () => {
 
   return (
-    <div>
-       {/* <NavBar /> */}
+    <div style={{minHeight: '811px'}}>
        <Transcitions />
     </div>
   )

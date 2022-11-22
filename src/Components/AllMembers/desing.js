@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import ReactStars from "react-rating-stars-component"
-import Footer from '../Footer/Footer'
-// import Navbar from '../navBar/Navbar'
+
 import './desing.css'
 import { FaTrash,FaUserPlus} from 'react-icons/fa';
 import axios from 'axios'
 
 
-const Desing = () => {
+const Desing = ({loggedIn}) => {
     const [ newI, setNewI]= useState([])
     const [ newtest, setNewtest]= useState([])
     const [nombre, setCoachName] = useState([])
@@ -153,7 +152,7 @@ const Desing = () => {
 
   return (
    <div className='MainDesing'>
-        {/* <Navbar /> */}
+
        
            <div style={{display:'flex', flexDirection: 'row'}}>
              <div style={{width: '14%', height: '145px',}}>
@@ -189,8 +188,8 @@ const Desing = () => {
         
        
         <div className='desingIcon'>
- <Link to={`/teams/newMember/${teamId}`} id={teamId} className='newadded'> <FaUserPlus /></Link>
-       <Link to={`/`} id={teamId} className='trash' onClick={handleDelete}> <FaTrash /></Link>
+      {loggedIn && <Link to={`/teams/newMember/${teamId}`} id={teamId} className='newadded'> <FaUserPlus /></Link>}
+      {loggedIn && <Link to={`/`} id={teamId} className='trash' onClick={handleDelete}> <FaTrash /></Link>}
         </div>
 
         <div className="section2"> 
@@ -270,7 +269,7 @@ const Desing = () => {
                 </div> } 
       
         </div>
-        <Footer />
+      
         {/* <div className='mid'>
         {start <= 0 ? null : <button onClick={previuosrow } className='button1'>&#10148;</button>}
         {last >= newtest.length ? null :  <button onClick={nextrow} className='button2'>&#10148;</button>  }

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import LoadingHome from '../../../src/Loading.js'
-import Footer from '../Footer/Footer'
+
 
 import LeaderPitcher from '../LatestsNews/Regular Season/LeaderPitcher'
 import LeaderHitting from '../LatestsNews/Regular Season/LeaderHitting'
@@ -138,7 +138,7 @@ const Transcitions = () => {
     },[])
   //  console.log( idvalue)
   return (
-    <div>
+    <div >
          <div className='mainNews'>
             <h2 >News</h2>
             <div className='mainNews-firstinner' >
@@ -295,7 +295,7 @@ const Transcitions = () => {
 
         
         
-       < Footer />
+     
     </div>
   )
 }

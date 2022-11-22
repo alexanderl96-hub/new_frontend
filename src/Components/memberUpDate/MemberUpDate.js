@@ -3,7 +3,7 @@ import { useParams, useNavigate} from 'react-router-dom'
 import axios from "axios";
 import '../newMember/NewMember.css'
 import './MemberUpdate.css'
-// import Navbar from '../navBar/Navbar'
+
 
 const MemberUpDate = () => {
   const [member, setMemberid] = useState([])

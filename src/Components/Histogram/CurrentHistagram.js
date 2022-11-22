@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react'
 import { Chart } from "react-google-charts";
 import { useParams } from 'react-router-dom';
 import './CurrentHistagram.css';
-// import NavBar from '../navBar/Navbar'
-import Footer from '../Footer/Footer'
 import LoadingHome from '../../../src/Loading'
 
  const CurrentHistagram = ()=> {
@@ -311,9 +309,8 @@ import LoadingHome from '../../../src/Loading'
     
       console.log(playerYear, pitcherERA)
   return (
-    <div>
-      {/* <NavBar/> */}
-
+    <div style={{ minHeight: '811px'}}>
+    
       {!countInTimeout ? 
     <div className='MainContStatc'>
         <div>
@@ -370,8 +367,7 @@ import LoadingHome from '../../../src/Loading'
             </div> :null}
            </div>
     </div> : <div className='LoadingFrontH'><LoadingHome/></div>}
-    <Footer />
   </div>
   );
 }
-export default CurrentHistagram;
+export default CurrentHistagram

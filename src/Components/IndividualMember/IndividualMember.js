@@ -1,13 +1,12 @@
 import React,  { useState, useEffect }from 'react'
 import { useParams, Link} from 'react-router-dom'
-// import { BiEdit} from "react-icons/fa";
 import {FaPlus, FaRecycle , FaUserEdit } from 'react-icons/fa';
 import './IndividualMember.css'
 import axios from 'axios'
-// import Navbar from '../navBar/Navbar'
 
 
-const IndividualMember = () => {
+
+const IndividualMember = ({loggedIn}) => {
    const [member, setMember] = useState([])
    const [memberImg, setMemberImg] = useState([])
    const [memberImg2, setMemberImg2] = useState([])
@@ -20,7 +19,6 @@ const IndividualMember = () => {
    const [teamCareerId, setTeamCareerID] = useState([])
    const [pitcherId, setPitcherID] = useState([])
    const [pitcherCareerId, setPitcherCareerID] = useState([])
-//    const [text, setText] = useState([])
    const [group, setGroup] =useState([])
   
 
@@ -190,26 +188,20 @@ function convertInKG(str){
 //   },[memberId])
 
 
- console.log(teamId, 'sortPlayer')
-//  console.log(teamCareerId.filter(a=> a.players_id  === Number(memberId) ), 'sortPitcher')
-//  console.log(pitcherId.filter(a=> a.players_id  === Number(memberId)), 'sortPitcher')
-//  console.log(pitcherCareerId.filter(a=> a.pitcher_id  === Number(memberId)), 'sortPitcher')
+
   return (
       <div  className='MainMember'>
-            {/* <Navbar /> */}
+          
             {/* style={{backgroundImage: `url(${memberImg2})`}}     */}
           <div className='divTop' style={{backgroundImage: `url(${memberImg2})`}} >
-              {/* <img src={memberImg2} alt='alt' className='divTop-ImgBackground'>  */}
-               <div className='divTop-inner'>Member
-                     {/* <img src={FaEdit} alt='edit' /> */}
-                     <Link to={`/teams/updateMember/${memberId}`} className='divEdit3'> <FaUserEdit /></Link>
-                     <Link to={`/teams/groups/${memberId}/addStats`} className='divEdit'> <FaPlus /> </Link> 
-                     <Link to={`/teams/allmembers/${group}`} onClick={handleDelete}  className="divEdit2" ><FaRecycle /></Link>   
+               <div className='divTop-inner'>Member 
+                     {loggedIn && <Link to={`/teams/updateMember/${memberId}`} className='divEdit3'> <FaUserEdit /></Link>}
+                     {loggedIn && <Link to={`/teams/groups/${memberId}/addStats`} className='divEdit'> <FaPlus /> </Link> }
+                     {loggedIn && <Link to={`/teams/allmembers/${group}`} onClick={handleDelete}  className="divEdit2" ><FaRecycle /></Link>  } 
                </div>
                <img src={memberImg} alt='1'  />
                <h2>{memberName} {memberNumber ? `# ${memberNumber}`: ''}</h2>
                <h3>{memberTeam} | {memberPosition} | Age: {memberAge}</h3>
-              {/* </img> */}
           </div>
          
           <div className='divMedium'>
@@ -446,25 +438,3 @@ function convertInKG(str){
 }
 
 export default IndividualMember
-// {coachId ? <div>{
-//     coachId.map((coach, index)=>{
-//         return(
-//             <div style={{}} className='about-inner'> Coach Career Stats:
-//             <div style={{}} className='about-inner1'>
-//                     <div>Year</div>
-//                     <div style={{}} className='about-innerTeam'>Team</div>
-//                     <div> GP</div>
-//                     <div> CG</div>
-//                     <div> ER</div>
-//                     <div> SO</div>
-//                     <div> W</div>
-//                     <div> L</div>
-//                     <div> Sv</div>
-//                     <div> WHIP</div>
-//                     <div> ERA</div>
-//             </div>
-//         </div>
-
-//         )
-//     })
-// }</div> : null}

@@ -44,7 +44,7 @@ const Teams = () => {
   
   return (
     <div className='home'>
-        {/* <Navbar /> */}
+     
         <div style={{display:'flex'}}>
             {/* wheater app */}
             <SlideShow />
@@ -66,7 +66,7 @@ const Teams = () => {
          <Videos2 />
          <Videos3 />
          </div>
-         <Footer/>
+        
     </div>
   )
 }

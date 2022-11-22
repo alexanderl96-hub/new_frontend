@@ -1,67 +1,54 @@
 .coachMainContent{
   width: 100%;
+  min-height: 811px;
   overflow: hidden;
 }
 .navCoach{
-    height: 50px;
-    background-color: #2e2666;
-    display: flex;
-    flex-direction: row;
+  height: 50px;
+  background-color: #2a2164;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
 }
-.navCoach > h1{
-    color: white;
-    font-family: cursive;
-    margin-top: 1px;
-    font-size: 25px;
-    margin-left: 4%;
-}
-.navCoach > .divForm{
-    margin-top: 12px;
+.navCoach > div{
+  color: white;
+  font-family: cursive;
+  font-size: 25px;
 }
 .divForm > form input{
-    margin-left: 100%;
-    padding: 2px;
-    width: 330px;
+  border-radius: 13px;
+  height: 35px;
+  border:none;
+  padding-left: 5px;
+  transition: all 4s;
+  width:350px;
 }
-.navCoach > .divMatch{
-    margin-top: 14px;
-    margin-left: 17%;
+
+ .divMatch{
+  width: 120px;
+  height: 24px;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 12px;
+  margin-left: 30px;
 }
+
 .navCoach > .divMatch >.divMatchAll{
-    height: 22px;
-    font-size: 17px;
-    background-color: white;
-    color: black;
-    padding-top:5px;
-    width: 100px;
-     border-radius: 10px; 
-     padding:2px;  
-     text-align: center;
-     margin-left: 450px;
+  font-size: 17px;
+  color: black;
+  margin-top: -2px;
 }
 .navCoach > .divMatch >.divMatchPart{
-    height: 22px;
-    font-size: 17px;
-    background-color: white;
-    color: black;
-    padding-top:5px;
-    width: 100px;
-     border-radius: 10px; 
-     padding:2px; 
-     text-align: center;
-     margin-left: 450px;
+  font-size: 17px;
+  color: black;
+  margin-top: -13px;
 }
 .navCoach > .divMatch >.divMatchNone{
-    height: 22px;
-    font-size: 17px;
-    background-color: white;
-    color: black;
-    padding-top:5px;
-    width: 100px;
-     border-radius: 10px; 
-     padding:2px;  
-     text-align: center;
-     margin-left: 450px;
+  font-size: 17px;
+  color: black;
+  margin-top: -2px;
 }
 
 .payContent2{

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import './NewMember.css'
 import axios from 'axios'
-// import Navbar from '../navBar/Navbar'
+
 
 const NewMember = () => {
     const navigate = useNavigate();
@@ -200,7 +200,7 @@ function convertFootInCm (height){
 console.log(newMember )
   return (
     <div className='newMember_Container'>
-        {/* <Navbar /> */}
+   
          <h1 >New Member</h1>
          <div>
              <div  className="newMemberWrap">

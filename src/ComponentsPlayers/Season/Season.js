@@ -37,10 +37,11 @@ const Season = () => {
   },[])
   console.log(season)
   return (
-    <div>
+    <div style={{minHeight: '811px'}}>
         {/* <Navbar/> */}
         <div className='navSeason'>
-        <h1 >Season</h1>
+        <div className= 'first'>Season</div>
+        <div>
         {!countInTimeout ? 
         <div className='season-inner'>
           {season.map((data, index)=>{
@@ -71,6 +72,7 @@ const Season = () => {
             )
           })}
         </div> : <div className='LoadingFrontS'><LoadingHome/></div>}
+        </div>
         </div>
     </div>
   )

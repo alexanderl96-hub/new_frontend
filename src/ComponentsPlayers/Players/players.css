@@ -1,5 +1,6 @@
 .playerMainContent{
   width: 100%;
+  min-height: 811px;
   overflow: hidden;
 }
 
@@ -36,6 +37,7 @@
   border:none;
   padding-left: 5px;
   transition: all 4s;
+  width:350px;
 }
 
 .divMatch{

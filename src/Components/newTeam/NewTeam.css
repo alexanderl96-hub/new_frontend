@@ -1,11 +1,12 @@
 .newTeam_Container{
     text-align: center;
-    padding-bottom: 10px; 
+ 
     transition: all 1.5s;
     animation: fadein 0.5s;
   -moz-animation: fadein 0.5s; /* Firefox */
   -webkit-animation: fadein 0.5s; /* Safari and Chrome */
   -o-animation: fadein 0.5s;
+  min-height: 811px;
 }
 .newTeam_Container > h1 {
     color: black;

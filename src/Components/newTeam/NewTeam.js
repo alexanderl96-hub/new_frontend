@@ -2,7 +2,7 @@ import React, { useState  } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from "axios";
 import './NewTeam.css'
-// import Navbar from '../navBar/Navbar'
+
 
 
 const NewTeam = () => {
@@ -39,7 +39,7 @@ const NewTeam = () => {
 
   return (
     <div className='newTeam_Container'>
-         {/* <Navbar /> */}
+      
          <h1>New Team</h1>
          <div className='newTeam_Wrap' >      
                 <form className='newTeam_Form' onSubmit={handleSubmit} >
