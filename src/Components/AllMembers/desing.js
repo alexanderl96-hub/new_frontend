@@ -1,10 +1,16 @@
-import React, { useState, useEffect } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import React, {  useState, useEffect } from 'react';
+import { Link, useParams} from 'react-router-dom'
 import ReactStars from "react-rating-stars-component"
+
+
+
 
 import './desing.css'
 import { FaTrash,FaUserPlus} from 'react-icons/fa';
 import axios from 'axios'
+
+
+
 
 
 const Desing = ({loggedIn}) => {
@@ -19,11 +25,16 @@ const Desing = ({loggedIn}) => {
      const [last1, setLastP] =useState(6)
      const [open, setOpen] = useState([false])
      const [teams, setTeams] = useState([]);
-     const [handel, setHandel] = useState(0);
+    //  const [slider, setSlider] = useState('slider');
+     const [handel, setHandel] = useState(0)
+
+    //  let sliderIndex = getComputedStyle(document.documentElement).getPropertyValue('--slider-Index');
+      const sliderIndex = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--slider-Index'))
+
     let fisrt = 0
     let params = useParams()
     let teamId = params.id
-
+    // const location = useLocation();
 
     const ratingChanged = (a) => { 
       let rest = 0
@@ -78,17 +89,19 @@ const Desing = ({loggedIn}) => {
 
  
      function onHandleClick (e){
-         let value = 0
-       
-         if(e.target.id === 'prev' ){
-             value++
-             setHandel(handel - value)
-         }else if(e.target.id === 'next'){
-             value++
-             setHandel(handel + value)
-         }
- 
+       let value = 0
+       if(e.target.id === 'next'){
+         value++
+         if(handel < 4){      
+         setHandel(handel + (Number(sliderIndex) + value))}
+       }else{
+        value++
+        if(handel >0){
+          setHandel(handel - (Number(sliderIndex) + value))
+        }  
+       }
      }
+
 
      useEffect(() => {
          fetch(`https://my-baseball-teams.adaptable.app/groups`)
@@ -146,8 +159,10 @@ const Desing = ({loggedIn}) => {
   //     })
   // },[search])
 
+
     fisrt = ratingChanged(Number(newI.join()))
-      console.log(search , open)
+      // console.log(search ,slider, handel , Number(sliderIndex), (handel + Number(sliderIndex)))
+      console.log(handel)
 
 
   return (
@@ -164,11 +179,12 @@ const Desing = ({loggedIn}) => {
                      )
                    })}
              </div>
-              <div className='container'>
+              <div className='container' >
                     <div id='prev' className='handel prev-handle' >
                         <div id='prev' className='text' onClick={onHandleClick} >&#8249;</div>
                   </div>
-                    <div className='Slider' >
+                  {/*  */}
+                    <div className='slider' style={{sliderIndex: handel }}>
                     {newtest.map((a,i)=>{
                         return(
                           < >
