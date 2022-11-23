@@ -16,7 +16,7 @@ import Allplayers from '../src/ComponentsPlayers/Players/Players'
 import Coaches from '../src/ComponentsPlayers/Coaches/Coaches'
 import Season from '../src/ComponentsPlayers/Season/Season'
 import AddStats from '../src/Components/statsPlayers/addStatsPlayers'
-import Desing from './Components/AllMembers/desing'
+// import Desing from './Components/AllMembers/desing'
 import AllMembers from '../src/Components/AllMembers/desing'
 import CurrentHistagram from '../src/Components/Histogram/CurrentHistagram'
 import About from '../src/Components/AboutUs/about'
@@ -30,7 +30,7 @@ import Footer from '../src/Components/Footer/Footer'
 function App() {
   const [openLoginModal, setOpenLoginModal] = useState(false);
   const [loggedIn, setLoggedIn] = useState(localStorage.getItem('accessToken') ? true : false);
- console.log(openLoginModal, loggedIn, 'string')
+
   return (
       <Router >
            <div className="App">
@@ -49,7 +49,7 @@ function App() {
                   <Route  path="/teams/News" element={<News/>}/>
                   <Route  path="/teams/Text" element={<Text/>}/>
                   <Route  path="/teams/groups/:id/addStats" element={<AddStats/>}/>
-                  <Route  path="/teams/newpage/:id" element={<Desing/>} />  
+                  {/* <Route  path="/teams/newpage/:id" element={<Desing/>} />   */}
                   <Route  path="/teams/allmembers/:id" element={<AllMembers />} loggedIn={loggedIn}  /> 
                   <Route  path="/teams/CurrentHistagram/:id" element={<CurrentHistagram/>}/>      
               </Routes>

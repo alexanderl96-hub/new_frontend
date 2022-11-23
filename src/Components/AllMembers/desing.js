@@ -27,10 +27,10 @@ const Desing = ({loggedIn}) => {
      const [teams, setTeams] = useState([]);
     //  const [slider, setSlider] = useState('slider');
      const [handel, setHandel] = useState(0)
-
-    //  let sliderIndex = getComputedStyle(document.documentElement).getPropertyValue('--slider-Index');
-      const sliderIndex = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--slider-Index'))
-
+   
+      //  const sliderIndex = getComputedStyle(document.documentElement).getPropertyValue('--slider-Index');
+      //  document.documentElement.style.setProperty('--slider-Index',this.state.color);
+    
     let fisrt = 0
     let params = useParams()
     let teamId = params.id
@@ -63,13 +63,13 @@ const Desing = ({loggedIn}) => {
       };
 
     function nextrow (){
-      console.log(last,'outside')
+      // console.log(last,'outside')
       const value = newtest.length - last 
       let jump = value - last
    
 
       if(jump  <= 6){
-        console.log(start, 'start')// console.log(newtest.length - last)
+        // console.log(start, 'start')// console.log(newtest.length - last)
          setStart(newtest.slice(last))
          setLast(newtest.slice(last + 2))  
       }
@@ -92,12 +92,12 @@ const Desing = ({loggedIn}) => {
        let value = 0
        if(e.target.id === 'next'){
          value++
-         if(handel < 4){      
-         setHandel(handel + (Number(sliderIndex) + value))}
+         if(handel < 1){      
+         setHandel(handel + value)}
        }else{
         value++
-        if(handel >0){
-          setHandel(handel - (Number(sliderIndex) + value))
+        if(handel > 0){
+          setHandel(handel -  value)
         }  
        }
      }
@@ -161,10 +161,8 @@ const Desing = ({loggedIn}) => {
 
 
     fisrt = ratingChanged(Number(newI.join()))
-      // console.log(search ,slider, handel , Number(sliderIndex), (handel + Number(sliderIndex)))
-      console.log(handel)
 
-
+      // console.log(loggedIn)
   return (
    <div className='MainDesing'>
 
@@ -184,7 +182,7 @@ const Desing = ({loggedIn}) => {
                         <div id='prev' className='text' onClick={onHandleClick} >&#8249;</div>
                   </div>
                   {/*  */}
-                    <div className='slider' style={{sliderIndex: handel }}>
+                    <div className='slider' style={{'--slider-Index': handel }}>
                     {newtest.map((a,i)=>{
                         return(
                           < >
@@ -204,7 +202,7 @@ const Desing = ({loggedIn}) => {
         
        
         <div className='desingIcon'>
-      {loggedIn && <Link to={`/teams/newMember/${teamId}`} id={teamId} className='newadded'> <FaUserPlus /></Link>}
+   {loggedIn && <Link to={`/teams/newMember/${teamId}`} id={teamId} className='newadded'> <FaUserPlus /></Link> }
       {loggedIn && <Link to={`/`} id={teamId} className='trash' onClick={handleDelete}> <FaTrash /></Link>}
         </div>
 

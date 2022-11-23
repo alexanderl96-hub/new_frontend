@@ -86,7 +86,7 @@ const LoginModal = ({openLoginModal, setOpenLoginModal, setLoggedIn, ...props}) 
           <TextField id="outlined-basic"   label="Email"      variant="outlined"    required />
           <TextField id="outlined-basic"   label="Image"      variant="outlined"   />
           <TextField id="outlined-basic"   label="Password"   variant="outlined"   required  /> */}
-          <Tabs value={value} onChange={handleChange} aria-label="Log in and create account tabs">
+                    <Tabs value={value} onChange={handleChange} aria-label="Log in and create account tabs">
                         <Tab label="Log In"  {...a11yProps(0)} />
                         <Tab label="Create Account" {...a11yProps(1)} />
                     </Tabs>
@@ -96,8 +96,6 @@ const LoginModal = ({openLoginModal, setOpenLoginModal, setLoggedIn, ...props}) 
                     <TabPanel value={value} index={1}>
                         <CreateAccountForm setOpenLoginModal={setOpenLoginModal} setLoggedIn={setLoggedIn} />
                     </TabPanel>
-          
-        
         </Stack>
     </Modal>
   )

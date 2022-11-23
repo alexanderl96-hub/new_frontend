@@ -4,7 +4,7 @@
 }
 :root{
     --slider-padding:5rem;
-    --slider-Index: 0;
+    --slider-Index:0;
 }
 
 
@@ -20,14 +20,14 @@
 }
 
 .slider{
-    --slider-Index: 0;
+    --slider-Index:0;
     display: flex;
     flex-grow: 1;
     transform: translateX(calc(var(--slider-Index) * -100%)); 
     margin: 0 .25rem; 
     cursor: pointer;
     gap: 2.5px;
-   
+    transition: transform 3s ease-in-out;
 }
 
 .slider >  img{ 
@@ -36,7 +36,7 @@
   height: 145px;
   aspect-ratio: 16/9;
   padding: .25rem;
-  background: white;
+  background: rgba(255, 255, 255, 0.937);
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }

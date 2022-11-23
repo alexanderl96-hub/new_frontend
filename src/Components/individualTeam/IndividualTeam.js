@@ -3,7 +3,7 @@ import { Link} from 'react-router-dom'
 import './IndividualTeam.css'
 
 const IndividualTeam = ({team}) => {
-  console.log(team)
+  // console.log(team)
   
   return (
     <div className="Individual">

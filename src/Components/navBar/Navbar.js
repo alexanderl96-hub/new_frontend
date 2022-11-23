@@ -8,7 +8,7 @@ import imageLogo from '../../image/FullLogoTransparent.png'
 function Navbar({setOpenLoginModal, loggedIn, setLoggedIn}) {
   const [menuIdActive, setMenuIdActive] = useState('')
   const [sideNavar, setSideNavar]= useState('sideNavar')
-console.log(loggedIn, 'nsav')
+// console.log(loggedIn, 'nsav')
 
   const logOut = ()=>{
      localStorage.removeItem('accessToken');

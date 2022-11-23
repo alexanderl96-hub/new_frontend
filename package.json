@@ -6,6 +6,7 @@
     "@emailjs/browser": "^3.9.1",
     "@emotion/styled": "^11.10.5",
     "@mui/icons-material": "^5.10.3",
+    "@mui/material": "^5.10.15",
     "@mui/styled-engine": "^5.10.3",
     "@remix-run/react": "^1.7.6",
     "@testing-library/jest-dom": "^5.16.4",

@@ -4,9 +4,6 @@ import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
 
-// import Button from '../button/Button';
-
-//  import { getStaticContextFromError } from '@remix-run/router';
 
 const CreateAccountForm = ({setOpenLoginModal, setLoggedIn}) => {
 
@@ -55,7 +52,7 @@ const CreateAccountForm = ({setOpenLoginModal, setLoggedIn}) => {
         fetch('http://localhost:9000/users', reqOptions)
         .then(response => response.json())
         .then(data => {
-            
+            console.log(data)
             if(data.status === 'error'){
                 if(data.message.includes('users_username_key')){
                     setFormMessage('Please choose another username. This one is already taken.');
@@ -68,15 +65,19 @@ const CreateAccountForm = ({setOpenLoginModal, setLoggedIn}) => {
                 setPassword('');
                 setImage('');
                 setOpenLoginModal(false);
+
+                 // show toast that user was successfully created 
+
+                localStorage.setItem('accessToken', data.accessToken);
+                setLoggedIn(true);
             }
            
-            // show toast that user was successfully created 
+           
 
-            localStorage.setItem('accessToken', data.accessToken);
-            setLoggedIn(true);
+          
         }).catch(error => {
             // handle error
-            console.error(error);
+            console.log(error);
         })
     }
 
@@ -138,7 +139,7 @@ const CreateAccountForm = ({setOpenLoginModal, setLoggedIn}) => {
         />
        
     </Box>
-    <button onClick={createUser} text="Submit" style={{width: '100px', marginTop: '5%', cursor: 'pointer'}} >Submit</button>
+    <div onClick={createUser} text="Submit" style={{width: '100px', marginTop: '5%', cursor: 'pointer'}} >Submit</div>
     </div>
   )
 }
