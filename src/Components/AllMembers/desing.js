@@ -207,7 +207,7 @@ const Desing = ({loggedIn}) => {
                     })}
                     </div>
                     <div id='next' className='handel next-handle'  >
-                     {handel == 0  ? <div id='next' className='text' onClick={onHandleClick} >&#8250;</div> : null}
+                     {handel === 0  ? <div id='next' className='text' onClick={onHandleClick} >&#8250;</div> : null}
                   </div>
 
                 </div> 
@@ -241,7 +241,7 @@ const Desing = ({loggedIn}) => {
                                <p><span>Number:</span> {a.number}</p>
                                <p><span>Position:</span> {a.position}</p>
                                <p><span>Salary:</span> {a.salary}</p>
-                               <p><span>About: </span>{a.about}  <Link to={`/teams/groups/${search}`} className='changeMore'> More..→</Link></p>
+                               <p><span>About: </span>{a.about}  <Link to={`/teams/groups/${search}`}  className='changeMore'> More..→</Link></p>
                                {/* <Link to={`/teams/groups/${search}`} className='changeMore'> See More...</Link> */}
                              </div>
                            <div className='innerSectionStart'>

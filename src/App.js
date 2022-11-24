@@ -30,24 +30,26 @@ function App() {
   const [openLoginModal, setOpenLoginModal] = useState(false);
   const [loggedIn, setLoggedIn] = useState(localStorage.getItem('accessToken') ? true : false);
 
+
+
   return (
       <Router >
            <div className="App">
             <NavBar setOpenLoginModal={setOpenLoginModal} loggedIn={loggedIn} setLoggedIn={setLoggedIn}  />
             <LoginModal  openLoginModal={openLoginModal} setOpenLoginModal={setOpenLoginModal} setLoggedIn={setLoggedIn} />
               <Routes>
-                  <Route exact path="/" element={<Teams/>}/>
-                  <Route  path="/teams/groups/:id" element={<IndividualMember/>} loggedIn={loggedIn} />
+                  <Route exact path="/" element={<Teams/>} />
+                  <Route  path="/teams/groups/:id" element={<IndividualMember/>} />
                   <Route  path="/teams/updateMember/:id" element={<UpDateMember/>}/>
                   <Route  path="/teams/new" element={<NewTeam/>}/>
                   <Route  path="/teams/newMember/:id" element={<NewMember/>}/>
                   <Route  path="/teams/allplayers" element={<Allplayers/>}/>
                   <Route  path="/teams/allCoaches" element={<Coaches/>}/>
                   <Route  path="/teams/Season" element={<Season/>}/>
-                  <Route  path="/teams/About" element={<About/>}/>
+                  <Route  path="/teams/About" element={<About/>} />
                   <Route  path="/teams/News" element={<News/>}/>
                   <Route  path="/teams/Text" element={<Text/>}/>
-                  <Route  path="/teams/groups/:id/addStats" element={<AddStats/>}/>
+                  <Route  path="/teams/groups/:id/addStats" element={<AddStats/>} loggedIn={loggedIn} />
                   <Route  path="/teams/allmembers/:id" element={<AllMembers />} loggedIn={loggedIn}  /> 
                   <Route  path="/teams/CurrentHistagram/:id" element={<CurrentHistagram/>}/>      
               </Routes>

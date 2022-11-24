@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import IndividualTeam from '../individualTeam/IndividualTeam'
-// import Navbar from '../navBar/Navbar'
-import Footer from '../Footer/Footer.js'
 import './Teams.css'
 import LoadingHome from '../../Loading'
 import SlideShow from '../SlideShow/SlideShow'
@@ -14,7 +12,7 @@ import Videos3 from '../AddsVideos/Videos3'
 
 
 
-const Teams = () => {
+const Teams = ({checkUser}) => {
     const [teams, setTeams] = useState([])
     const [count, setCount] = useState(<div className='LoadingFront'><LoadingHome/></div>);
     const [countInTimeout, setCountInTimeout] = useState([]);
@@ -41,6 +39,7 @@ const Teams = () => {
     //         setTeams(data)
     //     })
     // },[])
+
   
   return (
     <div className='home'>
@@ -56,7 +55,7 @@ const Teams = () => {
          <div className='Container'>
          {teams.map((team, index)=>{
              return (
-                 <IndividualTeam team={team} key={index} id={team.id} /> 
+                 <IndividualTeam team={team} key={index} id={team.id} checkUser={checkUser}/> 
                
              )
          })}
