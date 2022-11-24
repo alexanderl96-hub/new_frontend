@@ -93,7 +93,8 @@ const LoginAccountForm = ({setOpenLoginModal, setLoggedIn}) => {
                 value={password}
             />
         </Box>
-        <div onClick={logInUser} text="Submit" style={{width: '100px', marginTop: '10%', cursor: 'pointer'}}>Log In</div>
+        <div onClick={logInUser} text="Submit" 
+        className='LoginButton' >Log In</div>
         </div>
   )
 }

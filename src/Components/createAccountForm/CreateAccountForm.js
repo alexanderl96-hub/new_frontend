@@ -139,7 +139,7 @@ const CreateAccountForm = ({setOpenLoginModal, setLoggedIn}) => {
         />
        
     </Box>
-    <div onClick={createUser} text="Submit" style={{width: '100px', marginTop: '5%', cursor: 'pointer'}} >Submit</div>
+    <div onClick={createUser} text="Submit"    className='LoginCreateButton'>Submit</div>
     </div>
   )
 }

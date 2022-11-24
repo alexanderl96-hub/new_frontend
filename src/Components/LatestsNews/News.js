@@ -6,7 +6,7 @@ import Transcitions from './Transcitions'
 const News = () => {
 
   return (
-    <div style={{minHeight: '811px'}}>
+    <div style={{minHeight: '811px',  marginBottom: '20px'}}>
        <Transcitions />
     </div>
   )

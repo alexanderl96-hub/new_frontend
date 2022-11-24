@@ -193,9 +193,11 @@ function convertInKG(str){
       <div  className='MainMember'>
           
             {/* style={{backgroundImage: `url(${memberImg2})`}}     */}
-          <div className='divTop' style={{backgroundImage: `url(${memberImg2})`}} >
+          <div className='divTop' style={{backgroundImage: `url(${memberImg2})`,  backgroundPosition: 'center',
+  backgroundSize: '100% 100%',
+  backgroundRepeat: 'no-repeat'}}  >
                <div className='divTop-inner'>Member 
-                     {loggedIn && <Link to={`/teams/updateMember/${memberId}`} className='divEdit3'> <FaUserEdit /></Link>}
+                     {!loggedIn && <Link to={`/teams/updateMember/${memberId}`} className='divEdit3'> <FaUserEdit /></Link>}
                      {loggedIn && <Link to={`/teams/groups/${memberId}/addStats`} className='divEdit'> <FaPlus /> </Link> }
                      {loggedIn && <Link to={`/teams/allmembers/${group}`} onClick={handleDelete}  className="divEdit2" ><FaRecycle /></Link>  } 
                </div>

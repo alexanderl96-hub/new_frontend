@@ -24,8 +24,6 @@ const Desing = ({loggedIn}) => {
      const [start1, setPreviuos] =useState(0)
      const [last1, setLastP] =useState(6)
      const [open, setOpen] = useState([false])
-     const [teams, setTeams] = useState([]);
-    //  const [slider, setSlider] = useState('slider');
      const [handel, setHandel] = useState(0)
    
       //  const sliderIndex = getComputedStyle(document.documentElement).getPropertyValue('--slider-Index');
@@ -87,18 +85,29 @@ const Desing = ({loggedIn}) => {
     }
 
 
- 
      function onHandleClick (e){
        let value = 0
        if(e.target.id === 'next'){
          value++
-         if(handel < 1){      
-         setHandel(handel + value)}
-       }else{
-        value++
-        if(handel > 0){
-          setHandel(handel -  value)
-        }  
+        
+          if((newtest.length - (handel+value)*7) < 7 ){    
+            let control =    (newtest.length - ((handel+value)*7))/7 
+            setHandel(control)
+          }else{ setHandel(handel + value)}
+
+
+       }else if (e.target.id === 'prev'){
+         setHandel(0)
+        // value++
+      //   let check = (newtest.length / 7 + (handel-value) )/7
+      //   console.log(check)
+      //   if(((newtest.length - (handel * 7) ) - 7) > 0){
+      
+      //     let control =   (newtest.length - (handel * 7) ) - 7
+      //     // console.log(handel , control)
+      //       setHandel(control)
+          
+      //   }  setHandel(handel -  value)
        }
      }
 
@@ -162,27 +171,32 @@ const Desing = ({loggedIn}) => {
 
     fisrt = ratingChanged(Number(newI.join()))
 
-      // console.log(loggedIn)
+
   return (
    <div className='MainDesing'>
 
        
            <div style={{display:'flex', flexDirection: 'row'}}>
-             <div style={{width: '14%', height: '145px',}}>
+             <div style={{width: '12%', height: '145px',}}>
              {group.map((a,i)=>{
                      return(
                        <div >
-                         <img src={a.imag} alt='' style={{width: '143%', height: '145px', background: 'white'}}  />
+                         <img src={a.imag} alt='' style={{width: '143%', 
+                         height: '145px', background: 'white', borderStyle:'solid ', 
+                         borderBottomColor: 'black',
+                         borderLeftColor: 'transparent',
+                         borderRightColor: 'black',
+                         borderTopColor: 'transparent'}}  />
                        </div>
                      )
                    })}
              </div>
               <div className='container' >
                     <div id='prev' className='handel prev-handle' >
-                        <div id='prev' className='text' onClick={onHandleClick} >&#8249;</div>
+                       {handel > 0 ? <div id='prev' className='text' onClick={onHandleClick} >&#8249;</div> : null}
                   </div>
                   {/*  */}
-                    <div className='slider' style={{'--slider-Index': handel }}>
+                    <div className='slider' style={{'--slider-Index': handel}}>
                     {newtest.map((a,i)=>{
                         return(
                           < >
@@ -193,7 +207,7 @@ const Desing = ({loggedIn}) => {
                     })}
                     </div>
                     <div id='next' className='handel next-handle'  >
-                        <div id='next' className='text' onClick={onHandleClick} >&#8250;</div>
+                     {handel == 0  ? <div id='next' className='text' onClick={onHandleClick} >&#8250;</div> : null}
                   </div>
 
                 </div> 

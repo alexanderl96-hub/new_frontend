@@ -61,7 +61,7 @@ const Teams = () => {
              )
          })}
          </div> : <div className='LoadingFront'><LoadingHome/></div>}
-         <div style={{display:'flex'}}>
+         <div style={{display:'flex',  marginTop: '20px'}}>
          <Videos />
          <Videos2 />
          <Videos3 />

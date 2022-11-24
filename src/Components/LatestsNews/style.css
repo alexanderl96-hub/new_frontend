@@ -62,7 +62,7 @@
      position: relative;
     margin-left: 50px;
     cursor: pointer;
-    min-width: 90%;
+    min-width: 88%;
   
 }
 .mainNews-firstinner::before, .mainNews-firstinner::after{

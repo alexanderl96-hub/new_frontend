@@ -1,6 +1,4 @@
 import React,{ useState, useRef } from 'react'
-// import NavBar from '../navBar/Navbar'
-import Footer from '../Footer/Footer'
 import Resume from '../PDF/Resume2022.pdf'
 import Logo from '../../image/FullLogo.png'
 import emailjs from '@emailjs/browser';
@@ -76,7 +74,7 @@ const About = () => {
 
 
   return (
-    <div>
+    <div style={{ marginBottom: '20px'}}>
         {/* <NavBar /> */}
         <div>
             <div className='media'> 
@@ -186,7 +184,7 @@ const About = () => {
             </div>
           
         </div>
-        <Footer />
+  
         
     </div>
   )

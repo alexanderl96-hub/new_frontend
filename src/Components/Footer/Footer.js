@@ -37,10 +37,10 @@ const Footer = () => {
              </div>
              <div className='divLegalMain'>
                  <div className='legal-inner'>
-                    <NavLink to={'/teams/About'} style={{color:'white', margin: '10px'}} > <p>Terms of Use</p> </NavLink>
-                    <NavLink to={'/teams/About'} style={{color:'white', margin: '10px'}}  > <p>Privacy Policy</p> </NavLink>
-                    <NavLink to={'/teams/About'} style={{color:'white', margin: '10px'}}  >  <p>Legal Notices</p> </NavLink>
-                    <NavLink to={'/teams/About'} style={{color:'white', margin: '10px'}}  > <p>Contact Us</p> </NavLink>
+                    <NavLink to={'/teams/About'}  className='legal-innerAll'> <p>Terms of Use</p> </NavLink>
+                    <NavLink to={'/teams/About'}  className='legal-innerAll' > <p>Privacy Policy</p> </NavLink>
+                    <NavLink to={'/teams/About'}  className='legal-innerAll'  >  <p>Legal Notices</p> </NavLink>
+                    <NavLink to={'/teams/About'}  className='legal-innerAll'  > <p>Contact Us</p> </NavLink>
                  </div>
                  <div className='legal-yearLogo'>
                      <p> {new Date().getFullYear()} Sport World</p>

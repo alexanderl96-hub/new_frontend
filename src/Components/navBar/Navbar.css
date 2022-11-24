@@ -29,13 +29,14 @@ h1 {
   color: white;
   border-radius: 3px;
   width: 90px;
+  height: 30px;
   text-align: center;
-  margin-left: 50px;
-  margin-top: 1px;
+  margin-top: -3px;
   pointer-events: auto;
   border: 2px;
   border-style: solid;
   border-color: white;
+  margin-right: 40px;
 }
 .navAddgroup:hover{
     background: white;
@@ -45,6 +46,7 @@ h1 {
 .navlogIn {
   color: white;
   margin-top: 2px;
+  width: 90px;
 }
 .nav:hover {
   border-radius: 10px;

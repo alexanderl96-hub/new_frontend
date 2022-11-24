@@ -10,6 +10,43 @@ body {
   height: 100%;
 
 }
+
+.LoginButton {
+  width: 100px; 
+  margin-top: 10%; 
+  cursor: pointer; 
+  border: 0.5px solid #BaBaBa;
+  display: flex; 
+  text-align: center;
+  justify-content: center; 
+  padding: 2px; 
+  margin-left: 39%; 
+  border-radius: 5px; 
+  color: #7e7e7e;
+}
+.LoginCreateButton {
+  width: 100px; 
+  margin-top: 5%; 
+  cursor: pointer; 
+  border: 0.5px solid #BaBaBa;
+  display: flex; 
+  text-align: center;
+  justify-content: center; 
+  padding: 2px; 
+  margin-left: 39%; 
+  border-radius: 5px; 
+  color: #7e7e7e;
+}
+.LoginButton:hover{
+  border: 0.5px solid white;
+  color: white;
+  background: #070f3c;
+}
+.LoginCreateButton:hover{
+  border: 0.5px solid white;
+  color: white;
+  background: #070f3c;
+}
 /*Nest Hub Max (max-width: 1280px; max-heigth: 800px;)*/
 @media only screen and (max-width: 1280px){
   body {

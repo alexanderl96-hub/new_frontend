@@ -58,11 +58,13 @@ function Navbar({setOpenLoginModal, loggedIn, setLoggedIn}) {
             {/* <Link to={'/teams/new'}>
                 <div className='navAddgroup'> ADD</div>
             </Link> */}
-           {loggedIn && <button onClick={logOut} style={{color: 'black', cursor: 'pointer', marginLeft: '-15px' }}>Log out</button> }
-           {!loggedIn && <button  style={{color: 'black', cursor: 'pointer', marginLeft: '-15px'}}>Log in</button> }
+           {loggedIn && <button  className='navAddgroup' onClick={logOut} style={{color: 'black', cursor: 'pointer', marginLeft: '-15px' }}>Log out</button> }
+           {!loggedIn && <button  className='navAddgroup' onClick={(e)=> setOpenLoginModal(true)}  style={{color: 'black', cursor: 'pointer', marginLeft: '-15px'}}>Log in</button> }
             {/* {!loggedIn  <button  style={{color: 'black'}}>Log in</button>} */}
-            <div className='navlogIn' onClick={(e)=> setOpenLoginModal(true)} style={{marginTop:'-1px'}}>
-              <FaUser  style={{ border:'2px solid white', borderRadius: '50px', fontSize: '25px', padding: '1px', marginRight: '70px'}}/></div> 
+            <div className='navlogIn' style={{marginTop:'-1px'}}>
+              <FaUser  style={{ border:'2px solid white', borderRadius: '50px', fontSize: '25px', padding: '1px', marginRight: '70px'}}/>
+              {loggedIn && <p style={{color: 'white', marginTop:'-4px', marginLeft: '-20%'}}>Welcome</p>}
+              </div> 
             {/* <Link to={'/teams/new'}>
                 <div className='navlogIn'>LOG <FaUser /></div>  
             </Link> */}

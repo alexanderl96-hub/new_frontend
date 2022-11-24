@@ -54,7 +54,10 @@ const SlideShow = () => {
                     <div
                         className="slide"
                         key={index}
-                        style={{ backgroundImage: `url(`+ backgroundColor+ `)`, aspectRatio: '16/9'}}
+                        style={{ backgroundImage: `url(`+ backgroundColor+ `)`, aspectRatio: '16/9',
+                         backgroundPosition: 'center',
+                        backgroundSize: '100% 100%',
+                        backgroundRepeat: 'no-repeat'}}
                     ></div>
                     ))}
                 </div>
