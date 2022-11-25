@@ -6,7 +6,7 @@ import Box from '@mui/material/Box';
 
 // import Button from '../button/Button';
 
-const LoginAccountForm = ({setOpenLoginModal, setLoggedIn}) => {
+const LoginAccountForm = ({setOpenLoginModal, setLoggedIn,}) => {
 
     const [username, setUsername] = useState('');
     const [usernameError, setUsernameError] = useState(false);

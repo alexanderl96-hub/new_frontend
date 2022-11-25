@@ -1,10 +1,16 @@
 import React, { useState, useEffect} from 'react'
 import { FaPlus } from 'react-icons/fa';
 
-const Comments = () => {
+const Comments = ({commentId, check}) => {
 
     const [comment, setComment] = useState([]);
     const [open, setOpen] = useState(false)
+    const [newComment, setNewComment] = useState({
+        username: '',
+        userImage: '',
+        comment: '',
+        memberId:check,
+    })
 
     function handelOpen (){
        if(open === false){
@@ -19,7 +25,7 @@ const Comments = () => {
         .then(res => res.json())
         .then(data =>{setComment(data.comments)})
     },[])
-console.log(comment)
+console.log(newComment)
   return (
       <div>
           <div style={{display: 'flex', justifyContent: 'center', textAlign: 'center', marginTop: '5%', }}>

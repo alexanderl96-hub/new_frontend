@@ -1,13 +1,10 @@
 import React, {  useState, useEffect } from 'react';
-import { Link, useParams} from 'react-router-dom'
+import { useNavigate, Link, useParams} from 'react-router-dom'
 import ReactStars from "react-rating-stars-component"
-import Comments from '../comments/Comments'
-
-
 
 
 import './desing.css'
-import { FaTrash,FaUserPlus} from 'react-icons/fa';
+import { FaPlus, FaTrash,FaUserPlus} from 'react-icons/fa';
 import axios from 'axios'
 
 
@@ -15,6 +12,7 @@ import axios from 'axios'
 
 
 const Desing = ({loggedIn}) => {
+   const navigate = useNavigate();
     const [ newI, setNewI]= useState([])
     const [ newtest, setNewtest]= useState([])
     const [nombre, setCoachName] = useState([])
@@ -26,13 +24,71 @@ const Desing = ({loggedIn}) => {
      const [last1, setLastP] =useState(6)
      const [open, setOpen] = useState([false])
      const [handel, setHandel] = useState(0)
-   
-      //  const sliderIndex = getComputedStyle(document.documentElement).getPropertyValue('--slider-Index');
-      //  document.documentElement.style.setProperty('--slider-Index',this.state.color);
-    
+    const  [commentId, setCommentId] = useState(0)
+    const [comment, setComment] = useState([]);
+    const [open1, setOpen1] = useState(false)
+    const date = new Date();
+    const year = date.getFullYear()
+    const month = date.getMonth()+1
+    const hoy = date.getDate()
+    const [increment, setIncrement] = useState(3)
+
     let fisrt = 0
     let params = useParams()
-    let teamId = params.id
+    const teamId = params.id
+
+    // let check = Number(nombre.filter((a)=> a.id === Number(search)).map(a => a.id).join(''))
+    const [newComment, setNewComment] = useState({
+        username: '',
+        userimage: '',
+        comment: '',
+        memberid:`${teamId}`,
+        date: [month, hoy, year].join('/'),
+    })
+
+  
+
+    function handelOpen (){
+       if(open1 === false){
+             setOpen1(true)
+       }else{
+        setOpen1(false)
+       }
+    }
+    const handleInput = (e) =>{
+      const {value} = e.target
+      setNewComment({...newComment, [e.target.id]: value})
+       
+    }
+    const handleSubmit = (e) =>{
+      e.preventDefault()
+      addComment(newComment)
+      setOpen1(false)
+
+    }
+    const addComment = (newComment) => {
+       axios.post(`http://localhost:9000/comments`, newComment).then((res)=>{
+      setNewComment({
+          username: '',
+          userImage: '',
+          comment: '',
+          memberid: '', 
+          memberId: '',
+      })
+      navigate(`/teams/allmembers/${teamId}`);
+       })
+    }
+    useEffect(()=>{
+        fetch('http://localhost:9000/comments')
+        .then(res => res.json())
+        .then(data =>{
+           setComment(data.comments.filter(a=> a.memberid === teamId))
+         
+         
+      })
+    },[])
+    
+
     // const location = useLocation();
 
     const ratingChanged = (a) => { 
@@ -51,7 +107,7 @@ const Desing = ({loggedIn}) => {
       return rest
     }; 
     const articule = (artist) => {
-        let pro = "";
+        let pro = "" ;
         let allt = artist.split(" ");
         if(allt.length >= 3){
           pro = allt[0] +' '+ allt[1]
@@ -119,6 +175,9 @@ const Desing = ({loggedIn}) => {
          .then(data =>{
            setCoachName(data)
           setNewtest(data = data.filter((a,b)=> a.team_id === Number(teamId)))
+          // setCommentId( data[0] )
+          //: Number(nombre.filter((a)=> a.id === Number(search)).map(a => a.id).join(''))
+
          })
        },[teamId])
       // useEffect(() => {
@@ -171,7 +230,10 @@ const Desing = ({loggedIn}) => {
 
 
     fisrt = ratingChanged(Number(newI.join()))
+  //  set(nombre.filter((a)=> a.id === Number(search)).map(a => a.id ))
 
+ 
+   console.log( comment.length)
 
   return (
    <div className='MainDesing'>
@@ -201,7 +263,7 @@ const Desing = ({loggedIn}) => {
                     {newtest.map((a,i)=>{
                         return(
                           < >
-                              <img src={a.imag} alt='' onClick={(e)=>setSearch(a.id)} />
+                              <img src={a.imag} alt='' onClick={(e)=>setSearch(a.id) && setCommentId(a.id)} />
                               {/* <p>{a.name}</p> */}
                           </>
                         )                
@@ -243,7 +305,7 @@ const Desing = ({loggedIn}) => {
                                <p><span>Position:</span> {a.position}</p>
                                <p><span>Salary:</span> {a.salary}</p>
                                <p><span>About: </span>{a.about}  <Link to={`/teams/groups/${search}`}  className='changeMore'> More..→</Link></p>
-                               {/* <Link to={`/teams/groups/${search}`} className='changeMore'> See More...</Link> */}
+                               <p><span>ID:</span> {a.id}</p>
                              </div>
                            <div className='innerSectionStart'>
                            <ReactStars 
@@ -259,7 +321,7 @@ const Desing = ({loggedIn}) => {
                        </div>
                    </div> : null}
                     </div>
-                )}) : <div >  
+                )}) : <div style={{minHeight: '370px'}}>  
                    {newtest.slice(0,1).map((a,i)=>{
                      return(
                        <div className="section2Container" >
@@ -277,7 +339,7 @@ const Desing = ({loggedIn}) => {
                                <p><span>Position:</span> {a.position}</p>
                                <p><span>Salary:</span> {a.salary}</p>
                                <p><span>About: </span>{a.about}  <Link to={`/teams/groups/${a.id}`} className='changeMore'> More..→</Link></p>
-                               {/* <Link to={`/teams/groups/${search}`} className='changeMore'> See More...</Link> */}
+                               <p><span>ID:</span> {a.id}</p>
                              </div>
                            <div className='innerSectionStart'>
                            <ReactStars 
@@ -300,7 +362,72 @@ const Desing = ({loggedIn}) => {
         </div>
 
         
-      <Comments />
+        <div>
+          <div style={{display: 'flex', justifyContent: 'center', textAlign: 'center', marginTop: '5%', }}>
+                   <h3 style={{color: 'white', fontSize: '20px', width: '200px', height: '40px', border: '2px solid', 
+                   borderRadius: '10px', backgroundColor: '#070f3c', paddingTop: '6px', cursor: 'pointer' }} onClick={handelOpen } >Comments 
+                   {!open1 ? <FaPlus  style={{marginLeft: '10px', paddingTop: '6px'}} /> : null}</h3>
+          </div>
+          <div style={{display:'flex', textAlign: 'center', justifyContent: 'center', marginBottom: '20px'}}  >
+         { open1 ? 
+                    <form style={{ display:'flex', flexDirection: 'column', padding: '7px', 
+                                     width: '430px',  height: '420px',backgroundColor: 'white',  alignItems: 'center', 
+                                     justifyContent: 'center', border: '2.5px solid black'}}onSubmit={handleSubmit}>
+                       
+                   
+                            <h4 style={{color: ' #6c6c6c'}}>Leave your comment here</h4>
+                            <input id='username'
+                                   type='text' 
+                                   onChange={handleInput}
+                                    value={newComment.username }
+                                  style={{ width: '300px', border: '0.5px solid #BaBaBa', height: '40px', color: '#6c6c6c', marginBottom:'4px'}}
+                                    />
+                            <input id='memberid' 
+                                   type='text' 
+                                   onChange={handleInput} 
+                                    value={newComment.memberid }
+                                       style={{ width: '300px', border: '0.5px solid #BaBaBa', height: '40px', color: '#6c6c6c',marginBottom:'4px'}}
+                                
+                                   />
+                            <input id='userimage' 
+                                   type='text' 
+                                   onChange={handleInput} 
+                                    value={newComment.userimage} 
+                                    style={{ width: '300px', border: '0.5px solid #BaBaBa', height: '40px', color: '#6c6c6c',marginBottom:'4px'}}
+                                   />
+                            <textarea id='comment' 
+                                      name='message' 
+                                      onChange={handleInput} 
+                                      placeholder='Message...' 
+                                      required 
+                                       value={newComment.comment}
+                                       style={{ width: '300px', height: '220px', border: '0.5px solid #BaBaBa', color: '#6c6c6c', marginBottom:'4px'}}
+                                      />
+                            <button type='submit' value="Send" onSubmit={handleSubmit} style={{height: '40px', marginTop: '7px',
+                             width: '300px', border: '0.5px solid #BaBaBa', color: 'white', cursor: 'pointer', backgroundColor: '#371F76', marginBottom:'4px'}} >Submit</button>
+                   
+                    </form>
+               : null }
+                 </div>
+
+         <div style={{display:'flex',flexDirection:'row', justifyContent: 'space-around',flexWrap: 'wrap', textAlign: 'center', margin: '10px', gap: '9px'}}>
+            {comment.slice(0, increment).map((a, i)=>{
+                return(
+                    <div style={{ height: '265px', width: '30%', border: '3px solid black', borderRadius: '30px',
+                                display: 'flex', flexDirection: 'column' , padding: '4px', cursor: 'pointer', backgroundColor:'#fff'}}>
+                        <div style={{margin: '5px', fontSize: '15px'}}>{a.username}</div>
+                        <div style={{padding: '3px', display: 'flex',  flexDirection: 'column', justifyContent: 'center', alignItems:'center', flexWrap: 'wrap' }}>
+                            <img src={a.userimage} alt ='' style={{ height: '100px', width: '90px', borderRadius: '10px', backgroundImage: `url(https://d11a6trkgmumsb.cloudfront.net/original/3X/d/8/d8b5d0a738295345ebd8934b859fa1fca1c8c6ad.jpeg)`, backgroundPosition: 'center',
+  backgroundSize: '100% 100%'}} />
+                            <div style={{display:'flex', textAlign: 'justify', marginTop: '8px', fontSize: '13.3px'}}>{a.comment}</div>
+                            <div style={{fontSize: '14px'}}>{a.date}</div>
+                        </div>
+                    </div>
+                )
+            })}
+          </div>
+          <div onClick={((e)=> setIncrement(increment+3))} style={{cursor: 'pointer', display:'flex', justifyContent: 'center', textAlign:'center', padding: '10px',}}> {increment >= comment.length ? 'No more reviews' : 'See more...'}</div>
+    </div>  
       
         {/* <div className='mid'>
         {start <= 0 ? null : <button onClick={previuosrow } className='button1'>&#10148;</button>}

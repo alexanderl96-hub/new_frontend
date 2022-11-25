@@ -32,11 +32,15 @@ function App() {
 
 
 
+
   return (
       <Router >
            <div className="App">
             <NavBar setOpenLoginModal={setOpenLoginModal} loggedIn={loggedIn} setLoggedIn={setLoggedIn}  />
-            <LoginModal  openLoginModal={openLoginModal} setOpenLoginModal={setOpenLoginModal} setLoggedIn={setLoggedIn} />
+            <LoginModal  openLoginModal={openLoginModal} 
+                         setOpenLoginModal={setOpenLoginModal} 
+                         setLoggedIn={setLoggedIn} 
+                        />
               <Routes>
                   <Route exact path="/" element={<Teams/>} />
                   <Route  path="/teams/groups/:id" element={<IndividualMember/>} />
@@ -50,7 +54,7 @@ function App() {
                   <Route  path="/teams/News" element={<News/>}/>
                   <Route  path="/teams/Text" element={<Text/>}/>
                   <Route  path="/teams/groups/:id/addStats" element={<AddStats/>} loggedIn={loggedIn} />
-                  <Route  path="/teams/allmembers/:id" element={<AllMembers />} loggedIn={loggedIn}  /> 
+                  <Route  path="/teams/allmembers/:id" element={<AllMembers />} /> 
                   <Route  path="/teams/CurrentHistagram/:id" element={<CurrentHistagram/>}/>      
               </Routes>
               <Footer />
