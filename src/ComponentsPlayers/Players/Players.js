@@ -122,7 +122,7 @@ const Players = () => {
                       )
                    })}
              </div> : 
-              <div className="container">
+              <div className="containerNoplay" style={{backgroundColor: 'white'}} >
                  
                   <div className="carousel">
                       <p className='slide'>No Player Found</p>

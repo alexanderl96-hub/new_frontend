@@ -9,12 +9,12 @@
 
 
 .container{
-    width: 82.8%;
+    width: 100%;
     display: flex;
     justify-content: flex-end;
     height: 145px;
     overflow: hidden;
-    margin-left: 17.15%;
+    margin-left: 4.4%;
     background: rgb(219, 218, 218);
 }
 

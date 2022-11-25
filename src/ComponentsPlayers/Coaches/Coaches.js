@@ -114,7 +114,7 @@ console.log( coach, 'coach')
                         </div>
                               )
                     })}
-                 </div> : <div className="container2">           
+                 </div> : <div className="container2" style={{backgroundColor: 'white'}}>           
                     <div className="carousel2">
                         <p className='slide'>No Coaches Found</p>
                         <p className='slide'>No Coaches Found</p>

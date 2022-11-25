@@ -1,6 +1,7 @@
 import React, {  useState, useEffect } from 'react';
 import { Link, useParams} from 'react-router-dom'
 import ReactStars from "react-rating-stars-component"
+import Comments from '../comments/Comments'
 
 
 
@@ -297,6 +298,9 @@ const Desing = ({loggedIn}) => {
                 </div> } 
       
         </div>
+
+        
+      <Comments />
       
         {/* <div className='mid'>
         {start <= 0 ? null : <button onClick={previuosrow } className='button1'>&#10148;</button>}
