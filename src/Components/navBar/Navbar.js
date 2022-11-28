@@ -13,7 +13,7 @@ function Navbar({setOpenLoginModal, loggedIn, setLoggedIn}) {
  console.log(checkUser, 'nsav')
 
   const logOut = ()=>{
-     localStorage.removeItem('accessToken');
+     document.cookie = "accessToken=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
     setLoggedIn(false)
    
   }

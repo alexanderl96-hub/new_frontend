@@ -1,11 +1,14 @@
-import React, { useState } from 'react'; 
+import React, { useState, useEffect } from 'react'; 
 import {
   BrowserRouter as Router,
   Routes,
   Route,
 } from "react-router-dom";
 import './App.css';
+import { getCookie } from '../src/utils/cookieUtils'
 
+import Alert from '@mui/material/Alert';
+import CheckIcon from '@mui/icons-material/Check';
 
 import Teams from '../src/Components/teamsInfo/Teams'
 import IndividualMember from './Components/IndividualMember/IndividualMember'
@@ -28,19 +31,33 @@ import Footer from '../src/Components/Footer/Footer'
 
 function App() {
   const [openLoginModal, setOpenLoginModal] = useState(false);
-  const [loggedIn, setLoggedIn] = useState(localStorage.getItem('accessToken') ? true : false);
+  const [loggedIn, setLoggedIn] = useState( getCookie('accessToken') ? true : false);
+  const [loginMessage, setLoginMessage] = useState('');
 
+  useEffect(() => {
+
+    setTimeout(function() {
+      setLoginMessage('')
+    }, 2000)
+
+  }, [loginMessage])
 
 
 
   return (
       <Router >
            <div className="App">
-            <NavBar setOpenLoginModal={setOpenLoginModal} loggedIn={loggedIn} setLoggedIn={setLoggedIn}  />
+            <NavBar setOpenLoginModal={setOpenLoginModal} loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
             <LoginModal  openLoginModal={openLoginModal} 
                          setOpenLoginModal={setOpenLoginModal} 
                          setLoggedIn={setLoggedIn} 
+                          setLoginMessage={setLoginMessage}
                         />
+                         {loginMessage && 
+          <Alert icon={<CheckIcon fontSize="inherit" />} severity="success">
+            {loginMessage}
+          </Alert>
+        }
               <Routes>
                   <Route exact path="/" element={<Teams/>} />
                   <Route  path="/teams/groups/:id" element={<IndividualMember/>} />

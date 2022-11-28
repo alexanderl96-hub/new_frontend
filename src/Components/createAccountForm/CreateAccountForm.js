@@ -5,7 +5,7 @@ import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
 
 
-const CreateAccountForm = ({setOpenLoginModal, setLoggedIn}) => {
+const CreateAccountForm = ({setOpenLoginModal, setLoggedIn, setLoginMessage}) => {
 
     const [username, setUsername] = useState('');
     const [usernameError, setUsernameError] = useState(false);
@@ -52,28 +52,30 @@ const CreateAccountForm = ({setOpenLoginModal, setLoggedIn}) => {
         fetch('http://localhost:9000/users', reqOptions)
         .then(response => response.json())
         .then(data => {
-            console.log(data)
             if(data.status === 'error'){
+                // set form info to show message
                 if(data.message.includes('users_username_key')){
                     setFormMessage('Please choose another username. This one is already taken.');
                 } else if (data.message.includes('users_email_key')){
                     setFormMessage('Please choose another email. This one is already taken.');
+                } else if (data.message.includes('Password must be')){
+                    setFormMessage(data.message);
                 }
-            }else{
+               
+            } else {
                 setEmail('');
                 setUsername('');
                 setPassword('');
-                setImage('');
                 setOpenLoginModal(false);
-
-                 // show toast that user was successfully created 
-
-                localStorage.setItem('accessToken', data.accessToken);
+                // setLoginMessage('You\'re account has been created.')
+    
+                // show toast that user was successfully created 
+                
+                // save access token as a cookie
+                document.cookie = "accessToken=" + data.accessToken;
+                
                 setLoggedIn(true);
             }
-           
-           
-
           
         }).catch(error => {
             // handle error
