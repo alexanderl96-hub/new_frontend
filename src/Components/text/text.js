@@ -1,57 +1,51 @@
-import React, { useState, useEffect} from 'react'
-import './text.css'
-// import AliceCarousel from 'react-alice-carousel';
-import 'react-alice-carousel/lib/alice-carousel.css';
+// // const request = require('request');
+// import React, { useState, useEffect} from 'react'
+// import './text.css'
+// // import AliceCarousel from 'react-alice-carousel';
+// import 'react-alice-carousel/lib/alice-carousel.css';
+// import axios from "axios";
 
 
-
-const Text = () => {
-    const [teams, setTeams] = useState([]);
-   const [handel, setHandel] = useState(0);
-
-    function onHandleClick (e){
-        let value = 0
-      
-        if(e.target.id === 'prev' ){
-            value++
-            setHandel(handel - value)
-        }else if(e.target.id === 'next'){
-            value++
-            setHandel(handel + value)
-        }
-
-    }
+// const Text = () => {
+// //    const [broadcast, setBroadcast]= useState([])
+  
+// const options = {
    
+  
+
    
-    useEffect(() => {
-        fetch(`https://my-baseball-teams.adaptable.app/teams`)
-        .then(res => res.json())
-        .then(data =>{
-            setTeams(data)
-        })
-    },[])
-    console.log(teams, handel )
-    return (
-          <div className='container'>
-              <div id='prev' className='handel prev-handle' >
-                  <div id='prev' className='text' onClick={onHandleClick} >&#8249;</div>
-             </div>
-              <div className='Slider'>
-              {teams.map((a,i)=>{
-                  return(
-                    < div style={{display:'flex', flexDirection: 'column'}}>
-                        <img src={a.imag} alt='' />
-                        <p>{a.name}</p>
-                     </ div>
-                  )                
-              })}
-              </div>
-              <div id='next' className='handel next-handle'  >
-                  <div id='next' className='text' onClick={onHandleClick} >&#8250;</div>
-             </div>
+//     useEffect(()=>{
+//         const options = {
+//             method: 'GET',
+//             url: 'https://mlb-data.p.rapidapi.com/json/named.mlb_broadcast_info.bam',
+//             params: {
+//               src_comment: '\'National\'',
+//               src_type: '\'TV\'',
+//               tcid: 'mm_mlb_schedule',
+//               start_date: '\'20170415\'',
+//               home_away: '\'H\'',
+//               season: '\'2017\'',
+//               end_date: '\'20170417\'',
+//               sort_by: '\'game_time_et_asc\''
+//             },
+//             headers: {
+//               'X-RapidAPI-Key': '4be35f9dcbmshc5f07ead15abe9ep1399e7jsn4fb04336cc72',
+//               'X-RapidAPI-Host': 'mlb-data.p.rapidapi.com'
+//             }
+//           };
+//         axios.request(options).then(function (response) {
+//             console.log(response.data);
+//         }).catch(function (error) {
+//             console.error(error);
+//         });
+//     },[])
+   
 
-          </div>   
-    )
-}
+//     return (
+//           <div >
+             
+//           </div>   
+//     )
+// }
 
-export default Text
+// export default Text

@@ -2,7 +2,7 @@ import React, {  useState, useEffect } from 'react';
 import { useNavigate, Link, useParams} from 'react-router-dom'
 import ReactStars from "react-rating-stars-component"
 
-
+import '../text/text.css'
 import './desing.css'
 import { FaPlus, FaTrash,FaUserPlus} from 'react-icons/fa';
 import axios from 'axios'
@@ -27,6 +27,7 @@ const Desing = ({loggedIn}) => {
     const  [commentId, setCommentId] = useState(0)
     const [comment, setComment] = useState([]);
     const [open1, setOpen1] = useState(false)
+    const [open2, setOpen2] = useState(false)
     const date = new Date();
     const year = date.getFullYear()
     const month = date.getMonth()+1
@@ -55,6 +56,13 @@ const Desing = ({loggedIn}) => {
         setOpen1(false)
        }
     }
+    function handelOpen2 (){
+      if(open2 === false){
+            setOpen2(true)
+      }else{
+       setOpen2(false)
+      }
+   }
     const handleInput = (e) =>{
       const {value} = e.target
       setNewComment({...newComment, [e.target.id]: value})
@@ -117,29 +125,29 @@ const Desing = ({loggedIn}) => {
         return pro
       };
 
-    function nextrow (){
-      // console.log(last,'outside')
-      const value = newtest.length - last 
-      let jump = value - last
+    // function nextrow (){
+    //   // console.log(last,'outside')
+    //   const value = newtest.length - last 
+    //   let jump = value - last
    
 
-      if(jump  <= 6){
-        // console.log(start, 'start')// console.log(newtest.length - last)
-         setStart(newtest.slice(last))
-         setLast(newtest.slice(last + 2))  
-      }
-      setStart(start + 6)
-      setLast(last + 6)
-       setPreviuos(start+ 6)
-      setLastP(last+ 6)
+    //   if(jump  <= 6){
+    //     // console.log(start, 'start')// console.log(newtest.length - last)
+    //      setStart(newtest.slice(last))
+    //      setLast(newtest.slice(last + 2))  
+    //   }
+    //   setStart(start + 6)
+    //   setLast(last + 6)
+    //    setPreviuos(start+ 6)
+    //   setLastP(last+ 6)
     
-    }
-    function previuosrow (){
-      setPreviuos(start1 - 6)
-      setLastP(last1 - 6)
-      setStart(start -6)
-      setLast(last - 6)
-    }
+    // }
+    // function previuosrow (){
+    //   setPreviuos(start1 - 6)
+    //   setLastP(last1 - 6)
+    //   setStart(start -6)
+    //   setLast(last - 6)
+    // }
 
 
      function onHandleClick (e){
@@ -227,13 +235,23 @@ const Desing = ({loggedIn}) => {
   //         setNewI(arr = arr.map((a , index)=>  a !== null ? setAB(a) : ''))
   //     })
   // },[search])
+  const aboutLength = (about) => {
+    let pro = [];
+    let i = 0
+    let str = about.split(" ");
+    while(i < str.length ){
+       pro.push(str[i])
+       i++
+    }
+    return pro.length <= 90 ?  pro.join(' ') : pro.slice(0, 91).join(' ').concat(' ...')
+  };
 
 
     fisrt = ratingChanged(Number(newI.join()))
   //  set(nombre.filter((a)=> a.id === Number(search)).map(a => a.id ))
 
  
-   console.log( comment.length)
+   console.log( comment.length, increment)
 
   return (
    <div className='MainDesing'>
@@ -362,7 +380,7 @@ const Desing = ({loggedIn}) => {
         </div>
 
         
-        <div>
+        <div style={{marginBottom: '30px'}} >
           <div style={{display: 'flex', justifyContent: 'center', textAlign: 'center', marginTop: '5%', }}>
                    <h3 style={{color: 'white', fontSize: '20px', width: '200px', height: '40px', border: '2px solid', 
                    borderRadius: '10px', backgroundColor: '#070f3c', paddingTop: '6px', cursor: 'pointer' }} onClick={handelOpen } >Comments 
@@ -380,13 +398,14 @@ const Desing = ({loggedIn}) => {
                                    type='text' 
                                    onChange={handleInput}
                                     value={newComment.username }
-                                  style={{ width: '300px', border: '0.5px solid #BaBaBa', height: '40px', color: '#6c6c6c', marginBottom:'4px'}}
+                                   style={{ width: '300px', border: '0.5px solid #BaBaBa', height: '40px', color: '#6c6c6c', marginBottom:'4px'}}
+                                   placeholder='Username...'
                                     />
                             <input id='memberid' 
                                    type='text' 
                                    onChange={handleInput} 
                                     value={newComment.memberid }
-                                       style={{ width: '300px', border: '0.5px solid #BaBaBa', height: '40px', color: '#6c6c6c',marginBottom:'4px'}}
+                                       style={{ display:'none', width: '300px', border: '0.5px solid #BaBaBa', height: '40px', color: '#6c6c6c',marginBottom:'4px'}}
                                 
                                    />
                             <input id='userimage' 
@@ -394,6 +413,7 @@ const Desing = ({loggedIn}) => {
                                    onChange={handleInput} 
                                     value={newComment.userimage} 
                                     style={{ width: '300px', border: '0.5px solid #BaBaBa', height: '40px', color: '#6c6c6c',marginBottom:'4px'}}
+                                    placeholder='User image link url...'
                                    />
                             <textarea id='comment' 
                                       name='message' 
@@ -410,23 +430,25 @@ const Desing = ({loggedIn}) => {
                : null }
                  </div>
 
-         <div style={{display:'flex',flexDirection:'row', justifyContent: 'space-around',flexWrap: 'wrap', textAlign: 'center', margin: '10px', gap: '9px'}}>
+         <div style={{display:'flex',flexDirection:'row', justifyContent: 'space-around',flexWrap: 'wrap', textAlign: 'center', margin: '10px', gap: '10px'}}>
             {comment.slice(0, increment).map((a, i)=>{
                 return(
-                    <div style={{ height: '270px', width: '30%', border: 'none', borderRadius: '35px',
+                    <div style={{ minHeight: '270px', width: '30%', border: 'none', borderRadius: '35px',
                                 display: 'flex', flexDirection: 'column' , padding: '4px', cursor: 'pointer', backgroundColor:'#fff'}}>
                         <div style={{margin: '5px', fontSize: '15px'}}>{a.username}</div>
                         <div style={{padding: '3px', display: 'flex',  flexDirection: 'column', justifyContent: 'center', alignItems:'center', flexWrap: 'wrap' }}>
                             <img src={a.userimage ? a.userimage : 'https://d11a6trkgmumsb.cloudfront.net/original/3X/d/8/d8b5d0a738295345ebd8934b859fa1fca1c8c6ad.jpeg'} alt ='' style={{ height: '90px', width: '90px', borderRadius: '10px', backgroundPosition: 'center',
   backgroundSize: '100% 100%'}} />
-                            <div style={{display:'flex', textAlign: 'justify', marginTop: '8px', fontSize: '12.3px'}}>{a.comment}</div>
-                            <div style={{fontSize: '13px'}}>{a.date}</div>
+                          <div style={{display:'flex', textAlign: 'justify', marginTop: '8px', fontSize: '12.7px', }} onClick={handelOpen2 }>{ open2 ? a.comment : aboutLength(a.comment)}</div> 
+                            <div style={{fontSize: '13px',  marginTop: '5px'}}>{a.date}</div>
                         </div>
                     </div>
                 )
             })}
           </div>
-          <div onClick={((e)=> setIncrement(increment+3))} style={{cursor: 'pointer', display:'flex', justifyContent: 'center', textAlign:'center', padding: '10px',}}> {increment >= comment.length ? 'No more reviews' : 'See more...'}</div>
+        {increment < comment.length ? <div onClick={((e)=> setIncrement(increment+3))} 
+          className='loadComents'
+         >Load More...</div> : null }
     </div>  
       
         {/* <div className='mid'>

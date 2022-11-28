@@ -46,7 +46,7 @@ const MemberUpDate = () => {
     position: '',
     bats: '',
     throws: '',
-    stats: '',
+    stats: `${id}`,
     about: '',
  })
 
@@ -122,7 +122,7 @@ const MemberUpDate = () => {
             }
           }
 
- console.log(currentAge(age))
+ console.log(currentAge(age), newMember.stats)
  
   //  useEffect(() => {
   //   fetch(`http://localhost:9000/groups/${id}`)
@@ -177,7 +177,7 @@ const MemberUpDate = () => {
                                 <input id='position' type="text" onChange={handleInput} placeholder="Position..." className='inputT'></input>
                                 <input id='bats' type="text" onChange={handleInput}  placeholder="Bats..." className='inputT'></input>
                                 <input id='throws' type="text" onChange={handleInput}  placeholder="Throws..." className='inputT'></input>
-                                <input id='stats' type="text" onChange={handleInput}  placeholder={'Stats id = ' + id} className='inputT'></input>
+                                <input id='stats' type="text" onChange={handleInput}  placeholder={'Stats id = ' + id} className='inputT' style={{display:'none'}}></input>
                                 <input id='imag2' type="text" onChange={handleInput}  placeholder="Background..." className='inputT' ></input>
                                 <input id='about' type="text" onChange={handleInput}  placeholder="About..." className='inputTAbout'></input>
                             </div>

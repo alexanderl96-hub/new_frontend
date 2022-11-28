@@ -16,7 +16,7 @@ const NewMember = () => {
    
     const [newMember,setMember] = useState({
        name: '',
-       team_id: '',
+       team_id: `${id}`,
        nickname: '',
        imag: '',
        imag2: '',
@@ -38,7 +38,7 @@ const NewMember = () => {
        position: '',
        bats: '',
        throws: '',
-       stats: '',
+       stats: `${id}`,
        about: '',
     })
    
@@ -61,7 +61,7 @@ const NewMember = () => {
         axios.post(`https://my-baseball-teams.adaptable.app/groups`, newMember).then((res)=>{
             setMember({
             name: '',
-            team_id: '',
+            team_id: `${id}`,
             nickname: '',
             imag: '',
             born: '',
@@ -82,7 +82,7 @@ const NewMember = () => {
             position: '',
             bats: '',
             throws: '',
-            stats: '',
+            stats: `${id}`,
             about: '',
             imag2: '',
           })
@@ -207,7 +207,7 @@ console.log(newMember )
                      <form onSubmit={handleSubmit} className='newMember_AboutGrid'>
                               <div className='innerNew'>
                                 <input id='name' type="text" onChange={handleInput} value={newMember.name}  placeholder='Name...' className='inputNew' ></input>
-                                <input id='team_id' type="text" onChange={handleInput} value={newMember.team_id} placeholder={'team_id = ' +id} className='inputNew' ></input>
+                                <input id='team_id' type="text" onChange={handleInput} value={newMember.team_id} placeholder={'team_id = ' +id} className='inputNew' style={{display:'none'}} ></input>
                                 <input id='nickname'type="text" onChange={handleInput} value={newMember.nickname} placeholder="Nickname..." className='inputNew' ></input>
                                 <input id='imag' type="text" onChange={handleInput}  value={newMember.imag} placeholder="Url..." className='inputNew' ></input>
                                 <input id='born' type="text" onChange={handleInput} value={newMember.born} placeholder="Months day, year" className='inputNew' ></input>
@@ -233,7 +233,7 @@ console.log(newMember )
                                 <input id='position' type="text" onChange={handleInput} value={newMember.position} placeholder="Position..." className='inputNew'></input>
                                 <input id='bats' type="text" onChange={handleInput} value={newMember.bats} placeholder="Bats..." className='inputNew'></input>
                                 <input id='throws' type="text" onChange={handleInput} value={newMember.throws} placeholder="Throws..." className='inputNew'></input>
-                                <input id='stats' type="text" onChange={handleInput} value={newMember.stats} placeholder={'Stats id = ' + id} className='inputNew'></input>
+                                <input id='stats' type="text" onChange={handleInput} value={newMember.stats} placeholder={'Stats id = ' + id} className='inputNew' style={{display:'none'}}></input>
                                 <input id='imag2' type="text" onChange={handleInput} value={newMember.imag2} placeholder="Background..." className='inputNew' ></input>
                                 <input id='about' type="text" onChange={handleInput} value={newMember.about} placeholder="About..." className='inputNewAbout'></input>
                             </div>
