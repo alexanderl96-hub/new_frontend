@@ -72,7 +72,7 @@ const Desing = ({loggedIn}) => {
           username: '',
           userImage: '',
           comment: '',
-          memberid: '', 
+          memberid: `${teamId}`, 
           memberId: '',
       })
       navigate(`/teams/allmembers/${teamId}`);
@@ -305,7 +305,7 @@ const Desing = ({loggedIn}) => {
                                <p><span>Position:</span> {a.position}</p>
                                <p><span>Salary:</span> {a.salary}</p>
                                <p><span>About: </span>{a.about}  <Link to={`/teams/groups/${search}`}  className='changeMore'> More..→</Link></p>
-                               <p><span>ID:</span> {a.id}</p>
+                               {/* <p><span>ID:</span> {a.id}</p> */}
                              </div>
                            <div className='innerSectionStart'>
                            <ReactStars 
@@ -339,7 +339,7 @@ const Desing = ({loggedIn}) => {
                                <p><span>Position:</span> {a.position}</p>
                                <p><span>Salary:</span> {a.salary}</p>
                                <p><span>About: </span>{a.about}  <Link to={`/teams/groups/${a.id}`} className='changeMore'> More..→</Link></p>
-                               <p><span>ID:</span> {a.id}</p>
+                               {/* <p><span>ID:</span> {a.id}</p> */}
                              </div>
                            <div className='innerSectionStart'>
                            <ReactStars 
@@ -413,14 +413,14 @@ const Desing = ({loggedIn}) => {
          <div style={{display:'flex',flexDirection:'row', justifyContent: 'space-around',flexWrap: 'wrap', textAlign: 'center', margin: '10px', gap: '9px'}}>
             {comment.slice(0, increment).map((a, i)=>{
                 return(
-                    <div style={{ height: '265px', width: '30%', border: '3px solid black', borderRadius: '30px',
+                    <div style={{ height: '270px', width: '30%', border: 'none', borderRadius: '35px',
                                 display: 'flex', flexDirection: 'column' , padding: '4px', cursor: 'pointer', backgroundColor:'#fff'}}>
                         <div style={{margin: '5px', fontSize: '15px'}}>{a.username}</div>
                         <div style={{padding: '3px', display: 'flex',  flexDirection: 'column', justifyContent: 'center', alignItems:'center', flexWrap: 'wrap' }}>
-                            <img src={a.userimage} alt ='' style={{ height: '100px', width: '90px', borderRadius: '10px', backgroundImage: `url(https://d11a6trkgmumsb.cloudfront.net/original/3X/d/8/d8b5d0a738295345ebd8934b859fa1fca1c8c6ad.jpeg)`, backgroundPosition: 'center',
+                            <img src={a.userimage ? a.userimage : 'https://d11a6trkgmumsb.cloudfront.net/original/3X/d/8/d8b5d0a738295345ebd8934b859fa1fca1c8c6ad.jpeg'} alt ='' style={{ height: '90px', width: '90px', borderRadius: '10px', backgroundPosition: 'center',
   backgroundSize: '100% 100%'}} />
-                            <div style={{display:'flex', textAlign: 'justify', marginTop: '8px', fontSize: '13.3px'}}>{a.comment}</div>
-                            <div style={{fontSize: '14px'}}>{a.date}</div>
+                            <div style={{display:'flex', textAlign: 'justify', marginTop: '8px', fontSize: '12.3px'}}>{a.comment}</div>
+                            <div style={{fontSize: '13px'}}>{a.date}</div>
                         </div>
                     </div>
                 )

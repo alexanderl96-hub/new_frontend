@@ -202,8 +202,10 @@ console.log(ckeckAdm)
                      {loggedIn && <Link to={`/teams/allmembers/${group}`} onClick={handleDelete}  className="divEdit2" ><FaRecycle /></Link>  } 
                </div>
                <img src={memberImg} alt='1'  />
-               <h2>{memberName} {memberNumber ? `# ${memberNumber}`: ''}</h2>
-               <h3>{memberTeam} | {memberPosition} | Age: {memberAge}</h3>
+               <div className='minumunDiv'>
+                    <h2>{memberName} {memberNumber ? `# ${memberNumber}`: ''}</h2>
+                    <h3>{memberTeam} | {memberPosition} | Age: {memberAge}</h3>
+               </div>
           </div>
          
           <div className='divMedium'>

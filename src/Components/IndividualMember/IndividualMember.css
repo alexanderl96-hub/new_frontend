@@ -13,8 +13,8 @@
     text-align: center; 
     margin-left: 180px;
     margin-right:180px;
-    object-fit: cover;
-    min-height: 500px;
+    /* object-fit: cover; */
+    min-height: 550px;
     /* background-image: url('https://images2.minutemediacdn.com/image/fetch/w_1046,h_485,c_fill,g_auto,f_auto/https%3A%2F%2Fnolanwritin.com%2Fwp-content%2Fuploads%2Fimagn-images%2F2017%2F07%2F17949891-850x560.jpeg'); */
 }
 .divTop-ImgBackground{
@@ -24,7 +24,6 @@
 
 .divTop-inner{
     color: white;
-    /* background: linear-gradient(#070f3c, #20194e); */
     background-color: black;
     font-family: cursive;
     font-size: 30px; 
@@ -62,38 +61,18 @@
     margin-left: 91%;
     object-fit: cover;
 }
-.divTop > h2{
-    margin-top: 100px;
-    color:White;
-    width: 400px;
-    margin-right: 580px;
-    margin-left: 20px;
-    border: 3px;
+.divTop > .minumunDiv{
+    border: 3px solid white;
     border-style: solid;
-    border-bottom-color: transparent;
-    border-left-color: white;
-    border-right-color: white;
-    border-top-color: white;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    background: #2d2d2d90;
-}
-.divTop > h3{
+    border-radius: 15px;
+    width: 33%;
+    background: #2d2d2da7;
     color:White;
-    width: 400px;
-    margin-top: -20px;
-    margin-right: 660px;
-    margin-left: 20px;
-    border: 3px;
-    border-style: solid;
-    border-bottom-color: white;
-    border-left-color: white;
-    border-right-color: white;
-    border-top-color: transparent;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    background: #2d2d2d90;
+    margin-top: 9%;
+    padding: 1px;
+    margin-left: 4%;
 }
+
 .divMedium{
     margin-left: 180px;
     margin-right:180px;

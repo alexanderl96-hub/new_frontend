@@ -50,6 +50,9 @@ const LoginAccountForm = ({setOpenLoginModal, setLoggedIn,}) => {
             // save token to local storage
             localStorage.setItem('accessToken', data.accessToken);
 
+               // save token to cookies
+            //    document.cookie = 'accessToken=' + data.accessToken
+
               // set loggedin to true
             setLoggedIn(true);
             

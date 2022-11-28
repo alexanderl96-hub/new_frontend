@@ -1,4 +1,4 @@
-import React, { useState  } from 'react'
+import React, { useState, useEffect} from 'react'
 import './Navbar.css'
 import { FaHome, FaUser} from 'react-icons/fa';
 import { NavLink , Link} from 'react-router-dom'
@@ -9,6 +9,7 @@ function Navbar({setOpenLoginModal, loggedIn, setLoggedIn}) {
   const [menuIdActive, setMenuIdActive] = useState('')
   const [sideNavar, setSideNavar]= useState('sideNavar')
   const [checkUser, setCheckUser]= useState(loggedIn === true ? true: false)
+  const [userImageIn, setUserImageIn]= useState([])
  console.log(checkUser, 'nsav')
 
   const logOut = ()=>{
@@ -28,6 +29,18 @@ function Navbar({setOpenLoginModal, loggedIn, setLoggedIn}) {
     setOpenLoginModal(true)
   }
   
+useEffect(()=>{
+  fetch('http://localhost:9000/users')
+  .then(res => res.json())
+  .then(data =>{
+    let found = data.users.filter((a)=> a.username === 'alexander8778')
+     setUserImageIn(found.map(a => a.image))
+   
+   
+})
+},[])
+
+
   return (
     <div className="navbar">
           <div className="nav" >
@@ -63,7 +76,9 @@ function Navbar({setOpenLoginModal, loggedIn, setLoggedIn}) {
            {!loggedIn && <button  className='navAddgroup' onClick={(e)=> setOpenLoginModal(true)}  style={{color: 'black', cursor: 'pointer', marginLeft: '-15px'}}>Log in</button> }
             {/* {!loggedIn  <button  style={{color: 'black'}}>Log in</button>} */}
             <div className='navlogIn' style={{marginTop:'-1px'}}>
-              <FaUser  style={{ border:'2px solid white', borderRadius: '50px', fontSize: '25px', padding: '1px', marginRight: '70px'}}/>
+           {!loggedIn ?  <FaUser  style={{ border:'2px solid white', borderRadius: '50px', fontSize: '25px', padding: '1px', marginRight: '70px'}}/> :
+               <img src={userImageIn ? userImageIn : 'https://d11a6trkgmumsb.cloudfront.net/original/3X/d/8/d8b5d0a738295345ebd8934b859fa1fca1c8c6ad.jpeg'} alt='' 
+                style={{ border:'1px solid white', borderRadius: '50px',  marginRight: '70px', width: '27px'}} /> }
               {loggedIn && <p style={{color: 'white', marginTop:'-4px', marginLeft: '-20%'}}>Welcome</p>}
               </div> 
             {/* <Link to={'/teams/new'}>
