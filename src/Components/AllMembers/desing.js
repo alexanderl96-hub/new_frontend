@@ -11,7 +11,7 @@ import axios from 'axios'
 
 
 
-const Desing = ({loggedIn}) => {
+const Desing = ({loggedIn, user}) => {
    const navigate = useNavigate();
     const [ newI, setNewI]= useState([])
     const [ newtest, setNewtest]= useState([])
@@ -251,7 +251,7 @@ const Desing = ({loggedIn}) => {
   //  set(nombre.filter((a)=> a.id === Number(search)).map(a => a.id ))
 
  
-   console.log( comment.length, increment)
+   console.log( newtest.length)
 
   return (
    <div className='MainDesing'>
@@ -297,8 +297,8 @@ const Desing = ({loggedIn}) => {
         
        
         <div className='desingIcon'>
-   {loggedIn && <Link to={`/teams/newMember/${teamId}`} id={teamId} className='newadded'> <FaUserPlus /></Link> }
-      {loggedIn && <Link to={`/`} id={teamId} className='trash' onClick={handleDelete}> <FaTrash /></Link>}
+   {loggedIn && user === 'alexander87' && <Link to={`/teams/newMember/${teamId}`} id={teamId} className='newadded'> <FaUserPlus /></Link> }
+      {loggedIn && user === 'alexander87' && <Link to={`/`} id={teamId} className='trash' onClick={handleDelete}> <FaTrash /></Link>}
         </div>
 
         <div className="section2"> 

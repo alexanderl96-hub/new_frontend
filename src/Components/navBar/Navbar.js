@@ -5,16 +5,15 @@ import { NavLink , Link} from 'react-router-dom'
 import imageLogo from '../../image/FullLogoTransparent.png'
 // import frontLogo from '../../image/FullLogo.png'
 
-function Navbar({setOpenLoginModal, loggedIn, setLoggedIn}) {
+function Navbar({setOpenLoginModal, loggedIn, setLoggedIn, user, userImage}) {
   const [menuIdActive, setMenuIdActive] = useState('')
   const [sideNavar, setSideNavar]= useState('sideNavar')
-  const [userImageIn, setUserImageIn]= useState([])
   const [goodbye, setGoodBye] = useState('')
 
 
 
   const logOut = ()=>{
-     document.cookie = "accessToken=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+   document.cookie = "accessToken=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
     setLoggedIn(false)
     setGoodBye('GoodBye!')
   }
@@ -39,16 +38,6 @@ useEffect(()=>{
     setOpenLoginModal(true)
   }
   
-useEffect(()=>{
-  fetch('http://localhost:9000/users')
-  .then(res => res.json())
-  .then(data =>{
-    let found = data.users.filter((a)=> a.username === 'alexander87')
-     setUserImageIn(found.map(a => a.image))
-   
-   
-})
-},[])
 
 
   return (
@@ -86,10 +75,10 @@ useEffect(()=>{
            {!loggedIn && <button  className='navAddgroup' onClick={(e)=> setOpenLoginModal(true)}  style={{color: 'black', cursor: 'pointer', marginLeft: '-15px'}}>Log in</button> }
             {/* {!loggedIn  <button  style={{color: 'black'}}>Log in</button>} */}
             <div className='navlogIn' style={{marginTop:'-1px'}}>
-           {!loggedIn ?  <FaUser  style={{ border:'2px solid white', borderRadius: '50px', fontSize: '25px', padding: '1px', marginRight: '70px'}}/> :
-               <img src={userImageIn ? 'https://d11a6trkgmumsb.cloudfront.net/original/3X/d/8/d8b5d0a738295345ebd8934b859fa1fca1c8c6ad.jpeg' : userImageIn } alt='' 
-                style={{ border:'1px solid white', borderRadius: '50px',  marginRight: '70px', width: '27px'}} /> }
-               <p style={{color: 'white', marginTop:'-4px', marginLeft: '-20%'}}>{loggedIn ?  'Welcome' : goodbye  }</p>
+           {!loggedIn ?  <FaUser  style={{ border:'1px solid white', borderRadius: '50px', fontSize: '25px', padding: '1px', marginRight: '70px'}}/> :
+               <img src={userImage !== '' ? userImage : 'https://d11a6trkgmumsb.cloudfront.net/original/3X/d/8/d8b5d0a738295345ebd8934b859fa1fca1c8c6ad.jpeg'} alt='' 
+                style={{ border:'1px solid white', borderRadius: '50px', height: '27px', marginRight: '70px', width: '27px'}} /> }
+               <p style={{color: 'white', marginTop:'-4px', marginLeft: '-11%'}}>{loggedIn ?  user : goodbye  }</p>
               </div> 
             {/* <Link to={'/teams/new'}>
                 <div className='navlogIn'>LOG <FaUser /></div>  

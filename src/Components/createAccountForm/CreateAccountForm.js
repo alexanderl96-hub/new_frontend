@@ -5,7 +5,7 @@ import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
 
 
-const CreateAccountForm = ({setOpenLoginModal, setLoggedIn, setLoginMessage}) => {
+const CreateAccountForm = ({setOpenLoginModal, setLoggedIn, setLoginMessage, setUser,  setUserImage}) => {
 
     const [username, setUsername] = useState('');
     const [usernameError, setUsernameError] = useState(false);
@@ -73,7 +73,8 @@ const CreateAccountForm = ({setOpenLoginModal, setLoggedIn, setLoginMessage}) =>
                 
                 // save access token as a cookie
                 document.cookie = "accessToken=" + data.accessToken;
-                
+                setUser(data.user.username)
+                setUserImage(data.user.image)
                 setLoggedIn(true);
             }
           

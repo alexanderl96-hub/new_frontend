@@ -32,6 +32,8 @@ import Footer from '../src/Components/Footer/Footer'
 function App() {
   const [openLoginModal, setOpenLoginModal] = useState(false);
   const [loggedIn, setLoggedIn] = useState( getCookie('accessToken') ? true : false);
+  const [user, setUser] = useState('Welcome');
+  const [userImage, setUserImage]= useState('')
   // const [loginMessage, setLoginMessage] = useState('');
 
   // useEffect(() => {
@@ -45,10 +47,14 @@ function App() {
   return (
       <Router >
            <div className="App">
-            <NavBar setOpenLoginModal={setOpenLoginModal} loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
+            <NavBar setOpenLoginModal={setOpenLoginModal} loggedIn={loggedIn} setLoggedIn={setLoggedIn} 
+                    user={user}  userImage={userImage} />
+
             <LoginModal  openLoginModal={openLoginModal} 
                          setOpenLoginModal={setOpenLoginModal} 
                          setLoggedIn={setLoggedIn} 
+                         setUser={setUser}
+                         setUserImage={ setUserImage}
                           // setLoginMessage={setLoginMessage}
                         />
                          {/* {loginMessage && 
@@ -58,7 +64,7 @@ function App() {
         } */}
               <Routes>
                   <Route exact path="/" element={<Teams/>} />
-                  <Route  path="/teams/groups/:id" element={<IndividualMember/>} />
+                  <Route  path="/teams/groups/:id" element={<IndividualMember loggedIn={loggedIn}  user={user}/>} />
                   <Route  path="/teams/updateMember/:id" element={<UpDateMember/>}/>
                   <Route  path="/teams/new" element={<NewTeam/>}/>
                   <Route  path="/teams/newMember/:id" element={<NewMember/>}/>
@@ -68,8 +74,8 @@ function App() {
                   <Route  path="/teams/About" element={<About/>} />
                   <Route  path="/teams/News" element={<News/>}/>
                   <Route  path="/teams/Text" element={<Text/>}/>
-                  <Route  path="/teams/groups/:id/addStats" element={<AddStats/>} loggedIn={loggedIn} />
-                  <Route  path="/teams/allmembers/:id" element={<AllMembers />} /> 
+                  <Route  path="/teams/groups/:id/addStats" element={<AddStats/>} />
+                  <Route  path="/teams/allmembers/:id" element={<AllMembers loggedIn={loggedIn}  user={user} />  } /> 
                   <Route  path="/teams/CurrentHistagram/:id" element={<CurrentHistagram/>}/>      
               </Routes>
               <Footer />

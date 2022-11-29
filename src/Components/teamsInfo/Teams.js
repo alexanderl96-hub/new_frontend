@@ -6,7 +6,6 @@ import SlideShow from '../SlideShow/SlideShow'
 import Videos from '../AddsVideos/Videos'
 import Videos2 from '../AddsVideos/Videos2'
 import Videos3 from '../AddsVideos/Videos3'
-import AccountList from '../accountList/AccountList'
 // import Weather from '../Weather'
 // import  Weather  from '../Weather'
 
@@ -50,7 +49,6 @@ const Teams = ({loggedIn, openLoginModal}) => {
             <SlideShow />
            {/* {Weather} */}
         </div>
-        <AccountList />
          <h1 className="pageTitle">USA Teams</h1>
          {!countInTimeout ? 
          <div className='Container'>

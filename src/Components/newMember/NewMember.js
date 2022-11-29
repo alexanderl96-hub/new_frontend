@@ -13,10 +13,10 @@ const NewMember = () => {
     const month = date.getMonth()+1
     const hoy = date.getDate()
     const [classT, setClassT] = useState('innerNew3')
-   
+   console.log(typeof id)
     const [newMember,setMember] = useState({
        name: '',
-       team_id: `${id}`,
+       team_id: id,
        nickname: '',
        imag: '',
        imag2: '',
@@ -61,7 +61,7 @@ const NewMember = () => {
         axios.post(`https://my-baseball-teams.adaptable.app/groups`, newMember).then((res)=>{
             setMember({
             name: '',
-            team_id: `${id}`,
+            team_id: id,
             nickname: '',
             imag: '',
             born: '',
@@ -207,7 +207,7 @@ console.log(newMember )
                      <form onSubmit={handleSubmit} className='newMember_AboutGrid'>
                               <div className='innerNew'>
                                 <input id='name' type="text" onChange={handleInput} value={newMember.name}  placeholder='Name...' className='inputNew' ></input>
-                                <input id='team_id' type="text" onChange={handleInput} value={newMember.team_id} placeholder={'team_id = ' +id} className='inputNew' style={{display:'none'}} ></input>
+                                <input id='team_id' type="number" onChange={handleInput} value={newMember.team_id} placeholder={'team_id = ' +id} className='inputNew' style={{display:'none'}} ></input>
                                 <input id='nickname'type="text" onChange={handleInput} value={newMember.nickname} placeholder="Nickname..." className='inputNew' ></input>
                                 <input id='imag' type="text" onChange={handleInput}  value={newMember.imag} placeholder="Url..." className='inputNew' ></input>
                                 <input id='born' type="text" onChange={handleInput} value={newMember.born} placeholder="Months day, year" className='inputNew' ></input>

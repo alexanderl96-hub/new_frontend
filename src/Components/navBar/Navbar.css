@@ -47,6 +47,7 @@ h1 {
   color: white;
   margin-top: 2px;
   width: 90px;
+  justify-content: center;
 }
 .nav:hover {
   border-radius: 10px;

@@ -6,7 +6,7 @@ import axios from 'axios'
 
 
 
-const IndividualMember = ({loggedIn, ckeckAdm}) => {
+const IndividualMember = ({loggedIn, user}) => {
    const [member, setMember] = useState([])
    const [memberImg, setMemberImg] = useState([])
    const [memberImg2, setMemberImg2] = useState([])
@@ -187,7 +187,7 @@ function convertInKG(str){
 //     })
 //   },[memberId])
 
-console.log(ckeckAdm)
+
 
   return (
       <div  className='MainMember'>
@@ -197,9 +197,9 @@ console.log(ckeckAdm)
   backgroundSize: '100% 100%',
   backgroundRepeat: 'no-repeat'}}  >
                <div className='divTop-inner'>Member 
-                     {!ckeckAdm && <Link to={`/teams/updateMember/${memberId}`} className='divEdit3'> <FaUserEdit /></Link>}
-                     {loggedIn && <Link to={`/teams/groups/${memberId}/addStats`} className='divEdit'> <FaPlus /> </Link> }
-                     {loggedIn && <Link to={`/teams/allmembers/${group}`} onClick={handleDelete}  className="divEdit2" ><FaRecycle /></Link>  } 
+                     {loggedIn && user === 'alexander87' && <Link to={`/teams/updateMember/${memberId}`} className='divEdit3'> <FaUserEdit /></Link>}
+                     {loggedIn && user === 'alexander87' && <Link to={`/teams/groups/${memberId}/addStats`} className='divEdit'> <FaPlus /> </Link> }
+                     {loggedIn && user === 'alexander87' && <Link to={`/teams/allmembers/${group}`} onClick={handleDelete}  className="divEdit2" ><FaRecycle /></Link>  } 
                </div>
                <img src={memberImg} alt='1'  />
                <div className='minumunDiv'>
