@@ -12,7 +12,7 @@ import Videos3 from '../AddsVideos/Videos3'
 
 
 
-const Teams = ({checkUser}) => {
+const Teams = ({loggedIn, openLoginModal}) => {
     const [teams, setTeams] = useState([])
     const [count, setCount] = useState(<div className='LoadingFront'><LoadingHome/></div>);
     const [countInTimeout, setCountInTimeout] = useState([]);
@@ -55,7 +55,7 @@ const Teams = ({checkUser}) => {
          <div className='Container'>
          {teams.map((team, index)=>{
              return (
-                 <IndividualTeam team={team} key={index} id={team.id} checkUser={checkUser}/> 
+                 <IndividualTeam team={team} key={index} id={team.id} /> 
                
              )
          })}

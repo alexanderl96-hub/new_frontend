@@ -7,8 +7,8 @@ import {
 import './App.css';
 import { getCookie } from '../src/utils/cookieUtils'
 
-import Alert from '@mui/material/Alert';
-import CheckIcon from '@mui/icons-material/Check';
+// import Alert from '@mui/material/Alert';
+// import CheckIcon from '@mui/icons-material/Check';
 
 import Teams from '../src/Components/teamsInfo/Teams'
 import IndividualMember from './Components/IndividualMember/IndividualMember'
@@ -32,17 +32,15 @@ import Footer from '../src/Components/Footer/Footer'
 function App() {
   const [openLoginModal, setOpenLoginModal] = useState(false);
   const [loggedIn, setLoggedIn] = useState( getCookie('accessToken') ? true : false);
-  const [loginMessage, setLoginMessage] = useState('');
+  // const [loginMessage, setLoginMessage] = useState('');
 
-  useEffect(() => {
+  // useEffect(() => {
 
-    setTimeout(function() {
-      setLoginMessage('')
-    }, 2000)
+  //   setTimeout(function() {
+  //     setLoginMessage('')
+  //   }, 2000)
 
-  }, [loginMessage])
-
-
+  // }, [loginMessage])
 
   return (
       <Router >
@@ -51,13 +49,13 @@ function App() {
             <LoginModal  openLoginModal={openLoginModal} 
                          setOpenLoginModal={setOpenLoginModal} 
                          setLoggedIn={setLoggedIn} 
-                          setLoginMessage={setLoginMessage}
+                          // setLoginMessage={setLoginMessage}
                         />
-                         {loginMessage && 
+                         {/* {loginMessage && 
           <Alert icon={<CheckIcon fontSize="inherit" />} severity="success">
             {loginMessage}
           </Alert>
-        }
+        } */}
               <Routes>
                   <Route exact path="/" element={<Teams/>} />
                   <Route  path="/teams/groups/:id" element={<IndividualMember/>} />

@@ -6,12 +6,13 @@ import Box from '@mui/material/Box';
 
 // import Button from '../button/Button';
 
-const LoginAccountForm = ({setOpenLoginModal, setLoggedIn, setLoginMessage}) => {
+const LoginAccountForm = ({setOpenLoginModal, setLoggedIn}) => {
 
     const [username, setUsername] = useState('');
     const [usernameError, setUsernameError] = useState(false);
     const [password, setPassword] = useState('');
     const [formMessage, setFormMessage] = useState('');
+
 
 
     // on unfocus validate username
@@ -56,10 +57,11 @@ const LoginAccountForm = ({setOpenLoginModal, setLoggedIn, setLoginMessage}) => 
                 
                 // show toast that user was successfully logged in
                 // TODO 
-                
+               
                 // save token to cookies
                 document.cookie = 'accessToken=' + data.accessToken
-    
+
+              
                 // set loggedin to true 
                 setLoggedIn(true);
             }  
@@ -68,7 +70,6 @@ const LoginAccountForm = ({setOpenLoginModal, setLoggedIn, setLoginMessage}) => 
             console.log(error, 'error catch by the server');
         })
     }
-    // console.log(username, password, )
 
     return (
         <div>

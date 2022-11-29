@@ -8,15 +8,25 @@ import imageLogo from '../../image/FullLogoTransparent.png'
 function Navbar({setOpenLoginModal, loggedIn, setLoggedIn}) {
   const [menuIdActive, setMenuIdActive] = useState('')
   const [sideNavar, setSideNavar]= useState('sideNavar')
-  const [checkUser, setCheckUser]= useState(loggedIn === true ? true: false)
   const [userImageIn, setUserImageIn]= useState([])
- console.log(checkUser, 'nsav')
+  const [goodbye, setGoodBye] = useState('')
+
+
 
   const logOut = ()=>{
      document.cookie = "accessToken=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
     setLoggedIn(false)
-   
+    setGoodBye('GoodBye!')
   }
+
+useEffect(()=>{
+  if(!loggedIn){
+    setTimeout(() => {
+      setGoodBye('')
+    }, 1500);
+  }
+})
+  
 
   function changeNav(){
     if(sideNavar === 'sideNavar'){
@@ -33,7 +43,7 @@ useEffect(()=>{
   fetch('http://localhost:9000/users')
   .then(res => res.json())
   .then(data =>{
-    let found = data.users.filter((a)=> a.username === 'alexander8778')
+    let found = data.users.filter((a)=> a.username === 'alexander87')
      setUserImageIn(found.map(a => a.image))
    
    
@@ -77,9 +87,9 @@ useEffect(()=>{
             {/* {!loggedIn  <button  style={{color: 'black'}}>Log in</button>} */}
             <div className='navlogIn' style={{marginTop:'-1px'}}>
            {!loggedIn ?  <FaUser  style={{ border:'2px solid white', borderRadius: '50px', fontSize: '25px', padding: '1px', marginRight: '70px'}}/> :
-               <img src={userImageIn ? userImageIn : 'https://d11a6trkgmumsb.cloudfront.net/original/3X/d/8/d8b5d0a738295345ebd8934b859fa1fca1c8c6ad.jpeg'} alt='' 
+               <img src={userImageIn ? 'https://d11a6trkgmumsb.cloudfront.net/original/3X/d/8/d8b5d0a738295345ebd8934b859fa1fca1c8c6ad.jpeg' : userImageIn } alt='' 
                 style={{ border:'1px solid white', borderRadius: '50px',  marginRight: '70px', width: '27px'}} /> }
-              {loggedIn && <p style={{color: 'white', marginTop:'-4px', marginLeft: '-20%'}}>Welcome</p>}
+               <p style={{color: 'white', marginTop:'-4px', marginLeft: '-20%'}}>{loggedIn ?  'Welcome' : goodbye  }</p>
               </div> 
             {/* <Link to={'/teams/new'}>
                 <div className='navlogIn'>LOG <FaUser /></div>  
