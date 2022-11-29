@@ -23,7 +23,7 @@ useEffect(()=>{
   if(!loggedIn){
     setTimeout(() => {
       setGoodBye('')
-    }, 1500);
+    }, 2000);
   }
 })
   
