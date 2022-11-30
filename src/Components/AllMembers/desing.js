@@ -11,7 +11,7 @@ import axios from 'axios'
 
 
 
-const Desing = ({loggedIn, user}) => {
+const Desing = ({loggedIn, user, userImage}) => {
    const navigate = useNavigate();
     const [ newI, setNewI]= useState([])
     const [ newtest, setNewtest]= useState([])
@@ -40,10 +40,10 @@ const Desing = ({loggedIn, user}) => {
 
     // let check = Number(nombre.filter((a)=> a.id === Number(search)).map(a => a.id).join(''))
     const [newComment, setNewComment] = useState({
-        username: '',
-        userimage: '',
+        username: user,
+        userimage: userImage,
         comment: '',
-        memberid:`${teamId}`,
+        memberid: `${teamId}`,
         date: [month, hoy, year].join('/'),
     })
 
@@ -77,11 +77,11 @@ const Desing = ({loggedIn, user}) => {
     const addComment = (newComment) => {
        axios.post(`http://localhost:9000/comments`, newComment).then((res)=>{
       setNewComment({
-          username: '',
-          userImage: '',
+          username: user,
+          userImage: userImage,
           comment: '',
-          memberid: `${teamId}`, 
-          memberId: '',
+          memberid:  `${teamId}`, 
+          date: [month, hoy, year].join('/'),
       })
       navigate(`/teams/allmembers/${teamId}`);
        })
@@ -163,16 +163,7 @@ const Desing = ({loggedIn, user}) => {
 
        }else if (e.target.id === 'prev'){
          setHandel(0)
-        // value++
-      //   let check = (newtest.length / 7 + (handel-value) )/7
-      //   console.log(check)
-      //   if(((newtest.length - (handel * 7) ) - 7) > 0){
-      
-      //     let control =   (newtest.length - (handel * 7) ) - 7
-      //     // console.log(handel , control)
-      //       setHandel(control)
-          
-      //   }  setHandel(handel -  value)
+ 
        }
      }
 
@@ -183,8 +174,6 @@ const Desing = ({loggedIn, user}) => {
          .then(data =>{
            setCoachName(data)
           setNewtest(data = data.filter((a,b)=> a.team_id === Number(teamId)))
-          // setCommentId( data[0] )
-          //: Number(nombre.filter((a)=> a.id === Number(search)).map(a => a.id).join(''))
 
          })
        },[teamId])
@@ -248,10 +237,10 @@ const Desing = ({loggedIn, user}) => {
 
 
     fisrt = ratingChanged(Number(newI.join()))
-  //  set(nombre.filter((a)=> a.id === Number(search)).map(a => a.id ))
+
 
  
-   console.log( newtest.length)
+   console.log(newComment, commentId, 'check')
 
   return (
    <div className='MainDesing'>
@@ -277,11 +266,11 @@ const Desing = ({loggedIn, user}) => {
                        {handel > 0 ? <div id='prev' className='text' onClick={onHandleClick} >&#8249;</div> : null}
                   </div>
                   {/*  */}
-                    <div className='slider' style={{'--slider-Index': handel}}>
+                    <div className='slider' style={{'--slider-Index': handel}} onClick={()=> setCommentId(search)}>
                     {newtest.map((a,i)=>{
                         return(
                           < >
-                              <img src={a.imag} alt='' onClick={(e)=>setSearch(a.id) && setCommentId(a.id)} />
+                              <img src={a.imag} alt='' onClick={(e)=>setSearch(a.id) }  />
                               {/* <p>{a.name}</p> */}
                           </>
                         )                
@@ -323,7 +312,7 @@ const Desing = ({loggedIn, user}) => {
                                <p><span>Position:</span> {a.position}</p>
                                <p><span>Salary:</span> {a.salary}</p>
                                <p><span>About: </span>{a.about}  <Link to={`/teams/groups/${search}`}  className='changeMore'> More..→</Link></p>
-                               {/* <p><span>ID:</span> {a.id}</p> */}
+                               <p ><span>ID:</span> {a.id}</p>
                              </div>
                            <div className='innerSectionStart'>
                            <ReactStars 
@@ -398,9 +387,17 @@ const Desing = ({loggedIn, user}) => {
                                    type='text' 
                                    onChange={handleInput}
                                     value={newComment.username }
-                                   style={{ width: '300px', border: '0.5px solid #BaBaBa', height: '40px', color: '#6c6c6c', marginBottom:'4px'}}
+                                   style={{display:'none', width: '300px', border: '0.5px solid #BaBaBa', height: '40px', color: '#6c6c6c', marginBottom:'4px'}}
                                    placeholder='Username...'
                                     />
+                         {!loggedIn &&    <input id='username'
+                                   type='text' 
+                                   onChange={handleInput}
+                                    value={newComment.username }
+                                   style={{ width: '300px', border: '0.5px solid #BaBaBa', height: '40px', color: '#6c6c6c', marginBottom:'4px'}}
+                                   placeholder='Username...'
+                                    />}
+
                             <input id='memberid' 
                                    type='text' 
                                    onChange={handleInput} 
@@ -408,13 +405,21 @@ const Desing = ({loggedIn, user}) => {
                                        style={{ display:'none', width: '300px', border: '0.5px solid #BaBaBa', height: '40px', color: '#6c6c6c',marginBottom:'4px'}}
                                 
                                    />
+                       
                             <input id='userimage' 
                                    type='text' 
                                    onChange={handleInput} 
                                     value={newComment.userimage} 
-                                    style={{ width: '300px', border: '0.5px solid #BaBaBa', height: '40px', color: '#6c6c6c',marginBottom:'4px'}}
+                                    style={{ display:'none',width: '300px', border: '0.5px solid #BaBaBa', height: '40px', color: '#6c6c6c',marginBottom:'4px'}}
                                     placeholder='User image link url...'
                                    />
+                             {!loggedIn  && <input id='userimage' 
+                                   type='text' 
+                                   onChange={handleInput} 
+                                    value={newComment.userimage} 
+                                    style={{width: '300px', border: '0.5px solid #BaBaBa', height: '40px', color: '#6c6c6c',marginBottom:'4px'}}
+                                    placeholder='User image link url...'
+                                   />}
                             <textarea id='comment' 
                                       name='message' 
                                       onChange={handleInput} 

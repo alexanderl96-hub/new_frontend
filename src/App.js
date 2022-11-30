@@ -75,7 +75,7 @@ function App() {
                   <Route  path="/teams/News" element={<News/>}/>
                   <Route  path="/teams/Text" element={<Text/>}/>
                   <Route  path="/teams/groups/:id/addStats" element={<AddStats/>} />
-                  <Route  path="/teams/allmembers/:id" element={<AllMembers loggedIn={loggedIn}  user={user} />  } /> 
+                  <Route  path="/teams/allmembers/:id" element={<AllMembers loggedIn={loggedIn}  user={user} userImage={userImage} />  } /> 
                   <Route  path="/teams/CurrentHistagram/:id" element={<CurrentHistagram/>}/>      
               </Routes>
               <Footer />
