@@ -15,6 +15,8 @@ function Navbar({setOpenLoginModal, loggedIn, setLoggedIn, user, userImage}) {
   const logOut = ()=>{
    document.cookie = "accessToken=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
     setLoggedIn(false)
+    localStorage.removeItem('username')
+    localStorage.removeItem('userImage')
     setGoodBye('GoodBye!')
   }
 

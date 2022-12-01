@@ -59,6 +59,8 @@ const LoginAccountForm = ({setOpenLoginModal, setLoggedIn, setUser,  setUserImag
                 // TODO 
                
                 // save token to cookies
+               localStorage.setItem('username', data.user.username)
+               localStorage.setItem('userImage', data.user.image)
                 document.cookie = 'accessToken=' + data.accessToken
                 setUser(data.user.username )
                 setUserImage(data.user.image)

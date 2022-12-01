@@ -32,8 +32,8 @@ import Footer from '../src/Components/Footer/Footer'
 function App() {
   const [openLoginModal, setOpenLoginModal] = useState(false);
   const [loggedIn, setLoggedIn] = useState( getCookie('accessToken') ? true : false);
-  const [user, setUser] = useState('Welcome');
-  const [userImage, setUserImage]= useState('')
+  const [user, setUser] = useState(localStorage.getItem("username") || "Welcome");
+  const [userImage, setUserImage]= useState(localStorage.getItem("userImage") || "")
   // const [loginMessage, setLoginMessage] = useState('');
 
   // useEffect(() => {
