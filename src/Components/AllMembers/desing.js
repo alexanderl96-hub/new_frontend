@@ -240,7 +240,8 @@ const Desing = ({loggedIn, user, userImage}) => {
 
 
  
-   console.log(newComment, commentId, 'check')
+  //  console.log(newComment, commentId, 'check')
+   console.log(  document)
 
   return (
    <div className='MainDesing'>
