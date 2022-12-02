@@ -15,10 +15,17 @@
     margin-top: 13px; 
     display: flex;
 }
+.editTeam{
+    color: white;
+    cursor: pointer;
+    margin-left: 3%;
+    text-decoration: none; 
+    font-size: 25px;
+}
 .newadded{ 
     color: white;
     cursor: pointer;
-    margin-left: 90%;
+    margin-left: 80%;
     text-decoration: none; 
     font-size: 25px;
 }

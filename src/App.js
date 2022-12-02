@@ -27,6 +27,7 @@ import Text from '../src/Components/text/text.js'
 import LoginModal from '../src/Components/Login/LoginModal'
 import NavBar from '../src/Components/navBar/Navbar'
 import Footer from '../src/Components/Footer/Footer'
+import EditTeam from '../src/Components/EditTeam/EditTeam'
 
 
 function App() {
@@ -77,6 +78,7 @@ function App() {
                   <Route  path="/teams/groups/:id/addStats" element={<AddStats/>} />
                   <Route  path="/teams/allmembers/:id" element={<AllMembers loggedIn={loggedIn}  user={user} userImage={userImage} />  } /> 
                   <Route  path="/teams/CurrentHistagram/:id" element={<CurrentHistagram/>}/>      
+                  <Route  path="/teams/EditTeam/:id" element={<EditTeam/>}/>   
               </Routes>
               <Footer />
           </div>

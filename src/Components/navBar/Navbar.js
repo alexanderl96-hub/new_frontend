@@ -67,6 +67,9 @@ useEffect(()=>{
             <NavLink to={`/teams/News`} className='nav-inner' id='news' onClick={(e)=>setMenuIdActive(e.target.id)} >
                <div >NEWS</div>
            </NavLink>
+            {/* <Link to={'/teams/new'}>
+                <div className='navAddgroup'> ADD</div>
+            </Link> */}
             
          </div>
           <div className="nav2">        
