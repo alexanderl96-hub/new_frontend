@@ -20,6 +20,7 @@ const IndividualMember = ({loggedIn, user}) => {
    const [pitcherId, setPitcherID] = useState([])
    const [pitcherCareerId, setPitcherCareerID] = useState([])
    const [group, setGroup] =useState([])
+   const [toggleMenu, setToggleMenu] = useState(false);
   
 
   let params = useParams()
@@ -197,9 +198,24 @@ function convertInKG(str){
   backgroundSize: '100% 100%',
   backgroundRepeat: 'no-repeat'}}  >
                <div className='divTop-inner'>Member 
-                     {loggedIn && user === 'alexander87' && <Link to={`/teams/updateMember/${memberId}`} className='divEdit3'> <FaUserEdit /></Link>}
-                     {loggedIn && user === 'alexander87' && <Link to={`/teams/groups/${memberId}/addStats`} className='divEdit'> <FaPlus /> </Link> }
-                     {loggedIn && user === 'alexander87' && <Link to={`/teams/allmembers/${group}`} onClick={handleDelete}  className="divEdit2" ><FaRecycle /></Link>  } 
+               {loggedIn && user === 'alexander87' && <div text="More.." path=""  onMouseLeave={()=> setToggleMenu(false)}   style={{marginLeft: '60%'}}>
+                   <div  style={{ fontSize: '23px',color: 'white', listStyle: 'none',
+                   lineHeight: '53px', cursor: 'pointer', width:'110px', height: '50px'  }}onMouseEnter={()=> setToggleMenu(true)}   >{toggleMenu ? "" : " Options"}</div>
+                 {toggleMenu &&  <div className="submenu3" >
+                      {/* <div className="submenu__item" id="More..">More..</div> */}
+                     <Link to={`/teams/updateMember/${memberId}`} id={teamId} style={{ color:'black'}} onClick={()=> setToggleMenu(false)}>
+                      <div className="submenu3__item" id="More..">Update Member</div></Link>
+                      <Link to={`/teams/groups/${memberId}/addStats`} id={teamId} style={{ color:'black'}} onClick={()=> setToggleMenu(false)} >
+                          <div className="submenu3__item">Add Stats</div>
+                      </Link>
+                      <Link to={`/`} id={teamId} style={{ color:'black'}} onClick={()=> setToggleMenu(false)} >
+                          <div className="submenu3__item" onClick={handleDelete}>Delete Member</div>
+                      </Link>
+                      <Link to='/' style={{ color:'black'}} onClick={()=> setToggleMenu(false)}>
+                         <div className="submenu3__item">@Sport World</div>
+                      </Link>
+                  </div>}  </div>}
+                    
                </div>
                <img src={memberImg} alt='1'  />
                <div className='minumunDiv'>

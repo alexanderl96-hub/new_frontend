@@ -228,6 +228,51 @@
     }
   } 
 
+
+
+
+.submenu2{
+    float: left;
+    margin: 0 auto;
+    color: black;
+    border-radius: 8px;
+    width: 200px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    padding: 0 10px 10px;
+    position: absolute;
+    top: 273px;
+    left: 87.2%;
+    z-index: 100;
+    border: 1px solid black;
+    -webkit-filter: drop-shadow(0px 2px 4px rgba(130,130,130,1));
+    filter        : drop-shadow(0px 2px 4px rgba(130,130,130,1));
+    /* -ms-filter    : "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=2, Color='#444')";
+    filter        : "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=2, Color='#444')"; */
+  
+}
+.submenu2::before{
+  content: "";
+  position: relative;
+  left: 85px;
+  top: -40px;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid #fff;
+}
+.submenu2__item{
+      padding: 10px;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+}
+.submenu2__item:hover{
+  background-color: #070f3c;
+  color: white;
+}
+
   /*Nest Hub Max (max-width: 1280px; max-heigth: 800px;)*/
   @media only screen and (max-width: 1280px){
     .MainDesing{

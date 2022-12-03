@@ -28,6 +28,12 @@ import LoginModal from '../src/Components/Login/LoginModal'
 import NavBar from '../src/Components/navBar/Navbar'
 import Footer from '../src/Components/Footer/Footer'
 import EditTeam from '../src/Components/EditTeam/EditTeam'
+import Favorites from '../src/ComponentsPlayers/Favorites/Favorites'
+import Legend from '../src/ComponentsPlayers/Legend/Legend'
+import AllTimes from '../src/ComponentsPlayers/AllTimes/AllTimes'
+import Profile from '../src/ComponentProfile/Profile/Profile'
+
+// import { Favorite } from '@mui/icons-material';
 
 
 function App() {
@@ -79,6 +85,10 @@ function App() {
                   <Route  path="/teams/allmembers/:id" element={<AllMembers loggedIn={loggedIn}  user={user} userImage={userImage} />  } /> 
                   <Route  path="/teams/CurrentHistagram/:id" element={<CurrentHistagram/>}/>      
                   <Route  path="/teams/EditTeam/:id" element={<EditTeam/>}/>   
+                  <Route  path="/teams/Favorite" element={<Favorites/>}/>   
+                  <Route  path="/teams/Legend" element={<Legend/>}/> 
+                  <Route  path="/teams/AllTimes" element={<AllTimes/>}/> 
+                  <Route  path="/teams/Profile" element={<Profile/>}/> 
               </Routes>
               <Footer />
           </div>

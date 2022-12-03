@@ -27,6 +27,9 @@
     background-color: black;
     font-family: cursive;
     font-size: 30px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .divEdit{
     text-decoration: none;
@@ -397,6 +400,49 @@
     margin-bottom: 110px;
 }
 
+
+.submenu3{
+    float: left;
+    margin: 0 auto;
+    color: black;
+    border-radius: 8px;
+    width: 200px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    padding: 0 10px 10px;
+    position: absolute;
+    top: 108px;
+    left: 71.4%;
+    z-index: 100;
+    border: 1px solid black;
+    -webkit-filter: drop-shadow(0px 2px 4px rgba(130,130,130,1));
+    filter        : drop-shadow(0px 2px 4px rgba(130,130,130,1));
+    /* -ms-filter    : "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=2, Color='#444')";
+    filter        : "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=2, Color='#444')"; */
+  
+}
+.submenu3::before{
+  content: "";
+  position: relative;
+  left: 85px;
+  top: -40px;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid #fff;
+}
+.submenu3__item{
+      padding: 4px;
+      font-size: 22px;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+}
+.submenu3__item:hover{
+  background-color: #070f3c;
+  color: white;
+}
 
 
 /*Nest Hub Max (max-width: 1280px; max-heigth: 800px;)*/

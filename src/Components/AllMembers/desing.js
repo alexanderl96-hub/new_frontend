@@ -33,6 +33,7 @@ const Desing = ({loggedIn, user, userImage}) => {
     const month = date.getMonth()+1
     const hoy = date.getDate()
     const [increment, setIncrement] = useState(3)
+    const [toggleMenu, setToggleMenu] = useState(false);
 
     let fisrt = 0
     let params = useParams()
@@ -319,10 +320,41 @@ const Desing = ({loggedIn, user, userImage}) => {
         
        
         <div className='desingIcon'>
-    
+
+        {loggedIn && user === 'alexander87' && 
+        <div text="More.." path=""   onMouseLeave={()=> setToggleMenu(false)} style={{width: '100%'}}>
+                   <div  style={{ fontSize: '20px',color: 'white', listStyle: 'none',marginLeft: '88%',
+                   lineHeight: '33px', cursor: 'pointer', width:'110px',paddingLeft: '10px', 
+                   alignItems: 'center',  height:'40px', border: '1px solid white', borderRadius: '30px', backgroundColor: '#070f3c' }}  onMouseEnter={()=> setToggleMenu(true)}>{toggleMenu ? "" : " Options"}</div>
+                {toggleMenu &&   <div className="submenu2" >
+                      {/* <div className="submenu__item" id="More..">More..</div> */}
+                     <Link to={`/teams/newMember/${teamId}`} id={teamId} style={{ color:'black'}} onClick={()=> setToggleMenu(false)}>
+                      <div className="submenu2__item" id="More..">Add New Member</div></Link>
+                      <Link to={`/teams/EditTeam/${teamId}`} id={teamId} style={{ color:'black'}} onClick={()=> setToggleMenu(false)} >
+                          <div className="submenu2__item">Edit Team</div>
+                      </Link>
+                      <Link to={`/`} id={teamId} style={{ color:'black'}} onClick={()=> setToggleMenu(false)} >
+                          <div className="submenu2__item" onClick={handleDelete}>Delete Team</div>
+                      </Link>
+                      {/* <NavLink to={'/teams/Legend'} style={{ color:'black'}} onClick={()=> setToggleMenu(false)} >
+                          <div className="submenu__item">Baseball Legend</div>
+                      </NavLink>
+                      <hr/>
+                      {loggedIn && <NavLink to={'/teams/Profile'} style={{ color:'black'}} onClick={()=> setToggleMenu(false)} > 
+                      <div className="submenu__item">My Profile</div> </NavLink>}
+                      <NavLink to={'/teams/About'} style={{ color:'black'}} onClick={()=> setToggleMenu(false)}>
+                          <div className="submenu__item">About us </div>
+                      </NavLink> */}
+                      <Link to='/' style={{ color:'black'}} onClick={()=> setToggleMenu(false)}>
+                         <div className="submenu__item">@Sport World</div>
+                      </Link>
+                  </div>}
+
+            </div>}
+{/*     
    {loggedIn && user === 'alexander87' && <Link to={`/teams/newMember/${teamId}`} id={teamId} className='newadded'> <FaUserPlus /></Link> }
    {loggedIn && user === 'alexander87' &&  <Link to={`/teams/EditTeam/${teamId}`} id={teamId} className='editTeam'> <FaUserEdit /></Link> }
-      {loggedIn && user === 'alexander87' && <Link to={`/`} id={teamId} className='trash' onClick={handleDelete}> <FaTrash /></Link>}
+      {loggedIn && user === 'alexander87' && <Link to={`/`} id={teamId} className='trash' onClick={handleDelete}> <FaTrash /></Link>} */}
         </div>
 
         <div className="section2"> 

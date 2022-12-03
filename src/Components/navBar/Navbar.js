@@ -3,12 +3,15 @@ import './Navbar.css'
 import { FaHome, FaUser} from 'react-icons/fa';
 import { NavLink , Link} from 'react-router-dom'
 import imageLogo from '../../image/FullLogoTransparent.png'
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 // import frontLogo from '../../image/FullLogo.png'
 
 function Navbar({setOpenLoginModal, loggedIn, setLoggedIn, user, userImage}) {
   const [menuIdActive, setMenuIdActive] = useState('')
   const [sideNavar, setSideNavar]= useState('sideNavar')
   const [goodbye, setGoodBye] = useState('')
+  const [toggleMenu, setToggleMenu] = useState(false);
 
 
 
@@ -76,6 +79,35 @@ useEffect(()=>{
             {/* <Link to={'/teams/new'}>
                 <div className='navAddgroup'> ADD</div>
             </Link> */}
+              
+
+              <div text="More.." path=""  onMouseEnter={()=> setToggleMenu(true)} onMouseLeave={()=> setToggleMenu(false)}>
+                   <div  style={{color: 'white', listStyle: 'none', marginLeft: '-126px',lineHeight: '33px', cursor: 'pointer', width: '50px', height:'50px' }}>{toggleMenu ? "" : " More.."}</div>
+                 {toggleMenu && <div className="submenu" >
+                      {/* <div className="submenu__item" id="More..">More..</div> */}
+                      {loggedIn &&    <Link to={'/teams/new'} style={{ color:'black'}} onClick={()=> setToggleMenu(false)}>
+                      <div className="submenu__item" id="More..">Add New Team</div></Link>}
+                      <NavLink to={'/teams/Favorite'} style={{ color:'black'}} onClick={()=> setToggleMenu(false)} >
+                          <div className="submenu__item">Baseball Favorite</div>
+                      </NavLink>
+                      <NavLink to={'/teams/AllTimes'} style={{ color:'black'}} onClick={()=> setToggleMenu(false)} >
+                          <div className="submenu__item">Baseball All Times</div>
+                      </NavLink>
+                      <NavLink to={'/teams/Legend'} style={{ color:'black'}} onClick={()=> setToggleMenu(false)} >
+                          <div className="submenu__item">Baseball Legend</div>
+                      </NavLink>
+                      <hr/>
+                      {loggedIn && <NavLink to={'/teams/Profile'} style={{ color:'black'}} onClick={()=> setToggleMenu(false)} > 
+                      <div className="submenu__item">My Profile</div> </NavLink>}
+                      <NavLink to={'/teams/About'} style={{ color:'black'}} onClick={()=> setToggleMenu(false)}>
+                          <div className="submenu__item">About us </div>
+                      </NavLink>
+                      <NavLink to='/' style={{ color:'black'}} onClick={()=> setToggleMenu(false)}>
+                         <div className="submenu__item">@Sport World</div>
+                      </NavLink>
+                  </div>}
+
+            </div>
            {loggedIn && <button  className='navAddgroup' onClick={logOut} style={{color: 'black', cursor: 'pointer', marginLeft: '-15px' }}>Log out</button> }
            {!loggedIn && <button  className='navAddgroup' onClick={(e)=> setOpenLoginModal(true)}  style={{color: 'black', cursor: 'pointer', marginLeft: '-15px'}}>Log in</button> }
             {/* {!loggedIn  <button  style={{color: 'black'}}>Log in</button>} */}
