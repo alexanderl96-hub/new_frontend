@@ -43,7 +43,7 @@ const Footer = () => {
                     <NavLink to={'/teams/About'}  className='legal-innerAll'  > <p>Contact Us</p> </NavLink>
                  </div>
                  <div className='legal-yearLogo'>
-                     <p> {new Date().getFullYear()} Sport World</p>
+                     <p> &copy; {new Date().getFullYear()} Sport World. All rights reserved.</p>
                  </div>
                 
              </div>
