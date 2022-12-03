@@ -37,9 +37,9 @@ const Footer = () => {
              </div>
              <div className='divLegalMain'>
                  <div className='legal-inner'>
-                    <NavLink to={'/teams/About'}  className='legal-innerAll'> <p>Terms of Use</p> </NavLink>
-                    <NavLink to={'/teams/About'}  className='legal-innerAll' > <p>Privacy Policy</p> </NavLink>
-                    <NavLink to={'/teams/About'}  className='legal-innerAll'  >  <p>Legal Notices</p> </NavLink>
+                    <NavLink to={'/teams/TermofUse'}  className='legal-innerAll'> <p>Terms of Use</p> </NavLink>
+                    <NavLink to={'/teams/PrivacyPolicy'}  className='legal-innerAll' > <p>Privacy Policy</p> </NavLink>
+                    <NavLink to={'/teams/LegalNotices'}  className='legal-innerAll'  >  <p>Legal Notices</p> </NavLink>
                     <NavLink to={'/teams/About'}  className='legal-innerAll'  > <p>Contact Us</p> </NavLink>
                  </div>
                  <div className='legal-yearLogo'>

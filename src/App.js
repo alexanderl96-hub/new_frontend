@@ -32,6 +32,9 @@ import Favorites from '../src/ComponentsPlayers/Favorites/Favorites'
 import Legend from '../src/ComponentsPlayers/Legend/Legend'
 import AllTimes from '../src/ComponentsPlayers/AllTimes/AllTimes'
 import Profile from '../src/ComponentProfile/Profile/Profile'
+import TermofUse from '../src/ComponentPrivacy/Terms of Use/TermofUse'
+import PrivacyPolicy from '../src/ComponentPrivacy/Privacy Policy/PrivacyPolicy'
+import LegalNotices from '../src/ComponentPrivacy/Legal Notices/LegalNotices'
 
 // import { Favorite } from '@mui/icons-material';
 
@@ -89,6 +92,9 @@ function App() {
                   <Route  path="/teams/Legend" element={<Legend/>}/> 
                   <Route  path="/teams/AllTimes" element={<AllTimes/>}/> 
                   <Route  path="/teams/Profile" element={<Profile/>}/> 
+                  <Route  path="/teams/TermofUse" element={<TermofUse/>}/> 
+                  <Route  path="/teams/LegalNotices" element={<LegalNotices/>}/> 
+                  <Route  path="/teams/PrivacyPolicy" element={<PrivacyPolicy/>}/> 
               </Routes>
               <Footer />
           </div>

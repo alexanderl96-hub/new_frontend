@@ -269,11 +269,12 @@ const Desing = ({loggedIn, user, userImage}) => {
   };
 
 
-    fisrt = ratingChanged(Number(newI.join()))
+    fisrt = ratingChanged(newI[0])
 
 
  
-  //  console.log(newComment, commentId, 'check')
+   console.log(ratingChanged(newI[0]), fisrt, 'check')
+   //  console.log(newComment, commentId, 'check')
 
 
   return (
@@ -304,7 +305,7 @@ const Desing = ({loggedIn, user, userImage}) => {
                     {newtest.map((a,i)=>{
                         return(
                           < >
-                              <img src={a.imag} alt='' onClick={(e)=>setSearch(a.id) }  />
+                              <img src={a.imag} alt='' onClick={()=> setSearch(a.id)}  />
                               {/* <p>{a.name}</p> */}
                           </>
                         )                
@@ -384,12 +385,12 @@ const Desing = ({loggedIn, user, userImage}) => {
                            <div className='innerSectionStart'>
                            <ReactStars 
                               count={5}
-                              value={fisrt}
+                              value={ratingChanged(newI[0])}
                               color='gray'
                               edit={false}
                               size={30}
                               isHalf={true}
-                              onChange={fisrt}
+                              onChange={ratingChanged(newI[0])}
                               /> 
                            </div>
                        </div>
@@ -418,12 +419,12 @@ const Desing = ({loggedIn, user, userImage}) => {
                            <div className='innerSectionStart'>
                            <ReactStars 
                               count={5}
-                              value={fisrt}
+                              value={ratingChanged(newI[0])}
                               color='gray'
                               edit={false}
                               size={30}
                               isHalf={true}
-                              onChange={fisrt}
+                              onChange={ratingChanged(newI[0])}
                               /> 
                            </div>
                        </div>

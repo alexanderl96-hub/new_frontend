@@ -323,7 +323,9 @@ import LoadingHome from '../../../src/Loading'
                 data={ dataPitcher }
                 options={options}
                 />
-                <p >Career Pitcher Stats</p>
+                <p >Career Pitcher Stats </p>
+                <p >Evaluation of the last 5 years.</p>
+                
             </div> :null}
                 
             
@@ -337,6 +339,7 @@ import LoadingHome from '../../../src/Loading'
                     options={options}
                     />
                     <p >Career Player Stats</p>
+                    <p >Evaluation of the last 5 years.</p>
                 </div>      
                 : null}
            
@@ -353,6 +356,7 @@ import LoadingHome from '../../../src/Loading'
                 options={options}
                 />
                 <p > Player Current Season</p>
+                <p >Evaluation of the last 10 games.</p>
             </div> :null}
             { currPitDate.length > 0 ? 
                 <div className='currStatc'>
@@ -364,6 +368,7 @@ import LoadingHome from '../../../src/Loading'
                 options={options}
                 />
                 <p > Pitcher Current Season</p>
+                 <p >Evaluation of the last 10 games.</p>
             </div> :null}
            </div>
     </div> : <div className='LoadingFrontH'><LoadingHome/></div>}
