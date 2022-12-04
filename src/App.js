@@ -91,7 +91,7 @@ function App() {
                   <Route  path="/teams/Favorite" element={<Favorites/>}/>   
                   <Route  path="/teams/Legend" element={<Legend/>}/> 
                   <Route  path="/teams/AllTimes" element={<AllTimes/>}/> 
-                  <Route  path="/teams/Profile" element={<Profile/>}/> 
+                  <Route  path="/teams/Profile" element={<Profile  user={user} userImage={userImage} />}/> 
                   <Route  path="/teams/TermofUse" element={<TermofUse/>}/> 
                   <Route  path="/teams/LegalNotices" element={<LegalNotices/>}/> 
                   <Route  path="/teams/PrivacyPolicy" element={<PrivacyPolicy/>}/> 
