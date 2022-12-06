@@ -380,7 +380,7 @@ const Desing = ({loggedIn, user, userImage}) => {
                                <p><span>Position:</span> {a.position}</p>
                                <p><span>Salary:</span> {a.salary}</p>
                                <p><span>About: </span>{a.about}  <Link to={`/teams/groups/${search}`}  className='changeMore'> More..→</Link></p>
-                               <p ><span>ID:</span> {a.id}</p>
+                               {/* <p ><span>ID:</span> {a.id}</p> */}
                              </div>
                            <div className='innerSectionStart'>
                            <ReactStars 

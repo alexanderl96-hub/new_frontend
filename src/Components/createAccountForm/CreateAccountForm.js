@@ -5,7 +5,7 @@ import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
 
 
-const CreateAccountForm = ({setOpenLoginModal, setLoggedIn, setLoginMessage, setUser,  setUserImage}) => {
+const CreateAccountForm = ({setOpenLoginModal, setLoggedIn, setLoginMessage, setUser,  setUserImage, setUserId}) => {
 
     const [username, setUsername] = useState('');
     const [usernameError, setUsernameError] = useState(false);
@@ -75,6 +75,7 @@ const CreateAccountForm = ({setOpenLoginModal, setLoggedIn, setLoginMessage, set
                 document.cookie = "accessToken=" + data.accessToken;
                 setUser(data.user.username)
                 setUserImage(data.user.image)
+                setUserId(data.user.id)
                 setLoggedIn(true);
             }
           
@@ -83,7 +84,7 @@ const CreateAccountForm = ({setOpenLoginModal, setLoggedIn, setLoginMessage, set
             console.log(error);
         })
     }
-
+console.log(image)
   return (
       <div>
     <Box
@@ -140,8 +141,9 @@ const CreateAccountForm = ({setOpenLoginModal, setLoggedIn, setLoginMessage, set
             onChange={(e) => setPassword(e.target.value)}
             value={password}
         />
-       
+        
     </Box>
+    {/* <input type="file"  onChange={(e) => setImage(e.target.files[0].type)}   style={{width: '250px',marginLeft: '50px'}}/>  */}
     <div onClick={createUser} text="Submit"    className='LoginCreateButton'>Submit</div>
     </div>
   )

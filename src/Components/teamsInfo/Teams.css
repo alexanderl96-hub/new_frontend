@@ -20,6 +20,11 @@
   margin-left: 30px;
   color: rgb(58, 56, 56);
   font-family: spantaran;
+  font-weight: bold;
+  font-size: 40px;
+  background: -webkit-linear-gradient(#4256ec, #17193a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .LoadingFront{
   margin-top: -60px;

@@ -85,7 +85,7 @@ useEffect(()=>{
                    <div  style={{color: 'white', listStyle: 'none', marginLeft: '-126px',lineHeight: '33px', cursor: 'pointer', width: '50px', height:'50px' }}>{toggleMenu ? "" : " More.."}</div>
                  {toggleMenu && <div className="submenu" >
                       {/* <div className="submenu__item" id="More..">More..</div> */}
-                      {loggedIn &&    <Link to={'/teams/new'} style={{ color:'black'}} onClick={()=> setToggleMenu(false)}>
+                      {loggedIn &&  user === 'alexander87' && <Link to={'/teams/new'} style={{ color:'black'}} onClick={()=> setToggleMenu(false)}>
                       <div className="submenu__item" id="More..">Add New Team</div></Link>}
                       <NavLink to={'/teams/Favorite'} style={{ color:'black'}} onClick={()=> setToggleMenu(false)} >
                           <div className="submenu__item">Baseball Favorite</div>

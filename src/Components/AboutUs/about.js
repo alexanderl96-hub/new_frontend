@@ -74,7 +74,7 @@ const About = () => {
 
 
   return (
-    <div style={{ marginBottom: '20px'}}>
+    <div style={{ marginBottom: '10px', minHeight: '831px'}}>
         {/* <NavBar /> */}
         <div>
             <div className='media'> 

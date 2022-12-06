@@ -140,7 +140,7 @@ const Transcitions = () => {
   return (
     <div >
          <div className='mainNews'>
-            <h2 >News</h2>
+            <h2 style={{ fontFamily: 'spantaran', fontSize: '35px'}}>News</h2>
             <div className='mainNews-firstinner' >
                 { transaction.map((a, index)=>{
                     return(

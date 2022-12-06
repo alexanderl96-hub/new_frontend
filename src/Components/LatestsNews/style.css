@@ -52,6 +52,11 @@
 }
 .mainNews > h2 {
     margin-left: 70px;
+    font-family: spantaran; 
+    font-size: 62px;
+    background: -webkit-linear-gradient(rgb(170, 170, 170), rgb(0, 0, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .mainNews-firstinner{
     /* display: flex;  */

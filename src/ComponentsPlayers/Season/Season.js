@@ -29,7 +29,7 @@ const Season = () => {
   }
 
   useEffect(() => {
-    fetch('https://my-baseball-teams.herokuapp.com/season')
+    fetch('https://my-baseball-teams.adaptable.app/season')
     .then(res => res.json())
     .then((data) => {
       setSeason(data)
@@ -37,11 +37,11 @@ const Season = () => {
   },[])
   console.log(season)
   return (
-    <div style={{minHeight: '811px'}}>
+    <div className='seasonMainContent'>
         {/* <Navbar/> */}
         <div className='navSeason'>
         <div className= 'first'>Season</div>
-        <div>
+        <div >
         {!countInTimeout ? 
         <div className='season-inner'>
           {season.map((data, index)=>{

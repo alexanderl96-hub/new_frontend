@@ -74,7 +74,7 @@ console.log( coach, 'coach')
     <div  className='coachMainContent' >
         {/* <Navbar/> */}
         <div className='navCoach'>
-           <div >Coaches</div>
+           <div ></div>
             <div className='divForm'>
                 <form onChange={handleSubmit} >
                 { !openInput ?  <button onClick={handleOpenInput} className='divFormIcon'>Search</button> :
@@ -90,6 +90,7 @@ console.log( coach, 'coach')
             </div>
 
         </div>
+        <div  className='titlePlayCoach'> Coaches </div>
         {!countInTimeout ? (
 
         <div className='payContent2' >

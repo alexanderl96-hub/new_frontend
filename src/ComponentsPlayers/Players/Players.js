@@ -75,7 +75,7 @@ const Players = () => {
     <div className='playerMainContent'  >
         {/* <Navbar/> */}
         <div className='navPlay'>
-           <div> Players </div>
+           <div></div>
 
             <div className='divForm'>  
               {/* { !openInput ?  <div onClick={handleOpenInput} className='divFormIcon'>🔍</div> : */}
@@ -96,7 +96,7 @@ const Players = () => {
                        <p className='divMatchNone'>None</p>} </p>}
             </div>
         </div>
-
+        <div  className='titlePlayCoach'> Players </div>
        {!countInTimeout ? (
 
         <div className='payContentPlayer'>

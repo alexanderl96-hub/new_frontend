@@ -1,4 +1,9 @@
 /*linear-gradient(45deg, red 0 50%, blue 50% 100%);*/
+.seasonMainContent{
+    width: 100%;
+    min-height: 831px;
+    overflow: hidden;
+}
 .navSeason{
     height: 50px;
     width: 100%;
@@ -9,9 +14,9 @@
 }
 .navSeason > .first{
     color: white;
-    font-family: cursive;
-    margin-top: 2px;
-    font-size: 25px;
+    font-family: spantaran;
+    margin-top: 3px;
+    font-size: 35px;
     text-align: center;
     justify-content: center;
 }

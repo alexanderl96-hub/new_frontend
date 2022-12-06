@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, Link, useParams} from 'react-router-dom';
 import './EditTeam.css';
+import Arrow from '../../image/right-arrow.png'
 import axios from 'axios';
 
 const EditTeam = () => {
@@ -54,7 +55,8 @@ console.log(oldImage, currentName)
          <div  style={{ display:'flex', justifyContent: 'space-around',  margin: '5%'}} >
              <img src={oldImage} alt=''  style={{ borderStyle: 'solid', borderColor: ' #070f3c', borderRadius: '5%', 
                   width:'300px',  height: '280px'}} />
-            {editTeam.imag && <img src={editTeam.imag } alt='' style={{ borderStyle: 'solid', borderColor: ' #070f3c', borderRadius: '5%', 
+                     {editTeam.imag &&  <img src={Arrow} alt='' style={{width: '70px', height: '70px', marginTop:'100px'}} /> }
+                     {editTeam.imag &&     <img src={editTeam.imag } alt='' style={{ borderStyle: 'solid', borderColor: ' #070f3c', borderRadius: '5%', 
                   width:'300px',  height: '280px'}}/>}
          </div>
         <div style={{ display:'flex', justifyContent: 'center', textAlign: 'center', minHeight: '80px',}}>

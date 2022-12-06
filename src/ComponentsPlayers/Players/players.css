@@ -25,6 +25,7 @@
   cursor: pointer;
   font-size: 13px;
   width: 80px;
+  margin-left: 100%;
 }
 .divFormIcon:hover {
   color: white;
@@ -38,7 +39,7 @@
   padding-left: 5px;
   transition: all 4s;
   width:350px;
-   margin-left: 72px;
+   margin-left: 147px;
 }
 
 .divMatch{
@@ -64,6 +65,19 @@
   font-size: 17px;
   color: black;
   margin-top: -2px;
+}
+
+.titlePlayCoach{
+  text-align: center; 
+  font-family: spantaran;
+   font-size: 35px; 
+   margin-top: 5px; 
+   font-weight: bold;
+   font-size: 32px;
+   background: -webkit-linear-gradient(#4256ec, #17193a);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+ 
 }
 .payContentPlayer{
  display: flex;

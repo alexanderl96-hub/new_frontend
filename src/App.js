@@ -35,6 +35,7 @@ import Profile from '../src/ComponentProfile/Profile/Profile'
 import TermofUse from '../src/ComponentPrivacy/Terms of Use/TermofUse'
 import PrivacyPolicy from '../src/ComponentPrivacy/Privacy Policy/PrivacyPolicy'
 import LegalNotices from '../src/ComponentPrivacy/Legal Notices/LegalNotices'
+import UploadImage from '../src/ComponentProfile/UploadImageToS3WithReactS3'
 
 // import { Favorite } from '@mui/icons-material';
 
@@ -44,6 +45,7 @@ function App() {
   const [loggedIn, setLoggedIn] = useState( getCookie('accessToken') ? true : false);
   const [user, setUser] = useState(localStorage.getItem("username") || "Welcome");
   const [userImage, setUserImage]= useState(localStorage.getItem("userImage") || "")
+  const [userId, setUserId] = useState(localStorage.getItem("userid") || "")
   // const [loginMessage, setLoginMessage] = useState('');
 
   // useEffect(() => {
@@ -65,6 +67,7 @@ function App() {
                          setLoggedIn={setLoggedIn} 
                          setUser={setUser}
                          setUserImage={ setUserImage}
+                         setUserId={setUserId}
                           // setLoginMessage={setLoginMessage}
                         />
                          {/* {loginMessage && 
@@ -91,10 +94,11 @@ function App() {
                   <Route  path="/teams/Favorite" element={<Favorites/>}/>   
                   <Route  path="/teams/Legend" element={<Legend/>}/> 
                   <Route  path="/teams/AllTimes" element={<AllTimes/>}/> 
-                  <Route  path="/teams/Profile" element={<Profile  user={user} userImage={userImage} />}/> 
+                  <Route  path="/teams/Profile" element={<Profile  user={user} userImage={userImage} userId={userId} />}/> 
                   <Route  path="/teams/TermofUse" element={<TermofUse/>}/> 
                   <Route  path="/teams/LegalNotices" element={<LegalNotices/>}/> 
                   <Route  path="/teams/PrivacyPolicy" element={<PrivacyPolicy/>}/> 
+                  <Route path="/teams/upload" element={<UploadImage />} />
               </Routes>
               <Footer />
           </div>

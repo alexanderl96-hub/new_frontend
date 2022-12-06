@@ -19,6 +19,7 @@
 }
 .description{
     width: 500px;
+    letter-spacing: 0.6px;
     pointer-events: auto;
 }
 .description > p{
@@ -37,6 +38,7 @@
      text-align: center; 
      padding-top: 8px;
      pointer-events: auto;
+     letter-spacing: 0.4px;
 }
 .technology > p {
     color:red; 

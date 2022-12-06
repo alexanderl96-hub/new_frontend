@@ -2,8 +2,8 @@ import React from 'react'
 
 const Favorites = () => {
   return (
-    <div>
-         <h1> Favorites</h1>
+    <div style={{minHeight: '831px'}}>
+         <h1 className='titlePlayCoach'> Favorites </h1>
     </div>
   )
 }
