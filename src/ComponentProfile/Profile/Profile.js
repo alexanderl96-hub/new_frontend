@@ -11,6 +11,9 @@ const Profile = ({user, userImage, userId}) => {
     email: '',
     image: newImage,
   })
+
+
+
   const avatar = ['https://cdn3.iconfinder.com/data/icons/avatars-15/64/_Ninja-2-512.png', 
                 'https://cdn2.iconfinder.com/data/icons/social-media-flat-line/70/user-512.png', 
                 'https://e7.pngegg.com/pngimages/122/453/png-clipart-computer-icons-user-profile-avatar-female-profile-heroes-head.png',
@@ -49,23 +52,32 @@ const Profile = ({user, userImage, userId}) => {
                              'https://cdn.iconscout.com/icon/premium/png-128-thumb/account-profile-3519249-2939068.png'
                    ]
 
+
+function selectNewAvatar (selectedAvatar) {
+  setNewImage(selectedAvatar)
+  setUpdatedImage({...updateImage, image : selectedAvatar })
+}
+
     const handleInput =(e)=>{
       const {value} = e.target;
-      setUpdatedImage({...updateImage, [e.target.id]: value })
+      setUpdatedImage({...updateImage, image : value })
   }
 
   const handleSubmit = (e) => {
       e.preventDefault();
       updatedUser(updateImage, userId)
-      navigate(`/`)    
+       
     };
  
     const updatedUser = (update, userId) => {
-      axios.put(`http://localhost:9000/users${userId}`, update).then(
+      console.log(update, userId)
+      console.log(updateImage)
+      axios.put(`http://localhost:9000/users/${userId}`, update).then(
         (res) => {
           const updateMyIma = [...updateImage];
           updateMyIma[userId] = update;
           setUpdatedImage(updateMyIma);
+           navigate(`/`)  
         },
         (error) => console.log(error)
       );
@@ -88,7 +100,8 @@ const Profile = ({user, userImage, userId}) => {
                  return (
                   <>
                     <img src={a} alt=""  style={{height: '90px', width:'90px', margin: '5px', borderRadius: '20px', cursor: 'pointer'}} 
-                    onClick={(e)=>  setNewImage(e.target.src)} />
+                    onClick={(e)=>  selectNewAvatar(e.target.src)}  />
+                    {/* onClick={(e)=>  setNewImage(e.target.src)}  */}
                   </>
                  )
               })}
