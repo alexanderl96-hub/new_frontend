@@ -6,7 +6,7 @@ import Box from '@mui/material/Box';
 
 // import Button from '../button/Button';
 
-const LoginAccountForm = ({setOpenLoginModal, setLoggedIn, setUser,  setUserImage, setUserId}) => {
+const LoginAccountForm = ({setOpenLoginModal, setLoggedIn, setUser,  setUserImage, setUserId, setUserEmail}) => {
 
     const [username, setUsername] = useState('');
     const [usernameError, setUsernameError] = useState(false);
@@ -62,10 +62,13 @@ const LoginAccountForm = ({setOpenLoginModal, setLoggedIn, setUser,  setUserImag
                localStorage.setItem('username', data.user.username)
                localStorage.setItem('userImage', data.user.image)
                localStorage.setItem('userid', data.user.id)
+                localStorage.setItem('userEmail', data.user.email)
                 document.cookie = 'accessToken=' + data.accessToken
                 setUser(data.user.username )
                 setUserImage(data.user.image)
                 setUserId(data.user.id)
+                console.log(data.user.email,  'useremail')
+                setUserEmail(data.user.email)
               
                 // set loggedin to true 
                 setLoggedIn(true);

@@ -5,7 +5,7 @@ import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
 
 
-const CreateAccountForm = ({setOpenLoginModal, setLoggedIn, setLoginMessage, setUser,  setUserImage, setUserId}) => {
+const CreateAccountForm = ({setOpenLoginModal, setLoggedIn, setLoginMessage, setUser,  setUserImage, setUserId, setUserEmail}) => {
 
     const [username, setUsername] = useState('');
     const [usernameError, setUsernameError] = useState(false);
@@ -76,6 +76,8 @@ const CreateAccountForm = ({setOpenLoginModal, setLoggedIn, setLoginMessage, set
                 setUser(data.user.username)
                 setUserImage(data.user.image)
                 setUserId(data.user.id)
+               
+                setUserEmail(data.user.email)
                 setLoggedIn(true);
             }
           

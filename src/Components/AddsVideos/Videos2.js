@@ -13,7 +13,7 @@ const Videos = () => {
    
   return (
     <div className='videosSport'>
-        <ReactPlayer 
+        {/* <ReactPlayer 
         url={videos} 
         playing={true} 
         loop={true}
@@ -21,7 +21,7 @@ const Videos = () => {
         controls={true}
         width={'330px'} 
         height={'260px'} 
-        muted={true} />
+        muted={true} /> */}
     </div>
   )
 }

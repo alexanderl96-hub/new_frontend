@@ -1,14 +1,14 @@
 import React, { useState} from 'react'
-import { useNavigate, Link, useParams} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios'
 
 
-const Profile = ({user, userImage, userId}) => {
+const Profile = ({user, userImage, userId, userEmail, setUserImage}) => {
   const navigate = useNavigate();
   const [newImage, setNewImage]= useState('')
   const [updateImage, setUpdatedImage] = useState({
     username: user,
-    email: '',
+    email: userEmail,
     image: newImage,
   })
 
@@ -55,7 +55,7 @@ const Profile = ({user, userImage, userId}) => {
 
 function selectNewAvatar (selectedAvatar) {
   setNewImage(selectedAvatar)
-  setUpdatedImage({...updateImage, image : selectedAvatar })
+   setUpdatedImage({...updateImage, image : selectedAvatar })
 }
 
     const handleInput =(e)=>{
@@ -69,15 +69,13 @@ function selectNewAvatar (selectedAvatar) {
        
     };
  
-    const updatedUser = (update, userId) => {
-      console.log(update, userId)
-      console.log(updateImage)
-      axios.put(`http://localhost:9000/users/${userId}`, update).then(
+    const updatedUser = (updateImage, userId) => {
+    
+      axios.put(`http://localhost:9000/users/${userId}`, updateImage).then(
         (res) => {
-          const updateMyIma = [...updateImage];
-          updateMyIma[userId] = update;
-          setUpdatedImage(updateMyIma);
-           navigate(`/`)  
+          setUpdatedImage(updateImage);
+          setUserImage(newImage)
+          navigate(`/`)  
         },
         (error) => console.log(error)
       );
@@ -91,7 +89,7 @@ function selectNewAvatar (selectedAvatar) {
             <div> 
               <h3>{user} {userId}</h3>
               <img src={newImage === '' ?  userImage : newImage } alt="" style={{height: '300px', width:'300px', borderRadius: '20px'}} />
-              <p ><span style={{fontWeight: 'bold', textDecoration:"none"}}>Email:</span> mieamilis@correo.com</p>
+              <p ><span style={{fontWeight: 'bold', textDecoration:"none"}}>Email:</span> {userEmail} </p>
               {/* <img src={userImage ? userImage : 'https://d11a6trkgmumsb.cloudfront.net/original/3X/d/8/d8b5d0a738295345ebd8934b859fa1fca1c8c6ad.jpeg'} alt="" style={{height: '300px', width:'300px', borderRadius: '20px'}} /> */}
             </div>
             

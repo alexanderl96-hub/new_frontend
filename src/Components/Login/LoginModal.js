@@ -35,7 +35,7 @@ function a11yProps(index) {
     };
   }
 
-const LoginModal = ({openLoginModal, setOpenLoginModal, setLoggedIn, setUser,  setUserImage, setUserId, ...props}) => {
+const LoginModal = ({openLoginModal, setOpenLoginModal, setLoggedIn, setUser,  setUserImage, setUserId, setUserEmail, ...props}) => {
     const [value, setValue] = React.useState(0);
 
     const handleClose = () => {
@@ -97,6 +97,7 @@ const LoginModal = ({openLoginModal, setOpenLoginModal, setLoggedIn, setUser,  s
                              setUser={setUser}  
                              setUserImage={setUserImage}
                              setUserId={setUserId} 
+                             setUserEmail={setUserEmail}
                              />
                     </TabPanel>
                     <TabPanel value={value} index={1}>
@@ -106,6 +107,7 @@ const LoginModal = ({openLoginModal, setOpenLoginModal, setLoggedIn, setUser,  s
                              setUser={setUser}  
                              setUserImage={setUserImage}
                              setUserId={setUserId}
+                             setUserEmail={setUserEmail}
                               />
                     </TabPanel>
         </Stack>

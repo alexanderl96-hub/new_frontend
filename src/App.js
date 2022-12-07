@@ -46,6 +46,7 @@ function App() {
   const [user, setUser] = useState(localStorage.getItem("username") || "Welcome");
   const [userImage, setUserImage]= useState(localStorage.getItem("userImage") || "")
   const [userId, setUserId] = useState(localStorage.getItem("userid") || "")
+  const [userEmail, setUserEmail] = useState(localStorage.getItem("userEmail") || "")
   // const [loginMessage, setLoginMessage] = useState('');
 
   // useEffect(() => {
@@ -55,6 +56,7 @@ function App() {
   //   }, 2000)
 
   // }, [loginMessage])
+  console.log(userEmail)
 
   return (
       <Router >
@@ -68,6 +70,7 @@ function App() {
                          setUser={setUser}
                          setUserImage={ setUserImage}
                          setUserId={setUserId}
+                         setUserEmail={setUserEmail}
                           // setLoginMessage={setLoginMessage}
                         />
                          {/* {loginMessage && 
@@ -94,7 +97,7 @@ function App() {
                   <Route  path="/teams/Favorite" element={<Favorites/>}/>   
                   <Route  path="/teams/Legend" element={<Legend/>}/> 
                   <Route  path="/teams/AllTimes" element={<AllTimes/>}/> 
-                  <Route  path="/teams/Profile" element={<Profile  user={user} userImage={userImage} userId={userId} />}/> 
+                  <Route  path="/teams/Profile" element={<Profile  user={user} userImage={userImage} setUserImage={setUserImage} userId={userId} userEmail={userEmail} />}/> 
                   <Route  path="/teams/TermofUse" element={<TermofUse/>}/> 
                   <Route  path="/teams/LegalNotices" element={<LegalNotices/>}/> 
                   <Route  path="/teams/PrivacyPolicy" element={<PrivacyPolicy/>}/> 
