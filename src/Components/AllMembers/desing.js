@@ -158,41 +158,28 @@ const Desing = ({loggedIn, user, userImage}) => {
 
      function onHandleClick (e){
        let value = 0
-       let pointer = 1
+
        if(e.target.id === 'next'){
          value++
-         pointer++
+         setHandel(handel+value)
+ 
+        //  if(handel +1 >= newtest.length){
+        //   console.log(handel+1)
+        //    setHandel(0)
+          
+        //  } else if(((newtest.length - ((handel+value)* size))/size) > 1 ){
+        //   setHandel(handel + value)
+
+        //  }else if( handel + value >= 0  && handel + value < size){
+        //   console.log((newtest.length - ((handel+value)* size))/size )
+        //   setHandel((newtest.length - ((handel+value)* size))/size )
+
+        // }else if( handel + 1 < newtest.length && handel + value > 0 ){
+        //   console.log(handel+1)
+        //   setHandel(handel + value)
+        //  }
         
  
-         if(handel +1 >= newtest.length){
-          console.log(handel+1)
-           setHandel(0)
-          
-         } else if(((newtest.length - ((handel+value)* size))/size) > 1 ){
-          setHandel(handel + value)
-
-         }else if( handel + value >= 0  && handel + value < size){
-          console.log((newtest.length - ((handel+value)* size))/size )
-          setHandel((newtest.length - ((handel+value)* size))/size )
-
-        }else if( handel + 1 < newtest.length && handel + value > 0 ){
-          console.log(handel+1)
-          setHandel(handel + value)
-         }
-        
-          // if((newtest.length - (handel+value)*7) < 7 ){    
-          //   let control =    (newtest.length - ((handel+value)*7))/7 
-          //   setHandel(control)
-          // }else{ setHandel(handel + value)}
-  //else if( handel +1 < newtest.length && newtest.length - (handel+1) > 0){
-    // console.log(newtest.length - (handel+value),'result')
-    // else if((handel + value) < newtest.length && ((newtest.length / (handel + value + 1)) / newtest.length) < 1 && ((newtest.length / (handel + value + 1)) / newtest.length) > 0){
-    //   console.log((newtest.length / (handel + value ** pointer)) / newtest.length )
-
-    //   let control = (newtest.length - (handel + value ** pointer)) / newtest.length
-    //   setHandel(control)
-
-  // }
 
        }else if (e.target.id === 'prev'){
          setHandel(0)

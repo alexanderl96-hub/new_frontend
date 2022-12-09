@@ -14,6 +14,7 @@ const NewMember = () => {
     const hoy = date.getDate()
     const [classT, setClassT] = useState('innerNew3')
    console.log(typeof id)
+   console.log(group, 'in top of the obj')
     const [newMember,setMember] = useState({
        name: '',
        team_id: id,
@@ -87,7 +88,7 @@ const NewMember = () => {
             imag2: '',
           })
           
-          navigate(`/teams/newMember/${id}`);
+          navigate(`/teams/allMembers/${id}`);
           
           })
       }
@@ -151,7 +152,7 @@ const NewMember = () => {
         fetch(`https://my-baseball-teams.adaptable.app/teams/${id}`)
         .then(res => res.json())
         .then(data =>{
-            setGroup(data.team)
+            setGroup(data.team.name)
         })
   },[id,classT])
 
@@ -197,7 +198,7 @@ function convertFootInCm (height){
   return String(Number(change)*30.48).slice(0, 5)
 }
 
-console.log(newMember )
+console.log(newMember , group)
   return (
     <div className='newMember_Container'>
    
@@ -217,7 +218,7 @@ console.log(newMember )
                                 <input id='age' type="text" onChange={handleInput} value={ newMember.age} placeholder={ !currentAge(age) ? "Age": currentAge(age)} className='inputNew'></input>
                                 <input id='height' type="text" onChange={handleInput} value={newMember.height} placeholder="Height..."  className='inputNew' ></input>
                                 <input id='weight' type="text" onChange={handleInput} value={newMember.weight}  placeholder="Weight..."  className='inputNew' ></input>
-                                <input id='current_team' type="text" onChange={handleInput} value={newMember.current_team} placeholder={group.name} className='inputNew' ></input>
+                                <input id='current_team' type="text" onChange={handleInput} value={newMember.current_team} placeholder={group} className='inputNew' ></input>
                                 <input id='salary' type="text" onChange={handleInput} value={newMember.salary} placeholder="Salary..." className='inputNew' ></input>
                                 <buttom type='submit' className='newMemberButton' onClick={ newMember.name === ''  ?  handleDelete : handleSubmit } >{classT === 'intoFade' ? 'Refresh' : 'Add New'}</buttom>
                                  {/* <buttom type='submit' className='newMemberButton' onClick={handleDelete}  >Refresh</buttom> */}

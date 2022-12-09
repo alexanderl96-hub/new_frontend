@@ -15,7 +15,8 @@ const CreateAccountForm = ({setOpenLoginModal, setLoggedIn, setLoginMessage, set
     const [image, setImage] = useState('');
     const [formMessage, setFormMessage] = useState('');
   
- 
+  
+
      // on unfocus validate username
      const validateUsername = () => {
         if(username.length <  4){
@@ -35,11 +36,13 @@ const CreateAccountForm = ({setOpenLoginModal, setLoggedIn, setLoginMessage, set
 
 
     const createUser = () => {
+        // const formdata = new FormData();
+        // formdata.append('image', userInfo.file);
 
         const reqOptions = {
             method: 'POST', 
             headers: {
-                'Content-Type': 'application/json',
+                'Content-Type': 'application/json', 
             },
             body: JSON.stringify({
                 username, 
@@ -72,11 +75,14 @@ const CreateAccountForm = ({setOpenLoginModal, setLoggedIn, setLoginMessage, set
                 // show toast that user was successfully created 
                 
                 // save access token as a cookie
+                localStorage.setItem('username', data.user.username)
+                localStorage.setItem('userImage', data.user.image)
+                localStorage.setItem('userid', data.user.id)
+                 localStorage.setItem('userEmail', data.user.email)
                 document.cookie = "accessToken=" + data.accessToken;
                 setUser(data.user.username)
                 setUserImage(data.user.image)
                 setUserId(data.user.id)
-               
                 setUserEmail(data.user.email)
                 setLoggedIn(true);
             }
@@ -145,7 +151,7 @@ console.log(image)
         />
         
     </Box>
-    {/* <input type="file"  onChange={(e) => setImage(e.target.files[0].type)}   style={{width: '250px',marginLeft: '50px'}}/>  */}
+    {/* <input type="file"  onChange={handelinputChange} name='file'  style={{width: '250px',marginLeft: '50px'}}/>  */}
     <div onClick={createUser} text="Submit"    className='LoginCreateButton'>Submit</div>
     </div>
   )
