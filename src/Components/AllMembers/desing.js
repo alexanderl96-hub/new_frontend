@@ -6,6 +6,7 @@ import '../text/text.css'
 import './desing.css'
 import { FaPlus, FaTrash,FaUserPlus, FaUserEdit} from 'react-icons/fa';
 import axios from 'axios'
+import { toHaveValue } from '@testing-library/jest-dom/dist/matchers';
 
 
 
@@ -34,6 +35,8 @@ const Desing = ({loggedIn, user, userImage}) => {
     const hoy = date.getDate()
     const [increment, setIncrement] = useState(3)
     const [toggleMenu, setToggleMenu] = useState(false);
+    const [pointer, setPointer] = useState(1)
+    const [finalValue, setFinalValue] = useState(false)
 
     let fisrt = 0
     let params = useParams()
@@ -153,36 +156,26 @@ const Desing = ({loggedIn, user, userImage}) => {
 // example 1: window.getComputedStyle(document.body).getPropertyValue('--color-red')
 // example 2: getComputedStyle(document.documentElement).getPropertyValue('--items-per-screen');
 
-    const size = getComputedStyle(document.documentElement).getPropertyValue('--items-per-screen');
-    console.log(size, 'dive by screen');
+     const size = getComputedStyle(document.documentElement).getPropertyValue('--items-per-screen');
 
      function onHandleClick (e){
        let value = 0
-
-       if(e.target.id === 'next'){
+       let distance = 1
+      
+       if( e.target.id === 'next' && ((newtest.length / size) - pointer) > 1){
          value++
-         setHandel(handel+value)
- 
-        //  if(handel +1 >= newtest.length){
-        //   console.log(handel+1)
-        //    setHandel(0)
+           setPointer(pointer + distance)
+           setHandel(handel+value)
+      
           
-        //  } else if(((newtest.length - ((handel+value)* size))/size) > 1 ){
-        //   setHandel(handel + value)
-
-        //  }else if( handel + value >= 0  && handel + value < size){
-        //   console.log((newtest.length - ((handel+value)* size))/size )
-        //   setHandel((newtest.length - ((handel+value)* size))/size )
-
-        // }else if( handel + 1 < newtest.length && handel + value > 0 ){
-        //   console.log(handel+1)
-        //   setHandel(handel + value)
-        //  }
-        
- 
+         } else if(e.target.id === 'next' && ((newtest.length / size) - pointer) < 1){
+              setHandel(handel + ((newtest.length / size) - pointer))
+              setFinalValue(true)
 
        }else if (e.target.id === 'prev'){
          setHandel(0)
+         setPointer(1)
+         setFinalValue(false)
  
        }
      }
@@ -260,9 +253,11 @@ const Desing = ({loggedIn, user, userImage}) => {
 
 
  
-   console.log(ratingChanged(newI[0]), fisrt, 'check')
-   //  console.log(newComment, commentId, 'check')
+  //  console.log(ratingChanged(newI[0]), fisrt, 'check')
+  //  //  console.log(newComment, commentId, 'check')
 
+   console.log((newtest.length / size) - pointer )
+  console.log(pointer , handel )
 
   return (
    <div className='MainDesing'>
@@ -299,7 +294,7 @@ const Desing = ({loggedIn, user, userImage}) => {
                     })}
                     </div>
                     <div id='next' className='handel next-handle'  >
-                    <div id='next' className='text' onClick={onHandleClick} >&#8250;</div> 
+               {finalValue !== true ? <div id='next' className='text' onClick={onHandleClick} >&#8250;</div> : null}
                   </div>
 
                 </div> 

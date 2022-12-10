@@ -24,7 +24,7 @@ const MemberUpDate = () => {
   let { id } = useParams();
   const [newMember,setMember] = useState({
     name: '',
-    team_id: 0,
+    team_id: id,
     nickname: '',
     imag: '',
     imag2: '',
@@ -46,7 +46,7 @@ const MemberUpDate = () => {
     position: '',
     bats: '',
     throws: '',
-    stats: `${id}`,
+    stats: id,
     about: '',
  })
 
@@ -54,7 +54,7 @@ const MemberUpDate = () => {
 
   const handleInput =(e)=>{
     const {value} = e.target;
-     setMember({...newMember, [e.target.id]: value })
+     setMember({...newMember, [e.target.id] : value })
 }
 
   const handleSubmit = (e) => {
@@ -63,22 +63,23 @@ const MemberUpDate = () => {
     navigate(`/teams/groups/${id}`)
     
   };
-  const updatedTeam = (update, id) => {
-    axios.put(`https://my-baseball-teams.adaptable.app/groups/${id}`, update).then(
+  const updatedTeam = (newMember, id) => {
+    axios.put(`https://my-baseball-teams.adaptable.app/groups/${id}`,newMember).then(
       (res) => {
-        const newTeam = [...newMember];
-        newTeam[id] = update;
-        setMember(newTeam);
+        // const newTeam = [...newMember];
+        // newMember[id] = newMember;
+        setMember(newMember);
       },
       (error) => console.log(error)
     );
   };
-  //  const updatedTeam = (update, id) => {
-  //   axios.put(`http://localhost:9000/groups/${id}`, update).then(
+  //  const updatedTeam = (newMember, id) => {
+  //   axios.put(`http://localhost:9000/groups/${id}`, newMember).then(
   //     (res) => {
-  //       const newTeam = [...newMember];
-  //       newTeam[id] = update;
-  //       setMember(newTeam);
+  //       // const newTeam = [...newMember];
+  //       // console.log(update, 'checkupdate')
+  //       //  newTeam[id] = update;
+  //       setMember(newMember);
   //     },
   //     (error) => console.log(error)
   //   );
@@ -140,7 +141,7 @@ const MemberUpDate = () => {
   //       })
   // },[id])
 
-  console.log()
+  console.log( newMember)
   return (
          <div className='Update_Container'>
              {/* <Navbar /> */}
