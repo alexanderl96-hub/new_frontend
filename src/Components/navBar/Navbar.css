@@ -46,8 +46,12 @@ h1 {
 .navlogIn {
   color: white;
   margin-top: 2px;
-  width: 90px;
+  width: 68px;
+  margin-right: 30px;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  text-align: center;
 }
 .nav:hover {
   border-radius: 10px;

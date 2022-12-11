@@ -20,7 +20,7 @@ function Navbar({setOpenLoginModal, loggedIn, setLoggedIn, user, userImage}) {
     setLoggedIn(false)
     localStorage.removeItem('username')
     localStorage.removeItem('userImage')
-    setGoodBye('GoodBye!')
+    setGoodBye(`GoodBye ${user}`)
   }
 
 useEffect(()=>{
@@ -111,15 +111,16 @@ useEffect(()=>{
            {loggedIn && <button  className='navAddgroup' onClick={logOut} style={{color: 'black', cursor: 'pointer', marginLeft: '-15px' }}>Log out</button> }
            {!loggedIn && <button  className='navAddgroup' onClick={(e)=> setOpenLoginModal(true)}  style={{color: 'black', cursor: 'pointer', marginLeft: '-15px'}}>Log in</button> }
             {/* {!loggedIn  <button  style={{color: 'black'}}>Log in</button>} */}
-            <div className='navlogIn' style={{marginTop:'-1px'}}>
-           {!loggedIn ?  <FaUser  style={{ border:'1px solid white', borderRadius: '50px', fontSize: '25px', padding: '1px', marginRight: '70px'}}/> :
-               <img src={userImage !== '' ? userImage : 'https://d11a6trkgmumsb.cloudfront.net/original/3X/d/8/d8b5d0a738295345ebd8934b859fa1fca1c8c6ad.jpeg'} alt='' 
-                style={{ border:'1px solid white', borderRadius: '50px', height: '27px', marginRight: '70px', width: '27px'}} /> }
-               <p style={{color: 'white', marginTop:'-4px', marginLeft: '-11%'}}>{loggedIn ?  user : goodbye  }</p>
+            <div className='navlogIn' style={{marginTop:'-11px'}}>
+               <div >
+                 {!loggedIn ?  <FaUser  style={{ border:'1px solid white', borderRadius: '50px', fontSize: '25px', padding: '1px',}}/> :
+                   <img src={userImage !== '' ? userImage : 'https://d11a6trkgmumsb.cloudfront.net/original/3X/d/8/d8b5d0a738295345ebd8934b859fa1fca1c8c6ad.jpeg'} alt='' 
+                  style={{ border:'1px solid white', borderRadius: '50px', height: '27px', width: '27px',}} /> }</div>
+
+                 {loggedIn && <div style={{color: 'white',  fontSize: '15px' }}>{ user }</div>}
+                 {!loggedIn && <div style={{color: 'white',  fontSize: '12.5px', letterSpacing: '0.5px' }}>{ goodbye  }</div>}
               </div> 
-            {/* <Link to={'/teams/new'}>
-                <div className='navlogIn'>LOG <FaUser /></div>  
-            </Link> */}
+         
            </div>  
            <div  className={sideNavar} >
                   <div>

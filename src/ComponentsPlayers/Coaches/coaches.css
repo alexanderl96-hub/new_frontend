@@ -22,20 +22,12 @@
   height: 35px;
   border:none;
   padding-left: 5px;
-  transition: all 4s ease-in-out;
+  transition:  all 4s ease-in-out;
   width:350px; 
   margin-left: 147px;
 }
-/* .divForm form input:before{
-  content: "";
-  width:0px;
-  transition: all 4s ease-in-out;;
-}
-.divForm form input:after{
-  content: "";
-  width:350px;
-  transition: all 4s ease-in-out;;
-} */
+
+
  .divMatch{
   width: 120px;
   height: 24px;
@@ -177,7 +169,7 @@
    position: absolute;
    width: 70%;
    margin-top: 740px;
-   min-height: 781px;
+   min-height: 695px;
    -webkit-perspective: 800px;
    -ms-perspective: 800px;
    perspective: 800px;

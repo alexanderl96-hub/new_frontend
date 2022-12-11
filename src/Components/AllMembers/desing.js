@@ -6,7 +6,7 @@ import '../text/text.css'
 import './desing.css'
 import { FaPlus, FaTrash,FaUserPlus, FaUserEdit} from 'react-icons/fa';
 import axios from 'axios'
-import { toHaveValue } from '@testing-library/jest-dom/dist/matchers';
+// import { toHaveValue } from '@testing-library/jest-dom/dist/matchers';
 
 
 
@@ -14,6 +14,7 @@ import { toHaveValue } from '@testing-library/jest-dom/dist/matchers';
 
 const Desing = ({loggedIn, user, userImage}) => {
    const navigate = useNavigate();
+   const screenSize = getComputedStyle(document.documentElement).getPropertyValue('--items-per-screen');
     const [ newI, setNewI]= useState([])
     const [ newtest, setNewtest]= useState([])
     const [nombre, setCoachName] = useState([])
@@ -37,6 +38,7 @@ const Desing = ({loggedIn, user, userImage}) => {
     const [toggleMenu, setToggleMenu] = useState(false);
     const [pointer, setPointer] = useState(1)
     const [finalValue, setFinalValue] = useState(false)
+    const [checkNewText, setCheckNewText] = useState(Number(screenSize))
 
     let fisrt = 0
     let params = useParams()
@@ -156,26 +158,31 @@ const Desing = ({loggedIn, user, userImage}) => {
 // example 1: window.getComputedStyle(document.body).getPropertyValue('--color-red')
 // example 2: getComputedStyle(document.documentElement).getPropertyValue('--items-per-screen');
 
-     const size = getComputedStyle(document.documentElement).getPropertyValue('--items-per-screen');
+   
 
      function onHandleClick (e){
        let value = 0
        let distance = 1
       
-       if( e.target.id === 'next' && ((newtest.length / size) - pointer) > 1){
+       if( e.target.id === 'next' && (checkNewText + Number(screenSize)) <= newtest.length){
          value++
+         
            setPointer(pointer + distance)
            setHandel(handel+value)
-      
+           setCheckNewText(checkNewText + Number(screenSize))
           
-         } else if(e.target.id === 'next' && ((newtest.length / size) - pointer) < 1){
-              setHandel(handel + ((newtest.length / size) - pointer))
+         } else if(e.target.id === 'next' && (checkNewText + Number(screenSize)) > newtest.length){
+          let reduceValues = (newtest.length - checkNewText) / Number(screenSize)
+
+              setHandel(handel + reduceValues)
               setFinalValue(true)
+              setCheckNewText(checkNewText + reduceValues)
 
        }else if (e.target.id === 'prev'){
          setHandel(0)
          setPointer(1)
          setFinalValue(false)
+         setCheckNewText(Number(screenSize))
  
        }
      }
@@ -254,10 +261,10 @@ const Desing = ({loggedIn, user, userImage}) => {
 
  
   //  console.log(ratingChanged(newI[0]), fisrt, 'check')
-  //  //  console.log(newComment, commentId, 'check')
+    console.log( newtest.length, checkNewText, 'checkNewText')
 
-   console.log((newtest.length / size) - pointer )
-  console.log(pointer , handel )
+  //  console.log((newtest.length / size) - pointer )
+  // console.log(pointer , handel )
 
   return (
    <div className='MainDesing'>
