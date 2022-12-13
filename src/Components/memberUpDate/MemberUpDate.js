@@ -74,7 +74,7 @@ const MemberUpDate = () => {
     );
   };
   //  const updatedTeam = (newMember, id) => {
-  //   axios.put(`http://localhost:9000/groups/${id}`, newMember).then(
+  //   axios.put(`http://localhost:9001/groups/${id}`, newMember).then(
   //     (res) => {
   //       // const newTeam = [...newMember];
   //       // console.log(update, 'checkupdate')
