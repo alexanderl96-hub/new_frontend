@@ -309,7 +309,7 @@ import LoadingHome from '../../../src/Loading'
     
       console.log(playerYear, pitcherERA)
   return (
-    <div style={{ minHeight: '811px'}}>
+    <div style={{ minHeight: '831px'}}>
     
       {!countInTimeout ? 
     <div className='MainContStatc'>

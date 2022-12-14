@@ -49,7 +49,7 @@ const EditTeam = () => {
 
 console.log(oldImage, currentName)
   return (
-    <div style={{ minHeight: '811px'}}>
+    <div style={{ minHeight: '831px'}}>
          <div style={{ display:'flex', justifyContent: 'center', 
                       textAlign: 'center', minHeight: '80px', fontSize: '35px', fontFamily: 'Spantaran', margin: '15px'}}>{currentName}</div>
          <div  style={{ display:'flex', justifyContent: 'space-around',  margin: '5%'}} >

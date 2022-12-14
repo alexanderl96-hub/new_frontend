@@ -26,7 +26,7 @@ h1 {
   justify-content: center;
 }
 .navAddgroup {
-  color: white;
+  color:black;
   border-radius: 3px;
   width: 90px;
   height: 30px;
@@ -37,6 +37,8 @@ h1 {
   border-style: solid;
   border-color: white;
   margin-right: 40px;
+  cursor: pointer; 
+  margin-left: -15px;
 }
 .navAddgroup:hover{
     background: white;
@@ -45,13 +47,34 @@ h1 {
 }
 .navlogIn {
   color: white;
-  margin-top: 2px;
+  margin-top: -11px;
   width: 68px;
   margin-right: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
+}
+.fauserIcon{
+  border: 1px solid white; 
+  border-radius: 50px; 
+  font-size: 25px; 
+  padding: 1px;
+}
+.userImageProfile{
+  border: 1px solid white; 
+  border-radius: 50px; 
+  height: 27px; 
+  width: 27px;
+}
+.userHoldInfo{
+  color: white;
+  font-size: 15px;
+}
+.userGoodbyeInfo{
+  color: white;  
+  font-size: 12.5px; 
+  letter-spacing: 0.5px;
 }
 .nav:hover {
   border-radius: 10px;
@@ -145,8 +168,17 @@ h1 {
   filter: invert(100%);
   cursor: pointer;
   visibility: hidden;
- 
 } 
+.setToggleMenu{
+  color: white;
+  list-style: none; 
+  margin-left: -126px;
+  line-height: 33px; 
+  cursor: pointer;
+   width: 50px; 
+   height: 50px;
+}
+
 .submenu{
     float: left;
     margin: 0 auto;
@@ -161,11 +193,9 @@ h1 {
     left: 77.2%;
     z-index: 100;
     -webkit-filter: drop-shadow(0px 2px 4px rgba(130,130,130,1));
-    filter        : drop-shadow(0px 2px 4px rgba(130,130,130,1));
-    /* -ms-filter    : "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=2, Color='#444')";
-    filter        : "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=2, Color='#444')"; */
-  
+    filter        : drop-shadow(0px 2px 4px rgba(130,130,130,1));  
 }
+
 .submenu::before{
   content: "";
   position: relative;
@@ -193,33 +223,52 @@ h1 {
   .navAddgroup {
     margin-left: -110px;
   }
-  /* .navlogIn {
-    color: white;
-    width: 100px;
-    margin-right: -10px;
-  } */
+  .setToggleMenu{
+    margin-left: -210px;
+  }
+  .submenu{
+    left: 67.2%;
+}
 
 }
 
 /*Nest Hub (max-width: 1024px; max-heigth: 600px;)*/
 @media only screen and (max-width: 1024px) {
   .navbar {
-    height: 50px;
+    height: 55px;
   }
-
   .nav-inner {
     font-size: 15px;
   }
   .navAddgroup {
-    font-size: 15px;
-    margin-top: -0.5px;
+    font-size: 14.5px;
+    margin-top: -5px;
   }
-  
- 
+  .setToggleMenu{
+    margin-left: -210px;
+    margin-top: -2px;
+  }
+  .submenu{
+    left: 58.5%;
+}
   .forntLogo{
     margin-top: 2px;
     height: 46px;
     border-radius: 30px;
+  }
+  .userHoldInfo{
+    font-size: 13px;
+  }
+  .userGoodbyeInfo{
+    font-size: 11.5px; 
+  }
+  .fauserIcon{
+    font-size: 23px; 
+
+  }
+  .userImageProfile{
+    height: 25px; 
+    width: 25px;
   }
 }
 

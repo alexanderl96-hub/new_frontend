@@ -70,62 +70,58 @@ useEffect(()=>{
             <NavLink to={`/teams/News`} className='nav-inner' id='news' onClick={(e)=>setMenuIdActive(e.target.id)} >
                <div >NEWS</div>
            </NavLink>
-            {/* <Link to={'/teams/new'}>
-                <div className='navAddgroup'> ADD</div>
-            </Link> */}
             
          </div>
           <div className="nav2">        
-            {/* <Link to={'/teams/new'}>
-                <div className='navAddgroup'> ADD</div>
-            </Link> */}
-              
 
               <div text="More.." path=""  onMouseEnter={()=> setToggleMenu(true)} onMouseLeave={()=> setToggleMenu(false)}>
-                   <div  style={{color: 'white', listStyle: 'none', marginLeft: '-126px',lineHeight: '33px', cursor: 'pointer', width: '50px', height:'50px' }}>{toggleMenu ? "" : " More.."}</div>
+                   <div className="setToggleMenu" >{toggleMenu ? "" : " More.."}</div>
                  {toggleMenu && <div className="submenu" >
                       {/* <div className="submenu__item" id="More..">More..</div> */}
-                      {loggedIn &&  user === 'alexander87' && <Link to={'/teams/new'} style={{ color:'black'}} onClick={()=> setToggleMenu(false)}>
-                      <div className="submenu__item" id="More..">Add New Team</div></Link>}
-                      <NavLink to={'/teams/Favorite'} style={{ color:'black'}} onClick={()=> setToggleMenu(false)} >
-                          <div className="submenu__item">Baseball Favorite</div>
-                      </NavLink>
-                      <NavLink to={'/teams/AllTimes'} style={{ color:'black'}} onClick={()=> setToggleMenu(false)} >
-                          <div className="submenu__item">Baseball All Times</div>
-                      </NavLink>
-                      <NavLink to={'/teams/Legend'} style={{ color:'black'}} onClick={()=> setToggleMenu(false)} >
-                          <div className="submenu__item">Baseball Legend</div>
-                      </NavLink>
+                      {loggedIn &&  user === 'alexander87' && 
+                         <Link to={'/teams/new'} style={{ color:'black'}} onClick={()=> setToggleMenu(false)}>
+                            <div className="submenu__item" id="More..">Add New Team</div>
+                         </Link>}
+                        <NavLink to={'/teams/Favorite'} style={{ color:'black'}} onClick={()=> setToggleMenu(false)} >
+                            <div className="submenu__item">Baseball Favorite</div>
+                        </NavLink>
+                        <NavLink to={'/teams/AllTimes'} style={{ color:'black'}} onClick={()=> setToggleMenu(false)} >
+                            <div className="submenu__item">Baseball All Times</div>
+                        </NavLink>
+                        <NavLink to={'/teams/Legend'} style={{ color:'black'}} onClick={()=> setToggleMenu(false)} >
+                            <div className="submenu__item">Baseball Legend</div>
+                        </NavLink>
                       <hr/>
-                      {loggedIn && <NavLink to={'/teams/Profile'} style={{ color:'black'}} onClick={()=> setToggleMenu(false)} > 
-                      <div className="submenu__item">My Profile</div> </NavLink>}
-                      <NavLink to={'/teams/About'} style={{ color:'black'}} onClick={()=> setToggleMenu(false)}>
-                          <div className="submenu__item">About us </div>
-                      </NavLink>
-                      <NavLink to='/' style={{ color:'black'}} onClick={()=> setToggleMenu(false)}>
-                         <div className="submenu__item">@Sport World</div>
-                      </NavLink>
+                      {loggedIn && 
+                        <NavLink to={'/teams/Profile'} style={{ color:'black'}} onClick={()=> setToggleMenu(false)} > 
+                            <div className="submenu__item">My Profile</div> 
+                        </NavLink>}
+                        <NavLink to={'/teams/About'} style={{ color:'black'}} onClick={()=> setToggleMenu(false)}>
+                            <div className="submenu__item">About us </div>
+                        </NavLink>
+                        <NavLink to='/' style={{ color:'black'}} onClick={()=> setToggleMenu(false)}>
+                          <div className="submenu__item">@Sport World</div>
+                        </NavLink>
                   </div>}
 
             </div>
-           {loggedIn && <button  className='navAddgroup' onClick={logOut} style={{color: 'black', cursor: 'pointer', marginLeft: '-15px' }}>Log out</button> }
-           {!loggedIn && <button  className='navAddgroup' onClick={(e)=> setOpenLoginModal(true)}  style={{color: 'black', cursor: 'pointer', marginLeft: '-15px'}}>Log in</button> }
+           {loggedIn && <button  className='navAddgroup' onClick={logOut} >Log out</button> }
+           {!loggedIn && <button  className='navAddgroup' onClick={(e)=> setOpenLoginModal(true)} >Log in</button> }
             {/* {!loggedIn  <button  style={{color: 'black'}}>Log in</button>} */}
-            <div className='navlogIn' style={{marginTop:'-11px'}}>
+            <div className='navlogIn'>
                <div >
-                 {!loggedIn ?  <FaUser  style={{ border:'1px solid white', borderRadius: '50px', fontSize: '25px', padding: '1px',}}/> :
+                 {!loggedIn ?  <FaUser className="fauserIcon" /> :
                    <img src={userImage !== '' ? userImage : 'https://d11a6trkgmumsb.cloudfront.net/original/3X/d/8/d8b5d0a738295345ebd8934b859fa1fca1c8c6ad.jpeg'} alt='' 
-                  style={{ border:'1px solid white', borderRadius: '50px', height: '27px', width: '27px',}} /> }</div>
+                   className='userImageProfile'  /> }</div>
 
-                 {loggedIn && <div style={{color: 'white',  fontSize: '15px' }}>{ user }</div>}
-                 {!loggedIn && <div style={{color: 'white',  fontSize: '12.5px', letterSpacing: '0.5px' }}>{ goodbye  }</div>}
+                 {loggedIn && <div classNamne='userHoldInfo' >{ user }</div>}
+                 {!loggedIn && <div className='userGoodbyeInfo' >{ goodbye  }</div>}
               </div> 
          
            </div>  
            <div  className={sideNavar} >
                   <div>
-                      <FaHome id="home" onClick={changeNav}/>  
-                      
+                      <FaHome id="home" onClick={changeNav}/>        
                  </div>
                 <div className='entrada'>
                       <div>
