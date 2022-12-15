@@ -109,32 +109,40 @@ useEffect(()=>{
            {!loggedIn && <button  className='navAddgroup' onClick={(e)=> setOpenLoginModal(true)} >Log in</button> }
             {/* {!loggedIn  <button  style={{color: 'black'}}>Log in</button>} */}
             <div className='navlogIn'>
-               <div >
+               <div className='navlogIn-inside'>
                  {!loggedIn ?  <FaUser className="fauserIcon" /> :
                    <img src={userImage !== '' ? userImage : 'https://d11a6trkgmumsb.cloudfront.net/original/3X/d/8/d8b5d0a738295345ebd8934b859fa1fca1c8c6ad.jpeg'} alt='' 
                    className='userImageProfile'  /> }</div>
 
-                 {loggedIn && <div classNamne='userHoldInfo' >{ user }</div>}
+                 {loggedIn && <div className='userHoldInfo' >{ user }</div>}
                  {!loggedIn && <div className='userGoodbyeInfo' >{ goodbye  }</div>}
               </div> 
          
            </div>  
            <div  className={sideNavar} >
-                  <div>
-                      <FaHome id="home" onClick={changeNav}/>        
+                  <div> 
+                    {sideNavar === 'sideNavar' ? 
+                     <FaHome id="home" onClick={changeNav} sx={{transition: 'all 4s ease-in-out'
+                    }}/> : 
+                      <CloseIcon id='home' sx={{
+                        width: 30,
+                        height: 30,
+                        transition: 'all 2s ease-in-out'
+                      }} onClick={changeNav} />   
+                    }
                  </div>
                 <div className='entrada'>
                       <div>
                       <img src={imageLogo} alt="1"  className='topicLogo' />
                       </div>
-                      <NavLink to="/" className='topicLink' >Teams</NavLink>
-                      <NavLink to="/teams/allplayers" className='topicLink' >Players</NavLink>
-                      <NavLink to="/teams/allCoaches" className='topicLink' >Coaches</NavLink>
-                      <NavLink to="/teams/Season" className='topicLink' >Season</NavLink>
-                      <NavLink to="/teams/News" className='topicLink' >News</NavLink>
-                      <NavLink to="/teams/About" className='topicLink' >About</NavLink>
-                      <NavLink to="/teams/new" className='topicLink' >New Team</NavLink>
-                      <NavLink to="" className='topicLink' >Log In</NavLink>
+                      <NavLink to="/" className='topicLink' onClick={changeNav} >Teams</NavLink>
+                      <NavLink to="/teams/allplayers" className='topicLink' onClick={changeNav} >Players</NavLink>
+                      <NavLink to="/teams/allCoaches" className='topicLink' onClick={changeNav} >Coaches</NavLink>
+                      <NavLink to="/teams/Season" className='topicLink' onClick={changeNav} >Season</NavLink>
+                      <NavLink to="/teams/News" className='topicLink' onClick={changeNav} >News</NavLink>
+                      <NavLink to="/teams/About" className='topicLink' onClick={changeNav} >About</NavLink>
+                      {/* <NavLink to="/teams/new" className='topicLink' >New Team</NavLink> */}
+                      {/* <NavLink to="" className='topicLink' >Log In</NavLink> */}
                 </div>
            </div>
            {/* <img src={imageLogo} alt="1"  className='topicLogoFront' /> */}

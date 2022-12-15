@@ -6,6 +6,7 @@
   width: 100%;
   height: 60px;
   box-shadow: 2px 4px 4px black;
+  transition: all 0.5s ease-in-out;
 }
 .nav {
   display: flex;
@@ -261,6 +262,7 @@ h1 {
   }
   .userGoodbyeInfo{
     font-size: 11.5px; 
+    line-height: 10px;
   }
   .fauserIcon{
     font-size: 23px; 
@@ -275,31 +277,35 @@ h1 {
 /*Surface Pro 7  (max-width: 912px; max-heigth: 1368px;)*/
  @media only screen and (max-width: 912px){
   .navbar {
-    height: 70px;
+    height: 65px;
   }
   .nav-inner {
-    margin-top: 2%;
-    font-size: 16px;
-    margin-left: 3px;
+    margin-top: 1.5%;
+    font-size: 15px;
+    margin-left: 1px;
   }
   .nav2 {
-    margin-top: 3.2%;
+    margin-top: 2.5%;
   }
   .navAddgroup {
-    font-size: 16px;
-    margin-top: 1.5px;
+    font-size: 15px;
+    margin-top: 1px;
   }
-  /* .navlogIn {
-    color: white;
-    width: 100px;
-    margin-right: -10px;
-    font-size: 16px;
-  } */
-
+  
+ .setToggleMenu{
+    margin-left: -190px;
+    margin-top: 1px;
+  }
+  .submenu{
+    left: 55.5%;
+}
   .forntLogo{
     margin-top: 6px;
     height: 56px;
     border-radius: 30px;
+  }
+   .userGoodbyeInfo{
+    font-size: 12px; 
   }
  }
 
@@ -308,12 +314,24 @@ h1 {
   .navbar {
     height: 60px;
   }
-
-  .navAddgroup {
-    margin-top: 3px;
-    font-size: 17px;
+  .nav-inner {
+    margin-top: 0.8%;
+    font-size: 14px;
+    margin-left: -13px;
   }
-
+  .navAddgroup {
+    margin-top: -2.5px;
+    font-size: 14px;
+    width: 80px;
+    transition: all 0.5s ease-in-out;
+  }
+ .setToggleMenu{
+    margin-left: -190px;
+    margin-top: -2px;
+  }
+  .submenu{
+    left: 52.5%;
+}
   .forntLogo{
     margin-top: 2px;
     height: 54px;
@@ -327,23 +345,35 @@ h1 {
     height: 55px;
   }
   .nav-inner {
-    margin-top: 0.5%;
-    font-size: 14px;
-    margin-left: -5px;
-  }
-  .nav2 {
-    margin-top: 3.5%;
+    font-size: 13px;
+    margin-left: -18px; 
   }
   .navAddgroup {
     margin-top:-3.7px;
-    font-size: 15px;
+    width: 70px;
+    margin-right: 30px;
   }
-
+  .setToggleMenu{
+    margin-left: -175px;
+    margin-top: -2px;
+    font-size: 14.5px;
+  }
+  .submenu{
+    left: 54%;
+}
   .forntLogo{
     margin-top: 1px;
     height: 54px;
     border-radius: 30px;
   }
+  .navlogIn{
+    width: 60px;
+    margin-right: 30px;
+  }
+  .userHoldInfo{
+    font-size: 14.5px;
+  }
+
 }
 
 /*Surface Duo  (max-width: 540px; max-heigth: 720px;)*/
@@ -354,15 +384,43 @@ h1 {
   .nav-inner {
     margin-top: -1%;
     font-size: 10px;
-    margin-left: -29px;
-  }
-  .nav2 {
-    margin-top: 3.6%;
+    margin-left: -35px;
   }
   .navAddgroup {
-    margin-top: -2.7px;
+    margin-top: -2.5px;
     font-size: 10.5px;
+    width: 55px;
+    margin-right: 10px;
   }
+  .navlogIn{
+    width: 50px;
+    margin-right: 20px;
+  }
+  .setToggleMenu{
+    margin-left: -155px;
+    margin-top: -4px;
+    font-size: 11px;
+  }
+  .fauserIcon{
+    font-size: 23px; 
+  }
+ .userImageProfile{
+    height: 24px; 
+    width: 24px;
+  }
+  .userHoldInfo{
+    font-size: 12px;
+  }
+  .userGoodbyeInfo{
+    font-size: 10px; 
+  } 
+  .submenu{
+    left: 48%;
+    width: 150px;
+}
+.submenu__item{
+  font-size: 12px;
+}
   .navLogo{
     width: 55px;
     margin-right: 10px;
@@ -376,21 +434,25 @@ h1 {
 
    /*iPhone 13 Pro Max  (max-width: 428px; max-heigth: 926px;)*/
    @media only screen and (max-width: 428px){
-    .nav {
+ 
+    .navLogo{
       display: none;
     }
     .nav-inner {
       display: none;
     }
-    .nav2 {
-      display: none;
+    .setToggleMenu{
+      margin-left: -170px;
+      margin-top: -1px;
     }
     .navAddgroup {
-      display: none;
+      margin-top: 2.5%;
     }
-    .navlogIn {
-      display: none;
-    }
+    .submenu{
+      left: 30%;
+
+  }
+
     .nav > a.active {
       display: none;
     }
@@ -398,21 +460,24 @@ h1 {
 .sideNavar{
   background-color: rgba(9, 58, 58, 0.783);
   position: absolute;
-  width: 180px;
+  width: 170px;
   height: 50px;
-  margin-left: -180px;
+  margin-left: -170px;
   transition: all 1.0s linear;
+  z-index: 100;
   visibility: visible;
   
 }
 
  .sideNavar2{
+  float: left;
   background-color: rgba(9, 58, 58, 0.783);
   position: absolute;
-  width: 180px;
-  height: 477px;
+  width: 170px;
+  height: 35.8%;
   margin-left: 0px;
   transition: all 1.0s linear;
+  z-index: 100;
   visibility: visible;
   
 }
@@ -443,7 +508,7 @@ h1 {
 
 #home{
   position: absolute;
-  margin-left: 190px;
+  margin-left: 180px;
   font-size: 20px;
   height: 55px;
   filter: invert(110%);
@@ -455,256 +520,25 @@ h1 {
 
   /*iPhone XR  (max-width: 414px; max-heigth: 896px;)*/
   @media only screen and (max-width: 414px){
-.sideNavar{
-  background-color: rgba(9, 58, 58, 0.783);
-  position: fixed;
-  width: 180px;
-  height: 50px;
-  margin-left: -180px;
-  transition: all 1.0s linear;
-  visibility: visible;
-  
-}
-
- .sideNavar2{
-  background-color: rgba(9, 58, 58, 0.783);
-  position: fixed;
-  width: 180px;
-  height: 477px;
-  margin-left: 0px;
-  transition: all 1.0s linear;
-  visibility: visible;
-  
-}
-.entrada{
-  display: flexbox;
-  text-align: center;
-  visibility: visible;
-  
-}
-.topicLogo{
-  margin-top: 10px;
-  height: 60px;
-  /* filter: invert(100%); */
-  visibility: visible;
- 
-}
-
-.topicLink{
-  display: block;
-  color: white;
-  text-align: center;
-  border-bottom: 1px solid black;
-  padding: 12.1px 10px;
-  list-style: none;
-  font-size: 15.5px;
-  visibility: visible;
-  
-}
-
-#home{
-  position: relative;
-  margin-left: 190px;
-  font-size: 20px;
-  height: 55px;
-  filter: invert(100%);
-  cursor: pointer;
-   visibility: visible;
- 
-}
-  }
-
-  /*Samsung Galaxy S20 Ultra  (max-width: 412px; max-heigth: 915px;)*/
-  /* @media only screen and (max-width: 412px){
-    .navbar {
-      display: flex;
-      flex-direction: row;
-      background-color: gray;
-      height: 50px;
-      box-shadow: 2px 4px 4px black;
-    }
-    .nav {
-      display: flex;
-      color: white;
-    }
-    .nav-inner {
-      margin-top: 1%;
-      font-size: 10.5px;
-      margin-left: -42px;
-    }
-    .nav2 {
-      display: flex;
-      color: white;
-      margin-top: 3.5%;
-      cursor: pointer;
-      font-size: 10.5px;
+    .setToggleMenu{
+      margin-left: -170px;
+      margin-top: 1px;
     }
     .navAddgroup {
-      color: white;
-      border-radius: 3px;
-      text-align: center;
-      margin-left: 40px;
-      cursor: pointer;
-      margin-top: 13%;
-      width: 50px;
+      margin-top: 2.5%;
     }
-    .navlogIn {
-      color: white;
-      width: 50px;
-      font-size: 10.5px;
-      margin-top: 4%;
-    }
-    .nav > a.active {
-      text-decoration: underline;
-      font-weight: bold;
-      margin-top: -0.4%;
-    }
-  } */
+    .submenu{
+      left: 29%;
 
-  /*Samsung Galaxy A51/71  (max-width: 412px; max-heigth: 914px;)*/
-  @media only screen and (max-width: 412px){
-.sideNavar{
-  background-color: rgba(9, 58, 58, 0.783);
-  position: fixed;
-  width: 180px;
-  height: 50px;
-  margin-left: -180px;
-  transition: all 1.0s linear;
-  visibility: visible;
-  
-}
-
- .sideNavar2{
-  background-color: rgba(9, 58, 58, 0.783);
-  position: fixed;
-  width: 180px;
-  height: 476px;
-  margin-left: 0px;
-  transition: all 1.0s linear;
-  visibility: visible;
-  
-}
-.entrada{
-  display: flexbox;
-  text-align: center;
-  visibility: visible;
-  
-}
-.topicLogo{
-  margin-top: 10px;
-  height: 60px;
-  /* filter: invert(100%); */
-  visibility: visible;
- 
-}
-
-.topicLink{
-  display: block;
-  color: white;
-  text-align: center;
-  border-bottom: 1px solid black;
-  padding: 12.1px 10px;
-  list-style: none;
-  font-size: 15.5px;
-  visibility: visible;
-  
-}
-
-#home{
-  position: relative;
-  margin-left: 190px;
-  font-size: 20px;
-  height: 55px;
-  filter: invert(100%);
-  cursor: pointer;
-   visibility: visible;
- 
-}
   }
-
-    /*Pixel 5 (max-width: 393px; max-heigth: 851px;)*/
-    @media only screen and (max-width: 393px){
-.sideNavar{
-  background-color: rgba(9, 58, 58, 0.783);
-  position: fixed;
-  width: 180px;
-  height: 50px;
-  margin-left: -180px;
-  transition: all 1.0s linear;
-  visibility: visible;
-  
-}
-
- .sideNavar2{
-  background-color: rgba(9, 58, 58, 0.783);
-  position: fixed;
-  width: 180px;
-  height: 469px;
-  margin-left: 0px;
-  transition: all 1.0s linear;
-  visibility: visible;
-  
-}
-.entrada{
-  display: flexbox;
-  text-align: center;
-  visibility: visible;
-  
-}
-.topicLogo{
-  margin-top: 10px;
-  height: 60px;
-  /* filter: invert(100%); */
-  visibility: visible;
- 
-}
-
-.topicLink{
-  display: block;
-  color: white;
-  text-align: center;
-  border-bottom: 1px solid black;
-  padding: 12.1px 10px;
-  list-style: none;
-  font-size: 14.5px;
-  visibility: visible;
-  
-}
-
-#home{
-  position: relative;
-  margin-left: 190px;
-  font-size: 20px;
-  height: 55px;
-  filter: invert(100%);
-  cursor: pointer;
-   visibility: visible;
- 
-}
-    }
-
-  /*iPhone 12 Pro  (max-width: 390px; max-heigth: 844px;)*/
-  @media only screen and (max-width: 390px){
     .sideNavar{
-      background-color: rgba(9, 58, 58, 0.783);
-      position: fixed;
-      width: 180px;
-      height: 50px;
-      margin-left: -180px;
-      transition: all 1.0s linear;
-      visibility: visible;
-      
+      width: 160px;
+      margin-left: -160px;
     }
-    
-     .sideNavar2{
-      background-color: rgba(9, 58, 58, 0.783);
-      position: fixed;
-      width: 180px;
-      height: 470px;
+    .sideNavar2{
+      width: 160px;
+      height: 37.1%;
       margin-left: 0px;
-      transition: all 1.0s linear;
-      visibility: visible;
-      
     }
     .entrada{
       display: flexbox;
@@ -715,11 +549,133 @@ h1 {
     .topicLogo{
       margin-top: 10px;
       height: 60px;
-      /* filter: invert(100%); */
+      visibility: visible;
+    
+    }
+    .topicLink{
+      display: block;
+      color: white;
+      text-align: center;
+      border-bottom: 1px solid black;
+      padding: 12.1px 10px;
+      list-style: none;
+      font-size: 15.5px;
+      visibility: visible;
+      
+    }
+    #home{
+      margin-left: 165px;
+    }
+  }
+
+  /*Samsung Galaxy S20 Ultra  (max-width: 412px; max-heigth: 915px;)*/
+  /* @media only screen and (max-width: 412px){
+   
+  } */
+
+  /*Samsung Galaxy A51/71  (max-width: 412px; max-heigth: 914px;)*/
+  @media only screen and (max-width: 412px){
+    .submenu{
+      left: 28%;
+   }
+    .sideNavar2{
+      height: 36.25%;
+    }
+    .entrada{
+      display: flexbox;
+      text-align: center;
+      visibility: visible;
+      
+    }
+    .topicLogo{
+      margin-top: 10px;
+      height: 60px;
+      visibility: visible;
+    
+    }
+
+    .topicLink{
+      display: block;
+      color: white;
+      text-align: center;
+      border-bottom: 1px solid black;
+      padding: 12.1px 10px;
+      list-style: none;
+      font-size: 15.5px;
+      visibility: visible;
+      
+    }
+   
+  }
+
+    /*Pixel 5 (max-width: 393px; max-heigth: 851px;)*/
+    @media only screen and (max-width: 393px){
+      .setToggleMenu{
+        margin-left: -165px;
+        margin-top: 1px;
+      }
+      .navAddgroup {
+        margin-top: 2.9%;
+      }
+      .submenu{
+        left: 25.8%;
+  
+    }
+      .sideNavar{
+        width: 150px;
+        margin-left: -150px;
+      }
+      .sideNavar2{
+        width: 150px;
+        height: 38.25%;
+      }
+      .entrada{
+        display: flexbox;
+        text-align: center;
+        visibility: visible;
+        
+      }
+      .topicLogo{
+        margin-top: 10px;
+        height: 60px;
+        visibility: visible;
+      
+      }
+
+      .topicLink{
+        display: block;
+        color: white;
+        text-align: center;
+        border-bottom: 1px solid black;
+        padding: 12.1px 10px;
+        list-style: none;
+        font-size: 14.5px;
+        visibility: visible;
+        
+      }
+      #home{
+        margin-left: 155px;
+      }
+    }
+
+  /*iPhone 12 Pro  (max-width: 390px; max-heigth: 844px;)*/
+  @media only screen and (max-width: 390px){
+  
+     .sideNavar2{
+      height: 38.56%;
+    }
+    .entrada{
+      display: flexbox;
+      text-align: center;
+      visibility: visible;
+      
+    }
+    .topicLogo{
+      margin-top: 10px;
+      height: 60px;
       visibility: visible;
      
     }
-    
     .topicLink{
       display: block;
       color: white;
@@ -731,41 +687,21 @@ h1 {
       visibility: visible;
       
     }
-    
-    #home{
-      position: relative;
-      margin-left: 190px;
-      font-size: 20px;
-      height: 55px;
-      filter: invert(100%);
-      cursor: pointer;
-       visibility: visible;
-     
-    }
+
   }
 
    /*iPhone SE (max-width: 375px; max-heigth: 667px;)*/
    @media only screen and (max-width: 375px){
-    .sideNavar{
-      background-color: rgba(9, 58, 58, 0.783);
-      position: fixed;
-      width: 180px;
-      height: 50px;
-      margin-left: -180px;
-      transition: all 1.0s linear;
-      visibility: visible;
-      
+    .navlogIn{
+      margin-right: 10px;
     }
-    
+    .sideNavar{
+      width: 135px;
+      margin-left: -135px;
+    }
      .sideNavar2{
-      background-color: rgba(9, 58, 58, 0.783);
-      position: fixed;
-      width: 180px;
-      height: 432.5px;
-      margin-left: 0px;
-      transition: all 1.0s linear;
-      visibility: visible;
-      
+      width: 135px;
+      height: 44.16%;     
     }
     .entrada{
       display: flexbox;
@@ -791,42 +727,25 @@ h1 {
       font-size: 14px;
       visibility: visible;
       
-    }
-    
+    } 
     #home{
-      position: relative;
-      margin-left: 190px;
-      font-size: 20px;
-      height: 55px;
-      filter: invert(100%);
-      cursor: pointer;
-       visibility: visible;
-     
+      margin-left: 140px;
     }
    }
 
    /*Samsung Galaxy S8+  (max-width: 360px; max-heigth: 740px;)*/
 @media only screen and (max-width: 360px){
+  .setToggleMenu{
+    margin-left: -175px;
+    margin-top: 1px;
+  }
 .sideNavar{
-  background-color: rgba(9, 58, 58, 0.783);
-  position: fixed;
-  width: 180px;
-  height: 50px;
-  margin-left: -180px;
-  transition: all 1.0s linear;
-  visibility: visible;
-  
+  width: 130px;
+  margin-left: -130px;
 }
-
  .sideNavar2{
-  background-color: rgba(9, 58, 58, 0.783);
-  position: fixed;
-  width: 180px;
-  height: 434px;
-  margin-left: 0px;
-  transition: all 1.0s linear;
-  visibility: visible;
-  
+  width: 130px;
+  height: 40%;  
 }
 .entrada{
   display: flexbox;
@@ -837,7 +756,6 @@ h1 {
 .topicLogo{
   margin-top: 8px;
   height: 50px;
-  /* filter: invert(100%); */
   visibility: visible;
  
 }
@@ -853,78 +771,38 @@ h1 {
   visibility: visible;
   
 }
-
 #home{
-  position: relative;
-  margin-left: 190px;
-  font-size: 20px;
-  height: 55px;
-  filter: invert(100%);
-  cursor: pointer;
-   visibility: visible;
- 
+  margin-left: 137px;
 }
 
 }
 
  /*Galaxy Fold (max-width: 280px; max-heigth: 653px;)*/
  @media only screen and (max-width: 280px){
+  .nav{
+    display: none;
+  }
 .sideNavar{
-  background-color: rgba(9, 58, 58, 0.783);
-  position: fixed;
-  width: 140px;
-  height: 50px;
-  margin-left: -140px;
-  transition: all 1.0s linear;
-  visibility: visible;
-  
+  display: none;
 }
-
  .sideNavar2{
-  background-color: rgba(9, 58, 58, 0.783);
-  position: fixed;
-  width: 140px;
-  height: 407px;
-  margin-left: 0px;
-  transition: all 1.0s linear;
-  visibility: visible;
-  
+  display: none;
 }
 .entrada{
-  display: flexbox;
-  text-align: center;
-  visibility: visible;
-  
+  display: none;
 }
 .topicLogo{
-  margin-top: 8px;
-  height: 50px;
-  /* filter: invert(100%); */
-  visibility: visible;
+  display: none;
  
 }
 
 .topicLink{
-  display: block;
-  color: white;
-  text-align: center;
-  border-bottom: 1px solid black;
-  padding: 10.1px 10px;
-  list-style: none;
-  font-size: 13.5px;
-  visibility: visible;
+  display: none;
   
 }
 
 #home{
-  position: relative;
-  margin-left: 155px;
-  font-size: 18px;
-  height: 45px;
-  filter: invert(100%);
-  cursor: pointer;
-   visibility: visible;
- 
+  display: none;
 }
  }
 
