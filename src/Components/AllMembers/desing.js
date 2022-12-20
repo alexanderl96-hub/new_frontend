@@ -120,15 +120,18 @@ const Desing = ({loggedIn, user, userImage}) => {
       else if(a>= 0.10){ rest = 0.0}
       return rest
     }; 
-    const articule = (artist) => {
-        let pro = "" ;
-        let allt = artist.split(" ");
-        if(allt.length >= 3){
-          pro = allt[0] +' '+ allt[1]
-        }else{
-          pro = allt.join(' ')
-        }
-        return pro
+    const handelNameLen = (artist) => {
+      console.log( artist.split(' ').slice(0,1).join(' '))
+      return artist.split(' ').slice(0,2).join(' ')
+
+        // let pro = "" ;
+        // let allt = artist.split(" ");
+        // if(allt.length >= 3){
+        //   pro = allt[0] +' '+ allt[1]
+        // }else{
+        //   pro = allt.join(' ')
+        // }
+        // return pro
       };
 
     // function nextrow (){
@@ -270,17 +273,12 @@ const Desing = ({loggedIn, user, userImage}) => {
    <div className='MainDesing'>
 
        
-           <div style={{display:'flex', flexDirection: 'row'}}>
-             <div style={{width: '12%', height: '145px',}}>
+           <div style={{display:'flex', flexDirection: 'row'}} >
+             <div className="allmembersFlag">
              {group.map((a,i)=>{
                      return(
                        <div >
-                         <img src={a.imag} alt='' style={{width: '143%', 
-                         height: '145px', background: 'white', borderStyle:'solid ', 
-                         borderBottomColor: 'black',
-                         borderLeftColor: 'transparent',
-                         borderRightColor: 'black',
-                         borderTopColor: 'transparent'}}  />
+                         <img src={a.imag} alt=''  className="allmembersFlag-inner" />
                        </div>
                      )
                    })}
@@ -312,10 +310,8 @@ const Desing = ({loggedIn, user, userImage}) => {
         <div className='desingIcon'>
 
         {loggedIn && user === 'alexander87' && 
-        <div text="More.." path=""   onMouseLeave={()=> setToggleMenu(false)} style={{width: '100%'}}>
-                   <div  style={{ fontSize: '20px',color: 'white', listStyle: 'none',marginLeft: '88%',
-                   lineHeight: '33px', cursor: 'pointer', width:'110px',paddingLeft: '10px', 
-                   alignItems: 'center',  height:'40px', border: '1px solid white', borderRadius: '30px', backgroundColor: '#070f3c' }}  onMouseEnter={()=> setToggleMenu(true)}>{toggleMenu ? "" : " Options"}</div>
+        <div text="More.." path=""   onMouseLeave={()=> setToggleMenu(false)}  className='optionsContent'>
+                   <div   className='optionContent-inner' onMouseEnter={()=> setToggleMenu(true)}>{toggleMenu ? "" : " Options"}</div>
                 {toggleMenu &&   <div className="submenu2" >
                       {/* <div className="submenu__item" id="More..">More..</div> */}
                      <Link to={`/teams/newMember/${teamId}`} id={teamId} style={{ color:'black'}} onClick={()=> setToggleMenu(false)}>
@@ -326,15 +322,7 @@ const Desing = ({loggedIn, user, userImage}) => {
                       <Link to={`/`} id={teamId} style={{ color:'black'}} onClick={()=> setToggleMenu(false)} >
                           <div className="submenu2__item" onClick={handleDelete}>Delete Team</div>
                       </Link>
-                      {/* <NavLink to={'/teams/Legend'} style={{ color:'black'}} onClick={()=> setToggleMenu(false)} >
-                          <div className="submenu__item">Baseball Legend</div>
-                      </NavLink>
-                      <hr/>
-                      {loggedIn && <NavLink to={'/teams/Profile'} style={{ color:'black'}} onClick={()=> setToggleMenu(false)} > 
-                      <div className="submenu__item">My Profile</div> </NavLink>}
-                      <NavLink to={'/teams/About'} style={{ color:'black'}} onClick={()=> setToggleMenu(false)}>
-                          <div className="submenu__item">About us </div>
-                      </NavLink> */}
+                      
                       <Link to='/' style={{ color:'black'}} onClick={()=> setToggleMenu(false)}>
                          <div className="submenu__item">@Sport World</div>
                       </Link>
@@ -351,15 +339,15 @@ const Desing = ({loggedIn, user, userImage}) => {
          
                { search > 0 ? nombre.map((a, i)=>{
                 return(
-                    <div>
+                    <div onClick={handelNameLen}>
                        {search === a.id ?
                           <div className="section2Container">   
                
                           <div className="innerSection2">
                               <div className="inner-innersection2">
-                               <img src={a.imag} alt='' className ='image' />
+                               <img src={a.imag} alt='' className='image' />
                               </div>
-                              <h3 className="innersection2H3" >{articule(a.name)}</h3>
+                              <h3 className="innersection2H3" >{handelNameLen(a.name)}</h3>
                           </div>
                           <div >
                             <div className='innerSection2-3'> 
@@ -385,15 +373,15 @@ const Desing = ({loggedIn, user, userImage}) => {
                        </div>
                    </div> : null}
                     </div>
-                )}) : <div style={{minHeight: '370px'}}>  
+                )}) : <div className="section2-first">  
                    {newtest.slice(0,1).map((a,i)=>{
                      return(
-                       <div className="section2Container" >
+                       <div className="section2Container" onClick={handelNameLen}>
                           <div className="innerSection2">
                                   <div className="inner-innersection2">
-                                  <img src={a.imag} alt='' className ='image' />
+                                  <img src={a.imag} alt='' className='image' />
                                   </div>
-                                  <h3 className="innersection2H3" >{articule(a.name)}</h3>
+                                  <h3 className="innersection2H3" >{handelNameLen(a.name)}</h3>
                               </div>
                               <div >
                             <div className='innerSection2-3'> 

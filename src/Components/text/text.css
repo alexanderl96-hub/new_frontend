@@ -117,3 +117,12 @@ p{
     background-color: rgb(229, 226, 226); 
     filter: drop-shadow(8px 8px 10px gray);
 }
+
+  /*Nest Hub Max (max-width: 1280px; max-heigth: 800px;)*/
+@media only screen and (max-width: 1280px){
+    .container{
+        width: 85%;
+        margin-left: 15%;
+    }
+    
+}

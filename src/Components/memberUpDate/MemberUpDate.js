@@ -24,7 +24,7 @@ const MemberUpDate = () => {
   let { id } = useParams();
   const [newMember,setMember] = useState({
     name: '',
-    team_id: id,
+    team_id: member,
     nickname: '',
     imag: '',
     imag2: '',

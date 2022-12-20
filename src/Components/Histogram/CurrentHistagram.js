@@ -312,8 +312,11 @@ import LoadingHome from '../../../src/Loading'
     <div style={{ minHeight: '831px'}}>
     
       {!countInTimeout ? 
-    <div className='MainContStatc'>
-        <div>
+
+     
+          <div className='MainContStatc'>
+             
+            <div>
                 { pitcherYear.length > 0 ? 
                 <div className='pitcherCarStatc'>
                 <Chart
@@ -326,7 +329,7 @@ import LoadingHome from '../../../src/Loading'
                 <p >Career Pitcher Stats </p>
                 <p >Evaluation of the last 5 years.</p>
                 
-            </div> :null}
+            </div> : <div>No Data</div>}
                 
             
                 {playerYear.length > 0 ?   
@@ -341,35 +344,35 @@ import LoadingHome from '../../../src/Loading'
                     <p >Career Player Stats</p>
                     <p >Evaluation of the last 5 years.</p>
                 </div>      
-                : null}
+                : <div>No Data</div>}
            
           </div>
           <div>
           
-           { currentDate.length > 0 ? 
-                <div className='currStatc'>
-                <Chart
-                chartType="Line"
-                width='100%'
-                height="450px"
-                data={ dataCurrent }
-                options={options}
-                />
-                <p > Player Current Season</p>
-                <p >Evaluation of the last 10 games.</p>
-            </div> :null}
-            { currPitDate.length > 0 ? 
-                <div className='currStatc'>
-                <Chart
-                chartType="Line"
-                width='100%'
-                height="450px"
-                data={ dataCurrPit }
-                options={options}
-                />
-                <p > Pitcher Current Season</p>
-                 <p >Evaluation of the last 10 games.</p>
-            </div> :null}
+                { currentDate.length > 0 ? 
+                      <div className='currStatc'>
+                      <Chart
+                      chartType="Line"
+                      width='100%'
+                      height="450px"
+                      data={ dataCurrent }
+                      options={options}
+                      />
+                      <p > Player Current Season</p>
+                      <p >Evaluation of the last 10 games.</p>
+                  </div> :null}
+                { currPitDate.length > 0 ? 
+                    <div className='currStatc'>
+                    <Chart
+                    chartType="Line"
+                    width='100%'
+                    height="450px"
+                    data={ dataCurrPit }
+                    options={options}
+                    />
+                    <p > Pitcher Current Season</p>
+                    <p >Evaluation of the last 10 games.</p>
+                  </div> :null}
            </div>
     </div> : <div className='LoadingFrontH'><LoadingHome/></div>}
   </div>
