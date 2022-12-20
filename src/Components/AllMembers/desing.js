@@ -329,10 +329,7 @@ const Desing = ({loggedIn, user, userImage}) => {
                   </div>}
 
             </div>}
-{/*     
-   {loggedIn && user === 'alexander87' && <Link to={`/teams/newMember/${teamId}`} id={teamId} className='newadded'> <FaUserPlus /></Link> }
-   {loggedIn && user === 'alexander87' &&  <Link to={`/teams/EditTeam/${teamId}`} id={teamId} className='editTeam'> <FaUserEdit /></Link> }
-      {loggedIn && user === 'alexander87' && <Link to={`/`} id={teamId} className='trash' onClick={handleDelete}> <FaTrash /></Link>} */}
+
         </div>
 
         <div className="section2"> 
@@ -414,11 +411,10 @@ const Desing = ({loggedIn, user, userImage}) => {
         </div>
 
         
-        <div style={{marginBottom: '30px'}} >
-          <div style={{display: 'flex', justifyContent: 'center', textAlign: 'center', marginTop: '5%', }}>
-                   <h3 style={{color: 'white', fontSize: '20px', width: '200px', height: '40px', border: '2px solid', 
-                   borderRadius: '10px', backgroundColor: '#070f3c', paddingTop: '6px', cursor: 'pointer' }} onClick={handelOpen } >Comments 
-                   {!open1 ? <FaPlus  style={{marginLeft: '10px', paddingTop: '6px'}} /> : null}</h3>
+        <div  className='commentsContainer' >
+          <div  className="commentsContainer-inner" >
+                   <h3 className='inner-H3' onClick={handelOpen } >Comments 
+                   {!open1 ? <FaPlus  className='inner-H3-FaIcon' /> : null}</h3>
           </div>
           <div style={{display:'flex', textAlign: 'center', justifyContent: 'center', marginBottom: '20px'}}  >
          { open1 ? 

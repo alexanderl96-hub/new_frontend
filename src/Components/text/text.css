@@ -126,3 +126,12 @@ p{
     }
     
 }
+/*Surface Pro 7  (max-width: 912px; max-heigth: 1368px;)*/
+@media only screen and (max-width: 912px){
+    :root{
+        --items-per-screen:6;
+    }
+    .slider{
+        --items-per-screen:6;
+    }
+}
