@@ -44,6 +44,8 @@ const Footer = () => {
                  </div>
                  <div className='legal-yearLogo'>
                      <p> &copy; {new Date().getFullYear()} Sport World. All rights reserved.</p>
+                     <p > <a href='https://www.linkedin.com/in/alexander-la-rosa-p%C3%A9rez-2b36a085/' className='bycreator'
+                    >&copy;byAlexWeb</a></p>
                  </div>
                 
              </div>

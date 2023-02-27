@@ -332,6 +332,53 @@
     margin-left: 10px; 
     padding-top: 6px;
 }
+
+
+.commentsFormContainer{
+    display: flex;
+     text-align: center; 
+     justify-content: center; 
+     margin-bottom: 20px;
+}
+.commentsFormContainer > form {
+    display: flex; 
+    flex-direction: column; 
+    padding: 7px; 
+    width: 430px;  
+    height: 420px; 
+    background-color: white;  
+    align-items: center; 
+    justify-content: center; 
+    border: 2.5px solid black;
+}
+.commentsFormContainer > form > h4 {
+    color:  #6c6c6c;
+}
+.commentsFormContainer > form > input {
+    width: 300px; 
+    border: 0.5px solid #BaBaBa; 
+    height: 40px; 
+    color: #6c6c6c; 
+    margin-bottom:4px;
+}
+.commentsFormContainer > form > textarea {
+    width: 300px; 
+    height: 220px; 
+    border: 0.5px solid #BaBaBa; 
+    color: #6c6c6c; 
+    margin-bottom: 4px;
+}
+.commentsFormContainer > form > button {
+    height: 40px; 
+    margin-top: 7px;
+    width: 300px; 
+    border: 0.5px solid #BaBaBa; 
+    color: white; 
+    cursor: pointer; 
+    background-color: #371F76; 
+    margin-bottom: 4px;
+}
+
   /*Nest Hub Max (max-width: 1280px; max-heigth: 800px;)*/
   @media only screen and (max-width: 1280px){
     .MainDesing{
@@ -953,15 +1000,35 @@
         margin: 3px;
         font-size: 19px;
     }
+    
     .changeMore{
         margin-top: -5px;
         font-size: 19px;
     }
+
     .innerSectionStart{
-        margin-top: 5px;
-        text-align: center;
-         margin-left: 20px;
+        margin-top: 10px;
+        margin-left: 37.5%;
     }
+    .commentsContainer-inner{
+        margin-top: 15%;
+    }
+
+  .inner-H3-FaIcon{
+        align-items: center;
+        font-size: 18px;
+        margin-left: 7px;
+    }
+
+.commentsFormContainer{
+    display: flex;
+     text-align: center; 
+     justify-content: center; 
+     margin-bottom: 20px;
+}
+
+
+
     .miFlag {
         display:flex;
         justify-content: center;

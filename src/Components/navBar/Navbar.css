@@ -108,11 +108,11 @@ h1 {
 }
 .nav > a.active {
   text-decoration: underline;
-  color: rgb(77, 76, 76);
+  color: #4d4c4c;
   font-weight: bold;
 }
 .nav > a:hover{
-  color: rgb(4,122,255);
+  color: #047aff;
 }
 
 .sideNavar{

@@ -416,49 +416,43 @@ const Desing = ({loggedIn, user, userImage}) => {
                    <h3 className='inner-H3' onClick={handelOpen } >Comments 
                    {!open1 ? <FaPlus  className='inner-H3-FaIcon' /> : null}</h3>
           </div>
-          <div style={{display:'flex', textAlign: 'center', justifyContent: 'center', marginBottom: '20px'}}  >
+          <div  className='commentsFormContainer' >
          { open1 ? 
-                    <form style={{ display:'flex', flexDirection: 'column', padding: '7px', 
-                                     width: '430px',  height: '420px',backgroundColor: 'white',  alignItems: 'center', 
-                                     justifyContent: 'center', border: '2.5px solid black'}}onSubmit={handleSubmit}>
-                       
-                   
-                            <h4 style={{color: ' #6c6c6c'}}>Leave your comment here</h4>
-                            <input id='username'
+                    <form  onSubmit={handleSubmit}>          
+                            <h4 >Leave your comment here</h4>
+                          {loggedIn &&   <input id='username'
                                    type='text' 
                                    onChange={handleInput}
                                     value={newComment.username }
-                                   style={{display:'none', width: '300px', border: '0.5px solid #BaBaBa', height: '40px', color: '#6c6c6c', marginBottom:'4px'}}
                                    placeholder='Username...'
-                                    />
+                                   style={{display: 'none'}}
+                                    />}
                          {!loggedIn &&    <input id='username'
                                    type='text' 
                                    onChange={handleInput}
                                     value={newComment.username }
-                                   style={{ width: '300px', border: '0.5px solid #BaBaBa', height: '40px', color: '#6c6c6c', marginBottom:'4px'}}
                                    placeholder='Username...'
                                     />}
 
-                            <input id='memberid' 
+                        {loggedIn &&  <input id='memberid' 
                                    type='text' 
                                    onChange={handleInput} 
                                     value={newComment.memberid }
-                                       style={{ display:'none', width: '300px', border: '0.5px solid #BaBaBa', height: '40px', color: '#6c6c6c',marginBottom:'4px'}}
+                                    style={{display: 'none'}}
                                 
-                                   />
+                                   />}
                        
-                            <input id='userimage' 
+                       {loggedIn &&    <input id='userimage' 
                                    type='text' 
                                    onChange={handleInput} 
                                     value={newComment.userimage} 
-                                    style={{ display:'none',width: '300px', border: '0.5px solid #BaBaBa', height: '40px', color: '#6c6c6c',marginBottom:'4px'}}
                                     placeholder='User image link url...'
-                                   />
-                             {!loggedIn  && <input id='userimage' 
+                                     style={{display: 'none'}}
+                                   />}
+                      {!loggedIn  && <input id='userimage' 
                                    type='text' 
                                    onChange={handleInput} 
                                     value={newComment.userimage} 
-                                    style={{width: '300px', border: '0.5px solid #BaBaBa', height: '40px', color: '#6c6c6c',marginBottom:'4px'}}
                                     placeholder='User image link url...'
                                    />}
                             <textarea id='comment' 
@@ -467,10 +461,9 @@ const Desing = ({loggedIn, user, userImage}) => {
                                       placeholder='Message...' 
                                       required 
                                        value={newComment.comment}
-                                       style={{ width: '300px', height: '220px', border: '0.5px solid #BaBaBa', color: '#6c6c6c', marginBottom:'4px'}}
+                                     
                                       />
-                            <button type='submit' value="Send" onSubmit={handleSubmit} style={{height: '40px', marginTop: '7px',
-                             width: '300px', border: '0.5px solid #BaBaBa', color: 'white', cursor: 'pointer', backgroundColor: '#371F76', marginBottom:'4px'}} >Submit</button>
+                            <button type='submit' value="Send" onSubmit={handleSubmit} >Submit</button>
                    
                     </form>
                : null }
@@ -483,7 +476,8 @@ const Desing = ({loggedIn, user, userImage}) => {
                                 display: 'flex', flexDirection: 'column' , padding: '4px', cursor: 'pointer', backgroundColor:'#fff'}}>
                         <div style={{margin: '5px', fontSize: '15px'}}>{a.username}</div>
                         <div style={{padding: '3px', display: 'flex',  flexDirection: 'column', justifyContent: 'center', alignItems:'center', flexWrap: 'wrap' }}>
-                            <img src={a.userimage ? a.userimage : 'https://d11a6trkgmumsb.cloudfront.net/original/3X/d/8/d8b5d0a738295345ebd8934b859fa1fca1c8c6ad.jpeg'} alt ='' style={{ height: '90px', width: '90px', borderRadius: '10px', backgroundPosition: 'center',
+                            <img src={a.userimage ? a.userimage : 'https://d11a6trkgmumsb.cloudfront.net/original/3X/d/8/d8b5d0a738295345ebd8934b859fa1fca1c8c6ad.jpeg'} alt =''
+                             style={{ height: '90px', width: '90px', borderRadius: '10px', backgroundPosition: 'center',
   backgroundSize: '100% 100%'}} />
                           <div style={{display:'flex', textAlign: 'justify', marginTop: '8px', fontSize: '12.7px', }} onClick={handelOpen2 }>{ open2 ? a.comment : aboutLength(a.comment)}</div> 
                             <div style={{fontSize: '13px',  marginTop: '5px'}}>{a.date}</div>
