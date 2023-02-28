@@ -11,6 +11,7 @@ function Navbar({setOpenLoginModal, loggedIn, setLoggedIn, user, userImage}) {
   const [menuIdActive, setMenuIdActive] = useState('')
   const [sideNavar, setSideNavar]= useState('sideNavar')
   const [goodbye, setGoodBye] = useState('')
+  const [welcome, setWelcome] = useState('')
   const [toggleMenu, setToggleMenu] = useState(false);
 
 
@@ -20,7 +21,7 @@ function Navbar({setOpenLoginModal, loggedIn, setLoggedIn, user, userImage}) {
     setLoggedIn(false)
     localStorage.removeItem('username')
     localStorage.removeItem('userImage')
-    setGoodBye(`GoodBye ${user}`)
+    setGoodBye(`GoodBye ${user.length > 8 ? user.split(' ').slice(0,1).join('') : user }`)
   }
 
 useEffect(()=>{
@@ -28,6 +29,13 @@ useEffect(()=>{
     setTimeout(() => {
       setGoodBye('')
     }, 2000);
+  }
+})
+useEffect(()=>{
+  if(loggedIn){
+    setTimeout(() => {
+      setWelcome(`${user.length > 8 ? user.split(' ').slice(0,1).join('') : user }`)
+    }, 1300);
   }
 })
   
@@ -41,9 +49,10 @@ useEffect(()=>{
   }
   function handleClickModal (){
     setOpenLoginModal(true)
+    setWelcome('Welcome')
   }
   
-
+console.log(user.length > 8 ? user.split(' ').slice(0,1).join('') : user , 'check user name length')
 
   return (
     <div className="navbar">
@@ -78,7 +87,7 @@ useEffect(()=>{
                    <div className="setToggleMenu" >{toggleMenu ? "" : " More.."}</div>
                  {toggleMenu && <div className="submenu" >
                       {/* <div className="submenu__item" id="More..">More..</div> */}
-                      {loggedIn &&  user === 'alexander87' && 
+                      {loggedIn &&  user === 'alexander perez' && 
                          <Link to={'/teams/new'} style={{ color:'black'}} onClick={()=> setToggleMenu(false)}>
                             <div className="submenu__item" id="More..">Add New Team</div>
                          </Link>}
@@ -106,7 +115,7 @@ useEffect(()=>{
 
             </div>
            {loggedIn && <button  className='navAddgroup' onClick={logOut} >Log out</button> }
-           {!loggedIn && <button  className='navAddgroup' onClick={(e)=> setOpenLoginModal(true)} >Log in</button> }
+           {!loggedIn && <button  className='navAddgroup' onClick={handleClickModal} >Log in</button> }
             {/* {!loggedIn  <button  style={{color: 'black'}}>Log in</button>} */}
             <div className='navlogIn'>
                <div className='navlogIn-inside'>
@@ -114,7 +123,7 @@ useEffect(()=>{
                    <img src={userImage !== '' ? userImage : 'https://d11a6trkgmumsb.cloudfront.net/original/3X/d/8/d8b5d0a738295345ebd8934b859fa1fca1c8c6ad.jpeg'} alt='' 
                    className='userImageProfile'  /> }</div>
 
-                 {loggedIn && <div className='userHoldInfo' >{ user }</div>}
+                 {loggedIn && <div className='userHoldInfo' >{ welcome }</div>}        
                  {!loggedIn && <div className='userGoodbyeInfo' >{ goodbye  }</div>}
               </div> 
          

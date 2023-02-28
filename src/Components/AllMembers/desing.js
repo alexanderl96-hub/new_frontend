@@ -309,7 +309,7 @@ const Desing = ({loggedIn, user, userImage}) => {
        
         <div className='desingIcon'>
 
-        {loggedIn && user === 'alexander87' && 
+        {loggedIn && user === 'alexander perez' && 
         <div text="More.." path=""   onMouseLeave={()=> setToggleMenu(false)}  className='optionsContent'>
                    <div   className='optionContent-inner' onMouseEnter={()=> setToggleMenu(true)}>{toggleMenu ? "" : " Options"}</div>
                 {toggleMenu &&   <div className="submenu2" >

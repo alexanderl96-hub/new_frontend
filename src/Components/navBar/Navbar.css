@@ -70,12 +70,13 @@ h1 {
 }
 .userHoldInfo{
   color: white;
-  font-size: 15px;
+  font-size: 13px;
 }
 .userGoodbyeInfo{
   color: white;  
   font-size: 12.5px; 
   letter-spacing: 0.5px;
+  line-height: 12.5px;
 }
 .nav:hover {
   border-radius: 10px;

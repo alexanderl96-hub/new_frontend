@@ -198,7 +198,7 @@ function convertInKG(str){
   backgroundSize: '100% 100%',
   backgroundRepeat: 'no-repeat'}}  >
                <div className='divTop-inner'>Member 
-               {loggedIn && user === 'alexander87' && <div text="More.." path=""  onMouseLeave={()=> setToggleMenu(false)}   style={{marginLeft: '60%'}}>
+               {loggedIn && user === 'alexander perez' && <div text="More.." path=""  onMouseLeave={()=> setToggleMenu(false)}   style={{marginLeft: '60%'}}>
                    <div  style={{ fontSize: '23px',color: 'white', listStyle: 'none',
                    lineHeight: '53px', cursor: 'pointer', width:'110px', height: '50px'  }}onMouseEnter={()=> setToggleMenu(true)}   >{toggleMenu ? "" : " Options"}</div>
                  {toggleMenu &&  <div className="submenu3" >
