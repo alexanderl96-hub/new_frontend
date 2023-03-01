@@ -118,7 +118,14 @@ p{
     filter: drop-shadow(8px 8px 10px gray);
 }
 
+  /*Mack Boock Pro (max-width: 3456px; max-heigth: 2234px;)*/
+  /*Mack Boock Air 13-inch (max-width: 2560px; max-heigth: 1600px;)*/
+  /*Mack Boock Air (max-width: 1920px; max-heigth: 1080px;)*/
 
+
+
+
+  
   /*Mack Boock Pro (max-width: 3456px; max-heigth: 2234px;)*/
   @media only screen and (max-width: 3456px){
     .container{
@@ -134,7 +141,7 @@ p{
     
 }
 
-  /*Mack Boock Pro (max-width: 2560px; max-heigth: 1600px;)*/
+  /*Mack Boock Air 13-inch (max-width: 2560px; max-heigth: 1600px;)*/
   @media only screen and (max-width: 2560px){
     .container{
         width: 85%;
@@ -149,17 +156,17 @@ p{
     
 }
 
-  /*Mack Boock Pro (max-width: 1920px; max-heigth: 1080px;)*/
+  /*Mack Boock Air (max-width: 1920px; max-heigth: 1080px;)*/
   @media only screen and (max-width: 1920px){
     .container{
         width: 85%;
         margin-left: 4.9%;
     }
     :root{
-        --items-per-screen:10;
+        --items-per-screen:9;
     }
     .slider{
-        --items-per-screen:10.18;
+        --items-per-screen:9.18;
     }
     
 }
@@ -361,3 +368,6 @@ p{
     }
     
 }
+
+
+

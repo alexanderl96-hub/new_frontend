@@ -109,7 +109,7 @@ const Players = () => {
                             <div className='playDivCont'>
                                 <img src={player.imag} alt={player.id}  />
                                 <h3 >{articule(player.name)}</h3>
-                                <div style={{width: '170px', height: '100px'}}>
+                                <div style={{}} className='playDiv-child'>
                                    <hr/>
                                     <h4 className='child1'><span>{player.current_team}</span></h4>
                                     <h4 className='child2'>{player.position}</h4>

@@ -3,6 +3,7 @@ import ReactLoading from 'react-loading'
 import { Section, list } from "./generic";
 
 
+
 const Loading = () => {
     return (
     <Section style={{ paddingTop:'18%',}}>
