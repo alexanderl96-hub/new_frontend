@@ -237,8 +237,12 @@ h1 {
 /* Monitor Acer (max-width: 1920px; max-heigth: 1080px;)*/
 @media only screen and (max-width: 1920px){
   .submenu{
-    left: 69.2%;
-}
+    left: 77.9%;
+   }
+   .submenu::before{
+    left: 70px;
+    top: -33px;
+  }
 }
 
 
