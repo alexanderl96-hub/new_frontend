@@ -52,7 +52,7 @@ const CreateAccountForm = ({setOpenLoginModal, setLoggedIn, setLoginMessage, set
             })
         }
 
-        fetch(`https://userlogin-backend-sportworld.adaptable.app`, reqOptions)
+        fetch(`https://userlogin-backend-sportworld.adaptable.app/users`, reqOptions)
         .then(response => response.json())
         .then(data => {
             if(data.status === 'error'){
