@@ -87,7 +87,7 @@ console.log(user.length > 8 ? user.split(' ').slice(0,1).join('') : user , 'chec
                    <div className="setToggleMenu" >{toggleMenu ? "Options" : " More.."}</div>
                  {toggleMenu && <div className="submenu" >
                       {/* <div className="submenu__item" id="More..">More..</div> */}
-                      {loggedIn &&  user === 'alexayarini' && 
+                      {loggedIn &&  user === 'alexander perez' && 
                          <Link to={'/teams/new'} style={{ color:'black'}} onClick={()=> setToggleMenu(false)}>
                             <div className="submenu__item" id="More..">Add New Team</div>
                          </Link>}

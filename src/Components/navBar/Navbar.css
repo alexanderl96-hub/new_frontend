@@ -109,7 +109,7 @@ h1 {
 }
 .nav > a.active {
   text-decoration: underline;
-  color: #4d4c4c;
+  color: #047aff;;
   font-weight: bold;
 }
 .nav > a:hover{
@@ -179,6 +179,7 @@ h1 {
   cursor: pointer;
    width: 50px; 
    height: 50px;
+  transition: 1s;
 }
 
 .submenu{

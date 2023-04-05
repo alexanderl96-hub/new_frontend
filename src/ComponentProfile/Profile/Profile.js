@@ -62,7 +62,7 @@ function selectNewAvatar (selectedAvatar) {
  
     const updatedUser = (updateImage, userId) => {
     
-      axios.put(`http://localhost:9000/users/${userId}`, updateImage).then(
+      axios.put(`https://userlogin-backend-sportworld.adaptable.app/users/${userId}`, updateImage).then(
         (res) => {
           setUpdatedImage(updateImage);
           setUserImage(newImage)

@@ -77,12 +77,14 @@ const Players = () => {
         <div className='navPlay'>
            <div></div>
 
-            <div className='divForm'>  
+            <div className='divFormPlay'>  
               {/* { !openInput ?  <div onClick={handleOpenInput} className='divFormIcon'>🔍</div> : */}
                <form onChange={handleSubmit} >
-                   { !openInput ?  <button onClick={handleOpenInput} className='divFormIcon'>Search</button> :
-                    <input id='search' type='text' onChange={handleInput} placeholder="Type ..." 
-                  /> }
+                   {/* { !openInput ?  <button onClick={handleOpenInput} className='divFormIcon'>Search</button> :
+                    <input id='search' type='search' onChange={handleInput} placeholder="Type ..."  className='checkInputPlay'
+                  /> } */}
+                   <input id='name' type='search' onChange={handleInput} placeholder='🔍' className='checkInputPlay'
+                  /> 
                 </form>  
             </div>
           

@@ -3,6 +3,9 @@ import { Link} from 'react-router-dom'
 // import Navbar from '../../Components/navBar/Navbar'
 import './coaches.css'
 import Loading from '../../Loading'
+import {FaSearchengin} from 'react-icons/fa';
+import {BsSearch} from 'react-icons/bs';
+
 
 const Coaches = () => {
     const [coach, setCoach] = useState([])
@@ -75,11 +78,18 @@ console.log( coach, 'coach')
         {/* <Navbar/> */}
         <div className='navCoach'>
            <div ></div>
-            <div className='divForm'>
+            <div className='divFormCoach'>
                 <form onChange={handleSubmit} >
-                { !openInput ?  <button onClick={handleOpenInput} className='divFormIcon'>Search</button> :
+                {/* { !openInput ?  <button onClick={handleOpenInput} className='divFormIcon'>Search</button> :
                     <input id='name' type='text' onChange={handleInput} placeholder="Type ..."  
-                  /> }
+                  /> } */}
+                   <input id='name' 
+                          type='search'
+                          onClick={(()=> openInput === false ? setOpenInput(true) : setOpenInput(false) )}
+                          placeholder='🔍' className='checkInput'
+                          
+                  />
+
                 </form>
             </div>
             <div className='divMatch'>{count.length === coachName.length ? 
