@@ -26,7 +26,7 @@ h1 {
   display: flex;
   justify-content: center;
 }
-.navAddgroup {
+.navLogInOutButton {
   color:black;
   border-radius: 3px;
   width: 90px;
@@ -41,7 +41,7 @@ h1 {
   cursor: pointer; 
   margin-left: -15px;
 }
-.navAddgroup:hover{
+.navLogInOutButton:hover{
     background: white;
     color: black;
     /* cursor:pointer; */
@@ -71,16 +71,14 @@ h1 {
 .userHoldInfo{
   color: white;
   font-size: 13px;
+  display: flex;
+  justify-content: center;
 }
 .userGoodbyeInfo{
   color: white;  
   font-size: 12.5px; 
   letter-spacing: 0.5px;
   line-height: 12.5px;
-}
-.nav:hover {
-  border-radius: 10px;
- 
 }
 .nav-inner {
   width: 90px;
@@ -89,20 +87,18 @@ h1 {
   text-align: center;
   transition: all 1s;
 }
-
-.navLogo{
+.navLogo_Container{
   width: 100px;
   padding: 2px;
   color: white;
   text-align: center;
   transition: all 1s;
-  /* background: black; */
   margin-top: -21px;
   margin-left: -31px;
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
 }
-.forntLogo{
+.navLogo{
   margin-top: 2px;
   height: 54px;
   border-radius: 30px;
@@ -115,7 +111,54 @@ h1 {
 .nav > a:hover{
   color: #047aff;
 }
-
+.setToggleMenu{
+  color: white;
+  list-style: none; 
+  margin-left: -126px;
+  line-height: 33px; 
+  cursor: pointer;
+   width: 50px; 
+   height: 50px;
+  transition: 1s;
+}
+.submenu{
+  float: left;
+  margin: 0 auto;
+  color: black;
+  border-radius: 8px;
+  width: 200px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  padding: 0 10px 10px;
+  position: absolute;
+  top: 60px;
+  left: 69.5%;
+  z-index: 100;
+  -webkit-filter: drop-shadow(0px 2px 4px rgba(130,130,130,1));
+  filter        : drop-shadow(0px 2px 4px rgba(130,130,130,1));  
+}
+.submenu::before{
+content: "";
+position: relative;
+left: 85px;
+top: -40px;
+width: 0;
+height: 0;
+border-left: 15px solid transparent;
+border-right: 15px solid transparent;
+border-bottom: 15px solid #fff;
+}
+.submenu__item{
+    padding: 10px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.submenu__item:hover{
+background-color: #070f3c;
+color: white;
+}
+/* phone divice css */
 .sideNavar{
   background-color: rgba(9, 58, 58, 0.783);
   position: fixed;
@@ -150,7 +193,6 @@ h1 {
   display: none;
  
 }
-
 .topicLink{
   display: block;
   color: white;
@@ -161,7 +203,6 @@ h1 {
   font-size: 15.5px;
   visibility: hidden;
 }
-
  #home{
   position: relative;
   margin-left: 190px;
@@ -171,93 +212,150 @@ h1 {
   cursor: pointer;
   visibility: hidden;
 } 
-.setToggleMenu{
-  color: white;
-  list-style: none; 
-  margin-left: -126px;
-  line-height: 33px; 
-  cursor: pointer;
-   width: 50px; 
-   height: 50px;
-  transition: 1s;
-}
 
-.submenu{
-    float: left;
-    margin: 0 auto;
-    color: black;
-    border-radius: 8px;
-    width: 200px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: white;
-    padding: 0 10px 10px;
-    position: absolute;
-    top: 60px;
-    left: 69.5%;
-    z-index: 100;
-    -webkit-filter: drop-shadow(0px 2px 4px rgba(130,130,130,1));
-    filter        : drop-shadow(0px 2px 4px rgba(130,130,130,1));  
-}
 
-.submenu::before{
-  content: "";
-  position: relative;
-  left: 85px;
-  top: -40px;
-  width: 0;
-  height: 0;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-bottom: 15px solid #fff;
-}
-.submenu__item{
-      padding: 10px;
-      font-weight: 600;
-      border-radius: 8px;
-      cursor: pointer;
-}
-.submenu__item:hover{
-  background-color: #070f3c;
-  color: white;
-}
+
 
 /* Mackbook Pro (max-width: 3456px; max-heigth: 2234px;)*/
 @media only screen and (max-width: 3456px){
+  .navbar {
+    height: 85px;
+  }
+  .nav {
+    margin-top: 40px;
+  }
+  .nav2 {
+    margin-top: 40px;
+  }
+  .navLogInOutButton{
+    width: 100px;
+    font-size: 19px;
+  }
+  .navlogIn {
+    width: 78px;
+    margin-right: 40px;
+    margin-top: -15px;
+  }
+  .fauserIcon{
+    font-size: 35px; 
+    padding: 1.5px;
+   }
+  .userImageProfile{
+    height: 37px; 
+    width: 37px;
+  }
+  .userHoldInfo{
+    font-size: 19px;
+  }
+  .nav-inner {
+    width: 110px;
+    padding: 2px;
+    font-size: 20px;
+  }
+  .navLogo_Container{
+    width: 120px;
+  }
+  .navLogo{
+    margin-top: -9px;
+    height: 70px;
+  }
+  .setToggleMenu{
+    margin-left: -136px;
+     width: 70px; 
+    font-size: 20px;
+  }
   .submenu{
-    left: 87.2%;
+    left: 86.8%;
+    top: 87px;
+  }
+  .submenu::before{
+    left: 75px;
+    top: -33px;
+  }
+  .submenu__item{
+    padding: 10px;
+    font-size: 18px;
 }
 }
 
 /* Mackbook air 13-inch (max-width: 2560px; max-heigth: 1600px;)*/
 @media only screen and (max-width: 2560px){
   .submenu{
-    left: 83.2%;
-}
+    left: 82.1%;
+    top: 87px;
+  }
+
 }
 
 /* Monitor Acer (max-width: 1920px; max-heigth: 1080px;)*/
 @media only screen and (max-width: 1920px){
+  .navbar {
+    height: 75px;
+  }
+  .nav {
+    margin-top: 30px;
+  }
+  .nav2 {
+    margin-top: 30px;
+  }
+  .navLogInOutButton{
+    font-size: 18px;
+    width: 95px;
+  }
+  .navlogIn {
+    margin-top: -17px;
+  }
+  .nav-inner {
+    width: 100px;
+    font-size: 19px;
+  }
+  .navLogo{
+    margin-top: -7.5px;
+  }
+  .setToggleMenu{
+    font-size: 19px;
+  }
   .submenu{
-    left: 77.9%;
+    left: 76%;
+    top: 76px;
    }
    .submenu::before{
-    left: 70px;
-    top: -33px;
+    left: 75px;
+    top: -32px;
   }
 }
 
 
 /*Nest Hub Max (max-width: 1280px; max-heigth: 800px;)*/
 @media only screen and (max-width: 1280px){
-  .navAddgroup {
-    margin-left: -110px;
+  .navbar {
+    height: 60px;
   }
-  .setToggleMenu{
-    margin-left: -210px;
+  .nav {
+    margin-top: 20px;
   }
-  .submenu{
-    left: 67.2%;
-}
+  .nav2 {
+    margin-top: 20px;
+  }
+  .navLogInOutButton{
+    font-size: 17px;
+    width: 85px;
+  }
+  .navlogIn {
+    width: 60px;
+    margin-top: -15px;
+  }
+  .fauserIcon{
+    font-size: 30px; 
+    padding: 1.2px;
+   }
+  .userImageProfile{
+    height: 31px; 
+    width: 31px;
+  }
+  .userHoldInfo{
+    font-size: 17px;
+  }
 
 }
 

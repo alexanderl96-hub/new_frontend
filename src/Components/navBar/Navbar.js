@@ -21,7 +21,8 @@ function Navbar({setOpenLoginModal, loggedIn, setLoggedIn, user, userImage}) {
     setLoggedIn(false)
     localStorage.removeItem('username')
     localStorage.removeItem('userImage')
-    setGoodBye(`GoodBye ${user.length > 8 ? user.split(' ').slice(0,1).join('') : user }`)
+    setGoodBye(`GoodBye ${user.length > 8 ? user.charAt(0).toUpperCase() + user.split(' ').slice(0,1).join('').slice(1) : 
+                                          user.charAt(0).toUpperCase() + user.charAt(0).toUpperCase() }`)
   }
 
 useEffect(()=>{
@@ -34,7 +35,8 @@ useEffect(()=>{
 useEffect(()=>{
   if(loggedIn){
     setTimeout(() => {
-      setWelcome(`${user.length > 8 ? user.split(' ').slice(0,1).join('') : user }`)
+      setWelcome(`${user.length > 8 ? `${user.charAt(0).toUpperCase() + user.split(' ').slice(0,1).join('').slice(1)}`
+                          : user.charAt(0).toUpperCase() + user.charAt(0).toUpperCase() }`)
     }, 1300);
   }
 })
@@ -58,8 +60,8 @@ console.log(user.length > 8 ? user.split(' ').slice(0,1).join('') : user , 'chec
     <div className="navbar">
           <div className="nav" >
          
-            <div className='navLogo'>
-               <img src={imageLogo} alt="1" className='forntLogo'/>
+            <div className='navLogo_Container'>
+               <img src={imageLogo} alt="1" className='navLogo'/>
             </div>
             
             <NavLink to='/' className='nav-inner' 
@@ -114,8 +116,8 @@ console.log(user.length > 8 ? user.split(' ').slice(0,1).join('') : user , 'chec
                   </div>}
 
             </div>
-           {loggedIn && <button  className='navAddgroup' onClick={logOut} >Log out</button> }
-           {!loggedIn && <button  className='navAddgroup' onClick={handleClickModal} >Log in</button> }
+           {loggedIn && <button  className='navLogInOutButton' onClick={logOut} >Log out</button> }
+           {!loggedIn && <button  className='navLogInOutButton' onClick={handleClickModal} >Log in</button> }
             {/* {!loggedIn  <button  style={{color: 'black'}}>Log in</button>} */}
             <div className='navlogIn'>
                <div className='navlogIn-inside'>
