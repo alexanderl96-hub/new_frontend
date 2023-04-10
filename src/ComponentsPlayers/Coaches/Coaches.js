@@ -85,8 +85,10 @@ console.log( coach, 'coach')
                   /> } */}
                    <input id='name' 
                           type='search'
+                          onChange={handleInput}
                           onClick={(()=> openInput === false ? setOpenInput(true) : setOpenInput(false) )}
-                          placeholder='🔍' className='checkInput'
+                          placeholder='🔍' 
+                          className='checkInput'
                           
                   />
 

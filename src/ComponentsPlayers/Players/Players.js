@@ -83,7 +83,12 @@ const Players = () => {
                    {/* { !openInput ?  <button onClick={handleOpenInput} className='divFormIcon'>Search</button> :
                     <input id='search' type='search' onChange={handleInput} placeholder="Type ..."  className='checkInputPlay'
                   /> } */}
-                   <input id='name' type='search' onChange={handleInput} placeholder='🔍' className='checkInputPlay'
+                   <input id='search' 
+                          type='search'
+                          onChange={handleInput} 
+                          onClick={(()=> openInput === false ? setOpenInput(true) : setOpenInput(false) )}
+                          placeholder='🔍' 
+                          className='checkInputPlay'
                   /> 
                 </form>  
             </div>
