@@ -4,7 +4,7 @@ import ReactStars from "react-rating-stars-component"
 
 import '../text/text.css'
 import './desing.css'
-import { FaPlus, FaTrash,FaUserPlus, FaUserEdit} from 'react-icons/fa';
+import { FaPlus, FaTrash,FaUserPlus, FaUserEdit, FaThumbsDown, FaThumbsUp} from 'react-icons/fa';
 import axios from 'axios'
 // import { toHaveValue } from '@testing-library/jest-dom/dist/matchers';
 
@@ -12,7 +12,7 @@ import axios from 'axios'
 
 
 
-const Desing = ({loggedIn, user, userImage}) => {
+const Desing = ({loggedIn, user, userImage, setFavorite, favorite}) => {
    const navigate = useNavigate();
    const screenSize = getComputedStyle(document.documentElement).getPropertyValue('--items-per-screen');
     const [ newI, setNewI]= useState([])
@@ -39,6 +39,8 @@ const Desing = ({loggedIn, user, userImage}) => {
     const [pointer, setPointer] = useState(1)
     const [finalValue, setFinalValue] = useState(false)
     const [checkNewText, setCheckNewText] = useState(Number(screenSize))
+    const [like, setLike] = useState(0)
+    const [previuosId, setPreviuosId] = useState([])
 
     let fisrt = 0
     let params = useParams()
@@ -120,19 +122,20 @@ const Desing = ({loggedIn, user, userImage}) => {
       else if(a>= 0.10){ rest = 0.0}
       return rest
     }; 
-    const handelNameLen = (artist) => {
-      console.log( artist.split(' ').slice(0,1).join(' '))
-      return artist.split(' ').slice(0,2).join(' ')
+    // const handelNameLen = (artist) => {
+    //   // console.log( artist.split(' ').slice(0,1).join(' '))
+    //   favorite.push(Number(e.target.id))
+    //   return artist.split(' ').slice(0,2).join(' ')
 
-        // let pro = "" ;
-        // let allt = artist.split(" ");
-        // if(allt.length >= 3){
-        //   pro = allt[0] +' '+ allt[1]
-        // }else{
-        //   pro = allt.join(' ')
-        // }
-        // return pro
-      };
+    //     // let pro = "" ;
+    //     // let allt = artist.split(" ");
+    //     // if(allt.length >= 3){
+    //     //   pro = allt[0] +' '+ allt[1]
+    //     // }else{
+    //     //   pro = allt.join(' ')
+    //     // }
+    //     // return pro
+    //   };
 
     // function nextrow (){
     //   // console.log(last,'outside')
@@ -261,13 +264,25 @@ const Desing = ({loggedIn, user, userImage}) => {
 
     fisrt = ratingChanged(newI[0])
 
-
+function handelLike (e){
+ let checkId = []
+  if(like === 0 && !previuosId.includes(Number(e.target.id))){
+      // setLike(like+1)
+      previuosId.push(Number(e.target.id))
+       favorite.push(Number(e.target.id))
+      setPreviuosId(previuosId)
+  }
+   
+    setFavorite(favorite)
+ 
+}
  
   //  console.log(ratingChanged(newI[0]), fisrt, 'check')
     console.log( newtest.length, checkNewText, 'checkNewText')
 
   //  console.log((newtest.length / size) - pointer )
   // console.log(pointer , handel )
+  console.log(like, previuosId, favorite, 'counting like')
 
   return (
    <div className='MainDesing'>
@@ -336,7 +351,7 @@ const Desing = ({loggedIn, user, userImage}) => {
          
                { search > 0 ? nombre.map((a, i)=>{
                 return(
-                    <div onClick={handelNameLen}>
+                    <div >
                        {search === a.id ?
                           <div className="section2Container">   
                
@@ -344,7 +359,7 @@ const Desing = ({loggedIn, user, userImage}) => {
                               <div className="inner-innersection2">
                                <img src={a.imag} alt='' className='image' />
                               </div>
-                              <h3 className="innersection2H3" >{handelNameLen(a.name)}</h3>
+                              <h3 className="innersection2H3" >{a.name.split(' ').slice(0,2).join(' ')}</h3>
                           </div>
                           <div >
                             <div className='innerSection2-3'> 
@@ -355,6 +370,9 @@ const Desing = ({loggedIn, user, userImage}) => {
                                <p><span>Salary:</span> {a.salary}</p>
                                <p><span>About: </span>{a.about}  <Link to={`/teams/groups/${search}`}  className='changeMore'> More..→</Link></p>
                                {/* <p ><span>ID:</span> {a.id}</p> */}
+                             <div id={search} style={{cursor: 'pointer', color: '#cccccc'}}
+                                   onClick={handelLike}>
+                                     {!previuosId.includes(Number(search)) &&  <FaThumbsUp color={like === 0  ? '#cccccc' : 'blue'} /> } Like  </div>
                              </div>
                            <div className='innerSectionStart'>
                            <ReactStars 
@@ -373,12 +391,12 @@ const Desing = ({loggedIn, user, userImage}) => {
                 )}) : <div className="section2-first">  
                    {newtest.slice(0,1).map((a,i)=>{
                      return(
-                       <div className="section2Container" onClick={handelNameLen}>
+                       <div className="section2Container" >
                           <div className="innerSection2">
                                   <div className="inner-innersection2">
                                   <img src={a.imag} alt='' className='image' />
                                   </div>
-                                  <h3 className="innersection2H3" >{handelNameLen(a.name)}</h3>
+                                  <h3 className="innersection2H3" >{a.name.split(' ').slice(0,2).join(' ')}</h3>
                               </div>
                               <div >
                             <div className='innerSection2-3'> 

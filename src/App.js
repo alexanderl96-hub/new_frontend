@@ -48,6 +48,7 @@ function App() {
   const [userId, setUserId] = useState(localStorage.getItem("userid") || "")
   const [userEmail, setUserEmail] = useState(localStorage.getItem("userEmail") || "")
   // const [loginMessage, setLoginMessage] = useState('');
+  const [favorite, setFavorite] = useState([])
 
   // useEffect(() => {
 
@@ -91,10 +92,10 @@ function App() {
                   <Route  path="/teams/News" element={<News/>}/>
                   <Route  path="/teams/Text" element={<Text/>}/>
                   <Route  path="/teams/groups/:id/addStats" element={<AddStats/>} />
-                  <Route  path="/teams/allmembers/:id" element={<AllMembers loggedIn={loggedIn}  user={user} userImage={userImage} />  } /> 
+                  <Route  path="/teams/allmembers/:id" element={<AllMembers loggedIn={loggedIn}  user={user} userImage={userImage} favorite={favorite} setFavorite={setFavorite}/>  } /> 
                   <Route  path="/teams/CurrentHistagram/:id" element={<CurrentHistagram/>}/>      
                   <Route  path="/teams/EditTeam/:id" element={<EditTeam/>}/>   
-                  <Route  path="/teams/Favorite" element={<Favorites/>}/>   
+                  <Route  path="/teams/Favorite" element={<Favorites  favorite={favorite} />}/>   
                   <Route  path="/teams/Legend" element={<Legend/>}/> 
                   <Route  path="/teams/AllTimes" element={<AllTimes/>}/> 
                   <Route  path="/teams/Profile" element={<Profile  user={user} userImage={userImage} setUserImage={setUserImage} userId={userId} userEmail={userEmail} />}/> 
