@@ -81,7 +81,7 @@ const Desing = ({loggedIn, user, userImage, setFavorite, favorite}) => {
 
     }
     const addComment = (newComment) => {
-       axios.post(`http://localhost:9000/comments`, newComment).then((res)=>{
+       axios.post(`https://userlogin-backend-sportworld.adaptable.app/comments`, newComment).then((res)=>{
       setNewComment({
           username: user,
           userImage: userImage,
