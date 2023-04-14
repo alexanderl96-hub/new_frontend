@@ -18,7 +18,8 @@ const TermofUse = () => {
             <p>10. CHOICE OF LAW</p>
             <p>11. ACCEPTANCE OF TERMS OF USE</p>
          </div>
-         <div style={{width: '80%', border: '1px solid', backgroundColor: 'lightblue', margin: 'auto', padding: '7px 7px', textAlign: 'left', letterSpacing: '0.3px', textAlign: 'justify'}}>
+         <div style={{width: '80%', border: '1px solid', backgroundColor: 'lightblue', margin: 'auto',
+                      padding: '7px 7px', letterSpacing: '0.3px', textAlign: 'justify'}}>
             <h2>1. INTRODUCTION; GENERAL; OWNERSHIP; PROHIBITIONS</h2>
             <p>Except for Submitted Content (defined below), the Sport World Digital(SPW) Properties are either owned by or licensed 
                 to SPW. The applicable owners and licensors retain all rights to the SPW Digital Properties, including, 
@@ -64,7 +65,8 @@ const TermofUse = () => {
                SPW Digital Properties.</p>
             
          </div>
-         <div style={{width: '80%', border: '1px solid', backgroundColor: 'lightblue', margin: 'auto', padding: '7px 7px', textAlign: 'left', letterSpacing: '0.3px', textAlign: 'justify'}}>
+         <div style={{width: '80%', border: '1px solid', backgroundColor: 'lightblue', margin: 'auto', 
+                      padding: '7px 7px',  letterSpacing: '0.3px', textAlign: 'justify'}}>
             <h2>2. NOTICE AND PROCEDURE FOR MAKING CLAIMS OF COPYRIGHT INFRINGEMENT</h2>
             <p>Pursuant to the Digital Millennium Copyright Act, Title 17, United States Code, Section 512(c)(2) ("DMCA"), SPW
                  has designated to the U.S. Copyright Office an agent to receive notifications of claimed copyright infringement 
@@ -93,7 +95,8 @@ const TermofUse = () => {
             <p><span style={{fontWeight:'bold'}}>Phone Number:</span> (347) 697-3775</p>
             <p><span style={{fontWeight:'bold'}}>Email Address:</span> alexander.lrperez@gmail.com</p>
          </div>
-         <div style={{width: '80%', border: '1px solid', backgroundColor: 'lightblue', margin: 'auto', padding: '7px 7px', textAlign: 'left', letterSpacing: '0.3px', textAlign: 'justify'}}>
+         <div style={{width: '80%', border: '1px solid', backgroundColor: 'lightblue', margin: 'auto',
+          padding: '7px 7px', letterSpacing: '0.3px', textAlign: 'justify'}}>
             <h2>3. COMMUNITY FEATURES</h2>
             <p>The SPW Digital Properties may offer opportunities for you to transmit messages, information, ideas, opinions, 
                 images, audio, video, creative works or other information or material (collectively, the "Submitted Content") 
@@ -144,14 +147,16 @@ const TermofUse = () => {
                 various features (e.g., the “Flag” within comments sections) of certain Community Features to report violators. 
                 We reserve the right, but have no obligation, to monitor disputes between you and other users.</p>
          </div>       
-         <div style={{width: '80%', border: '1px solid', backgroundColor: 'lightblue', margin: 'auto', padding: '7px 7px', textAlign: 'left', letterSpacing: '0.3px', textAlign: 'justify'}}>
+         <div style={{width: '80%', border: '1px solid', backgroundColor: 'lightblue',
+          margin: 'auto', padding: '7px 7px', letterSpacing: '0.3px', textAlign: 'justify'}}>
             <h2>4. VOTES, CONTESTS, SWEEPSTAKES</h2>
             <p>The SPW Digital Properties may offer you opportunities to vote in connection with certain events including the 
                 All-Star Game and also to participate in contests, sweepstakes or other promotions. By participating in any 
                 such event, you signify your agreement to all special terms set forth on the SPW Digital Property applicable to 
                 the event as well as the terms of this Agreement.</p>
          </div>
-         <div style={{width: '80%', border: '1px solid', backgroundColor: 'lightblue', margin: 'auto', padding: '7px 7px', textAlign: 'left', letterSpacing: '0.3px', textAlign: 'justify'}}>
+         <div style={{width: '80%', border: '1px solid', backgroundColor: 'lightblue', 
+         margin: 'auto', padding: '7px 7px', letterSpacing: '0.3px', textAlign: 'justify'}}>
             <h2>5. LINKING</h2>
             <p>The SPW Digital Properties may contain links and pointers to other Internet sites and resources, including, 
                 without limitation, Third Party Sales Locations and Third Party Social Networking Features. Links to and from 
@@ -161,7 +166,8 @@ const TermofUse = () => {
                 party resources or their contents. You should direct any concerns regarding any external link to the administrator
                  of the applicable third party website or location.</p>
          </div>
-         <div style={{width: '80%', border: '1px solid', backgroundColor: 'lightblue', margin: 'auto', padding: '7px 7px', textAlign: 'left'}}>
+         <div style={{width: '80%', border: '1px solid', backgroundColor: 'lightblue',
+                      margin: 'auto', padding: '7px 7px', textAlign: 'justify'}}>
             <h2>6. DISCLAIMER OF WARRANTIES</h2>
             <p>1. USE OF THE SPW DIGITAL PROPERTIES AND THE PRODUCTS, MERCHANDISE, TICKETS AND SERVICES INCLUDED THEREIN, 
                 ARE AT YOUR EXCLUSIVE RISK, AND THE RISK OF INJURY FROM THE FOREGOING RESTS EXCLUSIVELY WITH YOU.</p>
@@ -176,7 +182,8 @@ const TermofUse = () => {
                 WILL BE FREE FROM VIRUSES OR OTHER HARMFUL COMPONENTS; OR (4) ANY INFORMATION CONTAINED IN THE SPW DIGITAL 
                 PROPERTIES, OR PRODUCTS, MERCHANDISE AND SERVICES AVAILABLE THEREFROM, WILL BE ACCURATE OR RELIABLE.</p>
          </div>
-         <div style={{width: '80%', border: '1px solid', backgroundColor: 'lightblue', margin: 'auto', padding: '7px 7px', textAlign: 'left', letterSpacing: '0.3px', textAlign: 'justify'}}>
+         <div style={{width: '80%', border: '1px solid', backgroundColor: 'lightblue', margin: 'auto',
+                     padding: '7px 7px', letterSpacing: '0.3px', textAlign: 'justify'}}>
             <h2>7. LIMITATIONS ON LIABILITY</h2>
             <p>1. NOTWITHSTANDING ANY TERM IN THIS AGREEMENT, OTHER APPLICABLE TERMS AND CONDITIONS OF THE SPW DIGITAL PROPERTIES
                  OR ANY ACT OR FAILURE TO ACT BY SPW OR ITS VENDORS, YOU ARE EXCLUSIVELY LIABLE FOR ANY AND ALL SUBMITTED 
@@ -196,7 +203,8 @@ const TermofUse = () => {
             <p>4. IN NO EVENT SHALL SPW OR ANY OTHER SPW ENTITY BE LIABLE FOR ANY FAILURE, INTERRUPTION OR ERROR WITH RESPECT 
                 TO ANY ASPECT OF THE SPW DIGITAL PROPERTIES, INCLUDING THE AVAILABILITY OF ANY FEATURE OR FUNCTIONALITY.</p>
          </div>
-         <div style={{width: '80%', border: '1px solid', backgroundColor: 'lightblue', margin: 'auto', padding: '7px 7px', textAlign: 'left', letterSpacing: '0.3px', textAlign: 'justify'}} >
+         <div style={{width: '80%', border: '1px solid', backgroundColor: 'lightblue', 
+                      margin: 'auto', padding: '7px 7px', letterSpacing: '0.3px', textAlign: 'justify'}} >
             <h2>8. INDEMNIFICATION</h2>
             <p>You hereby agree to indemnify and hold the SPW Entities harmless from all claims, liabilities, damages and 
                 expenses (including attorneys' fees and expenses) arising out of or relating to: (i) your use of the SPW Digital 
@@ -208,7 +216,8 @@ const TermofUse = () => {
                  future, controls, is controlled by or is under common control with the Clubs or the BOC and the owners, general
                   and limited partners, shareholders, directors, officers, employees and agents of the foregoing entities.</p>
          </div>
-         <div style={{width: '80%', border: '1px solid', backgroundColor: 'lightblue', margin: 'auto', padding: '7px 7px', textAlign: 'left', letterSpacing: '0.3px', textAlign: 'justify'}}>
+         <div style={{width: '80%', border: '1px solid', backgroundColor: 'lightblue', margin: 'auto',
+                       padding: '7px 7px', letterSpacing: '0.3px', textAlign: 'justify'}}>
             <h2>9. TERMINATION</h2>
             <p>SPW may change, suspend or discontinue any aspect of the SPW Digital Properties at any time, including the 
                 availability of any product, Merchandise, Auctions offering, Ticket offering, Service, feature, database or 
@@ -222,20 +231,23 @@ const TermofUse = () => {
                  set forth by SPW in the SPW Digital Properties. This Agreement may also be immediately terminated at any time
                   by SPW in its sole discretion.</p>
          </div>
-         <div style={{width: '80%', border: '1px solid', backgroundColor: 'lightblue', margin: 'auto', padding: '7px 7px', textAlign: 'left', letterSpacing: '0.3px', textAlign: 'justify'}}>
+         <div style={{width: '80%', border: '1px solid', backgroundColor: 'lightblue', margin: 'auto', 
+                     padding: '7px 7px',  letterSpacing: '0.3px', textAlign: 'justify'}}>
             <h2>10. CHOICE OF LAW</h2>
             <p>Any and all Claims arising out of or related to this Agreement or to your use of any product or service 
                 distributed by SPW shall be governed by, and construed and interpreted in accordance with, the laws of the 
                 State of New York, without regard to conflict of laws principles.</p>
          </div>
-         <div style={{width: '80%', border: '1px solid', backgroundColor: 'lightblue', margin: 'auto', padding: '7px 7px', textAlign: 'left', letterSpacing: '0.3px', textAlign: 'justify'}}>
+         <div style={{width: '80%', border: '1px solid', backgroundColor: 'lightblue', margin: 'auto', 
+                       padding: '7px 7px', letterSpacing: '0.3px', textAlign: 'justify'}}>
             <h2>11. ACCEPTANCE OF TERMS OF USE</h2>
             <p>BY USING AN SPW DIGITAL PROPERTY, YOU SIGNIFY YOUR AGREEMENT TO THE TERMS OF THIS AGREEMENT. If you do not 
                 agree to the terms in this Agreement, you must not use any of the SPW Digital Properties. SPW may change the 
                 terms of this Agreement at any time, and your use of an SPW Digital Property after such change is posted will 
                 mean that you accept such change.</p>
          </div>
-         <div style={{width: '80%', border: '1px solid', backgroundColor: 'lightblue', margin: 'auto', padding: '15px ',  fontWeight: 'bold'}}><span>LAST UPDATED: DECEMBER 3, 2022</span></div>
+         <div style={{width: '80%', border: '1px solid', backgroundColor: 'lightblue', margin: 'auto',
+                       padding: '15px ',  fontWeight: 'bold'}}><span>LAST UPDATED: DECEMBER 3, 2022</span></div>
     </div>
   )
 }

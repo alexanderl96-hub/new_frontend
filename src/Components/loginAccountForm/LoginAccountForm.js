@@ -4,8 +4,6 @@ import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
 
-// import Button from '../button/Button';
-
 const LoginAccountForm = ({setOpenLoginModal, setLoggedIn, setUser,  setUserImage, setUserId, setUserEmail}) => {
 
     const [username, setUsername] = useState('');

@@ -3,7 +3,6 @@ import './Navbar.css'
 import { FaHome, FaUser} from 'react-icons/fa';
 import { NavLink , Link} from 'react-router-dom'
 import imageLogo from '../../image/FullLogoTransparent.png'
-import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 // import frontLogo from '../../image/FullLogo.png'
 
@@ -88,7 +87,7 @@ console.log(user.length > 8 ? user.split(' ').slice(0,1).join('') : user , 'chec
               <div text="More.." path=""  onMouseEnter={()=> setToggleMenu(true)} onMouseLeave={()=> setToggleMenu(false)}>
                    <div className="setToggleMenu" >{toggleMenu ? "Options" : " More.."}</div>
                  {toggleMenu && <div className="submenu" >
-                      {/* <div className="submenu__item" id="More..">More..</div> */}
+                     
                       {loggedIn &&  user === 'alexander perez' && 
                          <Link to={'/teams/new'} style={{ color:'black'}} onClick={()=> setToggleMenu(false)}>
                             <div className="submenu__item" id="More..">Add New Team</div>
@@ -118,7 +117,7 @@ console.log(user.length > 8 ? user.split(' ').slice(0,1).join('') : user , 'chec
             </div>
            {loggedIn && <button  className='navLogInOutButton' onClick={logOut} >Log out</button> }
            {!loggedIn && <button  className='navLogInOutButton' onClick={handleClickModal} >Log in</button> }
-            {/* {!loggedIn  <button  style={{color: 'black'}}>Log in</button>} */}
+            
             <div className='navlogIn'>
                <div className='navlogIn-inside'>
                  {!loggedIn ?  <FaUser className="fauserIcon" /> :
@@ -156,7 +155,7 @@ console.log(user.length > 8 ? user.split(' ').slice(0,1).join('') : user , 'chec
                       {/* <NavLink to="" className='topicLink' >Log In</NavLink> */}
                 </div>
            </div>
-           {/* <img src={imageLogo} alt="1"  className='topicLogoFront' /> */}
+         
     </div>
   )
 }

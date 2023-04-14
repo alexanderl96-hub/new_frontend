@@ -1,6 +1,6 @@
 import React,  { useState, useEffect }from 'react'
 import { useParams, Link} from 'react-router-dom'
-import {FaPlus, FaRecycle , FaUserEdit } from 'react-icons/fa';
+// import {FaPlus, FaRecycle , FaUserEdit } from 'react-icons/fa';
 import './IndividualMember.css'
 import axios from 'axios'
 
@@ -27,42 +27,24 @@ const IndividualMember = ({loggedIn, user}) => {
   let memberId = params.id
   
 
-// const navigate = useNavigate();   
-// const handleDelete = () => {
-//     axios.delete(`https://my-baseball-teams.herokuapp.com/groups/${memberId}`).then(() =>{
-//         //  navigate(`/homebase`)
-//     }, (error) => console.log(error))
-// };
 const handleDelete = () => {
     axios.delete(`https://my-baseball-teams.adaptable.app/groups/${memberId}`).then(() =>{
-        //  navigate(`/homebase`)
+       
     }, (error) => console.log(error))
     axios.delete(`https://my-baseball-teams.adaptable.app/playersStats/${memberId}`).then(() =>{
-        //  navigate(`/homebase`)
+       
     }, (error) => console.log(error))
     axios.delete(`https://my-baseball-teams.adaptable.app/playersCareer/${memberId}`).then(() =>{
-        //  navigate(`/homebase`)
+       
     }, (error) => console.log(error))
     axios.delete(`https://my-baseball-teams.adaptable.app/pitchersStats/${memberId}`).then(() =>{
-        //  navigate(`/homebase`)
+       
     }, (error) => console.log(error))
     axios.delete(`https://my-baseball-teams.adaptable.app/pitchersCarrer/${memberId}`).then(() =>{
-        //  navigate(`/homebase`)
+       
     }, (error) => console.log(error))
 };
-// const handleDeleteStats = () => {
-//     axios.delete(`http://localhost:9000/playersStats/${memberId}`).then(() =>{
-//         //  navigate(`/homebase`)
-//     }, (error) => console.log(error))
-// };
 
-//     useEffect(() => {
-//         fetch(`https://my-baseball-teams.herokuapp.com/groups`)
-//         .then(res => res.json())
-//         .then(data =>{
-//             setMember(data)
-//         })
-//   },[])
 
 useEffect(() => {
     fetch(`https://my-baseball-teams.adaptable.app/groups`)
@@ -71,13 +53,7 @@ useEffect(() => {
         setMember(data)
     })
 },[])
-//   useEffect(() => {
-//     fetch(`http://localhost:9000/groups`)
-//     .then(res => res.json())
-//     .then(data =>{
-//         setMember(data)
-//     })
-// },[])
+
   useEffect(() => {
     fetch(`https://my-baseball-teams.adaptable.app/playersStats`)
     .then(res => res.json())
@@ -88,13 +64,6 @@ useEffect(() => {
         // data.filter(a=> a.includes)
     })
 },[memberId])
-// useEffect(() => {
-//     fetch(`http://localhost:9000/playersStats`)
-//     .then(res => res.json())
-//     .then(data =>{
-//         setTeamID(data)
-//     })
-// },[])
 
 useEffect(() => {
     fetch(`https://my-baseball-teams.adaptable.app/playersCareer`)
@@ -105,13 +74,6 @@ useEffect(() => {
         setTeamCareerID( playerStats)
     })
  },[memberId])
-// useEffect(() => {
-//     fetch(`http://localhost:9000/playersCareer`)
-//     .then(res => res.json())
-//     .then(data =>{
-//         setTeamCareerID(data)
-//     })
-// },[])
 
 useEffect(() => {
     fetch(`https://my-baseball-teams.adaptable.app/pitchersStats`)
@@ -122,14 +84,6 @@ useEffect(() => {
         setPitcherID( playerStats)
     })
 },[memberId])
-// useEffect(() => {
-//     fetch(`http://localhost:9000/pitchersStats`)
-//     .then(res => res.json())
-//     .then(data =>{
-//         setPitcherID(data)
-//     })
-// },[])
-
 
 useEffect(() => {
     fetch(`https://my-baseball-teams.adaptable.app/pitchersCarrer`)
@@ -140,13 +94,6 @@ useEffect(() => {
         setPitcherCareerID( playerStats)
     })
 },[memberId])
-// useEffect(() => {
-//     fetch(`http://localhost:9000/pitchersCarrer`)
-//     .then(res => res.json())
-//     .then(data =>{
-//         setPitcherCareerID(data)
-//     })
-// },[])
 
   useEffect(() => {
     fetch(`https://my-baseball-teams.adaptable.app/groups/${memberId}`)
@@ -174,35 +121,19 @@ function convertInKG(str){
     return String(Number(change)*30.48).slice(0, 5)
   }
 
-// useEffect(() => {
-//     fetch(`http://localhost:9000/groups/${memberId}`)
-//     .then(res => res.json())
-//     .then(data =>{
-//         setGroup(data.team.team_id )
-// setMemberImg(data.team.imag)
-// setMemberTeam(data.team.current_team)
-// setMemberAge(data.team.age)
-// setMemberPosition(data.team.position)
-// setMemberName(data.team.name)
-// setMemberNumber(data.team.number)
-//     })
-//   },[memberId])
 
 
 
   return (
       <div  className='MainMember'>
           
-            {/* style={{backgroundImage: `url(${memberImg2})`}}     */}
           <div className='divTop' style={{backgroundImage: `url(${memberImg2})`,  backgroundPosition: 'center',
-  backgroundSize: '100% 100%',
-  backgroundRepeat: 'no-repeat'}}  >
+                                         backgroundSize: '100% 100%', backgroundRepeat: 'no-repeat'}}  >
                <div className='divTop-inner'>Member 
                {loggedIn && user === 'alexander perez' && <div text="More.." path=""  onMouseLeave={()=> setToggleMenu(false)}   style={{marginLeft: '60%'}}>
                    <div  style={{ fontSize: '23px',color: 'white', listStyle: 'none',
                    lineHeight: '53px', cursor: 'pointer', width:'110px', height: '50px'  }}onMouseEnter={()=> setToggleMenu(true)}   >{toggleMenu ? "" : " Options"}</div>
                  {toggleMenu &&  <div className="submenu3" >
-                      {/* <div className="submenu__item" id="More..">More..</div> */}
                      <Link to={`/teams/updateMember/${memberId}`} id={teamId} style={{ color:'black'}} onClick={()=> setToggleMenu(false)}>
                       <div className="submenu3__item" id="More..">Update Member</div></Link>
                       <Link to={`/teams/groups/${memberId}/addStats`} id={teamId} style={{ color:'black'}} onClick={()=> setToggleMenu(false)} >

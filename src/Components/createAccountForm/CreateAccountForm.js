@@ -92,6 +92,7 @@ const CreateAccountForm = ({setOpenLoginModal, setLoggedIn, setLoginMessage, set
             console.log(error);
         })
     }
+
 console.log(image)
   return (
       <div>
@@ -151,7 +152,7 @@ console.log(image)
         />
         
     </Box>
-    {/* <input type="file"  onChange={handelinputChange} name='file'  style={{width: '250px',marginLeft: '50px'}}/>  */}
+   
     <div onClick={createUser} text="Submit"    className='LoginCreateButton'>Submit</div>
     </div>
   )

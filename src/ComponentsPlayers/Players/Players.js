@@ -46,9 +46,9 @@ const Players = () => {
   //         setDay('')
   //       }
   //     } 
-   function handleOpenInput (){
-     setOpenInput(true)
-   }
+  //  function handleOpenInput (){
+  //    setOpenInput(true)
+  //  }
 
     useEffect(() => {
         let name = searchName.search

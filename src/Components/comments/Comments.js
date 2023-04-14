@@ -21,11 +21,13 @@ const Comments = ({commentId, check}) => {
     }
 
     useEffect(()=>{
-        fetch('http://localhost:9000/comments')
+        fetch('https://userlogin-backend-sportworld.adaptable.app/comments')
         .then(res => res.json())
         .then(data =>{setComment(data.comments)})
     },[])
+
 console.log(newComment)
+
   return (
       <div>
           <div style={{display: 'flex', justifyContent: 'center', textAlign: 'center', marginTop: '5%', }}>

@@ -88,7 +88,8 @@ function selectNewAvatar (selectedAvatar) {
               {avatar.map((a, i) => {
                  return (
                   <>
-                    <img src={a} alt=""  style={{height: '90px', width:'90px', margin: '5px', borderRadius: '20px', cursor: 'pointer'}} 
+                    <img src={a} alt=""  style={{height: '90px', width:'90px', margin: '5px', borderRadius: '20px', 
+                                               cursor: 'pointer'}} 
                     onClick={(e)=>  selectNewAvatar(e.target.src)}  />
                     {/* onClick={(e)=>  setNewImage(e.target.src)}  */}
                   </>

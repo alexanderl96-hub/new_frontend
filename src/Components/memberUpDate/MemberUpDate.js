@@ -66,24 +66,12 @@ const MemberUpDate = () => {
   const updatedTeam = (newMember, id) => {
     axios.put(`https://my-baseball-teams.adaptable.app/groups/${id}`,newMember).then(
       (res) => {
-        // const newTeam = [...newMember];
-        // newMember[id] = newMember;
         setMember(newMember);
       },
       (error) => console.log(error)
     );
   };
-  //  const updatedTeam = (newMember, id) => {
-  //   axios.put(`http://localhost:9001/groups/${id}`, newMember).then(
-  //     (res) => {
-  //       // const newTeam = [...newMember];
-  //       // console.log(update, 'checkupdate')
-  //       //  newTeam[id] = update;
-  //       setMember(newMember);
-  //     },
-  //     (error) => console.log(error)
-  //   );
-  // };
+
   useEffect(() => {
     fetch(`https://my-baseball-teams.adaptable.app/groups/${id}`)
         .then(res => res.json())
@@ -125,26 +113,11 @@ const MemberUpDate = () => {
 
  console.log(currentAge(age), newMember.stats)
  
-  //  useEffect(() => {
-  //   fetch(`http://localhost:9000/groups/${id}`)
-  //       .then(res => res.json())
-  //       .then(data =>{
-  //           setMemberid(data.team.team_id)
-  //           setMemberName(data.team.name)
-  //           setMemberImg(data.team.imag)
-  //           setMemberTeam(data.team.current_team)
-  //           setMemberAge(data.team.age)
-  //           setMemberCity(data.team.city)
-  //           setMemberState(data.team.state)
-  //           setMemberHeight(data.team.height)
-  //           setMemberWeight(data.team.weight)
-  //       })
-  // },[id])
+
 
   console.log( newMember)
   return (
          <div className='Update_Container'>
-             {/* <Navbar /> */}
            <h1 >UpDate Member</h1>
             <h2>{memberName}</h2>
          <div >

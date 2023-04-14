@@ -1,6 +1,5 @@
 import React from 'react'
 import { NavLink} from 'react-router-dom'
-// import { animateScroll as scroll} from 'react-scroll'
 import ScrollToTop from "react-scroll-to-top";
 import './FooterCSS.css'
 import imageLogo from '../../image/FullLogoTransparent.png'

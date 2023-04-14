@@ -3,8 +3,8 @@ import { Link} from 'react-router-dom'
 // import Navbar from '../../Components/navBar/Navbar'
 import './coaches.css'
 import Loading from '../../Loading'
-import {FaSearchengin} from 'react-icons/fa';
-import {BsSearch} from 'react-icons/bs';
+// import {FaSearchengin} from 'react-icons/fa';
+// import {BsSearch} from 'react-icons/bs';
 
 
 const Coaches = () => {
@@ -67,9 +67,9 @@ const Coaches = () => {
     //         setON(true)
     //     }
     // }
-    function handleOpenInput (){
-      setOpenInput(true)
-    }
+    // function handleOpenInput (){
+    //   setOpenInput(true)
+    // }
 
 console.log(count)
 console.log( coach, 'coach')

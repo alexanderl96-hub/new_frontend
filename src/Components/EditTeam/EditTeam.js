@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate, Link, useParams} from 'react-router-dom';
+import { useNavigate, useParams} from 'react-router-dom';
 import './EditTeam.css';
 import Arrow from '../../image/right-arrow.png'
 import axios from 'axios';
@@ -23,7 +23,6 @@ const EditTeam = () => {
         e.preventDefault();
         updatedTeam(editTeam, id)
         navigate(`/teams/allmembers/${id}`)
-        
       };
 
 

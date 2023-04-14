@@ -4,7 +4,7 @@ import ReactStars from "react-rating-stars-component"
 
 import '../text/text.css'
 import './desing.css'
-import { FaPlus, FaTrash,FaUserPlus, FaUserEdit, FaThumbsDown, FaThumbsUp} from 'react-icons/fa';
+import { FaPlus, FaThumbsUp} from 'react-icons/fa';
 import axios from 'axios'
 // import { toHaveValue } from '@testing-library/jest-dom/dist/matchers';
 
@@ -20,11 +20,11 @@ const Desing = ({loggedIn, user, userImage, setFavorite, favorite}) => {
     const [nombre, setCoachName] = useState([])
     const [search, setSearch] = useState([])
      const [group, setGroup] = useState([])
-     const [start, setStart] = useState(0)
-     const [last, setLast] = useState(6)
-     const [start1, setPreviuos] =useState(0)
-     const [last1, setLastP] =useState(6)
-     const [open, setOpen] = useState([false])
+    //  const [start, setStart] = useState(0)
+    //  const [last, setLast] = useState(6)
+    //  const [start1, setPreviuos] =useState(0)
+    //  const [last1, setLastP] =useState(6)
+    //  const [open, setOpen] = useState([false])
      const [handel, setHandel] = useState(0)
     const  [commentId, setCommentId] = useState(0)
     const [comment, setComment] = useState([]);
@@ -42,11 +42,9 @@ const Desing = ({loggedIn, user, userImage, setFavorite, favorite}) => {
     const [like, setLike] = useState(0)
     const [previuosId, setPreviuosId] = useState([])
 
-    let fisrt = 0
     let params = useParams()
     const teamId = params.id
 
-    // let check = Number(nombre.filter((a)=> a.id === Number(search)).map(a => a.id).join(''))
     const [newComment, setNewComment] = useState({
         username: user,
         userimage: userImage,
@@ -95,17 +93,15 @@ const Desing = ({loggedIn, user, userImage, setFavorite, favorite}) => {
        })
     }
     useEffect(()=>{
-        fetch('http://localhost:9000/comments')
+        fetch('https://userlogin-backend-sportworld.adaptable.app/comments')
         .then(res => res.json())
         .then(data =>{
            setComment(data.comments.filter(a=> a.memberid === teamId))
          
          
       })
-    },[])
+    },[teamId])
     
-
-    // const location = useLocation();
 
     const ratingChanged = (a) => { 
       let rest = 0
@@ -122,51 +118,8 @@ const Desing = ({loggedIn, user, userImage, setFavorite, favorite}) => {
       else if(a>= 0.10){ rest = 0.0}
       return rest
     }; 
-    // const handelNameLen = (artist) => {
-    //   // console.log( artist.split(' ').slice(0,1).join(' '))
-    //   favorite.push(Number(e.target.id))
-    //   return artist.split(' ').slice(0,2).join(' ')
 
-    //     // let pro = "" ;
-    //     // let allt = artist.split(" ");
-    //     // if(allt.length >= 3){
-    //     //   pro = allt[0] +' '+ allt[1]
-    //     // }else{
-    //     //   pro = allt.join(' ')
-    //     // }
-    //     // return pro
-    //   };
-
-    // function nextrow (){
-    //   // console.log(last,'outside')
-    //   const value = newtest.length - last 
-    //   let jump = value - last
-   
-
-    //   if(jump  <= 6){
-    //     // console.log(start, 'start')// console.log(newtest.length - last)
-    //      setStart(newtest.slice(last))
-    //      setLast(newtest.slice(last + 2))  
-    //   }
-    //   setStart(start + 6)
-    //   setLast(last + 6)
-    //    setPreviuos(start+ 6)
-    //   setLastP(last+ 6)
-    
-    // }
-    // function previuosrow (){
-    //   setPreviuos(start1 - 6)
-    //   setLastP(last1 - 6)
-    //   setStart(start -6)
-    //   setLast(last - 6)
-    // }
-// how to get a variable value from Css 
-// example 1: window.getComputedStyle(document.body).getPropertyValue('--color-red')
-// example 2: getComputedStyle(document.documentElement).getPropertyValue('--items-per-screen');
-
-   
-
-     function onHandleClick (e){
+      function onHandleClick (e){
        let value = 0
        let distance = 1
       
@@ -191,10 +144,8 @@ const Desing = ({loggedIn, user, userImage, setFavorite, favorite}) => {
          setCheckNewText(Number(screenSize))
  
        }
-     }
-
-
-     useEffect(() => {
+      }
+      useEffect(() => {
          fetch(`https://my-baseball-teams.adaptable.app/groups`)
          .then(res => res.json())
          .then(data =>{
@@ -202,23 +153,7 @@ const Desing = ({loggedIn, user, userImage, setFavorite, favorite}) => {
           setNewtest(data = data.filter((a,b)=> a.team_id === Number(teamId)))
 
          })
-       },[teamId])
-      // useEffect(() => {
-      //   fetch(`http://localhost:9000/groups`)
-      //   .then(res => res.json())
-      //   .then(data =>{
-      //     setNewGroup(data)
-      //     setCoachName(data)
-      //     setNewtest(data = data.filter((a,b)=> a.team_id === Number(teamId)))
-      //   })
-      // },[search])
-      // useEffect(() => {
-      //   fetch(`http://localhost:9000/teams`)
-      //   .then(res => res.json())
-      //   .then(data =>{
-      //     setGroup(data = data.filter((a,b )=> a.id === Number(teamId)))
-      //   })
-      // },[teamId])
+      },[teamId])
       useEffect(() => {
         fetch(`https://my-baseball-teams.adaptable.app/teams`)
         .then(res => res.json())
@@ -226,30 +161,21 @@ const Desing = ({loggedIn, user, userImage, setFavorite, favorite}) => {
           setGroup(data = data.filter((a)=> a.id === Number(teamId)))
         })
       },[teamId])
+      useEffect(() => {
+        fetch(`https://my-baseball-teams.adaptable.app/playersCareer`)
+        .then(res => res.json())
+        .then(data =>{
+        let arr = data.filter(stat => stat.players_id === Number(search))
+          setNewI(arr.sort((a,b)=>a.id-b.id).slice(-1).map(a => a.career_average
+            ))
+        })
+      },[search])
 
-       useEffect(() => {
-         fetch(`https://my-baseball-teams.adaptable.app/playersCareer`)
-         .then(res => res.json())
-         .then(data =>{
-          let arr = data.filter(stat => stat.players_id === Number(search))
-            setNewI(arr.sort((a,b)=>a.id-b.id).slice(-1).map(a => a.career_average
-              ))
-         })
-     },[search])
-
-     const handleDelete = () => {
-      axios.delete(`https://my-baseball-teams.adaptable.app/teams/${teamId}`).then(() =>{
-        //  navigate(`/homebase`)
-    }, (error) => console.log(error))
-     }
-  //   useEffect(() => {
-  //     fetch(`http://localhost:9000/playersStats`)
-  //     .then(res => res.json())
-  //     .then(data =>{
-  //       let arr = data.map((stat,i) => {return stat.players_id === Number(search) ? stat.average: null })
-  //         setNewI(arr = arr.map((a , index)=>  a !== null ? setAB(a) : ''))
-  //     })
-  // },[search])
+  const handleDelete = () => {
+  axios.delete(`https://my-baseball-teams.adaptable.app/teams/${teamId}`).then(() =>{
+    //  navigate(`/homebase`)
+}, (error) => console.log(error))
+  }
   const aboutLength = (about) => {
     let pro = [];
     let i = 0
@@ -260,28 +186,18 @@ const Desing = ({loggedIn, user, userImage, setFavorite, favorite}) => {
     }
     return pro.length <= 90 ?  pro.join(' ') : pro.slice(0, 91).join(' ').concat(' ...')
   };
-
-
-    fisrt = ratingChanged(newI[0])
-
-function handelLike (e){
- let checkId = []
-  if(like === 0 && !previuosId.includes(Number(e.target.id))){
-      // setLike(like+1)
-      previuosId.push(Number(e.target.id))
-       favorite.push(Number(e.target.id))
-      setPreviuosId(previuosId)
+  function handelLike (e){
+    if(like === 0 && !previuosId.includes(Number(e.target.id))){
+        previuosId.push(Number(e.target.id))
+        favorite.push(Number(e.target.id))
+        setPreviuosId(previuosId)
+    }
+    
+      setFavorite(favorite)
+  
   }
-   
-    setFavorite(favorite)
- 
-}
- 
-  //  console.log(ratingChanged(newI[0]), fisrt, 'check')
-    console.log( newtest.length, checkNewText, 'checkNewText')
 
-  //  console.log((newtest.length / size) - pointer )
-  // console.log(pointer , handel )
+  console.log( newtest.length, checkNewText, 'checkNewText')
   console.log(like, previuosId, favorite, 'counting like')
 
   return (
@@ -302,13 +218,11 @@ function handelLike (e){
                     <div id='prev' className='handel prev-handle' >
                        {handel > 0 ? <div id='prev' className='text' onClick={onHandleClick} >&#8249;</div> : null}
                   </div>
-                  {/*  */}
                     <div className='slider' style={{'--slider-Index': handel}} onClick={()=> setCommentId(search)}>
                     {newtest.map((a,i)=>{
                         return(
                           < >
                               <img src={a.imag} alt='' onClick={()=> setSearch(a.id)}  />
-                              {/* <p>{a.name}</p> */}
                           </>
                         )                
                     })}
@@ -328,7 +242,6 @@ function handelLike (e){
         <div text="More.." path=""   onMouseLeave={()=> setToggleMenu(false)}  className='optionsContent'>
                    <div   className='optionContent-inner' onMouseEnter={()=> setToggleMenu(true)}>{toggleMenu ? "" : " Options"}</div>
                 {toggleMenu &&   <div className="submenu2" >
-                      {/* <div className="submenu__item" id="More..">More..</div> */}
                      <Link to={`/teams/newMember/${teamId}`} id={teamId} style={{ color:'black'}} onClick={()=> setToggleMenu(false)}>
                       <div className="submenu2__item" id="More..">Add New Member</div></Link>
                       <Link to={`/teams/EditTeam/${teamId}`} id={teamId} style={{ color:'black'}} onClick={()=> setToggleMenu(false)} >
@@ -369,7 +282,6 @@ function handelLike (e){
                                <p><span>Position:</span> {a.position}</p>
                                <p><span>Salary:</span> {a.salary}</p>
                                <p><span>About: </span>{a.about}  <Link to={`/teams/groups/${search}`}  className='changeMore'> More..→</Link></p>
-                               {/* <p ><span>ID:</span> {a.id}</p> */}
                              <div id={search} style={{cursor: 'pointer', color: '#cccccc'}}
                                    onClick={handelLike}>
                                      {!previuosId.includes(Number(search)) &&  <FaThumbsUp color={like === 0  ? '#cccccc' : 'blue'} /> } Like  </div>
@@ -406,7 +318,6 @@ function handelLike (e){
                                <p><span>Position:</span> {a.position}</p>
                                <p><span>Salary:</span> {a.salary}</p>
                                <p><span>About: </span>{a.about}  <Link to={`/teams/groups/${a.id}`} className='changeMore'> More..→</Link></p>
-                               {/* <p><span>ID:</span> {a.id}</p> */}
                              </div>
                            <div className='innerSectionStart'>
                            <ReactStars 
@@ -509,33 +420,6 @@ function handelLike (e){
          >Load More...</div> : null }
     </div>  
       
-        {/* <div className='mid'>
-        {start <= 0 ? null : <button onClick={previuosrow } className='button1'>&#10148;</button>}
-        {last >= newtest.length ? null :  <button onClick={nextrow} className='button2'>&#10148;</button>  }
-        </div>   */}
-        {/* {newtest.length > 0 ? 
-        <div className="section3">
-           {newtest.slice(0,1).map((a, index)=>{
-               return (
-                   <div className='scrollPlayers' >              
-                      { Number(teamId) === a.team_id ? 
-                      <div className={`media-group-container `}  onClick={(e)=>setOpen(true)} > 
-                          <div className='media-group'  onClick={(e)=>setSearch(a.id)}  > <img src={a.imag} alt='' /> </div>  
-                           <h3 onClick={(e)=>setSearch(a.id)} >{articule(a.name)}</h3>
-                      </div> 
-                       : <div className={`section4`}    > 
-                           <div className='media-group' > Hola </div>  
-                         </div> }                
-                   </div>
-               )
-           })}          
-         </div> 
-             :  <div className="section3-empty">
-                <div className=''  > 
-                          <div className=''> </div>  
-                           <h3></h3>
-                      </div> 
-               </div>} */}
    </div>
   )
 }
