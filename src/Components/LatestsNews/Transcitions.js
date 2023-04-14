@@ -135,7 +135,7 @@ const Transcitions = () => {
             //  console.log(start,'start')
             setTransaction(data.transaction_all.queryResults.row.reverse())
         })
-    },[])
+    },[previous, current])
   //  console.log( idvalue)
   return (
     <div >

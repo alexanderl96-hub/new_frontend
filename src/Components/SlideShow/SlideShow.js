@@ -41,7 +41,7 @@ const SlideShow = () => {
     return () => {
       resetTimeout();
     };
-  }, [index]);
+  }, [index,colors]);
 
   
   return (

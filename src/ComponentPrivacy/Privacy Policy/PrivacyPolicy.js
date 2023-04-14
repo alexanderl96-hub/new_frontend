@@ -7,7 +7,7 @@ const PrivacyPolicy = () => {
             <h2 style={{width: '80%', border: '1px solid black', backgroundColor: 'blue', margin: 'auto', 
          height: '50px', fontSize: '30px', color: '#fff',  alignItems: 'center', fontWeight: '500', paddingTop: '6px'}}>Sport World Privacy Policy</h2>
             <p style={{width: '80%', border: '1px solid', backgroundColor: 'lightblue', margin: 'auto', padding: '9px 9px', 
-            textAlign: 'left', letterSpacing: '0.3px', textAlign: 'justify'}}>SPW Advanced Media, L.P. ("SPW") is the organization that produces and publishes the Official Website of Sport World,
+           letterSpacing: '0.3px', textAlign: 'justify'}}>SPW Advanced Media, L.P. ("SPW") is the organization that produces and publishes the Official Website of Sport World,
              the Official Websites of the thirty (30) Sport World clubs (collectively "SPW Clubs" and each an "SPW Club"), the Official 
              Websites of certain other SPW-related properties (collectively, this "Website"), downloadable mobile applications (e.g.,
               SPW, Ballpark) available from third party application storefronts ("Application(s)"), mobile games available from third 
