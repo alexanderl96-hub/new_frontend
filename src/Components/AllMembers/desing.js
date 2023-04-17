@@ -405,7 +405,7 @@ const Desing = ({loggedIn, user, userImage, setFavorite, favorite}) => {
                                 display: 'flex', flexDirection: 'column' , padding: '4px', cursor: 'pointer', backgroundColor:'#fff'}}>
                         <div style={{margin: '5px', fontSize: '15px'}}>{a.username}</div>
                         <div style={{padding: '3px', display: 'flex',  flexDirection: 'column', justifyContent: 'center', alignItems:'center', flexWrap: 'wrap' }}>
-                            <img src={a.userimage ? a.userimage : 'https://d11a6trkgmumsb.cloudfront.net/original/3X/d/8/d8b5d0a738295345ebd8934b859fa1fca1c8c6ad.jpeg'} alt =''
+                            <img src={a.userimage ? a.userimage : 'https://cdn2.iconfinder.com/data/icons/social-media-flat-line/70/user-512.png'} alt =''
                              style={{ height: '90px', width: '90px', borderRadius: '10px', backgroundPosition: 'center',
   backgroundSize: '100% 100%'}} />
                           <div style={{display:'flex', textAlign: 'justify', marginTop: '8px', fontSize: '12.7px', }} onClick={handelOpen2 }>{ open2 ? a.comment : aboutLength(a.comment)}</div> 

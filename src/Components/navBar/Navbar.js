@@ -92,14 +92,14 @@ console.log(user.length > 8 ? user.split(' ').slice(0,1).join('') : user , 'chec
                          <Link to={'/teams/new'} style={{ color:'black'}} onClick={()=> setToggleMenu(false)}>
                             <div className="submenu__item" id="More..">Add New Team</div>
                          </Link>}
-                        <NavLink to={'/teams/Favorite'} style={{ color:'black'}} onClick={()=> setToggleMenu(false)} >
+                         {loggedIn &&   <NavLink to={'/teams/Favorite'} style={{ color:'black'}} onClick={()=> setToggleMenu(false)} >
                             <div className="submenu__item">Baseball Favorite</div>
-                        </NavLink>
+                        </NavLink>}
                         <NavLink to={'/teams/AllTimes'} style={{ color:'black'}} onClick={()=> setToggleMenu(false)} >
                             <div className="submenu__item">Baseball All Times</div>
                         </NavLink>
-                        <NavLink to={'/teams/Legend'} style={{ color:'black'}} onClick={()=> setToggleMenu(false)} >
-                            <div className="submenu__item">Baseball Legend</div>
+                        <NavLink to={'/teams/Records'} style={{ color:'black'}} onClick={()=> setToggleMenu(false)} >
+                            <div className="submenu__item">Baseball Records</div>
                         </NavLink>
                       <hr/>
                       {loggedIn && 

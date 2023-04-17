@@ -29,7 +29,7 @@ import NavBar from '../src/Components/navBar/Navbar'
 import Footer from '../src/Components/Footer/Footer'
 import EditTeam from '../src/Components/EditTeam/EditTeam'
 import Favorites from '../src/ComponentsPlayers/Favorites/Favorites'
-import Legend from '../src/ComponentsPlayers/Legend/Legend'
+import Records from './ComponentsPlayers/Records/Records'
 import AllTimes from '../src/ComponentsPlayers/AllTimes/AllTimes'
 import Profile from '../src/ComponentProfile/Profile/Profile'
 import TermofUse from '../src/ComponentPrivacy/Terms of Use/TermofUse'
@@ -96,7 +96,7 @@ function App() {
                   <Route  path="/teams/CurrentHistagram/:id" element={<CurrentHistagram/>}/>      
                   <Route  path="/teams/EditTeam/:id" element={<EditTeam/>}/>   
                   <Route  path="/teams/Favorite" element={<Favorites  favorite={favorite} />}/>   
-                  <Route  path="/teams/Legend" element={<Legend/>}/> 
+                  <Route  path="/teams/Records" element={<Records/>}/> 
                   <Route  path="/teams/AllTimes" element={<AllTimes/>}/> 
                   <Route  path="/teams/Profile" element={<Profile  user={user} userImage={userImage} setUserImage={setUserImage} userId={userId} userEmail={userEmail} />}/> 
                   <Route  path="/teams/TermofUse" element={<TermofUse/>}/> 
