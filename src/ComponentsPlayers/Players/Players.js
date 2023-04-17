@@ -51,12 +51,12 @@ const Players = () => {
   //  }
 
     useEffect(() => {
-        let name = searchName.search
+         let name = searchName.search
         fetch(`https://my-baseball-teams.adaptable.app/groups`)
         .then(res => res.json())
         .then(data =>{
-            setAllPlayers(data = data.filter(element => !element.position.includes('Team')))
-            setVal(data = data.filter(g => g.name.includes(name))); 
+             setAllPlayers(data = data.filter(element => !element.position.includes('Team')))
+             setVal(data = data.filter(g => g.name.includes(name))); 
         })
   },[searchName])
  
@@ -69,7 +69,8 @@ const Players = () => {
      e.preventDefault()
     setVal(val)
   }
-
+ 
+  console.log(allplayers, val)
 
   return (
     <div className='playerMainContent'  >

@@ -57,7 +57,7 @@ function App() {
   //   }, 2000)
 
   // }, [loginMessage])
-  console.log(userEmail)
+  console.log(favorite)
 
   return (
       <Router >

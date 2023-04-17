@@ -24,7 +24,7 @@ const Desing = ({loggedIn, user, userImage, setFavorite, favorite}) => {
     //  const [last, setLast] = useState(6)
     //  const [start1, setPreviuos] =useState(0)
     //  const [last1, setLastP] =useState(6)
-    //  const [open, setOpen] = useState([false])
+     const [open, setOpen] = useState(false)
      const [handel, setHandel] = useState(0)
     const  [commentId, setCommentId] = useState(0)
     const [comment, setComment] = useState([]);
@@ -39,7 +39,7 @@ const Desing = ({loggedIn, user, userImage, setFavorite, favorite}) => {
     const [pointer, setPointer] = useState(1)
     const [finalValue, setFinalValue] = useState(false)
     const [checkNewText, setCheckNewText] = useState(Number(screenSize))
-    const [like, setLike] = useState(0)
+    const [like, setLike] = useState([])
     const [previuosId, setPreviuosId] = useState([])
 
     let params = useParams()
@@ -187,18 +187,39 @@ const Desing = ({loggedIn, user, userImage, setFavorite, favorite}) => {
     return pro.length <= 90 ?  pro.join(' ') : pro.slice(0, 91).join(' ').concat(' ...')
   };
   function handelLike (e){
-    if(like === 0 && !previuosId.includes(Number(e.target.id))){
+    console.log(Number(e.target.id), user, favorite)
+    if(user && !favorite.includes(Number(e.target.id))){
         previuosId.push(Number(e.target.id))
         favorite.push(Number(e.target.id))
         setPreviuosId(previuosId)
-    }
+         setFavorite(favorite)
+         setLike(Number(e.target.id))
+    }else {
+      for( var i = 0; i < favorite.length; i++){ 
     
-      setFavorite(favorite)
+        if (favorite[i] === Number(e.target.id)) { 
+          favorite.splice(i, 1); 
+          setFavorite(favorite)
+        } 
+       
+      }
+      
+    }
+   
+    
+      //  setFavorite(favorite)
   
   }
+  useEffect(()=>{
+    if(favorite.includes(like)){
+      setOpen(true)
+    }else{
+      setOpen(false)
+    }
+  },[like, favorite])
 
   console.log( newtest.length, checkNewText, 'checkNewText')
-  console.log(like, previuosId, favorite, 'counting like')
+  console.log(previuosId, favorite, 'counting like')
 
   return (
    <div className='MainDesing'>
@@ -282,9 +303,12 @@ const Desing = ({loggedIn, user, userImage, setFavorite, favorite}) => {
                                <p><span>Position:</span> {a.position}</p>
                                <p><span>Salary:</span> {a.salary}</p>
                                <p><span>About: </span>{a.about}  <Link to={`/teams/groups/${search}`}  className='changeMore'> More..→</Link></p>
-                             <div id={search} style={{cursor: 'pointer', color: '#cccccc'}}
+                             <div id={search} style={{cursor: 'pointer', color: '#cccccc', wordSpacing: '5px'}}
                                    onClick={handelLike}>
-                                     {!previuosId.includes(Number(search)) &&  <FaThumbsUp color={like === 0  ? '#cccccc' : 'blue'} /> } Like  </div>
+                                      {/* <FaThumbsUp color={!favorite.includes(Number(search))  ? '#cccccc' : 'blue'} />  */}
+                                      {!favorite.includes(Number(a.id)) && <FaThumbsUp color='#cccccc'  /> }
+                                      {favorite.includes(Number(a.id)) && <FaThumbsUp color='blue'  /> }
+                                       Like  </div>
                              </div>
                            <div className='innerSectionStart'>
                            <ReactStars 
@@ -312,12 +336,19 @@ const Desing = ({loggedIn, user, userImage, setFavorite, favorite}) => {
                               </div>
                               <div >
                             <div className='innerSection2-3'> 
-                               <hr/>
+                               <hr/> 
                                <p><span>Team:</span> {a.current_team}</p>
                                <p><span>Number:</span> {a.number}</p>
                                <p><span>Position:</span> {a.position}</p>
                                <p><span>Salary:</span> {a.salary}</p>
                                <p><span>About: </span>{a.about}  <Link to={`/teams/groups/${a.id}`} className='changeMore'> More..→</Link></p>
+                               <div id={a.id} style={{cursor: 'pointer', color: '#cccccc'}}
+                                   onClick={handelLike}>
+                                      {/* {!favorite.includes(Number(a.id)) && <FaThumbsUp color='#cccccc' /> }
+                                      {favorite.includes(Number(a.id)) && <FaThumbsUp color='blue' /> } */}
+                                      <FaThumbsUp color={favorite.includes(Number(a.id)) ? 'blue' : '#cccccc'} />
+                                        Like  </div>
+                               
                              </div>
                            <div className='innerSectionStart'>
                            <ReactStars 

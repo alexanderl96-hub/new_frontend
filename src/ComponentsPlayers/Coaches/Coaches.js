@@ -41,10 +41,8 @@ const Coaches = () => {
         fetch(`https://my-baseball-teams.adaptable.app/groups`)
         .then(res => res.json())
         .then(data => {
-               let first = data.filter(element => element.position.includes('Team'))
-               let sec = data.filter(g => g.name.includes(namecoach ) )
-            setCoach(first);
-            setCoachName(sec);
+            setCoach(data = data.filter(element => element.position.includes('Team')));
+            setCoachName(data = data.filter(g => g.name.includes(namecoach )));
         })
     },[search]);
 
