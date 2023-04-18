@@ -120,6 +120,7 @@ h1 {
    width: 50px; 
    height: 50px;
   transition: 1s;
+  position: absolute;
 }
 .submenu{
   float: left;
@@ -130,9 +131,9 @@ h1 {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   background-color: white;
   padding: 0 10px 10px;
-  position: absolute;
-  top: 60px;
-  left: 79.5%;
+  position: relative;
+  top: 10px;
+  left: -92.5%;
   z-index: 100;
   -webkit-filter: drop-shadow(0px 2px 4px rgba(130,130,130,1));
   filter        : drop-shadow(0px 2px 4px rgba(130,130,130,1));  
@@ -140,7 +141,7 @@ h1 {
 .submenu::before{
 content: "";
 position: relative;
-left: 85px;
+left: 75px;
 top: -40px;
 width: 0;
 height: 0;
@@ -149,7 +150,7 @@ border-right: 15px solid transparent;
 border-bottom: 15px solid #fff;
 }
 .submenu__item{
-    padding: 10px;
+    padding: 5px;
     font-weight: 600;
     border-radius: 8px;
     cursor: pointer;
@@ -265,12 +266,12 @@ color: white;
     font-size: 20px;
   }
   .submenu{
-    left: 86.8%;
-    top: 87px;
+    /* left: 86.8%;
+    top: 87px; */
   }
   .submenu::before{
-    left: 75px;
-    top: -33px;
+    /* left: 75px;
+    top: -33px; */
   }
   .submenu__item{
     padding: 10px;
@@ -281,8 +282,8 @@ color: white;
 /* Mackbook air 13-inch (max-width: 2560px; max-heigth: 1600px;)*/
 @media only screen and (max-width: 2560px){
   .submenu{
-    left: 82.1%;
-    top: 87px;
+    /* left: 82.1%;
+    top: 87px; */
   }
 
 }
@@ -316,12 +317,12 @@ color: white;
     font-size: 19px;
   }
   .submenu{
-    left: 68%;
-    top: 72px;
+    /* left: 68%;
+    top: 72px; */
    }
    .submenu::before{
-    left: 75px;
-    top: -31px;
+    /* left: 75px;
+    top: -31px; */
   }
 }
 
@@ -377,13 +378,13 @@ color: white;
     font-size: 15px;
   }
   .submenu{
-    left: 68.3%;
-    top: 57px;
+    /* left: 68.3%;
+    top: 57px; */
     width: 180px;
   }
   .submenu::before{
-    left: 65px;
-    top: -30px;
+    /* left: 65px;
+    top: -30px; */
   }
   .submenu__item{
     padding: 8px;
@@ -431,13 +432,13 @@ color: white;
     margin-left: -100px;
   }
   .submenu{
-    left: 66%;
-    top: 53px;
+    /* left: 66%;
+    top: 53px; */
     width: 160px;
   }
   .submenu::before{
-    left: 55px;
-    top: -28px;
+    /* left: 55px;
+    top: -28px; */
   }
   .submenu__item{
     padding: 8px;
@@ -458,13 +459,13 @@ color: white;
     width: 26px;
   }
   .submenu{
-    left: 62%;
-    top: 53.5px;
+    /* left: 62%;
+    top: 53.5px; */
     width: 160px;
   }
   .submenu::before{
-    left: 55px;
-    top: -28px;
+    /* left: 55px;
+    top: -28px; */
   }
   .submenu__item{
     padding: 8px;
@@ -484,13 +485,13 @@ color: white;
     margin-right: 20px;
   }
   .submenu{
-    left: 60%;
-    top: 53.5px;
+    /* left: 60%;
+    top: 53.5px; */
     width: 160px;
   }
   .submenu::before{
-    left: 55px;
-    top: -28px;
+    /* left: 55px;
+    top: -28px; */
   }
   .submenu__item{
     padding: 8px;
@@ -508,8 +509,8 @@ color: white;
     margin-right: 20px;
   }
   .submenu{
-    left: 57.5%;
-    top: 53.5px;
+    /* left: 57.5%;
+    top: 53.5px; */
     width: 160px;
   }
 }
@@ -553,7 +554,7 @@ color: white;
     font-size: 10px; 
   } 
   .submenu{
-    left: 48%;
+    /* left: 48%; */
     width: 150px;
 }
 .submenu__item{
